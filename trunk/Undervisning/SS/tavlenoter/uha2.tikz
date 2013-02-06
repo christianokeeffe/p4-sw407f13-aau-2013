@@ -1,0 +1,10 @@
+\begin{tikzpicture}[y=-1cm]
+
+% objects at depth 50:
+\draw[arrows=-to,black] (11.27008,4.3015) +(49:1.45283) arc (49:-220:1.45283);
+\draw[black] (11.1125,6.82625) circle (1.68698cm);
+\draw[black] (11.1125,6.82625) circle (1.24037cm);
+\draw[arrows=-to,black] (7.9375,6.985) -- (9.36625,6.985);
+\path (13.17625,3.81) node[text=black,anchor=base west] {\large{}$a \in \Sigma$};
+
+\end{tikzpicture}%

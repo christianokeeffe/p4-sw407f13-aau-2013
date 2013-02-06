@@ -1,0 +1,9 @@
+\select@language {danish}
+\contentsline {chapter}{\chapternumberline {1}Om kurset}{1}
+\contentsline {chapter}{\chapternumberline {2}Indledning}{2}
+\contentsline {chapter}{\chapternumberline {3}Grundl\IeC {\ae }ggende begreber om sprog}{2}
+\contentsline {chapter}{\chapternumberline {4}Endelige automater}{2}
+\contentsline {section}{\numberline {4.1}Definition af endelig automat}{3}
+\contentsline {chapter}{\chapternumberline {5}De regul\IeC {\ae }re operationer}{4}
+\contentsline {chapter}{\chapternumberline {6}De regul\IeC {\ae }re sprog er lukket under $\cup $}{4}
+\contentsline {chapter}{\chapternumberline {7}Gyser}{6}

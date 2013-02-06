@@ -1,0 +1,18 @@
+Her vil der blive beskrevet hvilket udstyr, basisprogrammeller systemgrænseflader og designsprog, som problemløsningen kommer til at involvere.
+
+\subsection{Udstyr}
+Mobile enheder er en god platform at arbejde ud fra, men de kan være besværlige at skrive længere indkøbslister på. Derfor kan det være funktionelt at få adgang til indkøbslisten fra andre mere stationære platforme, for eksempel en computer.
+
+\subsection{Basisprogrammel}
+For bedre at kunne udvikle et produkt der kan løse problemet, skal der bruges et programmeringssprog der egner sig til at arbejde med objekter, forbindelser mellem disse objekter og deres anvendelsesområder. Grunden til at der bliver arbejdet med objekter i dette projekt er, at det giver bedre mulighed for at abstrahere over problemområdet. Den objektorienterede struktur er med til at skabe sammenhæng og give et overskueligt billede af problemløsningen. Derfor vil produktet blive skrevet i C\# med ASP.NET framework, hvor Microsoft Visual Studio vil fungere som arbejdsplatform. C\# er valgt fordi det er et objektorienteret sprog og derfor passer til metoden, der bliver arbejdet ud fra i dette projekt.
+
+\subsection{Systemgrænseflade}
+Problemløsning vil komme til at fungere sammen med en hjemmeside, der ligger inde med en database over tilbud fra forskellige butikskæder. Arbejdet ligger i at kommunikere med databasen igennem en API og anvende de relevante informationer til at løse problemet. Problemløsningen vil også arbejde sammen med en brugerdatabase, for at kunne synkronisere med andre forbundne brugere, holde styr på hvilke indkøbslister der er tilknyttet hvilke brugere og hvilke varer, der står på hver enkelt indkøbsliste. 
+
+Det betyder at systemet skal designes således det også er muligt at anvende og navigere via touch screen som input. Her anvendes den mobile enheds eget system til håndteringen af inputs fra touch screen således, at problemløsningen ikke behøver at have fokus på selve håndtering af inputs, men mere resultatet af dem. Problemløsningen vil også anvende den mobile enheds egenskab til visningen af de forskellige visuelle tilstande/informationer på enhedens skærm.
+Problemløsningen skal også kunne anvendes igennem en computer, hvor outputtet vil foregå gennem en større skærm i forhold til en mobil enhed, men inputtet vil ikke være det samme. Inputtet fra en computer vil komme gennem musen, der fungerer som et pegeredskab og tastaturet vil blive brugt som et skriveredskab i computerens model.
+
+Der vil ikke blive brugt forskellige grænseflader efter hvilken platform systemet kører på. Derimod vil der blive brugt en grænseflade der vil tilpasse sig den benyttede platform. Grunden til der ikke blev lavet flere forskellige grænseflader er, at det blev nedprioriteret i forhold til mange af de andre designmæssige problemstillinger, der blev fundet i løbet af projekt-perioden. Det blev også vurderet som en for tidskrævende opgave at udvikle flere grænseflader i forhold til dette projekt. Hjemmesiden er mobiloptimeret, hvilket i nogle tilfælde gør, at nogle af siderne designmæssigt ikke ser så gode ud på en computer.
+
+\subsection{Designsprog}
+Designdokumentet er baseret på UML-notation (Unified Modeling Language). UML er valgt fordi det omfatter et stort antal objektorienterede konstruktioner, der kan spænde fra den indledende analyse til detaljerede designbeskrivelser. 

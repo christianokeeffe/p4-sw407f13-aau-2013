@@ -1,0 +1,12 @@
+StringBuilder sb = new StringBuilder();
+
+//Fjern - fra GUID
+foreach (char c in guid.ToString())
+{
+  if (c != '-')
+  {
+    sb.Append(c);
+  }
+}
+
+return sb.ToString();

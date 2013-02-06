@@ -1,0 +1,51 @@
+\section{APIKald}
+Klassen APIKald bruges når eTilbudsavisens database skal tilgås. APIKald indeholder seks metoder: RydParam, TilfoejParam, UnixTidsstempel, GenererGUID, BygParams og KaldApi. De vigtigste af disse vil blive gennemgået nedenfor. 
+
+\subsection{BygParams}
+Man laver et kald til eTilbudsavisens API ved at kalde en bestemt URL, med nogle bestemte parametre. Parametrene er forskellige, alt efter hvilke informationer man vil have fat i. Eksempelvis skal man bruge forskellige parametre til at finde informationer om butikker og tilbud. Løsningen lagrer disse parametre i en liste, der indeholder typen KeyValuePair, som indeholder to strenge: en nøgle og en værdi. Disse bruges til at indeholde parametrene. Eksempelvis hvis man vil søge på et tilbud via en streng, skal man sende en parameter \gaas{q} med værdien \gaas{søgestreng}, hvor \gaas{søgestreng} er det man søger på.
+
+Udover de parametre som er forskellige fra kald til kald, er der en del parametre som er faste, heriblandt \gaas{api\_key} og \gaas{api\_secret}, som indeholder koder som bruges af eTilbudsavisen til at identificere de forskellige løsninger der bruger deres database. De faste parametre eksisterer også som i listen over parametre. eTilbudsavisen kræver nemlig at man sender en parameter kaldet \gaas{api\_checksum}, som er en checksum genereret ud fra alle de parametre der sendes. I alt sendes følgende faste parametre, når et kald laves: 
+
+\begin{itemize}
+	\item api\_latitude
+	\item api\_longitude
+	\item api\_geocoded
+	\item api\_accuracy
+	\item api\_distance
+	\item api\_locationDetermined
+	\item api\_key
+	\item api\_uuid
+	\item api\_timestamp
+	\item api\_checksum
+\end{itemize}
+
+Hvis disse parametre ikke findes i kaldet, så accepteres de ikke af eTilbudsavisen.
+BygParams tager de parametre, som alle er gemt i den førnævnte liste, og omdanner dem til en lang streng, som er den URL der skal kaldes. Parametre i en URL adskilles af \gaas{\&}-tegn. Dog skal den første parameter starte med \gaas{?}-tegn, hvilket fortæller hjemmesiden at der er nogle parametre. En URL med parametre kunne eksempelvis se sådan ud: \gaas{http://www.eksempel.dk/Default.aspx?time=0711120946\&s=økologi}.
+
+\kode{Kodeudsnit der danner en streng ud fra parametrene.}{StrengBygger}{StrengBygger.txt}
+
+Metoden tager hver KeyValuePair i listen af parametre og sætter dem i en lang streng adskilt af \gaas{\&}. Dette kan ses på kodeudklip \ref{lst:StrengBygger}.
+Derefter tilføjes den hemmelige kode til rækken af parametre, hvis checksum skal med i parametren api\_checksum, og denne parameter sættes på kald-strengen, hvorefter metoden returnerer denne. Det skal bemærkes, at denne metode er taget fra eTilbudsAvisens SDK til Windows Phone.
+
+\subsection{GenererGUID}
+For at et API-kald til eTilbudsavisen bliver accepteret, kræves en parameter som unikt identificerer instansen af applikationen. Denne parameter kaldes \gaas{api\_uuid}, og værdien laves i metoden GenererGUID. .NET 4.0 frameworket indeholder en funktion, som opretter en GUID, se kodeudklip \ref{lst:GuidFunk}.
+
+\kode{Metode fra .NET 4.0 som bliver brugt}{GuidFunk}{GuidFunk.txt}
+
+Når denne GUID er genereret, indholder den en blanding af tal og små bogstaver, som er delt op i fem sektioner. Et eksempel på en GUID kan være: \gaas{0f8fad5b-d9cb-469f-a165-70867728950e}. Men før eTilbudsavisen vil acceptere den, må den kun indeholde bogstaver og tal. Derfor gennemløbes strengen, og alle tegn som ikke er bindestreg bliver tilføjet til en StringBuilder, som derefter bliver returneret som en streng. Dette kan ses på kodeudklip \ref{lst:GuidTrimmer}. Det skal bemærkes, at denne metode er taget fra eTilbudsAvisens SDK til Windows Phone. 
+
+\kode{Udsnit der fjerner bindestreg fra guid strengen.}{GuidTrimmer}{GuidTrimmer.txt}
+
+\subsection{KaldAPI}
+Det er i metoden KaldAPI, at selve API-kaldet bliver udført. Metoden er generisk, og returnerer et objekt af den type som specificeres. Den tager en URL som input.
+
+\kode{Udsnit der viser tilføjelsen af nødvendige parametre og sammensætning af url og API kaldet.}{FremstillingAfForeSpoergslen}{FremstillingAfForeSpoergslen.txt}
+
+De nødvendige parametre tilføjes: api\_key, api\_uuid og api\_timestamp. Når disse parametre er tilføjet til listen af parametre, kaldes metoden BygParams, som laver listen af parametre om til en streng af parametre, som herefter sættes sammen med den URL som APIKald fik som input. Nu har KaldAPI den komplette URL som skal forespørges.
+For at udføre kaldet oprettes først en RestClient på linje 13, som er en type som ligger i biblioteket \gaas{RestSharp}. Herefter bliver denne klients BaseURL sat til den komplette URL på linje 16. Dette kan ses på kodeudsnit \ref{lst:FremstillingAfForeSpoergslen}.
+
+\kode{Udklip der viser oprettelsen og udførelsen af forespørgslen.}{ForeSpoergslen}{ForeSpoergslen.txt}
+
+Derefter bliver en forespørgsel oprettet af typen RestRequest, hvor metoden af forespørgslen bliver sat til GET. Når dette er gjort, bliver forespørgslen udført ved at kalde klient.Execute med forespørgslen som parameter, dette ses på kodeudsnit \ref{lst:ForeSpoergslen}. Til sidst prøver metoden at konvertere JSON-svaret fra eTilbudsavisen om til et objekt af den specificerede typen T. Hvis dette fejler, returneres null. Dette kan eksempelvis fejle, hvis eTilbudsavisen har slettet et tilbud, som en bruger har på sin indkøbsliste. Konverteringen kan ses på kodeudklip \ref{lst:JsonSvar}.
+
+\kode{Her ses konverteringen af svaret fra databasen.}{JsonSvar}{JsonSvar.txt}

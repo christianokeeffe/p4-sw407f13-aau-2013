@@ -1,0 +1,6 @@
+foreach (KeyValuePair<string, string> kvp in param)
+{
+  
+  data += kvp.Key + "=" + kvp.Value + "&";
+  vaerdi += kvp.Value;
+}

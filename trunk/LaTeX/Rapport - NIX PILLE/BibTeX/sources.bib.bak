@@ -1,0 +1,158 @@
+% This file was created with JabRef 2.8.1.
+% Encoding: Cp1252
+
+@MISC{AppleRetning,
+  author = {Apple},
+  title = {iOS Guidelines},
+  howpublished = {\url{https://developer.apple.com/library/ios/\#documentation/userexperience/conceptual/mobilehig/Introduction/Introduction.html}
+	[Sidst set: 12/12/2012]},
+  owner = {Aleksander},
+  timestamp = {2012.11.26}
+}
+
+@MANUAL{pblaau,
+  title = {Principles of Problem and Project Based Learning},
+  author = {Scott Barge},
+  organization = {Aalborg University},
+  month = {sep.},
+  year = {2010},
+  owner = {Christian},
+  timestamp = {2012.12.03}
+}
+
+@BOOK{DIS,
+  title = {Designing Interactive System},
+  publisher = {Pearson Education Limited},
+  year = {2010},
+  author = {David Benyon},
+  edition = {2},
+  owner = {Mette},
+  timestamp = {2012.12.06}
+}
+
+@BOOK{IntroAlgo,
+  title = {Introduction to Algorithms},
+  publisher = {The MIT Press},
+  year = {2009},
+  author = {Thomas H. Cormen AND Charles E. Leiserson AND Ronald L. Rivest AND
+	Clifford Stein},
+  edition = {3},
+  owner = {Kasper},
+  timestamp = {2012.12.10}
+}
+
+@MISC{jquerymobile,
+  author = {The jQuery Foundation},
+  title = {jQuery Mobile},
+  howpublished = {\url{http://jquerymobile.com/} [Sidst set: 12/12/2012]},
+  owner = {Niels},
+  timestamp = {2012.11.15}
+}
+
+@MISC{AndRet,
+  author = {Google},
+  title = {Android Guidelines},
+  howpublished = {\url{http://developer.android.com/design/index.html} [Sidst set:
+	12/12/2012]},
+  owner = {Kasper},
+  timestamp = {2012.11.23}
+}
+
+@MISC{debslide,
+  author = {Jesper Kjeldskov},
+  title = {Usability and Usability Evaluation},
+  howpublished = {Slide for DEB},
+  month = {October},
+  year = {2012},
+  owner = {rasmu_000},
+  timestamp = {2012.12.17},
+  url = {http://sict.moodle.aau.dk/file.php/150/DEB_guest_lecture_on_usability_evaluation.pdf}
+}
+
+@INPROCEEDINGS{DEBUL,
+  author = {Kjeldskov, Jesper and Skov, Mikael B. and Stage, Jan},
+  title = {Instant data analysis: conducting usability evaluations in a day},
+  booktitle = {Proceedings of the third Nordic conference on Human-computer interaction},
+  year = {2004},
+  series = {NordiCHI '04},
+  pages = {233-240},
+  address = {New York, NY, USA},
+  publisher = {ACM},
+  acmid = {1028050},
+  isbn = {1-58113-857-1},
+  keywords = {data analysis, discount usability, usability evaluation},
+  location = {Tampere, Finland},
+  numpages = {8}
+}
+
+@MISC{nhunspell,
+  author = {Thomas Maierhofer},
+  title = {NHunspell - Free Spell-Checker, Hyphenation and Thesaurus for .NET(C\#,Visual
+	Basic,...)},
+  howpublished = {\url{http://nhunspell.sourceforge.net/} [Sidst set: 12/12/2012]},
+  owner = {Christian},
+  timestamp = {2012.11.16}
+}
+
+@BOOK{ooaogd,
+  title = {Objekt Orienteret Analyse \& Design},
+  publisher = {Marko},
+  year = {2001},
+  author = {Lars Mathiassen AND Andreas Munk-Madsen AND Peter Axel Nielsen AND
+	Jan Stage},
+  pages = {439},
+  edition = {3},
+  owner = {rasmu_000},
+  timestamp = {2012.12.04}
+}
+
+@MISC{colorbox,
+  author = {Jack Moore},
+  title = {ColorBox},
+  howpublished = {\url{http://www.jacklmoore.com/colorbox} [Sidst set: 12/12/2012]},
+  owner = {Aleksander},
+  timestamp = {2012.11.16}
+}
+
+@ARTICLE{bcrypt,
+  author = {Colin Percival},
+  title = {Stronger Key Derivation via Sequential Memory-Hard Functions},
+  year = {2009},
+  note = {\url{http://www.tarsnap.com/scrypt/scrypt.pdf} [Sidst set: 12/12/2012]},
+  abstract = {We introduce the concepts of memory-hard algorithms and sequential
+	memory-hard functions, and argue that in order for key derivation
+	
+	functions to be maximally secure against attacks using custom hardware,
+	they
+	
+	should be constructed from sequential memory-hard functions. We present
+	
+	a family of key derivation functions which, under the random oracle
+	model
+	
+	of cryptographic hash functions, are provably sequential memory-hard,
+	and a
+	
+	variation which appears to be marginally stronger at the expense of
+	lacking
+	
+	provable strength. Finally, we provide some estimates of the cost
+	of performing brute force attacks on a variety of password strengths
+	and key derivation
+	
+	functions.},
+  owner = {rasmu_000},
+  timestamp = {2012.12.07}
+}
+
+@MANUAL{RUP,
+  title = {Rational Unified Process},
+  author = {{Rational Software Corporation}},
+  month = {nov.},
+  year = {1998},
+  note = {\url{http://www.augustana.ab.ca/~mohrj/courses/2000.winter/csc220/papers/rup_best_practices/rup_bestpractices.pdf}
+	[Sidst set: 12/12/2012]},
+  owner = {Aleksander},
+  timestamp = {2012.12.12}
+}
+

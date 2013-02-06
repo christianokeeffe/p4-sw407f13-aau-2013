@@ -1,0 +1,16 @@
+//Tilfoej api-parametre til kaldet
+param.Add(new KeyValuePair<string, string>("api_key", apiNoegle));
+param.Add(new KeyValuePair<string, string>("api_uuid", sGuid));
+param.Add(new KeyValuePair<string, string>("api_timestamp", UnixTidsstempel().ToString()));
+
+//Lav API-kaldet 
+string call = BygParams(param);
+
+//Flet url og kald
+string SoegeURL = URL + call;
+
+//Instansier ny RestClient
+var klient = new RestClient();
+
+//Giv klienten en søgeurl som streng (kan ikke modtage URI)
+klient.BaseUrl = SoegeURL;

@@ -1,0 +1,6 @@
+//Lav forespørgslen
+var forespoergsel = new RestRequest(Method.GET);
+//Udfoer forespørgslen
+IRestResponse svar = klient.Execute(forespoergsel);
+T ReturneringsResultat = new T();
+JavaScriptSerializer ser = new JavaScriptSerializer();

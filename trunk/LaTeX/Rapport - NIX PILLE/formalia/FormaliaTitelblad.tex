@@ -1,0 +1,96 @@
+% Dette er LaTeX-versionen af titelbladet for tek-nat-basis-rapporter 2004 efterår
+% Filen kræver:
+% Universitetets logo:  aau-logo.png (for LaTeX) eller aau-logo.ps (for LaTeX)
+% Synopsis: En fil ved navn synopsis.tex
+
+% Udarbejdet af: Hans Hüttel (hans@cs.auc.dk) 21. maj 2003
+% Rettet af Morten Christophersen (mortench@tnb.aau.dk) 30. nov 2004(ændret til nyt design 2004 efterår)
+
+%\documentclass[11pt]{article}
+%\ifx\pdfoutput\undefined 
+%\usepackage[dvips]{graphicx}
+%\else
+%\usepackage[pdftex]{graphicx} 
+%\usepackage{type1cm} \fi
+  %  \usepackage[ansinew]{inputenc}
+    %\usepackage{a4}
+
+%\begin{document} 
+%\thispagestyle{empty}
+%\begin{titlepage}
+
+\begin{nopagebreak}
+{\samepage
+\begin{flushleft}
+\begin{tabular}{r}
+\parbox{\textwidth}{  \raisebox{11mm}{\includegraphics[height=2cm]{billeder/FormaliaAauLogo.png}}
+\hfill
+\\
+\parbox{8cm}{\begin{tabular}{l}
+{\small \textbf{Institut for datalogi}}\\
+{\small Selma Lagerlöfs Vej 300} \\
+{\small 9220 Aalborg Ø} \\
+{\small http://www.cs.aau.dk/}
+\end{tabular}}}
+
+\end{tabular}
+
+\end{flushleft}
+
+\begin{tabular}{cc}
+\parbox{7cm}{
+\begin{description}
+
+\item {Titel:} 
+
+Indkøbslisteassistent
+
+\end{description}
+
+\parbox{8cm}{
+
+\begin{description}
+\item {Projekt periode:}\\
+   P3, efterår 2012\\
+  \hspace{4cm}
+\item { Projektgruppe:}\\
+  SW308E12\\
+  \hspace{4cm}
+\item { Gruppemedlemmer:}\\
+Aleksander Sørensen Nilsson \\
+Christian Jødal O'Keeffe \\
+Kasper Plejdrup\\
+Mette Thomsen Pedersen \\
+Niels Brøndum Pedersen \\
+Rasmus Fischer Gadensgaard \\
+  \hspace{2cm}
+\item { Vejleder:}\\
+John Stouby Persson\\
+\end{description}
+}
+\begin{description}
+\item { Samlet antal sider: }\\ \totalpages
+\item { Afsluttet: }\\
+20. december 2012
+\end{description}
+
+\vfill } &
+\parbox{7cm}{
+  \vspace{.15cm}
+  \hfill \\ \\
+  \begin{tabular}{l}
+  { Synopsis:}\\%\bigskip 
+  \fbox{
+    \parbox{6.5cm}{\bigskip
+     {\vfill{\small \input{formalia/FormaliaSynopsis}
+     \bigskip}}
+     }}
+   \end{tabular}}
+\end{tabular}}
+\\ \\
+
+
+\noindent{\footnotesize\emph{Rapportens indhold er frit tilgængeligt, men offentliggørelse (med kildeangivelse) må kun ske efter aftale med forfatterne.}}
+\end{nopagebreak}
+%\end{titlepage}
+%\end{document}

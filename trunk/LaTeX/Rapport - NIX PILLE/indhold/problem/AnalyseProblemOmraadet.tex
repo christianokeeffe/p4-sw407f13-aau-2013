@@ -1,0 +1,89 @@
+\section{Problemområdet}
+I denne sektion vil der blive set nærmere på problemområdet for dette projekt, fra en objektorienteret vinkel. Til at få et indblik i problemet bliver der udviklet et diagram, et så kaldt klassediagram. Et klassediagram anvender UML (Unified Modeling Language) notation og bruges til at illustrerer de forskellige relationer mellem de forskellige klasser i problemområdet. Klasserne beskriver objekter ved, at fungere som skabelon for grupper af objekter, der har fælles træk. Klassediagrammet er bleven fremstillet ud fra viden fra OOAD (Objektorienteret analyse og design) bogen \citep{ooaogd} og selve diagrammet kan ses på figur \ref{fig:Klassediagram}.
+
+\begin{landscape}
+\figur{1.3}{AnalyseKlassediagram.png}{Oversigt over Klassediagram.}{fig:Klassediagram}
+\end{landscape}
+
+\subsection{Struktur}
+\input{indhold/problem/AnalyseStruktur.tex}
+
+\subsection{Klasser}
+I denne sektion vil de forskellige klasser, samt deres tilstandsdiagram kort blive beskrevet.
+
+\subsubsection{Kunde}
+\figur{0.75}{AnalyseKundeTilstandsdiagram.PNG}{Viser tilstandsdiagrammet for klassen \gaas{Kunde}.}{fig:Kunde-tilstandsdiagram}
+Klassen indeholder oplysninger om kunderne, således der er en måde at identificere kunder og kæde dem sammen med hinanden. Se figur \ref{fig:Kunde-tilstandsdiagram}.
+
+Attributter: Navn, Forhold.
+
+\subsubsection{Medlemskab}
+\figur{0.75}{AnalyseMedlemTilstandsdiagram.PNG}{Viser tilstandsdiagrammet for klassen \gaas{Medlemskab}.}{fig:Medlem-tilstandsdiagram}
+Klasse der beskriver en kundes mulighed for at have et medlemskab i et selskab, der så udløser en rabat, forskellige goder eller en form for præmie. Se figur \ref{fig:Medlem-tilstandsdiagram}.
+
+Attributter: Rabat, Medlems ID.
+
+\subsubsection{Indkøbsliste}
+\figur{0.75}{AnalyseListeTilstandsdiagram.PNG}{Viser tilstandsdiagrammet for klassen \gaas{Indkøbsliste}.}{fig:Liste-tilstandsdiagram}
+Klassen omfatter selve indkøbslisten, som er en liste af varer som kunden skal handle ind. Se figur \ref{fig:Liste-tilstandsdiagram}.
+
+Attributter: Kunde.
+
+\subsubsection{Begivenhed}
+\figur{0.75}{AnalyseBegivenhedTilstandsdiagram.PNG}{Viser tilstandsdiagrammet for klassen \gaas{Begivenhed}.}{fig:Begivenhed-tilstandsdiagram}
+Klassen der beskriver et scenarie, hvor kunden kan oprette en indkøbsliste i anledning af en begivenhed. Se figur \ref{fig:Begivenhed-tilstandsdiagram}.
+
+Attributter: Tidspunkt, Navn.
+
+\subsubsection{Vare}
+\figur{0.75}{AnalyseVareTilstandsdiagram.PNG}{Viser tilstandsdiagrammet for klassen \gaas{Vare}.}{fig:Vare-tilstandsdiagram}
+På figur \ref{fig:Vare-tilstandsdiagram} ses tilstandsdiagrammet for klassen \gaas{Vare}-Klassen sammenfatter de forskellige typer af varer. Her menes enten tilbud eller almindelige varer, her forstås almindelige varer som varer hvor der til normalpris. Tilbud indeholder fire generaliseringer, som bliver beskrevet i tilstandsdiagrammet for tilbud som set på figur \ref{fig:Tilbud-tilstandsdiagram}.
+ 
+Attributter: Navn, Antal, mængdepris, pris.
+
+\subsubsection{Tilbud}
+\figur{1}{AnalyseTilbudTilstandsdiagram.PNG}{Viser tilstandsdiagrammet for klassen \gaas{Tilbud}.}{fig:Tilbud-tilstandsdiagram}
+Denne klasse sammenfatter de forskellige slags tilbud som eksisterer. Se figur \ref{fig:Tilbud-tilstandsdiagram}. Disse klasser er beskrevet i klassediagrammet der kan ses på figur \ref{fig:Klassediagram}.
+
+Attributter: Butik, Start dato, Slut dato.
+
+
+%skal umildbart ikke tages med
+%\subsection{Pakke tilbud}
+%Klasse for gruppe af forskellige almindelige vare som til sammen udløser en rabat.
+
+%Attributter:
+
+%\subsection{Mængde tilbud}
+%Klassen for mængde køb af en vare som udløser en rabat.
+
+%Attributter: Min antal, Max antal per kunde.
+
+%\subsection{Enkelt tilbud}
+%Klasse for et almindeligt tilbud, hvor nuværende pris er mindre end før prisen.
+
+%Attributter: 
+
+\subsubsection{Selskab}
+\figur{0.75}{AnalyseSelskabTilstandsdiagram.PNG}{Viser tilstandsdiagrammet for klassen \gaas{Selskab}.}{fig:Selskab-tilstandsdiagram}
+Klasse for et selskab der kan eje forskellige butikskæder eller være en sammenslutning for private butiksejere. Se figur \ref{fig:Selskab-tilstandsdiagram}.
+
+Attributter: Navn.
+
+%Virker heller ikke til at skulle bruges
+%\subsection{Kæde}
+%Klasse for sammenfatningen af forskellige butikker af samme butikskæde, der eksister på markedet. Attributten antal beskriver antallet af butikker i den %individuel kæder.
+
+%Attributter: Antal.
+
+%\subsection{Butik}
+%Klasse for de individuelle butikker der kan findes i en butikskæde.
+
+%Attributter: Navn, Placering.
+
+%\subsection{Enkelt butik}
+%Klasse der beskriver de private butikker som ikke tilhøre en butikskæde.
+
+%Attributter: Placering.
+
+\input{indhold/problem/AnalyseHaendelsestabel.tex}

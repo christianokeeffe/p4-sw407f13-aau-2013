@@ -1,0 +1,8 @@
+//Listen bliver gennemgået, det givne element i listen bliver tjekket op mod dem som ligger efter den
+for (int j = 0; j < InputListe.Count; j++)
+{
+  for (int i = j+1; i < InputListe.Count; i++)
+  {
+    MidlertidigReturListe = TilfoejNoegleordTilListe(MidlertidigReturListe, InputListe[j], InputListe[i]);
+  }
+}

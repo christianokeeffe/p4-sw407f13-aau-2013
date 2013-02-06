@@ -1,0 +1,27 @@
+if (LængdeAfTal == 0)
+{
+  //I nogle tilfælde skrives der /v efter mængdeprisen og før selve prisen
+  //Denne if sætning tager højde for det
+  if (Char.IsNumber(BeskrivelseAfVare[StartPunkt + LængdeTilTalStart]))
+  {
+    if (StartPunkt + LængdeTilTalStart > 2)
+    {
+      if (BeskrivelseAfVare[StartPunkt + LængdeTilTalStart - 2] != 'v' &&
+        BeskrivelseAfVare[StartPunkt + LængdeTilTalStart - 1] != '/')
+      {
+        LængdeAfTal = 1;
+      }
+      else
+      {
+        while (Char.IsNumber(BeskrivelseAfVare[StartPunkt + LængdeTilTalStart]))
+        {
+          LængdeTilTalStart++;
+        }
+      }
+    }
+  }
+  else
+  {
+    LængdeTilTalStart++;
+  }
+}

@@ -1,0 +1,4 @@
+foreach (ButikBrugesInfo Butik in BrugerInfoListe)
+{
+  Butik.Bruges = "selected = 'selected'";
+}

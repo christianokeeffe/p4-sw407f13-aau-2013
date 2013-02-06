@@ -1,0 +1,86 @@
+%I denne sektion vil der blive set nærmere på klasserne, hvor de vil blive specificeret og gjort mere forståelige således de kan anvendes bedre under udviklingen af selve programmet.
+
+Løsningen indeholder tre komponenter. Klient, server og API. Komponenterne server og API indeholder så yderligere tre komponenter hver: Grænseflade, funktioner og model. Klienten er afhængig af serveren - hvis serveren ikke er tilgængelig, kan klienten ikke bruge løsningen.
+
+Idet løsningen er en hjemmeside, er brugergrænsefladen en del af server-komponenten. En klient skal ikke have et specielt program for at tilgå server-komponenten, men blot en almindelig browser. Funktionerne på serveren er f.eks. at finde et tilbud, altså de funktioner som klienten kan benytte sig af i løsningen. Serverens modelkomponent indeholder gemte data på serveren, såsom de forskellige lister og brugerdata.
+
+Gennem serverens funktionskomponent bruges API-komponenten. API-komponentens systemgrænseflade bruges når information fra API'ens database skal bruges. API'ens funktionskomponent muliggør forskellige typer af kald til API'en. Modelkomponenten i API-komponenten indeholder gemte data på API'en, såsom de forskellige tilbud, og forskellige butikker. Den omtalte arkitektur kan ses på figur \ref{fig:designkomponent}.
+
+\figur{1}{DesignKomponenter.png}{På denne figur ses arkitekturen for komponenterne for systemet.}{fig:designkomponent}
+
+\subsection{Struktur}
+Ud fra analysedokumentet er der blevet konstrueret et klassediagram med de forskellige klasser i problemområdet. Det er ikke alle klasser i problemområdet, der er relevante at tage med i forhold til en problemløsning. Derfor er problemområdet blevet afgrænset, således det kun er de essentielle klasser der er tilbage. De klasser der er tilbage repræsenterer de nødvendige indformationer og hændelser for at systemet skal fungere som en problemløsning. Disse hændelser kan ses i hændelsestabellen tabel \ref{tab:haendelsestabel}.
+
+Dog er klassen \gaas{Selskab} blevet fjernet, da den ikke blev vurderet som værende en vigtigt del af selve problemet. Derfor er hændelserne tilknyttet denne klasse redigeret således de ikke længere involverer klassen.
+
+Det nye klassediagram kan ses på figur \ref{fig:DesignModelKomponent}. Klasserne i figur \ref{fig:DesignModelKomponent} er altså de mest relevante at arbejde med i forbindelse med denne systemløsning. Rettelserne kan læses i afsnit \ref{sec:rettelsertilanalyse}.
+
+Udover at nogle klasser er blevet fjernet, er diagrammet blevet inddelt i komponenternes model og funktion. Funktionskomponenten indeholder to klasser: Tilbudsanalysator, APIKald og tilbudsadministrator. Tilbudsadministratoren, er den som sørger for at tilføje og fjerne tilbud til databasen. Tilbudsanalysatoren er den funktion som analyserer brugernes indkøbslister, og foreslår relevante tilbud.
+
+%Design klassediagrammet skal MULIGVIS sættes længere frem i design afsnittet
+\figur{1}{DesignModelKomponent.png}{Tilpasset klassediagram fra analysen af problemområdet.}{fig:DesignModelKomponent} 
+
+\subsection{Klasser}
+For at få et bedre indblik i klasserne uddybes klasserne mere specifikt. Dette kan senere bruges i programmeringen af problemløsningen. Klasserne uddybes med deres formål, attributter og operationer i en kort tekstform i tabel \ref{tab:designklasser} således det bliver mere overskueligt.
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{R}
+\hline
+Kunde \\ \hline
+\textbf{Formål:} Kunde der anvender problemløsningen til at handle ind. \\ 
+\textbf{Attributter:} BrugerID, Navn, Kodeord. \\ 
+\textbf{Operationer:} Opret Indkøbsliste, Slet Indkøbsliste, Del Indkøbsliste, Log ind, Log ud \\
+\textbf{Beslutninger:} For at højne sikkerheden på siden, er det besluttet at kodeord skal bestå af minimum 8 karakterer. Denne beslutning er truffet som følge af artiklen \citep{bcrypt}, som viser at et kodeord på minimum 8 karakterer, krypteret med bcrypt, vil tage 130 år at bryde, mens det ville tage under et år med 6 karakterer \\
+\\
+\hline
+Indkøbsliste \\ \hline
+\textbf{Formål:} Fungerer som et kontrolredskab over varer der skal købes og er købt. \\ 
+\textbf{Attributter:} ListeID, Navn \\ 
+\textbf{Operationer:} Tilføj vare, Slet vare\\
+
+\\
+\hline
+Vare \\ \hline
+\textbf{Formål:} Er varerne der er i butikkerne, som tilføjes indkøbslisten. \\ 
+\textbf{Attributter:} Navn, antal, markering, vareID. \\ 
+\textbf{Operationer:} Find tilbud på vare, Marker vare som købt, Afmarker vare som købt\\
+
+\\
+\hline
+Tilbud \\ \hline
+\textbf{Formål:} Arver fra vare og illustrerer varer der er på tilbud. \\ 
+\textbf{Attributter:} Tilbudspris, startdato og udløbsdato \\ 
+\textbf{Operationer:} Tilbud udløbet\\
+
+\\
+\hline
+Butik \\ \hline
+\textbf{Formål:} Butikkerne hvor de pågældende tilbudsvarer gælder. \\ 
+\textbf{Attributter:} Navn. \\ 
+\textbf{Operationer:} Fravælg butik, Tilvælg butik \\
+\\
+\\
+\hline
+Tilbudsanalysator \\ \hline
+\textbf{Formål:} Analyserer en brugers tidligere købte varer, og ud fra disse foreslå relevante tilbud. \\ 
+\textbf{Operationer:} Foreslå tilbud \\
+
+\\
+\hline
+Tilbudsadministrator \\ \hline
+\textbf{Formål} Administrerer de tilgængelige tilbud. \\ 
+\textbf{Operationer:} Opret tilbud, Fjern tilbud, Rediger tilbud \\
+
+\\
+\hline
+API \\ \hline 
+\textbf{Formål} Indeholder de tilgængelige tilbud  \\
+\textbf{Operationer:} KaldAPI\\
+
+\end{tabularx}
+\caption{Oversigt over klasser, samt deres attributter og deres operationer.}
+\label{tab:designklasser}
+\end{table}
+
+Disse specifikationer af klasserne viser de mere indlysende operationer, imens mere indviklede operationer ikke lige er til at gennemskue. Derfor er den mere indviklede operation \gaas{Foreslå tilbud} beskrevet mere uddybende, således den bliver nemmere at forstå.
+

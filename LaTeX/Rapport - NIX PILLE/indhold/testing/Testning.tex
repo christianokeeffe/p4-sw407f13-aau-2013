@@ -1,0 +1,47 @@
+Dette kapitel omhandler alle de tests der er blevet lavet i hele projektperioden. I kapitlet vil testpersonernes baggrund blive beskrevet. Herefter vil testmetoden blive beskrevet, hvorfor denne er valgt, og i hvilket stadie systemet var, på dette tidspunkt. Til sidst vil testpersonernes svar blive dokumenteret og ud fra disse svar, er det blevet vurderet hvad der skulle ændres. Herunder kommer også en beskrivelse af konsekvenserne, altså hvad der konkret er blevet ændret af de problemstillinger, der er fundet ud fra testpersonernes svar. Der kan ses en oversigt over de forskellige tests i tabel \ref{tab:testoversigt}.
+
+\begin{table}[H]
+\begin{adjustwidth}{-50pt}{50pt}
+
+\begin{tabularx}{\textwidth + 100pt}{|l|R|p{1.7cm}|R|R|R|p{1.5cm}|}
+\hline
+         \rotatebox{90}{\textbf{Test nr.}} & \rotatebox{45}{\textbf{Formål}} &  \rotatebox{45}{\textbf{Metode}} &  \rotatebox{45}{\textbf{Personer}} &  \rotatebox{45}{\textbf{System Tilstand}} &  \rotatebox{45}{\textbf{Vigtigste resultater}} &  \rotatebox{45}{\textbf{Tidspunkt}} \\ \hline
+1 & At få en generel idé om design & Lave prototype af systemet &\hspace{0pt}Gruppemedlemmerne reflekterede over designet & Ingen funktioner var lavet på dette tidspunkt kun papirtest & Et udkast til systemets design blev lavet & 19/09/12 \\ \hline
+
+2 & At få brugernes mening omkring funktionerne og design & Åbent spørgeskema & 4 testpersoner gav svar & Funktionen indkøbslister og søgefunktionen var funktionelle &  Af 16 forslag til forbedringer blev 10 implementeret & 16/10/12 til 23/10/12  \\ \hline
+
+3 & At få testet alle funktionerne og derved finde fejl og forbedringsforslag & Åbent spørgeskema & 2 testpersoner svarede sammen og en yderligere testperson svarede & De fire hovedfunktioner var funktionelle &  Fejl ved \gaas{foreslå tilbud} og \gaas{indstillinger} rettet. Tilbage-knap ændret. Stavekontrol af søgeord lavet & 06/11/12 til 13/11/12 \\ \hline
+
+4 & At få testet alle funktionerne og se hvordan testpersonerne bruger programmet & Test i usability lab. som blev filmet og interview  & 2 personer blev testet udover 3 fra gruppen & De fire hovedfunktioner var funktionelle & Indkøbslister er blevet rettet til at være mere brugervenlige. Vigtige knapper er blevet fremhævede & 27/11/12 \\ \hline
+
+5 & Optimere systemet til mobiler & Kvalitativ analyse  & 2 gruppemedlemmer & Alle funktioner på nær varekategorier er udviklede & Simplificeret søgning & 23/11/12 \\ \hline
+
+6 & Optimere systemet til mobiler  & Kvalitativ analyse  & 2 gruppemedlemmer & Alle funktioner pånær varekategorier er udviklede & Hjælpetekst fjernes vha. mere brugervenligt design & 26/11/12 \\ \hline
+
+7 & At få testet programmet i virkeligheden & \hspace{0pt}Observation af testperson og kort interview & 1 testperson blev observeret & De fire hovedfunktioner var funktionelle, men kun indkøbslisten blev testet &  Der er blevet tilføjet varekategorier, som der også kan sorteres efter & 29/11/12 \\ \hline
+
+\end{tabularx}
+\end{adjustwidth}
+\caption{Tabellen viser en kort oversigt over de forskellige test. \label{tab:testoversigt}}
+
+\end{table}
+
+Ud fra disse syv tests er der blevet lavet en del forbedringer på systemet løbende. På figur \ref{fig:testrettelserdiagram} kan dette ses vist med de vigtigste hændelser.
+
+\figur{1}{TestRettelserDiagram.png}{Figur over de løbende ændringer af systemet ud fra testene.}{fig:testrettelserdiagram}
+
+\input{indhold/testing/FoersteTest.tex}
+
+\input{indhold/testing/AndenTest.tex}
+
+\input{indhold/testing/TredjeTest.tex}
+
+\input{indhold/testing/FjerdeTest.tex}
+
+\input{indhold/testing/UdviklingAndroidOgApple.tex}
+
+\input{indhold/testing/SyvendeTest.tex}
+
+\section{Opsummering af testene}
+
+I løbet af projektperioden er der foretaget syv tests. En kort oversigt over de rettelser der blev foretaget på baggrund af disse tests, kan ses på figur \ref{fig:testrettelserdiagram}. Den første var en papirprototype, som blev brugt internt i gruppen, til at lave en skitse til hvordan systemet skulle se ud. Ved anden og tredje test fik testpersonerne sendt et åbent spørgeskema og havde derefter en uge til at teste programmet og besvare spørgeskemaet. Den fjerde test blev foretaget i universitets usability laboratorium og den syvende blev foretaget ude i en rigtig handelssituation. Den femte og sjette test var en gennemgang af systemet for at se om det overholdt Googles og Apples retningslinjer for applikationer til Android og iOS. Alle testene har hjulpet meget med at finde ud af, hvad der var vigtigt for et produkt som det, der er blevet fremstillet og de har givet mange forbedringer til hjemmesiden. Der var flere rettelser efter de to fulde tests af programmet end der var ved den anden og syvende test. Desuden har testene givet et godt indtryk af, hvor tidskrævende de er og hvad udbytte man kan få ud af dem. Her er testen i usability laboratoriet den, der tog længst tid og gav størst udbytte, mens de to tests med åbent spørgeskema brugte mindst og gav et rimeligt udbytte, dog afhængig af hvem der svarede. Femte og sjette test hjalp til at gøre systemet mere mobil-venligt i forhold til Apples og Googles retningslinjer med hensyn til mobil-applikationer. Så alt i alt har testene været utrolig nyttige at udnytte i løbet af udviklingsprocessen for at komme på frem til et godt produkt. Den samlede mængde af test, samt det at der er blevet benyttet forskellige testmetoder, har gjort at programmet er blevet forbedret meget i forhold til hvordan det var stillet uden testene, da det har fået en bedre forståelse af, hvordan brugerne benytter programmet.

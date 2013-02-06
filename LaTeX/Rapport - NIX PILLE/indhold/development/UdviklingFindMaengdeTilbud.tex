@@ -1,0 +1,18 @@
+\section{Find mængdepris}
+For at vise en vares mængdepris bliver programmet nødt til at finde frem til denne. Dette er en avanceret funktion som vil blive beskrevet i dette afsnit.
+For at finde mængdeprisen skal der først findes, hvilken type af mængdepris der bruges. Dette gøres ved at gennemgå en del check sætninger, der checker hvilken type mængdepris der er brugt f.eks kilopris, pr. kg eller pr. liter kan være måder mængdeprisen er beskrevet på. Hvis typen af mængdepris ikke bliver genkendt, returneres -1 som bruges til at fortælle programmet, at der ikke blev fundet en mængdepris på det bestemte tilbud.
+
+\kode{Funktionen gennemgår de to strenge og finder ud af, hvor lang den længste fælles streg er.}{StartPunkt}{StartPunktMP.txt}
+
+Når en type af mængdepris er fundet, bliver den placeret i en streng med navnet \gaas{soegestring}, som derefter bliver brugt til at søge i varebeskrivelsen. Varebeskrivelsen er en lang streng, der bliver hentet fra tilbudsdatabasen via en API. Søgningen stopper når det første bogstav i \gaas{soegestring} stemmer overens med et bogstav i varebeskrivelses-strengen. \gaas{StartPunkt} bruges til at indikere, hvor i varebeskrivelsen søgningen starter.
+Derefter tjekkes resten af \gaas{soegestring} op imod varebeskrivelses-strengen, hvis disse ikke stemmer overens forsætter søgningen, hvor den sidst stoppede. Dette bliver gjort ved at bruge en variabel med navnet \gaas{LængdeTilTalStart}. Variablen bliver brugt som indikator og bliver talt op hver gang et tegn efter begyndelsesbogstavet stemmer overens. Dette kan ses på kodeudsnit \ref{lst:StartPunkt}.
+
+\kode{Funktion deres bruges til håndtering af v/.}{LaengdeTilTalStart}{LaengdeTilTalStartMP.txt}
+
+Programmet tjekker derefter om \gaas{LængdeTilTalStart} er af samme størrelse som \gaas{soegestring}. Hvis dette er tilfældet, vil en tredje variabel \gaas{LængdeAfTal} med startværdien nul blive sat. 
+Først bliver der tjekket om der står \gaas{v/} foran det fundne tal. Hvis \gaas{v/} ikke står foran de fundne tal vil \gaas{LængdeAfTal} blive sat til 1. Hvis der står \gaas{v/}, vil programmet lede videre efter det næste sæt af tal. Dette kan ses på kodeudsnit \ref{lst:LaengdeTilTalStart}.
+
+\kode{Her findes længden af tallene og gemmes i variablen \gaas{LængdeAfTal}.}{LaengdeAfTal}{LaengdeAfTalMP.txt}
+
+Når programmet har fundet et sæt tal, hvor \gaas{v/} ikke står foran, vil det finde længden af det sæt tal. Her bliver der taget hensyn til komma, da tegnet ikke bliver genkendt af \gaas{IsNumber} metoden.
+Så længe det stadig er tal eller et komma vil variablen \gaas{LængdeAfTal} blive talt op. Når det ikke længere er tal vil en variabel, \gaas{StadigTal}, af typen bool blive sat til \gaas{falsk}, dette gør at programmet ikke længere vil søge efter længden af tal. Dette kan ses på kodeudsnit \ref{lst:LaengdeAfTal}. Programmet vil enten returnere prisen ved hjælp af en streng-kopieringsfunktion der er inkluderet i .NET, eller returnere -1, hvis der ikke blev fundet en mængdepris på den bestemte vare.

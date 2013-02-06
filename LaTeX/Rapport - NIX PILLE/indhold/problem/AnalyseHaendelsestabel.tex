@@ -1,0 +1,31 @@
+\subsection{Hændelser}
+
+Tabel \ref{tab:haendelsestabel} viser en oversigt over hændelserne for de mest essentielle klasser. Ikke alle klasserne fra klassediagrammet (se figur \ref{fig:Klassediagram}) er taget med fordi de enten kan indgå som en underklasse eller som ses mindre væsentlige.
+
+\begin{table}[H]
+\centering
+    \begin{tabular}{|l|c|c|c|c|}
+\hline
+        ~                                  & Vare & Kunde & Indkøbsliste & Selskab \\ \hline
+        Indkøbsliste oprettet              & ~    & x     & x            & ~       \\ \hline 
+        Indkøbsliste slettet               & ~    & x     & x            & ~       \\ \hline
+        Indkøbsliste delt med andre        & ~    & x     & x            & ~       \\ \hline
+        Vare tilføjet / slettet fra liste  & x    & ~     & x            & ~       \\ \hline
+        Tilbud søgt                        & x    & ~     & ~            & x       \\ \hline
+        Mulige butikker til indkøb valgt   &  ~   & x     & ~            & x       \\ \hline
+        Begivenhed planlagt                & ~    & x     & x            & ~       \\ \hline
+        Indkøbsliste tilknyttet begivenhed & ~    & ~     & x            & ~       \\ \hline
+        Medlemskab af selskab startet      & ~    & x     & ~            & x       \\ \hline
+        Medlemskab af selskab sluttet      & ~    & x     & ~            & x       \\ \hline
+        Tilbud oprettet                    & x    & ~     & ~            & x       \\ \hline
+        Tilbud afsluttet                   & x    & ~     & ~            & x       \\ \hline 
+        Tilbuds-avis udsendt               & ~    & x     & ~            & x       \\ \hline
+        Ny butik åbnet                     & ~    & ~     & ~            & x       \\ \hline
+        Butik lukket                       & ~    & ~     & ~            & x       \\ \hline
+        Vare købt                          & x    & ~     & x            & ~       \\
+\hline
+    \end{tabular}
+
+\caption{Tabel for de forskellige hændelser tilhørende de mest essentielle klasser som vare, kunde, indkøbsliste og selskab.}
+\label{tab:haendelsestabel}
+\end{table}

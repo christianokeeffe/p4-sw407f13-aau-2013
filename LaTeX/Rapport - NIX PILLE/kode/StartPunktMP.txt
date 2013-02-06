@@ -1,0 +1,15 @@
+// StartPunkt er hvor det første bogstavs placering bliver lagt
+for (int StartPunkt = 0; StartPunkt < BeskrivelseAfVare.Length; StartPunkt++)
+{
+  if (BeskrivelseAfVare[StartPunkt] == soegestring[0])
+  {
+
+      // LængdeTilTalStart er hvor længden fra StartPunkt til ligheden med soegestring ender
+      int LængdeTilTalStart = 0;
+      // Når de to bogstaver matcher, undersøges det om de efterfølgende bogstaver passer
+      while (LængdeTilTalStart < soegestring.Length &&
+           StartPunkt + LængdeTilTalStart < BeskrivelseAfVare.Length &&
+           BeskrivelseAfVare[StartPunkt + LængdeTilTalStart] == soegestring[LængdeTilTalStart])
+      {
+        LængdeTilTalStart++;
+      }

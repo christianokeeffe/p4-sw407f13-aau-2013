@@ -1,0 +1,20 @@
+\select@language {danish}
+\contentsline {chapter}{\chapternumberline {1}Indledning}{1}
+\contentsline {chapter}{\chapternumberline {2}Regul\IeC {\ae }re udtryk}{2}
+\contentsline {section}{\numberline {2.1}Definition af regul\IeC {\ae }re udtryk}{2}
+\contentsline {section}{\numberline {2.2}Forkortelser af regul\IeC {\ae }re udtryk}{2}
+\contentsline {section}{\numberline {2.3}Eksempler p\IeC {\r a} regul\IeC {\ae }re udtryk}{2}
+\contentsline {chapter}{\chapternumberline {3}Fra regul\IeC {\ae }re udtryk til NFA}{2}
+\contentsline {section}{\numberline {3.1}S\IeC {\ae }tning og bevis}{2}
+\contentsline {section}{\numberline {3.2}Eksempel}{3}
+\contentsline {chapter}{\chapternumberline {4}Fra DFA til regul\IeC {\ae }re udtryk}{4}
+\contentsline {section}{\numberline {4.1}Teori}{4}
+\contentsline {section}{\numberline {4.2}GNFA}{5}
+\contentsline {subsection}{Teori}{5}
+\contentsline {subsection}{eksempel p\IeC {\r a} en GNFA}{6}
+\contentsline {subsection}{Fra DFA til regul\IeC {\ae }re udtryk}{6}
+\contentsline {subsection}{Eksempel}{7}
+\contentsline {chapter}{\chapternumberline {5}Gyser}{8}
+\contentsline {section}{\numberline {5.1}Termolig}{8}
+\contentsline {section}{\numberline {5.2}Ingen Ad-Hoc-l\IeC {\o }sninger}{8}
+\contentsline {section}{\numberline {5.3}Ingen smarte genveje}{9}

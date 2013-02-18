@@ -1,5 +1,9 @@
-Our Language
+\chapter{Our Language}
+We have discussed the syntax of our new language, and have written an outcast to how we want the the control statements and operates to look like in the new language.
 
+The "..." means some input, expression or statement is left out.
+
+First we have the "if"-statement.
 if (...)
 Begin
 	if (...)
@@ -16,7 +20,7 @@ Begin
 	End
 End
 
-
+This is how we want the "while"-loop look like.
 While (...)
 Begin
 	...;
@@ -24,7 +28,7 @@ Begin
 	...;
 End
 	
-
+This is how we imagine the "for"-loop is going to look like.
 From ... To ... Step ...
 Begin
 	...;
@@ -32,6 +36,21 @@ Begin
 	...;
 End
 
+This is the "switch"-statement in our language.
+Switch (...)
+Begin
+	Case 4:
+		DoSomething();
+		Break;
+	Case 8:
+		DoSomethingElse();
+		Break;
+	Default:
+		DoSomethingElseAgain();
+	Break;
+End
+
+This is an example of a function "Serve", which returns an int.
 Function Serve returns int using (...)
 Begin
 	...;
@@ -40,8 +59,10 @@ Begin
 	return 4;
 End
 
+And this is how we would like to call our functions.
 Call Serve (...);
 
+This is the types we want implemented
 \textit{TYPES:}
 double
 int
@@ -49,8 +70,8 @@ string
 bool
 array->Drink
 
-
-C#	|	Our
+Here is the operators from C\# and what our language will have instead. A "~~~" means we do not want it implemented.
+C\#	|	Our
 ============
 =  	|	<--
 ==	|	=
@@ -66,7 +87,7 @@ C#	|	Our
 >=	|	>=
 &&	|	AND
 ||	|	OR
-%	|	~~~
+\%	|	~~~
 ++	|	?
 --	|	?
 ;	|	;
@@ -74,16 +95,49 @@ C#	|	Our
 >	|	>
 !	|	!
 
-Object-Oriented
-Declared methods
-Readable
-Compilation
-Writable
-Orthogonality
-Documentation
+%Hvad vi gerne vil have i et sprog
+%Object-Oriented
+%Declared methods
+%Readable
+%Compilation
+%Writable
+%Orthogonality
+%Documentation
 
-Navn:
+Name:
 
-SPLAT
-Simple Programming Language for Arduino Tipple-mixer
+SPLAT - Simple Programming Language for Arduino Tipple-mixer
 
+
+(Just an idea for a name for our language)
+
+
+
+
+%Container Vodka = 14;
+
+%Call pour(Vodka, 2)
+
+%Function Pour returns bool using(container, quantity)
+%Begin
+%	...
+%End
+
+These are the functions that the user will need to implement before compiling the program.
+
+Pour
+Serve
+Ice
+Shake
+Stir
+Setup
+MakeDrink(int id)
+======
+These are the functions already implemented in the language.
+
+Output
+Input
+Function print returns nothing using(LCD y, string x)     (int[] LCD)
+Begin
+	...
+End

@@ -1,0 +1,22 @@
+1. Discuss what resources an operating system can/should manage.
+2. Discuss pros and cons of having the GUI be part of the operating system.
+3. Discuss if an operating system should manage the filesystem, i.e., how files are named and organised on a hardddisk.
+4. Explain how race conditions can result in program errors.
+5. Discuss if it is possible to implement protection against race conditions in software or if hardware support is needed.
+6. Discuss if race conditions induced by parallelism are similar to, or worse than, race conditions induced by concurrency.
+7.Find out if your favourite operating system has a shell and, if so, how to use it.
+
+1. Et operativ system skal være en bro mellem hardwaren og softwaren, håndtere hukommelse (Harddisk RAM etc.), processer, navne og koordinere hændelser og aktiviteter. 
+
+2. cons: Det bliver mere låst.
+   pros: Der er en standart.
+   
+3. Ja, operativ systemet skal håndtere filsystemet for at undgå at andre programmer fx kan gå ind og overskrive/ødelægge andres filer. Operativ systemet skulle også forhindre diskfragmentering idet den sørge for filerne ligger sammen.
+
+4. Hvis fx et program skal bruge et resultat fra et sub program, hvor sub programmet så går ned, går main programmet også ned.
+
+5. Ja det er muligt men det kræver både software og hardware support
+
+6. Det er værst ved parallelisme, fordi de 2 paralle processor kan tilgå den sammen variable, hvor de begge 2 så kan finde på at lave om på variablen hvorefter dette kan forsage et forkert resultat. I samtidige sker det i sekvens så først den ene delproces og derefter den anden og derved tilgås variablen ikke på sammentid og derfor kan der kun være fejl i den ene af processerne.
+
+7. Windows har en shell.

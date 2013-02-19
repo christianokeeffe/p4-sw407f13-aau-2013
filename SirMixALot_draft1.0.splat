@@ -18,14 +18,15 @@ function OpenValve return bool using (int Pin, double Time)
 Begin
 	Output(Pin, HIGH);
 	delay(int(Time*1000));
-	Output(Pin, LOW)
+	Output(Pin, LOW);
+	return true;
 End
 
 function Pour return bool using (Container Name, double Quantity)
 Begin
-	/* Implement pour function */
 	int ValvePin = 100;
 	OpenValve(100, QuantityToTime(Quantity));
+	return true;
 End
 
 function Serve return bool using ()
@@ -33,6 +34,7 @@ Begin
 	/* Implement serve function */
 	
 	LCDPrint("Drink ready, enjoy!");
+	return true;
 End
 
 function Ice return bool using (int Quantity)

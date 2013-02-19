@@ -11,7 +11,18 @@ end
 
 function QuantityToTime return double using (double Quantity)
 begin
-	/* Convert quantity to time */
+	if( Quantity > 0.0 AND Quantity < 100.0)
+	begin
+		return Quantity*1.25;
+	end
+	else if(Quantity = 101.0)
+	begin
+		return Quantity*0.1;
+	end
+	else
+	begin
+		return Quantity;
+	end
 end
 
 function OpenValve return bool using (int Pin, double Time)

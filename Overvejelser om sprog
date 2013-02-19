@@ -1,0 +1,19 @@
+Beslutninger i forhold til sproget:
+
+Alle keywords såsom begin, end, call osv. skal være skrevet med småt
+
+Funktioner, løkker osv. begynder med keywordet "begin" og slutter med "end"
+	Dette er for at øge læsbarheden
+	
+	
+Funktioner defineres således: function foo return type using(type bar);
+	Dette er for at øge læsbarheden
+
+Visse funktioner skal implementeres, disse er MakeDrink, Serve, Setup og Pour. 
+	Disse er de grundlæggende funktioner som skal bruges af alle drinksmaskiner som bruger vores sprog
+	
+Visse funktioner kan implementeres, disse er: Ice, Shake, Stir, LCDPrint
+	Disse er ikke nødvendige, men har man hardwaren til det, kan man implementere dem.
+
+Visse funktioner stilles til rådighed gennem sproget, disse er: Input og Output.
+	Gennem disse kan man kommunikere direkte med pins på arduinoen.

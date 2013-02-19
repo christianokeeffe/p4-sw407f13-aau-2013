@@ -81,7 +81,7 @@ begin
 			call Serve();
 		break;
 		default:
-			call LCDPrint("Unkown drink");
+			call LCDPrint("Unknown drink");
 		break;
 	end
 end

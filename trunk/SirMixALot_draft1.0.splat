@@ -1,3 +1,4 @@
+<?
 Setup
 Begin
 	Container Vodka = 15;
@@ -17,6 +18,8 @@ End
 function Serve return bool using ()
 Begin
 	/* Implement serve function */
+	
+	LCDPrint("Drink ready, enjoy!");
 End
 
 function Ice return bool using (int Quantity)
@@ -34,24 +37,33 @@ Begin
 	/* Implement stir function */
 End
 
+function LCDPrint return bool using (string Text)
+Begin
+	/* Implement PrintLCD */
+End
+
 function MakeDrink return bool using (int DrinkID)
 Begin
 	switch(DrinkID)
 	Begin
 		/* IsBjorn: */
 		case 13102:
+			LCDPrint("Now mixing IsBjorn");
 			Pour(Vodka, 2.0);
 			Pour(BlueCuracao, 0.2);
 			Pour(Sprite, 10.0);
 			Ice(4);
+			Serve();
 		break;
 		/* Pina Colada: */
 		case 13132:
+			LCDPrint("Now mixing Pina Colada");
 			Pour(WhiteRum, 5.0);
 			Pour(PineappleJucie, 10.0);
 			Pour(CoconutMilk, 5.0);
 			Shake(15);
 			Ice(2);
+			Serve();
 		break;
 	End
 End

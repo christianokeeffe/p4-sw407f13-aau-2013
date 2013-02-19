@@ -10,7 +10,7 @@
             <Keywords name="Numbers, prefixes" id="2"></Keywords>
             <Keywords name="Numbers, extras with prefixes" id="3"></Keywords>
             <Keywords name="Numbers, suffixes" id="4"></Keywords>
-            <Keywords name="Operators1" id="5">( ) ; == + - * / ! &lt;-- </Keywords>
+            <Keywords name="Operators1" id="5">( ) ; == + - * / ! &lt;-- :</Keywords>
             <Keywords name="Operators2" id="6"></Keywords>
             <Keywords name="Folders in code1, open" id="7"></Keywords>
             <Keywords name="Folders in code1, middle" id="8"></Keywords>
@@ -21,8 +21,8 @@
             <Keywords name="Folders in comment, open" id="13"></Keywords>
             <Keywords name="Folders in comment, middle" id="14"></Keywords>
             <Keywords name="Folders in comment, close" id="15"></Keywords>
-            <Keywords name="Keywords1" id="16">int container string bool double HIGH LOW true false</Keywords>
-            <Keywords name="Keywords2" id="17">function begin end return using if else case switch while from to step call break deafault AND OR</Keywords>
+            <Keywords name="Keywords1" id="16">int container string bool double HIGH LOW true false nothing</Keywords>
+            <Keywords name="Keywords2" id="17">function begin end return using if else case switch while from to step call break default AND OR</Keywords>
             <Keywords name="Keywords3" id="18"></Keywords>
             <Keywords name="Keywords4" id="19"></Keywords>
             <Keywords name="Keywords5" id="20"></Keywords>

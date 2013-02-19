@@ -15,14 +15,17 @@ Teori
 	EBNF(Extended Backus Naur Form)
 	Kontextuel analyse
 	Kode generering
+
 Design
 	Syntax design
 	Semantic design
 	Kode eksempler
+
 Implementation
 	Scanner class creation
 	Parser Generation
 	Class generator classgen
 	Scope and type checking
 	Code generation
+
 Test/evaluering

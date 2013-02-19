@@ -10,7 +10,7 @@ Begin
 	Container CoconutMilk = 44;
 End
 
-function Pour return bool using (Container C, double Q)
+function Pour return bool using (Container Name, double Quantity)
 Begin
 	/* Implement pour function */
 End

@@ -80,5 +80,8 @@ begin
 			call Ice(2);
 			call Serve();
 		break;
+		default:
+			call LCDPrint("Unkown drink");
+		break;
 	end
 end

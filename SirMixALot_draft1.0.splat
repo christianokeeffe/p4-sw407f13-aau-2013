@@ -1,84 +1,84 @@
-fuction Setup return nothing using()
-Begin
-	Container Vodka = 15;
-	Container BlueCuracao = 18;
-	Container Sprite = 10;
-	Container Ice = 1;
-	Container WhiteRum = 3;
-	Container PineappleJucie = 4;
-	Container CoconutMilk = 44;
-End
+function Setup return nothing using()
+begin
+	container Vodka = 15;
+	container BlueCuracao = 18;
+	container Sprite = 10;
+	container Ice = 1;
+	container WhiteRum = 3;
+	container PineappleJucie = 4;
+	container CoconutMilk = 44;
+end
 
 function QuantityToTime return double using (double Quantity)
-Begin
+begin
 	/* Convert quantity to time */
-End
+end
 
 function OpenValve return bool using (int Pin, double Time)
-Begin
-	Output(Pin, HIGH);
-	delay(int(Time*1000));
-	Output(Pin, LOW);
+begin
+	call Output(Pin, HIGH);
+	call delay(int(Time*1000));
+	call Output(Pin, LOW);
 	return true;
-End
+end
 
-function Pour return bool using (Container Name, double Quantity)
-Begin
+function Pour return bool using (container Name, double Quantity)
+begin
 	int ValvePin = 100;
-	OpenValve(100, QuantityToTime(Quantity));
+	call OpenValve(100, QuantityToTime(Quantity));
 	return true;
-End
+end
 
 function Serve return bool using ()
-Begin
+begin
 	/* Implement serve function */
 	
-	LCDPrint("Drink ready, enjoy!");
+	call LCDPrint("Drink ready, enjoy!");
 	return true;
-End
+end
 
 function Ice return bool using (int Quantity)
-Begin
+begin
 	/* Implement ice function */
-End
+end
 
 function Shake return bool using (int Duration)
-Begin
+begin
 	/* Implement shake function */
-End
+end
 
 function Stir return bool using (int Duration)
-Begin
+begin
 	/* Implement stir function */
-End
+end
 
 function LCDPrint return bool using (string Text)
-Begin
+begin
 	/* Implement PrintLCD */
-End
+end
 
 function MakeDrink return bool using (int DrinkID)
-Begin
+begin
 	switch(DrinkID)
-	Begin
+	begin
 		/* IsBjorn: */
 		case 13102:
-			LCDPrint("Now mixing IsBjorn");
-			Pour(Vodka, 2.0);
-			Pour(BlueCuracao, 0.2);
-			Pour(Sprite, 10.0);
-			Ice(4);
-			Serve();
+			call LCDPrint("Now mixing IsBjorn");
+			call Pour(Vodka, 2.0);
+			call Pour(BlueCuracao, 0.2);
+			call Pour(Sprite, 10.0);
+			call Ice(4);
+			call Serve();
 		break;
 		/* Pina Colada: */
 		case 13132:
-			LCDPrint("Now mixing Pina Colada");
-			Pour(WhiteRum, 5.0);
-			Pour(PineappleJucie, 10.0);
-			Pour(CoconutMilk, 5.0);
-			Shake(15);
-			Ice(2);
-			Serve();
+			call LCDPrint("Now mixing Pina Colada");
+			call Pour(WhiteRum, 5.0);
+			call Pour(PineappleJucie, 10.0);
+			call Pour(CoconutMilk, 5.0);
+			call Shake(15);
+			call Ice(2);
+			call Serve();
 		break;
-	End
-End
+	end
+end

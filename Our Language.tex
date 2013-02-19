@@ -7,60 +7,60 @@ First we have the "if"-statement.
 if (...)
 Begin
 	if (...)
-	Begin
+	begin
 		...;
-	End
-	Else if (...)
-	Begin
+	end
+	else if (...)
+	begin
 		...;
-	End
-	Else
-	Begin
+	end
+	else
+	begin
 	...
-	End
-End
+	end
+end
 
 This is how we want the "while"-loop look like.
-While (...)
-Begin
+while (...)
+begin
 	...;
 	...;
 	...;
-End
+end
 	
 This is how we imagine the "for"-loop is going to look like.
-From ... To ... Step ...
-Begin
+from ... to ... step ...
+begin
 	...;
 	...;
 	...;
-End
+end
 
 This is the "switch"-statement in our language.
-Switch (...)
-Begin
+switch (...)
+begin
 	Case 4:
-		DoSomething();
+		call DoSomething();
 		Break;
 	Case 8:
-		DoSomethingElse();
+		call DoSomethingElse();
 		Break;
 	Default:
-		DoSomethingElseAgain();
+		call DoSomethingElseAgain();
 	Break;
-End
+end
 
 This is an example of a function "Serve", which returns an int.
-Function Serve returns int using (...)
-Begin
+function Serve returns int using (...)
+begin
 	...;
 	...;
 	...;
 	return 4;
-End
+end
 
 And this is how we would like to call our functions.
-Call Serve (...);
+call Serve (...);
 
 This is the types we want implemented
 \textit{TYPES:}
@@ -142,7 +142,7 @@ Output
 Input
 
 %Skal print virkelig ligge her?								Og det her hvor skal det være?
-Function print returns nothing using(LCD y, string x)     (int[] LCD)
-Begin
+function print returns nothing using(LCD y, string x)     (int[] LCD)
+begin
 	...
-End
+end

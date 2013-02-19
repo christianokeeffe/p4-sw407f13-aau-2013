@@ -1,0 +1,71 @@
+Prog()
+  Dcls() Stmts()
+  $
+
+
+
+Dcls()
+  if()
+    Dcl() Dcls()
+  else if()
+    lampda
+  else
+    error
+
+Dcl()
+  if()
+    floatdcl id
+  else if()
+    intdcl id
+  else
+    error
+
+
+Stmts()
+  if()
+    Stmt Stmts
+  else if()
+    lampda
+  else
+    error
+
+
+Stmt
+  if()
+    id assign Val() Expr()
+  else if()
+    print id
+  else
+    error
+
+Expr()
+  if()
+    plus Val Expr
+  else if()
+    minus Val Expr
+  else if()
+    lampda
+  else
+    error
+
+
+
+Val()
+  if()
+    id
+  else if()
+    inum
+  else if()
+    fnum
+  else
+    error
+
+
+
+
+
+
+
+
+
+

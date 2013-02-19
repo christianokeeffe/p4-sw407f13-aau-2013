@@ -9,9 +9,23 @@ Begin
 	Container CoconutMilk = 44;
 End
 
+function QuantityToTime return double using (double Quantity)
+Begin
+	/* Convert quantity to time */
+End
+
+function OpenValve return bool using (int Pin, double Time)
+Begin
+	Output(Pin, HIGH);
+	delay(int(Time*1000));
+	Output(Pin, LOW)
+End
+
 function Pour return bool using (Container Name, double Quantity)
 Begin
 	/* Implement pour function */
+	int ValvePin = 100;
+	OpenValve(100, QuantityToTime(Quantity));
 End
 
 function Serve return bool using ()

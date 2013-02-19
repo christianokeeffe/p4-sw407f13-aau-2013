@@ -1,5 +1,4 @@
-<?
-Setup
+fuction Setup return nothing using()
 Begin
 	Container Vodka = 15;
 	Container BlueCuracao = 18;

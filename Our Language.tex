@@ -1,7 +1,7 @@
 \chapter{Our Language}
-We have discussed the syntax of our new language, and have written an outcast to how we want the the control statements and operates to look like in the new language.
+We have discussed the syntax of our new language, and have written a draft to how we want the control statements and operators to look like in the new language.
 
-The "..." means some input, expression or statement is left out.
+The "..." is a placeholder for an input, expression or statement.
 
 First we have the "if"-statement.
 if (...)
@@ -70,20 +70,6 @@ string
 bool
 array->Drink
 
-We also what to have switch our new language that is going to look like this.
-switch(int variable)
-Begin
-	case 4:
-		dosomething();
-		break;
-	case 8:
-		dosomethingelse();
-		break;
-	default:
-		dosomethingelseelse();
-		break;
-End
-
 Here is the operators from C\# and what our language will have instead. A "~~~" means we do not want it implemented.
 C\#	|	Our
 ============
@@ -137,20 +123,25 @@ SPLAT - Simple Programming Language for Arduino Tipple-mixer
 %	...
 %End
 
-These are the functions that the user will need to implement before compiling the program.
+Functions that need to be implemented before they can compile the program.
 
 Pour
 Serve
-Ice
-Shake
-Stir
 Setup
 MakeDrink(int id)
+======
+Optional functions that can be implented
+
+Shake
+Stir
+Ice
 ======
 These are the functions already implemented in the language.
 
 Output
 Input
+
+%Skal print virkelig ligge her?								Og det her hvor skal det være?
 Function print returns nothing using(LCD y, string x)     (int[] LCD)
 Begin
 	...

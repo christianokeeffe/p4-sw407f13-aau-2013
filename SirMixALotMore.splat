@@ -1,0 +1,66 @@
+function Setup return nothing using()
+begin
+	container DarkRum <-- 15;
+	container Vodka <-- 4;
+	container Cola <-- 3;
+	container Sprite <-- 10;
+	container Ice <-- 1;
+	container JäggerMeister <-- 5;
+	container EnergiDrink <-- 7;
+	
+	drink 101
+	begin
+		ID <-- ColaRum;
+		NumberOfElements <-- 2;
+		Recipe <-- [Cola,DarkRum];
+		Quantity <-- [5,2];
+		Size <-- Big;
+	end
+	
+	drink 1337
+	begin
+		ID <-- VodkaSprite;
+		NumberOfElements <-- 2;
+		Recipe <-- [Sprite,Vodka];
+		Quantity <-- [2,2];
+		Size <-- Medium;
+	end
+end
+
+function Pour return nothing using (int pin, double time)
+begin
+	call Output(pin, HIGH)
+	call delay(int(time*1000))
+	call Output(pin, LOW)
+end
+
+function Serve return nothing using (drink Order)
+begin
+	call GetGlass(Order.size);
+	int x;
+	from x <-- 1 to Order.NumberOfElements step 1
+	begin
+		call Pour (Order.Recipe[x],Order.Quantity[x]);
+	end
+	call Serve(Order);
+	call LCDprint("Serving" + Order.ID + ", enjoy!");
+	call PushGlass(9000!!!!);
+end
+
+function MakeDrink return nothing using ()
+begin
+	while (Input(ID) = null)
+		begin
+			call LCDprint("Please, place your RFID tag");
+			call delay(1000)
+		end
+	if (Input(ID) = isValid?)
+	begin
+		call Serve(Input(ID));
+	end
+	else
+	begin
+		call LCDprint("Incorrect order!");
+		call delay(5000);
+	end
+end

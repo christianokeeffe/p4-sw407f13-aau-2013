@@ -10,7 +10,7 @@
             <Keywords name="Numbers, prefixes" id="2"></Keywords>
             <Keywords name="Numbers, extras with prefixes" id="3"></Keywords>
             <Keywords name="Numbers, suffixes" id="4"></Keywords>
-            <Keywords name="Operators1" id="5">( ) ; == + - * / ! &lt;-- : ,</Keywords>
+            <Keywords name="Operators1" id="5">( ) ; = + - * / ! &lt;-- : , &lt; &gt; &lt;= &gt;=</Keywords>
             <Keywords name="Operators2" id="6"></Keywords>
             <Keywords name="Folders in code1, open" id="7"></Keywords>
             <Keywords name="Folders in code1, middle" id="8"></Keywords>

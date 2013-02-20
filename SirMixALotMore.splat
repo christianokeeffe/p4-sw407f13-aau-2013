@@ -8,6 +8,10 @@ begin
 	container JäggerMeister <-- 5;
 	container EnergiDrink <-- 7;
 	
+	int[] ID <-- 101, 1337;
+	string[][] Recipe <-- {"Cola", "DarkRum"}, {"Sprite", "Vodka"};
+	int[][] Quantity <-- {5,2}{2,2};
+	/* Recipes of the drink
 	drink 101 
 	begin
 		ID <-- ColaRum;
@@ -25,6 +29,7 @@ begin
 		Quantity <-- [2,2];
 		Size <-- Medium;
 	end
+	*/
 end
 
 function Pour return nothing using (int pin, double time)
@@ -34,16 +39,15 @@ begin
 	call Output(pin, LOW)
 end
 
-function Serve return nothing using (drink Order)
+function Serve return nothing using (int ID, string[] recipe, int[] quantity)
 begin
-	call GetGlass(Order.size);
+	call GetGlass();
 	int x;
-	from x <-- 1 to Order.NumberOfElements step 1
+	from x <-- 1 to recipe[].size step 1
 	begin
-		call Pour (Order.Recipe[x],Order.Quantity[x]);
+		call Pour (recipe[x],quantity[x]);
 	end
-	call Serve(Order);
-	call LCDprint("Serving" + Order.ID + ", enjoy!");
+	call LCDprint("Serving your drink, enjoy!");
 	/*
 	function to serve the glass
 	*/
@@ -53,6 +57,7 @@ end
 function MakeDrink return nothing using ()
 begin
 	string message <-- "";
+	int x;
 	
 	while (Input(ID) = null)
 		begin
@@ -61,8 +66,14 @@ begin
 		end
 	if (Input(ID) = isValid? AND Input(DrinkNumber) > 0)
 	begin
-		call Serve(Input(ID));
-		call writeToRFID(DrinkNumber <-- DrinkNumber - 1);
+		from x <-- 1 to ID.size step 1
+		begin
+			if (ID[x] = Input(ID))
+			begin
+				call Serve(x, Ricipe[x][], Quantity[x][]);
+				call writeToRFID(DrinkNumber <-- DrinkNumber - 1);
+			end
+		end
 	end
 	else if((Input(ID) != isValid? AND Input(DrinkNumber) > 0) OR (Input(ID) = isValid? AND Input(DrinkNumber) = 0))
 	begin

@@ -8,7 +8,7 @@ begin
 	container JäggerMeister <-- 5;
 	container EnergiDrink <-- 7;
 	
-	drink 101
+	drink 101 
 	begin
 		ID <-- ColaRum;
 		NumberOfElements <-- 2;
@@ -44,6 +44,9 @@ begin
 	end
 	call Serve(Order);
 	call LCDprint("Serving" + Order.ID + ", enjoy!");
+	/*
+	function to serve the glass
+	*/
 	call PushGlass(9000!!!!);
 end
 
@@ -61,7 +64,7 @@ begin
 		call Serve(Input(ID));
 		call writeToRFID(DrinkNumber <-- DrinkNumber - 1);
 	end
-	else if(Input(ID) != isValid? OR Input(DrinkNumber) = 0)
+	else if((Input(ID) != isValid? AND Input(DrinkNumber) > 0) OR (Input(ID) = isValid? AND Input(DrinkNumber) = 0))
 	begin
 		if(Input(ID) != isValid?)
 		begin
@@ -72,6 +75,12 @@ begin
 			message <-- "Your are out of drinks!";
 		end
 		call LCDprint(message);
-			call delay(5000);
+		call delay(5000);
+	end
+	else
+	begin			
+		message <-- "Your order does not exists and your are out of drinks!"
+		call LCDprint(message);
+		call delay(5000);
 	end
 end

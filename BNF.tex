@@ -1,0 +1,80 @@
+<program> -> <stmts>
+<stmts> -> <stmt>
+	| <stmt><stmts>
+<var> -> <identifier>
+<identifier> -> <letter>
+	|<identifier> <letter>
+	|<identifier> <digit>
+<letter> -> [a-z]
+	| [A-Z]
+<digit> -> [0-9]
+<expr> -> <expr>+<term>
+	|<expr>-<term>
+	|<term>
+<term> -> <term> * <factor>
+	| <term> / <factor>
+	| <factor>
+<factor> -> ( <expr> )
+	| <var>
+<stmt> -> <var> <-- <expr>;
+	| <if>
+	| <while>
+	| <from>
+	|
+<switch> -> switch (<expr>)
+		begin
+			<cases>
+		end
+<cases> -> case <expr>:
+			<stmts>
+		<endcase>
+		
+<endcase> -> <cases>
+		| break;
+		| break;
+		<cases>
+		|default:
+			<stmts>
+			break;
+		|break;
+		default:
+			<stmts>
+			break;
+<from> -> from <expr> to <logexpr> step <expr>
+	begin
+		<stmts>
+	end 
+<while> -> while(<logexpr>)
+		begin
+			<stmts>
+		end
+<if> -> if(<logexpr>)
+	begin
+		<stmts>
+	<endif>
+<endif> -> end
+	else <if>
+	| end
+	else
+	begin
+		<stmts>
+	end
+	|end
+<logexpr> -> <logexpr> OR <andcomp>
+		| <andcomp>
+<andcomp> -> <andcomp> AND <comp>
+		|<comp>
+<comp> -> <boolean-operand> <comparison-operator> <boolean-operand>
+<boolean-operand> -> <boolean>
+		| !<boolean>
+<boolean> ->true
+		| false
+		| <expr>
+		| (<logexpr>)
+
+<comparison-operator> -> >
+				| <
+				| <=
+				| >=
+				| !=
+				| =

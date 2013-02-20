@@ -49,18 +49,29 @@ end
 
 function MakeDrink return nothing using ()
 begin
+	string message <-- "";
+	
 	while (Input(ID) = null)
 		begin
 			call LCDprint("Please, place your RFID tag");
-			call delay(1000)
+			call delay(1000);
 		end
-	if (Input(ID) = isValid?)
+	if (Input(ID) = isValid? AND Input(DrinkNumber) > 0)
 	begin
 		call Serve(Input(ID));
+		call writeToRFID(DrinkNumber <-- DrinkNumber - 1);
 	end
-	else
+	else if(Input(ID) != isValid? OR Input(DrinkNumber) = 0)
 	begin
-		call LCDprint("Incorrect order!");
-		call delay(5000);
+		if(Input(ID) != isValid?)
+		begin
+			message <-- "Your order does not exists!";
+		end
+		else if (Input(DrinkNumber) = 0)
+		begin
+			message <-- "Your are out of drinks!";
+		end
+		call LCDprint(message);
+			call delay(5000);
 	end
 end

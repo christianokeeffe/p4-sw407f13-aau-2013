@@ -35,8 +35,8 @@ end
 
 function Pour return bool using (container Name, double Quantity)
 begin
-	int ValvePin = 100;
-	call OpenValve(100, QuantityToTime(Quantity));
+	int ValvePin = Name;
+	call OpenValve(ValvePin, QuantityToTime(Quantity));
 	return true;
 end
 

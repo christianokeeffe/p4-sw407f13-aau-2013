@@ -1,80 +1,132 @@
-<program> -> <stmts>
-<stmts> -> <stmt>
-	| <stmt><stmts>
-<var> -> <identifier>
-<identifier> -> <letter>
-	|<identifier> <letter>
-	|<identifier> <digit>
-<letter> -> [a-z]
-	| [A-Z]
-<digit> -> [0-9]
-<expr> -> <expr>+<term>
-	|<expr>-<term>
-	|<term>
-<term> -> <term> * <factor>
-	| <term> / <factor>
-	| <factor>
-<factor> -> ( <expr> )
-	| <var>
-<stmt> -> <var> <-- <expr>;
-	| <if>
-	| <while>
-	| <from>
-	|
-<switch> -> switch (<expr>)
+\documentclass{article}
+\usepackage{syntax}
+\begin{document}
+\begin{grammar}
+<program> $\rightarrow$ <stmts>
+
+<stmts> $\rightarrow$ <stmt>
+	\alt <stmt><stmts>
+
+<var> $\rightarrow$ <identifier>
+
+<identifier> $\rightarrow$ <letter>
+	\alt<identifier> <letter>
+	\alt<identifier> <digit>
+
+<letter> $\rightarrow$ [a-z]
+	\alt [A-Z]
+
+<digit> $\rightarrow$ [0-9]
+
+<expr> $\rightarrow$ <expr>+<term>
+	\alt<expr>-<term>
+	\alt<term>
+
+<term> $\rightarrow$ <term> * <factor>
+	\alt <term> / <factor>
+	\alt <factor>
+
+<factor> $\rightarrow$ ( <expr> )
+	\alt <var>
+
+<stmt> $\rightarrow$ <var> <-- <expr>;
+	\alt <if>
+	\alt <while>
+	\alt <from>
+	\alt <empty>
+
+<switch> $\rightarrow$ switch (<expr>)
 		begin
 			<cases>
 		end
-<cases> -> case <expr>:
+
+<cases> $\rightarrow$ case <expr>:
 			<stmts>
 		<endcase>
 		
-<endcase> -> <cases>
-		| break;
-		| break;
+<endcase> $\rightarrow$ <cases>
+		\alt break;
+		\alt break;
 		<cases>
-		|default:
+		\alt default:
 			<stmts>
 			break;
-		|break;
+		\alt break;
 		default:
 			<stmts>
 			break;
-<from> -> from <expr> to <logexpr> step <expr>
+
+<from> $\rightarrow$ from <expr> to <logexpr> step <expr>
 	begin
 		<stmts>
 	end 
-<while> -> while(<logexpr>)
+
+<while> $\rightarrow$ while(<logexpr>)
 		begin
 			<stmts>
 		end
-<if> -> if(<logexpr>)
+
+<if> $\rightarrow$ if(<logexpr>)
 	begin
 		<stmts>
 	<endif>
-<endif> -> end
+
+<endif> $\rightarrow$ end
 	else <if>
-	| end
+	\alt end
 	else
 	begin
 		<stmts>
 	end
-	|end
-<logexpr> -> <logexpr> OR <andcomp>
-		| <andcomp>
-<andcomp> -> <andcomp> AND <comp>
-		|<comp>
-<comp> -> <boolean-operand> <comparison-operator> <boolean-operand>
-<boolean-operand> -> <boolean>
-		| !<boolean>
-<boolean> ->true
-		| false
-		| <expr>
-		| (<logexpr>)
+	\alt end
 
-<comparison-operator> -> >
-				| <
-				| <=
-				| >=
-				| !=
-				| =
+<logexpr> $\rightarrow$ <logexpr> OR <andcomp>
+		\alt <andcomp>
+
+<andcomp> $\rightarrow$ <andcomp> AND <comp>
+		\alt<comp>
+
+<comp> $\rightarrow$ <boolean-operand> <comparison-operator> <boolean-operand>
+
+<boolean-operand> $\rightarrow$ <boolean>
+		\alt !<boolean>
+<boolean> $\rightarrow$ bool
+		\alt <expr>
+		\alt (<logexpr>)
+
+<comparison-operator> $\rightarrow$ ">"
+				\alt "<"
+				\alt "<= "
+				\alt ">="
+				\alt "!="
+				\alt "="
+
+<type> $\rightarrow$ <primitive-type>
+\alt <array-type>
+
+<primitive-type> $\rightarrow$ <numeric-type>
+\alt bool
+
+<numeric-type> $\rightarrow$ <integral-type>
+\alt double
+
+<integral-type> $\rightarrow$ int
+\alt char
+
+<array-type> $\rightarrow$ <type> [ ]
+
+
+<function> $\rightarrow$  function <identifier> returns <type> using (<type> <var> <using>)
+begin
+	<stmts>
+	return <expr>
+end
+
+\alt function $\rightarrow$ function <identifier> returns nothing using (<type> <var> <using>)
+begin
+	<stmts>
+end
+
+
+\end{grammar}
+\end{document}

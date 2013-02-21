@@ -100,12 +100,12 @@
 
 <comp> $\rightarrow$ <boolean-operand> <comparison-operator> <boolean-operand>
 
-<boolean-operand> $\rightarrow$ <boolean>
-		\alt !<boolean>
-
-<boolean> $\rightarrow$ true
+<boolean-operand> $\rightarrow$ true
 		\alt false
 		\alt <expr>
+		\alt <boolean>
+
+<boolean> $\rightarrow$ !(<logexpr>)
 		\alt (<logexpr>)
 
 <comparison-operator> $\rightarrow$ ">"
@@ -139,10 +139,10 @@ begin
 	<stmts>
 end
 
-<rootusing> $\rightarrow$ <using>
+<using> $\rightarrow$ <subusing>
 	\alt <empty>
 
-<using> $\rightarrow$ <type> <id>, <using>
+<subusing> $\rightarrow$ <type> <id>, <subusing>
 \alt <type> <id>
 
 <functioncall> $\rightarrow$ call <id>(<using>)

@@ -10,7 +10,7 @@
 <root> $\rightarrow$ <function>
 \alt <dcl>;
 
-<dcl> $\rightarrow$ <type> <var>
+<dcl> $\rightarrow$ <type> <id>
 | <type> <assign>
 
 <stmts> $\rightarrow$ <stmt>
@@ -25,18 +25,16 @@
 	\alt <functioncall>;
 	\alt <switch>
 
-<var> $\rightarrow$ <identifier>
-
-<identifier> $\rightarrow$ <letter>
-	\alt<identifier> <letter>
-	\alt<identifier> <digit>
+<id> $\rightarrow$ <letter>
+	\alt<id> <letter>
+	\alt<id> <digit>
 
 <letter> $\rightarrow$ [a-z]
 	\alt [A-Z]
 
 <digit> $\rightarrow$ [0-9]
 
-<assign>  $\rightarrow$ <var> "<--" <expr>
+<assign>  $\rightarrow$ <id> "<--" <expr>
 
 <expr> $\rightarrow$ <expr>+<term>
 	\alt<expr>-<term>
@@ -47,7 +45,7 @@
 	\alt <factor>
 
 <factor> $\rightarrow$ ( <expr> )
-	\alt <var>
+	\alt <id>
 
 <switch> $\rightarrow$ switch (<expr>)
 		begin
@@ -129,20 +127,20 @@
 
 <array-type> $\rightarrow$ <type> [ ]
 
-<function> $\rightarrow$  function <identifier> returns <type> using (<type> <var> <using>)
+<function> $\rightarrow$  function <id> returns <type> using (<type> <id> <using>)
 begin
 	<stmts>
 	return <expr>
 end
-\alt function $\rightarrow$ function <identifier> returns nothing using (<type> <var> <using>)
+\alt function $\rightarrow$ function <id> returns nothing using (<type> <id> <using>)
 begin
 	<stmts>
 end
 
-<using> $\rightarrow$ ,<type> <var> <using>
+<using> $\rightarrow$ ,<type> <id> <using>
 \alt <empty>
 
-<functioncall> $\rightarrow$ call <identifier>(<using>)
+<functioncall> $\rightarrow$ call <id>(<using>)
 
 \end{grammar}
 \end{document}

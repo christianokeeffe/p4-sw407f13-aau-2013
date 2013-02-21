@@ -103,7 +103,8 @@
 <boolean-operand> $\rightarrow$ <boolean>
 		\alt !<boolean>
 
-<boolean> $\rightarrow$ bool
+<boolean> $\rightarrow$ true
+		\alt false
 		\alt <expr>
 		\alt (<logexpr>)
 
@@ -128,18 +129,21 @@
 
 <array-type> $\rightarrow$ <type> [ ]
 
-<function> $\rightarrow$  function <id> returns <type> using (<type> <id> <using>)
+<function> $\rightarrow$  function <id> returns <type> using (<using>)
 begin
 	<stmts>
 	return <expr>
 end
-\alt function $\rightarrow$ function <id> returns nothing using (<type> <id> <using>)
+\alt function $\rightarrow$ function <id> returns nothing using (<using>)
 begin
 	<stmts>
 end
 
-<using> $\rightarrow$ ,<type> <id> <using>
-\alt <empty>
+<rootusing> $\rightarrow$ <using>
+	\alt <empty>
+
+<using> $\rightarrow$ <type> <id>, <using>
+\alt <type> <id>
 
 <functioncall> $\rightarrow$ call <id>(<using>)
 

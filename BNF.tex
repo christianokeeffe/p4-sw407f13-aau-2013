@@ -2,10 +2,27 @@
 \usepackage{syntax}
 \begin{document}
 \begin{grammar}
-<program> $\rightarrow$ <stmts>
+<program> $\rightarrow$ <roots>
+
+<roots> $\rightarrow$ <roots>
+\alt <root> <roots>
+
+<root> $\rightarrow$ <function>
+\alt <dcl>
+
+<dcl> $\rightarrow$ <type> <var>;
+| <type> <assign>;
 
 <stmts> $\rightarrow$ <stmt>
 	\alt <stmt><stmts>
+
+<stmt> $\rightarrow$ <assign>;
+	\alt <if>
+	\alt <while>
+	\alt <from>
+	\alt <empty>
+	\alt <functioncall>;
+	\alt <switch>
 
 <var> $\rightarrow$ <identifier>
 
@@ -18,6 +35,8 @@
 
 <digit> $\rightarrow$ [0-9]
 
+<assign>  $\rightarrow$ <var> "<--" <expr>
+
 <expr> $\rightarrow$ <expr>+<term>
 	\alt<expr>-<term>
 	\alt<term>
@@ -28,12 +47,6 @@
 
 <factor> $\rightarrow$ ( <expr> )
 	\alt <var>
-
-<stmt> $\rightarrow$ <var> <-- <expr>;
-	\alt <if>
-	\alt <while>
-	\alt <from>
-	\alt <empty>
 
 <switch> $\rightarrow$ switch (<expr>)
 		begin
@@ -115,18 +128,20 @@
 
 <array-type> $\rightarrow$ <type> [ ]
 
-
 <function> $\rightarrow$  function <identifier> returns <type> using (<type> <var> <using>)
 begin
 	<stmts>
 	return <expr>
 end
-
 \alt function $\rightarrow$ function <identifier> returns nothing using (<type> <var> <using>)
 begin
 	<stmts>
 end
 
+<using> $\rightarrow$ ,<type> <var> <using>
+\alt <empty>
+
+<functioncall> $\rightarrow$ call <identifier>(<using>)
 
 \end{grammar}
 \end{document}

@@ -129,23 +129,23 @@
 
 <array-type> $\rightarrow$ <type> [ ]
 
-<function> $\rightarrow$  function <id> returns <type> using (<using>)
+<function> $\rightarrow$  function <id> returns <type> params (<params>)
 begin
 	<stmts>
 	return <expr>
 end
-\alt function $\rightarrow$ function <id> returns nothing using (<using>)
+\alt function $\rightarrow$ function <id> returns nothing params (<params>)
 begin
 	<stmts>
 end
 
-<using> $\rightarrow$ <subusing>
+<params> $\rightarrow$ <subparams>
 	\alt <empty>
 
-<subusing> $\rightarrow$ <type> <id>, <subusing>
+<subparams> $\rightarrow$ <type> <id>, <subparams>
 \alt <type> <id>
 
-<functioncall> $\rightarrow$ call <id>(<using>)
+<functioncall> $\rightarrow$ call <id>(<params>)
 
 \end{grammar}
 \end{document}

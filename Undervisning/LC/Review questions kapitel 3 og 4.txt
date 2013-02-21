@@ -1,0 +1,95 @@
+Kapitel 3
+
+2.
+	Til dem der skriver compilers
+
+7.
+	De tre extensions er:
+	1. Man kan bruge [] til "optional" værdier
+	2. {} på højre fungere ligesom kleene stjerne, den kan forekomme et vilkårligt antal gange
+	3. Når noget er i () skal en af valgmulighederne vælges adskilt af "|"
+
+8. 
+	Statisk semantik:
+	Den tjekker for typer.
+
+	Dynamisk semantik:
+	Beskriver hvad programmet kan forvente af operationer.
+
+15.
+	På det højeste niveau er man interreseret i det endelige resultat når man har kørt programmet
+
+	På det lavest niveau analysere man ændringer i tilstande på programmet
+
+16.
+	I denotationel sematik, er syntaksen domænet og sematikken er "range"
+
+18.
+	Denotationel sematik er bedst kendte fremgangsmåde
+
+25.
+	Den vil være for langsom og ineffektiv
+
+Kapitel 4
+
+1.
+	1. BNF er klare og præcise for både mennekser og maskiner
+	2. BNF kan direkte blive brugt som basis for syntax analyseren
+	3. BNF er så modulært at det er nemt at vedligeholde
+
+2.
+	1. Simplicitet
+	2. Effektivitet
+	3. Portabilitet
+
+4.
+	Den sammenligner mønstre
+
+5.
+	
+	Skriv en formel beskrivelse af token mønstre i sproget ved hjælp af et beskrivende sprog
+	som er relateret til regulære udtryk.
+	Disse beskrivelser skal bruges som ind put til et software værktøj som automatisk generere en lexikalsk analysator
+	
+	Lav et tilstandsdiagram som beskriver token mønstrene i sproget og lav et program der implementere diagrammet
+
+	Lav et tilstandsdiagram som beskriver token mønstrene af sprog og håndlav en tabeldrevet implementation af programmet
+
+8.
+	Først skal den tjekke om en program er syntaktisk korrekt
+	
+	Det andet er at producere et komplet parsing træ
+
+9.
+	Top-down
+	Læser fra toppen og ned og fra venstre mod højre når den læser	
+
+	Bottom-up
+	Læser fra bunden og op og fra højre mod venstre når den læser
+
+10.
+	Når den læser kan den have svært ved at vide hvilken af dens regler den skal følge
+
+11.
+	Den har problemer med at finde ud af hvilke "handle" den skal bruge
+
+12.
+	Det er for at gøre det mere effektivt og hurtigere
+
+15.
+	Left recursion
+	
+	Pairwise disjointness test
+
+22.
+	En pda(push down automaton)
+
+23.
+	1. De kan bygges til alle programmerings sprog
+	2. De kan finde syntax fejl så snart det er muligt i ventre til højre skanning
+	3.  The LR class of grammars is a proper superset of the class parsable by 
+	LL parsers (for example, many left recursive grammars are LR, but 
+	none are LL).
+
+27.
+	Nej

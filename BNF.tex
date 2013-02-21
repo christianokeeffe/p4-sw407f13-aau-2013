@@ -8,10 +8,10 @@
 \alt <root> <roots>
 
 <root> $\rightarrow$ <function>
-\alt <dcl>
+\alt <dcl>;
 
-<dcl> $\rightarrow$ <type> <var>;
-| <type> <assign>;
+<dcl> $\rightarrow$ <type> <var>
+| <type> <assign>
 
 <stmts> $\rightarrow$ <stmt>
 	\alt <stmt><stmts>
@@ -21,6 +21,7 @@
 	\alt <while>
 	\alt <from>
 	\alt <empty>
+	\alt <dcl>;
 	\alt <functioncall>;
 	\alt <switch>
 

@@ -3,11 +3,11 @@
 \begin{document}
 
 \begin{grammar}
+<program> $\ra$ <roots>
+
 <letter> $\ra$ [a - zA - Z]
 
 <digit> $\ra$ [0 - 9]
-
-<program> $\ra$ <roots>
 
 <roots> $\ra$ <root>
 \alt <root> <roots>
@@ -35,12 +35,12 @@
 <arraytype> $\ra$ <type> [ ]
 \alt string
 
-<function> $\ra$  function <id> returns <type> using (<params>)
+<function> $\ra$  function <id> return <type> using (<params>)
 begin
 	<stmts>
 	return <expr>;
 end
-\alt function <id> returns nothing using (<params>)
+\alt function <id> return nothing using (<params>)
 begin
 	<stmts>
 	return nothing;
@@ -53,7 +53,7 @@ end
 \alt <type> <id>
 
 <stmts> $\ra$ <stmt>
-	\alt <stmt><stmts>
+	\alt <stmt> <stmts>
 
 <stmt> $\ra$ <assign>;
 	\alt <if>
@@ -107,7 +107,7 @@ end
 	\alt <digit><nummeric>
 	\alt .<digitonly>
 
-<digitnonly> $\ra$ <digit>
+<digitonly> $\ra$ <digit>
 	\alt <digit> <digitonly>
 
 <string> $\ra$ <letter>
@@ -138,7 +138,6 @@ end
 \alt ]
 \alt :
 \alt ;
-\alt '
 \alt ?
 \alt ,
 \alt .

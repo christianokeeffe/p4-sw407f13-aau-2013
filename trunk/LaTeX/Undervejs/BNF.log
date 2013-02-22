@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.10.22)  22 FEB 2013 10:55
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.10.22)  22 FEB 2013 11:47
 entering extended mode
 **C:/Users/Christian/Documents/Arbejde/UNI/P4/svn/LaTeX/Undervejs/BNF.tex
 (C:/Users/Christian/Documents/Arbejde/UNI/P4/svn/LaTeX/Undervejs/BNF.tex
@@ -2106,29 +2106,29 @@ LaTeX Font Info:    Try loading font information for U+stmry on input line 3.
 
 ] [2] [3] 
 AED: lastpage setting LastPage
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 160.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 160.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 198.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 198.
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\Undervejs\BNF.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 160.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 160.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 198.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 198.
 Package rerunfilecheck Info: File `BNF.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 34451 strings out of 493921
- 626575 string characters out of 3147269
- 717018 words of memory out of 3000000
- 37159 multiletter control sequences out of 15000+200000
+ 34454 strings out of 493921
+ 626605 string characters out of 3147269
+ 716018 words of memory out of 3000000
+ 37162 multiletter control sequences out of 15000+200000
  13457 words of font info for 49 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
- 63i,11n,60p,905b,850s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,11n,60p,905b,853s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.enc}<C:/Pro
 gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/cm-super/sfrm1000.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/public/cm-super/sfti1000.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 public/cm-super/sftt1000.pfb>
-Output written on BNF.pdf (3 pages, 81760 bytes).
+Output written on BNF.pdf (3 pages, 84680 bytes).
 PDF statistics:
  43 PDF objects out of 1000 (max. 8388607)
  4 named destinations out of 1000 (max. 500000)

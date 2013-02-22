@@ -3,6 +3,11 @@
 \begin{document}
 
 \begin{grammar}
+<letter> $\ra$ [a - z]
+	\alt [A - Z]
+
+<digit> $\ra$ [0 - 9]
+
 <program> $\ra$ <roots>
 
 <roots> $\ra$ <root>
@@ -17,11 +22,6 @@
 <id> $\ra$ <letter>
 	\alt<id> <letter>
 	\alt<id> <digit>
-
-<letter> $\ra$ [a-z]
-	\alt [A-Z]
-
-<digit> $\ra$ [0-9]
 
 <assign>  $\ra$ <id> "<--" <expr>
 
@@ -70,27 +70,6 @@ end
 			<cases>
 		end
 
-<expr> $\ra$ <expr>+<term>
-	\alt<expr>-<term>
-	\alt<term>
-
-<term> $\ra$ <term> * <factor>
-	\alt <term> / <factor>
-	\alt <factor>
-
-<factor> $\ra$ ( <expr> )
-	\alt <id>
-	\alt <digit>
-	\alt ''<string>''
-
-<nummeric> $\ra$
-
-<string> $\ra$ <letter>
-\alt <digit>
-\alt <digit> <string>
-\alt <letter> <string>
-\alt $\eps$
-
 <cases> $\ra$ case <expr>:
 			<stmts>
 		<endcase>
@@ -106,6 +85,65 @@ end
 		default:
 			<stmts>
 			break;
+
+<expr> $\ra$ <expr>+<term>
+	\alt<expr>-<term>
+	\alt<term>
+
+<term> $\ra$ <term> * <factor>
+	\alt <term> / <factor>
+	\alt <factor>
+
+<factor> $\ra$ ( <expr> )
+	\alt <id>
+	\alt <plusminus><digit>
+	\alt <plusminus><nummeric>
+	\alt ''<string>''
+
+<plusminus> $\ra$ $\eps$
+	\alt -
+
+<nummeric> $\ra$ <digit>
+	\alt <digit><nummeric>
+	\alt .<digitonly>
+
+<digitnonly> $\ra$ <digit>
+	\alt <digit> <digitonly>
+
+<string> $\ra$ <letter>
+\alt <digit>
+\alt <symbols>
+\alt <symbols> <string>
+\alt <digit> <string>
+\alt <letter> <string>
+\alt $\eps$
+
+<symbols> $\ra$ !
+\alt \%
+\alt \^
+\alt \&
+\alt *
+\alt (
+\alt )
+\alt \_
+\alt +
+\alt |
+\alt \~
+\alt -
+\alt =
+\alt \`
+\alt \{
+\alt \}
+\alt [
+\alt ]
+\alt :
+\alt ;
+\alt '
+\alt ?
+\alt ,
+\alt .
+\alt /
+\alt ' '
 
 <from> $\ra$ from <expr> to <logexpr> step <expr>
 	begin

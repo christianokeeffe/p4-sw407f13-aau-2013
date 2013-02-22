@@ -4,26 +4,14 @@
 \begin{grammar}
 <program> $\rightarrow$ <roots>
 
-<roots> $\rightarrow$ <roots>
+<roots> $\rightarrow$ <root>
 \alt <root> <roots>
 
 <root> $\rightarrow$ <function>
 \alt <dcl>;
 
 <dcl> $\rightarrow$ <type> <id>
-| <type> <assign>
-
-<stmts> $\rightarrow$ <stmt>
-	\alt <stmt><stmts>
-
-<stmt> $\rightarrow$ <assign>;
-	\alt <if>
-	\alt <while>
-	\alt <from>
-	\alt <empty>
-	\alt <dcl>;
-	\alt <functioncall>;
-	\alt <switch>
+\alt <type> <assign>
 
 <id> $\rightarrow$ <letter>
 	\alt<id> <letter>
@@ -36,6 +24,46 @@
 
 <assign>  $\rightarrow$ <id> "<--" <expr>
 
+<type> $\rightarrow$ <primitive-type>
+\alt <array-type>
+
+<primitive-type> $\rightarrow$ bool
+\alt double
+\alt int
+\alt char
+
+<array-type> $\rightarrow$ <type> [ ]
+\alt string
+
+<function> $\rightarrow$  function <id> returns <type> using (<params>)
+begin
+	<stmts>
+	return <expr>;
+end
+\alt function <id> returns nothing using (<params>)
+begin
+	<stmts>
+	return nothing;
+end
+
+<params> $\rightarrow$ <subparams>
+	\alt $\varepsilon$
+
+<subparams> $\rightarrow$ <type> <id>, <subparams>
+\alt <type> <id>
+
+<stmts> $\rightarrow$ <stmt>
+	\alt <stmt><stmts>
+
+<stmt> $\rightarrow$ <assign>;
+	\alt <if>
+	\alt <while>
+	\alt <from>
+	\alt $\varepsilon$
+	\alt <dcl>;
+	\alt <functioncall>;
+	\alt <switch>
+
 <expr> $\rightarrow$ <expr>+<term>
 	\alt<expr>-<term>
 	\alt<term>
@@ -46,6 +74,14 @@
 
 <factor> $\rightarrow$ ( <expr> )
 	\alt <id>
+	\alt <digit>
+	\alt ''<string>''
+
+<string> $\rightarrow$ <letter>
+\alt <digit>
+\alt <digit> <string>
+\alt <letter> <string>
+\alt $\varepsilon$
 
 <switch> $\rightarrow$ switch (<expr>)
 		begin
@@ -114,36 +150,6 @@
 				\alt ">="
 				\alt "!="
 				\alt "="
-
-<type> $\rightarrow$ <primitive-type>
-\alt <array-type>
-
-<primitive-type> $\rightarrow$ <numeric-type>
-\alt bool
-
-<numeric-type> $\rightarrow$ <integral-type>
-\alt double
-
-<integral-type> $\rightarrow$ int
-\alt char
-
-<array-type> $\rightarrow$ <type> [ ]
-
-<function> $\rightarrow$  function <id> returns <type> params (<params>)
-begin
-	<stmts>
-	return <expr>
-end
-\alt function $\rightarrow$ function <id> returns nothing params (<params>)
-begin
-	<stmts>
-end
-
-<params> $\rightarrow$ <subparams>
-	\alt <empty>
-
-<subparams> $\rightarrow$ <type> <id>, <subparams>
-\alt <type> <id>
 
 <functioncall> $\rightarrow$ call <id>(<params>)
 

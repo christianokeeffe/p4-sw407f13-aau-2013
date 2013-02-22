@@ -1,41 +1,42 @@
 \input{../preamble.tex}
 
 \begin{document}
-\begin{grammar}
-<program> $\rightarrow$ <roots>
 
-<roots> $\rightarrow$ <root>
+\begin{grammar}
+<program> $\ra$ <roots>
+
+<roots> $\ra$ <root>
 \alt <root> <roots>
 
-<root> $\rightarrow$ <function>
+<root> $\ra$ <function>
 \alt <dcl>;
 
-<dcl> $\rightarrow$ <type> <id>
+<dcl> $\ra$ <type> <id>
 \alt <type> <assign>
 
-<id> $\rightarrow$ <letter>
+<id> $\ra$ <letter>
 	\alt<id> <letter>
 	\alt<id> <digit>
 
-<letter> $\rightarrow$ [a-z]
+<letter> $\ra$ [a-z]
 	\alt [A-Z]
 
-<digit> $\rightarrow$ [0-9]
+<digit> $\ra$ [0-9]
 
-<assign>  $\rightarrow$ <id> "<--" <expr>
+<assign>  $\ra$ <id> "<--" <expr>
 
-<type> $\rightarrow$ <primitive-type>
+<type> $\ra$ <primitive-type>
 \alt <array-type>
 
-<primitive-type> $\rightarrow$ bool
+<primitive-type> $\ra$ bool
 \alt double
 \alt int
 \alt char
 
-<array-type> $\rightarrow$ <type> [ ]
+<array-type> $\ra$ <type> [ ]
 \alt string
 
-<function> $\rightarrow$  function <id> returns <type> using (<params>)
+<function> $\ra$  function <id> returns <type> using (<params>)
 begin
 	<stmts>
 	return <expr>;
@@ -46,55 +47,55 @@ begin
 	return nothing;
 end
 
-<params> $\rightarrow$ <subparams>
-	\alt $\varepsilon$
+<params> $\ra$ <subparams>
+	\alt $\eps$
 
-<subparams> $\rightarrow$ <type> <id>, <subparams>
+<subparams> $\ra$ <type> <id>, <subparams>
 \alt <type> <id>
 
-<stmts> $\rightarrow$ <stmt>
+<stmts> $\ra$ <stmt>
 	\alt <stmt><stmts>
 
-<stmt> $\rightarrow$ <assign>;
+<stmt> $\ra$ <assign>;
 	\alt <if>
 	\alt <while>
 	\alt <from>
-	\alt $\varepsilon$
+	\alt $\eps$
 	\alt <dcl>;
 	\alt <functioncall>;
 	\alt <switch>
 
-<switch> $\rightarrow$ switch (<expr>)
+<switch> $\ra$ switch (<expr>)
 		begin
 			<cases>
 		end
 
-<expr> $\rightarrow$ <expr>+<term>
+<expr> $\ra$ <expr>+<term>
 	\alt<expr>-<term>
 	\alt<term>
 
-<term> $\rightarrow$ <term> * <factor>
+<term> $\ra$ <term> * <factor>
 	\alt <term> / <factor>
 	\alt <factor>
 
-<factor> $\rightarrow$ ( <expr> )
+<factor> $\ra$ ( <expr> )
 	\alt <id>
 	\alt <digit>
 	\alt ''<string>''
 
-<nummeric> $\rightarrow$
+<nummeric> $\ra$
 
-<string> $\rightarrow$ <letter>
+<string> $\ra$ <letter>
 \alt <digit>
 \alt <digit> <string>
 \alt <letter> <string>
-\alt $\varepsilon$
+\alt $\eps$
 
-<cases> $\rightarrow$ case <expr>:
+<cases> $\ra$ case <expr>:
 			<stmts>
 		<endcase>
 		
-<endcase> $\rightarrow$ <cases>
+<endcase> $\ra$ <cases>
 		\alt break;
 		\alt break;
 		<cases>
@@ -106,22 +107,22 @@ end
 			<stmts>
 			break;
 
-<from> $\rightarrow$ from <expr> to <logexpr> step <expr>
+<from> $\ra$ from <expr> to <logexpr> step <expr>
 	begin
 		<stmts>
 	end 
 
-<while> $\rightarrow$ while(<logexpr>)
+<while> $\ra$ while(<logexpr>)
 		begin
 			<stmts>
 		end
 
-<if> $\rightarrow$ if(<logexpr>)
+<if> $\ra$ if(<logexpr>)
 	begin
 		<stmts>
 	<endif>
 
-<endif> $\rightarrow$ end
+<endif> $\ra$ end
 	else <if>
 	\alt end
 	else
@@ -130,30 +131,30 @@ end
 	end
 	\alt end
 
-<logexpr> $\rightarrow$ <logexpr> OR <andcomp>
+<logexpr> $\ra$ <logexpr> OR <andcomp>
 		\alt <andcomp>
 
-<andcomp> $\rightarrow$ <andcomp> AND <comp>
+<andcomp> $\ra$ <andcomp> AND <comp>
 		\alt<comp>
 
-<comp> $\rightarrow$ <boolean-operand> <comparison-operator> <boolean-operand>
+<comp> $\ra$ <boolean-operand> <comparison-operator> <boolean-operand>
 
-<boolean-operand> $\rightarrow$ true
+<boolean-operand> $\ra$ true
 		\alt false
 		\alt <expr>
 		\alt <boolean>
 
-<boolean> $\rightarrow$ !(<logexpr>)
+<boolean> $\ra$ !(<logexpr>)
 		\alt (<logexpr>)
 
-<comparison-operator> $\rightarrow$ ">"
+<comparison-operator> $\ra$ ">"
 				\alt "<"
 				\alt "<= "
 				\alt ">="
 				\alt "!="
 				\alt "="
 
-<functioncall> $\rightarrow$ call <id>(<params>)
+<functioncall> $\ra$ call <id>(<params>)
 
 \end{grammar}
 \end{document}

@@ -176,9 +176,9 @@ end
 <andcomp> $\ra$ <andcomp> AND <comp>
 		\alt<comp>
 
-<comp> $\ra$ <boolean-operand> <comparison-operator> <boolean-operand>
+<comp> $\ra$ <booleanoperand> <comparisonoperator> <booleanoperand>
 
-<boolean-operand> $\ra$ true
+<booleanoperand> $\ra$ true
 		\alt false
 		\alt <expr>
 		\alt <boolean>
@@ -186,7 +186,7 @@ end
 <boolean> $\ra$ !(<logexpr>)
 		\alt (<logexpr>)
 
-<comparison-operator> $\ra$ ">"
+<comparisonoperator> $\ra$ ">"
 				\alt "<"
 				\alt "<= "
 				\alt ">="

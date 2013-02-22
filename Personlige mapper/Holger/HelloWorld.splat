@@ -1,0 +1,10 @@
+function setup return nothing using()
+begin
+	int LCDPin <-- 42;
+end
+
+function makedrink return nothing using()
+begin
+	string message <-- "Hello World!";
+	Call LCDPrint(message);
+end

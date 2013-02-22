@@ -1,0 +1,110 @@
+function setup return nothing using()
+begin
+	int MotorPin <-- 10;
+	int Heatsensor1Pin <-- 5;
+	int HeaterPin <-- 1;
+	int RFID <-- 20;
+end
+
+function CheckTemperature return bool using (int pin, int temp)
+begin
+	bool state <-- false;
+	
+	if (ReadInput(pin) > (temp + 5))
+	begin
+		state <-- false;
+		call WriteOutput(false, Heaterpin)
+	end
+	else if (ReadInput(pin) < (temp - 5))
+	begin
+		state <-- false;
+		call WriteOutput(true, Heaterpin)
+	end
+	else
+	begin
+		state <-- true;
+		call WriteOutput(false, Heaterpin)
+	end
+	
+	return state;
+end
+
+function stir return nothing using(int pin, int time)
+begin
+		call WriteOutput(true, MotorPin);
+		call Delay(1000*time);
+		call WriteOutput(false, MotorPin);
+end
+
+function Pour return nothing using (string id)
+begin
+	/*Code for finding and pouring the right liquid */
+end
+
+function serve return nothing using ()
+begin
+	/*Code for ejecting a glass */
+end
+
+function makewarmdrink return nothing using()
+begin
+	call Pour (coffee);
+	while CheckTemperature(Heatsensor1Pin) = false
+	begin
+		call stir(MotorPin, 2);
+	end
+	call Serve();
+end
+
+function makecolddrink return nothing using()
+begin
+	call Pour(ice tea);
+	begin
+		call shake(MotorPin, 5);
+	end
+	call Serve();
+end
+
+function makedrink return bool using(int id)
+begin
+	switch (id)
+	case 1:
+		call makewarmdrunk();
+		break;
+	case 2:
+		call makecolddrink();	
+		break;
+	default:
+		break;
+end
+function looperhooper return nothing using()
+begin
+	int[] NumberOrders;
+	string[] Orders;
+	Orders <-- ["Varm Drink", "Cold Drink"];
+	NumberOrders <-- [0,0]
+	switch (ReadInput(RFID))
+	begin
+		case 2:
+			LCDPrint(Orders[1]);
+			call makedrink(1);
+			NumberOrders[1] <-- Orders[1] + 1;
+			break;
+		case 25:
+			LCDPrint(Orders[2]);
+			call makedrink(2);
+			NumberOrders[2] <-- Orders[2] + 1;
+			break;
+		default:
+			LCDPrint("Invalid ID, you my dear customer is a damn bronze scum!");
+			break;
+	end
+	
+	int x;
+	from x <-- 1 to 100 step 1
+	begin
+		LCDPrint(x);
+		Delay(50);
+	end
+
+end

@@ -1,5 +1,5 @@
-\documentclass{article}
-\usepackage{syntax}
+\input{../preamble.tex}
+
 \begin{document}
 \begin{grammar}
 <program> $\rightarrow$ <roots>
@@ -64,6 +64,11 @@ end
 	\alt <functioncall>;
 	\alt <switch>
 
+<switch> $\rightarrow$ switch (<expr>)
+		begin
+			<cases>
+		end
+
 <expr> $\rightarrow$ <expr>+<term>
 	\alt<expr>-<term>
 	\alt<term>
@@ -77,16 +82,13 @@ end
 	\alt <digit>
 	\alt ''<string>''
 
+<nummeric> $\rightarrow$
+
 <string> $\rightarrow$ <letter>
 \alt <digit>
 \alt <digit> <string>
 \alt <letter> <string>
 \alt $\varepsilon$
-
-<switch> $\rightarrow$ switch (<expr>)
-		begin
-			<cases>
-		end
 
 <cases> $\rightarrow$ case <expr>:
 			<stmts>

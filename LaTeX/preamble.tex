@@ -119,8 +119,8 @@ stringstyle=\color[rgb]{0.627,0.126,0.941}
 
 %  Referencer, bibtex og url'er  %
 \usepackage{url}	% Til at sætte urler op med. Virker sammen med ref
-\usepackage[danish]{varioref} % Giver flere bedre mulighed for at lave krydshenvisninger
-%\usepackage[english]{varioref} % Giver flere bedre mulighed for at lave krydshenvisninger
+%\usepackage[danish]{varioref} % Giver flere bedre mulighed for at lave krydshenvisninger
+\usepackage[english]{varioref} % Giver flere bedre mulighed for at lave krydshenvisninger
 \usepackage{natbib}	% Litteraturliste med forfatter-år og nummerede referencer
 \usepackage{xr}		% Referencer til eksternt dokument med \externaldocument{<NAVN>}
 \usepackage{nomencl}	% Pakke til at danne nomenklaturliste
@@ -202,8 +202,8 @@ stringstyle=\color[rgb]{0.627,0.126,0.941}
 \def\chaptermark##1{\markboth{\itshape\thechapter. ##1}{}} % Henter kapitlet den pågældende side hører under med kommandoen \leftmark. \itshape gør teksten kursiv
 \def\sectionmark##1{\markright{\thesection. ##1}{}}	% Henter afsnittet den pågældende side hører under med kommandoen \rightmark
 } % Sidetallet skrives med kommandoen \thepage	
-\makeevenhead{custom}{\leftmark}{P3, Aalborg Universitet}{Gruppe SW308E12} % Definerer lige siders sidehoved efter modellen \makeevenhead{Navn}{Venstre}{Center}{Højre}
-\makeoddhead{custom}{Gruppe SW308E12}{P3, Aalborg Universitet}{\leftmark} % Definerer ulige siders sidehoved efter modellen \makeoddhead{Navn}{Venstre}{Center}{Højre}
+\makeevenhead{custom}{\leftmark}{P4, Aalborg Universitet}{Group SW407F13} % Definerer lige siders sidehoved efter modellen \makeevenhead{Navn}{Venstre}{Center}{Højre}
+\makeoddhead{custom}{Group SW407F13}{P4, Aalborg Universitet}{\leftmark} % Definerer ulige siders sidehoved efter modellen \makeoddhead{Navn}{Venstre}{Center}{Højre}
 
 \usepackage{lastpage}
 \usepackage{ifthen}
@@ -215,8 +215,8 @@ stringstyle=\color[rgb]{0.627,0.126,0.941}
 \makefootrule{custom}{\textwidth}{0.5pt}{1mm}	% Tilføjer en streg under sidefodens indhold
 
 \copypagestyle{nychapter}{custom} % Følgende linier sørger for, at sidefoden bibeholdes på kapitlets første side
-\makeoddhead{nychapter}{Gruppe SW308E12, Aalborg Universitet}{P3}{\leftmark}
-\makeevenhead{nychapter}{Gruppe SW308E12, Aalborg Universitet}{P3}{\leftmark}
+\makeoddhead{nychapter}{Group SW407F13, Aalborg Universitet}{P4}{\leftmark}
+\makeevenhead{nychapter}{Group SW407F13, Aalborg Universitet}{P4}{\leftmark}
 \makeheadrule{nychapter}{\textwidth}{0pt}
 \aliaspagestyle{chapter}{nychapter}	% <--
 \aliaspagestyle{cleared}{custom}
@@ -292,8 +292,8 @@ stringstyle=\color[rgb]{0.627,0.126,0.941}
 
 %----------------SPROG------------------------
 %----------------dk
-\usepackage[danish]{babel}							% Dansk sporg, f.eks. tabel, figur og kapitel
-\renewcommand{\algorithmcfname}{Algoritme}
-\renewcommand*{\lstlistingname}{Kodeudsnit}
+%\usepackage[danish]{babel}							% Dansk sporg, f.eks. tabel, figur og kapitel
+%\renewcommand{\algorithmcfname}{Algoritme}
+%\renewcommand*{\lstlistingname}{Kodeudsnit}
 %----------------en
-%\usepackage[english]{babel}
+\usepackage[english]{babel}

@@ -1,5 +1,5 @@
 <NotepadPlus>
-    <UserLang name="SPLAT" ext="" udlVersion="2.0">
+    <UserLang name="SPLAT" ext=".splat" udlVersion="2.0">
         <Settings>
             <Global caseIgnored="no" allowFoldOfComments="no" forceLineCommentsAtBOL="no" foldCompact="no" />
             <Prefix Keywords1="no" Keywords2="no" Keywords3="no" Keywords4="no" Keywords5="no" Keywords6="no" Keywords7="no" Keywords8="no" />
@@ -10,7 +10,7 @@
             <Keywords name="Numbers, prefixes" id="2"></Keywords>
             <Keywords name="Numbers, extras with prefixes" id="3"></Keywords>
             <Keywords name="Numbers, suffixes" id="4"></Keywords>
-            <Keywords name="Operators1" id="5">( ) ; = + - * / ! &lt;-- : , &lt; &gt; &lt;= &gt;=</Keywords>
+            <Keywords name="Operators1" id="5">( ) ; = + - * / ! &lt;-- : , &lt; &gt; &lt;= &gt;= [ ]</Keywords>
             <Keywords name="Operators2" id="6"></Keywords>
             <Keywords name="Folders in code1, open" id="7"></Keywords>
             <Keywords name="Folders in code1, middle" id="8"></Keywords>

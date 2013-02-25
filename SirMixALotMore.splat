@@ -1,5 +1,3 @@
-function Setup return nothing using()
-begin
 	container DarkRum <-- 15;
 	container Vodka <-- 4;
 	container Cola <-- 3;
@@ -43,6 +41,10 @@ begin
 		Size <-- Medium;
 	end
 	*/
+
+function Setup return nothing using()
+begin
+	/*Do something */
 	return nothing;
 end
 

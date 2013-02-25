@@ -1,5 +1,3 @@
-function setup return nothing using()
-begin
 	double NozzleOutPut <--- /* NozzleOutPutPerSec */;
 	
 	container cola       <-- 1;
@@ -15,19 +13,22 @@ begin
 	motor shakemotor     <-- 21;
 	
 	/*	This is what the compiler will do for the user when their are defining containers
-	
-		pinMode (cola, OUTPUT);
-		pinMode (sprite, OUTPUT);
-		pinMode (lightrum, OUTPUT);
-		pinMode (vodka, OUTPUT);
-		pinMode (darkrum, OUTPUT);
-		pinMode (sirup, OUTPUT);
-		pinMode (juice, OUTPUT);
-		pinMode (strawberry, OUTPUT);
-		pinMode (apples, OUTPUT);
-		pinMode (stirmotor, OUTPUT);
-		pinMode (shakemotor, OUTPUT);
+	pinMode (cola, OUTPUT);
+	pinMode (sprite, OUTPUT);
+	pinMode (lightrum, OUTPUT);
+	pinMode (vodka, OUTPUT);
+	pinMode (darkrum, OUTPUT);
+	pinMode (sirup, OUTPUT);
+	pinMode (juice, OUTPUT);
+	pinMode (strawberry, OUTPUT);
+	pinMode (apples, OUTPUT);
+	pinMode (stirmotor, OUTPUT);
+	pinMode (shakemotor, OUTPUT);
 	*/
+	
+function setup return nothing using()
+begin
+	/*Do someting*/
 	return nothing;
 end
 
@@ -139,17 +140,17 @@ begin
 	switch(id)
 	begin
 		case:1
-		call Cola();
+			call Cola();
 		break;
 		case:2
-		call ColaRum();
+			call ColaRum();
 		break;
 		case:3
-		call SpriteVodka();
+			call SpriteVodka();
 		break;
 		case:4
-		call AllWhichIsGood();
-		brak;
+			call AllWhichIsGood();
+		break;
 	end
-	return nothing;
+	return true;
 end

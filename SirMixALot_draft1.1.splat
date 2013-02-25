@@ -1,13 +1,15 @@
+container Vodka <-- 15;
+container BlueCuracao <-- 18;
+container Sprite <-- 10;
+container Ice <-- 1;
+container WhiteRum <-- 3;
+container PineappleJucie <-- 4;
+container CoconutMilk <-- 44;
+return nothing;
+
 function Setup return nothing using()
 begin
-	container Vodka <-- 15;
-	container BlueCuracao <-- 18;
-	container Sprite <-- 10;
-	container Ice <-- 1;
-	container WhiteRum <-- 3;
-	container PineappleJucie <-- 4;
-	container CoconutMilk <-- 44;
-	return nothing;
+	/*Do something */
 end
 
 function QuantityToTime return double using (double Quantity)

@@ -5,12 +5,25 @@ begin
 	container Cola <-- 3;
 	container Sprite <-- 10;
 	container Ice <-- 1;
-	container JäggerMeister <-- 5;
+	container JaggerMeister <-- 5;
 	container EnergiDrink <-- 7;
 	
-	int[] ID <-- 101, 1337;
-	string[][] Recipe <-- {"Cola", "DarkRum"}, {"Sprite", "Vodka"};
-	int[][] Quantity <-- {5,2}{2,2};
+	int[] ID;
+	ID[1] <-- 101;
+	ID[2] <-- 1337;
+	
+	string[][] Recipe;
+	Recipe[1][1] <-- "Cola";
+	Recipe[1][2] <-- "DarkRum";
+	Recipe[2][1] <-- "Sprite";
+	Recipe[2][2] <-- "Vodka";
+
+	int[][] Quantity;
+	Quantity[1][1] <-- 5;
+	Quantity[1][2] <-- 2;
+	Quantity[2][1] <-- 2;
+	Quantity[2][2] <-- 2;
+
 	/* Recipes of the drink
 	drink 101 
 	begin
@@ -30,7 +43,7 @@ begin
 		Size <-- Medium;
 	end
 	*/
-	return nothing
+	return nothing;
 end
 
 function Pour return nothing using (int pin, double time)
@@ -42,11 +55,11 @@ begin
 	return nothing
 end
 
-function Serve return nothing using (int ID, string[] recipe, int[] quantity)
+function Serve return nothing using (int ID, string[] Recipe, int[] Quantity)
 begin
 	call GetGlass();
-	int x;
-	from x <-- 1 to recipe[].size step 1
+	int x <-- 1;
+	from x to x > 2	step x <-- x + 1
 	begin
 		call Pour (recipe[x],quantity[x]);
 	end
@@ -54,43 +67,82 @@ begin
 	/*
 	function to serve the glass
 	*/
-	return nothing
+	return nothing;
 end
+
+function LCDPrint return nothing using(string text)
+begin
+/*Function to write a string to the LCD connected to the arduino*/
+return nothing;
+end
+
 function GetGlass return nothing using()
 begin
 	/* a function to get a glass */
-	return nothing
+	return nothing;
 end
 
+function InputID return string using()
+begin
+	string Astring;
+	/* a function to get RFID input, the drink ID */
+	return AString; /*place holder for a string from the RFID*/
+end
+
+function InputNumb return string using()
+begin
+	int ANumber;
+	/* a function to get RFID input, the number of drinks */
+	return ANumber; /*place holder for an int from the RFID*/
+end
+
+function delay return nothing using(int time)
+begin
+	/* a function to get the a delay in the program using the Arudio */
+	return nothing;
+end
+
+function isValid return bool using (string ID)
+begin
+	bool result;
+	/*function to determine if an ID is valid and returns the result */
+	return result;
+end
+
+function writeToRFID return nothing using (int Number)
+begin
+	/*function for writting to the RFID*/
+	return nothing;
+end
 
 function MakeDrink return nothing using ()
 begin
 	string message <-- "";
 	int x;
 	
-	while (Input(ID) = null)
+	while (InputID() = "")
 		begin
 			call LCDprint("Please, place your RFID tag");
 			call delay(1000);
 		end
-	if (Input(ID) = isValid? AND Input(DrinkNumber) > 0)
+	if (isValid(Input(ID)) AND InputNumb() > 0)
 	begin
 		from x <-- 1 to ID.size step 1
 		begin
-			if (ID[x] = Input(ID))
+			if (ID[x] = InputID())
 			begin
 				call Serve(x, Ricipe[x][], Quantity[x][]);
 				call writeToRFID(DrinkNumber <-- DrinkNumber - 1);
 			end
 		end
 	end
-	else if((Input(ID) != isValid? AND Input(DrinkNumber) > 0) OR (Input(ID) = isValid? AND Input(DrinkNumber) = 0))
+	else if((!(isValid(Input(ID))) AND InputNumb() > 0) OR (isValid(Input(ID)) AND InputNumb() = 0))
 	begin
-		if(Input(ID) != isValid?)
+		if(!(isValid(Input(ID))))
 		begin
 			message <-- "Your order does not exists!";
 		end
-		else if (Input(DrinkNumber) = 0)
+		else if (InputNumb() = 0)
 		begin
 			message <-- "Your are out of drinks!";
 		end

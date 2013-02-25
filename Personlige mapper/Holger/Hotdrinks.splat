@@ -4,6 +4,7 @@ begin
 	int Heatsensor1Pin <-- 5;
 	int HeaterPin <-- 1;
 	int RFID <-- 20;
+	return nothing;
 end
 
 function CheckTemperature return bool using (int pin, int temp)
@@ -34,16 +35,19 @@ begin
 		call WriteOutput(true, MotorPin);
 		call Delay(1000*time);
 		call WriteOutput(false, MotorPin);
+		return nothing;
 end
 
 function Pour return nothing using (string id)
 begin
 	/*Code for finding and pouring the right liquid */
+	return nothing;
 end
 
 function serve return nothing using ()
 begin
 	/*Code for ejecting a glass */
+	return nothing;
 end
 
 function makewarmdrink return nothing using()
@@ -54,6 +58,7 @@ begin
 		call stir(MotorPin, 2);
 	end
 	call Serve();
+	return nothing;
 end
 
 function makecolddrink return nothing using()
@@ -63,9 +68,10 @@ begin
 		call shake(MotorPin, 5);
 	end
 	call Serve();
+	return nothing;
 end
 
-function makedrink return bool using(int id)
+function makedrink return nothing /*bool*/ using(int id)
 begin
 	switch (id)
 	case 1:
@@ -76,6 +82,7 @@ begin
 		break;
 	default:
 		break;
+	return nothing;
 end
 function looperhooper return nothing using()
 begin
@@ -106,5 +113,5 @@ begin
 		LCDPrint(x);
 		Delay(50);
 	end
-
+	return nothing;
 end

@@ -3,6 +3,9 @@
 
 <letter> $\ra$ [a - zA - Z]
 
+<digits> $\ra$ <digit>
+\alt <digit> <digits>
+
 <digit> $\ra$ [0 - 9]
 
 <roots> $\ra$ <root>
@@ -14,11 +17,14 @@
 <dcl> $\ra$ <type> <id>
 \alt <type> <assign>
 
+<callid> $\ra$ <id>
+\alt <callid>[<digits>]
+
 <id> $\ra$ <letter>
 	\alt<id> <letter>
 	\alt<id> <digit>
 
-<assign>  $\ra$ <id> "<--" <expr>
+<assign>  $\ra$ <callid> "<""-""-" <expr>
 
 <type> $\ra$ <primitivetype>
 \alt <arraytype>
@@ -27,6 +33,7 @@
 \alt double
 \alt int
 \alt char
+\alt container
 
 <arraytype> $\ra$ <type> [ ]
 \alt string
@@ -59,6 +66,7 @@ end
 	\alt <dcl>;
 	\alt <functioncall>;
 	\alt <switch>
+	\alt <comment>
 
 <switch> $\ra$ switch (<expr>)
 		begin
@@ -90,11 +98,12 @@ end
 	\alt <factor>
 
 <factor> $\ra$ ( <expr> )
-	\alt <id>
+	\alt <callid>
 	\alt <plusminus><digit>
 	\alt <plusminus><nummeric>
 	\alt ''<string>''
 	\alt <functioncall> 
+	\alt <cast>
 
 <plusminus> $\ra$ $\eps$
 	\alt -
@@ -140,7 +149,7 @@ end
 \alt /
 \alt ' '
 
-<from> $\ra$ from <expr> to <logexpr> step <expr>
+<from> $\ra$ from <expr> to <logexpr> step <assign>
 	begin
 		<stmts>
 	end 
@@ -187,6 +196,13 @@ end
 				\alt "!="
 				\alt "="
 
-<functioncall> $\ra$ call <id>(<params>)
+<functioncall> $\ra$ call <id>(<callexpr>)
+
+<callexpr> $\ra$ <expr>
+\alt <expr>, <callexpr>
+
+<comment> $\ra$ /* <string> */
+
+<cast> $\ra$ <type> (<expr>)
 
 \end{grammar}

@@ -30,6 +30,7 @@ begin
 		Size <-- Medium;
 	end
 	*/
+	return nothing
 end
 
 function Pour return nothing using (int pin, double time)
@@ -37,6 +38,8 @@ begin
 	call Output(pin, HIGH)
 	call delay(int(time*1000))
 	call Output(pin, LOW)
+	
+	return nothing
 end
 
 function Serve return nothing using (int ID, string[] recipe, int[] quantity)
@@ -51,8 +54,14 @@ begin
 	/*
 	function to serve the glass
 	*/
-	call PushGlass(9000!!!!);
+	return nothing
 end
+function GetGlass return nothing using()
+begin
+	/* a function to get a glass */
+	return nothing
+end
+
 
 function MakeDrink return nothing using ()
 begin
@@ -94,4 +103,6 @@ begin
 		call LCDprint(message);
 		call delay(5000);
 	end
+	
+	return nothing
 end

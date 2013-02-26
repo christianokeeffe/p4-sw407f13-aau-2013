@@ -1,31 +1,15 @@
 \begin{grammar}
 <program> $\ra$ <roots>
 
-<letter> $\ra$ [a - zA - Z]
-
-<digits> $\ra$ <digit>
-\alt <digit> <digits>
-
-<digit> $\ra$ [0 - 9]
-
 <roots> $\ra$ <root>
 \alt <root> <roots>
 
-<root> $\ra$ <function>
-\alt <dcl>;
+<root> $\ra$ <dcl>;
+\alt <function>
 \alt <comment>
 
 <dcl> $\ra$ <type> <id>
 \alt <type> <assign>
-
-<callid> $\ra$ <id>
-\alt <callid>[<digits>]
-
-<id> $\ra$ <letter>
-	\alt<id> <letter>
-	\alt<id> <digit>
-
-<assign>  $\ra$ <callid> "<""-""-" <expr>
 
 <type> $\ra$ <primitivetype>
 \alt <arraytype>
@@ -38,6 +22,22 @@
 
 <arraytype> $\ra$ <type> [ ]
 \alt string
+
+<assign>  $\ra$ <callid> "<""-""-" <expr>
+
+<callid> $\ra$ <id>
+\alt <callid>[<digits>]
+
+<id> $\ra$ <letter>
+	\alt<id> <letter>
+	\alt<id> <digit>
+
+<letter> $\ra$ [a - zA - Z]
+
+<digits> $\ra$ <digit>
+\alt <digit> <digits>
+
+<digit> $\ra$ [0 - 9]
 
 <function> $\ra$  function <id> return <type> using (<params>)
 begin
@@ -68,6 +68,53 @@ end
 	\alt <functioncall>;
 	\alt <switch>
 	\alt <comment>
+	
+<if> $\ra$ if(<logexpr>)
+	begin
+		<stmts>
+	<endif>
+
+<endif> $\ra$ end
+	else <if>
+	\alt end
+	else
+	begin
+		<stmts>
+	end
+	\alt end
+	 
+<logexpr> $\ra$ <logexpr> OR <andcomp>
+		\alt <andcomp>
+
+<andcomp> $\ra$ <andcomp> AND <comp>
+		\alt<comp>
+
+<comp> $\ra$ <booleanoperand> <comparisonoperator> <booleanoperand>
+
+<booleanoperand> $\ra$ true
+		\alt false
+		\alt <expr>
+		\alt <boolean>
+
+<boolean> $\ra$ !(<logexpr>)
+		\alt (<logexpr>)
+
+<comparisonoperator> $\ra$ ">"
+				\alt "<"
+				\alt "<="
+				\alt ">="
+				\alt "!="
+				\alt "="
+
+<while> $\ra$ while(<logexpr>)
+		begin
+			<stmts>
+		end
+		
+<from> $\ra$ from <expr> to <logexpr> step <assign>
+	begin
+		<stmts>
+	end
 
 <switch> $\ra$ switch (<expr>)
 		begin
@@ -120,13 +167,13 @@ end
 
 <string> $\ra$ <letter>
 \alt <digit>
-\alt <symbols>
-\alt <symbols> <string>
+\alt <symbol>
+\alt <symbol> <string>
 \alt <digit> <string>
 \alt <letter> <string>
 \alt $\eps$
 
-<symbols> $\ra$ !
+<symbol> $\ra$ !
 \alt \%
 \alt \^
 \alt \&
@@ -151,53 +198,6 @@ end
 \alt .
 \alt /
 \alt ' '
-
-<from> $\ra$ from <expr> to <logexpr> step <assign>
-	begin
-		<stmts>
-	end 
-
-<while> $\ra$ while(<logexpr>)
-		begin
-			<stmts>
-		end
-
-<if> $\ra$ if(<logexpr>)
-	begin
-		<stmts>
-	<endif>
-
-<endif> $\ra$ end
-	else <if>
-	\alt end
-	else
-	begin
-		<stmts>
-	end
-	\alt end
-
-<logexpr> $\ra$ <logexpr> OR <andcomp>
-		\alt <andcomp>
-
-<andcomp> $\ra$ <andcomp> AND <comp>
-		\alt<comp>
-
-<comp> $\ra$ <booleanoperand> <comparisonoperator> <booleanoperand>
-
-<booleanoperand> $\ra$ true
-		\alt false
-		\alt <expr>
-		\alt <boolean>
-
-<boolean> $\ra$ !(<logexpr>)
-		\alt (<logexpr>)
-
-<comparisonoperator> $\ra$ ">"
-				\alt "<"
-				\alt "<="
-				\alt ">="
-				\alt "!="
-				\alt "="
 
 <functioncall> $\ra$ call <id>(<callexpr>)
 

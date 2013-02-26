@@ -1,0 +1,21 @@
+measure (teaspoon, 5 gr)
+
+Container nr.(Name, capasity, refill value)
+Container 1(White rum, 1000 ml, 200 ml)
+Container 2(Lime juice, 1000 ml, 200 ml)
+Container 3(Mint, 100 leaves, 20 leaves)
+Container 4(Sugar, 1000 gr, 200 gr)
+Container 5(Sprite, 1000 ml, 200 ml)
+
+-Mojito(12345)
+
+    3 leaves (Mint)
+    2 teaspoons (Sugar)
+    30 ml (Fresh lime juice)
+    Muddle
+    40 ml (White rum)
+    55 ml (Sprite)
+    2 leaves (Mint)
+    (Straw)
+
+    Serve

@@ -99,11 +99,15 @@ begin
 		<stmts>
 	end
 	 
-<logexpr> $\ra$ <logexpr> OR <andcomp>
-		\alt <andcomp>
+<logexpr> $\ra$ <andcomp> <logexprend>
 
-<andcomp> $\ra$ <andcomp> AND <comp>
-		\alt<comp>
+<logexprend> $\ra$ OR <logexpr>
+\alt $\eps$
+
+<andcomp> $\ra$ <comp> <andcompend>
+
+<andcompend> $\ra$ AND <andcomp>
+\alt $\eps$
 
 <comp> $\ra$ <booleanoperand> <comparisonoperator> <booleanoperand>
 
@@ -142,29 +146,32 @@ begin
 		<endcase>
 		
 <endcase> $\ra$ <cases>
-		\alt break;
-		\alt break;
-		<cases>
+		\alt break; <breakend>
 		\alt default:
 			<stmts>
 			break;
-		\alt break;
-		default:
-			<stmts>
-			break;
 
-<expr> $\ra$ <expr>+<term>
-	\alt<expr>-<term>
-	\alt<term>
+<breakend> $\ra$ <cases>
+\alt default:
+<stmts>
+break;
+\alt $\eps$
 
-<term> $\ra$ <term> * <factor>
-	\alt <term> / <factor>
-	\alt <factor>
+<expr> $\ra$ <term> <exprend>
+
+<exprend> $\ra$ + <expr>
+\alt - <expr>
+\alt $\eps$
+
+<term> $\ra$ <factor> <termend>
+
+<termend> $\ra$ * <term>
+\alt / <term>
+\alt $\eps$
 
 <factor> $\ra$ ( <expr> )
 	\alt <callid>
-	\alt <plusminus><digitsnotempty>
-	\alt <plusminus><nummeric>
+	\alt <numeric>
 	\alt ''<string>''
 	\alt <functioncall> 
 	\alt <cast>
@@ -174,7 +181,10 @@ begin
 <plusminus> $\ra$ $\eps$
 	\alt -
 
-<nummeric> $\ra$ <digitsnotempty> . <digitsnotempty>
+<numeric> $\ra$ <plusminus> <digitsnotempty> <numericend>
+
+<numericend> $\ra$ $\eps$
+\alt . <digitsnotempty>
 
 <string> $\ra$ <letter> <string>
 \alt <symbol> <string>
@@ -209,8 +219,13 @@ begin
 
 <functioncall> $\ra$ call <id>(<callexpr>)
 
-<callexpr> $\ra$ <expr>
-\alt <expr>, <callexpr>
+<callexpr> $\ra$ <subcallexpr>
+\alt $\eps$
+
+<subcallexpr> $\ra$ <expr> <subcallexprend>
+
+<subcallexprend> $\ra$ , <subcallexpr>
+\alt $\eps$
 
 <comment> $\ra$ /* <string> */
 

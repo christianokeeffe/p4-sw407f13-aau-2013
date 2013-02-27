@@ -1,7 +1,6 @@
-\section{Token Specification}
-
+\fxfatal{mangler tekst}
+\subsection{symbols composition that can't be use for variables names}
 \begin{itemize}
-
 \item bool
 \item int
 \item double
@@ -35,8 +34,52 @@
 \item step
 \item while
 
-
-
 \item container
-\item motor
+
 \end{itemize}
+\fxfatal{mangler tekst}
+
+\subsection{Token Specification}
+\fxfatal{mangler tekst}
+\begin{tabular}{l l}
+\item Terminal & Regular Expression \\ \hline
+\item bool & "bool" \\
+\item int & "int" \\
+\item double & "double"\\
+\item char & "char" \\
+\item string & "string" \\
+\item == & "$<--$" \\ 
+\item || & "OR" \\
+\item \&\& & "AND" \\
+\item < & "<" \\
+\item > & ">" \\
+\item <= & "<=" \\
+\item >= & ">=" \\
+\item != & "!=" \\
+\item = & "=" \\ 
+%\item true
+%\item false
+\item $\{$ & "begin"\\
+\item $\}$ & "end"\\
+\item if & "if" \\
+\item else & "else" \\
+\item \fxfatal{ved ikke hvordan skal skrives her} & "function" \\
+\item  & "using" \\
+\item return & "return" \\
+\item  & "nothing" \\
+\item switch & "switch" \\
+\item case & "case" \\
+\item break & "break" \\
+\item default & "default" \\
+\item $for\($ & "from" \\
+\item $;$ & "to" \\
+\item $; \)$ \fxfatal{passer hvis ikke} & "step" \\
+\item while & "while" \\
+\item digitalWrite & "container" \\
+
+
+\item digit & $[0-9]^+$ \\
+\item numeric $& [0-9]^+ .[0-9]^+$ \\
+\item id & $[A-Za-z] \circ ([A-Za-z]\cup [0-9])^*$ \\
+\item boolean & $[true] \cup [false] $ \\
+\end{tabular}

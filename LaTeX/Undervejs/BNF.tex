@@ -1,15 +1,17 @@
 \begin{grammar}
 <program> $\ra$ <roots>
 
-<roots> $\ra$ <root>
+<roots> $\ra$ $\eps$
 \alt <root> <roots>
 
 <root> $\ra$ <dcl>;
 \alt <function>
 \alt <comment>
 
-<dcl> $\ra$ <type> <id>
-\alt <type> <assign>
+<dcl> $\ra$ <type> <id> <dclend>
+
+<dclend> $\ra$ $\eps$
+\alt <assign> 
 
 <type> $\ra$ <primitivetype>
 \alt <arraytype>
@@ -23,7 +25,7 @@
 <arraytype> $\ra$ <type> [ ]
 \alt string
 
-<assign>  $\ra$ <callid> "<""-""-" <expr>
+<assign>  $\ra$ "<""-""-" <expr>
 
 <callid> $\ra$ <id>
 \alt <callid>[<digits>]
@@ -59,7 +61,7 @@ end
 <stmts> $\ra$ <stmt>
 	\alt <stmt> <stmts>
 
-<stmt> $\ra$ <assign>;
+<stmt> $\ra$ <callid> <assign>;
 	\alt <if>
 	\alt <while>
 	\alt <from>
@@ -158,19 +160,12 @@ end
 <plusminus> $\ra$ $\eps$
 	\alt -
 
-<nummeric> $\ra$ <digit>
-	\alt <digit><nummeric>
-	\alt .<digitonly>
+<nummeric> $\ra$ <digits>
+	\alt <digit>.<digits>
 
-<digitonly> $\ra$ <digit>
-	\alt <digit> <digitonly>
-
-<string> $\ra$ <letter>
-\alt <digit>
-\alt <symbol>
+<string> $\ra$ <letter> <string>
 \alt <symbol> <string>
 \alt <digit> <string>
-\alt <letter> <string>
 \alt $\eps$
 
 <symbol> $\ra$ !

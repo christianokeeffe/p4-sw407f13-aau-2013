@@ -28,10 +28,10 @@
 
 <assign>  $\ra$ "<""-""-" <expr>
 
-<callid> $\ra$ <id>
-\alt <arraycall>
+<callid> $\ra$ <id> <arraycall>
 
-<arraycall> $\ra$ [ <notnulldigits> ]
+<arraycall> $\ra$ [<notnulldigits>]
+\alt $\eps$
 
 <id> $\ra$ <letter> <idend>
 
@@ -50,22 +50,26 @@
 
 <notnulldigits> $\ra$ [1 - 9] <digits>
 
-<function> $\ra$  function <id> return <type> using (<params>)
+<function> $\ra$  <functionstart> <functionmidt>
+
+<functionstart> $\ra$ function <id> return
+
+<functionmidt> $\ra$<type> <functionend> <expr>; end
+\alt nothing <functionend> nothing; end
+
+<functionend> $\ra$
+using (<params>)
 begin
 	<stmts>
-	return <expr>;
-end
-\alt function <id> return nothing using (<params>)
-begin
-	<stmts>
-	return nothing;
-end
+	return
 
 <params> $\ra$ <subparams>
 	\alt $\eps$
 
-<subparams> $\ra$ <type> <id>, <subparams>
-\alt <type> <id>
+<subparams> $\ra$ <type> <id> <subparamsend>
+
+<subparamsend> $\ra$ , <subparams>
+\alt $\eps$
 
 <stmts> $\ra$ <stmt>
 	\alt <stmt> <stmts>
@@ -169,8 +173,7 @@ end
 <plusminus> $\ra$ $\eps$
 	\alt -
 
-<nummeric> $\ra$ <digitsnotempty>
-	\alt <digit>.<digitsnotempty>
+<nummeric> $\ra$ <digitsnotempty> . <digitsnotempty>
 
 <string> $\ra$ <letter> <string>
 \alt <symbol> <string>

@@ -13,26 +13,31 @@
 <dclend> $\ra$ $\eps$
 \alt <assign> 
 
-<type> $\ra$ <primitivetype>
-\alt <arraytype>
+<type> $\ra$ <primitivetype> <arraytype>
 
 <primitivetype> $\ra$ bool
 \alt double
 \alt int
 \alt char
 \alt container
+\alt string
 
 <arraytype> $\ra$ <type> [ ]
-\alt string
+\alt $\eps$
+
 
 <assign>  $\ra$ "<""-""-" <expr>
 
 <callid> $\ra$ <id>
-\alt <callid>[<digits>]
+\alt <arraycall>
 
-<id> $\ra$ <letter>
-	\alt<id> <letter>
-	\alt<id> <digit>
+<arraycall> [<digits>]
+
+<id> $\ra$ <letter> <idend>
+
+<idend> $\ra$ <letter> <idend>
+	\alt <digit> <idend>
+	\alt $\eps$
 
 <letter> $\ra$ [a - zA - Z]
 

@@ -31,7 +31,7 @@
 <callid> $\ra$ <id>
 \alt <arraycall>
 
-<arraycall> [<digits>]
+<arraycall> [<notnulldigits>]
 
 <id> $\ra$ <letter> <idend>
 
@@ -41,10 +41,14 @@
 
 <letter> $\ra$ [a - zA - Z]
 
-<digits> $\ra$ <digit>
+<digitsnotempty> $\ra$ <digit> <digits>
+
+<digits> $\ra$ $\eps$
 \alt <digit> <digits>
 
 <digit> $\ra$ [0 - 9]
+
+<notnulldigits> $\ra$ [1 - 9] <digits>
 
 <function> $\ra$  function <id> return <type> using (<params>)
 begin
@@ -154,7 +158,7 @@ end
 
 <factor> $\ra$ ( <expr> )
 	\alt <callid>
-	\alt <plusminus><digit>
+	\alt <plusminus><digitsnotempty>
 	\alt <plusminus><nummeric>
 	\alt ''<string>''
 	\alt <functioncall> 
@@ -165,8 +169,8 @@ end
 <plusminus> $\ra$ $\eps$
 	\alt -
 
-<nummeric> $\ra$ <digits>
-	\alt <digit>.<digits>
+<nummeric> $\ra$ <digitsnotempty>
+	\alt <digit>.<digitsnotempty>
 
 <string> $\ra$ <letter> <string>
 \alt <symbol> <string>

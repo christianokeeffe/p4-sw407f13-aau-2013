@@ -29,3 +29,32 @@ Implementation
 	Code generation
 
 Test/evaluering
+
+
+Introduction 
+Methods
+Problemanalysis
+Problem statement
+Analysis
+	Current language
+	Embedded systems
+	Arduino platform
+Therory
+	Language
+	Compilers
+	Semantics
+	Syntax analysis
+	EBNF(Extended Backus Naur Form)
+	Contextual analysis
+	Code generation
+Design
+	Syntax design
+	Semantic design
+	Code examples
+Implementation
+	Scanner class creation
+	Parser generation
+	Class generator classgen
+	Scope and type checking
+	Code generation
+Test/evaluation

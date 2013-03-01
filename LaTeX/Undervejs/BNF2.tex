@@ -54,7 +54,7 @@
 
 <functionstart> $\ra$ function <id> return
 
-<functionmidt> $\ra$<type> <functionend> <expr>; end
+<functionmidt> $\ra$ <type> <functionend> <expr>; end
 \alt nothing <functionend> nothing; end
 
 <functionend> $\ra$
@@ -93,9 +93,8 @@ begin
 	else <else>
 	\alt $\eps$
 
-<else><if>
-	\alt 
-	begin
+<else> $\ra$ <if>
+	\alt begin
 		<stmts>
 	end
 

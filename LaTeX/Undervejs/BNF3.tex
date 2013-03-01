@@ -1,0 +1,232 @@
+\begin{grammar}
+<program> $\ra$ <roots>
+
+<roots> $\ra$ $\eps$
+\alt <root> <roots>
+
+<root> $\ra$ <dcl>;
+\alt <function>
+\alt <comment>
+
+<dcl> $\ra$ <type> <id> <dclend>
+
+<type> $\ra$ <primitivetype> <arraytype>
+
+<primitivetype> $\ra$ bool
+\alt double
+\alt int
+\alt char
+\alt container
+\alt string
+
+<arraytype> $\ra$ <type> [ ]
+\alt $\eps$
+
+<id> $\ra$ <letter> <idend>
+
+<letter> $\ra$ [a - zA - Z]
+
+<idend> $\ra$ <letter> <idend>
+	\alt <digit> <idend>
+	\alt $\eps$
+
+<dclend> $\ra$ $\eps$
+\alt <assign> 
+
+<assign>  $\ra$ "<""-""-" <expr>
+
+<expr> $\ra$ <term> <exprend>
+
+<term> $\ra$ <comp> <termend>
+
+<comp> $\ra$ <factor> <compend>
+
+<factor> $\ra$ ( <expr> )
+	\alt !(<expr>)
+	\alt <callid>
+	\alt <numeric>
+	\alt <string>
+	\alt <functioncall> 
+	\alt <cast>
+	\alt LOW
+	\alt HIGH
+	\alt true
+	\alt false
+
+<callid> $\ra$ <id> <arraycall>
+
+<arraycall> $\ra$ [<notnulldigits>]
+\alt $\eps$
+
+<notnulldigits> $\ra$ [1 - 9] <digits>
+
+<digits> $\ra$ $\eps$
+\alt <digit> <digits>
+
+<digit> $\ra$ [0 - 9]
+
+<numeric> $\ra$ <plusminus> <digitsnotempty> <numericend>
+
+<plusminus> $\ra$ $\eps$
+	\alt -
+
+<digitsnotempty> $\ra$ <digit> <digits>
+
+<numericend> $\ra$ $\eps$
+\alt . <digitsnotempty>
+
+<string> $\ra$ ''<stringmidt>''
+
+<stringmidt> $\ra$ <letter> <stringmidt>
+\alt <symbol> <stringmidt>
+\alt <digit> <stringmidt>
+\alt $\eps$
+
+<symbol> $\ra$ !
+\alt \%
+\alt \^
+\alt \&
+\alt (
+\alt )
+\alt \_
+\alt +
+\alt |
+\alt \~
+\alt -
+\alt =
+\alt \`
+\alt \{
+\alt \}
+\alt [
+\alt ]
+\alt :
+\alt ;
+\alt ?
+\alt ,
+\alt .
+\alt /
+\alt ' '
+
+<functioncall> $\ra$ call <id>(<callexpr>)
+
+<callexpr> $\ra$ <subcallexpr>
+\alt $\eps$
+
+<subcallexpr> $\ra$ <expr> <subcallexprend>
+
+<subcallexprend> $\ra$ , <subcallexpr>
+\alt $\eps$
+
+<cast> $\ra$ <type> (<expr>)
+
+<compend> $\ra$ <comparisonoperator> <comp>
+\alt $\eps$
+
+<comparisonoperator> $\ra$ ">"
+				\alt "<"
+				\alt "<="
+				\alt ">="
+				\alt "!="
+				\alt "="
+
+<termend> $\ra$ * <term>
+\alt / <term>
+\alt AND <term>
+\alt $\eps$
+
+<exprend> $\ra$ + <expr>
+\alt - <expr>
+\alt OR <expr>
+\alt $\eps$
+
+<function> $\ra$  <functionstart> <functionmidt>
+
+<functionstart> $\ra$ function <id> return
+
+<functionmidt> $\ra$ <type> <functionend> <expr>; end
+\alt nothing <functionend> nothing; end
+
+<functionend> $\ra$
+using (<params>)
+begin
+	<stmts>
+	return
+
+<params> $\ra$ <subparams>
+	\alt $\eps$
+
+<subparams> $\ra$ <type> <id> <subparamsend>
+
+<subparamsend> $\ra$ , <subparams>
+\alt $\eps$
+
+<stmts> $\ra$ $\eps$
+	\alt <stmt> <stmts>
+
+<stmt> $\ra$ <callid> <assign>;
+	\alt <if>
+	\alt <while>
+	\alt <from>
+	\alt <dcl>;
+	\alt <functioncall>;
+	\alt <switch>
+	\alt <comment>
+	
+<if> $\ra$ if(<expr>)
+	begin
+		<stmts>
+	end
+	<endif>
+
+<endif> $\ra$ 
+	else <else>
+	\alt $\eps$
+
+<else> $\ra$ <if>
+	\alt begin
+		<stmts>
+	end
+
+<while> $\ra$ while(<expr>)
+		begin
+			<stmts>
+		end
+		
+<from> $\ra$ from <expr> to <expr> step <assign>
+	begin
+		<stmts>
+	end
+
+<switch> $\ra$ switch (<expr>)
+		begin
+			<cases>
+		end
+
+<cases> $\ra$ case <expr>:
+			<stmts>
+		<endcase>
+		
+<endcase> $\ra$ <cases>
+		\alt break; <breakend>
+		\alt default:
+			<stmts>
+			break;
+
+<breakend> $\ra$ <cases>
+\alt default:
+<stmts>
+break;
+\alt $\eps$
+
+<expr> $\ra$ <term> <exprend>
+
+
+<comp> $\ra$ <factor> <compend>
+
+<compend> $\ra$ <comparisonoperator> <comp>
+\alt $\eps$
+
+<comment> $\ra$ /* <stringmidt> */
+
+
+\end{grammar}

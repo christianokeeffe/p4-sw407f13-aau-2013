@@ -83,7 +83,7 @@ begin
 	\alt <switch>
 	\alt <comment>
 	
-<if> $\ra$ if(<logexpr>)
+<if> $\ra$ if(<expr>)
 	begin
 		<stmts>
 	end
@@ -98,36 +98,13 @@ begin
 	begin
 		<stmts>
 	end
-	 
-<logexpr> $\ra$ <andcomp> <logexprend>
 
-<logexprend> $\ra$ OR <logexpr>
-\alt $\eps$
-
-<andcomp> $\ra$ <comp> <andcompend>
-
-<andcompend> $\ra$ AND <andcomp>
-\alt $\eps$
-
-<comp> $\ra$ <booleanoperand> <comparisonoperator> <booleanoperand>
-
-<booleanoperand> $\ra$ true
-		\alt false
-		\alt <expr>
-
-<comparisonoperator> $\ra$ ">"
-				\alt "<"
-				\alt "<="
-				\alt ">="
-				\alt "!="
-				\alt "="
-
-<while> $\ra$ while(<logexpr>)
+<while> $\ra$ while(<expr>)
 		begin
 			<stmts>
 		end
 		
-<from> $\ra$ from <expr> to <logexpr> step <assign>
+<from> $\ra$ from <expr> to <expr> step <assign>
 	begin
 		<stmts>
 	end
@@ -154,27 +131,42 @@ break;
 \alt $\eps$
 
 <expr> $\ra$ <term> <exprend>
-\alt <logexpr>
 
 <exprend> $\ra$ + <expr>
 \alt - <expr>
+\alt OR <expr>
 \alt $\eps$
 
-<term> $\ra$ <factor> <termend>
+<term> $\ra$ <comp> <termend>
 
 <termend> $\ra$ * <term>
 \alt / <term>
+\alt AND <term>
 \alt $\eps$
 
+<comp> $\ra$ <factor> <compend>
+
+<compend> $\ra$ <comparisonoperator> <comp>
+\alt $\eps$
+
+<comparisonoperator> $\ra$ ">"
+				\alt "<"
+				\alt "<="
+				\alt ">="
+				\alt "!="
+				\alt "="
+
 <factor> $\ra$ ( <expr> )
-	\alt !(<logexpr>)
+	\alt !(<expr>)
 	\alt <callid>
 	\alt <numeric>
-	\alt ''<string>''
+	\alt <string>
 	\alt <functioncall> 
 	\alt <cast>
 	\alt LOW
 	\alt HIGH
+	\alt true
+	\alt false
 
 <plusminus> $\ra$ $\eps$
 	\alt -
@@ -184,16 +176,17 @@ break;
 <numericend> $\ra$ $\eps$
 \alt . <digitsnotempty>
 
-<string> $\ra$ <letter> <string>
-\alt <symbol> <string>
-\alt <digit> <string>
+<stringmidt> $\ra$ <letter> <stringmidt>
+\alt <symbol> <stringmidt>
+\alt <digit> <stringmidt>
 \alt $\eps$
+
+<string> $\ra$ ''<stringmidt>''
 
 <symbol> $\ra$ !
 \alt \%
 \alt \^
 \alt \&
-\alt *
 \alt (
 \alt )
 \alt \_
@@ -225,7 +218,7 @@ break;
 <subcallexprend> $\ra$ , <subcallexpr>
 \alt $\eps$
 
-<comment> $\ra$ /* <string> */
+<comment> $\ra$ /* <stringmidt> */
 
 <cast> $\ra$ <type> (<expr>)
 

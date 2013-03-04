@@ -11,8 +11,14 @@ namespace ConsoleApplication1
     public class Alpha
     {
         Mutex Mut = new Mutex();
-        
+        Semaphore Free; 
+        Semaphore Used;
+        int n = 10;
+        int[] buffer;
+        int next_used = 0;
+        int next_free = 0;
         int i = 0;
+        int data = 5;
 
         int MyVar = 0;
         int BetaCount = 0;
@@ -25,43 +31,67 @@ namespace ConsoleApplication1
         {
             // TODO: Complete member initialization
             this.minSem = Sem;
+            Free = new Semaphore(n,n);
+            Used = new Semaphore(0,1);
+            buffer = new int[n];
         }
 
         // This method that will be called when the thread is started
         public void Beta()
         {
-            int j = 0;
-            while(j<= 100)
-            {
-                minSem.WaitOne();
-                //Mut.WaitOne();
-                MyVar++;
-                AlphaCount++;
-                Console.WriteLine("Alpha is running in its own thread. : " + MyVar + " Error rate: " + (AlphaCount - BetaCount) + " Count: " + j);
-                j++;
-                //Mut.ReleaseMutex();
-                minSem.Release();
-            }
+            //int j = 0;
+            //while(j<= 100)
+            //{
+            //    minSem.WaitOne();
+            //    //Mut.WaitOne();
+            //    MyVar++;
+            //    AlphaCount++;
+            //    Console.WriteLine("Alpha is running in its own thread. : " + MyVar + " Error rate: " + (AlphaCount - BetaCount) + " Count: " + j);
+            //    j++;
+            //    //Mut.ReleaseMutex();
+            //    minSem.Release();
+
+          while (true)
+          {
+              Free.WaitOne();
+              Mut.WaitOne();
+             
+              buffer[next_free] = data;
+              next_free = (next_free+1)%n;
+              Mut.ReleaseMutex();
+              Used.Release();
+              
+          }
+            
             
         }
 
         // This method that will be called when the thread is started
         public void Gamma()
         {
-            while (i <= 100)
-            {
-                minSem.WaitOne();
-                //Mut.WaitOne();
-                int test = MyVar;
-                BetaCount++;
-                Thread.Sleep(500);
-                MyVar = test - 1;
-                Console.WriteLine("Beta is running in its own thread. : " + MyVar + " Error rate: " + (AlphaCount - BetaCount) + " Count: " + i);
-                i++;
-                //Mut.ReleaseMutex();
-                minSem.Release();
-            }
-            
+            //while (i <= 100)
+            //{
+            //    minSem.WaitOne();
+            //    //Mut.WaitOne();
+            //    int test = MyVar;
+            //    BetaCount++;
+            //    Thread.Sleep(500);
+            //    MyVar = test - 1;
+            //    Console.WriteLine("Beta is running in its own thread. : " + MyVar + " Error rate: " + (AlphaCount - BetaCount) + " Count: " + i);
+            //    i++;
+            //    //Mut.ReleaseMutex();
+            //    minSem.Release();
+            //}
+            while(true)
+                {
+                    Used.WaitOne();
+                   Mut.WaitOne();    
+                    data = buffer[next_used];
+                    next_used = (next_used + 1)%n;
+                     Mut.ReleaseMutex();
+                    Free.Release();
+                   
+                }
         }
     };
 
@@ -93,5 +123,6 @@ namespace ConsoleApplication1
             // to do some work:
             Thread.Sleep(100);
         }
+       
     }
 }

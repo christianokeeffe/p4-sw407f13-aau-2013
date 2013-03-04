@@ -16,3 +16,9 @@ C:\Users\Rasmus\Documents\P4\Undervisning\POSC\ThreadProgram´MedSemaphor\Consol
 C:\Users\Rasmus\Documents\P4\Undervisning\POSC\ThreadProgram´MedSemaphor\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
 C:\Users\Rasmus\Documents\P4\Undervisning\POSC\ThreadProgram´MedSemaphor\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
 C:\Users\Rasmus\Documents\P4\Undervisning\POSC\ThreadProgram´MedSemaphor\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\Undervisning\POSC\ThreadProgram´MedSemaphor\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\Undervisning\POSC\ThreadProgram´MedSemaphor\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\Undervisning\POSC\ThreadProgram´MedSemaphor\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\Undervisning\POSC\ThreadProgram´MedSemaphor\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\Undervisning\POSC\ThreadProgram´MedSemaphor\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\Undervisning\POSC\ThreadProgram´MedSemaphor\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache

@@ -1,0 +1,17 @@
+\section{Lexical analyzer}
+A lexical analyzer reads the input file, and returns a series of tokens based based on the input. These tokens are matched by rules, usually described by regular expressions. An example of such grammar rules can be seen on ==
+
+For example the line of code seen on \ref{??} might be read as the tokens:
+\begin{tabular}{|l|l|}
+	\hline
+    Token     & Lexeme \\ \hline
+    IDENT     & c      \\ 
+    ASSIGN    & =      \\ 
+    DIGIT     & 42     \\ 
+    SEMICOLON & ;      \\
+    \hline
+\end{tabular}
+
+\begin{code}[Simple example of code,somecodeexample]
+int c = 42;
+\end{code}

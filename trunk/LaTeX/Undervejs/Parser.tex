@@ -1,0 +1,28 @@
+\section{Parser}
+A parser takes the tokens from the scanner and use them to create a abstract syntax tree. It also checks if the stream of tokens conforms to the syntax specification, usually written formal using context-free grammar (CFG).
+
+
+The main purpose of the parser is to analyse the tokens and check if the source program is written in the correct syntax. If this is not the case the parser should show a message describing the error. The parser will at the end create a abstract syntax tree. 
+
+Generally there are two different approaches to parsing - top-down and bottom-up.
+
+Top-down parsers.
+
+Then top-down parser starts at the root and works it way to the leaves in a depth-first manner, doing a preorder traversal if the parse tree.  This is done by reading tokens from left to right using a leftmost derivation. Top-down parsers can further more be split into table-drivel LL  and recursive descent parse algorithms.
+
+Table-driven LL Parsers:
+Use a parse table to determine what to do next. The entries in the parse table is determined by the particular LL(k) grammar.
+
+Recursive-descent parser:
+The recursive-descent parsers consists of mutually recursive parsing routines. Each of the nonterminals in the grammar has an parsing procedure that determines if the token stream contains a sequence of tokens derivable from that nonterminal.
+
+Bottom-Up Parsers.
+
+A Bottom-up parser on the other had do a postorder traversal of the parse tree, meaning it starts from the leaves and works towards the root.
+A bottom-up parser are more powerful and efficient than a top-down parser, but not as simple
+
+LR:
+A parser reads from left to right and uses a reversed rightmost derivation. It is as the LL parser driven from a parse table. Find mere her.
+
+LALR:
+A LALR - se lecture 8 "!

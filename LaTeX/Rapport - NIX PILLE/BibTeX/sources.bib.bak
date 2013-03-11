@@ -1,3 +1,41 @@
 % This file was created with JabRef 2.8.1.
 % Encoding: Cp1252
 
+@MISC{ArduinoLanguage,
+  author = {Arduino},
+  title = {Language Reference},
+  howpublished = {\url{http://arduino.cc/en/Reference/HomePage} [Last viewed: 19-02-2013]},
+  owner = {Aleksander},
+  timestamp = {2013.02.19},
+  url = {http://arduino.cc/en/Reference/HomePage}
+}
+
+@MISC{ArduinoLCD,
+  author = {Arduino},
+  title = {Liquid Crystal},
+  howpublished = {\url{http://arduino.cc/en/Tutorial/LiquidCrystal} [Last viewed: 18-02-2013]},
+  owner = {Aleksander},
+  timestamp = {2013.02.19},
+  url = {http://arduino.cc/en/Tutorial/LiquidCrystal}
+}
+
+@MISC{ArduinoUno,
+  author = {Arduino},
+  title = {Arduino Uno},
+  howpublished = {\url{http://arduino.cc/en/Main/ArduinoBoardUno} [Last viewed: 18-02-2013]},
+  owner = {Aleksander},
+  timestamp = {2013.02.19},
+  url = {http://arduino.cc/en/Main/ArduinoBoardUno}
+}
+
+@MISC{RFID,
+  author = {RFID Specialisten},
+  title = {RFID},
+  howpublished = {\url{http://www.rfid-specialisten.dk/rfid.asp} [Last viewed: 15-02-2013]},
+  month = {2},
+  year = {2013},
+  owner = {Aleksander},
+  timestamp = {2013.02.19},
+  url = {http://www.rfid-specialisten.dk/rfid.asp}
+}
+

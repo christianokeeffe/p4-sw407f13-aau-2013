@@ -2,8 +2,10 @@
 To grammar is used to define the syntax of a language. A context-free grammar (CFG) is a 4-tuple $(V, \Sigma, R, S)$ finite language defined by \citep{sipser}:
 \begin{emumerate}
 \item $V$ is a finite set called the variables
-\item $\Sigma$ is a finite set, sidjoint from V called the terminals
+\item $\Sigma$ is a finite set, disjoint from V called the terminals
 \item R is a finite set of rules, with each rule being a variable and a string or variables and terminals
 \item S $\in$ V is a start variable
 \end{enumerate}
 The most common way of writing a CFG is by using Backus Naur Form (BNF) or Extended Backus Naur Form (EBNF). BNF is named after John Backus who presented the notation, and Peter Naur who modified Backus' method of notation slightly \citep{sebesta}. By using the BNF-notation it is possible to describe a CFG. It is preferred to have a unambiguously grammar. A CFG is ambiguously if a string derived in the grammar has two or more different leftmost derivations \citep{sipser}. An unambiguously grammar will ensure that a program running through a string using CFG can only read the string in one way.
+
+A CFK is a $LL(k)$ grammar if it is possible make predict the leftmost derivation of a string by looking at most $k$ tokens ahead in the string. One of the most simple grammars to make a parser for is a LL(1) grammar. 

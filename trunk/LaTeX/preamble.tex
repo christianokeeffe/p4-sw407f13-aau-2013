@@ -266,8 +266,8 @@ stringstyle=\color[rgb]{0.627,0.126,0.941}
 \end{minipage}
 }
 
-\newenvironment{code}[2]{\noindent \begin{minipage}{\textwidth}
-\begin{mdframed}\begin{lstlisting}}{\end{lstlisting}\end{mdframed}\lstcapt{#1}\label{lst:#2}\end{minipage}}
+\newenvironment{code}[2]
+{\noindent \begin{minipage}\lstcapt{#1}\label{lst:#2}{\textwidth}\begin{mdframed}\begin{lstlisting}}{\end{lstlisting}\end{mdframed}\end{minipage}}
 
 % quotering
 \newcommand{\gaas}[{1}]{``#1''}

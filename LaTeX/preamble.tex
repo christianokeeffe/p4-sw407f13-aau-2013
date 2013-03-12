@@ -267,7 +267,7 @@ stringstyle=\color[rgb]{0.627,0.126,0.941}
 }
 
 \newenvironment{code}[2]
-{\noindent \begin{minipage}\lstcapt{#1}\label{lst:#2}{\textwidth}\begin{mdframed}\begin{lstlisting}}{\end{lstlisting}\end{mdframed}\end{minipage}}
+{\def\fooNoI{#1}\def\fooNoII{#2}\noindent \begin{minipage}{\textwidth}\begin{mdframed}\begin{lstlisting}}{\end{lstlisting}\end{mdframed}\lstcapt{\fooNoI}\label{lst:\fooNoI}\end{minipage}}
 
 % quotering
 \newcommand{\gaas}[{1}]{``#1''}

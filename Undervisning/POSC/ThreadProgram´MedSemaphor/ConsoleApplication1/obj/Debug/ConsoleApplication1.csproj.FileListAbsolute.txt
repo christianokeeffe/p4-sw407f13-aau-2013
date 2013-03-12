@@ -22,3 +22,6 @@ C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\Undervisning\POSC\ThreadProg
 C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\Undervisning\POSC\ThreadProgram´MedSemaphor\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
 C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\Undervisning\POSC\ThreadProgram´MedSemaphor\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
 C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\Undervisning\POSC\ThreadProgram´MedSemaphor\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\Undervisning\POSC\ThreadProgram´MedSemaphor\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\Undervisning\POSC\ThreadProgram´MedSemaphor\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\Undervisning\POSC\ThreadProgram´MedSemaphor\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

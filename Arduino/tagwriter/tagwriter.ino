@@ -57,6 +57,7 @@ char in3 = 0;
 char in4 = 0;
 
 int chksum;
+int chkchksum;
 
 int flag2 = 0;
 
@@ -272,14 +273,14 @@ void write_Block(){
        Serial.println(); //Back up, everyone, give me some space
        
   //write to tag
-  rfid.write((uint8_t)255);
-  rfid.write((uint8_t)0);
-  rfid.write((uint8_t)6);
-  rfid.write((uint8_t)138);
-  rfid.write((uint8_t)1);
+  rfid.write((uint8_t)255); //Command header
+  rfid.write((uint8_t)0); //Reserved
+  rfid.write((uint8_t)6); 
+  rfid.write((uint8_t)138); //Write value block command 
+  rfid.write((uint8_t)1); //Number of block to write, change this to write to another block
   
   //data to write
-  rfid.write((uint8_t)Str5[0]);
+  rfid.write((uint8_t)Str5[0]); //Send four bytes from ealier:
   rfid.write((uint8_t)Str5[1]);
   rfid.write((uint8_t)Str5[2]);
   rfid.write((uint8_t)Str5[3]);
@@ -296,17 +297,46 @@ void write_Block(){
       }
     }
   }
-    Serial.print("Write Status: "); //reutrn write status
-    Serial.print(Str3[1], HEX);
-    Serial.print(Str3[2], HEX);
-    Serial.print(Str3[3], HEX);
-    Serial.print(Str3[4], HEX);
-    Serial.print(Str3[5], HEX);
-    Serial.print(Str3[6], HEX);
-    Serial.print(Str3[7], HEX);
-    Serial.print(Str3[8], HEX);
+  
+  chkchksum = Str3[1] + Str3[2] + Str3[3] + Str3[4] + Str3[5] + Str3[6] + Str3[7] + Str3[8];
+  
+  if(chksum == chkchksum)
+  {
+    Serial.print("Write sucess!");
     Serial.println();
+  }
+  else
+  {
+    Serial.print("Write failed :(, did you remove tag before data was written?");
+    Serial.println();
+    //Serial.print("chksum: ");
+    //Serial.print(chksum);
+    //Serial.println();
+    //Serial.print("chkchksum: ");
+    //Serial.print(chkchksum);
+    Serial.println();
+  }
+  
 
+ /* 
+    Serial.print("Write Status: "); //reutrn write status
+    Serial.print(Str3[1]);
+    Serial.print(" ");
+    Serial.print(Str3[2]);
+    Serial.print(" ");
+    Serial.print(Str3[3]);
+    Serial.print(" ");
+    Serial.print(Str3[4]);
+    Serial.print(" ");
+    Serial.print(Str3[5]);
+    Serial.print(" ");
+    Serial.print(Str3[6]);
+    Serial.print(" ");
+    Serial.print(Str3[7]);
+    Serial.print(" ");
+    Serial.print(Str3[8]);
+    Serial.println();
+*/
 read_serial(); //start all over
      
 }

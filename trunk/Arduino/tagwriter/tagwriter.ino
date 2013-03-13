@@ -1,9 +1,10 @@
 /*
-  RFID Eval 13.56MHz Shield example sketch v10
-
-  Aaron Weiss, aaron at sparkfun dot com
-  OSHW license: http://freedomdefined.org/OSHW
-
+  RFID Eval 13.56MHz Shield example sketch with Value Block Read/Writev10
+  
+    Aaron Weiss, aaron at sparkfun dot com
+    Read/Write Capabilities added by NPoole
+    OSHW license: http://freedomdefined.org/OSHW
+  
   works with 13.56MHz MiFare 1k tags
 
   Based on hardware v13:
@@ -11,16 +12,19 @@
   D8 -> RFID TX
   D9 -> XBee TX
   D10 -> XBee RX
-
-  Note: RFID Reset attached to D13 (aka status LED)
-
-  Note: be sure include the SoftwareSerial lib, http://arduiniana.org/libraries/newsoftserial/
-
-  Usage: Sketch prints 'Start' and waits for a tag. When a tag is in range, the shield reads the tag,
-  blinks the 'Found' LED and prints the serial number of the tag to the serial port
-  and the XBee port.
   
-  06/04/2013 - Modified for compatibility with Arudino 1.0. Seb Madgwick.
+  Note: RFID Reset attached to D13 (aka status LED)
+  
+  Note: be sure include the NewSoftSerial lib, http://arduiniana.org/libraries/newsoftserial/
+  
+  Usage: Sketch prints 'Start' and waits for a tag. When a tag is in range, the shield reads the tag,
+  blinks the 'Found' LED and prints the serial number of the tag to the serial port. It then attempts to
+  authenticate memory block 0x01. If this is successful it will display the "Success" status message and
+  the contents of memory block 0x01. It will then ask for a 4-byte input to write to the tag. After receiving
+  a 4-byte input, it will attempt to write this data to the tag and return the write status. 
+  
+  This code uses the default transport key to authenticate the Value Block 0x01. If you have already written
+  a key to this block in your MIFARE tag, the code may not work properly. 
 
 */
 #include <SoftwareSerial.h>
@@ -40,13 +44,13 @@ void authenticate(void);
 void write_Block(void);
 
 //Global var
-//Global var
 int flag = 0;
 int Str1[11];
 int Str2[11];
 int Str3[11];
 int Str4[11];
 int Str5[4];
+
 char in1 = 0;
 char in2 = 0;
 char in3 = 0;
@@ -57,13 +61,14 @@ int chksum;
 int flag2 = 0;
 
 byte auth = 76;
+
 //INIT
-void setup()
+void setup()  
 {
   Serial.begin(9600);
   Serial.println("Start");
-
-  // set the data rate for the SoftwareSerial ports
+  
+  // set the data rate for the NewSoftSerial ports
   xbee.begin(9600);
   rfid.begin(19200);
   delay(10);
@@ -71,7 +76,7 @@ void setup()
 }
 
 //MAIN
-void loop()
+void loop()                 
 {
   read_serial();
 }
@@ -82,7 +87,7 @@ void check_for_notag()
   delay(10);
   parse();
   set_flag();
-
+  
   if(flag = 1){
     seek();
     delay(10);
@@ -114,7 +119,6 @@ void parse()
 void print_serial()
 {
   if(flag == 1){
-    flag2 = 0;
     //print to serial port
     Serial.print("TAG ID: ");
     Serial.print(Str1[8], HEX);
@@ -130,6 +134,7 @@ void print_serial()
     xbee.println();
     delay(100);
     //check_for_notag();
+
   }
 }
 
@@ -159,9 +164,12 @@ void set_flag()
 {
   if(Str1[2] == 6){
     flag++;
+    flag2 = 0;
+    
   }
   if(Str1[2] == 2){
     flag = 0;
+    flag2 = 1;
   }
 }
 
@@ -169,14 +177,13 @@ void authenticate() //Attempt to authenticate block 0x01 with Transport Key
 {
   int resp = 0;
   byte auth = 76; //Status message for successful authorization
-  rfid.print((uint8_t)255); //Command header
-  rfid.print((uint8_t)0); //reserved
-  rfid.print((uint8_t)3); 
-  rfid.print((uint8_t)133); //Auth Command
-  rfid.print((uint8_t)1); //Number of Block to authenticate, change this to write a different block
-  rfid.print((uint8_t)255); 
-  rfid.print((uint8_t)136); //Checksum, change this too if you change any other part of the command, chksm = (all values) - header
-
+  rfid.write((uint8_t)255);
+  rfid.write((uint8_t)0);
+  rfid.write((uint8_t)3);
+  rfid.write((uint8_t)133);
+  rfid.write((uint8_t)1);
+  rfid.write((uint8_t)255);
+  rfid.write((uint8_t)136);
 //Get Response
 
   delay(50);
@@ -199,14 +206,13 @@ void authenticate() //Attempt to authenticate block 0x01 with Transport Key
     Serial.println();  //Make some breathing room on the terminal
 
 //Read the contents of block 0x01
+  rfid.write((uint8_t)255);
+  rfid.write((uint8_t)0);
+  rfid.write((uint8_t)2);
+  rfid.write((uint8_t)135);
+  rfid.write((uint8_t)1);
+  rfid.write((uint8_t)138);
 
-  rfid.print((uint8_t)255);//Command header
-  rfid.print((uint8_t)0);//reserved
-  rfid.print((uint8_t)2);
-  rfid.print((uint8_t)135);//Read Value Block Command
-  rfid.print((uint8_t)1);//Number of Block to read, change this to read a different block
-  rfid.print((uint8_t)138);//Checksum, change this too if you change any other part of the command, chksm = (all values) - header
-  
   //Get response
   
   delay(50);
@@ -225,19 +231,22 @@ void authenticate() //Attempt to authenticate block 0x01 with Transport Key
     Serial.println();
     Serial.print("Block Content: "); 
     
-       in1 = char((uint8_t)Str4[5]); //Convert contents of block 0x01 from Hex
-       in2 = char((uint8_t)Str4[6]);
-       in3 = char((uint8_t)Str4[7]);
-       in4 = char((uint8_t)Str4[8]);
+       in1 = char(Str4[5]); //Convert contents of block 0x01 from Hex
+       in2 = char(Str4[6]);
+       in3 = char(Str4[7]);
+       in4 = char(Str4[8]);
    
     Serial.print(in1); //Return contents of block 0x01
     Serial.print(in2);
     Serial.print(in3);
     Serial.print(in4);
     Serial.println();
-    write_Block();
+
      flag2 = 1;
-}
+     
+     if(Str2[4] == auth){write_Block();}} //If block is successfuly authenticated, move on to writing
+ 
+
 void write_Block(){
 
      Serial.println();
@@ -263,19 +272,21 @@ void write_Block(){
        Serial.println(); //Back up, everyone, give me some space
        
   //write to tag
-  rfid.print((uint8_t)255);//Command Header
-  rfid.print((uint8_t)0);//reserved
-  rfid.print((uint8_t)6);
-  rfid.print((uint8_t)138); //Write Value Block Command
-  rfid.print((uint8_t)1); //Number of Block to write, change this to write a different block
+  rfid.write((uint8_t)255);
+  rfid.write((uint8_t)0);
+  rfid.write((uint8_t)6);
+  rfid.write((uint8_t)138);
+  rfid.write((uint8_t)1);
+  
   //data to write
-  rfid.print((uint8_t)Str5[0]); //send 4 bytes from earlier
-  rfid.print((uint8_t)Str5[1]);
-  rfid.print((uint8_t)Str5[2]);
-  rfid.print((uint8_t)Str5[3]);
+  rfid.write((uint8_t)Str5[0]);
+  rfid.write((uint8_t)Str5[1]);
+  rfid.write((uint8_t)Str5[2]);
+  rfid.write((uint8_t)Str5[3]);
+  
   //close write command
   chksum = 6+138+1+Str5[0]+Str5[1]+Str5[2]+Str5[3]; //calculate checksum
-  rfid.print((uint8_t)chksum); //write checksum
+  rfid.write((uint8_t)chksum);
 
   delay(50); //get response
   while(rfid.available()){
@@ -295,4 +306,7 @@ void write_Block(){
     Serial.print(Str3[7], HEX);
     Serial.print(Str3[8], HEX);
     Serial.println();
+
+read_serial(); //start all over
+     
 }

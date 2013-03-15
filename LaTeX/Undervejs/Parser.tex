@@ -1,33 +1,31 @@
 \section{Parser}
-A parser takes the tokens from the scanner and use them to create a abstract syntax tree. It also checks if the stream of tokens conforms to the syntax specification, usually written formal using context-free grammar (CFG).
+A parser takes the tokens from the scanner and use them to create an abstract syntax tree. It also checks if the stream of tokens conforms to the syntax specification, usually written formal using context-free grammar (CFG).
 
+The main purpose of the parser is to analyze the tokens and check if the source program is written in the correct syntax. If this is not the case the parser should show a message describing the error. The parser will at the end create an abstract syntax tree. 
 
-The main purpose of the parser is to analyse the tokens and check if the source program is written in the correct syntax. If this is not the case the parser should show a message describing the error. The parser will at the end create a abstract syntax tree. 
+Generally there are two different approaches to parsing: top-down and bottom-up.
 
-Generally there are two different approaches to parsing - top-down and bottom-up.
-
-\subsection*{Top-down parsers.}
-
-Then top-down parser starts at the root and works it way to the leaves in a depth-first manner, doing a preorder traversal if the parse tree.  This is done by reading tokens from left to right using a leftmost derivation. Top-down parsers can further more be split into table-drivel LL  and recursive descent parse algorithms.
+\subsection*{Top-down parsers}
+Then top-down parser starts at the root and works its way to the leaves in a depth-first manner, doing a preorder traversal if the parse tree.  This is done by reading tokens from left to right using a leftmost derivation. Top-down parsers can further more be split into table-driven LL  and recursive descent parse algorithms.
 
 Table-driven LL Parsers:
-Use a parse table to determine what to do next. The entries in the parse table is determined by the particular LL(k) grammar. The parser then searches the table to see what to do.
+Uses a parse table to determine what to do next. The entries in the parse table is determined by the particular LL(k) grammar. The parser then searches the table to see what to do.
 
 Recursive-descent parser:
-The recursive-descent parsers consists of mutually recursive parsing routines. Each of the nonterminals in the grammar has an parsing procedure that determines if the token stream contains a sequence of tokens derivable from that nonterminal.
+The recursive-descent parsers consists of mutually recursive parsing routines. Each of the non-terminals in the grammar has a parsing procedure that determines if the token stream contains a sequence of tokens derivable from that non-terminal.
 
-\subsection*{Bottom-Up Parsers.}
+\subsection*{Bottom-Up Parsers}
 
-A Bottom-up parser on the other had do a postorder traversal of the parse tree, meaning it starts from the leaves and works towards the root.
-A bottom-up parser are more powerful and efficient than a top-down parser, but not as simple.
+A Bottom-up parser on the other has do a postorder traversal of the parse tree, meaning that it starts from the leaves and works towards the root.
+A bottom-up parser is more powerful and efficient than a top-down parser, but not as simple.
 
 LR:
-A LR parser reads from left to right and uses a reversed rightmost derivation. It is as the LL parser driven from a parse table. The largest difference is how is it derived and how the parse table is handled.  
+A LR parser reads from left to right and uses a reversed rightmost derivation. It is as the LL parser driven from a parse table. The biggest difference is how is it derived and how the parse table is handled.  
 
 LALR:
-A LALR(Lookahead Ahead LR) parser is one of the most commonly used algorithms today, because if it is a powerful algorithm but do not need a very large parsing table. It works like the LR parser.
+A LALR(Lookahead Ahead LR) parser is one of the most commonly used algorithms today, because it is a powerful algorithm but do not need a very large parse table. It works like the LR parser.
 
-\subsection*{Abstract Syntax Trees:}
+\subsection*{Abstract Syntax Trees}
 
 
 

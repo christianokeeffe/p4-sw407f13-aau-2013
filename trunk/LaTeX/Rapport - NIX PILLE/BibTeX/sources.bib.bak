@@ -1,5 +1,13 @@
-% This file was created with JabRef 2.8.1.
+% This file was created with JabRef 2.7.2.
 % Encoding: Cp1252
+
+@MISC{ANTLR,
+  author = {Antlr},
+  title = {Theory behind Antlr},
+  owner = {Kasper},
+  timestamp = {2013.03.15},
+  url = {http://www.antlr.org/about.html}
+}
 
 @MISC{ArduinoLanguage,
   author = {Arduino},
@@ -26,6 +34,47 @@
   owner = {Aleksander},
   timestamp = {2013.02.19},
   url = {http://arduino.cc/en/Main/ArduinoBoardUno}
+}
+
+@MISC{Flex,
+  author = {Flex},
+  title = {Theory behind Flex},
+  owner = {Kasper},
+  timestamp = {2013.03.15},
+  url = {http://flex.sourceforge.net/manual/}
+}
+
+@MISC{Jflex,
+  author = {Jflex},
+  title = {Theory behind Jflex},
+  owner = {Kasper},
+  timestamp = {2013.03.15},
+  url = {http://jflex.de/manual.html#SECTION00040000000000000000}
+}
+
+@MISC{Jlex,
+  author = {Jlex},
+  title = {Theory behind Jlex},
+  owner = {Kasper},
+  timestamp = {2013.03.15},
+  url = {http://www.cs.princeton.edu/~appel/modern/java/JLex/current/manual.html}
+}
+
+@MISC{Lex,
+  author = {Lex},
+  title = {Theory behind Lex},
+  owner = {Kasper},
+  timestamp = {2013.03.15},
+  url = {http://dinosaur.compilertools.net/lex/index.html}
+}
+
+@MISC{Teensy,
+  author = {PJRC},
+  title = {Teensy USB Development Board},
+  howpublished = {\url{http://www.pjrc.com/teensy/index.html} [Last viewed: 11-03-2013]},
+  owner = {Aleksander},
+  timestamp = {2013.03.11},
+  url = {http://www.pjrc.com/teensy/index.html}
 }
 
 @BOOK{sebesta,
@@ -57,5 +106,35 @@
   owner = {Aleksander},
   timestamp = {2013.02.19},
   url = {http://www.rfid-specialisten.dk/rfid.asp}
+}
+
+@MISC{Seedui,
+  author = {Seeed Studio},
+  title = {Seeduino Stalker V2},
+  howpublished = {\url{http://www.seeedstudio.com/depot/seeeduino-stalker-v2-p-727.html?cPath=80}
+	[Last viewed: 11-03-2013]},
+  owner = {Aleksander},
+  timestamp = {2013.03.11},
+  url = {http://www.seeedstudio.com/depot/seeeduino-stalker-v2-p-727.html?cPath=80}
+}
+
+@MISC{Netdui,
+  author = {Chris Walker},
+  title = {Introducing Netduino Go},
+  howpublished = {\url{http://forums.netduino.com/index.php?/topic/3867-introducing-netduino-go/}
+	[Last viewed: 11-03-2013]},
+  month = {April},
+  year = {2012},
+  owner = {Aleksander},
+  timestamp = {2013.03.11},
+  url = {http://forums.netduino.com/index.php?/topic/3867-introducing-netduino-go/}
+}
+
+@MISC{Yacc,
+  author = {Yacc},
+  title = {Theory behind Yacc},
+  owner = {Kasper},
+  timestamp = {2013.03.15},
+  url = {http://dinosaur.compilertools.net/yacc/index.html}
 }
 

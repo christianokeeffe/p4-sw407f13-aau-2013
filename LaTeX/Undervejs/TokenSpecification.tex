@@ -1,5 +1,5 @@
-\fxfatal{mangler tekst}
-\subsection{symbols composition that can't be use for variables names}
+\fxfatal{indledning}
+\subsection{symbols composition that can't be use for variables names (reserved keywords)}
 \begin{itemize}
 \item bool
 \item int
@@ -37,10 +37,12 @@
 \item container
 
 \end{itemize}
-\fxfatal{mangler tekst}
+\fxfatal{overgang til token specification}
 
 \subsection{Token Specification}
+
 \fxfatal{mangler tekst}
+
 \begin{tabular}{l l}
 \item Terminal & Regular Expression \\ \hline
 \item bool & "bool" \\
@@ -63,17 +65,13 @@
 \item $\}$ & "end"\\
 \item if & "if" \\
 \item else & "else" \\
-\item \fxfatal{ved ikke hvordan skal skrives her} & "function" \\
-\item  & "using" \\
-\item return & "return" \\
-\item  & "nothing" \\
+\item yy xx(zz) & "function xx returns yy using zz" \\
+\item void & "nothing" \\
 \item switch & "switch" \\
 \item case & "case" \\
 \item break & "break" \\
 \item default & "default" \\
-\item $for\($ & "from" \\
-\item $;$ & "to" \\
-\item $; \)$ \fxfatal{passer hvis ikke} & "step" \\
+\item $for(i=xx; i<=yy; xx+=zz)$ & "from xx to yy step zz" \\
 \item while & "while" \\
 \item digitalWrite & "container" \\
 

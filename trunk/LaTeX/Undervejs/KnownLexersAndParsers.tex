@@ -5,7 +5,7 @@ In this section some of the different lexers and parsers, that are available on 
 These programs generate a lexical analyser also known as a scanner, that turns code into tokens which a parser uses.
 
 \subsubsection{Lex}
-Files are divided into three sections separated by lines containing two percent signs. The first is the "definition section" this is where macros can be defined and where headerfiles are imported. The second is the "Rules section" where regular expressions are read in terms of C statements. The third is the "C code section" which contains C statements and functions that are copied verbatim to the generated source file.
+Files are divided into three sections separated by lines containing two percent signs. The first is the "definition section" this is where macros can be defined and where headerfiles are imported. The second is the "Rules section" where regular expressions are read in terms of C statements. The third is the "C code section" which contains C statements and functions that are copied verbatim to the generated source file. Lex is not open source, but there are versions of Lex that are open source such as Flex, Jflex and Jlex.
 
 \subsubsection{Flex}
 Alternativ to lex
@@ -46,12 +46,12 @@ Javacc generate a parser from a formal grammar written in EBNF notation the outp
 
 \subsection{Comparison table}
 \begin{tabular}{l|c|c|l|}
-\item Name & Parsing algorithm & Input notation & Output language\\ \hline
-\item Yacc & LALR(1) & YACC & C\\ \hline
-\item Cup & LALR(1) & EBNF & java\\ \hline
-\item SableCC & LALR(1) & EBNF & C, C++, C#, java, OCaml, Python\\ \hline
-\item ANTLR & LL(*) & EBNF & ActionScript, Ada95, C, C++, C#, Java, JavaScript, Objective-C, Perl, Python, Ruby\\ \hline
-\item JavaCC & LL(k) & EBNF & Java, C++(beta)\\ \hline
+Name & Parsing algorithm & Input notation & Output language\\ \hline
+Yacc & LALR(1) & YACC & C\\ \hline
+Cup & LALR(1) & EBNF & java\\ \hline
+SableCC & LALR(1) & EBNF & C, C++, C#, java, OCaml, Python\\ \hline
+ANTLR & LL(*) & EBNF & ActionScript, Ada95, C, C++, C#, Java, JavaScript, Objective-C, Perl, Python, Ruby\\ \hline
+JavaCC & LL(k) & EBNF & Java, C++(beta)\\ \hline
 \end{tabular}
 
 Based on the different lexers and parsers attributes compared to the expectations of this project, it has been decided that ANTLR best fit. The reason behind this is that ANTLR uses the LL(*) parser algorithm, this fits the structure of the CFG grammar for this project. Furthermore ANTLR's output language can be in C or C++, this makes it easier to work on an arduino.

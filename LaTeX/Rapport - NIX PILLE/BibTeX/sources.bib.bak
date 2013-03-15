@@ -36,6 +36,14 @@
   url = {http://arduino.cc/en/Main/ArduinoBoardUno}
 }
 
+@MISC{CUP,
+  author = {Cup},
+  title = {Theory behind CUP},
+  owner = {Kasper},
+  timestamp = {2013.03.15},
+  url = {http://www2.cs.tum.edu/projects/cup/manual.html}
+}
+
 @MISC{Flex,
   author = {Flex},
   title = {Theory behind Flex},

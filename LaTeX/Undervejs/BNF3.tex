@@ -167,30 +167,30 @@ begin
 	\alt <stmt> <stmts>
 
 <stmt> $\ra$ <callid> <assign>;
-	\alt <if>
-	\alt <while>
+	\alt <nontermif>
+	\alt <nontermwhile>
 	\alt <from>
 	\alt <dcl>;
 	\alt <functioncall>;
-	\alt <switch>
+	\alt <nontermswitch>
 	\alt <comment>
 	
-<if> $\ra$ if(<expr>)
+<nontermif> $\ra$ if(<expr>)
 	begin
 		<stmts>
 	end
 	<endif>
 
 <endif> $\ra$ 
-	else <else>
+	else <nontermelse>
 	\alt $\eps$
 
-<else> $\ra$ <if>
+<nontermelse> $\ra$ <nontermif>
 	\alt begin
 		<stmts>
 	end
 
-<while> $\ra$ while(<expr>)
+<nontermwhile> $\ra$ while(<expr>)
 		begin
 			<stmts>
 		end
@@ -200,7 +200,7 @@ begin
 		<stmts>
 	end
 
-<switch> $\ra$ switch (<expr>)
+<nontermswitch> $\ra$ switch (<expr>)
 		begin
 			<cases>
 		end

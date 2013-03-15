@@ -1,0 +1,1 @@
+SET CLASSPATH=C:\Users\Christian\Documents\Arbejde\Eclipse\antlr;%CLASSPATH%

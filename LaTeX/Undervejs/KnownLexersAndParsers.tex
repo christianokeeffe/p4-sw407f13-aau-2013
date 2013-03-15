@@ -33,7 +33,7 @@ More or less like Yacc, output language is in java instead.
 Combines the lexer and parser in one tool.
 
 \subsubsection{SableCC}
-Using the CFG(Context Free Grammar) Extented Backus-Naur Form SableCC generates a LALR(1) parser, the output languages are: C, C++, C#, Java, OCaml, Python.
+Using the CFG(Context Free Grammar) Extented Backus-Naur Form SableCC generates a LALR(1) parser, the output languages are: C, C++, C\#, Java, OCaml, Python.
 
 \subsubsection{ANTLR}
 \textit{ANother Tool for Language Recognition} uses the CFG(Context Free Grammar) Extented Backus-Naur Form to generate an LL(*) parser. It has a wide variety of output languages, including, C, C++ and Java.
@@ -45,12 +45,14 @@ Javacc generate a parser from a formal grammar written in EBNF notation the outp
 
 
 \subsection{Comparison table}
-\begin{tabular}{l|c|c|l|}
+\begin{tabular}{|l|c|c|l|}
+\hline
 Name & Parsing algorithm & Input notation & Output language\\ \hline
 Yacc & LALR(1) & YACC & C\\ \hline
 Cup & LALR(1) & EBNF & java\\ \hline
-SableCC & LALR(1) & EBNF & C, C++, C#, java, OCaml, Python\\ \hline
-ANTLR & LL(*) & EBNF & ActionScript, Ada95, C, C++, C#, Java, JavaScript, Objective-C, Perl, Python, Ruby\\ \hline
+SableCC & LALR(1) & EBNF & C, C++, C\#, java, OCaml, Python\\ \hline
+ANTLR & LL(*) & EBNF & ActionScript, Ada95, C, C++, C\#, Java, JavaScript \\
+~&~&~&Objective-C, Perl, Python, Ruby\\ \hline
 JavaCC & LL(k) & EBNF & Java, C++(beta)\\ \hline
 \end{tabular}
 

@@ -8,9 +8,9 @@ In SPLAT static scoping is used. This means that scopes are computed at compile 
 \subsubsection{Symbol tables}
 Generally there are two approaches to symbol tables: One symbol table for each scope, or one global symbol table.
 \subsubsection*{Multiple Symbol Tables}
-In each scope, a symbol table exists, which is an ADT, that stores identifier names and relate each identifier to its attributes. The general operations of a symbol table is: Empty the table, add entry, find entry, open and close scope. 
+In each scope, a symbol table exists, which is an ADT (Abstract Data Type), that stores identifier names and relate each identifier to its attributes. The general operations of a symbol table is: Empty the table, add entry, find entry, open and close scope. 
 
-It can be useful to think of this structure of static scoping and nested symbol tables as a kind of tree structure. Then when the compiler analyzes the tree, only one branch/path is available at a time. This exactly creates these features of eg. local variables.
+It can be useful to think of this structure of static scoping and nested symbol tables as a kind of tree structure. Then when the compiler analyzes the tree, only one branch/path is available at a time. This exactly creates these features of e.g. local variables.
 
 A stack might intuitively make sense because of the way scopes are defined by begin and end. A begin scope would simply push a symbol table scope to the stack, and when the scope ends, the symbol table is popped from the stack. This also accounts for nested scopes. But searching for a non-local variable would require searching the entire stack. 
 

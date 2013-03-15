@@ -1,0 +1,31 @@
+\subsection{Type Rules}
+Here the type rules for comparison operator will be described:
+
+Type rule for \textbf{<, > <=, >=}:
+
+"E1 (<, > <=, >=) E2" is type correct and of type Boolean if E1 and E2 are type correct and of type Integer or double.
+
+Type rule for \textbf{!=, =}:
+
+"E1 (!=, =) E2" is type correct and of type Boolean if E1 and E2 are type correct and of type Integer, double, char or string.
+
+Type rule for \textbf{+, -, *}:
+"E1 (+, -, *) E2" is type correct and of type Integer or double if E1 and E2 are type correct and of type Integer or double.
+
+Type rule for \textbf{/}:
+"E1 (/) E2" is type correct and of type Integer or double if E1 and E2 are type correct and of type Integer or double and E2 is not 0.
+
+Here the type rules for loops will be described.
+
+Type rule of while: 
+"while E begin C end" is type correct if E of type Boolean and C are type correct.
+
+Type rule of from to: 
+"from E1 to E2 begin C end" is type correct if E1 and E2 are type correct and of type Integer or double, and C type correct.
+
+Here is the type rules for if sentence
+"if(E) begin C end" s type correct if E if E are type correct and of type Boolean, and C are type correct.
+
+Here is the type rules for switch/case will be described:
+
+"switch (E) begin case E1: C1 break; ... case En: Cn break; default: Cd break; end" is type correct if E, E1...En are type correct and of type Integer, double, char or string and is the same type, and C1...Cn and Cd are type correct.

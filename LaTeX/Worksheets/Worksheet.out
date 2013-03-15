@@ -1,0 +1,23 @@
+\BOOKMARK [1][-]{section.0.1}{0.1 Choice of grammar}{}% 1
+\BOOKMARK [1][-]{section.0.2}{0.2 BNF}{}% 2
+\BOOKMARK [1][-]{section.0.3}{0.3 Hardware}{}% 3
+\BOOKMARK [2][-]{subsection.0.3.1}{0.3.1 Hardware platform}{section.0.3}% 4
+\BOOKMARK [2][-]{subsection.0.3.2}{0.3.2 RFID}{section.0.3}% 5
+\BOOKMARK [2][-]{subsection.0.3.3}{0.3.3 Other components}{section.0.3}% 6
+\BOOKMARK [2][-]{subsection.0.3.4}{0.3.4 symbols composition that can't be use for variables names \(reserved keywords\)}{section.0.3}% 7
+\BOOKMARK [2][-]{subsection.0.3.5}{0.3.5 Token Specification}{section.0.3}% 8
+\BOOKMARK [1][-]{section.0.4}{0.4 Parser}{}% 9
+\BOOKMARK [1][-]{section.0.5}{0.5 Known lexers and parsers}{}% 10
+\BOOKMARK [2][-]{subsection.0.5.1}{0.5.1 Lexer}{section.0.5}% 11
+\BOOKMARK [3][-]{section*.4}{Lex}{subsection.0.5.1}% 12
+\BOOKMARK [3][-]{section*.5}{Flex}{subsection.0.5.1}% 13
+\BOOKMARK [3][-]{section*.6}{Jflex}{subsection.0.5.1}% 14
+\BOOKMARK [3][-]{section*.7}{Jlex}{subsection.0.5.1}% 15
+\BOOKMARK [2][-]{subsection.0.5.2}{0.5.2 Parser}{section.0.5}% 16
+\BOOKMARK [3][-]{section*.8}{Yacc}{subsection.0.5.2}% 17
+\BOOKMARK [3][-]{section*.9}{Cup}{subsection.0.5.2}% 18
+\BOOKMARK [2][-]{subsection.0.5.3}{0.5.3 Lexer and parser}{section.0.5}% 19
+\BOOKMARK [3][-]{section*.10}{SableCC}{subsection.0.5.3}% 20
+\BOOKMARK [3][-]{section*.11}{ANTLR}{subsection.0.5.3}% 21
+\BOOKMARK [3][-]{section*.12}{JavaCC}{subsection.0.5.3}% 22
+\BOOKMARK [2][-]{subsection.0.5.4}{0.5.4 Comparison table}{section.0.5}% 23

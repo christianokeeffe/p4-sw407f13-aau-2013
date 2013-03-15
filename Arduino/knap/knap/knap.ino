@@ -26,6 +26,19 @@ void SaveInArray(int input){
 }
 
 void WriteToRFID(){ 
+    //write to tag
+  rfid.write((uint8_t)255); //Command header
+  rfid.write((uint8_t)0); //Reserved
+  rfid.write((uint8_t)6); 
+  rfid.write((uint8_t)138); //Write value block command 
+  rfid.write((uint8_t)1); //Number of block to write, change this to write to another block
+  
+  int i = 0;
+  for (i=0;i<16;i++){
+    rfid.write((uint8_t)Msg[i]);
+    Msg[i] = 0;
+  }
+  plads = 0;
 }
 
 void loop(){

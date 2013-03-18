@@ -28,61 +28,14 @@
 \mainmatter
 
  % Hovedindhold - nummereres fra side 1
-\makeevenfoot{custom}{Side \thepage~af \pageref{LastPage}}{}{}	% Definerer lige siders sidefod efter modellen \makeevenfoot{Navn}{Venstre}{Center}{Højre}
-\makeoddfoot{custom}{}{}{Side \thepage~af \pageref{LastPage}}% Definerer ulige siders sidefod efter modellen \makeoddfoot{Navn}{Venstre}{Center}{Højre}		
+\makeevenfoot{custom}{Page \thepage~of \pageref{LastPage}}{}{}	% Definerer lige siders sidefod efter modellen \makeevenfoot{Navn}{Venstre}{Center}{Højre}
+\makeoddfoot{custom}{}{}{Page \thepage~of \pageref{LastPage}}% Definerer ulige siders sidefod efter modellen \makeoddfoot{Navn}{Venstre}{Center}{Højre}		
 \pagestyle{custom}
 
-\part{Udviklingsrapport}
 %%%% Rapportindhold %%%%
-\chapter{Indledning} 
-\input{formalia/FormaliaIndledning.tex}
 
-\chapter{Problemanalyse}
-\label{chap:problem}
-\input{indhold/problem/AnalyseOpgaven.tex}
-\input{indhold/problem/AnalyseProblemOmraadet.tex}
-\input{indhold/problem/AnalyseAnvendelsesOmraadet.tex}
-\input{indhold/problem/AnalyseAnbefalinger.tex}
-\input{indhold/problem/AnalyseProblemFormulering.tex}
-\input{indhold/problem/AnalyseAfrunding.tex}
-
-\chapter{Design}
-\label{chap:design}
-\input{indhold/design/DesignDokument.tex}
-\input{indhold/design/DesignAfrunding.tex}
-
-\chapter{Udvikling}
-\label{chap:development}
-\input{indhold/development/UdviklingIntro.tex}
-\input{indhold/development/UdviklingJqueryBegrundelser.tex}
-\input{indhold/development/UdviklingIndstillinger.tex}
-\input{indhold/development/UdviklingButikkerOversigt.tex}
-\input{indhold/development/UdviklingAPIKald.tex}
-\input{indhold/development/UdviklingFindMaengdeTilbud.tex}
-\input{indhold/development/UdviklingForeslaaTibud.tex}
-\input{indhold/development/UdviklingGUIBeskrivelse.tex}
-
-\chapter{Test} 
-\label{chap:testing}
-\input{indhold/testing/Testning.tex}
-
-\chapter{Diskussion}
-\label{chap:Discussion}
-\input{indhold/discussion/Diskussion.tex}
-\input{indhold/discussion/Perspektivering.tex}
-
-\chapter{Konklusion}
-\label{chap:conclusion}
-\input{formalia/FormaliaKonklusion.tex}
-
-\part{Akademisk rapport}
-\input{indhold/akademisk/AkademiskrapportIndledning.tex}
-\input{indhold/akademisk/AkademiskrapportSystemudvikling.tex}
-\input{indhold/akademisk/AkademiskrapportBinaerSoegning.tex}
-\input{indhold/akademisk/AkademiskraportTestafsnit.tex}
-\input{indhold/akademisk/AkademiskrapportAfrundingTestafsnit.tex}
-%%%% Kilder %%%%
-\part{Referencer og bilag}
+%%%% Kilder %%%
+\chapter{Literature}
 \begingroup
 	\raggedright
 	\bibliography{BibTeX/sources}{}	% Litteraturlisten
@@ -94,7 +47,7 @@
 \listoffixmes	% Fixme-listen - fjernes til sidst i projektet med "%"
 
 \clearforchapter
-
+\chapter{Appendix}
 \appendix	% Appendiks/bilag start - giver chapter bogstaver i stedet for talf
 \addtocontents{toc}{\protect\cftpagenumbersoff{chapter}} % Fjernelse af nummerering af bilag i TOC
 
@@ -104,7 +57,4 @@
 %%%% Appendiks %%%%
 %%%% Bilag %%%%
 
-\input{appendix/BilagFoersteSpoergeskemaInformanter.tex}
-\input{appendix/BilagAndetSpoergeskemaInformanter.tex}
-\input{appendix/BilagDVD.tex}
 \end{document}

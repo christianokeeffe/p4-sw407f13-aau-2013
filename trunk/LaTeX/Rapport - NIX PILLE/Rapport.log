@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.10.22)  19 DEC 2012 09:46
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.10.22)  18 MAR 2013 11:17
 entering extended mode
-**C:/Users/Christian/Documents/Arbejde/UNI/P3/LaTeX/Rapport*-*NIX*PILLE/Rapport
-.tex
+**C:/Users/Christian/Documents/Arbejde/UNI/P4/svn/LaTeX/Rapport*-*NIX*PILLE/Rap
+port.tex
 
-("C:/Users/Christian/Documents/Arbejde/UNI/P3/LaTeX/Rapport - NIX PILLE/Rapport
-.tex"
+("C:/Users/Christian/Documents/Arbejde/UNI/P4/svn/LaTeX/Rapport - NIX PILLE/Rap
+port.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -16,7 +16,7 @@ german-x-2012-05-30, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
-(C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\preamble.tex
+(C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\preamble.tex
 ("C:\Program Files\MiKTeX 2.9\tex\latex\memoir\memoir.cls"
 Document Class: memoir 2011/03/06 v3.6j configurable book, report, article docu
 ment class
@@ -607,6 +607,19 @@ Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
+("C:\Program Files\MiKTeX 2.9\tex\latex\mdwtools\syntax.sty"
+Package: syntax 1996/05/17 1.07 Syntax typesetting (MDW)
+\grammarparsep=\skip185
+\grammarindent=\dimen148
+\sdstartspace=\skip186
+\sdendspace=\skip187
+\sdmidskip=\skip188
+\sdtokskip=\skip189
+\sdfinalskip=\skip190
+\sdrulewidth=\dimen149
+\sdcirclediam=\dimen150
+\sdindent=\dimen151
+)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ms\everyshi.sty"
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 )
@@ -650,31 +663,31 @@ Package `algorithm2e' Release 4.01 -- december 14 2009 --
 subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 - Author: Christophe Fiorio (fiorio@lirmm.fr)
 ********************************************************
-\skiptotal=\skip185
-\skiplinenumber=\skip186
-\skiprule=\skip187
-\skiphlne=\skip188
-\skiptext=\skip189
-\skiplength=\skip190
-\algomargin=\skip191
-\skipalgocfslide=\skip192
-\algowidth=\dimen148
-\inoutsize=\dimen149
-\inoutline=\dimen150
-\interspacetitleruled=\dimen151
-\interspacealgoruled=\dimen152
-\interspacetitleboxruled=\dimen153
+\skiptotal=\skip191
+\skiplinenumber=\skip192
+\skiprule=\skip193
+\skiphlne=\skip194
+\skiptext=\skip195
+\skiplength=\skip196
+\algomargin=\skip197
+\skipalgocfslide=\skip198
+\algowidth=\dimen152
+\inoutsize=\dimen153
+\inoutline=\dimen154
+\interspacetitleruled=\dimen155
+\interspacealgoruled=\dimen156
+\interspacetitleboxruled=\dimen157
 \algocf@inoutbox=\box29
 \algocf@inputbox=\box30
-\AlCapSkip=\skip193
-\AlCapHSkip=\skip194
+\AlCapSkip=\skip199
+\AlCapHSkip=\skip200
 \algocf@nlbox=\box31
 \algocf@hangingbox=\box32
 \algocf@capbox=\box33
-\algoheightruledefault=\skip195
-\algoheightrule=\skip196
-\algotitleheightruledefault=\skip197
-\algotitleheightrule=\skip198
+\algoheightruledefault=\skip201
+\algoheightrule=\skip202
+\algotitleheightruledefault=\skip203
+\algotitleheightrule=\skip204
 \c@algocfline=\count141
 \c@algocfproc=\count142
 \c@algocf=\count143
@@ -709,20 +722,20 @@ Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ms\everysel.sty"
 Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 )
-\CenteringLeftskip=\skip199
-\RaggedLeftLeftskip=\skip200
-\RaggedRightLeftskip=\skip201
-\CenteringRightskip=\skip202
-\RaggedLeftRightskip=\skip203
-\RaggedRightRightskip=\skip204
-\CenteringParfillskip=\skip205
-\RaggedLeftParfillskip=\skip206
-\RaggedRightParfillskip=\skip207
-\JustifyingParfillskip=\skip208
-\CenteringParindent=\skip209
-\RaggedLeftParindent=\skip210
-\RaggedRightParindent=\skip211
-\JustifyingParindent=\skip212
+\CenteringLeftskip=\skip205
+\RaggedLeftLeftskip=\skip206
+\RaggedRightLeftskip=\skip207
+\CenteringRightskip=\skip208
+\RaggedLeftRightskip=\skip209
+\RaggedRightRightskip=\skip210
+\CenteringParfillskip=\skip211
+\RaggedLeftParfillskip=\skip212
+\RaggedRightParfillskip=\skip213
+\JustifyingParfillskip=\skip214
+\CenteringParindent=\skip215
+\RaggedLeftParindent=\skip216
+\RaggedRightParindent=\skip217
+\JustifyingParindent=\skip218
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\fix-cm.sty"
 Package: fix-cm 2006/09/13 v1.1m fixes to LaTeX
@@ -811,14 +824,14 @@ Package: pdfpages 2012/08/31 v0.4t Insert pages of external PDF documents (AM)
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count144
 \calc@Bcount=\count145
-\calc@Adimen=\dimen154
-\calc@Bdimen=\dimen155
-\calc@Askip=\skip213
-\calc@Bskip=\skip214
+\calc@Adimen=\dimen158
+\calc@Bdimen=\dimen159
+\calc@Askip=\skip219
+\calc@Bskip=\skip220
 LaTeX Info: Redefining \setlength on input line 76.
 LaTeX Info: Redefining \addtolength on input line 77.
 \calc@Ccount=\count146
-\calc@Cskip=\skip215
+\calc@Cskip=\skip221
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\eso-pic\eso-pic.sty"
 Package: eso-pic 2010/10/06 v2.0c eso-pic (RN)
@@ -828,8 +841,8 @@ Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
-\Gin@req@height=\dimen156
-\Gin@req@width=\dimen157
+\Gin@req@height=\dimen160
+\Gin@req@width=\dimen161
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\pdfpages\pppdftex.def"
 File: pppdftex.def 2012/08/31 v0.4t Pdfpages driver for pdfTeX (AM)
@@ -849,14 +862,14 @@ LaTeX Info: Redefining \textsubscript on input line 424.
 \lst@gtempboxa=\box38
 \lst@token=\toks26
 \lst@length=\count149
-\lst@currlwidth=\dimen158
+\lst@currlwidth=\dimen162
 \lst@column=\count150
 \lst@pos=\count151
-\lst@lostspace=\dimen159
-\lst@width=\dimen160
+\lst@lostspace=\dimen163
+\lst@width=\dimen164
 \lst@newlines=\count152
 \lst@lineno=\count153
-\lst@maxwidth=\dimen161
+\lst@maxwidth=\dimen165
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
@@ -896,14 +909,14 @@ Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
 x"
 \pgfkeys@tmptoks=\toks30
 ))
-\pgf@x=\dimen162
-\pgf@y=\dimen163
-\pgf@xa=\dimen164
-\pgf@ya=\dimen165
-\pgf@xb=\dimen166
-\pgf@yb=\dimen167
-\pgf@xc=\dimen168
-\pgf@yc=\dimen169
+\pgf@x=\dimen166
+\pgf@y=\dimen167
+\pgf@xa=\dimen168
+\pgf@ya=\dimen169
+\pgf@xb=\dimen170
+\pgf@yb=\dimen171
+\pgf@xc=\dimen172
+\pgf@yc=\dimen173
 \w@pgf@writea=\write4
 \r@pgf@reada=\read2
 \c@pgf@counta=\count156
@@ -937,7 +950,7 @@ Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathcalc.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathutil.code.tex")
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathparser.code.tex"
-\pgfmath@dimen=\dimen170
+\pgfmath@dimen=\dimen174
 \pgfmath@count=\count162
 \pgfmath@box=\box41
 \pgfmath@toks=\toks31
@@ -965,32 +978,32 @@ ex"))) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfloat.code.tex
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepoints.code.tex
 "
 File: pgfcorepoints.code.tex 2010/04/09  (rcs-revision 1.20)
-\pgf@picminx=\dimen171
-\pgf@picmaxx=\dimen172
-\pgf@picminy=\dimen173
-\pgf@picmaxy=\dimen174
-\pgf@pathminx=\dimen175
-\pgf@pathmaxx=\dimen176
-\pgf@pathminy=\dimen177
-\pgf@pathmaxy=\dimen178
-\pgf@xx=\dimen179
-\pgf@xy=\dimen180
-\pgf@yx=\dimen181
-\pgf@yy=\dimen182
-\pgf@zx=\dimen183
-\pgf@zy=\dimen184
+\pgf@picminx=\dimen175
+\pgf@picmaxx=\dimen176
+\pgf@picminy=\dimen177
+\pgf@picmaxy=\dimen178
+\pgf@pathminx=\dimen179
+\pgf@pathmaxx=\dimen180
+\pgf@pathminy=\dimen181
+\pgf@pathmaxy=\dimen182
+\pgf@xx=\dimen183
+\pgf@xy=\dimen184
+\pgf@yx=\dimen185
+\pgf@yy=\dimen186
+\pgf@zx=\dimen187
+\pgf@zy=\dimen188
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathconstruct.c
 ode.tex"
 File: pgfcorepathconstruct.code.tex 2010/08/03  (rcs-revision 1.24)
-\pgf@path@lastx=\dimen185
-\pgf@path@lasty=\dimen186
+\pgf@path@lastx=\dimen189
+\pgf@path@lasty=\dimen190
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathusage.code.
 tex"
 File: pgfcorepathusage.code.tex 2008/04/22  (rcs-revision 1.12)
-\pgf@shorten@end@additional=\dimen187
-\pgf@shorten@start@additional=\dimen188
+\pgf@shorten@end@additional=\dimen191
+\pgf@shorten@start@additional=\dimen192
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorescopes.code.tex
 "
@@ -1003,14 +1016,14 @@ File: pgfcorescopes.code.tex 2010/09/08  (rcs-revision 1.34)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoregraphicstate.co
 de.tex"
 File: pgfcoregraphicstate.code.tex 2008/04/22  (rcs-revision 1.9)
-\pgflinewidth=\dimen189
+\pgflinewidth=\dimen193
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretransformations
 .code.tex"
 File: pgfcoretransformations.code.tex 2009/06/10  (rcs-revision 1.11)
-\pgf@pt@x=\dimen190
-\pgf@pt@y=\dimen191
-\pgf@pt@temp=\dimen192
+\pgf@pt@x=\dimen194
+\pgf@pt@y=\dimen195
+\pgf@pt@temp=\dimen196
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorequick.code.tex"
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
@@ -1029,7 +1042,7 @@ File: pgfcorearrows.code.tex 2008/04/23  (rcs-revision 1.11)
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreshade.code.tex"
 File: pgfcoreshade.code.tex 2008/11/23  (rcs-revision 1.13)
-\pgf@max=\dimen193
+\pgf@max=\dimen197
 \pgf@sys@shading@range@num=\count165
 ) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreimage.code.te
 x"
@@ -1061,8 +1074,8 @@ File: pgfmoduleplot.code.tex 2010/10/22  (rcs-revision 1.8)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version-0-65.
 sty"
 Package: pgfcomp-version-0-65 2007/07/03 v2.10 (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen194
-\pgf@nodesepend=\dimen195
+\pgf@nodesepstart=\dimen198
+\pgf@nodesepend=\dimen199
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version-1-18.
 sty"
@@ -1072,8 +1085,8 @@ Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex"))
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgffor.code.tex"
 Package: pgffor 2010/03/23 v2.10 (rcs-revision 1.18)
-\pgffor@iter=\dimen196
-\pgffor@skip=\dimen197
+\pgffor@iter=\dimen200
+\pgffor@skip=\dimen201
 \pgffor@stack=\toks34
 \pgffor@toks=\toks35
 ))
@@ -1084,14 +1097,14 @@ Package: tikz 2010/10/13 v2.10 (rcs-revision 1.76)
 code.tex"
 File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
 \pgf@plot@mark@count=\count166
-\pgfplotmarksize=\dimen198
+\pgfplotmarksize=\dimen202
 )
-\tikz@lastx=\dimen199
-\tikz@lasty=\dimen200
-\tikz@lastxsaved=\dimen201
-\tikz@lastysaved=\dimen202
-\tikzleveldistance=\dimen203
-\tikzsiblingdistance=\dimen204
+\tikz@lastx=\dimen203
+\tikz@lasty=\dimen204
+\tikz@lastxsaved=\dimen205
+\tikz@lastysaved=\dimen206
+\tikzleveldistance=\dimen207
+\tikzsiblingdistance=\dimen208
 \tikz@figbox=\box47
 \tikz@tempbox=\box48
 \tikztreelevel=\count167
@@ -1979,6 +1992,9 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lastpage\lastpage.sty"
 Package: lastpage 2011/09/01 v1.2k Refers to last page's name (HMM; JPG)
 )
+("C:\Program Files\MiKTeX 2.9\tex\generic\genmisc\nth.sty"
+Package: nth 2002/02/27
+))
 ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
 Package: babel 2008/07/08 v3.8m The Babel package
 
@@ -1988,18 +2004,20 @@ Package: babel 2008/07/08 v3.8m The Babel package
 ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
 File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\danish.ldf"
-Language: danish 2009/09/19 v1.3r Danish support from the babel system
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\english.ldf"
+Language: english 2005/03/30 v3.3o English support from the babel system
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
 File: babel.def 2008/07/08 v3.8m Babel common definitions
 \babel@savecnt=\count344
 \U@D=\dimen326
 )
-Package babel Info: Making " an active character on input line 82.
-)))
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\Rapport
-.aux")
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+("C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\Rapport - NIX PILLE\Rap
+port.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
@@ -2067,10 +2085,10 @@ LaTeX Info: Redefining \ref on input line 3.
 LaTeX Info: Redefining \pageref on input line 3.
 LaTeX Info: Redefining \nameref on input line 3.
 
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\Rapport
-.out")
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\Rapport
-.out")
+("C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\Rapport - NIX PILLE\Rap
+port.out")
+("C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\Rapport - NIX PILLE\Rap
+port.out")
 \@outlinefile=\write6
 LaTeX Info: Redefining \Ref on input line 3.
 Package lastpage Info: Please have a look at the pageslts package at
@@ -2095,43 +2113,25 @@ LaTeX Font Info:    Try loading font information for U+stmry on input line 3.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\stmaryrd\ustmry.fd")
 \c__siunitx_mathtt_int=\count354
 
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\formali
-a/FormaliaForside.tex"
-<billeder/FormaliaForsideLogo.png, id=662, 542.025pt x 384.35596pt>
-File: billeder/FormaliaForsideLogo.png Graphic file (type png)
-
-<use billeder/FormaliaForsideLogo.png>
-Package pdftex.def Info: billeder/FormaliaForsideLogo.png used on input line 16
-.
-(pdftex.def)             Requested size: 340.8013pt x 241.67635pt.
-
-<billeder/FormaliaForsideTekst.png, id=664, 3094.56125pt x 425.59pt>
-File: billeder/FormaliaForsideTekst.png Graphic file (type png)
-
-<use billeder/FormaliaForsideTekst.png>
-Package pdftex.def Info: billeder/FormaliaForsideTekst.png used on input line 1
-7.
-(pdftex.def)             Requested size: 340.8013pt x 46.86699pt.
-) [1
+("C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\Rapport - NIX PILLE\for
+malia/FormaliaForside.tex") [1
 
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Christian/Docume
-nts/Arbejde/UNI/P3/LaTeX/Rapport - NIX PILLE/billeder/FormaliaForsideLogo.png> 
-<C:/Users/Christian/Documents/Arbejde/UNI/P3/LaTeX/Rapport - NIX PILLE/billeder
-/FormaliaForsideTekst.png>] [2
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2
 
 ]
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\formali
-a/FormaliaTitelblad.tex"
-<billeder/FormaliaAauLogo.png, id=679, 214.8828pt x 49.6254pt>
-File: billeder/FormaliaAauLogo.png Graphic file (type png)
+("C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\Rapport - NIX PILLE\for
+malia/FormaliaTitelblad.tex"
+<billeder/AAUUKSTUDENTREPORTbluergb.png, id=34, 434.46315pt x 284.5029pt>
+File: billeder/AAUUKSTUDENTREPORTbluergb.png Graphic file (type png)
 
-<use billeder/FormaliaAauLogo.png>
-Package pdftex.def Info: billeder/FormaliaAauLogo.png used on input line 34.
-(pdftex.def)             Requested size: 246.40506pt x 56.9055pt.
+<use billeder/AAUUKSTUDENTREPORTbluergb.png>
+Package pdftex.def Info: billeder/AAUUKSTUDENTREPORTbluergb.png used on input l
+ine 34.
+(pdftex.def)             Requested size: 217.25092pt x 142.26378pt.
 
 Overfull \hbox (12.00002pt too wide) in paragraph at lines 25--37
-[]  
+ []
  []
 
 
@@ -2160,22 +2160,12 @@ Overfull \hbox (28.45276pt too wide) in paragraph at lines 77--77
  []
 
 
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\formali
-a/FormaliaSynopsis.tex"
-Underfull \hbox (badness 10000) in paragraph at lines 9--10
-[]\T1/cmr/m/n/10 Through dif-fe-rent tests such as
- []
-
-
-Underfull \hbox (badness 6526) in paragraph at lines 9--10
-\T1/cmr/m/n/10 questionnai-res, ob-ser-va-tions and tests
- []
-
-
-Underfull \hbox (badness 1117) in paragraph at lines 9--10
-\T1/cmr/m/n/10 areas could be im-pro-ved upon on the
- []
-
+("C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\Rapport - NIX PILLE\for
+malia/FormaliaSynopsis.tex"
+Package FiXme Info: inner mode detected;
+(FiXme)             turning margin layout form off on input line 1.
+Package hyperref Info: bookmark level for unknown fixme defaults to 0 on input 
+line 1.
 )
 Underfull \hbox (badness 10000) in paragraph at lines 88--88
 
@@ -2201,1085 +2191,203 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--91
 
  []
 
-) [3 <C:/Users/Christian/Documents/Arbejde/UNI/P3/LaTeX/Rapport - NIX PILLE/bil
-leder/FormaliaAauLogo.png>] [4
+) [3 <C:/Users/Christian/Documents/Arbejde/UNI/P4/svn/LaTeX/Rapport - NIX PILLE
+/billeder/AAUUKSTUDENTREPORTbluergb.png>] [4]
+("C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\Rapport - NIX PILLE\for
+malia/FormaliaUnderskriftsside.tex")
+Underfull \hbox (badness 10000) in paragraph at lines 1--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--13
+
+ []
+
+[5
+
+] [6
 
 ]
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\formali
-a/FormaliaUnderskriftsside.tex")
-Underfull \hbox (badness 10000) in paragraph at lines 1--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1--13
-
- []
-
-[5] [6
-
-]
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\formali
-a/FormaliaProlog.tex" ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1pbk.fd")
-) [7
+("C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\Rapport - NIX PILLE\for
+malia/FormaliaProlog.tex"
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1pbk.fd")) [7
 
 ] [8
 
 ]
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\Rapport
-.toc" [9] [10] [11]) [12] [1
-
-
-] [2]
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\formali
-a/FormaliaIndledning.tex") [3
-
-] [4
+("C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\Rapport - NIX PILLE\Rap
+port.toc") [9] [10
 
 ]
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/problem/AnalyseOpgaven.tex"
-Overfull \hbox (1.73322pt too wide) in paragraph at lines 13--14
-[]\T1/cmr/bx/n/10.95 Betingelser: \T1/cmr/m/n/10.95 Sy-ste-met skal fun-ge-re p
-å for-skel-li-ge plat-for-me, og i for-skel-li-ge hverdags-
- []
+("C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\Rapport - NIX PILLE\Rap
+port.bbl" [1
 
-[5] <billeder/RigtBillede.png, id=901, 1027.84pt x 1027.84pt>
-File: billeder/RigtBillede.png Graphic file (type png)
-
-<use billeder/RigtBillede.png>
-Package pdftex.def Info: billeder/RigtBillede.png used on input line 23.
-(pdftex.def)             Requested size: 426.0pt x 425.99673pt.
- [6 <C:/Users/Christian/Documents/Arbejde/UNI/P3/LaTeX/Rapport - NIX PILLE/bill
-eder/RigtBillede.png>])
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/problem/AnalyseProblemOmraadet.tex" [7]
-<billeder/AnalyseKlassediagram.png, id=918, 741.61066pt x 520.344pt>
-File: billeder/AnalyseKlassediagram.png Graphic file (type png)
-
-<use billeder/AnalyseKlassediagram.png>
-Package pdftex.def Info: billeder/AnalyseKlassediagram.png used on input line 5
-.
-(pdftex.def)             Requested size: 553.8013pt x 388.58968pt.
- [8
-
- <C:/Users/Christian/Documents/Arbejde/UNI/P3/LaTeX/Rapport - NIX PILLE/billede
-r/AnalyseKlassediagram.png>]
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/problem/AnalyseStruktur.tex" [9
-
-])
-<billeder/AnalyseKundeTilstandsdiagram.PNG, id=930, 242.46585pt x 107.6823pt>
-File: billeder/AnalyseKundeTilstandsdiagram.PNG Graphic file (type png)
-
-<use billeder/AnalyseKundeTilstandsdiagram.PNG>
-Package pdftex.def Info: billeder/AnalyseKundeTilstandsdiagram.PNG used on inpu
-t line 15.
-(pdftex.def)             Requested size: 319.5pt x 141.90938pt.
- [10 <C:/Users/Christian/Documents/Arbejde/UNI/P3/LaTeX/Rapport - NIX PILLE/bil
-leder/AnalyseKundeTilstandsdiagram.PNG>]
-<billeder/AnalyseMedlemTilstandsdiagram.PNG, id=938, 241.02045pt x 107.08005pt>
-File: billeder/AnalyseMedlemTilstandsdiagram.PNG Graphic file (type png)
-<use billeder/AnalyseMedlemTilstandsdiagram.PNG>
-Package pdftex.def Info: billeder/AnalyseMedlemTilstandsdiagram.PNG used on inp
-ut line 21.
-(pdftex.def)             Requested size: 319.5pt x 141.95715pt.
-
-<billeder/AnalyseListeTilstandsdiagram.PNG, id=940, 229.69815pt x 150.68295pt>
-File: billeder/AnalyseListeTilstandsdiagram.PNG Graphic file (type png)
-
-<use billeder/AnalyseListeTilstandsdiagram.PNG>
-Package pdftex.def Info: billeder/AnalyseListeTilstandsdiagram.PNG used on inpu
-t line 27.
-(pdftex.def)             Requested size: 319.5pt x 209.60042pt.
-
-<billeder/AnalyseBegivenhedTilstandsdiagram.PNG, id=942, 248.6088pt x 107.80275
-pt>
-File: billeder/AnalyseBegivenhedTilstandsdiagram.PNG Graphic file (type png)
- <use billeder/AnalyseBegivenhedTilstandsdiagram.PNG>
-Package pdftex.def Info: billeder/AnalyseBegivenhedTilstandsdiagram.PNG used on
- input line 33.
-(pdftex.def)             Requested size: 319.5pt x 138.54959pt.
- [11 <C:/Users/Christian/Documents/Arbejde/UNI/P3/LaTeX/Rapport - NIX PILLE/bil
-leder/AnalyseMedlemTilstandsdiagram.PNG> <C:/Users/Christian/Documents/Arbejde/
-UNI/P3/LaTeX/Rapport - NIX PILLE/billeder/AnalyseListeTilstandsdiagram.PNG>]
-<billeder/AnalyseVareTilstandsdiagram.PNG, id=951, 331.9602pt x 124.18394pt>
-File: billeder/AnalyseVareTilstandsdiagram.PNG Graphic file (type png)
-
-<use billeder/AnalyseVareTilstandsdiagram.PNG>
-Package pdftex.def Info: billeder/AnalyseVareTilstandsdiagram.PNG used on input
- line 39.
-(pdftex.def)             Requested size: 319.5pt x 119.52977pt.
-
-<billeder/AnalyseTilbudTilstandsdiagram.PNG, id=954, 471.4413pt x 223.67564pt>
-File: billeder/AnalyseTilbudTilstandsdiagram.PNG Graphic file (type png)
-
-<use billeder/AnalyseTilbudTilstandsdiagram.PNG>
-Package pdftex.def Info: billeder/AnalyseTilbudTilstandsdiagram.PNG used on inp
-ut line 45.
-(pdftex.def)             Requested size: 426.0pt x 202.1151pt.
- [12 <C:/Users/Christian/Documents/Arbejde/UNI/P3/LaTeX/Rapport - NIX PILLE/bil
-leder/AnalyseBegivenhedTilstandsdiagram.PNG> <C:/Users/Christian/Documents/Arbe
-jde/UNI/P3/LaTeX/Rapport - NIX PILLE/billeder/AnalyseVareTilstandsdiagram.PNG>]
-
-<billeder/AnalyseSelskabTilstandsdiagram.PNG, id=965, 228.25275pt x 107.08005pt
->
-File: billeder/AnalyseSelskabTilstandsdiagram.PNG Graphic file (type png)
- <use billeder/AnalyseSelskabTilstandsdiagram.PNG>
-Package pdftex.def Info: billeder/AnalyseSelskabTilstandsdiagram.PNG used on in
-put line 68.
-(pdftex.def)             Requested size: 319.5pt x 149.88815pt.
-
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/problem/AnalyseHaendelsestabel.tex"))
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/problem/AnalyseAnvendelsesOmraadet.tex" [13 <C:/Users/Christian/Documents/Arbe
-jde/UNI/P3/LaTeX/Rapport - NIX PILLE/billeder/AnalyseTilbudTilstandsdiagram.PNG
-> <C:/Users/Christian/Documents/Arbejde/UNI/P3/LaTeX/Rapport - NIX PILLE/billed
-er/AnalyseSelskabTilstandsdiagram.PNG>]
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/problem/AnalyseAktoertabel.tex") [14] [15]
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/problem/AnalyseFunktioner.tex"
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/problem/AnalyseFunktionstabel.tex")) [16]
-<billeder/AnalyseOversigtOverGUI.png, id=1001, 554.7927pt x 794.2473pt>
-File: billeder/AnalyseOversigtOverGUI.png Graphic file (type png)
-
-<use billeder/AnalyseOversigtOverGUI.png>
-Package pdftex.def Info: billeder/AnalyseOversigtOverGUI.png used on input line
- 95.
-(pdftex.def)             Requested size: 426.0pt x 609.87563pt.
- [17] [18 <C:/Users/Christian/Documents/Arbejde/UNI/P3/LaTeX/Rapport - NIX PILL
-E/billeder/AnalyseOversigtOverGUI.png>] <billeder/StartskaermEndelig.png, id=10
-14, 142.3719pt x 213.4374pt>
-File: billeder/StartskaermEndelig.png Graphic file (type png)
-
-<use billeder/StartskaermEndelig.png>
-Package pdftex.def Info: billeder/StartskaermEndelig.png used on input line 102
-.
-(pdftex.def)             Requested size: 170.3974pt x 255.47221pt.
-
-<billeder/LogIndSkaermEndelig.png, id=1016, 142.3719pt x 213.4374pt>
-File: billeder/LogIndSkaermEndelig.png Graphic file (type png)
-
-<use billeder/LogIndSkaermEndelig.png>
-Package pdftex.def Info: billeder/LogIndSkaermEndelig.png used on input line 10
-5.
-(pdftex.def)             Requested size: 170.3974pt x 255.47221pt.
- [19 <C:/Users/Christian/Documents/Arbejde/UNI/P3/LaTeX/Rapport - NIX PILLE/bil
-leder/StartskaermEndelig.png>]
-<billeder/SoegeFunktionEndelig.png, id=1026, 142.3719pt x 213.4374pt>
-File: billeder/SoegeFunktionEndelig.png Graphic file (type png)
-
-<use billeder/SoegeFunktionEndelig.png>
-Package pdftex.def Info: billeder/SoegeFunktionEndelig.png used on input line 1
-08.
-(pdftex.def)             Requested size: 170.3974pt x 255.47221pt.
-
-<billeder/IndkoebslisteSorteretEfterButikker1Endelig.png, id=1028, 142.3719pt x
- 213.4374pt>
-File: billeder/IndkoebslisteSorteretEfterButikker1Endelig.png Graphic file (typ
-e png)
- <use billeder/IndkoebslisteSorteretEfterButikker1Endelig.png>
-Package pdftex.def Info: billeder/IndkoebslisteSorteretEfterButikker1Endelig.pn
-g used on input line 111.
-(pdftex.def)             Requested size: 170.3974pt x 255.47221pt.
-
-[20 <C:/Users/Christian/Documents/Arbejde/UNI/P3/LaTeX/Rapport - NIX PILLE/bill
-eder/LogIndSkaermEndelig.png> <C:/Users/Christian/Documents/Arbejde/UNI/P3/LaTe
-X/Rapport - NIX PILLE/billeder/SoegeFunktionEndelig.png>]
-<billeder/IndkoebslisteSorteretEfterKategori2Endelig.png, id=1039, 142.3719pt x
- 213.4374pt>
-File: billeder/IndkoebslisteSorteretEfterKategori2Endelig.png Graphic file (typ
-e png)
- <use billeder/IndkoebslisteSorteretEfterKategori2Endelig.png>
-Package pdftex.def Info: billeder/IndkoebslisteSorteretEfterKategori2Endelig.pn
-g used on input line 114.
-(pdftex.def)             Requested size: 170.3974pt x 255.47221pt.
-
-<billeder/ForslaaedeTilbudEndelig.png, id=1041, 142.3719pt x 213.4374pt>
-File: billeder/ForslaaedeTilbudEndelig.png Graphic file (type png)
-
-<use billeder/ForslaaedeTilbudEndelig.png>
-Package pdftex.def Info: billeder/ForslaaedeTilbudEndelig.png used on input lin
-e 117.
-(pdftex.def)             Requested size: 170.3974pt x 255.47221pt.
- [21 <C:/Users/Christian/Documents/Arbejde/UNI/P3/LaTeX/Rapport - NIX PILLE/bil
-leder/IndkoebslisteSorteretEfterButikker1Endelig.png> <C:/Users/Christian/Docum
-ents/Arbejde/UNI/P3/LaTeX/Rapport - NIX PILLE/billeder/IndkoebslisteSorteretEft
-erKategori2Endelig.png>]
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/problem/AnalyseTekniskPlatform.tex"))
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/problem/AnalyseAnbefalinger.tex" [22 <C:/Users/Christian/Documents/Arbejde/UNI
-/P3/LaTeX/Rapport - NIX PILLE/billeder/ForslaaedeTilbudEndelig.png>])
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/problem/AnalyseProblemFormulering.tex")
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/problem/AnalyseAfrunding.tex" [23]) [24]
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/design/DesignDokument.tex"
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/design/DesignOpgave.tex" [25
-
-] [26])
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/design/DesignTekniskPlatform.tex" [27]) [28]
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/design/DesignArkitektur.tex"
-<billeder/DesignFordelingsdiagram.png, id=1097, 280.1667pt x 268.8444pt>
-File: billeder/DesignFordelingsdiagram.png Graphic file (type png)
-
-<use billeder/DesignFordelingsdiagram.png>
-Package pdftex.def Info: billeder/DesignFordelingsdiagram.png used on input lin
-e 11.
-(pdftex.def)             Requested size: 426.0pt x 408.79543pt.
- [29])
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/design/DesignKomponenter.tex" [30 <C:/Users/Christian/Documents/Arbejde/UNI/P3
-/LaTeX/Rapport - NIX PILLE/billeder/DesignFordelingsdiagram.png>]
-<billeder/DesignKomponenter.png, id=1112, 324.61275pt x 282.45525pt>
-File: billeder/DesignKomponenter.png Graphic file (type png)
-
-<use billeder/DesignKomponenter.png>
-Package pdftex.def Info: billeder/DesignKomponenter.png used on input line 9.
-(pdftex.def)             Requested size: 426.0pt x 370.69572pt.
- [31 <C:/Users/Christian/Documents/Arbejde/UNI/P3/LaTeX/Rapport - NIX PILLE/bil
-leder/DesignKomponenter.png>]
-<billeder/DesignModelKomponent.png, id=1123, 518.05545pt x 304.2567pt>
-File: billeder/DesignModelKomponent.png Graphic file (type png)
-
-<use billeder/DesignModelKomponent.png>
-Package pdftex.def Info: billeder/DesignModelKomponent.png used on input line 2
-1.
-(pdftex.def)             Requested size: 426.0pt x 250.20241pt.
- [32 <C:/Users/Christian/Documents/Arbejde/UNI/P3/LaTeX/Rapport - NIX PILLE/bil
-leder/DesignModelKomponent.png>])
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/design/DesignForeslaaTilbud.tex"
-Overfull \hbox (18.20682pt too wide) in paragraph at lines 4--22
-[][] 
- []
-
-[33]
-<billeder/DesignFindTilbudTilstandsiagram.png, id=1146, 255.354pt x 149.96025pt
->
-File: billeder/DesignFindTilbudTilstandsiagram.png Graphic file (type png)
- <use billeder/DesignFindTilbudTilstandsiagram.png>
-Package pdftex.def Info: billeder/DesignFindTilbudTilstandsiagram.png used on i
-nput line 28.
-(pdftex.def)             Requested size: 255.6026pt x 150.11089pt.
- [34 <C:/Users/Christian/Documents/Arbejde/UNI/P3/LaTeX/Rapport - NIX PILLE/bil
-leder/DesignFindTilbudTilstandsiagram.png>] [35])
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/design/DesignAnbefalinger.tex" [36]))
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/design/DesignAfrunding.tex") [37] [38
+] [2
 
 ]
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/development/UdviklingIntro.tex")
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/development/UdviklingJqueryBegrundelser.tex"
-Package mdframed Info: mdframed works in twoside mode on input line 4.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
-)
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\kode/Jq
-ueryMobile.txt")
-Package mdframed Info: mdframed inside minipage 
- mdframed uses option nobreak mdframed on input line 4.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 4.
+Package natbib Warning: Empty `thebibliography' environment on input line 8.
 
+) [3]
+("C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\Rapport - NIX PILLE\Rap
+port.lox") [4] [5
 
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 4.
-See the caption package documentation for explanation.
 
-[39])
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/development/UdviklingIndstillinger.tex"
-Package mdframed Info: mdframed works in twoside mode on input line 7.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
-)
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\kode/In
-dstillingerStyk.txt")
-Package mdframed Info: mdframed inside minipage 
- mdframed uses option nobreak mdframed on input line 7.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 7.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 7.
-See the caption package documentation for explanation.
-
-)
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/development/UdviklingButikkerOversigt.tex"
-Underfull \hbox (badness 10000) in paragraph at lines 7--1
-
- []
-
-[40])
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/development/UdviklingAPIKald.tex" [41]
-Package mdframed Info: mdframed works in twoside mode on input line 25.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
-)
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\kode/St
-rengBygger.txt")
-Package mdframed Info: mdframed inside minipage 
- mdframed uses option nobreak mdframed on input line 25.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 25.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 25.
-See the caption package documentation for explanation.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
-
- []
-
-[42]
-Package mdframed Info: mdframed works in twoside mode on input line 33.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
-)
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\kode/Gu
-idFunk.txt")
-Package mdframed Info: mdframed inside minipage 
- mdframed uses option nobreak mdframed on input line 33.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 33.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 33.
-See the caption package documentation for explanation.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
-
- []
-
-Package mdframed Info: mdframed works in twoside mode on input line 37.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
-)
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\kode/Gu
-idTrimmer.txt")
-Package mdframed Info: mdframed inside minipage 
- mdframed uses option nobreak mdframed on input line 37.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 37.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 37.
-See the caption package documentation for explanation.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 37--38
-
- []
-
-[43]
-Package mdframed Info: mdframed works in twoside mode on input line 42.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
-)
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\kode/Fr
-emstillingAfForeSpoergslen.txt")
-Package mdframed Info: mdframed inside minipage 
- mdframed uses option nobreak mdframed on input line 42.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 42.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 42.
-See the caption package documentation for explanation.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 42--43
-
- []
-
-Package mdframed Info: mdframed works in twoside mode on input line 47.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
-)
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\kode/Fo
-reSpoergslen.txt")
-Package mdframed Info: mdframed inside minipage 
- mdframed uses option nobreak mdframed on input line 47.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 47.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 47.
-See the caption package documentation for explanation.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 47--48
-
- []
-
-[44]
-Package mdframed Info: mdframed works in twoside mode on input line 51.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
-)
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\kode/Js
-onSvar.txt")
-Package mdframed Info: mdframed inside minipage 
- mdframed uses option nobreak mdframed on input line 51.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 51.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 51.
-See the caption package documentation for explanation.
-
-)
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/development/UdviklingFindMaengdeTilbud.tex"
-Underfull \hbox (badness 10000) in paragraph at lines 51--1
-
- []
-
-Package mdframed Info: mdframed works in twoside mode on input line 5.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
-)
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\kode/St
-artPunktMP.txt")
-Package mdframed Info: mdframed inside minipage 
- mdframed uses option nobreak mdframed on input line 5.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 5.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 5.
-See the caption package documentation for explanation.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--6
-
- []
-
-[45]
-Package mdframed Info: mdframed works in twoside mode on input line 10.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
-)
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\kode/La
-engdeTilTalStartMP.txt")
-Package mdframed Info: mdframed inside minipage 
- mdframed uses option nobreak mdframed on input line 10.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 10.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 10.
-See the caption package documentation for explanation.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 10--11
-
- []
-
-[46]
-Package mdframed Info: mdframed works in twoside mode on input line 15.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
-)
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\kode/La
-engdeAfTalMP.txt")
-Package mdframed Info: mdframed inside minipage 
- mdframed uses option nobreak mdframed on input line 15.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 15.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 15.
-See the caption package documentation for explanation.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 15--16
-
- []
-
-[47])
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/development/UdviklingForeslaaTibud.tex"
-Package mdframed Info: mdframed works in twoside mode on input line 8.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
-)
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\kode/La
-vAnalyseKald.txt")
-Package mdframed Info: mdframed inside minipage 
- mdframed uses option nobreak mdframed on input line 8.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 8.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 8.
-See the caption package documentation for explanation.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 8--9
-
- []
-
-[48]
-Package mdframed Info: mdframed works in twoside mode on input line 12.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
-)
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\kode/He
-ntNoegleOrd.txt")
-Package mdframed Info: mdframed inside minipage 
- mdframed uses option nobreak mdframed on input line 12.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 12.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 12.
-See the caption package documentation for explanation.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--13
-
- []
-
-Package mdframed Info: mdframed works in twoside mode on input line 16.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
-)
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\kode/Fi
-ndFaellesOrd.txt")
-Package mdframed Info: mdframed inside minipage 
- mdframed uses option nobreak mdframed on input line 16.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 16.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 16.
-See the caption package documentation for explanation.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 16--17
-
- []
-
-[49]
-Package mdframed Info: mdframed works in twoside mode on input line 23.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
-)
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\kode/bi
-naer.txt")
-Package mdframed Info: mdframed inside minipage 
- mdframed uses option nobreak mdframed on input line 23.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 23.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 23.
-See the caption package documentation for explanation.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
-
- []
-
-[50])
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/development/UdviklingGUIBeskrivelse.tex" [51]
-<billeder/OversigtForsideGUIMobil.PNG, id=1555, 642.4pt x 963.6pt>
-File: billeder/OversigtForsideGUIMobil.PNG Graphic file (type png)
-
-<use billeder/OversigtForsideGUIMobil.PNG>
-Package pdftex.def Info: billeder/OversigtForsideGUIMobil.PNG used on input lin
-e 5.
-(pdftex.def)             Requested size: 170.3974pt x 255.58804pt.
-
-<billeder/OversigtSoegefunktionGUI.PNG, id=1558, 514.92375pt x 549.55313pt>
-File: billeder/OversigtSoegefunktionGUI.PNG Graphic file (type png)
-
-<use billeder/OversigtSoegefunktionGUI.PNG>
-Package pdftex.def Info: billeder/OversigtSoegefunktionGUI.PNG used on input li
-ne 9.
-(pdftex.def)             Requested size: 319.5pt x 340.99614pt.
- [52 <C:/Users/Christian/Documents/Arbejde/UNI/P3/LaTeX/Rapport - NIX PILLE/bil
-leder/OversigtForsideGUIMobil.PNG (PNG copy)>]
-<billeder/OversigtIndkoebslisteGUIPc.PNG, id=1570, 514.17094pt x 549.55313pt>
-File: billeder/OversigtIndkoebslisteGUIPc.PNG Graphic file (type png)
-
-<use billeder/OversigtIndkoebslisteGUIPc.PNG>
-Package pdftex.def Info: billeder/OversigtIndkoebslisteGUIPc.PNG used on input 
-line 13.
-(pdftex.def)             Requested size: 319.5pt x 341.49089pt.
- [53 <C:/Users/Christian/Documents/Arbejde/UNI/P3/LaTeX/Rapport - NIX PILLE/bil
-leder/OversigtSoegefunktionGUI.PNG>] <billeder/OversigtIndkoebslisteGUIMobil.PN
-G, id=1579, 642.4pt x 963.6pt>
-File: billeder/OversigtIndkoebslisteGUIMobil.PNG Graphic file (type png)
-
-<use billeder/OversigtIndkoebslisteGUIMobil.PNG>
-Package pdftex.def Info: billeder/OversigtIndkoebslisteGUIMobil.PNG used on inp
-ut line 16.
-(pdftex.def)             Requested size: 170.3974pt x 255.58804pt.
- [54 <C:/Users/Christian/Documents/Arbejde/UNI/P3/LaTeX/Rapport - NIX PILLE/bil
-leder/OversigtIndkoebslisteGUIPc.PNG>] <billeder/OversigtButikkerGUI.PNG, id=15
-87, 514.92375pt x 549.55313pt>
-File: billeder/OversigtButikkerGUI.PNG Graphic file (type png)
-
-<use billeder/OversigtButikkerGUI.PNG>
-Package pdftex.def Info: billeder/OversigtButikkerGUI.PNG used on input line 20
-.
-(pdftex.def)             Requested size: 319.5pt x 340.99614pt.
- [55 <C:/Users/Christian/Documents/Arbejde/UNI/P3/LaTeX/Rapport - NIX PILLE/bil
-leder/OversigtIndkoebslisteGUIMobil.PNG (PNG copy)>]) [56 <C:/Users/Christian/D
-ocuments/Arbejde/UNI/P3/LaTeX/Rapport - NIX PILLE/billeder/OversigtButikkerGUI.
-PNG>]
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/testing/Testning.tex"
-Overfull \hbox (4.28787pt too wide) in paragraph at lines 23--23
-[]|[]| 
- []
-
-
-Underfull \hbox (badness 2293) in paragraph at lines 23--23
-\T1/cmr/m/n/10.95 to-ty-pe af
- []
-
-
-Overfull \hbox (1.11006pt too wide) in paragraph at lines 23--23
-[]|\T1/cmr/m/n/10.95 19/09/12| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--23
-[]|\T1/cmr/m/n/10.95 Åbent
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--23
-\T1/cmr/m/n/10.95 spør-ge-
- []
-
-
-Overfull \hbox (1.11006pt too wide) in paragraph at lines 23--23
-[]|\T1/cmr/m/n/10.95 16/10/12
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--23
-\T1/cmr/m/n/10.95 til
- []
-
-
-Overfull \hbox (1.11006pt too wide) in paragraph at lines 23--23
-\T1/cmr/m/n/10.95 23/10/12| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--23
-[]|\T1/cmr/m/n/10.95 Åbent
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--23
-\T1/cmr/m/n/10.95 spør-ge-
- []
-
-
-Overfull \hbox (1.11006pt too wide) in paragraph at lines 23--23
-[]|\T1/cmr/m/n/10.95 06/11/12
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--23
-\T1/cmr/m/n/10.95 til
- []
-
-
-Overfull \hbox (1.11006pt too wide) in paragraph at lines 23--23
-\T1/cmr/m/n/10.95 13/11/12| 
- []
-
-
-Underfull \hbox (badness 3623) in paragraph at lines 23--23
-\T1/cmr/m/n/10.95 som blev
- []
-
-
-Underfull \hbox (badness 4316) in paragraph at lines 23--23
-\T1/cmr/m/n/10.95 fil-met og
- []
-
-
-Overfull \hbox (1.11006pt too wide) in paragraph at lines 23--23
-[]|\T1/cmr/m/n/10.95 27/11/12| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--23
-[]|\T1/cmr/m/n/10.95 Kvalitativ
- []
-
-
-Overfull \hbox (1.11006pt too wide) in paragraph at lines 23--23
-[]|\T1/cmr/m/n/10.95 23/11/12| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--23
-[]|\T1/cmr/m/n/10.95 Kvalitativ
- []
-
-
-Overfull \hbox (1.11006pt too wide) in paragraph at lines 23--23
-[]|\T1/cmr/m/n/10.95 26/11/12| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--23
-[]| \T1/cmr/m/n/10.95 Ob-ser-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--23
-\T1/cmr/m/n/10.95 va-tion
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--23
-\T1/cmr/m/n/10.95 af test-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--23
-\T1/cmr/m/n/10.95 per-son
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--23
-\T1/cmr/m/n/10.95 og kort
- []
-
-
-Overfull \hbox (1.11006pt too wide) in paragraph at lines 23--23
-[]|\T1/cmr/m/n/10.95 29/11/12| 
- []
-
-
-Overfull \hbox (100.0pt too wide) in paragraph at lines 23--24
-[][] 
- []
-
-[57
-
-] <billeder/TestRettelserDiagram.png, id=1609, 579.00314pt x 271.13295pt>
-File: billeder/TestRettelserDiagram.png Graphic file (type png)
-
-<use billeder/TestRettelserDiagram.png>
-Package pdftex.def Info: billeder/TestRettelserDiagram.png used on input line 3
-1.
-(pdftex.def)             Requested size: 426.0pt x 199.4851pt.
- [58]
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/testing/FoersteTest.tex"
-<billeder/Papirprototype.png, id=1616, 398.99063pt x 640.64343pt>
-File: billeder/Papirprototype.png Graphic file (type png)
-
-<use billeder/Papirprototype.png>
-Package pdftex.def Info: billeder/Papirprototype.png used on input line 4.
-(pdftex.def)             Requested size: 213.0pt x 342.0028pt.
- [59 <C:/Users/Christian/Documents/Arbejde/UNI/P3/LaTeX/Rapport - NIX PILLE/bil
-leder/TestRettelserDiagram.png> <C:/Users/Christian/Documents/Arbejde/UNI/P3/La
-TeX/Rapport - NIX PILLE/billeder/Papirprototype.png>] [60])
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/testing/AndenTest.tex" [61] [62])
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/testing/TredjeTest.tex" [63] [64])
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/testing/FjerdeTest.tex" [65]
-Underfull \hbox (badness 10000) in paragraph at lines 18--22
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--31
-
- []
-
-[66]
-Underfull \hbox (badness 10000) in paragraph at lines 32--42
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 32--42
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 32--42
-
- []
-
-[67] [68] [69])
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/testing/UdviklingAndroidOgApple.tex"
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/testing/TestAndroidRetningslinjer.tex" [70] [71])
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/testing/TestAppleRetningslinjer.tex" [72] [73]))
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/testing/SyvendeTest.tex" [74] [75])) [76]
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/discussion/Diskussion.tex" [77
-
-])
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/discussion/Perspektivering.tex" [78]) [79] [80
-
-]
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\formali
-a/FormaliaKonklusion.tex") [81] [82
-
-] [83] [84]
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/akademisk/AkademiskrapportIndledning.tex")
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/akademisk/AkademiskrapportSystemudvikling.tex" [85] [86
-
-] [87]
-<billeder/Iterationsdiagram.png, id=1815, 363.0363pt x 180.79546pt>
-File: billeder/Iterationsdiagram.png Graphic file (type png)
-
-<use billeder/Iterationsdiagram.png>
-Package pdftex.def Info: billeder/Iterationsdiagram.png used on input line 22.
-(pdftex.def)             Requested size: 426.0pt x 212.15329pt.
- [88 <C:/Users/Christian/Documents/Arbejde/UNI/P3/LaTeX/Rapport - NIX PILLE/bil
-leder/Iterationsdiagram.png>]
-<billeder/graf.png, id=1826, 805.20825pt x 418.56375pt>
-File: billeder/graf.png Graphic file (type png)
-
-<use billeder/graf.png>
-Package pdftex.def Info: billeder/graf.png used on input line 30.
-(pdftex.def)             Requested size: 426.0pt x 221.44812pt.
-)
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/akademisk/AkademiskrapportBinaerSoegning.tex" [89 <C:/Users/Christian/Document
-s/Arbejde/UNI/P3/LaTeX/Rapport - NIX PILLE/billeder/graf.png>] [90
-
-] [91])
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/akademisk/AkademiskraportTestafsnit.tex" [92] [93
-
-] [94])
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\indhold
-/akademisk/AkademiskrapportAfrundingTestafsnit.tex") [95] [96
-
-] [97] [98]
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\Rapport
-.bbl") [99
-
-] [100
-
-]
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\appendi
-x/BilagFoersteSpoergeskemaInformanter.tex" [101
-
-])
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\appendi
-x/BilagAndetSpoergeskemaInformanter.tex" [102] [103
-
-] [104])
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\appendi
-x/BilagDVD.tex" [105] [106
-
-]) [107] 
+] 
 AED: lastpage setting LastPage
 \tf@toc=\write7
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 110.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 110.
+\tf@lox=\write8
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 60.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 60.
 
-("C:\Users\Christian\Documents\Arbejde\UNI\P3\LaTeX\Rapport - NIX PILLE\Rapport
-.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 110.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 110.
+("C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\Rapport - NIX PILLE\Rap
+port.aux")
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 60.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 60.
 Package rerunfilecheck Info: File `Rapport.out' has not changed.
-(rerunfilecheck)             Checksum: FFFCE2117C2D2A26C26332B159701FD5;12155.
+(rerunfilecheck)             Checksum: C0B03F90C0813A9BEED900EC7011B54D;186.
  ) 
 Here is how much of TeX's memory you used:
- 36494 strings out of 493921
- 677657 string characters out of 3147269
- 1021436 words of memory out of 3000000
- 38253 multiletter control sequences out of 15000+200000
- 32293 words of font info for 82 fonts, out of 3000000 for 9000
+ 34624 strings out of 493921
+ 630671 string characters out of 3147269
+ 711071 words of memory out of 3000000
+ 37262 multiletter control sequences out of 15000+200000
+ 26655 words of font info for 66 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
- 63i,24n,82p,2049b,1701s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,20n,72p,915b,843s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.enc}{C:/Pro
-gram Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{C:/Program Fil
-es/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/s
-fbx0800.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1000.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1200.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfcc1200.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm0900.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/cm-super/sfrm1000.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/cm-super/sfsl1000.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/cm-super/sfti0900.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-
-super/sfti1000.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sft
-t0900.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sftt1000.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/bookman/ubkd8a.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/urw/bookman/ubkl8a.pfb>
-Output written on Rapport.pdf (119 pages, 5528875 bytes).
+gram Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/cm-super/sfbx1000.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/cm-super/sfbx1200.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-s
+uper/sfcc1200.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm
+0800.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm0900.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1000.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfsl1000.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/cm-super/sfss0900.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/cm-super/sfsx1000.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/cm-super/sfti0900.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/cm-super/sfti1000.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/bookman/u
+bkd8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/bookman/ubkl8a.pfb>
+Output written on Rapport.pdf (15 pages, 348689 bytes).
 PDF statistics:
- 2166 PDF objects out of 2487 (max. 8388607)
- 637 named destinations out of 1000 (max. 500000)
- 1485 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 168 PDF objects out of 1000 (max. 8388607)
+ 22 named destinations out of 1000 (max. 500000)
+ 50 words of extra memory for PDF output out of 10000 (max. 10000000)
 

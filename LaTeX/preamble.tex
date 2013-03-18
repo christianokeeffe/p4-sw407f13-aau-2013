@@ -189,6 +189,7 @@ stringstyle=\color[rgb]{0.627,0.126,0.941}
 }			% <--
 
 \chapterstyle{jenor}	% Valg af kapiteludseende - dette kan udskiftes efter ønske
+\usepackage{wrapfig}
 
 
 %\renewcommand{\headrulewidth}{0.4pt}
@@ -208,6 +209,7 @@ stringstyle=\color[rgb]{0.627,0.126,0.941}
 \usepackage{lastpage}
 \usepackage{ifthen}
 \usepackage{intcalc}
+\usepackage{nth}
 
 \makeevenfoot{custom}{Side \thepage}{}{}	% Definerer lige siders sidefod efter modellen \makeevenfoot{Navn}{Venstre}{Center}{Højre}
 \makeoddfoot{custom}{}{}{Side \thepage}% Definerer ulige siders sidefod efter modellen \makeoddfoot{Navn}{Venstre}{Center}{Højre}		
@@ -267,7 +269,7 @@ stringstyle=\color[rgb]{0.627,0.126,0.941}
 }
 
 \newenvironment{code}[2]
-{\def\fooNoI{#1}\def\fooNoII{#2}\noindent \begin{minipage}{\textwidth}\begin{mdframed}\begin{lstlisting}}{\end{lstlisting}\end{mdframed}\lstcapt{\fooNoI}\label{lst:\fooNoI}\end{minipage}}
+{\def\fooNoI{#1} \def\fooNoII{#2}\noindent \begin{minipage}{\textwidth}\begin{mdframed}\begin{lstlisting}}{\end{lstlisting}\end{mdframed}\lstcapt{\fooNoII}\label{lst:\fooNoI}\end{minipage}}
 
 % quotering
 \newcommand{\gaas}[{1}]{``#1''}

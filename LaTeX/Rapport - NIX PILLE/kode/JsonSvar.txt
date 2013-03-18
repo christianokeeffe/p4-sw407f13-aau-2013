@@ -1,8 +1,0 @@
-try
-{
-  ReturneringsResultat = JsonConvert.DeserializeObject<T>(svar.Content);
-}
-catch(JsonSerializationException)
-{
-  ReturneringsResultat = default(T);
-}

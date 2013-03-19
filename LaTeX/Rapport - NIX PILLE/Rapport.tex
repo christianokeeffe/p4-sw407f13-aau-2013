@@ -3,15 +3,15 @@
 \begin{document}	% Starter dokumentet - obligatorisk
 
 \frontmatter % Forindhold - nummereres med romertal
+\newcommand{\ind}[1]{\input{formalia/#1}}
 
-\input{formalia/FormaliaForside}
+\ind{FormaliaForside}
 \cleardoublepage % Indsætter tom side (hvis nødvendigt)
 
-\input{formalia/FormaliaTitelblad}
+\ind{FormaliaTitelblad}
 \cleardoublepage
-\input{formalia/FormaliaUnderskriftsside.tex}
-\cleardoublepage
-\input{formalia/FormaliaProlog.tex}
+\ind{FormaliaProlog.tex}
+\ind{FormaliaUnderskriftsside.tex}
 \cleardoublepage
 
 %%%% Indholdsfortegnelse (TOC) %%%%
@@ -34,32 +34,44 @@
 
 %%%% Rapportindhold %%%%
 \chapter{Introduction}
-\input{formalia/FormaliaIndledning}
+\ind{FormaliaIndledning}
+\renewcommand{\ind}[1]{\input{indhold/Analysis/#1}}
 \chapter{Problem statement}\fxfatal{problem statement mangler}
 \chapter{Analysis}
 	\section{Current language}
 	\section{Embedded systems}
 	\section{Arduino platform}
+
+\renewcommand{\ind}[1]{\input{indhold/Theory/#1}}
 \chapter{Therory}
 	\section{Language}
 	\section{Compilers}
 	\section{Semantics}
 	\section{Syntax analysis}
-	\section{EBNF(Extended Backus Naur Form)}
+	\ind{grammar}
 	\section{Contextual analysis}
 	\section{Code generation}
+
+\renewcommand{\ind}[1]{\input{indhold/Design/#1}}
 \chapter{Design}
 	\section{Syntax design}
-	\section{Semantic design}
+	\ind{grammarchoice}
+	\ind{BNF3}
+	\ind{semantics}
 	\section{Code examples}
+
+\renewcommand{\ind}[1]{\input{indhold/Implementation/#1}}
 \chapter{Implementation}
 	\section{Scanner class creation}
 	\section{Parser generation}
 	\section{Class generator classgen}
 	\section{Scope and type checking}
 	\section{Code generation}
+
+\renewcommand{\ind}[1]{\input{indhold/Test/#1}}
 \section{Test/evaluation}
 
+\renewcommand{\ind}[1]{\input{formalia/#1}}
 \chapter{Conclusion}
 \input{formalia/FormaliaKonklusion}
 
@@ -83,7 +95,7 @@
 
 \settocdepth{chapter}	% Sætter dybden af indholdsfortegnelsen til chapter for bilagene
 
-
+\renewcommand{\ind}[1]{\input{appendix/#1}}
 %%%% Appendiks %%%%
 %%%% Bilag %%%%
 

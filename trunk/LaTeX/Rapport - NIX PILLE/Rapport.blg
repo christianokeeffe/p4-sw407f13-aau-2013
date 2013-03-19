@@ -1,6 +1,21 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: Rapport.aux
 The style file: bibtex/harvard.bst
-I found no \citation commands---while reading file Rapport.aux
 url: is an unknown function---line 330 of file bibtex/harvard.bst
 Database file #1: BibTeX/sources.bib
-(There were 2 error messages)
+Name 1 in "Charles N. Fischer, and Ron, K. Cyton and Richard, J. LeBlanc. Jr." has a comma at the end for entry CraftingACompiler
+while executing---line 1434 of file bibtex/harvard.bst
+Name 1 in "Charles N. Fischer, and Ron, K. Cyton and Richard, J. LeBlanc. Jr." has a comma at the end for entry CraftingACompiler
+while executing---line 1434 of file bibtex/harvard.bst
+Name 1 in "Charles N. Fischer, and Ron, K. Cyton and Richard, J. LeBlanc. Jr." has a comma at the end for entry CraftingACompiler
+while executing---line 1516 of file bibtex/harvard.bst
+Name 1 in "Charles N. Fischer, and Ron, K. Cyton and Richard, J. LeBlanc. Jr." has a comma at the end for entry CraftingACompiler
+while executing---line 1516 of file bibtex/harvard.bst
+Name 1 in "Charles N. Fischer, and Ron, K. Cyton and Richard, J. LeBlanc. Jr." has a comma at the end for entry CraftingACompiler
+while executing---line 1516 of file bibtex/harvard.bst
+1 is an integer literal, not a string, for entry CraftingACompiler
+while executing---line 1516 of file bibtex/harvard.bst
+1 is an integer literal, not a string, for entry sebesta
+while executing---line 1516 of file bibtex/harvard.bst
+1 is an integer literal, not a string, for entry sipser
+while executing---line 1516 of file bibtex/harvard.bst
+(There were 9 error messages)

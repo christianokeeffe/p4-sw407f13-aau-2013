@@ -1,7 +1,0 @@
-\section{Brugerindstillinger}
-Denne del af hjemmesiden har til formål at hjælpe brugeren med at redigere de indstillinger, som er mulige. Det der kan ændres er kodeordet, email og valg af butikker. Valg af butikker betyder, at brugerne kan fravælge butikker de ikke ønsker at handle i. Man vil kun få vist tilbud fra de butikker, man har valgt.
-
-\subsection{Ændring af kodeord}
-Når man skal ændre adgangskode skal der kigges en del igennem. Første punkt er om den nye adgangskode er skrevet to gange og om disse to stemmer overens med hinanden. Denne foranstaltning er for at fange tastefejl. Næste punkt er at tjekke om den nye adgangskode er mellem otte og tres karakterer lang, se tabel \ref{tab:designklasser}. Det sidste der bliver tjekket, er om den gamle adgangskode passer med det, der er gemt i databasen. Hvis alt dette passer, krypteres den nye adgangskode og lagres i databasen. Hvis der er noget, som ikke passer, præsenteres en fejlbesked for at hjælpe brugeren med, hvad der blev gjort forkert. På kodeudsnit \ref{lst:checkfunktion} kan det ses, hvordan alt bliver checket i en bestemt orden.
-
-\kode{Her bliver der tjekket om adgangskoden opfylder kravene.}{checkfunktion}{IndstillingerStyk.txt}

@@ -1,29 +1,5 @@
 \section{Choice of grammar}
-When designing a language certain criteria should be kept in mind:
-\begin{itemize}
-\item Readability
-- How easy it is to understand and comprehend a computation
-\item Write-ability
-- How easy it is for the programmer to write a computation clearly, correctly, concisely and quickly. 
-\item Reliability
-- Assures a program behaves the way it is suppose to.
-\item Orthogonality
-- A relatively small set of primitive constructs can be combined legally in relatively small number of ways.
-\item Uniformity
-- If some features are similar they should look and behave similar.
-\item Maintainability
-- Errors can be found and corrected and new features can be added easily.
-\item Generality
-- Avoid special cases in the availability or use of constructs and by combining closely related constructs into a single more general one	
-\item Extensibility
-- Provide some general mechanism for the programmer to add new constructs to a language.
-\item Standardability
-- Allow programs to be transported from one computer to another without significant change in language structure.
-\item Implementability
-- Ensure a translator or interpreter can be written
-\end{itemize}
-
-The programmer, using this projects language, could be a hobby programmer, who would want to make a drink machine, but does not possess a high level of education in programming. Therefore it was decided that the grammar should have a high level of readability because this will ensure that it is easier for the person to read and understand their program - also useful if the code has to be edited later on.
+The programmer, using this projects language, could be a hobby programmer, who would want to make a drink machine, but does not possess a high level of education in programming. Therefore it was decided that the grammar should have a high level of readability because this will ensure that it is easier for the person to read and understand their program - also useful if the code has to be edited later on. This on the other hand can decrease the level of write-ability because it has to be written in a specific way and will need to contain some extra words or symbols to mimic a human language rather than a computer language.
 
 
 The method to assign a value to a variable is by typing "$variable$ <-- $value to assign$" this approach have been chosen, instead of the more commonly used "$=$" symbol, because a person not accustomed to programming might confuse which side of the "$=$" is assigned to the other. Thus by using the arrow, it is more clearly indicated that the value is assigned to the variable, and therefore ensuring readability - especially for the hobby programmer.

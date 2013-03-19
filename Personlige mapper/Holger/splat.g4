@@ -9,7 +9,7 @@ root : dcl ';'
 | function 
 | COMMENT ;
 
-dcl : type LETTER dclend ;
+dcl : type Id dclend ;
 
 type : PRIMITIVETYPE arraytype ;
 
@@ -22,11 +22,12 @@ PRIMITIVETYPE : 'bool'
 
 arraytype : '[ ]' | /* epsilon */;
 
-LETTER : [a-zA-Z]+ ;
+Id : LETTER Idend ;
 
-idend : LETTER idend 
-| DIGIT idend 
-|/* epsilon */ ;
+Idend : LETTER Idend 
+| DIGIT Idend
+| LETTER DIGIT
+| LETTER ;
 
 dclend : /* epsilon */ 
 | assign ;
@@ -51,15 +52,13 @@ factor : '(' expr ')'
 | 'true' 
 | 'false' ;
 
-callid : LETTER arraycall ;
+callid : Id arraycall ;
 
 arraycall : '[' DIGIT ']' 
 |/* epsilon */ ;
 
 digits : /* epsilon */ 
 | DIGIT digits ;
-
-DIGIT : [1-9]+ ;
 
 numeric : plusminus digitsnotempty numericend ;
 
@@ -73,7 +72,7 @@ numericend : /* epsilon */
 
 string : '"'stringmidt'"' ;
 
-stringmidt : LETTER stringmidt 
+stringmidt : Id stringmidt 
 | symbol stringmidt 
 | DIGIT stringmidt 
 |/* epsilon */ ;
@@ -103,7 +102,7 @@ symbol : '!'
 | '/' 
 | ' ' ;
 
-functioncall : 'call' LETTER '(' callexpr ')' ;
+functioncall : 'call' Id '(' callexpr ')' ;
 
 callexpr : subcallexpr 
 |/* epsilon */ ;
@@ -137,7 +136,7 @@ exprend : '+' expr
 
 function : functionstart functionmidt ;
 
-functionstart : 'function' LETTER 'return' ;
+functionstart : 'function' Id 'return' ;
 
 functionmidt : type functionend expr ';' 'end' 
 | 'nothing' functionend 'nothing' ';' 'end' ;
@@ -151,7 +150,7 @@ stmts
 params : subparams 
 |/* epsilon */ ;
 
-subparams : type LETTER subparamsend ;
+subparams : type Id subparamsend ;
 
 subparamsend : ',' subparams 
 |/* epsilon */ ;
@@ -188,7 +187,7 @@ nontermwhile : 'while' '(' expr ')'
 stmts 
 'end' ;
 
-from : 'from' expr to expr 'step' assign 
+from : 'from' expr 'to' expr 'step' assign 
 'begin' 
 stmts 
 'end' ;
@@ -213,6 +212,10 @@ breakend : cases
 stmts 
 'break' ';' 
 |/* epsilon */ ;
+
+LETTER : [a-zA-Z]+ ;
+
+DIGIT : [1-9]+ ;
 
 COMMENT : '/*' .*? '*/' -> skip ;
 

@@ -1,6 +1,5 @@
-
 \section{Lexical analyzer}
-A lexical analyzer reads the input file, and returns a series of tokens based based on the input. More specifically it is the scanner in the lexical analyzer which does this. These tokens are matched by rules, usually described by regular expressions. An example of such grammar rules can be seen on \ref{tab:tokenspecification}. Formally a token consists of two parts: The token type, and the token value. As an example the IDENT token seen on \ref{tab:tokensexample} has the token type IDENT and the value 'c'. 
+A lexical analyzer reads the input file, and returns a series of tokens based based on the input \citep{CraftingACompiler}. More specifically it is the scanner in the lexical analyzer which does this. These tokens are matched by rules, usually described by regular expressions. An example of such grammar rules can be seen on \ref{tab:tokenspecification}. Formally a token consists of two parts: The token type, and the token value \citep{CraftingACompiler}. As an example the IDENT token seen on \ref{tab:tokensexample} has the token type IDENT and the value 'c'. 
 
 \begin{table}[H]
 \begin{tabular}{|l|l|}
@@ -36,4 +35,4 @@ For example the lines of code seen on \ref{code:simplecode} might be read as the
 \caption{Example of tokens}
 \label{tab:tokensexample}
 \end{table}
-The scanner produces a stream of tokens, which is returned to the parser, which checks if the tokens conforms to the language-specification.
+The scanner produces a stream of tokens, which is returned to the parser, which checks if the tokens conforms to the language-specification \citep{CraftingACompiler}.

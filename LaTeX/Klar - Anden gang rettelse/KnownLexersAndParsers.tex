@@ -1,5 +1,3 @@
-\input{../RapportNIXPILLE/preamble}
-\begin{document}
 \section{Known lexers and parsers}
 In this section some of the different lexers and parsers, that are available on the internet, will be described.
 
@@ -48,17 +46,16 @@ Javacc generate a parser from a formal grammar written in EBNF notation. The out
 
 \subsection{Comparison table}
 \begin{table}[H]
-\begin{tabularx}{\textwidth}{|l|c|c|l|}
+\begin{tabularx}{\textwidth}{|l|c|c|R|}
 \hline
-Name & Parsing algorithm & Input notation & Output language\\ \hline
+\textbf{Name} & \textbf{Parsing algorithm} & \textbf{Input notation} & \textbf{Output language}\\ \hline
 Yacc & LALR(1) & YACC & C\\ \hline
 Cup & LALR(1) & EBNF & java\\ \hline
 SableCC & LALR(1) & EBNF & C, C++, C\#, java, OCaml, Python\\ \hline
-ANTLR & LL(*) & EBNF & ActionScript, Ada95, C, C++, C\#, Java, JavaScript \\
-~&~&~&Objective-C, Perl, Python, Ruby\\ \hline
+ANTLR & LL(*) & EBNF & ActionScript, Ada95, C, C++, C\#, Java, JavaScript, Objective-C, Perl, Python, Ruby\\ \hline
 JavaCC & LL(k) & EBNF & Java, C++(beta)\\ \hline
 \end{tabularx}
 \end{table}
 
-Based on the different lexers and parsers attributes compared to the expectations of this project, it has been decided that ANTLR best fit. The reason behind this is that ANTLR uses the LL(*) parser algorithm, this fits the structure of the CFG grammar for this project. Furthermore ANTLR's output language can be in C or C++, this makes it easier to work on an arduino.
-\end{document}
+%ret herfra og ned specielt godt
+Based on the different lexers and parsers attributes compared to the expectations of this project, it has been decided that ANTLR best fit. The reason behind this is that ANTLR uses the LL(*) parser algorithm, this fits the structure of the CFG grammar for this project. Furthermore ANTLR's output language can be in Java, C or C++, this makes it easier to work on an Arduino. Another possibility could be to write the lexer and parser by hand, but many typingerrors are avoided by using a tool like ANTLR. Futhermore, it is easier to maintain the lexer and parser with a tool. When the grammar is changed, you can just generate a new lexer and parser with the tool. It has therefore been decided to use ANTLR for generating the lexer and parser.

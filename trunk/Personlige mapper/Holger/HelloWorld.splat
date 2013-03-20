@@ -1,4 +1,4 @@
-int LCDPin <-- 42;
+double intb<-- 5231.6345;
 
 function setup return nothing using()
 begin

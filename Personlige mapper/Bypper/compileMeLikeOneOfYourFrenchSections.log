@@ -1,7 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.3.1)  18 MAR 2013 11:49
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.3.1)  20 MAR 2013 12:37
 entering extended mode
-**AboutLexer.tex
-("C:\Users\Rasmus\Documents\P4\Personlige mapper\Bypper\AboutLexer.tex"
+**compileMeLikeOneOfYourFrenchSections.tex
+
+("C:\Users\Rasmus\Documents\P4\Personlige mapper\Bypper\compileMeLikeOneOfYourF
+renchSections.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -1843,7 +1845,7 @@ Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
 )
 \@nomenclaturefile=\write5
 
-Writing nomenclature file AboutLexer.nlo
+Writing nomenclature file compileMeLikeOneOfYourFrenchSections.nlo
 ("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count324
@@ -2024,7 +2026,8 @@ File: babel.def 2008/07/08 v3.8m Babel common definitions
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
-("C:\Users\Rasmus\Documents\P4\Personlige mapper\Bypper\AboutLexer.aux")
+("C:\Users\Rasmus\Documents\P4\Personlige mapper\Bypper\compileMeLikeOneOfYourF
+renchSections.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 2.
 LaTeX Font Info:    ... okay on input line 2.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 2.
@@ -2041,8 +2044,7 @@ LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 2.
 LaTeX Font Info:    ... okay on input line 2.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 2.
 LaTeX Font Info:    ... okay on input line 2.
-
-ABD: EveryShipout initializing macros
+ ABD: EveryShipout initializing macros
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count345
@@ -2090,8 +2092,11 @@ LaTeX Info: Redefining \nameref on input line 2.
 LaTeX Info: Redefining \ref on input line 2.
 LaTeX Info: Redefining \pageref on input line 2.
 LaTeX Info: Redefining \nameref on input line 2.
-("C:\Users\Rasmus\Documents\P4\Personlige mapper\Bypper\AboutLexer.out")
-("C:\Users\Rasmus\Documents\P4\Personlige mapper\Bypper\AboutLexer.out")
+
+("C:\Users\Rasmus\Documents\P4\Personlige mapper\Bypper\compileMeLikeOneOfYourF
+renchSections.out")
+("C:\Users\Rasmus\Documents\P4\Personlige mapper\Bypper\compileMeLikeOneOfYourF
+renchSections.out")
 \@outlinefile=\write6
 LaTeX Info: Redefining \Ref on input line 2.
 Package lastpage Info: Please have a look at the pageslts package at
@@ -2103,8 +2108,7 @@ Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             ! on input line 2.
 \c__siunitx_mathsf_int=\count353
 LaTeX Font Info:    Try loading font information for U+msa on input line 2.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 2.
@@ -2117,45 +2121,633 @@ LaTeX Font Info:    Try loading font information for U+stmry on input line 2.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\stmaryrd\ustmry.fd")
 \c__siunitx_mathtt_int=\count354
 
+("C:\Users\Rasmus\Documents\P4\Personlige mapper\Bypper\sprogParadigmer.tex"
 
-LaTeX Warning: Reference `code:simplecode' on page 1 undefined on input line 27
-.
+Package natbib Warning: Citation `ProgrammingParadigms' on page 1 undefined on 
+input line 2.
+
+
+LaTeX Warning: Reference `tab:langCharacteristics' on page 1 undefined on input
+ line 20.
 
 [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ]
+Overfull \hbox (44.75482pt too wide) in paragraph at lines 23--43
+[][]
+ []
+
+
+Package natbib Warning: Citation `sebesta' on page 2 undefined on input line 43
+.
+
+
+Package natbib Warning: Citation `sebesta' on page 2 undefined on input line 43
+.
+
+
+LaTeX Warning: Reference `tab:langTradeOffs' on page 2 undefined on input line 
+46.
+
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 50.
+
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 50.
+
+Missing character: There is no ˆ in font cmr10!
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 50.
+
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 50.
+
+Missing character: There is no ˆ in font cmr10!
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 50.
+
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 50.
+
+Missing character: There is no ˆ in font cmr10!
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 51.
+
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 51.
+
+Missing character: There is no ˆ in font cmr10!
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 51.
+
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 51.
+
+Missing character: There is no ˆ in font cmr10!
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 51.
+
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 51.
+
+Missing character: There is no ˆ in font cmr10!
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 52.
+
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 52.
+
+Missing character: There is no ˆ in font cmr10!
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 52.
+
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 52.
+
+Missing character: There is no ˆ in font cmr10!
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 52.
+
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 52.
+
+Missing character: There is no ˆ in font cmr10!
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 53.
+
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 53.
+
+Missing character: There is no ˆ in font cmr10!
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 53.
+
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 53.
+
+Missing character: There is no ˆ in font cmr10!
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 53.
+
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 53.
+
+Missing character: There is no ˆ in font cmr10!
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 54.
+
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 54.
+
+Missing character: There is no ˆ in font cmr10!
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 54.
+
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 54.
+
+Missing character: There is no ˆ in font cmr10!
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 55.
+
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 55.
+
+Missing character: There is no ˆ in font cmr10!
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 55.
+
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 55.
+
+Missing character: There is no ˆ in font cmr10!
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 56.
+
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 56.
+
+Missing character: There is no ˆ in font cmr10!
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 57.
+
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 57.
+
+Missing character: There is no ˆ in font cmr10!
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 58.
+
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 58.
+
+Missing character: There is no ˆ in font cmr10!
+
+Package natbib Warning: Citation `sebesta' on page 2 undefined on input line 60
+.
+
+
+Package natbib Warning: Citation `sebesta' on page 2 undefined on input line 60
+.
+
+
+LaTeX Warning: Reference `code:ifstmtnormal' on page 2 undefined on input line 
+64.
+
+
+LaTeX Warning: Reference `code:ifstmtcompact' on page 2 undefined on input line
+ 64.
+
+Package mdframed Info: mdframed works in twoside mode on input line 66.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+)
+
+Package Listings Warning: Text dropped after begin of listing on input line 66.
+
+
+
+! Undefined control sequence.
+\lstlisting ->\def \lstenv@name 
+                                {lstlisting}\begingroup \lst@setcatcodes \ca...
+l.77 \end{code}
+               
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Package Listings Error: Extra \endlstlisting.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.77 \end{code}
+               
+I'm ignoring this, since I wasn't doing a \def {lstlisting}\begingroup \catcode
+ `\spacefactor \@m {}11\relax \catcode `\==12\relax \catcode \active =\active \
+lstlisting@.
+
+
+! LaTeX Error: \begin{mdframed} on input line 66 ended by \end{lstlisting}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.77 \end{code}
+               
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.77 \end{code}
+               
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten \endgroup.
+\endmdf@lrbox ->\color@endgroup \egroup 
+                                        
+l.77 \end{code}
+               
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+Package mdframed Info: mdframed inside minipage 
+ mdframed uses option nobreak mdframed on input line 77.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 77.
+
+Package mdframed Warning: The environment is empty
+(mdframed)                 on input line 77.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.77 \end{code}
+               
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{minipage} on input line 66 ended by \end{mdframed}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.77 \end{code}
+               
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 77.
+See the caption package documentation for explanation.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.77 \end{code}
+               
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten \endgroup.
+\endminipage ...pagefalse \color@endgroup \egroup 
+                                                  \expandafter \@iiiparbox \...
+l.77 \end{code}
+               
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Undefined control sequence.
+\endminipage ...\expandafter \@iiiparbox \@mpargs 
+                                                  {\unvbox \@tempboxa }
+l.77 \end{code}
+               
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \def 
+l.80 	\begin{lstlisting}
+                        
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \def 
+l.80 	\begin{lstlisting}
+                        
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+
+! Package calc Error: `\def ' invalid at this point.
+
+See the calc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.80 	\begin{lstlisting}
+                        
+I expected to see one of: + - * / )
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \def 
+l.80 	\begin{lstlisting}
+                        
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   \def 
+l.80 	\begin{lstlisting}
+                        
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+
+! Package calc Error: `\def ' invalid at this point.
+
+See the calc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.80 	\begin{lstlisting}
+                        
+I expected to see one of: + - * / )
+
+! Use of \@iminipage doesn't match its definition.
+\calc@assign@generic ... #2\calc@open (#4!\global 
+                                                  \calc@A \calc@B \endgroup ...
+l.80 	\begin{lstlisting}
+                        
+If you say, e.g., `\def\a1{...}', then you must always
+put `1' after `\a', since control sequence names are
+made up of letters only. The macro here has not been
+followed by the required stuff, so I'm ignoring it.
+
+Runaway argument?
+{\@checkend {minipage}\expandafter \endgroup \if@endpe \@doendpe \fi \ETC.
+! Paragraph ended before \calc@assign@generic was complete.
+<to be read again> 
+                   \par 
+l.80 	\begin{lstlisting}
+                        
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Argument of \code has an extra }.
+<inserted text> 
+                \par 
+l.80 	\begin{lstlisting}
+                        
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+! Paragraph ended before \code was complete.
+<to be read again> 
+                   \par 
+l.80 	\begin{lstlisting}
+                        
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Extra }, or forgotten \endgroup.
+<recently read> }
+                 
+l.80 	\begin{lstlisting}
+                        
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+! Undefined control sequence.
+\lstlisting ->\def \lstenv@name 
+                                {lstlisting}\begingroup \lst@setcatcodes \ca...
+l.82 	\end{lstlisting}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Package Listings Error: Extra \endlstlisting.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.82 	\end{lstlisting}
+                      
+I'm ignoring this, since I wasn't doing a \def {lstlisting}\begingroup \catcode
+ `\spacefactor \@m {}11\relax \catcode `\==12\relax \catcode \active =\active \
+lstlisting@.
+
+
+! LaTeX Error: \begin{minipage} on input line 80 ended by \end{lstlisting}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.82 	\end{lstlisting}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Undefined control sequence.
+\lstlisting ->\def \lstenv@name 
+                                {lstlisting}\begingroup \lst@setcatcodes \ca...
+l.83 \end{code}
+               
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Package Listings Error: Extra \endlstlisting.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 \end{code}
+               
+I'm ignoring this, since I wasn't doing a \def {lstlisting}\begingroup \catcode
+ `\spacefactor \@m {}11\relax \catcode `\==12\relax \catcode \active =\active \
+lstlisting@.
+
+
+! LaTeX Error: \begin{minipage} on input line 80 ended by \end{lstlisting}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 \end{code}
+               
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.83 \end{code}
+               
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Extra }, or forgotten \endgroup.
+\endmdf@lrbox ->\color@endgroup \egroup 
+                                        
+l.83 \end{code}
+               
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+Package mdframed Warning: The environment is empty
+(mdframed)                 on input line 83.
+
+[2]
+
+! LaTeX Error: \begin{code} on input line 66 ended by \end{mdframed}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 \end{code}
+               
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 83.
+See the caption package documentation for explanation.
+
+! Too many }'s.
+\endminipage ...pagefalse \color@endgroup \egroup 
+                                                  \expandafter \@iiiparbox \...
+l.83 \end{code}
+               
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+! Undefined control sequence.
+\endminipage ...\expandafter \@iiiparbox \@mpargs 
+                                                  {\unvbox \@tempboxa }
+l.83 \end{code}
+               
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+)
+Runaway argument?
+\@checkend {minipage}\expandafter \endgroup \if@endpe \@doendpe \fi \csuse \ETC
+.
+! File ended while scanning use of \@iiiparbox.
+<inserted text> 
+                \par 
+l.3 	\input{sprogParadigmer}
+                            
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
+
+[3]
+
+Package natbib Warning: There were undefined citations.
+
 
 AED: lastpage setting LastPage
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 42.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 42.
-("C:\Users\Rasmus\Documents\P4\Personlige mapper\Bypper\AboutLexer.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 42.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 42.
-Package rerunfilecheck Info: File `AboutLexer.out' has not changed.
-(rerunfilecheck)             Checksum: 2759B7456FB4622FB722D9CB645C5644;58.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 4.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 4.
+
+("C:\Users\Rasmus\Documents\P4\Personlige mapper\Bypper\compileMeLikeOneOfYourF
+renchSections.aux")
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 4.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 4.
+Package rerunfilecheck Info: File `compileMeLikeOneOfYourFrenchSections.out' ha
+s not changed.
+(rerunfilecheck)             Checksum: B112E9C414A5B05A0DC337480A8A4331;588.
 
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 34801 strings out of 493921
- 633989 string characters out of 3147280
- 722546 words of memory out of 3000000
- 37512 multiletter control sequences out of 15000+200000
- 14774 words of font info for 50 fonts, out of 3000000 for 9000
+ 35196 strings out of 493921
+ 638171 string characters out of 3147280
+ 734572 words of memory out of 3000000
+ 37890 multiletter control sequences out of 15000+200000
+ 17727 words of font info for 55 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
- 63i,11n,76p,841b,739s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi657
-\ecbx1000.pk> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
-n\ec\dpi720\ecbx1200.pk> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
-our\jknappen\ec\dpi657\ecrm1000.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on AboutLexer.pdf (1 page, 62152 bytes).
+ 63i,12n,79p,910b,1712s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
+\ecbx1200.pk> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
+n\ec\dpi657\ecbx1000.pk> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\jknappen\ec\dpi720\ecbx1200.pk> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\f
+onts\pk\ljfour\jknappen\ec\dpi657\ecrm1000.pk><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on compileMeLikeOneOfYourFrenchSections.pdf (3 pages, 63197 byte
+s).
 PDF statistics:
- 123 PDF objects out of 1000 (max. 8388607)
- 5 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 206 PDF objects out of 1000 (max. 8388607)
+ 14 named destinations out of 1000 (max. 500000)
+ 69 words of extra memory for PDF output out of 10000 (max. 10000000)
 

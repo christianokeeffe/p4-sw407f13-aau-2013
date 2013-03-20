@@ -26,6 +26,6 @@ LALR:
 A LALR(Lookahead Ahead LR) parser is one of the most commonly used algorithms today, because it is a powerful algorithm but do not need a very large parse table. It works like the LR parser.
 
 \subsection*{Abstract Syntax Trees}
+The parser generates an abstract syntax tree (AST) \citep{CraftingACompiler}, which is an abstract data type describing the structure of the source program. This means that the AST contains information about which constructs the source program contains. More specifically, each node in the AST represent a construct in the source language, for example an 'if'-block.
 
-
-
+When the AST has been generated, it decorated with types by the type checker. The type checker traverses the AST, and checks the static semantics of each node, which means that it verifies that the node represent valid constructs. If each node is correct it is returned to the translator \citep{CraftingACompiler}. The translator then uses the AST to an intermediate representation (IR code), which is used in the further phases of the compiler.

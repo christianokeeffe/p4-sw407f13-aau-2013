@@ -1,0 +1,10 @@
+\section{Overview of the Compiler}
+
+\figur{0.8}{OverviewCompiler.PNG}{This is an overview of how the compiler is structured.}{fig:OverviewCompiler}
+
+A compiler consists of 3 different phases. The different phases roughly correspond to the different parts in a language specification. The syntax analysis correspond to the syntax, the contextual analysis to the contextual constrains and the code generation correspond to the semantics.
+
+
+If you take a simple compiler it will go thorough a bit more than three phases. Under the syntax analysis the compiler consists of a scanner and a parser. The scanner takes the source program and makes a stream of tokens, the parser then uses to make a abstract syntax tree. Then in the contextual analysis a symbol table is made from the abstract syntax tree. Then at last comes the semantic analysis where the AST is decorated and then translated into the target language.
+
+The different phases will be described more thoughtfully later in the rapport. \fxfatal{Få lavet konkret henvendelse når opbygningen er fastsat.}

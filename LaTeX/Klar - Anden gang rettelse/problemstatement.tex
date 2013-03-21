@@ -1,0 +1,15 @@
+\section{Problem statement}
+In this section a problem statement will be presented, which will be used as a basis for this project. In this project it has been chosen to examine how drink machine could be programmed using Arduino platform for processing. As mentioned in section \ref{sec:hardwarearduino}, the programming language usually used for Arduino is C and C++, which is not aimed at programming drink machines as programming purpose. It could be useful to have a niche programming language aimed directly at programming drink machines on a Arduino platform. This will be the goal of this project. The programming language in this project is aimed at the hobby programmer who wants to program his own drink machine. Because of this, the programs written in this language must be easy to understand and maintain. This however sacrifices some write-ability of the programs, because of constraints imposed to make sure programs are easily understandable. These trade-offs and will be further discussed in section \ref{sec:grammarchoice}. A hobby programmer is defined as a programmer who knows the basic structure of programming, but does not have an education in programming or work with software development.
+
+Based on the above, the following problem statement comes to light:
+\begin{itemize}
+	\item \textbf{How can a programming language be developed, which makes it easy for the hobby programmer to program drink machines based on Arduino platforms?}
+\end{itemize}
+The purpose of this problem statement is to guide the programming language for this project, so when the programming language reaches a final state, it is easy for hobby programmers to program using the language. 
+
+\subsection{Sub Statements}
+On the basis of the problem statement, a number of sub-statements arises:
+\begin{itemize}
+	\item \textbf{How can a programming language be specified, which makes it easy for novice programmers to learn it?} Because the language of this project is aimed at hobby programmers, the programming language should be specified in a way which is suited for the programmer.
+	\item \textbf{How can a compiler be developed, which recognizes the language, and translates the source program into Arduino suitable code?} Of course it is not enough to have an easy-to-understand language, if it does not have a compiler for that language. The language would then render useless. This is the reason why a compiler must be developed, either by compiling the program code directly to Arduino machine code, or by first compiling the program code to c code, and then use the Arduino compiler to compile that code further. 
+\end{itemize}

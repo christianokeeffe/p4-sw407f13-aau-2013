@@ -15,11 +15,16 @@ This can be a problem since different computers might make different output with
 Pushdown automata work almost the same as a finite automate the big main differences is, that pushdown automata use a memory stack to help make the output.
 
 \subsection{Type - 1: Context-Sensitive Grammar}
-Context-sensitive grammar are nearly the same as substitution rules use in Context-free grammar, but here the rules can also include the terminals on both sides of the termination.
+Context-sensitive grammar are nearly the same as substitution rules use in Context-free grammar, 
+% læs sætningen over igen da den ikke giver mening. Du skriver at den kontekt-sensetive grammatik næsten er det samme som substitution reglerne der bliver brugt i den kontekst frie grammatik.
+but here the rules can also include the terminals on both sides of the termination.
+%Læs det hele her igen.
 
 \subsection{Type - 0: Recursively Enumerable}
 Recursively enumerable or unrestricted grammar is where there is no restrictions on the left and right sides of the grammar's productions.
 % kommer hvist i kapitel 3 i Syntaks og semantik hvor det hedder Turing-recognizable
 
+%Kommer vist? hvor har du så fundet informationen ?
+
 \subsection{choice of Grammar}
-The grammar that have been use to describe the language for the  project compiler is context-free grammar. Because it is relatively easily to understand a language describe in context-free grammar, but still strict enough that a computer can work with it. Another reason for using context-free grammar is that most parsers and lexers generator use BNF (Backus–Naur Form) or EBNF (Extended Backus–Naur Form) that is a notation form for context-free grammar
+The grammar that have been use to describe the language for the  project compiler is context-free grammar. It is relatively easily to understand a language described in context-free grammar, but it is still strict enough that a computer can work with it. Another reason for using context-free grammar is that most parsers and lexers generator use BNF (Backus–Naur Form) or EBNF (Extended Backus–Naur Form) that is a notation form for context-free grammar

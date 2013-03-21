@@ -227,16 +227,6 @@ stringstyle=\color[rgb]{0.627,0.126,0.941}
 
 %%%% CUSTOM COMMANDS %%%%
 
-%  Promille-hack (\promille)  %
-\newcommand{\promille}{%
-  \relax\ifmmode\promillezeichen
-        \else\leavevmode\(\mathsurround=0pt\promillezeichen\)\fi}
-\newcommand{\promillezeichen}{%
-  \kern-.05em%
-  \raise.5ex\hbox{\the\scriptfont0 0}%
-  \kern-.15em/\kern-.15em%
-  \lower.25ex\hbox{\the\scriptfont0 00}}
-
 % Billede hack %
 \newcommand{\figur}[4]{
 		\begin{figure}[H] \centering

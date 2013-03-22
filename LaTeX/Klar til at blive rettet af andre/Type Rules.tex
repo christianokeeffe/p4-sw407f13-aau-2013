@@ -7,13 +7,13 @@ Type rule for \textbf{<, > <=, >=}:
 
 Type rule for \textbf{!=, =}:
 
-"E1 (!=, =) E2" is type correct and of type Boolean if E1 and E2 are type correct and of type Integer or double, or E1 and E2 are the same type of char or string.
+"E1 (!=, =) E2" is type correct and of type Boolean if E1 and E2 are type correct and of type Integer or double, or E1 and E2 are the same of type char or string.
 
 Type rule for \textbf{+, -, *}:
 "E1 (+, -, *) E2" is type correct and of type Integer or double if E1 and E2 are type correct and of type Integer or double.
 
 Type rule for \textbf{/}:
-"E1 (/) E2" is type correct and of type Integer or double if E1 and E2 are type correct and of type Integer or double and E2 is not 0.
+"E1 (/) E2" is type correct and of type Integer or double if E1 and E2 are type correct and of type Integer or double and E2 do not have the value of zero.
 
 Here the type rules for assign will be described:
 
@@ -25,11 +25,11 @@ Type rule of while:
 "while E begin C end" is type correct if E of type Boolean and C are type correct.
 
 Type rule of from to: 
-"from E1 to E2 begin C end" is type correct if E1 and E2 are type correct and of type Integer, and C type correct.
+"from E1 to E2 begin C end" are type correct if E1 and E2 are type correct and of type Integer, and C are type correct.
 
 Here is the type rules for if sentence
 "if(E) begin C end" is type correct if E are type correct and of type Boolean, and C are type correct.
 
 Here is the type rules for switch/case will be described:
 
-"switch (E) begin case $E_1$: $C_1$ break; ... case $E_n$: $C_n$ break; default: $C_d$ break; end" is type correct if E, $E_1$...$E_n$ are type correct and of type Integer, double, char or string and is the same type, and $C_1$...$C_n$ and $C_d$ are type correct.
+"switch (E) begin case $E_1$: $C_1$ break; ... case $E_n$: $C_n$ break; default: $C_d$ break; end" is type correct if E, $E_1$...$E_n$ are type correct and of type Integer, double, char or string and are the same type, and $C_1$...$C_n$ and $C_d$ are type correct.

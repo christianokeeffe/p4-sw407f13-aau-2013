@@ -1,0 +1,34 @@
+\begin{thebibliography}{4}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Fischer et~al.(2009)Fischer, Ron, og Richard]{CraftingACompiler}
+\textbf{Fischer et~al.}, \textbf{2009}.
+\newblock Charles~N. Fischer, K.~Cyton Ron og J.~LeBlanc.~Jr. Richard.
+\newblock \textit{Crafting a Compiler}.
+\newblock Pearson, 2009.
+
+\bibitem[Nørmark(2010)]{ProgrammingParadigms}
+\textbf{Nørmark}, \textbf{July 7 2010}.
+\newblock Kurt Nørmark.
+\newblock \textit{Overview of the four main programming paradigms}.
+\newblock web, 2010.
+\newblock URL
+  \url{http://people.cs.aau.dk/\~normark/prog3-03/html/notes/paradigms\_themes-paradigm-overview-section.html}.
+
+\bibitem[Sebesta(2009)]{sebesta}
+\textbf{Sebesta}, \textbf{2009}.
+\newblock Robert~W. Sebesta.
+\newblock \textit{Concepts of Programming Languages}.
+\newblock Pearson, 9 udgave, 2009.
+
+\bibitem[Sipser(2013)]{sipser}
+\textbf{Sipser}, \textbf{2013}.
+\newblock Michael Sipser.
+\newblock \textit{Introduction to the Theory of Computation}.
+\newblock PWS Publishing, 3 udgave, 2013.
+
+\end{thebibliography}

@@ -67,8 +67,8 @@ A parser needs a stream of tokens to parse a program correctly. These tokens are
 %while & "while" \\
 %digitalWrite & "container" \\
 PRIMITIVETYPE & 'int' | 'double' | 'bool' | 'char' | 'container' | 'string' \\
-DIGIT & $[0-9]^+$ \\
-NOTZERODIGIT & $ [1-9]^+$ \\
+DIGIT & $[0 - 9]^+$ \\
+NOTZERODIGIT & $[1-9][0-9]^*$ \\
 LETTER & $[A-Za-z]^+$\\
 COMMENT & /* $\dots$ */ \\
 WHITESPACE & \\r | \\n | \\t \\

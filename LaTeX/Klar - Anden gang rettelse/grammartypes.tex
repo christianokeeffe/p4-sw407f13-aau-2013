@@ -1,15 +1,15 @@
 % ved ikke om der skal skrive mere på - Niels
-\section{Grammar}
+%KILDER MANGLER - chr
+\section{Grammartypes}
 There are 4 types of grammar, where type 0 is the most unrestricted grammar, and type 3 is the more restricted grammar.
 
 \subsection{Type - 3: Regular Grammar}
-Regular grammars are described by finite automata which is used to recognize regular languages. Regular grammars are meant to be used on computers with an extremely limited amount of memory, because regular languages does not need to use a lot of memory to recognize a language. But some languages exists which no finite automata can recognize.
+Regular grammars can be described by finite automata or regular expressions. Regular grammars are meant to be used on computers with an extremely limited amount of memory, because regular languages does not need to use a lot of memory to recognize a language.
 
 \subsection{Type - 2: Context-Free Grammar}
 Context-free grammars are described by substitution rules, also called productions. Substitution rules for context-free grammars can make the grammar ambiguous.
 This is a problem since different computers might yield different output for the same grammar.
-
-Pushdown automata works almost in the same way as finite automata. The difference is that pushdown automata uses a stack as memory to help create the output. 
+Context-Free Grammars can be described in backus naur form or by a Pushdown automata (PDA). PDA's works almost in the same way as finite automata. The difference is that a PDA uses a stack as memory to help create the output. 
 
 \subsection{Type - 1: Context-Sensitive Grammar}
 Context-sensitive grammars substitution rules have nearly the same rules as those used in Context-free grammar. But in context-sensitive the right side of the production can have more then one terminal and there can be non-terminals on the right side of the production.
@@ -18,4 +18,4 @@ Context-sensitive grammars substitution rules have nearly the same rules as thos
 Recursively enumerable or unrestricted grammar is a type of grammer, where there is no restrictions on the left and right sides of the grammars productions. On top of that, a language is recursively enumerable if it is recognized by some turing machine \citep{sipser}.  %Introduction to the theory of computation kapitel 3% 
 
 \subsection{choice of Grammar}
-The grammar which has been used to describe the language of this project, is a context-free grammar. It is relatively easily to understand a language described in context-free grammar, but it is still strict enough to allow a computer to work with it. Another reason for using context-free grammar is that most parser- and lexer generators require languages to be described in BNF (Backus–Naur Form) or EBNF (Extended Backus–Naur Form) which is a notation form for context-free grammar.
+The grammar which has been used to describe the language of this project, is a context-free grammar. It is relatively easily to understand a language described in context-free grammar, but it is still strict enough to allow a computer to work with it. Another reason for using context-free grammar is that most parser- and lexer generators require languages to be described in BNF (Backus–Naur Form) or EBNF (Extended Backus–Naur Form) which is a notation form for context-free grammar. A regular grammar whould not have been sufficient, do to the complexity of the language.

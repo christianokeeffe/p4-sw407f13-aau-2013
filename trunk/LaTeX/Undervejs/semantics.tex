@@ -7,7 +7,7 @@ The scope of a variable is the block of the program in which it is accessible. A
 In SPLAT static scoping is used. This means that scopes are computed at compile time, based on the program text input. The main reason for this, is that programs for the Arduino platform is mainly written in C, which also uses static scoping. This makes the compilation from SPLAT to C simpler for the compiler \citep{arduinobuild}. Static scoping means that a hierarchy of scopes are maintained during compilation. To determine the name of used variables, the compiler must first check if the variable is in the current scope. If it is, the value of the variable is found, and the compiler can proceed. Else it must recursively search the scope hierarchy for the variable. When done, if the variable is still not found, the compiler returns an error, because an undeclared variable is used.
 \subsubsection{Symbol tables}
 Generally there are two approaches to symbol tables: One symbol table for each scope, or one global symbol table \citep{sebesta}. 
-%hvad bruger SPLAT af Symbol table(s) 2 vi fortæller om
+\fxfatal{Vi skal have besluttet hvilken type symbol table vi bruger}
 \subsubsection*{Multiple Symbol Tables}
 In each scope, a symbol table exists, which is an ADT (Abstract Data Type), that stores identifier names and relate each identifier to its attributes. The general operations of a symbol table is: Empty the table, add entry, find entry, open and close scope. 
 

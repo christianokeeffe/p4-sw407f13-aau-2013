@@ -1,15 +1,66 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{14}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
+\bibitem[Antlr()]{ANTLR}
+\textbf{\textbf{Antlr}}.
+\newblock Antlr.
+\newblock \textit{Theory behind Antlr}.
+\newblock URL \url{http://www.antlr.org/about.html}.
+
+\bibitem[Cup()]{CUP}
+\textbf{\textbf{Cup}}.
+\newblock Cup.
+\newblock \textit{Theory behind CUP}.
+\newblock URL \url{http://www2.cs.tum.edu/projects/cup/manual.html}.
+
 \bibitem[Fischer et~al.(2009)Fischer, Ron, og Richard]{CraftingACompiler}
 \textbf{Fischer et~al.}, \textbf{2009}.
 \newblock Charles~N. Fischer, K.~Cyton Ron og J.~LeBlanc.~Jr. Richard.
 \newblock \textit{Crafting a Compiler}.
 \newblock Pearson, 2009.
+
+\bibitem[Flex()]{Flex}
+\textbf{\textbf{Flex}}.
+\newblock Flex.
+\newblock \textit{Theory behind Flex}.
+\newblock URL \url{http://flex.sourceforge.net/manual/}.
+
+\bibitem[Jflex()]{Jflex}
+\textbf{\textbf{Jflex}}.
+\newblock Jflex.
+\newblock \textit{Theory behind Jflex}.
+\newblock URL \url{http://jflex.de/manual.html#SECTION00040000000000000000}.
+
+\bibitem[JJTree()]{JJTree}
+\textbf{\textbf{JJTree}}.
+\newblock JJTree.
+\newblock \textit{JJTree to JavaCC}.
+\newblock URL
+  \url{http://tomcopeland.blogs.com/juniordeveloper/2007/10/better-jjtree-v.html}.
+
+\bibitem[Jlex()]{Jlex}
+\textbf{\textbf{Jlex}}.
+\newblock Jlex.
+\newblock \textit{Theory behind Jlex}.
+\newblock URL
+  \url{http://www.cs.princeton.edu/~appel/modern/java/JLex/current/manual.html}.
+
+\bibitem[Lex()]{Lex}
+\textbf{\textbf{Lex}}.
+\newblock Lex.
+\newblock \textit{Theory behind Lex}.
+\newblock URL \url{http://dinosaur.compilertools.net/lex/index.html}.
+
+\bibitem[Norvell()]{Javacc}
+\textbf{\textbf{Norvell}}.
+\newblock Theodore~S. Norvell.
+\newblock \textit{The JavaCC FAQ}.
+\newblock URL
+  \url{http://www.engr.mun.ca/~theo/JavaCC-FAQ/javacc-faq-moz.htm#jjtree-and-jtb}.
 
 \bibitem[Nørmark(2010)]{ProgrammingParadigms}
 \textbf{Nørmark}, \textbf{July 7 2010}.
@@ -18,6 +69,12 @@
 \newblock web, 2010.
 \newblock URL
   \url{http://people.cs.aau.dk/\~normark/prog3-03/html/notes/paradigms\_themes-paradigm-overview-section.html}.
+
+\bibitem[SableCC()]{SableCC}
+\textbf{\textbf{SableCC}}.
+\newblock SableCC.
+\newblock \textit{SableCC homesite}.
+\newblock URL \url{http://sablecc.org/wiki}.
 
 \bibitem[Sebesta(2009)]{sebesta}
 \textbf{Sebesta}, \textbf{2009}.
@@ -30,5 +87,11 @@
 \newblock Michael Sipser.
 \newblock \textit{Introduction to the Theory of Computation}.
 \newblock PWS Publishing, 3 udgave, 2013.
+
+\bibitem[Yacc()]{Yacc}
+\textbf{\textbf{Yacc}}.
+\newblock Yacc.
+\newblock \textit{Theory behind Yacc}.
+\newblock URL \url{http://dinosaur.compilertools.net/yacc/index.html}.
 
 \end{thebibliography}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.10.22)  22 MAR 2013 12:05
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.10.22)  22 MAR 2013 13:15
 entering extended mode
 **C:/Users/Christian/Documents/Arbejde/UNI/P4/svn/LaTeX/RapportNIXPILLE/Rapport
 .tex
@@ -2026,14 +2026,7 @@ File: babel.def 2008/07/08 v3.8m Babel common definitions
 \l@newzealand = a dialect from \language\l@british 
 ))
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\Rapport.
-aux
-
-LaTeX Warning: Label `lst:[' multiply defined.
-
-
-LaTeX Warning: Label `lst:[' multiply defined.
-
-)
+aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
@@ -2140,7 +2133,7 @@ LaTeX Font Info:    Try loading font information for U+stmry on input line 3.
 ]
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\formalia
 /FormaliaTitelblad.tex
-<billeder/AAUUKSTUDENTREPORTbluergb.png, id=186, 434.46315pt x 284.5029pt>
+<billeder/AAUUKSTUDENTREPORTbluergb.png, id=238, 434.46315pt x 284.5029pt>
 File: billeder/AAUUKSTUDENTREPORTbluergb.png Graphic file (type png)
 
 <use billeder/AAUUKSTUDENTREPORTbluergb.png>
@@ -2392,15 +2385,7 @@ LaTeX Warning: Command \textbullet invalid in math mode on input line 58.
 LaTeX Warning: Command \textbullet invalid in math mode on input line 58.
 
 Missing character: There is no ˆ in font cmr10!
-
-LaTeX Warning: Reference `lst:ifstmtnormal' on page 8 undefined on input line 6
-4.
-
-
-LaTeX Warning: Reference `lst:ifstmtcompact' on page 8 undefined on input line 
-64.
-
-Package mdframed Info: mdframed works in twoside mode on input line 66.
+Package mdframed Info: mdframed works in twoside mode on input line 67.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
@@ -2415,7 +2400,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 [8]
-Package mdframed Info: mdframed works in twoside mode on input line 79.
+Package mdframed Info: mdframed works in twoside mode on input line 80.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
@@ -2431,10 +2416,10 @@ See the caption package documentation for explanation.
 
 )
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
-Theory/grammar.tex [9] [10])
+Theory/grammar.tex [9])
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
-Theory/AboutLexer.tex
-Package mdframed Info: mdframed works in twoside mode on input line 20.
+Theory/AboutLexer.tex [10]
+Package mdframed Info: mdframed works in twoside mode on input line 21.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
@@ -2448,27 +2433,23 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 24.
 See the caption package documentation for explanation.
 
+) [11] [12
 
-LaTeX Warning: Reference `lst:simplecode' on page 11 undefined on input line 26
-.
-
-) [11] [12]
+]
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
 Design/grammarchoice.tex)
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
-Design/BNF3.tex [13
-
-] [14] [15] [16])
+Design/BNF3.tex [13] [14] [15] [16])
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
-Design/semantics.tex [17]) [18] [19
+Design/semantics.tex [17]) [18]
+(C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
+Implementation/KnownLexersAndParsers.tex [19
 
-] [20
+] [20]) [21] [22
 
 ]
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\formalia
-/FormaliaKonklusion.tex) [21] [22
-
-]
+/FormaliaKonklusion.tex)
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\Rapport.
 bbl [23] [24
 
@@ -2489,23 +2470,20 @@ aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 105.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 105.
 Package rerunfilecheck Info: File `Rapport.out' has not changed.
-(rerunfilecheck)             Checksum: 1BB3B4779134845FFBFA9482DA803E3E;2743.
+(rerunfilecheck)             Checksum: 4C1C7FEE9A894A63116F9197324A3710;3593.
 
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 35345 strings out of 493921
- 641598 string characters out of 3147269
- 733389 words of memory out of 3000000
- 37857 multiletter control sequences out of 15000+200000
+ 35421 strings out of 493921
+ 642993 string characters out of 3147269
+ 732389 words of memory out of 3000000
+ 37904 multiletter control sequences out of 15000+200000
  29156 words of font info for 71 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
- 63i,20n,80p,1147b,1700s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,20n,80p,1147b,1696s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.enc}{C:/Pro
 gram Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKTeX 
 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/font
@@ -2525,9 +2503,9 @@ C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sftt0900.pfb><C:/Progra
 m Files/MiKTeX 2.9/fonts/type1/public/cm-super/sftt1000.pfb><C:/Program Files/M
 iKTeX 2.9/fonts/type1/urw/bookman/ubkd8a.pfb><C:/Program Files/MiKTeX 2.9/fonts
 /type1/urw/bookman/ubkl8a.pfb>
-Output written on Rapport.pdf (35 pages, 551034 bytes).
+Output written on Rapport.pdf (35 pages, 577622 bytes).
 PDF statistics:
- 567 PDF objects out of 1000 (max. 8388607)
- 110 named destinations out of 1000 (max. 500000)
- 354 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 663 PDF objects out of 1000 (max. 8388607)
+ 134 named destinations out of 1000 (max. 500000)
+ 458 words of extra memory for PDF output out of 10000 (max. 10000000)
 

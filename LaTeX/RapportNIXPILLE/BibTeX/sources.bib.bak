@@ -101,6 +101,17 @@
   url = {http://www.engr.mun.ca/~theo/JavaCC-FAQ/javacc-faq-moz.htm#jjtree-and-jtb}
 }
 
+@MISC{ProgrammingParadigms,
+  author = {Kurt Nørmark},
+  title = {Overview of the four main programming paradigms},
+  howpublished = {web},
+  month = {July 7},
+  year = {2010},
+  owner = {Rasmus},
+  timestamp = {2013.03.19},
+  url = {http://people.cs.aau.dk/\~normark/prog3-03/html/notes/paradigms\_themes-paradigm-overview-section.html}
+}
+
 @MISC{Teensy,
   author = {PJRC},
   title = {Teensy USB Development Board},

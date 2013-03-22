@@ -49,10 +49,8 @@
 
 <callid> $\ra$ <id> <arraycall>
 
-<arraycall> $\ra$ [<notnulldigits>]
+<arraycall> $\ra$ [<NOTZERODIGIT>]
 \alt$\eps$
-
-<notnulldigits> $\ra$ <NOTNULLDIGIT> <DIGIT>
 
 <numeric> $\ra$ <plusminus> <DIGIT> <numericend>
 
@@ -205,11 +203,11 @@ begin
 break;
 \alt$\eps$
 
-<LETTER> $\ra$ [a - zA - Z]+
+<LETTER> $\ra$ [a - zA - Z]$~^+$
 
-<DIGIT> $\ra$ [0 - 9]+
+<DIGIT> $\ra$ [0 - 9]$~^+$
 
-<NOTNULLDIGIT> $\ra$ [1 - 9]+
+<NOTZERODIGIT> $\ra$ [1-9][0-9]$~^*$
 
 <COMMENT> $\ra$ /* .*? */
 

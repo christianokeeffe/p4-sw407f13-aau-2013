@@ -63,7 +63,7 @@ These characteristics are used to evaluate the the trade-offs of programming lan
 
 Based on these trade-offs, it is clear that having a simple programming language affects both readability, writability and reliability. This is because having a very simple-to-understand language, might not make it very writable. On the other hand, having a simple-to-write programming language, might not make it very readable. An example of this is the if-statement in C, which can be written both with the 'if'-keyword, or more compact. This can be seen by comparing listing \ref{lst:ifstmtnormal} with listing \ref{lst:ifstmtcompact}, which both yield the same result. It is then clear, that the compact if-statement might be faster to write, but slower to read and understand, and opposite with the if-statement.
 
-\begin{code}[Simple example of if-statement in C using the 'if'-keyword,ifstmtnormal]
+\begin{code}{ifstmtnormal}{Simple example of if-statement in C using the 'if'-keyword}
 	\begin{lstlisting}
 		if (x > y)
 		{
@@ -76,7 +76,7 @@ Based on these trade-offs, it is clear that having a simple programming language
 	\end{lstlisting}
 \end{code}
 
-\begin{code}[Simple example of if-statement in C without using the 'if'-keyword,ifstmtcompact]
+\begin{code}{ifstmtcompact}{Simple example of if-statement in C without using the 'if'-keyword}
 	\begin{lstlisting}
 		res = x > y ? 1 : 0;
 	\end{lstlisting}

@@ -1,16 +1,15 @@
 \section{Overview of the Compiler}
 
-\figur{0.8}{OverviewCompiler1.PNG}{This is an overview of how the compiler is structured.}{fig:OverviewCompiler1}
+\figur{0.8}{OverviewCompiler2.PNG}{This is an overview of how the compiler is structured. The picture is from \citep{CraftingACompiler}.}{fig:OverviewCompiler2}
 
-A compiler is a fundamental part of modern computing. There job is to translate programming language into machine language. A compiler allows programs to virtually all computers to ignore the machine-dependent details of machine language and therefor be portable across a lot of different computers.  \citep{CraftingACompiler}
+On figur \ref{CraftingACompiler2} can be seen an overview of each of the different steps in the compiler and what it takes in and parses on the the next step.
 
-\figur{0.8}{OverviewCompiler.PNG}{This is another overview of how the compiler is structured.}{fig:OverviewCompiler2}
+A compiler is a fundamental part of modern computing. There job is to translate programming language into machine language. A compiler allows programs to virtually all computers to ignore the machine-dependent details of machine language and therefor be portable across a lot of different computers. \citep{CraftingACompiler}
 
-A compiler consists of 3 different phases. The different phases roughly correspond to the different parts in a language specification. The syntax analysis correspond to the syntax, the contextual analysis to the contextual constrains and the code generation correspond to the semantics.
+\figur{0.8}{OverviewCompiler.PNG}{This is another overview of how the compiler is structured.}{fig:OverviewCompiler}
 
+A compiler consists of 3 different phases. The different phases roughly correspond to the different parts in a language specification, which can be seen on figur \ref{OverviewCompiler} . The syntax analysis correspond to the syntax, the contextual analysis to the contextual constrains and the code generation correspond to the semantics.
 
-If you take a simple compiler it will go thorough a bit more than three phases. Under the syntax analysis the compiler consists of a scanner and a parser. The scanner takes the source program and makes a stream of tokens, the parser then uses them to make an abstract syntax tree. In the contextual analysis a symbol table is made from the abstract syntax tree. Last comes the semantic analysis where the AST is decorated and then translated into the target language.
+If you take a simple compiler it will go thorough a bit more than three phases, as seen on figur \ref{OverviewCompiler2}. Under the syntax analysis the compiler consists of a scanner and a parser. The scanner takes the source program and makes a stream of tokens, the parser then uses them to make an abstract syntax tree. In the contextual analysis a symbol table is made from the abstract syntax tree. Last comes the semantic analysis where the AST is decorated and then translated into the target language.
 
-The different phases will be described more thorough later in the rapport. \fxfatal{Få lavet konkret henvendelse når opbygningen er fastsat.}
-
-%Brug figur på side 15 i Fisher, evt. 26 i Sebasta
+The different phases will be described more thorough later in the rapport. \fxfatal{Få lavet konkret henvendelse når opbygningen på rapporten er fastsat.}

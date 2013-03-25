@@ -1,4 +1,4 @@
-\begin{thebibliography}{15}
+\begin{thebibliography}{22}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -16,6 +16,30 @@
 \newblock Antlr.
 \newblock \textit{Theory behind Antlr}.
 \newblock URL \url{http://www.antlr.org/about.html}.
+
+\bibitem[Arduino({\natexlab{a}})]{ArduinoLCD}
+\textbf{Arduino}, \textbf{{\natexlab{a}}}.
+\newblock Arduino.
+\newblock \textit{Liquid Crystal}.
+\newblock \url{http://arduino.cc/en/Tutorial/LiquidCrystal} [Last viewed:
+  18-02-2013].
+\newblock URL \url{http://arduino.cc/en/Tutorial/LiquidCrystal}.
+
+\bibitem[Arduino({\natexlab{b}})]{ArduinoLanguage}
+\textbf{Arduino}, \textbf{{\natexlab{b}}}.
+\newblock Arduino.
+\newblock \textit{Language Reference}.
+\newblock \url{http://arduino.cc/en/Reference/HomePage} [Last viewed:
+  19-02-2013].
+\newblock URL \url{http://arduino.cc/en/Reference/HomePage}.
+
+\bibitem[Arduino({\natexlab{c}})]{ArduinoUno}
+\textbf{Arduino}, \textbf{{\natexlab{c}}}.
+\newblock Arduino.
+\newblock \textit{Arduino Uno}.
+\newblock \url{http://arduino.cc/en/Main/ArduinoBoardUno} [Last viewed:
+  18-02-2013].
+\newblock URL \url{http://arduino.cc/en/Main/ArduinoBoardUno}.
 
 \bibitem[Cup()]{CUP}
 \textbf{\textbf{Cup}}.
@@ -76,6 +100,14 @@
 \newblock URL
   \url{http://people.cs.aau.dk/\~normark/prog3-03/html/notes/paradigms\_themes-paradigm-overview-section.html}.
 
+\bibitem[PJRC()]{Teensy}
+\textbf{\textbf{PJRC}}.
+\newblock PJRC.
+\newblock \textit{Teensy USB Development Board}.
+\newblock \url{http://www.pjrc.com/teensy/index.html} [Last viewed:
+  11-03-2013].
+\newblock URL \url{http://www.pjrc.com/teensy/index.html}.
+
 \bibitem[SableCC()]{SableCC}
 \textbf{\textbf{SableCC}}.
 \newblock SableCC.
@@ -93,6 +125,34 @@
 \newblock Michael Sipser.
 \newblock \textit{Introduction to the Theory of Computation}.
 \newblock PWS Publishing, 3 udgave, 2013.
+
+\bibitem[Specialisten(2013)]{RFID}
+\textbf{Specialisten}, \textbf{2 2013}.
+\newblock RFID Specialisten.
+\newblock \textit{RFID}.
+\newblock \url{http://www.rfid-specialisten.dk/rfid.asp} [Last viewed:
+  15-02-2013], 2013.
+\newblock URL \url{http://www.rfid-specialisten.dk/rfid.asp}.
+
+\bibitem[Studio()]{Seedui}
+\textbf{\textbf{Studio}}.
+\newblock Seeed Studio.
+\newblock \textit{Seeduino Stalker V2}.
+\newblock
+  \url{http://www.seeedstudio.com/depot/seeeduino-stalker-v2-p-727.html?cPath=80}
+  [Last viewed: 11-03-2013].
+\newblock URL
+  \url{http://www.seeedstudio.com/depot/seeeduino-stalker-v2-p-727.html?cPath=80}.
+
+\bibitem[Walker(2012)]{Netdui}
+\textbf{Walker}, \textbf{April 2012}.
+\newblock Chris Walker.
+\newblock \textit{Introducing Netduino Go}.
+\newblock
+  \url{http://forums.netduino.com/index.php?/topic/3867-introducing-netduino-go/}
+  [Last viewed: 11-03-2013], 2012.
+\newblock URL
+  \url{http://forums.netduino.com/index.php?/topic/3867-introducing-netduino-go/}.
 
 \bibitem[Yacc()]{Yacc}
 \textbf{\textbf{Yacc}}.

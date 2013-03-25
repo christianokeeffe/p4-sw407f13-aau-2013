@@ -5,13 +5,13 @@ The main purpose of the parser is to analyze the tokens and check if the source 
 
 Generally there are two different approaches to parsing: top-down and bottom-up. Before describing the different approaches to parsing, it is worth to describe derivation shortly. Derivations is how the parser will create the parse tree. Either it will be built leftmost or it will be built rightmost. Leftmost-derivation is where the parser will take the terminal that is most to the left, and create a derivation for that. A rightmost-derivation is the opposite: The parser chooses the first terminal from the right, and creates a derivation for that. 
 
-\subsection{Top-down parsers}
+\subsection{Top-down Parsers}
 Then top-down parser starts at the root and works its way to the leaves in a depth-first manner, doing a pre-order traversal of the parse tree. This is done by reading tokens from left to right using a leftmost derivation. Furthermore top-down parsers can be split into table-driven LL and recursive descent parse algorithms.
 
 \subsubsection*{Table-driven LL Parsers}
 Uses a parse table to determine what to do next. The entries in the parse table is determined by the particular LL(k) grammar. The parser then searches the table to see what to do.
 
-\subsubsection*{Recursive-descent parser}
+\subsubsection*{Recursive-descent Parser}
 The recursive-descent parsers consists of mutually recursive parsing routines. Each of the non-terminals in the grammar has a parsing procedure that determines if the token stream contains a sequence of tokens derivable from that non-terminal.
 
 \subsection{Bottom-Up Parsers}

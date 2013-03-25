@@ -33,9 +33,9 @@
 \contentsline {subsection}{\numberline {4.5.4}Type - 0: Recursively Enumerable}{14}{subsection.4.5.4}
 \contentsline {subsection}{\numberline {4.5.5}choice of Grammar}{14}{subsection.4.5.5}
 \contentsline {section}{\numberline {4.6}Grammar}{14}{section.4.6}
-\contentsline {subsection}{\numberline {4.6.1}Lexical analyzer}{15}{subsection.4.6.1}
+\contentsline {subsection}{\numberline {4.6.1}Lexical Analyzer}{15}{subsection.4.6.1}
 \contentsline {section}{\numberline {4.7}Parser}{16}{section.4.7}
-\contentsline {subsection}{\numberline {4.7.1}Top-down parsers}{16}{subsection.4.7.1}
+\contentsline {subsection}{\numberline {4.7.1}Top-down Parsers}{16}{subsection.4.7.1}
 \contentsline {subsection}{\numberline {4.7.2}Bottom-Up Parsers}{17}{subsection.4.7.2}
 \contentsline {subsection}{\numberline {4.7.3}Abstract Syntax Trees}{17}{subsection.4.7.3}
 \contentsline {section}{\numberline {4.8}Semantics}{17}{section.4.8}
@@ -43,13 +43,13 @@
 \contentsline {section}{\numberline {4.10}Code generation}{17}{section.4.10}
 \contentsline {chapter}{\chapternumberline {5}Design}{19}{chapter.5}
 \contentsline {section}{\numberline {5.1}Syntax design}{19}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Choice of grammar}{19}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.1}Choice of Grammar}{19}{subsection.5.1.1}
 \contentsline {subsection}{\numberline {5.1.2}Tokens}{24}{subsection.5.1.2}
 \contentsline {subsubsection}{Reserved Keywords}{24}{section*.18}
 \contentsline {subsubsection}{Token Specification}{25}{section*.20}
 \contentsline {section}{\numberline {5.2}Semantic design}{26}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Scoping}{26}{subsection.5.2.1}
-\contentsline {subsubsection}{Symbol tables}{26}{section*.21}
+\contentsline {subsubsection}{Symbol Tables}{26}{section*.21}
 \contentsline {subsection}{\numberline {5.2.2}Type Rules}{27}{subsection.5.2.2}
 \contentsline {section}{\numberline {5.3}Code examples}{28}{section.5.3}
 \contentsline {chapter}{\chapternumberline {6}Implementation}{29}{chapter.6}

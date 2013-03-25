@@ -31,9 +31,9 @@
 \BOOKMARK [2][-]{subsection.4.5.4}{4.5.4 Type - 0: Recursively Enumerable}{section.4.5}% 31
 \BOOKMARK [2][-]{subsection.4.5.5}{4.5.5 choice of Grammar}{section.4.5}% 32
 \BOOKMARK [1][-]{section.4.6}{4.6 Grammar}{chapter.4}% 33
-\BOOKMARK [2][-]{subsection.4.6.1}{4.6.1 Lexical analyzer}{section.4.6}% 34
+\BOOKMARK [2][-]{subsection.4.6.1}{4.6.1 Lexical Analyzer}{section.4.6}% 34
 \BOOKMARK [1][-]{section.4.7}{4.7 Parser}{chapter.4}% 35
-\BOOKMARK [2][-]{subsection.4.7.1}{4.7.1 Top-down parsers}{section.4.7}% 36
+\BOOKMARK [2][-]{subsection.4.7.1}{4.7.1 Top-down Parsers}{section.4.7}% 36
 \BOOKMARK [2][-]{subsection.4.7.2}{4.7.2 Bottom-Up Parsers}{section.4.7}% 37
 \BOOKMARK [2][-]{subsection.4.7.3}{4.7.3 Abstract Syntax Trees}{section.4.7}% 38
 \BOOKMARK [1][-]{section.4.8}{4.8 Semantics}{chapter.4}% 39
@@ -41,13 +41,13 @@
 \BOOKMARK [1][-]{section.4.10}{4.10 Code generation}{chapter.4}% 41
 \BOOKMARK [0][-]{chapter.5}{5 Design}{}% 42
 \BOOKMARK [1][-]{section.5.1}{5.1 Syntax design}{chapter.5}% 43
-\BOOKMARK [2][-]{subsection.5.1.1}{5.1.1 Choice of grammar}{section.5.1}% 44
+\BOOKMARK [2][-]{subsection.5.1.1}{5.1.1 Choice of Grammar}{section.5.1}% 44
 \BOOKMARK [2][-]{subsection.5.1.2}{5.1.2 Tokens}{section.5.1}% 45
 \BOOKMARK [3][-]{section*.18}{Reserved Keywords}{subsection.5.1.2}% 46
 \BOOKMARK [3][-]{section*.20}{Token Specification}{subsection.5.1.2}% 47
 \BOOKMARK [1][-]{section.5.2}{5.2 Semantic design}{chapter.5}% 48
 \BOOKMARK [2][-]{subsection.5.2.1}{5.2.1 Scoping}{section.5.2}% 49
-\BOOKMARK [3][-]{section*.21}{Symbol tables}{subsection.5.2.1}% 50
+\BOOKMARK [3][-]{section*.21}{Symbol Tables}{subsection.5.2.1}% 50
 \BOOKMARK [2][-]{subsection.5.2.2}{5.2.2 Type Rules}{section.5.2}% 51
 \BOOKMARK [1][-]{section.5.3}{5.3 Code examples}{chapter.5}% 52
 \BOOKMARK [0][-]{chapter.6}{6 Implementation}{}% 53

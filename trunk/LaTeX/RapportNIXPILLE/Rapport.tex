@@ -35,16 +35,18 @@
 %%%% Rapportindhold %%%%
 \chapter{Introduction}
 \ind{FormaliaIndledning}
-\ind{problemstatement}
+
 \renewcommand{\ind}[1]{\input{indhold/Analysis/#1}}
 \chapter{Problem statement}\fxfatal{problem statement mangler}
 \chapter{Analysis}
+	\ind{ourEnvironment}
 	\section{Current language}
-	\section{Embedded systems}
 	\ind{Hardware}
+	\ind{problemstatement}
 
 \renewcommand{\ind}[1]{\input{indhold/theory/#1}}
 \chapter{Theory}
+	\ind{OverviewCompiler}
 	\section{Language}
 	\ind{sprogParadigmer}
 	\section{Compilers}
@@ -53,6 +55,7 @@
 	\ind{grammartypes}
 	\ind{grammar}
 	\ind{AboutLexer}
+	\ind{parser}
 	\section{Semantics}
 	\section{Contextual analysis}
 	\section{Code generation}

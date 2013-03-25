@@ -35,6 +35,7 @@
 %%%% Rapportindhold %%%%
 \chapter{Introduction}
 \ind{FormaliaIndledning}
+\ind{problemstatement}
 \renewcommand{\ind}[1]{\input{indhold/Analysis/#1}}
 \chapter{Problem statement}\fxfatal{problem statement mangler}
 \chapter{Analysis}
@@ -42,13 +43,14 @@
 	\section{Embedded systems}
 	\section{Arduino platform}
 
-\renewcommand{\ind}[1]{\input{indhold/Theory/#1}}
+\renewcommand{\ind}[1]{\input{indhold/theory/#1}}
 \chapter{Therory}
 	\section{Language}
 	\ind{sprogParadigmer}
 	\section{Compilers}
 	
 	\section{Syntax analysis}
+	\ind{grammartypes}
 	\ind{grammar}
 	\ind{AboutLexer}
 	\section{Semantics}
@@ -60,7 +62,10 @@
 	\section{Syntax design}
 	\ind{grammarchoice}
 	\ind{BNF3}
+	\ind{TokenSpecification}
+	\section{Semantic design}
 	\ind{semantics}
+	\ind{TypeRules}
 	\section{Code examples}
 
 \renewcommand{\ind}[1]{\input{indhold/Implementation/#1}}

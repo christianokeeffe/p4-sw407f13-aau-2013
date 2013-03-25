@@ -5,30 +5,25 @@
 \alt <root> <roots>
  
 <root> $\ra$ <dcl>;
+\alt <callid> <assign>;
 \alt <function>
-\alt <comment>
+\alt <COMMENT>
 
 <dcl> $\ra$ <type> <id> <dclend>
 
-<type> $\ra$ <primitivetype> <arraytype>
+<type> $\ra$ <PRIMITIVETYPE> <arraytype>
 
-<primitivetype> $\ra$ bool
+<PRIMITIVETYPE> $\ra$ bool
 \alt double
 \alt int
 \alt char
 \alt container
 \alt string
 
-<arraytype> $\ra$ <type> [ ]
+<arraytype> $\ra$ [ ]
 \alt$\eps$
 
-<id> $\ra$ <letter> <idend>
-
-<letter> $\ra$ [a - zA - Z]
-
-<idend> $\ra$ <letter> <idend>
-	\alt <digit> <idend>
-	\alt$\eps$
+<id> $\ra$ <LETTER>
 
 <dclend> $\ra$ $\eps$
 \alt <assign> 
@@ -44,6 +39,8 @@
 <factor> $\ra$ ( <expr> )
 	\alt !(<expr>)
 	\alt <callid>
+	\alt <callid> ( <expr> )
+	\alt <callid> ( )
 	\alt <numeric>
 	\alt <string>
 	\alt <functioncall> 
@@ -53,61 +50,23 @@
 	\alt true
 	\alt false
 
-<callid> $\ra$ <id> <arraycall>
+<callid> $\ra$ <id> <arrayiden>
+\alt id
 
-<arraycall> $\ra$ [<notnulldigits>]
-\alt$\eps$
+<arrayiden> $\ra$ <ARRAYCALL>
 
-<notnulldigits> $\ra$ <notnulldigit> <digits>
+<ARRAYCALL> $\ra$ [<NOTZERODIGIT>]
 
-<notnulldigit> $\ra$ [1 - 9]
-
-<digits> $\ra$ $\eps$
-\alt <digit> <digits>
-
-<digit> $\ra$ [0 - 9]
-
-<numeric> $\ra$ <plusminus> <digitsnotempty> <numericend>
+<numeric> $\ra$ <plusminus> <DIGIT> <numericend>
 
 <plusminus> $\ra$ $\eps$
 	\alt -
-
-<digitsnotempty> $\ra$ <digit> <digits>
+	\alt +
 
 <numericend> $\ra$ $\eps$
-\alt . <digitsnotempty>
+\alt . <DIGIT>
 
-<string> $\ra$ ''<stringmidt>''
-
-<stringmidt> $\ra$ <letter> <stringmidt>
-\alt <symbol> <stringmidt>
-\alt <digit> <stringmidt>
-\alt$\eps$
-
-<symbol> $\ra$ !
-\alt \%
-\alt \^
-\alt \&
-\alt (
-\alt )
-\alt \_
-\alt +
-\alt |
-\alt \~
-\alt -
-\alt =
-\alt \`
-\alt \{
-\alt \}
-\alt [
-\alt ]
-\alt :
-\alt ;
-\alt ?
-\alt ,
-\alt .
-\alt /
-\alt ' '
+<string> $\ra$ <STRINGTOKEN>
 
 <functioncall> $\ra$ call <id> (<callexpr>)
 
@@ -141,9 +100,7 @@
 \alt OR <expr>
 \alt$\eps$
 
-<function> $\ra$  <functionstart> <functionmidt>
-
-<functionstart> $\ra$ function <id> return
+<function> $\ra$ function <id> return <functionmidt>
 
 <functionmidt> $\ra$ <type> <functionend> <expr>; end
 \alt nothing <functionend> nothing; end
@@ -172,7 +129,7 @@ begin
 	\alt <dcl>;
 	\alt <functioncall>;
 	\alt <nontermswitch>
-	\alt <comment>
+	\alt <COMMENT>
 	
 <nontermif> $\ra$ if(<expr>)
 	begin
@@ -194,7 +151,7 @@ begin
 			<stmts>
 		end
 		
-<from> $\ra$ from <expr> to <expr> step <assign>
+<from> $\ra$ from <expr> to <expr> step <callid> <assign>
 	begin
 		<stmts>
 	end
@@ -220,7 +177,15 @@ begin
 break;
 \alt$\eps$
 
-<comment> $\ra$ /* <stringmidt> */
+<STRINGTOKEN> $\ra$ '' .*? '' 
+
+<LETTER> $\ra$ [a - zA - Z]$~^+$
+
+<DIGIT> $\ra$ [0 - 9]$~^+$
+
+<NOTZERODIGIT> $\ra$ [1-9][0-9]$~^*$
+
+<COMMENT> $\ra$ /* .*? */
 
 
 \end{grammar}

@@ -12,7 +12,7 @@
 \contentsline {subsection}{\numberline {3.3.1}Hardware platform}{5}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}RFID}{6}{subsection.3.3.2}
 \contentsline {subsection}{\numberline {3.3.3}Other components}{6}{subsection.3.3.3}
-\contentsline {chapter}{\chapternumberline {4}Therory}{9}{chapter.4}
+\contentsline {chapter}{\chapternumberline {4}Theory}{9}{chapter.4}
 \contentsline {section}{\numberline {4.1}Language}{9}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Paradigms of Programming Language}{9}{subsection.4.1.1}
 \contentsline {subsubsection}{Imperative Programming}{9}{section*.2}

@@ -1,19 +1,18 @@
 % ved ikke om der skal skrive mere på - Niels
 \section{Grammartypes}
-\fxfatal{KILDER MANGLER}
-\fxfatal{INTRO MANGLER til hvad grammar types er}
-There are 4 types of grammar, where type 0 is the most unrestricted grammar, and type 3 is the more restricted grammar.
+
+The Chomsky hierarchy is a hierarchy of formal grammars. There are 4 types of grammar, where type 0 is the most unrestricted grammar, and type 3 is the more restricted grammar. The different types are described below. 
 
 \subsection{Type - 3: Regular Grammar}
-Regular grammars can be described by finite automata or regular expressions. Regular grammars are meant to be used on computers with an extremely limited amount of memory, because regular languages do not need to use a lot of memory to recognize a language.
+Regular grammars can be described by finite automata or regular expressions. Regular grammars are meant to be used on computers with an extremely limited amount of memory, because regular languages do not need to use a lot of memory to recognize a language\citep{sipser}.
 
 \subsection{Type - 2: Context-Free Grammar}
 Context-free grammars are described by substitution rules, also called productions. Substitution rules for context-free grammars can make the grammar ambiguous.
 This is a problem since different computers might yield different output for the same grammar.
-Context-Free Grammars can be described in backus naur form or by a Pushdown automata (PDA). PDA's works almost in the same way as finite automata. The difference is that a PDA uses a stack as memory to help create the output. 
+Context-Free Grammars can be described in backus naur form or by a Pushdown automata (PDA). PDA's works almost in the same way as finite automata. The difference is that a PDA uses a stack as memory to help create the output\citep{sipser}. 
 
 \subsection{Type - 1: Context-Sensitive Grammar}
-Context-sensitive grammars substitution rules have nearly the same rules as those used in Context-free grammar. But in context-sensitive the right side of the production can have more then one terminal and there can be non-terminals on the right side of the production.
+Context-sensitive grammars substitution rules have nearly the same rules as those used in Context-free grammar. But in context-sensitive the right side of the production can have more then one terminal and there can be non-terminals on the right side of the production. \fxfatal{KILDE MANGLER}
 
 \subsection{Type - 0: Recursively Enumerable}
 Recursively enumerable or unrestricted grammar is a type of grammar, where there is no restrictions on the left and right sides of the grammars productions. On top of that, a language is recursively enumerable if it is recognized by some Turing machine \citep{sipser}.  %Introduction to the theory of computation kapitel 3% 

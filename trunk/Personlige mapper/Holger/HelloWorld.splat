@@ -15,6 +15,53 @@ end
 function LCDPrint return nothing using(string text)
 begin
 	/*Function to write a string to the LCD connected to the arduino*/
+	
+	if (ReadInput(pin) > (temp + 5))
+	begin
+		state <-- false;
+		call WriteOutput(false, Heaterpin);
+	end
+	else if (ReadInput(pin) < (temp - 5))
+	begin
+		state <-- false;
+		call WriteOutput(true, Heaterpin);
+	end
+	else
+	begin
+		state <-- true;
+		call WriteOutput(false, Heaterpin);
+	end
+	
+	call Pour (coffee);
+	while (CheckTemperature(HeatsensorPin) = false)
+	begin
+		call stir(MotorPin, 2);
+	end
+	
+	switch (ReadInput())
+	begin
+		case 2:
+			call LCDPrint(Orders[1]);
+			call makedrink(1);
+			NumberOrders[1] <-- NumberOrders[1] + 1;
+			break;
+		case 25:
+			call LCDPrint(Orders[2]);
+			call makedrink(2);
+			NumberOrders[2] <-- NumberOrders[2] + 1;
+			break;
+		default:
+			call LCDPrint("Invalid ID, you my dear customer is a damn bronze scum!");
+			break;
+	end
+	
+	int x <-- 1;
+	from x to 100 step x <-- x + 1
+	begin
+		call LCDPrint(x);
+		call Delay(50);
+	end
+	
 	return nothing;
 end
 

@@ -2,12 +2,12 @@
 \select@language {english}
 \contentsline {chapter}{Prolog}{v}{chapter*.1}
 \contentsline {chapter}{\chapternumberline {1}Introduction}{1}{chapter.1}
-\contentsline {chapter}{\chapternumberline {2}Problem statement}{3}{chapter.2}
+\contentsline {chapter}{\chapternumberline {2}Problem Statement}{3}{chapter.2}
 \contentsline {chapter}{\chapternumberline {3}Analysis}{5}{chapter.3}
 \contentsline {section}{\numberline {3.1}Environment for this project}{5}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Solution in bars}{5}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}Programming an Arduino-based drinks-machine}{5}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}Current language}{6}{section.3.2}
+\contentsline {section}{\numberline {3.2}Current Language}{6}{section.3.2}
 \contentsline {section}{\numberline {3.3}Hardware}{6}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Hardware platform}{6}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}RFID}{7}{subsection.3.3.2}
@@ -25,7 +25,7 @@
 \contentsline {subsubsection}{Choice of Paradigm in This Project}{11}{section*.8}
 \contentsline {subsubsection}{Design Criteria in this Project}{11}{section*.9}
 \contentsline {section}{\numberline {4.3}Compilers}{13}{section.4.3}
-\contentsline {section}{\numberline {4.4}Syntax analysis}{13}{section.4.4}
+\contentsline {section}{\numberline {4.4}Syntax Analysis}{13}{section.4.4}
 \contentsline {section}{\numberline {4.5}Grammartypes}{13}{section.4.5}
 \contentsline {subsection}{\numberline {4.5.1}Type - 3: Regular Grammar}{13}{subsection.4.5.1}
 \contentsline {subsection}{\numberline {4.5.2}Type - 2: Context-Free Grammar}{13}{subsection.4.5.2}
@@ -39,19 +39,19 @@
 \contentsline {subsection}{\numberline {4.7.2}Bottom-Up Parsers}{17}{subsection.4.7.2}
 \contentsline {subsection}{\numberline {4.7.3}Abstract Syntax Trees}{17}{subsection.4.7.3}
 \contentsline {section}{\numberline {4.8}Semantics}{17}{section.4.8}
-\contentsline {section}{\numberline {4.9}Contextual analysis}{17}{section.4.9}
-\contentsline {section}{\numberline {4.10}Code generation}{17}{section.4.10}
+\contentsline {section}{\numberline {4.9}Contextual Analysis}{17}{section.4.9}
+\contentsline {section}{\numberline {4.10}Code Generation}{17}{section.4.10}
 \contentsline {chapter}{\chapternumberline {5}Design}{19}{chapter.5}
-\contentsline {section}{\numberline {5.1}Syntax design}{19}{section.5.1}
+\contentsline {section}{\numberline {5.1}Syntax Design}{19}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}Choice of Grammar}{19}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Tokens}{24}{subsection.5.1.2}
-\contentsline {subsubsection}{Reserved Keywords}{24}{section*.18}
-\contentsline {subsubsection}{Token Specification}{25}{section*.20}
-\contentsline {section}{\numberline {5.2}Semantic design}{26}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Scoping}{26}{subsection.5.2.1}
-\contentsline {subsubsection}{Symbol Tables}{26}{section*.21}
-\contentsline {subsection}{\numberline {5.2.2}Type Rules}{27}{subsection.5.2.2}
-\contentsline {section}{\numberline {5.3}Code examples}{28}{section.5.3}
+\contentsline {subsection}{\numberline {5.1.2}Tokens}{23}{subsection.5.1.2}
+\contentsline {subsubsection}{Reserved Keywords}{23}{section*.18}
+\contentsline {subsubsection}{Token Specification}{24}{section*.20}
+\contentsline {section}{\numberline {5.2}Semantic Design}{25}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Scoping}{25}{subsection.5.2.1}
+\contentsline {subsubsection}{Symbol Tables}{25}{section*.21}
+\contentsline {subsection}{\numberline {5.2.2}Type Rules}{26}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.3}Code Examples}{27}{section.5.3}
 \contentsline {chapter}{\chapternumberline {6}Implementation}{29}{chapter.6}
 \contentsline {section}{\numberline {6.1}Known lexers and parsers}{29}{section.6.1}
 \contentsline {subsection}{\numberline {6.1.1}Lexer}{29}{subsection.6.1.1}
@@ -67,11 +67,11 @@
 \contentsline {subsubsection}{ANTLR}{30}{section*.31}
 \contentsline {subsubsection}{JavaCC}{30}{section*.32}
 \contentsline {subsection}{\numberline {6.1.4}Comparison table}{31}{subsection.6.1.4}
-\contentsline {section}{\numberline {6.2}Scanner class creation}{31}{section.6.2}
-\contentsline {section}{\numberline {6.3}Parser generation}{31}{section.6.3}
-\contentsline {section}{\numberline {6.4}Class generator classgen}{31}{section.6.4}
-\contentsline {section}{\numberline {6.5}Scope and type checking}{31}{section.6.5}
-\contentsline {section}{\numberline {6.6}Code generation}{31}{section.6.6}
+\contentsline {section}{\numberline {6.2}Scanner Class Creation}{31}{section.6.2}
+\contentsline {section}{\numberline {6.3}Parser Generation}{31}{section.6.3}
+\contentsline {section}{\numberline {6.4}Class Generator Classgen}{31}{section.6.4}
+\contentsline {section}{\numberline {6.5}Scope and Type Checking}{31}{section.6.5}
+\contentsline {section}{\numberline {6.6}Code Generation}{31}{section.6.6}
 \contentsline {section}{\numberline {6.7}Test/evaluation}{31}{section.6.7}
 \contentsline {chapter}{\chapternumberline {7}Conclusion}{33}{chapter.7}
 \contentsline {chapter}{Bibliography}{35}{section*.35}

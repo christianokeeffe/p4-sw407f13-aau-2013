@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.10.22)  25 MAR 2013 12:53
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.10.22)  25 MAR 2013 12:57
 entering extended mode
 **C:/Users/Christian/Documents/Arbejde/UNI/P4/svn/LaTeX/RapportNIXPILLE/Rapport
 .tex
@@ -2248,27 +2248,6 @@ Overfull \hbox (44.75482pt too wide) in paragraph at lines 23--42
  []
 
 
-LaTeX Warning: Command \textbullet invalid in math mode on input line 50.
-
-
-LaTeX Warning: Command \textbullet invalid in math mode on input line 50.
-
-Missing character: There is no ˆ in font cmr10!
-
-LaTeX Warning: Command \textbullet invalid in math mode on input line 50.
-
-
-LaTeX Warning: Command \textbullet invalid in math mode on input line 50.
-
-Missing character: There is no ˆ in font cmr10!
-
-LaTeX Warning: Command \textbullet invalid in math mode on input line 50.
-
-
-LaTeX Warning: Command \textbullet invalid in math mode on input line 50.
-
-Missing character: There is no ˆ in font cmr10!
-
 LaTeX Warning: Command \textbullet invalid in math mode on input line 51.
 
 
@@ -2329,6 +2308,13 @@ LaTeX Warning: Command \textbullet invalid in math mode on input line 53.
 
 
 LaTeX Warning: Command \textbullet invalid in math mode on input line 53.
+
+Missing character: There is no ˆ in font cmr10!
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 54.
+
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 54.
 
 Missing character: There is no ˆ in font cmr10!
 
@@ -2367,6 +2353,13 @@ LaTeX Warning: Command \textbullet invalid in math mode on input line 56.
 
 Missing character: There is no ˆ in font cmr10!
 
+LaTeX Warning: Command \textbullet invalid in math mode on input line 56.
+
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 56.
+
+Missing character: There is no ˆ in font cmr10!
+
 LaTeX Warning: Command \textbullet invalid in math mode on input line 57.
 
 
@@ -2380,42 +2373,49 @@ LaTeX Warning: Command \textbullet invalid in math mode on input line 58.
 LaTeX Warning: Command \textbullet invalid in math mode on input line 58.
 
 Missing character: There is no ˆ in font cmr10!
-Package mdframed Info: mdframed works in twoside mode on input line 67.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
-)
-Package mdframed Info: mdframed inside minipage 
- mdframed uses option nobreak mdframed on input line 77.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 77.
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 59.
 
 
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 77.
-See the caption package documentation for explanation.
+LaTeX Warning: Command \textbullet invalid in math mode on input line 59.
 
+Missing character: There is no ˆ in font cmr10!
 [10]
-Package mdframed Info: mdframed works in twoside mode on input line 80.
+Package mdframed Info: mdframed works in twoside mode on input line 68.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 Package mdframed Info: mdframed inside minipage 
- mdframed uses option nobreak mdframed on input line 83.
+ mdframed uses option nobreak mdframed on input line 78.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 83.
+ mdframed uses option nobreak mdframed on input line 78.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 83.
+(caption)                particular \caption on input line 78.
+See the caption package documentation for explanation.
+
+Package mdframed Info: mdframed works in twoside mode on input line 81.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+)
+Package mdframed Info: mdframed inside minipage 
+ mdframed uses option nobreak mdframed on input line 84.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 84.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 84.
 See the caption package documentation for explanation.
 
 )
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
-theory/grammartypes.tex
+theory/grammartypes.tex [11]
 
-LaTeX Warning: Marginpar on page 11 moved by 22.24847pt.
+LaTeX Warning: Marginpar on page 12 moved by 22.24847pt.
 
-[11])
+)
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
 theory/grammar.tex [12])
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
@@ -2494,10 +2494,10 @@ Package rerunfilecheck Info: File `Rapport.out' has not changed.
 (rerunfilecheck)             Checksum: 06A328D0D9C5BAA9520C3AE07C951991;4599.
  ) 
 Here is how much of TeX's memory you used:
- 35537 strings out of 493921
- 645926 string characters out of 3147269
- 733389 words of memory out of 3000000
- 37965 multiletter control sequences out of 15000+200000
+ 35535 strings out of 493921
+ 645899 string characters out of 3147269
+ 730389 words of memory out of 3000000
+ 37963 multiletter control sequences out of 15000+200000
  29156 words of font info for 71 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
  63i,20n,80p,1179b,1696s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2523,7 +2523,7 @@ MiKTeX 2.9/fonts/type1/public/cm-super/sfti1000.pfb><C:/Program Files/MiKTeX 2.
 ype1/public/cm-super/sftt1000.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/
 bookman/ubkd8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/bookman/ubkl8a.
 pfb>
-Output written on Rapport.pdf (43 pages, 652816 bytes).
+Output written on Rapport.pdf (43 pages, 652845 bytes).
 PDF statistics:
  844 PDF objects out of 1000 (max. 8388607)
  170 named destinations out of 1000 (max. 500000)

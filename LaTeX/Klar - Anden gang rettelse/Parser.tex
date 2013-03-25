@@ -6,7 +6,7 @@ The main purpose of the parser is to analyze the tokens and check if the source 
 Generally there are two different approaches to parsing: top-down and bottom-up.
 
 \subsection*{Top-down parsers}
-Then top-down parser starts at the root and works its way to the leaves in a depth-first manner, doing a preorder traversal if the parse tree.  This is done by reading tokens from left to right using a leftmost derivation. Top-down parsers can further more be split into table-driven LL  and recursive descent parse algorithms.
+Then top-down parser starts at the root and works its way to the leaves in a depth-first manner, doing a pre-order traversal of the parse tree. This is done by reading tokens from left to right using a leftmost derivation. Furthermore top-down parsers can  be split into table-driven LL  and recursive descent parse algorithms.
 
 Table-driven LL Parsers:
 Uses a parse table to determine what to do next. The entries in the parse table is determined by the particular LL(k) grammar. The parser then searches the table to see what to do.
@@ -16,11 +16,11 @@ The recursive-descent parsers consists of mutually recursive parsing routines. E
 
 \subsection*{Bottom-Up Parsers}
 
-A Bottom-up parser on the other has do a postorder traversal of the parse tree, meaning that it starts from the leaves and works towards the root.
+A bottom-up parser has to do a postorder traversal of the parse tree, meaning that it starts from the leaves and works towards the root.
 A bottom-up parser is more powerful and efficient than a top-down parser, but not as simple.
 
 LR:
-A LR parser reads from left to right and uses a reversed rightmost derivation. It is as the LL parser driven from a parse table. The biggest difference is how is it derived and how the parse table is handled.  
+A LR parser reads from left to right and because it is a bottom-up parser it uses a reversed rightmost derivation which means it takes terminals and turn them into non-terminals. It is as the LL parser driven from a parse table. The biggest difference is how it is derived and how the parse table is handled.  
 
 LALR:
 A LALR(Lookahead Ahead LR) parser is one of the most commonly used algorithms today, because it is a powerful algorithm but do not need a very large parse table. It works like the LR parser.
@@ -28,4 +28,4 @@ A LALR(Lookahead Ahead LR) parser is one of the most commonly used algorithms to
 \subsection*{Abstract Syntax Trees}
 The parser generates an abstract syntax tree (AST) \citep{CraftingACompiler}, which is an abstract data type describing the structure of the source program. This means that the AST contains information about which constructs the source program contains. More specifically, each node in the AST represent a construct in the source language, for example an 'if'-block.
 
-When the AST has been generated, it decorated with types by the type checker. The type checker traverses the AST, and checks the static semantics of each node, which means that it verifies that the node represent valid constructs. If each node is correct it is returned to the translator \citep{CraftingACompiler}. The translator then uses the AST to an intermediate representation (IR code), which is used in the further phases of the compiler.
+When the AST has been generated, it is decorated with types by the type checker. The type checker traverses the AST, and checks the static semantics of each node, which means that it verifies that the node represent valid constructs. If each node is correct it is returned to the translator \citep{CraftingACompiler}. The translator then uses the AST to an intermediate representation (IR code), which is used in the later phases of the compiler.

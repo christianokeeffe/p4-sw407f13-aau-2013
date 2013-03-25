@@ -1,11 +1,11 @@
 \BOOKMARK [0][-]{chapter*.1}{Prolog}{}% 1
 \BOOKMARK [0][-]{chapter.1}{1 Introduction}{}% 2
-\BOOKMARK [0][-]{chapter.2}{2 Problem statement}{}% 3
+\BOOKMARK [0][-]{chapter.2}{2 Problem Statement}{}% 3
 \BOOKMARK [0][-]{chapter.3}{3 Analysis}{}% 4
 \BOOKMARK [1][-]{section.3.1}{3.1 Environment for this project}{chapter.3}% 5
 \BOOKMARK [2][-]{subsection.3.1.1}{3.1.1 Solution in bars}{section.3.1}% 6
 \BOOKMARK [2][-]{subsection.3.1.2}{3.1.2 Programming an Arduino-based drinks-machine}{section.3.1}% 7
-\BOOKMARK [1][-]{section.3.2}{3.2 Current language}{chapter.3}% 8
+\BOOKMARK [1][-]{section.3.2}{3.2 Current Language}{chapter.3}% 8
 \BOOKMARK [1][-]{section.3.3}{3.3 Hardware}{chapter.3}% 9
 \BOOKMARK [2][-]{subsection.3.3.1}{3.3.1 Hardware platform}{section.3.3}% 10
 \BOOKMARK [2][-]{subsection.3.3.2}{3.3.2 RFID}{section.3.3}% 11
@@ -23,7 +23,7 @@
 \BOOKMARK [3][-]{section*.8}{Choice of Paradigm in This Project}{subsection.4.2.1}% 23
 \BOOKMARK [3][-]{section*.9}{Design Criteria in this Project}{subsection.4.2.1}% 24
 \BOOKMARK [1][-]{section.4.3}{4.3 Compilers}{chapter.4}% 25
-\BOOKMARK [1][-]{section.4.4}{4.4 Syntax analysis}{chapter.4}% 26
+\BOOKMARK [1][-]{section.4.4}{4.4 Syntax Analysis}{chapter.4}% 26
 \BOOKMARK [1][-]{section.4.5}{4.5 Grammartypes}{chapter.4}% 27
 \BOOKMARK [2][-]{subsection.4.5.1}{4.5.1 Type - 3: Regular Grammar}{section.4.5}% 28
 \BOOKMARK [2][-]{subsection.4.5.2}{4.5.2 Type - 2: Context-Free Grammar}{section.4.5}% 29
@@ -37,19 +37,19 @@
 \BOOKMARK [2][-]{subsection.4.7.2}{4.7.2 Bottom-Up Parsers}{section.4.7}% 37
 \BOOKMARK [2][-]{subsection.4.7.3}{4.7.3 Abstract Syntax Trees}{section.4.7}% 38
 \BOOKMARK [1][-]{section.4.8}{4.8 Semantics}{chapter.4}% 39
-\BOOKMARK [1][-]{section.4.9}{4.9 Contextual analysis}{chapter.4}% 40
-\BOOKMARK [1][-]{section.4.10}{4.10 Code generation}{chapter.4}% 41
+\BOOKMARK [1][-]{section.4.9}{4.9 Contextual Analysis}{chapter.4}% 40
+\BOOKMARK [1][-]{section.4.10}{4.10 Code Generation}{chapter.4}% 41
 \BOOKMARK [0][-]{chapter.5}{5 Design}{}% 42
-\BOOKMARK [1][-]{section.5.1}{5.1 Syntax design}{chapter.5}% 43
+\BOOKMARK [1][-]{section.5.1}{5.1 Syntax Design}{chapter.5}% 43
 \BOOKMARK [2][-]{subsection.5.1.1}{5.1.1 Choice of Grammar}{section.5.1}% 44
 \BOOKMARK [2][-]{subsection.5.1.2}{5.1.2 Tokens}{section.5.1}% 45
 \BOOKMARK [3][-]{section*.18}{Reserved Keywords}{subsection.5.1.2}% 46
 \BOOKMARK [3][-]{section*.20}{Token Specification}{subsection.5.1.2}% 47
-\BOOKMARK [1][-]{section.5.2}{5.2 Semantic design}{chapter.5}% 48
+\BOOKMARK [1][-]{section.5.2}{5.2 Semantic Design}{chapter.5}% 48
 \BOOKMARK [2][-]{subsection.5.2.1}{5.2.1 Scoping}{section.5.2}% 49
 \BOOKMARK [3][-]{section*.21}{Symbol Tables}{subsection.5.2.1}% 50
 \BOOKMARK [2][-]{subsection.5.2.2}{5.2.2 Type Rules}{section.5.2}% 51
-\BOOKMARK [1][-]{section.5.3}{5.3 Code examples}{chapter.5}% 52
+\BOOKMARK [1][-]{section.5.3}{5.3 Code Examples}{chapter.5}% 52
 \BOOKMARK [0][-]{chapter.6}{6 Implementation}{}% 53
 \BOOKMARK [1][-]{section.6.1}{6.1 Known lexers and parsers}{chapter.6}% 54
 \BOOKMARK [2][-]{subsection.6.1.1}{6.1.1 Lexer}{section.6.1}% 55
@@ -65,11 +65,11 @@
 \BOOKMARK [3][-]{section*.31}{ANTLR}{subsection.6.1.3}% 65
 \BOOKMARK [3][-]{section*.32}{JavaCC}{subsection.6.1.3}% 66
 \BOOKMARK [2][-]{subsection.6.1.4}{6.1.4 Comparison table}{section.6.1}% 67
-\BOOKMARK [1][-]{section.6.2}{6.2 Scanner class creation}{chapter.6}% 68
-\BOOKMARK [1][-]{section.6.3}{6.3 Parser generation}{chapter.6}% 69
-\BOOKMARK [1][-]{section.6.4}{6.4 Class generator classgen}{chapter.6}% 70
-\BOOKMARK [1][-]{section.6.5}{6.5 Scope and type checking}{chapter.6}% 71
-\BOOKMARK [1][-]{section.6.6}{6.6 Code generation}{chapter.6}% 72
+\BOOKMARK [1][-]{section.6.2}{6.2 Scanner Class Creation}{chapter.6}% 68
+\BOOKMARK [1][-]{section.6.3}{6.3 Parser Generation}{chapter.6}% 69
+\BOOKMARK [1][-]{section.6.4}{6.4 Class Generator Classgen}{chapter.6}% 70
+\BOOKMARK [1][-]{section.6.5}{6.5 Scope and Type Checking}{chapter.6}% 71
+\BOOKMARK [1][-]{section.6.6}{6.6 Code Generation}{chapter.6}% 72
 \BOOKMARK [1][-]{section.6.7}{6.7 Test/evaluation}{chapter.6}% 73
 \BOOKMARK [0][-]{chapter.7}{7 Conclusion}{}% 74
 \BOOKMARK [0][-]{section*.35}{Bibliography}{}% 75

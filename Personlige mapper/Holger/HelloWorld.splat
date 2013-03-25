@@ -1,4 +1,10 @@
 double intb<-- 5231.6345;
+int [] NumberOrders;
+string [] Orders;
+Orders [1] <-- "Varm Drink";
+Orders [2] <-- "Cold Drink";
+NumberOrders [10] <-- 0;
+NumberOrders [2] <-- 0;
 
 function setup return nothing using()
 begin

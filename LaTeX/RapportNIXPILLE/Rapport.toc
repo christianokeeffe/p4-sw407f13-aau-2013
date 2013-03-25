@@ -43,29 +43,29 @@
 \contentsline {section}{\numberline {4.10}Code generation}{17}{section.4.10}
 \contentsline {chapter}{\chapternumberline {5}Design}{19}{chapter.5}
 \contentsline {section}{\numberline {5.1}Syntax design}{19}{section.5.1}
-\contentsline {section}{\numberline {5.2}Choice of grammar}{19}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Tokens}{24}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.1.1}Choice of grammar}{19}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Tokens}{24}{subsection.5.1.2}
 \contentsline {subsubsection}{Reserved Keywords}{24}{section*.18}
-\contentsline {subsubsection}{Token Specification}{25}{section*.19}
-\contentsline {section}{\numberline {5.3}Semantic design}{25}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Scoping}{26}{subsection.5.3.1}
-\contentsline {subsubsection}{Symbol tables}{26}{section*.20}
-\contentsline {subsection}{\numberline {5.3.2}Type Rules}{26}{subsection.5.3.2}
-\contentsline {section}{\numberline {5.4}Code examples}{27}{section.5.4}
+\contentsline {subsubsection}{Token Specification}{25}{section*.20}
+\contentsline {section}{\numberline {5.2}Semantic design}{26}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Scoping}{26}{subsection.5.2.1}
+\contentsline {subsubsection}{Symbol tables}{26}{section*.21}
+\contentsline {subsection}{\numberline {5.2.2}Type Rules}{27}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.3}Code examples}{28}{section.5.3}
 \contentsline {chapter}{\chapternumberline {6}Implementation}{29}{chapter.6}
 \contentsline {section}{\numberline {6.1}Known lexers and parsers}{29}{section.6.1}
 \contentsline {subsection}{\numberline {6.1.1}Lexer}{29}{subsection.6.1.1}
-\contentsline {subsubsection}{Lex}{29}{section*.23}
-\contentsline {subsubsection}{Flex}{29}{section*.24}
-\contentsline {subsubsection}{Jflex}{29}{section*.25}
-\contentsline {subsubsection}{Jlex}{29}{section*.26}
+\contentsline {subsubsection}{Lex}{29}{section*.24}
+\contentsline {subsubsection}{Flex}{29}{section*.25}
+\contentsline {subsubsection}{Jflex}{29}{section*.26}
+\contentsline {subsubsection}{Jlex}{29}{section*.27}
 \contentsline {subsection}{\numberline {6.1.2}Parser}{30}{subsection.6.1.2}
-\contentsline {subsubsection}{Yacc}{30}{section*.27}
-\contentsline {subsubsection}{Cup}{30}{section*.28}
+\contentsline {subsubsection}{Yacc}{30}{section*.28}
+\contentsline {subsubsection}{Cup}{30}{section*.29}
 \contentsline {subsection}{\numberline {6.1.3}Lexer and parser}{30}{subsection.6.1.3}
-\contentsline {subsubsection}{SableCC}{30}{section*.29}
-\contentsline {subsubsection}{ANTLR}{30}{section*.30}
-\contentsline {subsubsection}{JavaCC}{30}{section*.31}
+\contentsline {subsubsection}{SableCC}{30}{section*.30}
+\contentsline {subsubsection}{ANTLR}{30}{section*.31}
+\contentsline {subsubsection}{JavaCC}{30}{section*.32}
 \contentsline {subsection}{\numberline {6.1.4}Comparison table}{31}{subsection.6.1.4}
 \contentsline {section}{\numberline {6.2}Scanner class creation}{31}{section.6.2}
 \contentsline {section}{\numberline {6.3}Parser generation}{31}{section.6.3}
@@ -74,7 +74,7 @@
 \contentsline {section}{\numberline {6.6}Code generation}{31}{section.6.6}
 \contentsline {section}{\numberline {6.7}Test/evaluation}{31}{section.6.7}
 \contentsline {chapter}{\chapternumberline {7}Conclusion}{33}{chapter.7}
-\contentsline {chapter}{Bibliography}{35}{section*.34}
+\contentsline {chapter}{Bibliography}{35}{section*.35}
 \contentsline {chapter}{\chapternumberline {8}Appendix}{39}{chapter.8}
 \cftpagenumbersoff {chapter}
 \changetocdepth {0}

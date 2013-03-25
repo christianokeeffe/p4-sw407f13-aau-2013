@@ -61,41 +61,12 @@
 
 <plusminus> $\ra$ $\eps$
 	\alt -
+	\alt +
 
 <numericend> $\ra$ $\eps$
 \alt . <DIGIT>
 
-<string> $\ra$ ''<stringmidt>''
-
-<stringmidt> $\ra$ <LETTER> <stringmidt>
-\alt <symbol> <stringmidt>
-\alt <DIGIT> <stringmidt>
-\alt$\eps$
-
-<symbol> $\ra$ !
-\alt \%
-\alt \^
-\alt \&
-\alt (
-\alt )
-\alt \_
-\alt +
-\alt |
-\alt \~
-\alt -
-\alt =
-\alt \`
-\alt \{
-\alt \}
-\alt [
-\alt ]
-\alt :
-\alt ;
-\alt ?
-\alt ,
-\alt .
-\alt /
-\alt ' '
+<string> $\ra$ <STRINGTOKEN>
 
 <functioncall> $\ra$ call <id> (<callexpr>)
 
@@ -205,6 +176,8 @@ begin
 <stmts>
 break;
 \alt$\eps$
+
+<STRINGTOKEN> $\ra$ '' .*? ''
 
 <LETTER> $\ra$ [a - zA - Z]$~^+$
 

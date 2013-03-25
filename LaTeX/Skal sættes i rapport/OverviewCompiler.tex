@@ -4,11 +4,11 @@
 
 Figure \ref{CraftingACompiler2} shows an overview of each of the different phases in the compiler, what each phase requires as input, and what each step returns to the next phase.
 
-A compiler is a fundamental part of modern computing. Their job is to translate programming language into machine language. A compiler allows programs to virtually all computers to ignore the machine-dependent details of machine language and therefor be portable across a lot of different computers  \citep{CraftingACompiler}.
+A compiler is a fundamental part of modern computing. Their job is to translate programming language into machine language. A compiler allows programs to make a virtual computer to ignore the machine-dependency details of machine language and therefor be portable across different computers  \citep{CraftingACompiler}.
 
 \figur{0.8}{OverviewCompiler.PNG}{This is another overview of how the compiler is structured.}{fig:OverviewCompiler}
 
-A compiler consists of 3 different phases. The different phases roughly correspond to the different parts in a language specification which can be seen on figur \ref{OverviewCompiler}. The syntax analysis correspond to the syntax, the contextual analysis to the contextual constraints and the code generation phase roughly corresponds to the semantics.
+A compiler consists of 3 different phases. The different phases roughly correspond to the different parts in a language specification which can be seen on figure \ref{OverviewCompiler}. The syntax analysis correspond to the syntax, the contextual analysis to the contextual constraints and the code generation phase roughly corresponds to the semantics.
 
 Given a simple compiler it will go through more than three phases. This can be seen on figure \ref{OverviewCompiler2}. In the syntax analysis phase the compiler consists of a scanner and a parser. The scanner takes the source program and transforms it into a stream of tokens. The parser then uses the tokens to create an abstract syntax tree (AST). In the contextual analysis a symbol table is created from the abstract syntax tree. At the end, the semantic analysis decorate the AST, and translates this into the target language.
 

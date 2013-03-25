@@ -20,6 +20,21 @@ Warning--empty year in ANTLR
 1 is an integer literal, not a string, for entry ANTLR
 while executing---line 1516 of file bibtex/harvard.bst
 Warning--empty  in ANTLR
+Warning--empty year in ArduinoLCD
+Warning--empty year in ArduinoLCD
+1 is an integer literal, not a string, for entry ArduinoLCD
+while executing---line 1516 of file bibtex/harvard.bst
+Warning--empty  in ArduinoLCD
+Warning--empty year in ArduinoLanguage
+Warning--empty year in ArduinoLanguage
+1 is an integer literal, not a string, for entry ArduinoLanguage
+while executing---line 1516 of file bibtex/harvard.bst
+Warning--empty  in ArduinoLanguage
+Warning--empty year in ArduinoUno
+Warning--empty year in ArduinoUno
+1 is an integer literal, not a string, for entry ArduinoUno
+while executing---line 1516 of file bibtex/harvard.bst
+Warning--empty  in ArduinoUno
 Warning--empty year in CUP
 Warning--empty year in CUP
 1 is an integer literal, not a string, for entry CUP
@@ -65,6 +80,11 @@ while executing---line 1516 of file bibtex/harvard.bst
 Warning--empty  in Javacc
 0 is an integer literal, not a string, for entry ProgrammingParadigms
 while executing---line 1516 of file bibtex/harvard.bst
+Warning--empty year in Teensy
+Warning--empty year in Teensy
+1 is an integer literal, not a string, for entry Teensy
+while executing---line 1516 of file bibtex/harvard.bst
+Warning--empty  in Teensy
 Warning--empty year in SableCC
 Warning--empty year in SableCC
 1 is an integer literal, not a string, for entry SableCC
@@ -74,9 +94,18 @@ Warning--empty  in SableCC
 while executing---line 1516 of file bibtex/harvard.bst
 1 is an integer literal, not a string, for entry sipser
 while executing---line 1516 of file bibtex/harvard.bst
+0 is an integer literal, not a string, for entry RFID
+while executing---line 1516 of file bibtex/harvard.bst
+Warning--empty year in Seedui
+Warning--empty year in Seedui
+1 is an integer literal, not a string, for entry Seedui
+while executing---line 1516 of file bibtex/harvard.bst
+Warning--empty  in Seedui
+0 is an integer literal, not a string, for entry Netdui
+while executing---line 1516 of file bibtex/harvard.bst
 Warning--empty year in Yacc
 Warning--empty year in Yacc
 1 is an integer literal, not a string, for entry Yacc
 while executing---line 1516 of file bibtex/harvard.bst
 Warning--empty  in Yacc
-(There were 22 error messages)
+(There were 29 error messages)

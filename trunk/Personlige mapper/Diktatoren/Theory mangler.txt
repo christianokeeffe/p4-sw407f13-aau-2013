@@ -1,0 +1,13 @@
+Theory - Language - Paradigms of Programming Language (ingen tekst)
+
+mangler 4.2 Compilers
+
+mangler 4.3 Syntax analysis
+
+mangler 4.6 Semantics
+
+mangler 4.7 Contextual analysis
+
+mangler 4.8 Code generation
+
+under 4.5 Grammar LL(k)wherek > 1 --> LL(k) where k > 1

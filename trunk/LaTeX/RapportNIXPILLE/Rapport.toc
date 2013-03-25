@@ -21,9 +21,9 @@
 \contentsline {subsubsection}{Object-Oriented Programming}{9}{section*.5}
 \contentsline {subsubsection}{Choice of Paradigm in This Project}{10}{section*.6}
 \contentsline {subsubsection}{Design Criteria in this Project}{10}{section*.7}
-\contentsline {section}{\numberline {4.2}Compilers}{11}{section.4.2}
-\contentsline {section}{\numberline {4.3}Syntax analysis}{11}{section.4.3}
-\contentsline {section}{\numberline {4.4}Grammartypes}{11}{section.4.4}
+\contentsline {section}{\numberline {4.2}Compilers}{12}{section.4.2}
+\contentsline {section}{\numberline {4.3}Syntax analysis}{12}{section.4.3}
+\contentsline {section}{\numberline {4.4}Grammartypes}{12}{section.4.4}
 \contentsline {subsection}{\numberline {4.4.1}Type - 3: Regular Grammar}{12}{subsection.4.4.1}
 \contentsline {subsection}{\numberline {4.4.2}Type - 2: Context-Free Grammar}{12}{subsection.4.4.2}
 \contentsline {subsection}{\numberline {4.4.3}Type - 1: Context-Sensitive Grammar}{12}{subsection.4.4.3}

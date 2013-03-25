@@ -5,47 +5,46 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[ard()]{arduinobuild}
-\textbf{\textbf{JJTree}}.
-\newblock \textit{Arduino Build Process}.
-\newblock Web.
-\newblock URL \url{http://arduino.cc/en/Hacking/BuildProcess}.
-
 \bibitem[Antlr()]{ANTLR}
 \textbf{\textbf{Antlr}}.
 \newblock Antlr.
 \newblock \textit{Theory behind Antlr}.
-\newblock URL \url{http://www.antlr.org/about.html}.
+\newblock \url{http://www.antlr.org/about.html} [Last seen: 2013/03/15].
 
 \bibitem[Arduino({\natexlab{a}})]{ArduinoLCD}
 \textbf{Arduino}, \textbf{{\natexlab{a}}}.
 \newblock Arduino.
 \newblock \textit{Liquid Crystal}.
-\newblock \url{http://arduino.cc/en/Tutorial/LiquidCrystal} [Last viewed:
-  18-02-2013].
-\newblock URL \url{http://arduino.cc/en/Tutorial/LiquidCrystal}.
+\newblock \url{http://arduino.cc/en/Tutorial/LiquidCrystal} [Last seen:
+  2013/02/18].
 
 \bibitem[Arduino({\natexlab{b}})]{ArduinoLanguage}
 \textbf{Arduino}, \textbf{{\natexlab{b}}}.
 \newblock Arduino.
 \newblock \textit{Language Reference}.
-\newblock \url{http://arduino.cc/en/Reference/HomePage} [Last viewed:
-  19-02-2013].
-\newblock URL \url{http://arduino.cc/en/Reference/HomePage}.
+\newblock \url{http://arduino.cc/en/Reference/HomePage} [Last seen:
+  2013/02/19].
 
 \bibitem[Arduino({\natexlab{c}})]{ArduinoUno}
 \textbf{Arduino}, \textbf{{\natexlab{c}}}.
 \newblock Arduino.
 \newblock \textit{Arduino Uno}.
-\newblock \url{http://arduino.cc/en/Main/ArduinoBoardUno} [Last viewed:
-  18-02-2013].
-\newblock URL \url{http://arduino.cc/en/Main/ArduinoBoardUno}.
+\newblock \url{http://arduino.cc/en/Main/ArduinoBoardUno} [Last seen:
+  2013/02/18].
+
+\bibitem[Arduino({\natexlab{d}})]{arduinobuild}
+\textbf{Arduino}, \textbf{{\natexlab{d}}}.
+\newblock Arduino.
+\newblock \textit{Arduino Build Process}.
+\newblock \url{http://arduino.cc/en/Hacking/BuildProcess} [Last seen:
+  2013/03/22].
 
 \bibitem[Cup()]{CUP}
 \textbf{\textbf{Cup}}.
 \newblock Cup.
 \newblock \textit{Theory behind CUP}.
-\newblock URL \url{http://www2.cs.tum.edu/projects/cup/manual.html}.
+\newblock \url{http://www2.cs.tum.edu/projects/cup/manual.html} [Last seen:
+  2013/03/15].
 
 \bibitem[Fischer et~al.(2009)Fischer, Ron, og Richard]{CraftingACompiler}
 \textbf{Fischer et~al.}, \textbf{2009}.
@@ -57,62 +56,65 @@
 \textbf{\textbf{Flex}}.
 \newblock Flex.
 \newblock \textit{Theory behind Flex}.
-\newblock URL \url{http://flex.sourceforge.net/manual/}.
+\newblock \url{http://flex.sourceforge.net/manual/} [Last seen: 2013/03/15].
 
 \bibitem[Jflex()]{Jflex}
 \textbf{\textbf{Jflex}}.
 \newblock Jflex.
 \newblock \textit{Theory behind Jflex}.
-\newblock URL \url{http://jflex.de/manual.html#SECTION00040000000000000000}.
+\newblock \url{http://jflex.de/manual.html\#SECTION00040000000000000000} [Last
+  seen: 2013/03/15].
 
 \bibitem[JJTree()]{JJTree}
 \textbf{\textbf{JJTree}}.
 \newblock JJTree.
 \newblock \textit{JJTree to JavaCC}.
-\newblock URL
-  \url{http://tomcopeland.blogs.com/juniordeveloper/2007/10/better-jjtree-v.html}.
+\newblock
+  \url{http://tomcopeland.blogs.com/juniordeveloper/2007/10/better-jjtree-v.html}
+  [Last seen: 2013/03/15].
 
 \bibitem[Jlex()]{Jlex}
 \textbf{\textbf{Jlex}}.
 \newblock Jlex.
 \newblock \textit{Theory behind Jlex}.
-\newblock URL
-  \url{http://www.cs.princeton.edu/~appel/modern/java/JLex/current/manual.html}.
+\newblock
+  \url{http://www.cs.princeton.edu/~appel/modern/java/JLex/current/manual.html}
+  [Last seen: 2013/03/15].
 
 \bibitem[Lex()]{Lex}
 \textbf{\textbf{Lex}}.
 \newblock Lex.
 \newblock \textit{Theory behind Lex}.
-\newblock URL \url{http://dinosaur.compilertools.net/lex/index.html}.
+\newblock \url{http://dinosaur.compilertools.net/lex/index.html} [Last seen:
+  2013/03/15].
 
 \bibitem[Norvell()]{Javacc}
 \textbf{\textbf{Norvell}}.
 \newblock Theodore~S. Norvell.
 \newblock \textit{The JavaCC FAQ}.
-\newblock URL
-  \url{http://www.engr.mun.ca/~theo/JavaCC-FAQ/javacc-faq-moz.htm#jjtree-and-jtb}.
+\newblock
+  \url{http://www.engr.mun.ca/~theo/JavaCC-FAQ/javacc-faq-moz.htm\#jjtree-and-jtb}
+  [Last seen: 2013/03/15].
 
 \bibitem[Nørmark(2010)]{ProgrammingParadigms}
 \textbf{Nørmark}, \textbf{July 7 2010}.
 \newblock Kurt Nørmark.
 \newblock \textit{Overview of the four main programming paradigms}.
-\newblock web, 2010.
-\newblock URL
-  \url{http://people.cs.aau.dk/\~normark/prog3-03/html/notes/paradigms\_themes-paradigm-overview-section.html}.
+\newblock
+  \url{http://people.cs.aau.dk/\~normark/prog3-03/html/notes/paradigms\_themes-paradigm-overview-section.html}
+  [Last seen: 2013/03/19], 2010.
 
 \bibitem[PJRC()]{Teensy}
 \textbf{\textbf{PJRC}}.
 \newblock PJRC.
 \newblock \textit{Teensy USB Development Board}.
-\newblock \url{http://www.pjrc.com/teensy/index.html} [Last viewed:
-  11-03-2013].
-\newblock URL \url{http://www.pjrc.com/teensy/index.html}.
+\newblock \url{http://www.pjrc.com/teensy/index.html} [Last seen: 2013/03/11].
 
 \bibitem[SableCC()]{SableCC}
 \textbf{\textbf{SableCC}}.
 \newblock SableCC.
 \newblock \textit{SableCC homesite}.
-\newblock URL \url{http://sablecc.org/wiki}.
+\newblock \url{http://sablecc.org/wiki} [Last seen: 2013/03/15].
 
 \bibitem[Sebesta(2009)]{sebesta}
 \textbf{Sebesta}, \textbf{2009}.
@@ -126,13 +128,12 @@
 \newblock \textit{Introduction to the Theory of Computation}.
 \newblock PWS Publishing, 3 udgave, 2013.
 
-\bibitem[Specialisten(2013)]{RFID}
-\textbf{Specialisten}, \textbf{2 2013}.
+\bibitem[Specialisten()]{RFID}
+\textbf{\textbf{Specialisten}}.
 \newblock RFID Specialisten.
 \newblock \textit{RFID}.
-\newblock \url{http://www.rfid-specialisten.dk/rfid.asp} [Last viewed:
-  15-02-2013], 2013.
-\newblock URL \url{http://www.rfid-specialisten.dk/rfid.asp}.
+\newblock \url{http://www.rfid-specialisten.dk/rfid.asp} [Last seen:
+  2013/02/15].
 
 \bibitem[Studio()]{Seedui}
 \textbf{\textbf{Studio}}.
@@ -140,9 +141,7 @@
 \newblock \textit{Seeduino Stalker V2}.
 \newblock
   \url{http://www.seeedstudio.com/depot/seeeduino-stalker-v2-p-727.html?cPath=80}
-  [Last viewed: 11-03-2013].
-\newblock URL
-  \url{http://www.seeedstudio.com/depot/seeeduino-stalker-v2-p-727.html?cPath=80}.
+  [Last seen: 2013/03/11].
 
 \bibitem[Walker(2012)]{Netdui}
 \textbf{Walker}, \textbf{April 2012}.
@@ -150,14 +149,13 @@
 \newblock \textit{Introducing Netduino Go}.
 \newblock
   \url{http://forums.netduino.com/index.php?/topic/3867-introducing-netduino-go/}
-  [Last viewed: 11-03-2013], 2012.
-\newblock URL
-  \url{http://forums.netduino.com/index.php?/topic/3867-introducing-netduino-go/}.
+  [Last seen: 2013/03/11], 2012.
 
 \bibitem[Yacc()]{Yacc}
 \textbf{\textbf{Yacc}}.
 \newblock Yacc.
 \newblock \textit{Theory behind Yacc}.
-\newblock URL \url{http://dinosaur.compilertools.net/yacc/index.html}.
+\newblock \url{http://dinosaur.compilertools.net/yacc/index.html} [Last seen:
+  2013/03/15].
 
 \end{thebibliography}

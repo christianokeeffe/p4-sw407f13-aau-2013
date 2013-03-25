@@ -7,14 +7,6 @@ Name 1 in "Charles N. Fischer, and Ron, K. Cyton and Richard, J. LeBlanc. Jr." h
 while executing---line 1434 of file bibtex/harvard.bst
 Name 1 in "Charles N. Fischer, and Ron, K. Cyton and Richard, J. LeBlanc. Jr." has a comma at the end for entry CraftingACompiler
 while executing---line 1434 of file bibtex/harvard.bst
-Warning--to sort, need author or key in arduinobuild
-`editor' is a missing field, not a string, for entry arduinobuild
-while executing---line 1516 of file bibtex/harvard.bst
-Warning--empty year in arduinobuild
-Warning--empty year in arduinobuild
-1 is an integer literal, not a string, for entry arduinobuild
-while executing---line 1516 of file bibtex/harvard.bst
-Warning--empty  in arduinobuild
 Warning--empty year in ANTLR
 Warning--empty year in ANTLR
 1 is an integer literal, not a string, for entry ANTLR
@@ -35,6 +27,11 @@ Warning--empty year in ArduinoUno
 1 is an integer literal, not a string, for entry ArduinoUno
 while executing---line 1516 of file bibtex/harvard.bst
 Warning--empty  in ArduinoUno
+Warning--empty year in arduinobuild
+Warning--empty year in arduinobuild
+1 is an integer literal, not a string, for entry arduinobuild
+while executing---line 1516 of file bibtex/harvard.bst
+Warning--empty  in arduinobuild
 Warning--empty year in CUP
 Warning--empty year in CUP
 1 is an integer literal, not a string, for entry CUP
@@ -94,8 +91,11 @@ Warning--empty  in SableCC
 while executing---line 1516 of file bibtex/harvard.bst
 1 is an integer literal, not a string, for entry sipser
 while executing---line 1516 of file bibtex/harvard.bst
-0 is an integer literal, not a string, for entry RFID
+Warning--empty year in RFID
+Warning--empty year in RFID
+1 is an integer literal, not a string, for entry RFID
 while executing---line 1516 of file bibtex/harvard.bst
+Warning--empty  in RFID
 Warning--empty year in Seedui
 Warning--empty year in Seedui
 1 is an integer literal, not a string, for entry Seedui
@@ -108,4 +108,4 @@ Warning--empty year in Yacc
 1 is an integer literal, not a string, for entry Yacc
 while executing---line 1516 of file bibtex/harvard.bst
 Warning--empty  in Yacc
-(There were 29 error messages)
+(There were 28 error messages)

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.10.22)  25 MAR 2013 15:57
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.10.22)  26 MAR 2013 11:44
 entering extended mode
 **C:/Users/Christian/Documents/Arbejde/UNI/P4/svn/LaTeX/RapportNIXPILLE/Rapport
 .tex
@@ -2139,7 +2139,7 @@ LaTeX Font Info:    Try loading font information for U+stmry on input line 3.
 ]
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\formalia
 /FormaliaTitelblad.tex
-<billeder/AAUUKSTUDENTREPORTbluergb.png, id=322, 434.46315pt x 284.5029pt>
+<billeder/AAUUKSTUDENTREPORTbluergb.png, id=318, 434.46315pt x 284.5029pt>
 File: billeder/AAUUKSTUDENTREPORTbluergb.png Graphic file (type png)
 
 <use billeder/AAUUKSTUDENTREPORTbluergb.png>
@@ -2248,45 +2248,13 @@ Analysis/Hardware.tex [5] [6])
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
 Analysis/problemstatement.tex [7]) [8]
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
-theory/OverviewCompiler.tex
-<billeder/OverviewCompiler2.PNG, id=485, 477.58424pt x 255.354pt>
-File: billeder/OverviewCompiler2.PNG Graphic file (type png)
+theory/sprogParadigmer.tex [9
 
-<use billeder/OverviewCompiler2.PNG>
-Package pdftex.def Info: billeder/OverviewCompiler2.PNG used on input line 3.
-(pdftex.def)             Requested size: 340.8013pt x 182.22604pt.
-
-
-LaTeX Warning: Reference `CraftingACompiler2' on page 9 undefined on input line
- 5.
-
-<billeder/OverviewCompiler.PNG, id=492, 420.3705pt x 295.1025pt>
-File: billeder/OverviewCompiler.PNG Graphic file (type png)
-
-<use billeder/OverviewCompiler.PNG>
-Package pdftex.def Info: billeder/OverviewCompiler.PNG used on input line 9.
-(pdftex.def)             Requested size: 340.8013pt x 239.25684pt.
- [9
-
- <C:/Users/Christian/Documents/Arbejde/UNI/P4/svn/LaTeX/RapportNIXPILLE/billede
-r/OverviewCompiler2.PNG>]
-
-LaTeX Warning: Reference `OverviewCompiler' on page 10 undefined on input line 
-11.
-
-
-LaTeX Warning: Reference `OverviewCompiler2' on page 10 undefined on input line
- 13.
-
-)
-(C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
-theory/sprogParadigmer.tex [10 <C:/Users/Christian/Documents/Arbejde/UNI/P4/svn
-/LaTeX/RapportNIXPILLE/billeder/OverviewCompiler.PNG>]
+]
 Overfull \hbox (44.75482pt too wide) in paragraph at lines 23--42
 [][] 
  []
 
-[11]
 
 LaTeX Warning: Command \textbullet invalid in math mode on input line 51.
 
@@ -2420,8 +2388,9 @@ LaTeX Warning: Command \textbullet invalid in math mode on input line 59.
 LaTeX Warning: Command \textbullet invalid in math mode on input line 59.
 
 Missing character: There is no ˆ in font cmr10!
+[10]
 Package mdframed Info: mdframed works in twoside mode on input line 68.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 Package mdframed Info: mdframed inside minipage 
@@ -2434,9 +2403,8 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 78.
 See the caption package documentation for explanation.
 
-[12]
 Package mdframed Info: mdframed works in twoside mode on input line 81.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 Package mdframed Info: mdframed inside minipage 
@@ -2451,11 +2419,39 @@ See the caption package documentation for explanation.
 
 )
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
-theory/grammartypes.tex
+theory/OverviewCompiler.tex
+<billeder/OverviewCompiler2.PNG, id=508, 477.58424pt x 255.354pt>
+File: billeder/OverviewCompiler2.PNG Graphic file (type png)
 
-LaTeX Warning: Marginpar on page 13 moved by 22.24847pt.
+<use billeder/OverviewCompiler2.PNG>
+Package pdftex.def Info: billeder/OverviewCompiler2.PNG used on input line 3.
+(pdftex.def)             Requested size: 340.8013pt x 182.22604pt.
+ [11]
 
-[13])
+LaTeX Warning: Reference `CraftingACompiler2' on page 12 undefined on input lin
+e 5.
+
+<billeder/OverviewCompiler.PNG, id=536, 420.3705pt x 295.1025pt>
+File: billeder/OverviewCompiler.PNG Graphic file (type png)
+
+<use billeder/OverviewCompiler.PNG>
+Package pdftex.def Info: billeder/OverviewCompiler.PNG used on input line 9.
+(pdftex.def)             Requested size: 340.8013pt x 239.25684pt.
+
+
+LaTeX Warning: Reference `OverviewCompiler' on page 12 undefined on input line 
+11.
+
+[12 <C:/Users/Christian/Documents/Arbejde/UNI/P4/svn/LaTeX/RapportNIXPILLE/bill
+eder/OverviewCompiler2.PNG> <C:/Users/Christian/Documents/Arbejde/UNI/P4/svn/La
+TeX/RapportNIXPILLE/billeder/OverviewCompiler.PNG>]
+
+LaTeX Warning: Reference `OverviewCompiler2' on page 13 undefined on input line
+ 13.
+
+)
+(C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
+theory/grammartypes.tex [13])
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
 theory/grammar.tex [14])
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
@@ -2503,7 +2499,7 @@ Design/TokenSpecification.tex [23] [24])
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
 Design/semantics.tex [25])
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
-Design/TypeRules.tex) [26] [27] [28
+Design/TypeRules.tex [26]) [27] [28
 
 ]
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
@@ -2525,25 +2521,25 @@ lox) [37] [38
 AED: lastpage setting LastPage
 \tf@toc=\write7
 \tf@lox=\write8
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 113.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 113.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 112.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 112.
 
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\Rapport.
 aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 113.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 113.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 112.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 112.
 Package rerunfilecheck Info: File `Rapport.out' has not changed.
-(rerunfilecheck)             Checksum: DEEB173405AAD4699401D4595E6AE233;5229.
+(rerunfilecheck)             Checksum: CBC68AFB677047CC9432DC98AB6E8FA5;5175.
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 35619 strings out of 493921
- 648110 string characters out of 3147269
- 732302 words of memory out of 3000000
- 38013 multiletter control sequences out of 15000+200000
+ 35623 strings out of 493921
+ 648179 string characters out of 3147269
+ 731409 words of memory out of 3000000
+ 38016 multiletter control sequences out of 15000+200000
  29156 words of font info for 71 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
  63i,20n,81p,1179b,1708s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2569,9 +2565,9 @@ MiKTeX 2.9/fonts/type1/public/cm-super/sfti1000.pfb><C:/Program Files/MiKTeX 2.
 ype1/public/cm-super/sftt1000.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/
 bookman/ubkd8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/bookman/ubkl8a.
 pfb>
-Output written on Rapport.pdf (47 pages, 739402 bytes).
+Output written on Rapport.pdf (47 pages, 742130 bytes).
 PDF statistics:
- 941 PDF objects out of 1000 (max. 8388607)
- 189 named destinations out of 1000 (max. 500000)
- 636 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 947 PDF objects out of 1000 (max. 8388607)
+ 190 named destinations out of 1000 (max. 500000)
+ 628 words of extra memory for PDF output out of 10000 (max. 10000000)
 

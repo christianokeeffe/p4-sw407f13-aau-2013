@@ -1,75 +1,74 @@
 \BOOKMARK [0][-]{chapter*.1}{Prolog}{}% 1
 \BOOKMARK [0][-]{chapter.1}{1 Introduction}{}% 2
-\BOOKMARK [0][-]{chapter.2}{2 Problem Statement}{}% 3
-\BOOKMARK [0][-]{chapter.3}{3 Analysis}{}% 4
-\BOOKMARK [1][-]{section.3.1}{3.1 Environment for this project}{chapter.3}% 5
-\BOOKMARK [2][-]{subsection.3.1.1}{3.1.1 Solution in bars}{section.3.1}% 6
-\BOOKMARK [2][-]{subsection.3.1.2}{3.1.2 Programming an Arduino-based drinks-machine}{section.3.1}% 7
-\BOOKMARK [1][-]{section.3.2}{3.2 Hardware}{chapter.3}% 8
-\BOOKMARK [2][-]{subsection.3.2.1}{3.2.1 Hardware platform}{section.3.2}% 9
-\BOOKMARK [2][-]{subsection.3.2.2}{3.2.2 RFID}{section.3.2}% 10
-\BOOKMARK [2][-]{subsection.3.2.3}{3.2.3 Other components}{section.3.2}% 11
-\BOOKMARK [1][-]{section.3.3}{3.3 Problem statement}{chapter.3}% 12
-\BOOKMARK [2][-]{subsection.3.3.1}{3.3.1 Sub Statements}{section.3.3}% 13
-\BOOKMARK [0][-]{chapter.4}{4 Theory}{}% 14
-\BOOKMARK [1][-]{section.4.1}{4.1 Language}{chapter.4}% 15
-\BOOKMARK [2][-]{subsection.4.1.1}{4.1.1 Paradigms of Programming Language}{section.4.1}% 16
-\BOOKMARK [3][-]{section*.2}{Imperative Programming}{subsection.4.1.1}% 17
-\BOOKMARK [3][-]{section*.3}{Functional Programming}{subsection.4.1.1}% 18
-\BOOKMARK [3][-]{section*.4}{Logic Programming}{subsection.4.1.1}% 19
-\BOOKMARK [3][-]{section*.5}{Object-Oriented Programming}{subsection.4.1.1}% 20
-\BOOKMARK [3][-]{section*.6}{Choice of Paradigm in This Project}{subsection.4.1.1}% 21
-\BOOKMARK [3][-]{section*.7}{Design Criteria in this Project}{subsection.4.1.1}% 22
-\BOOKMARK [1][-]{section.4.2}{4.2 Overview of the Compiler}{chapter.4}% 23
-\BOOKMARK [1][-]{section.4.3}{4.3 Syntax Analysis}{chapter.4}% 24
-\BOOKMARK [1][-]{section.4.4}{4.4 Grammartypes}{chapter.4}% 25
-\BOOKMARK [2][-]{subsection.4.4.1}{4.4.1 Type - 3: Regular Grammar}{section.4.4}% 26
-\BOOKMARK [2][-]{subsection.4.4.2}{4.4.2 Type - 2: Context-Free Grammar}{section.4.4}% 27
-\BOOKMARK [2][-]{subsection.4.4.3}{4.4.3 Type - 1: Context-Sensitive Grammar}{section.4.4}% 28
-\BOOKMARK [2][-]{subsection.4.4.4}{4.4.4 Type - 0: Recursively Enumerable}{section.4.4}% 29
-\BOOKMARK [2][-]{subsection.4.4.5}{4.4.5 Choice of Grammar}{section.4.4}% 30
-\BOOKMARK [1][-]{section.4.5}{4.5 Grammar}{chapter.4}% 31
-\BOOKMARK [2][-]{subsection.4.5.1}{4.5.1 Lexical Analyzer}{section.4.5}% 32
-\BOOKMARK [1][-]{section.4.6}{4.6 Parser}{chapter.4}% 33
-\BOOKMARK [2][-]{subsection.4.6.1}{4.6.1 Top-down Parsers}{section.4.6}% 34
-\BOOKMARK [2][-]{subsection.4.6.2}{4.6.2 Bottom-Up Parsers}{section.4.6}% 35
-\BOOKMARK [2][-]{subsection.4.6.3}{4.6.3 Abstract Syntax Trees}{section.4.6}% 36
-\BOOKMARK [1][-]{section.4.7}{4.7 Semantics}{chapter.4}% 37
-\BOOKMARK [1][-]{section.4.8}{4.8 Contextual Analysis}{chapter.4}% 38
-\BOOKMARK [1][-]{section.4.9}{4.9 Code Generation}{chapter.4}% 39
-\BOOKMARK [0][-]{chapter.5}{5 Design}{}% 40
-\BOOKMARK [1][-]{section.5.1}{5.1 Syntax Design}{chapter.5}% 41
-\BOOKMARK [2][-]{subsection.5.1.1}{5.1.1 Choice of Grammar}{section.5.1}% 42
-\BOOKMARK [2][-]{subsection.5.1.2}{5.1.2 The BNF of SPLAD}{section.5.1}% 43
-\BOOKMARK [2][-]{subsection.5.1.3}{5.1.3 Tokens}{section.5.1}% 44
-\BOOKMARK [3][-]{section*.18}{Reserved Keywords}{subsection.5.1.3}% 45
-\BOOKMARK [3][-]{section*.20}{Token Specification}{subsection.5.1.3}% 46
-\BOOKMARK [1][-]{section.5.2}{5.2 Semantic Design}{chapter.5}% 47
-\BOOKMARK [2][-]{subsection.5.2.1}{5.2.1 Scoping}{section.5.2}% 48
-\BOOKMARK [3][-]{section*.22}{Symbol Tables}{subsection.5.2.1}% 49
-\BOOKMARK [2][-]{subsection.5.2.2}{5.2.2 Type Rules}{section.5.2}% 50
-\BOOKMARK [1][-]{section.5.3}{5.3 Code Examples}{chapter.5}% 51
-\BOOKMARK [0][-]{chapter.6}{6 Implementation}{}% 52
-\BOOKMARK [1][-]{section.6.1}{6.1 Known lexers and parsers}{chapter.6}% 53
-\BOOKMARK [2][-]{subsection.6.1.1}{6.1.1 Lexer}{section.6.1}% 54
-\BOOKMARK [3][-]{section*.25}{Lex}{subsection.6.1.1}% 55
-\BOOKMARK [3][-]{section*.26}{Flex}{subsection.6.1.1}% 56
-\BOOKMARK [3][-]{section*.27}{Jflex}{subsection.6.1.1}% 57
-\BOOKMARK [3][-]{section*.28}{Jlex}{subsection.6.1.1}% 58
-\BOOKMARK [2][-]{subsection.6.1.2}{6.1.2 Parser}{section.6.1}% 59
-\BOOKMARK [3][-]{section*.29}{Yacc}{subsection.6.1.2}% 60
-\BOOKMARK [3][-]{section*.30}{Cup}{subsection.6.1.2}% 61
-\BOOKMARK [2][-]{subsection.6.1.3}{6.1.3 Lexer and parser}{section.6.1}% 62
-\BOOKMARK [3][-]{section*.31}{SableCC}{subsection.6.1.3}% 63
-\BOOKMARK [3][-]{section*.32}{ANTLR}{subsection.6.1.3}% 64
-\BOOKMARK [3][-]{section*.33}{JavaCC}{subsection.6.1.3}% 65
-\BOOKMARK [2][-]{subsection.6.1.4}{6.1.4 Comparison table}{section.6.1}% 66
-\BOOKMARK [1][-]{section.6.2}{6.2 Scanner Class Creation}{chapter.6}% 67
-\BOOKMARK [1][-]{section.6.3}{6.3 Parser Generation}{chapter.6}% 68
-\BOOKMARK [1][-]{section.6.4}{6.4 Class Generator Classgen}{chapter.6}% 69
-\BOOKMARK [1][-]{section.6.5}{6.5 Scope and Type Checking}{chapter.6}% 70
-\BOOKMARK [1][-]{section.6.6}{6.6 Code Generation}{chapter.6}% 71
-\BOOKMARK [1][-]{section.6.7}{6.7 Test/evaluation}{chapter.6}% 72
-\BOOKMARK [0][-]{chapter.7}{7 Conclusion}{}% 73
-\BOOKMARK [0][-]{section*.36}{Bibliography}{}% 74
-\BOOKMARK [0][-]{chapter.8}{8 Appendix}{}% 75
+\BOOKMARK [0][-]{chapter.2}{2 Analysis}{}% 3
+\BOOKMARK [1][-]{section.2.1}{2.1 Environment for this project}{chapter.2}% 4
+\BOOKMARK [2][-]{subsection.2.1.1}{2.1.1 Solution in bars}{section.2.1}% 5
+\BOOKMARK [2][-]{subsection.2.1.2}{2.1.2 Programming an Arduino-based drinks-machine}{section.2.1}% 6
+\BOOKMARK [1][-]{section.2.2}{2.2 Hardware}{chapter.2}% 7
+\BOOKMARK [2][-]{subsection.2.2.1}{2.2.1 Hardware platform}{section.2.2}% 8
+\BOOKMARK [2][-]{subsection.2.2.2}{2.2.2 RFID}{section.2.2}% 9
+\BOOKMARK [2][-]{subsection.2.2.3}{2.2.3 Other components}{section.2.2}% 10
+\BOOKMARK [1][-]{section.2.3}{2.3 Problem statement}{chapter.2}% 11
+\BOOKMARK [2][-]{subsection.2.3.1}{2.3.1 Sub Statements}{section.2.3}% 12
+\BOOKMARK [0][-]{chapter.3}{3 Theory}{}% 13
+\BOOKMARK [1][-]{section.3.1}{3.1 Overview of the Compiler}{chapter.3}% 14
+\BOOKMARK [1][-]{section.3.2}{3.2 Language}{chapter.3}% 15
+\BOOKMARK [2][-]{subsection.3.2.1}{3.2.1 Paradigms of Programming Language}{section.3.2}% 16
+\BOOKMARK [3][-]{section*.4}{Imperative Programming}{subsection.3.2.1}% 17
+\BOOKMARK [3][-]{section*.5}{Functional Programming}{subsection.3.2.1}% 18
+\BOOKMARK [3][-]{section*.6}{Logic Programming}{subsection.3.2.1}% 19
+\BOOKMARK [3][-]{section*.7}{Object-Oriented Programming}{subsection.3.2.1}% 20
+\BOOKMARK [3][-]{section*.8}{Choice of Paradigm in This Project}{subsection.3.2.1}% 21
+\BOOKMARK [3][-]{section*.9}{Design Criteria in this Project}{subsection.3.2.1}% 22
+\BOOKMARK [1][-]{section.3.3}{3.3 Syntax Analysis}{chapter.3}% 23
+\BOOKMARK [2][-]{subsection.3.3.1}{3.3.1 Grammartypes}{section.3.3}% 24
+\BOOKMARK [3][-]{section*.12}{Type - 3: Regular Grammar}{subsection.3.3.1}% 25
+\BOOKMARK [3][-]{section*.13}{Type - 2: Context-Free Grammar}{subsection.3.3.1}% 26
+\BOOKMARK [3][-]{section*.14}{Type - 1: Context-Sensitive Grammar}{subsection.3.3.1}% 27
+\BOOKMARK [3][-]{section*.15}{Type - 0: Recursively Enumerable}{subsection.3.3.1}% 28
+\BOOKMARK [3][-]{section*.16}{Choice of Grammar}{subsection.3.3.1}% 29
+\BOOKMARK [2][-]{subsection.3.3.2}{3.3.2 Grammar}{section.3.3}% 30
+\BOOKMARK [2][-]{subsection.3.3.3}{3.3.3 Lexical Analyzer}{section.3.3}% 31
+\BOOKMARK [1][-]{section.3.4}{3.4 Parser}{chapter.3}% 32
+\BOOKMARK [2][-]{subsection.3.4.1}{3.4.1 Top-down Parsers}{section.3.4}% 33
+\BOOKMARK [2][-]{subsection.3.4.2}{3.4.2 Bottom-Up Parsers}{section.3.4}% 34
+\BOOKMARK [2][-]{subsection.3.4.3}{3.4.3 Abstract Syntax Trees}{section.3.4}% 35
+\BOOKMARK [1][-]{section.3.5}{3.5 Semantics}{chapter.3}% 36
+\BOOKMARK [1][-]{section.3.6}{3.6 Contextual Analysis}{chapter.3}% 37
+\BOOKMARK [1][-]{section.3.7}{3.7 Code Generation}{chapter.3}% 38
+\BOOKMARK [0][-]{chapter.4}{4 Design}{}% 39
+\BOOKMARK [1][-]{section.4.1}{4.1 Syntax Design}{chapter.4}% 40
+\BOOKMARK [2][-]{subsection.4.1.1}{4.1.1 Choice of Grammar}{section.4.1}% 41
+\BOOKMARK [2][-]{subsection.4.1.2}{4.1.2 The BNF of SPLAD}{section.4.1}% 42
+\BOOKMARK [2][-]{subsection.4.1.3}{4.1.3 Tokens}{section.4.1}% 43
+\BOOKMARK [3][-]{section*.23}{Reserved Keywords}{subsection.4.1.3}% 44
+\BOOKMARK [3][-]{section*.25}{Token Specification}{subsection.4.1.3}% 45
+\BOOKMARK [1][-]{section.4.2}{4.2 Semantic Design}{chapter.4}% 46
+\BOOKMARK [2][-]{subsection.4.2.1}{4.2.1 Scoping}{section.4.2}% 47
+\BOOKMARK [3][-]{section*.27}{Symbol Tables}{subsection.4.2.1}% 48
+\BOOKMARK [2][-]{subsection.4.2.2}{4.2.2 Type Rules}{section.4.2}% 49
+\BOOKMARK [1][-]{section.4.3}{4.3 Code Examples}{chapter.4}% 50
+\BOOKMARK [0][-]{chapter.5}{5 Implementation}{}% 51
+\BOOKMARK [1][-]{section.5.1}{5.1 Known lexers and parsers}{chapter.5}% 52
+\BOOKMARK [2][-]{subsection.5.1.1}{5.1.1 Lexer}{section.5.1}% 53
+\BOOKMARK [3][-]{section*.30}{Lex}{subsection.5.1.1}% 54
+\BOOKMARK [3][-]{section*.31}{Flex}{subsection.5.1.1}% 55
+\BOOKMARK [3][-]{section*.32}{Jflex}{subsection.5.1.1}% 56
+\BOOKMARK [3][-]{section*.33}{Jlex}{subsection.5.1.1}% 57
+\BOOKMARK [2][-]{subsection.5.1.2}{5.1.2 Parser}{section.5.1}% 58
+\BOOKMARK [3][-]{section*.34}{Yacc}{subsection.5.1.2}% 59
+\BOOKMARK [3][-]{section*.35}{Cup}{subsection.5.1.2}% 60
+\BOOKMARK [2][-]{subsection.5.1.3}{5.1.3 Lexer and parser}{section.5.1}% 61
+\BOOKMARK [3][-]{section*.36}{SableCC}{subsection.5.1.3}% 62
+\BOOKMARK [3][-]{section*.37}{ANTLR}{subsection.5.1.3}% 63
+\BOOKMARK [3][-]{section*.38}{JavaCC}{subsection.5.1.3}% 64
+\BOOKMARK [2][-]{subsection.5.1.4}{5.1.4 Comparison table}{section.5.1}% 65
+\BOOKMARK [1][-]{section.5.2}{5.2 Scanner Class Creation}{chapter.5}% 66
+\BOOKMARK [1][-]{section.5.3}{5.3 Parser Generation}{chapter.5}% 67
+\BOOKMARK [1][-]{section.5.4}{5.4 Class Generator Classgen}{chapter.5}% 68
+\BOOKMARK [1][-]{section.5.5}{5.5 Scope and Type Checking}{chapter.5}% 69
+\BOOKMARK [1][-]{section.5.6}{5.6 Code Generation}{chapter.5}% 70
+\BOOKMARK [1][-]{section.5.7}{5.7 Test/evaluation}{chapter.5}% 71
+\BOOKMARK [0][-]{chapter.6}{6 Conclusion}{}% 72
+\BOOKMARK [0][-]{section*.41}{Bibliography}{}% 73
+\BOOKMARK [0][-]{chapter.7}{7 Appendix}{}% 74

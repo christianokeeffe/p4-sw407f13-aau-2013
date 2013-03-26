@@ -8,8 +8,8 @@ A compiler is a fundamental part of modern computing. Their job is to translate 
 
 \figur{0.8}{OverviewCompiler.PNG}{This is another overview of how the compiler is structured.}{fig:OverviewCompiler}
 
-A compiler consists of 3 different phases. The different phases roughly correspond to the different parts in a language specification which can be seen on figure \ref{OverviewCompiler}. The syntax analysis correspond to the syntax, the contextual analysis to the contextual constraints and the code generation phase roughly corresponds to the semantics.
+A compiler consists of 3 different phases. The different phases roughly correspond to the different parts in a language specification which can be seen on figure \ref{fig:OverviewCompiler}. The syntax analysis correspond to the syntax, the contextual analysis to the contextual constraints and the code generation phase roughly corresponds to the semantics.
 
-Given a simple compiler it will go through more than three phases. This can be seen on figure \ref{OverviewCompiler2}. In the syntax analysis phase the compiler consists of a scanner and a parser. The scanner takes the source program and transforms it into a stream of tokens. The parser then uses the tokens to create an abstract syntax tree (AST). In the contextual analysis a symbol table is created from the abstract syntax tree. At the end, the semantic analysis decorate the AST, and translates this into the target language.
+Given a simple compiler it will go through more than three phases. This can be seen on figure \ref{fig:OverviewCompiler2}. In the syntax analysis phase the compiler consists of a scanner and a parser. The scanner takes the source program and transforms it into a stream of tokens. The parser then uses the tokens to create an abstract syntax tree (AST). In the contextual analysis a symbol table is created from the abstract syntax tree. At the end, the semantic analysis decorate the AST, and translates this into the target language.
 
 The different phases will be described more thorough later in the rapport. \fxfatal{Få lavet konkret henvendelse når opbygningen på rapporten er fastsat.}

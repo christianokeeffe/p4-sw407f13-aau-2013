@@ -8,8 +8,7 @@ A grammar is used to define the syntax of a language. A context-free grammar (CF
 	\item $S: S \in V$ is a start variable
 \end{enumerate}
 
-The most common way of writing a CFG is by using Backus-Naur Form (BNF) or Extended Backus-Naur Form (EBNF). BNF is named after John Backus who presented the notation, and Peter Naur who modified Backus' method of notation slightly \citep{sebesta}. By using the BNF-notation it is possible to describe a CFG. It is preferred to have a unambiguously grammar. A CFG is ambiguously if a string derived in the grammar has two or more different leftmost derivations \citep{sipser}. An unambiguously grammar will ensure that a program reading a string using CFG can only read the string in one way. 
-% RET START
+The most common way of writing a CFG is by using Backus-Naur Form (BNF) or Extended Backus-Naur Form (EBNF). BNF is named after John Backus who presented the notation, and Peter Naur who modified Backus' method of notation slightly \citep{sebesta}. By using the BNF-notation it is possible to describe a CFG. It is preferred to have a unambiguously grammar. A CFG is ambiguously if a string derived in the grammar has two or more different leftmost derivations \citep{sipser}. An unambiguously grammar will ensure that a program reading a string using CFG can only read the string in one way. % RET START
 It is worth spending time making a grammar unambiguous, because if the grammar is ambiguous, multiple compilations of a program using that grammar can result in different programs with different meanings and programs yielding different results \citep{sebesta}. 
 %RET SLUT
 

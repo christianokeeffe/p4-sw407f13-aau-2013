@@ -1,0 +1,19 @@
+function setup return nothing using()
+begin
+	/*Do something*/
+	return nothing;
+end
+
+function LCDPrint return nothing using(string text)
+begin
+	/*Function to write a string to the LCD connected to the arduino*/
+		
+	return nothing;
+end
+
+function makedrink return nothing using()
+begin
+	string message <-- "Hello World!";
+	call LCDPrint(message);
+	return nothing;
+end

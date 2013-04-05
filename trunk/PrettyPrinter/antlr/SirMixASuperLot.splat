@@ -1,0 +1,156 @@
+	double NozzleOutPut <--- /* NozzleOutPutPerSec */;
+	
+	container cola       <-- 1;
+	container sprite     <-- 2;
+	container lightrum   <-- 3;
+	container vodka      <-- 4;
+	container darkrum    <-- 5;
+	container sirup      <-- 6;
+	container juice      <-- 7;
+	container strawberry <-- 8;
+	container apples     <-- 9;
+	motor stirmotor      <-- 20;
+	motor shakemotor     <-- 21;
+	
+	/*	This is what the compiler will do for the user when their are defining containers
+	pinMode (cola, OUTPUT);
+	pinMode (sprite, OUTPUT);
+	pinMode (lightrum, OUTPUT);
+	pinMode (vodka, OUTPUT);
+	pinMode (darkrum, OUTPUT);
+	pinMode (sirup, OUTPUT);
+	pinMode (juice, OUTPUT);
+	pinMode (strawberry, OUTPUT);
+	pinMode (apples, OUTPUT);
+	pinMode (stirmotor, OUTPUT);
+	pinMode (shakemotor, OUTPUT);
+	*/
+	
+function setup return nothing using()
+begin
+	/*Do someting*/
+	return nothing;
+end
+
+function ColaRum return nothing using()
+begin
+	call pour(cola, 5);
+	call pour(rum, 2);
+	call stir(2);
+	call serve();
+	return nothing;
+end
+
+function SpiteVodka return nothing using()
+begin
+	call pour(sprite, 5);
+	call pour(vodka, 2);
+	call shake(3);
+	call serve();
+	return nothing;
+end
+
+function Cola return nothing using()
+begin
+	call pour(cola, 7);
+	call serve();
+	return nothing;
+end
+
+function AllWhichIsGood return nothing using()
+begin
+	call pour(cola, 2);
+	call pour(spite, 2);
+	call pour(rum, 2);
+	call pour(vodka, 2);
+	call pour(strawberry, 1);
+	call stir(2);
+	call shake(2);
+	call serve();
+	return nothing;
+end
+
+function pour return nothing using (int pin, int quantity)
+begin
+	/* How the compiler will make the function pour
+	digitalWrite(pin, HIGH);
+	delay(quantity / NozzleOutPut);
+	digitalWrite(pin, LOW);
+	delay(50)
+	*/
+	return nothing;
+end
+
+function stir return nothing using (double time)
+begin
+	/* Once more compiler job
+	digitalWrite(stirmotor,HIGH);
+	
+	if (time > 500)
+	begin
+		delay(time);
+	end
+	else
+	begin
+		delay(time*1000);
+	end
+	
+	digitalWrite(stirmotor,LOW);
+	
+	delay(50);
+	*/
+	return nothing;
+end
+
+function shake return nothing using (double time)
+begin
+	/* Once more compiler job
+	digitalWrite(shakemotor,HIGH);
+	
+	if (time > 500)
+	begin
+		delay(time);
+	end
+	else
+	begin
+		delay(time*1000);
+	end
+	
+	digitalWrite(shakemotor,LOW);
+	
+	delay(50);
+	*/
+	return nothing;
+end
+
+function serve return bool using ()
+begin
+	/*	How the compiler will make the function serve
+	setCursor(1,0);
+	display();
+	print("Your drink is ready to be served!");
+	delay(5000);
+	noDisplay();
+	*/
+	return nothing;
+end
+
+function makedrink return bool using (int id)
+begin
+	switch(id)
+	begin
+		case:1
+			call Cola();
+		break;
+		case:2
+			call ColaRum();
+		break;
+		case:3
+			call SpriteVodka();
+		break;
+		case:4
+			call AllWhichIsGood();
+		break;
+	end
+	return true;
+end

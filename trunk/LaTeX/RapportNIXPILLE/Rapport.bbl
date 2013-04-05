@@ -1,4 +1,4 @@
-\begin{thebibliography}{23}
+\begin{thebibliography}{25}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -112,6 +112,20 @@
 \newblock
   \url{http://people.cs.aau.dk/\~normark/prog3-03/html/notes/paradigms\_themes-paradigm-overview-section.html}
   [Last seen: 2013/03/19], 2010.
+
+\bibitem[Parr(2012)]{ANTLRLexer}
+\textbf{Parr}, \textbf{Nov 2012}.
+\newblock Terence Parr.
+\newblock \textit{Lexer Rules}.
+\newblock \url{http://www.antlr.org/wiki/display/ANTLR4/Lexer+Rules} [Last
+  seen: 2013/04/03], 2012.
+
+\bibitem[Parr()]{ANTLRTreeCon}
+\textbf{\textbf{Parr}}.
+\newblock Terence Parr.
+\newblock \textit{Tree Construction}.
+\newblock \url{http://www.antlr.org/wiki/display/ANTLR3/Tree\%2Bconstruction}
+  [Last seen: 2013/04/03].
 
 \bibitem[PJRC()]{Teensy}
 \textbf{\textbf{PJRC}}.

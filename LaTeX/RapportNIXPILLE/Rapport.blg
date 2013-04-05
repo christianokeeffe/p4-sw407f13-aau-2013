@@ -78,6 +78,13 @@ while executing---line 1516 of file bibtex/harvard.bst
 Warning--empty  in Javacc
 0 is an integer literal, not a string, for entry ProgrammingParadigms
 while executing---line 1516 of file bibtex/harvard.bst
+0 is an integer literal, not a string, for entry ANTLRLexer
+while executing---line 1516 of file bibtex/harvard.bst
+Warning--empty year in ANTLRTreeCon
+Warning--empty year in ANTLRTreeCon
+1 is an integer literal, not a string, for entry ANTLRTreeCon
+while executing---line 1516 of file bibtex/harvard.bst
+Warning--empty  in ANTLRTreeCon
 Warning--empty year in Teensy
 Warning--empty year in Teensy
 1 is an integer literal, not a string, for entry Teensy
@@ -109,4 +116,4 @@ Warning--empty year in Yacc
 1 is an integer literal, not a string, for entry Yacc
 while executing---line 1516 of file bibtex/harvard.bst
 Warning--empty  in Yacc
-(There were 29 error messages)
+(There were 31 error messages)

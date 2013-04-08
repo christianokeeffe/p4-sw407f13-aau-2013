@@ -93,15 +93,19 @@ This section contains the BNF for the programming language of this project; SPLA
 				\alt "!="
 				\alt "="
 
-<termend> $\ra$ * <term>
-\alt / <term>
-\alt AND <term>
+<termend> $\ra$ <termsymbol> <term>
 \alt$\eps$
 
-<exprend> $\ra$ + <expr>
-\alt - <expr>
-\alt OR <expr>
+<termsymbol> $\ra$ *
+\alt /
+\alt AND
+
+<exprend> $\ra$ <exprsymbol> <expr>
 \alt$\eps$
+
+<exprsymbol> $\ra$ +
+\alt -
+\alt OR
 
 <function> $\ra$ function <id> return <functionmidt>
 

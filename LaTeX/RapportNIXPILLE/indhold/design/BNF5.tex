@@ -14,9 +14,9 @@ This section contains the BNF for the programming language of this project; SPLA
 
 <dcl> $\ra$ <type> <id> <dclend>
 
-<type> $\ra$ <PRIMITIVETYPE> <arraytype>
+<type> $\ra$ <primitivetype> <arraytype>
 
-<PRIMITIVETYPE> $\ra$ bool
+<primitivetype> $\ra$ bool
 \alt double
 \alt int
 \alt char
@@ -54,9 +54,9 @@ This section contains the BNF for the programming language of this project; SPLA
 	\alt false
 
 <callid> $\ra$ <id> <arrayiden>
-\alt id
 
 <arrayiden> $\ra$ <ARRAYCALL>
+\alt $\eps$
 
 <ARRAYCALL> $\ra$ [<NOTZERODIGIT>]
 

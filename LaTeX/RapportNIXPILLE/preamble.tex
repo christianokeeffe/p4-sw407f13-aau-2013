@@ -300,9 +300,9 @@ morekeywords={begin, function, end, nothing, bool, string, OR, AND, using, from,
   }
 }
 
-\newcommand{\longtablesetting}{
+\newcommand{\longtablesetting}{1}{
 \endhead
-\hline \begin{flushright}\textit{Continued on next page}\end{flushright} \\
+\hline \multicolumn{#1}{r}{\textit{Continued on next page}} \\
 \endfoot
 \hline
 \endlastfoot

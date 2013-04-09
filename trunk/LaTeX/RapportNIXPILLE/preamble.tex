@@ -18,7 +18,7 @@
    \immediate\write\@auxout{%
     \string\gdef\string\totalpages{\themypage}}}
 \makeatother
-
+\usepackage{longtable}
 \usepackage{lscape}
 \usepackage[lined,boxed,linesnumbered]{algorithm2e}
 \usepackage{latexsym}										% LaTeX symboler
@@ -298,6 +298,14 @@ morekeywords={begin, function, end, nothing, bool, string, OR, AND, using, from,
       #2
     }
   }
+}
+
+\newcommand{\longtablesetting}{
+\endhead
+\hline \begin{flushright}\textit{Continued on next page}\end{flushright} \\
+\endfoot
+\hline
+\endlastfoot
 }
 
 \newcommand{\doublesignature}[2]{%

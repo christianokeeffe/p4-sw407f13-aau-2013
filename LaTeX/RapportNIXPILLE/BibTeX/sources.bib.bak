@@ -1,4 +1,4 @@
-% This file was created with JabRef 2.9.2.
+% This file was created with JabRef 2.7.1.
 % Encoding: UTF8
 
 @MISC{ANTLR,
@@ -39,6 +39,17 @@
   howpublished = {\url{http://arduino.cc/en/Main/ArduinoBoardUno} [Last seen: 2013/02/18]},
   owner = {Aleksander},
   timestamp = {2013.02.19}
+}
+
+@CONFERENCE{OverviewCompiler2,
+  author = {Bent Thomsen, teacher at Department of Computer Science, Aalborg
+	university},
+  title = {Languages and Compilers Lecture 1},
+  year = {2013},
+  note = {Slides of a Lecture given 7.2.13 from 15.00 to 16.15 by Bent Thomsen
+	in Department of Computer Science, Aalborg university},
+  owner = {Niels},
+  timestamp = {2013.04.10}
 }
 
 @BOOK{CraftingACompiler,
@@ -144,6 +155,17 @@
   timestamp = {2013.03.19}
 }
 
+@MISC{ProgrammingParadigms,
+  author = {Kurt Nørmark},
+  title = {Overview of the Programming paradigms},
+  howpublished = {\url{http://people.cs.aau.dk/~normark/prog3-03/html/notes/paradigms_themes-paradigms.html}
+	[Last seen: 2013/04/10]},
+  month = {July 7},
+  year = {2010},
+  owner = {Niels},
+  timestamp = {2013.03.19}
+}
+
 @MISC{ANTLRTreeCon,
   author = {Terence Parr},
   title = {Tree Construction},
@@ -235,5 +257,10 @@
 	2013/03/15]},
   owner = {Kasper},
   timestamp = {2013.03.15}
+}
+
+@MISC{,
+  owner = {Niels},
+  timestamp = {2013.04.10}
 }
 

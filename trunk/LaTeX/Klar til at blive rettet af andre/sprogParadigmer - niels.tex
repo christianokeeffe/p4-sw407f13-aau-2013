@@ -1,0 +1,88 @@
+\subsection{Paradigms of Programming Language}
+In computer science, four main paradigms of programming languages exists \citep{ProgrammingParadigms}. In this section these paradigms will be briefly described followed by a subsection, explaining the choice of programming paradigm of the language in this project.
+
+\subsubsection{Imperative Programming}
+Imperative programming is a very sequential or procedural way to program, in the sense that a step is performed, then another step and so on. These steps are controlled by control-structures for example the if-statement. An example of a imperative programming language is C. Imperative programming language describes programs in terms of statements which alter the state of the program. This makes imperative languages very simple, and are also a good starting point for new programmers.
+
+\subsubsection{Functional Programming}
+Functional programming originates from the theory of functions in mathematics. In functional programming all computations are done by calling functions. In functional programming languages calls to a function will always yield the same result, if the function is called with the same parameters as input. This is in contrast to imperative programming where function calls can result in different values depending on the state of the program at the given time. Some examples of functional programming languages are Haskell and OCaml.
+
+\subsubsection{Object-Oriented Programming}
+Object-Oriented programming is based on the idea of data encapsulation, and grouping of logical program aspects. The concept of parsing messages between objects are also a very desirable feature when programs reach a certain size. In object-oriented programming, each class of objects can be given methods, which is a kind of function which can be called on that object. For example the expression "foo.Equals(bar)", would call the Equals-method in the class of 'foo', and evaluate if 'bar' equals 'foo'. It is also relatively easy in object-oriented languages to specify access-levels of classes, and thereby protect certain classes from external exposure. Classes can inherit from other classes. For example one could have a 'Car'-class, which inherits all properties and methods of a 'Vehicle'-class. This allows for a high degree of code-reuse.
+
+\subsubsection{Logic Programming}
+Logic programming is fundamentally different from the imperative-, functional-, and object-oriented programming languages. In logic programming, it cannot be stated how a result should be computed, but rather the form and characteristics of the result. An example of a logic programming language is Prolog.
+
+\subsubsection{Choice of Paradigm in This Project}
+For this project, an imperative approach has been chosen. The reason for this is that the programming language of this project should be very easy to understand for newcomers to programming. Also the programs in this programming language will likely remain of a relatively small length, which does not make object-orienting desirable.
+
+\subsubsection{Design Criteria in This Project}
+To determine how a programming language should be syntactically described, the trade-offs of designing a programming language must be taken into account. The different characteristics of a programming language, that will be used to evaluate trade-offs can be seen on table \ref{tab:langCharacteristics}.
+
+\begin{table}[H]
+	\begin{tabular}{|l|l|}
+		\hline
+		Readability & How easy it is to understand and comprehend a computation \\ \hline
+		Write-ability & How easy it is for the programmer to write a computation clearly, correctly, \\
+		~ & concisely and quickly \\ \hline
+		Reliability & Assures a program behaves the way it is suppose to \\ \hline
+		Orthogonality & A relatively small set of primitive constructs can be \\
+		~ & combined legally in a relatively small number of ways \\ \hline		
+		Uniformity & If some features are similar they should look and behave similar \\ \hline
+		Maintainability & Errors can be found and corrected and new features can be added easily \\ \hline
+		Generality & Avoid special cases in the availability or use of constructs and by \\ 
+		~ & combining closely related constructs into a single more general one \\ \hline
+		Extensibility & Provide some general mechanism for the programmer to \\
+		~ & add new constructs to a language \\ \hline
+		Standardability & Allow programs to be transported from one computer \\
+		~ & to another without significant change in language structure \\ \hline
+		Implementability & Ensure a translator or interpreter can be written \\
+		\hline
+	\end{tabular}
+	\caption{Brief explanation of language characteristics \citep{sebesta}}
+	\label{tab:langCharacteristics}
+\end{table}
+
+These characteristics are used to evaluate the the trade-offs of programming language. An overview of these can be seen on table \ref{tab:langTradeOffs}.
+
+\begin{table}[H]
+	\begin{tabular}{l|c|c|c|}
+\textbf{Characteristic} & \rotatebox{90}{Readability} &\rotatebox{90}{Writability} & \rotatebox{90}{Reliability} \\ \hline
+		Simplicity & $\bullet{•}$ & $\bullet{•}$ & $\bullet{•}$ \\ \hline
+		Orthogonality & $\bullet{•}$ & $\bullet{•}$ & $\bullet{•}$ \\ \hline
+		Data types & $\bullet{•}$ & $\bullet{•}$ & $\bullet{•}$ \\ \hline
+		Syntax design & $\bullet{•}$ & $\bullet{•}$ & $\bullet{•}$ \\ \hline
+		Support for abstraction & ~ & $\bullet{•}$ & $\bullet{•}$ \\ \hline
+		Expressivity & ~ & $\bullet{•}$ & $\bullet{•}$ \\ \hline
+		Type checking & ~ & ~ & $\bullet{•}$ \\ \hline
+		Exception handling & ~ & ~ & $\bullet{•}$ \\ \hline
+		Restricted aliasing & ~ & ~ & $\bullet{•}$ \\ \hline
+	\end{tabular}
+	\caption{Overview of trade-offs \citep{sebesta}}
+	\label{tab:langTradeOffs}
+\end{table}
+
+In table \ref{tab:langTradeOffs} $\bullet$ means that the characteristic affects the feature of the programming language where the $\bullet$ is placed. If there is no $\bullet$ in front of a feature, it means that this particular characteristic is not affected by the feature. 
+
+Based on these trade-offs, it is clear that having a simple programming language affects both readability, writability and reliability. This is because having a very simple-to-understand language, might not make it very writable. On the other hand, having a simple-to-write programming language, might not make it very readable. An example of this is the if-statement in C, which can be written both with the 'if'-keyword, or more compact. This can be seen by comparing listing \ref{lst:ifstmtnormal} with listing \ref{lst:ifstmtcompact}, which both yield the same result. It is then clear, that the compact if-statement might be faster to write, but slower to read and understand, and opposite with the if-statement.
+
+\begin{code}{ifstmtnormal}{Simple example of if-statement in C using the 'if'-keyword}
+	\begin{lstlisting}
+		if (x > y)
+		{
+    		res = 1;
+		}
+		else
+		{
+    		res = 0;
+		}
+	\end{lstlisting}
+\end{code}
+
+\begin{code}{ifstmtcompact}{Simple example of if-statement in C without using the 'if'-keyword}
+	\begin{lstlisting}
+		res = x > y ? 1 : 0;
+	\end{lstlisting}
+\end{code}
+
+When defining the syntax of a programming language, it should balance these characteristics to achieve the right amount of trade-offs for that particular language. For the language of this project, it is important that the language is simple to read and understand, because the target group is the hobbyist-programmer, who might not have much experience in programming.

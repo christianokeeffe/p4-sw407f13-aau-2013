@@ -8,8 +8,8 @@ A parser takes the tokens from the scanner and use them to create an abstract sy
 
 The main purpose of the parser is to analyze the tokens and check if the source program is written in the correct syntax. If this is not the case the parser should show a message describing the error. The parser will at the end create an abstract syntax tree. 
 
-Generally there are two different approaches to parsing: top-down and bottom-up. Before describing the different approaches to parsing, it is worth to describe derivation shortly. Derivations is how the parser will create the parse tree, % fra her
-which is something like a Abstract Syntax Trees, but here it retains the information of the source code in each terminal and non-terminal. %til her
+Generally there are two different approaches to parsing: top-down and bottom-up. Before describing the different approaches to parsing, it is worth to describe derivation shortly. Derivations is how the parser will create the abstract syntax tree.
+\fxfatal{Er det her rigtigt?}
 Either it will be built leftmost or it will be built rightmost. Leftmost-derivation is where the parser will take the terminal that is most to the left, and create a derivation for that. A rightmost-derivation is the opposite: The parser chooses the first terminal from the right, and creates a derivation for that.
 
 \subsection{Top-down Parsers}

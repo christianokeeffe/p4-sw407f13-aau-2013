@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.3.15)  12 APR 2013 15:15
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.3.15)  12 APR 2013 15:27
 entering extended mode
 **Rapport2.tex
 
@@ -2017,7 +2017,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip339
 )
-Package hyperref Info: Option `colorlinks' set `false' on input line 166.
+Package hyperref Info: Option `colorlinks' set `false' on input line 165.
 
 ("C:\Program Files\MiKTex 2.9\tex\latex\wrapfig\wrapfig.sty"
 \wrapoverhang=\dimen328
@@ -2062,7 +2062,8 @@ File: babel.def 2008/07/08 v3.8m Babel common definitions
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
-No file Rapport2.aux.
+("C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\LaTeX\RapportNIXPILLE\Rap
+port2.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
@@ -2079,7 +2080,8 @@ LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
-ABD: EveryShipout initializing macros ABD: EverySelectfont initializing macros
+ ABD: EveryShipout initializing macros
+ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 3.
 \AtBeginShipoutBox=\box88
 \c@lstlisting=\count352
@@ -2110,6 +2112,11 @@ LaTeX Info: Redefining \nameref on input line 3.
 LaTeX Info: Redefining \ref on input line 3.
 LaTeX Info: Redefining \pageref on input line 3.
 LaTeX Info: Redefining \nameref on input line 3.
+
+("C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\LaTeX\RapportNIXPILLE\Rap
+port2.out")
+("C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\LaTeX\RapportNIXPILLE\Rap
+port2.out")
 \@outlinefile=\write6
 LaTeX Info: Redefining \Ref on input line 3.
 Package lastpage Info: Please have a look at the pageslts package at
@@ -2121,7 +2128,7 @@ Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             ! on input line 3.
 \c__siunitx_mathsf_int=\count354
 LaTeX Font Info:    Try loading font information for U+msa on input line 3.
-("C:\Program Files\MiKTex 2.9\tex\latex\amsfonts\umsa.fd"
+ ("C:\Program Files\MiKTex 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 3.
@@ -2143,7 +2150,7 @@ malia/FormaliaForside.tex") [1
 ]
 ("C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\LaTeX\RapportNIXPILLE\for
 malia/FormaliaTitelblad.tex"
-<billeder/AAUUKSTUDENTREPORTbluergb.png, id=18, 434.46315pt x 284.5029pt>
+<billeder/AAUUKSTUDENTREPORTbluergb.png, id=298, 434.46315pt x 284.5029pt>
 File: billeder/AAUUKSTUDENTREPORTbluergb.png Graphic file (type png)
 
 <use billeder/AAUUKSTUDENTREPORTbluergb.png>
@@ -2183,11 +2190,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 77--77
 
 Overfull \hbox (28.45276pt too wide) in paragraph at lines 77--77
 []$[]$ 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--77
-
  []
 
 
@@ -2240,10 +2242,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--15
 ] [6
 
 ]
-\tf@toc=\write7
- [7] [8
-
-]
+("C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\LaTeX\RapportNIXPILLE\Rap
+port2.toc" [7]) [8]
 ("C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\LaTeX\RapportNIXPILLE\ind
 hold/Introduction/FormaliaIndledning.tex")
 ("C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\LaTeX\RapportNIXPILLE\ind
@@ -2251,25 +2251,10 @@ hold/Introduction/EnviromentForThisProject.tex")
 ("C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\LaTeX\RapportNIXPILLE\ind
 hold/Introduction/SolutionInBars.tex")
 ("C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\LaTeX\RapportNIXPILLE\ind
-hold/Introduction/ProblemStatement.tex"
-
-LaTeX Warning: Reference `sec:hardwarearduino' on page 1 undefined on input lin
-e 3.
+hold/Introduction/ProblemStatement.tex" [1
 
 
-LaTeX Warning: Reference `sec:grammarchoice' on page 1 undefined on input line 
-5.
-
-
-LaTeX Warning: Reference `LastPage' on page 1 undefined on input line 6.
-
-[1
-
-])
-
-LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 45.
-
-[2]
+]) [2]
 ("C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\LaTeX\RapportNIXPILLE\ind
 hold/LanguageSpecification/ParadigmsOfProgrammingLanguage.tex"
 
@@ -2280,26 +2265,13 @@ input line 2.
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 4.
 
-
-LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 15.
-
 [3
 
 ])
 ("C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\LaTeX\RapportNIXPILLE\ind
-hold/LanguageSpecification/ProgrammingAnArduino-basedDrinks-machine.tex"
-
-LaTeX Warning: Reference `sec:problemstatement' on page 4 undefined on input li
-ne 2.
-
-)
+hold/LanguageSpecification/ProgrammingAnArduino-basedDrinks-machine.tex")
 ("C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\LaTeX\RapportNIXPILLE\ind
 hold/LanguageSpecification/DesignCriteriaInThisProject.tex"
-
-LaTeX Warning: Reference `tab:langCharacteristics' on page 4 undefined on input
- line 2.
-
-
 Overfull \hbox (44.75482pt too wide) in paragraph at lines 5--24
 [][] 
  []
@@ -2313,10 +2285,6 @@ Package natbib Warning: Citation `sebesta' on page 4 undefined on input line 24
 .
 
 
-LaTeX Warning: Reference `tab:langTradeOffs' on page 4 undefined on input line 
-28.
-
-
 LaTeX Warning: Command \textbullet invalid in math mode on input line 33.
 
 
@@ -2456,25 +2424,10 @@ Package natbib Warning: Citation `sebesta' on page 4 undefined on input line 43
 
 Package natbib Warning: Citation `sebesta' on page 4 undefined on input line 43
 .
-
-
-LaTeX Warning: Reference `LastPage' on page 4 undefined on input line 45.
 
 [4]
-
-LaTeX Warning: Reference `tab:langTradeOffs' on page 5 undefined on input line 
-47.
-
-
-LaTeX Warning: Reference `lst:ifstmtnormal' on page 5 undefined on input line 4
-9.
-
-
-LaTeX Warning: Reference `lst:ifstmtcompact' on page 5 undefined on input line 
-49.
-
 Package mdframed Info: mdframed works in twoside mode on input line 52.
-("C:\Program Files\MiKTex 2.9\tex\latex\base\utf8.def"
+ ("C:\Program Files\MiKTex 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 Package mdframed Info: mdframed inside a box 
@@ -2497,11 +2450,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 68.
 See the caption package documentation for explanation.
 
-)
-
-LaTeX Warning: Reference `LastPage' on page 5 undefined on input line 50.
-
-[5]
+) [5]
 ("C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\LaTeX\RapportNIXPILLE\ind
 hold/LanguageSpecification/GrammarTypes.tex"
 
@@ -2524,9 +2473,6 @@ Package natbib Warning: Citation `sipser' on page 6 undefined on input line 16.
 hold/LanguageSpecification/Grammar.tex"
 
 Package natbib Warning: Citation `sipser' on page 6 undefined on input line 3.
-
-
-LaTeX Warning: Reference `LastPage' on page 6 undefined on input line 7.
 
 [6]
 
@@ -2559,16 +2505,7 @@ Package natbib Warning: Citation `sebesta' on page 7 undefined on input line 18
 
 )
 ("C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\LaTeX\RapportNIXPILLE\ind
-hold/LanguageSpecification/ChoiceOfGrammar.tex"
-
-LaTeX Warning: Reference `LastPage' on page 7 undefined on input line 4.
-
-[7]
-
-LaTeX Warning: Reference `lst:functiondeclare' on page 8 undefined on input lin
-e 8.
-
-
+hold/LanguageSpecification/ChoiceOfGrammar.tex" [7]
 Overfull \hbox (25.58615pt too wide) in paragraph at lines 7--9
 \T1/cmr/m/n/10.95 turn $\OML/cmm/m/it/10.95 type$ \T1/cmr/m/n/10.95 us-ing ($\O
 ML/cmm/m/it/10.95 parameter\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 s\OT1/cmr/m/
@@ -2593,28 +2530,9 @@ See the caption package documentation for explanation.
 Package natbib Warning: Citation `CraftingACompiler' on page 8 undefined on inp
 ut line 24.
 
-
-LaTeX Warning: Reference `LastPage' on page 8 undefined on input line 25.
-
-[8]
-
-LaTeX Warning: Reference `sec:grammar' on page 9 undefined on input line 26.
-
-)
+[8])
 ("C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\LaTeX\RapportNIXPILLE\ind
-hold/LanguageSpecification/BNF5.tex"
-
-LaTeX Warning: Reference `LastPage' on page 9 undefined on input line 53.
-
-[9]
-
-LaTeX Warning: Reference `LastPage' on page 10 undefined on input line 101.
-
-[10]
-
-LaTeX Warning: Reference `LastPage' on page 11 undefined on input line 179.
-
-[11])
+hold/LanguageSpecification/BNF5.tex" [9] [10] [11])
 ("C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\LaTeX\RapportNIXPILLE\ind
 hold/LanguageSpecification/Semantics.tex"
 
@@ -2637,9 +2555,6 @@ Package natbib Warning: Citation `sebesta' on page 12 undefined on input line 8
 Package natbib Warning: Citation `sebesta' on page 12 undefined on input line 1
 0.
 
-
-LaTeX Warning: Reference `LastPage' on page 12 undefined on input line 12.
-
 [12]
 
 Package natbib Warning: Citation `sebesta' on page 13 undefined on input line 1
@@ -2651,15 +2566,7 @@ Package natbib Warning: Citation `sebesta' on page 13 undefined on input line 1
 
 )
 ("C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\LaTeX\RapportNIXPILLE\ind
-hold/LanguageSpecification/TypeRules.tex"
-
-LaTeX Warning: Reference `LastPage' on page 13 undefined on input line 27.
-
-[13])
-
-LaTeX Warning: Reference `LastPage' on page 14 undefined on input line 66.
-
-[14]
+hold/LanguageSpecification/TypeRules.tex" [13]) [14]
 ("C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\LaTeX\RapportNIXPILLE\ind
 hold/Implementation/Hardware.tex"
 
@@ -2682,9 +2589,6 @@ Package natbib Warning: Citation `Netdui' on page 15 undefined on input line 11
 Package natbib Warning: Citation `ArduinoUno' on page 15 undefined on input lin
 e 17.
 
-
-LaTeX Warning: Reference `LastPage' on page 15 undefined on input line 18.
-
 [15
 
 ]
@@ -2699,13 +2603,10 @@ Package natbib Warning: Citation `RFID' on page 16 undefined on input line 30.
 Package natbib Warning: Citation `ArduinoLCD' on page 16 undefined on input lin
 e 38.
 
-
-LaTeX Warning: Reference `LastPage' on page 16 undefined on input line 40.
-
 [16])
 ("C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\LaTeX\RapportNIXPILLE\ind
 hold/Implementation/OverviewCompiler.tex"
-<billeder/OverviewCompiler2.PNG, id=203, 477.58424pt x 255.354pt>
+<billeder/OverviewCompiler2.PNG, id=518, 477.58424pt x 255.354pt>
 File: billeder/OverviewCompiler2.PNG Graphic file (type png)
 
 <use billeder/OverviewCompiler2.PNG>
@@ -2728,27 +2629,14 @@ e 5.
 Package natbib Warning: Citation `CraftingACompiler' on page 17 undefined on in
 put line 7.
 
-<billeder/OverviewCompiler.PNG, id=204, 420.3705pt x 295.1025pt>
+<billeder/OverviewCompiler.PNG, id=519, 420.3705pt x 295.1025pt>
 File: billeder/OverviewCompiler.PNG Graphic file (type png)
 
 <use billeder/OverviewCompiler.PNG>
 Package pdftex.def Info: billeder/OverviewCompiler.PNG used on input line 9.
 (pdftex.def)             Requested size: 340.8013pt x 239.25684pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 17 undefined on input line 10.
-
-[17 <C:/Users/Mette/Documents/Universitetet/Alt om P4/P4/LaTeX/RapportNIXPILLE/
-billeder/OverviewCompiler2.PNG>]
-
-LaTeX Warning: Reference `fig:OverviewCompiler' on page 18 undefined on input l
-ine 11.
-
-
-LaTeX Warning: Reference `fig:OverviewCompiler2' on page 18 undefined on input 
-line 13.
-
-)
+ [17 <C:/Users/Mette/Documents/Universitetet/Alt om P4/P4/LaTeX/RapportNIXPILLE
+/billeder/OverviewCompiler2.PNG>])
 
 LaTeX Warning: Marginpar on page 18 moved by 15.3069pt.
 
@@ -2768,12 +2656,8 @@ put line 4.
 
 )
 ("C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\LaTeX\RapportNIXPILLE\ind
-hold/Implementation/KnownLexersAndParsers.tex"
-
-LaTeX Warning: Reference `LastPage' on page 18 undefined on input line 6.
-
-[18 <C:/Users/Mette/Documents/Universitetet/Alt om P4/P4/LaTeX/RapportNIXPILLE/
-billeder/OverviewCompiler.PNG>]
+hold/Implementation/KnownLexersAndParsers.tex" [18 <C:/Users/Mette/Documents/Un
+iversitetet/Alt om P4/P4/LaTeX/RapportNIXPILLE/billeder/OverviewCompiler.PNG>]
 
 Package natbib Warning: Citation `Lex' on page 19 undefined on input line 10.
 
@@ -2796,9 +2680,6 @@ Package natbib Warning: Citation `CUP' on page 19 undefined on input line 32.
 
 Package natbib Warning: Citation `SableCC' on page 19 undefined on input line 3
 8.
-
-
-LaTeX Warning: Reference `LastPage' on page 19 undefined on input line 40.
 
 [19]
 
@@ -2824,9 +2705,6 @@ e 2.
 Package natbib Warning: Citation `ANTLRTreeCon' on page 20 undefined on input l
 ine 4.
 
-
-LaTeX Warning: Reference `LastPage' on page 20 undefined on input line 5.
-
 [20]
 Package mdframed Info: mdframed works in twoside mode on input line 7.
  ("C:\Program Files\MiKTex 2.9\tex\latex\base\utf8.def"
@@ -2844,22 +2722,13 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `lst:HeeloWoorld' on page 21 undefined on input line 3
 1.
 
-<billeder/ParsedCode.png, id=240, 697.10437pt x 461.47406pt>
+<billeder/ParsedCode.png, id=548, 697.10437pt x 461.47406pt>
 File: billeder/ParsedCode.png Graphic file (type png)
 
 <use billeder/ParsedCode.png>
 Package pdftex.def Info: billeder/ParsedCode.png used on input line 33.
 (pdftex.def)             Requested size: 426.0pt x 282.00574pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 21 undefined on input line 34.
-
-[21]
-
-LaTeX Warning: Reference `fig:parsecode' on page 22 undefined on input line 35.
-
-
-)
+ [21])
 ("C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\LaTeX\RapportNIXPILLE\ind
 hold/Implementation/LexicalAnalyzer.tex"
 
@@ -2867,16 +2736,8 @@ Package natbib Warning: Citation `CraftingACompiler' on page 22 undefined on in
 put line 2.
 
 
-LaTeX Warning: Reference `tab:tokenspecification' on page 22 undefined on input
- line 2.
-
-
 Package natbib Warning: Citation `CraftingACompiler' on page 22 undefined on in
 put line 2.
-
-
-LaTeX Warning: Reference `tab:tokensexample' on page 22 undefined on input line
- 2.
 
 Package mdframed Info: mdframed works in twoside mode on input line 21.
 ("C:\Program Files\MiKTex 2.9\tex\latex\base\utf8.def"
@@ -2890,19 +2751,8 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 24.
 See the caption package documentation for explanation.
 
-
-LaTeX Warning: Reference `LastPage' on page 22 undefined on input line 26.
-
 [22 <C:/Users/Mette/Documents/Universitetet/Alt om P4/P4/LaTeX/RapportNIXPILLE/
 billeder/ParsedCode.png>]
-
-LaTeX Warning: Reference `lst:simplecode' on page 23 undefined on input line 26
-.
-
-
-LaTeX Warning: Reference `tab:tokensexample' on page 23 undefined on input line
- 26.
-
 
 Package natbib Warning: Citation `CraftingACompiler' on page 23 undefined on in
 put line 40.
@@ -2911,9 +2761,6 @@ put line 40.
 ("C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\LaTeX\RapportNIXPILLE\ind
 hold/Implementation/Tokens.tex"
 
-LaTeX Warning: Reference `tab:keywords' on page 23 undefined on input line 5.
-
-
 Package natbib Warning: Citation `sebesta' on page 23 undefined on input line 2
 8.
 
@@ -2921,57 +2768,24 @@ Package natbib Warning: Citation `sebesta' on page 23 undefined on input line 2
 Package natbib Warning: Citation `sipser' on page 23 undefined on input line 28
 .
 
-
-LaTeX Warning: Reference `tab:tokens' on page 23 undefined on input line 28.
-
-
-LaTeX Warning: Reference `LastPage' on page 23 undefined on input line 29.
-
-[23]
-
-LaTeX Warning: Reference `sec:KnownLexersAndParsers' on page 24 undefined on in
-put line 45.
-
-)
+[23])
 ("C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\LaTeX\RapportNIXPILLE\ind
-hold/Implementation/Parser.tex"
-
-LaTeX Warning: Reference `LastPage' on page 24 undefined on input line 14.
-
-[24])
-
-LaTeX Warning: Reference `LastPage' on page 25 undefined on input line 94.
-
-[25]
-
-LaTeX Warning: Reference `LastPage' on page 26 undefined on input line 94.
-
-[26
+hold/Implementation/Parser.tex" [24]) [25] [26
 
 ]
 ("C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\LaTeX\RapportNIXPILLE\for
 malia/FormaliaKonklusion.tex")
 No file Rapport2.bbl.
-
-LaTeX Warning: Reference `LastPage' on page 27 undefined on input line 106.
-
 [27]
-\tf@lox=\write8
-
-
-LaTeX Warning: Reference `LastPage' on page 28 undefined on input line 109.
-
-[28
-
-]
+("C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\LaTeX\RapportNIXPILLE\Rap
+port2.lox") [28]
 
 Package natbib Warning: There were undefined citations.
 
 
-Package lastpage Warning: Rerun to get the references right on input line 119.
-
-
 AED: lastpage setting LastPage
+\tf@toc=\write7
+\tf@lox=\write8
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 119.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 119.
 
@@ -2979,38 +2793,29 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 119.
 port2.aux")
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 119.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 119.
+Package rerunfilecheck Info: File `Rapport2.out' has not changed.
+(rerunfilecheck)             Checksum: 64599447C2CD6A659393A1ECA9F5652E;5038.
 
-
-Package rerunfilecheck Warning: File `Rapport2.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Rapport2.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  64599447C2CD6A659393A1ECA9F5652E;5038.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 35450 strings out of 493921
- 648803 string characters out of 3147282
- 780665 words of memory out of 3000000
- 37879 multiletter control sequences out of 15000+200000
+ 35534 strings out of 493921
+ 650762 string characters out of 3147282
+ 781665 words of memory out of 3000000
+ 37952 multiletter control sequences out of 15000+200000
  29156 words of font info for 71 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
- 63i,20n,80p,1109b,1712s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,20n,80p,1109b,1710s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Mette\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi657\
 ectt1000.pk> <C:\Users\Mette\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
 ec\dpi600\ectt0900.pk> <C:\Users\Mette\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
 \jknappen\ec\dpi657\tcrm1000.pk> <C:\Users\Mette\AppData\Local\MiKTeX\2.9\fonts
-\pk\ljfour\jknappen\ec\dpi657\ecbx1000.pk> <C:\Users\Mette\AppData\Local\MiKTeX
-\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Mette\AppData\Lo
-cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi720\ecbx1200.pk>{C:/Program Files
-/MiKTex 2.9/fonts/enc/dvips/fontname/8r.enc} <C:\Users\Mette\AppData\Local\MiKT
+\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Mette\AppData\Local\MiKTeX
+\2.9\fonts\pk\ljfour\jknappen\ec\dpi720\ecbx1200.pk>{C:/Program Files/MiKTex 2.
+9/fonts/enc/dvips/fontname/8r.enc} <C:\Users\Mette\AppData\Local\MiKTeX\2.9\fon
+ts\pk\ljfour\jknappen\ec\dpi657\ecbx1000.pk> <C:\Users\Mette\AppData\Local\MiKT
 eX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0900.pk> <C:\Users\Mette\AppData\
 Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss0900.pk> <C:\Users\Mett
 e\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi657\ecti1000.pk> <C:\
@@ -3030,9 +2835,9 @@ onts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTex 2.9/fonts/type1
 /public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTex 2.9/fonts/type1/public/
 amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTex 2.9/fonts/type1/urw/bookman/ubkd
 8a.pfb><C:/Program Files/MiKTex 2.9/fonts/type1/urw/bookman/ubkl8a.pfb>
-Output written on Rapport2.pdf (36 pages, 589905 bytes).
+Output written on Rapport2.pdf (36 pages, 630881 bytes).
 PDF statistics:
- 959 PDF objects out of 1000 (max. 8388607)
- 167 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1282 PDF objects out of 1440 (max. 8388607)
+ 168 named destinations out of 1000 (max. 500000)
+ 593 words of extra memory for PDF output out of 10000 (max. 10000000)
 

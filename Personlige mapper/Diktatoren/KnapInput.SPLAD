@@ -57,4 +57,5 @@ begin
 	call pinMode(4, INPUT);
 	call pinMode(2, INPUT);
 	call pinMode(12, INPUT);
+	return nothing;
 end

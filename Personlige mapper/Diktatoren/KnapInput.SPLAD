@@ -14,10 +14,12 @@ begin
 		
 		while(call digitalRead(12) = LOW)
 		begin
-			if(call digitalRead(4) = HIGH)begin
+			if(call digitalRead(4) = HIGH)
+			begin
 				drinkID <-- drinkID + 1;
 			end
-			else if(call digitalRead(2) = HIGH)begin
+			else if(call digitalRead(2) = HIGH)
+			begin
 				drinkID <-- drinkID + 10;
 			end
 			call LCDPrint((string)drinkID, 1);
@@ -30,13 +32,13 @@ begin
 		end
 		
 		int Amound <-- 0;
-		while(call digitalRead(12) == LOW)
+		while(call digitalRead(12) = LOW)
 		begin
-			if(call digitalRead(4) == HIGH)
+			if(call digitalRead(4) = HIGH)
 			begin
 				Amound <-- Amound + 1;
 			end
-			else if(call digitalRead(2) == HIGH)
+			else if(call digitalRead(2) = HIGH)
 			begin
 				Amound <-- Amound + 10;
 			end

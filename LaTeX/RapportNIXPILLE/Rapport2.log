@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.3.15)  12 APR 2013 15:37
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.3.15)  12 APR 2013 16:02
 entering extended mode
 **Rapport2.tex
 
@@ -2794,7 +2794,7 @@ port2.aux")
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 119.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 119.
 Package rerunfilecheck Info: File `Rapport2.out' has not changed.
-(rerunfilecheck)             Checksum: 6273F5D072A0C2CCE67B5026ACF33B98;4934.
+(rerunfilecheck)             Checksum: 7552FA073AFAD8245678E25BFB8A3647;5351.
 
 
 LaTeX Warning: There were undefined references.
@@ -2802,8 +2802,8 @@ LaTeX Warning: There were undefined references.
  ) 
 Here is how much of TeX's memory you used:
  35531 strings out of 493921
- 650708 string characters out of 3147282
- 780665 words of memory out of 3000000
+ 651134 string characters out of 3147282
+ 781665 words of memory out of 3000000
  37950 multiletter control sequences out of 15000+200000
  29156 words of font info for 71 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
@@ -2835,9 +2835,9 @@ onts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTex 2.9/fonts/type1
 /public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTex 2.9/fonts/type1/public/
 amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTex 2.9/fonts/type1/urw/bookman/ubkd
 8a.pfb><C:/Program Files/MiKTex 2.9/fonts/type1/urw/bookman/ubkl8a.pfb>
-Output written on Rapport2.pdf (36 pages, 630606 bytes).
+Output written on Rapport2.pdf (36 pages, 631965 bytes).
 PDF statistics:
- 1279 PDF objects out of 1440 (max. 8388607)
+ 1281 PDF objects out of 1440 (max. 8388607)
  167 named destinations out of 1000 (max. 500000)
  585 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,6 +1,7 @@
 function loop return nothing using()
 begin
-	if(digitalRead(12) = HIGH)begin
+	if(digitalRead(12) = HIGH)
+	begin
 		LCDPrint("What ID has the drink you want to serve?", 0);
 		
 		/*Wait for user to press a button*/
@@ -31,10 +32,12 @@ begin
 		int Amound <-- 0;
 		while(digitalRead(12) == LOW)
 		begin
-			if(digitalRead(4) == HIGH)begin
+			if(digitalRead(4) == HIGH)
+			begin
 				Amound <-- Amound + 1;
 			end
-			else if(digitalRead(2) == HIGH)begin
+			else if(digitalRead(2) == HIGH)
+			begin
 				Amound <-- Amound + 10;
 			end
 			LCDPrint((string)Amound, 1);

@@ -1,7 +1,6 @@
 function makedrink return nothing using()
 begin
-	if(call digitalRead(12) = HIGH)
-	begin
+	
 		call LCDPrint("What ID has the drink you want to serve?", 0);
 		
 		/*Wait for user to press a button*/
@@ -48,7 +47,7 @@ begin
 		/*RFIDWrite(drinkID, Amound);*/
 		call LCDPrint("", 1);
 		call LCDPrint("The chip can buy " + string(Amound) + " of drinkID: " + string(drinkID), 0);
-	end
+	
 	return nothing;
 end
 

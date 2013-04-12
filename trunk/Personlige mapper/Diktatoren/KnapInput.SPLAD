@@ -1,4 +1,4 @@
-function loop return nothing using()
+function makedrink return nothing using()
 begin
 	if(call digitalRead(12) = HIGH)
 	begin

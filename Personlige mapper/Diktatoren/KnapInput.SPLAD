@@ -22,7 +22,7 @@ begin
 			begin
 				drinkID <-- drinkID + 10;
 			end
-			call LCDPrint((string)drinkID, 1);
+			call LCDPrint(string(drinkID), 1);
 		end
 		call LCDPrint("How many drinks are bought?", 0);
 		/*Wait for user to press a button*/
@@ -42,12 +42,12 @@ begin
 			begin
 				Amound <-- Amound + 10;
 			end
-			call LCDPrint((string)Amound, 1);
+			call LCDPrint(string(Amound), 1);
 		end
 		
 		/*RFIDWrite(drinkID, Amound);*/
 		call LCDPrint("", 1);
-		call LCDPrint("The chip can buy " + (string)Amound + " of drinkID: " + (string)drinkID, 0);
+		call LCDPrint("The chip can buy " + string(Amound) + " of drinkID: " + string(drinkID), 0);
 	end
 end
 

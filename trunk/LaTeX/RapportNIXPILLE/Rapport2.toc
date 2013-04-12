@@ -1,4 +1,4 @@
-\changetocdepth {3}
+\changetocdepth {2}
 \select@language {english}
 \contentsline {chapter}{Prolog}{v}{chapter*.1}
 \contentsline {chapter}{\chapternumberline {1}Introduction}{1}{chapter.1}
@@ -70,4 +70,3 @@
 \contentsline {subsection}{\numberline {3.5.2}Commands}{25}{subsection.3.5.2}
 \contentsline {subsection}{\numberline {3.5.3}Expressions}{25}{subsection.3.5.3}
 \contentsline {chapter}{\chapternumberline {4}Conclusion}{27}{chapter.4}
-\contentsline {chapter}{Bibliography}{29}{section*.36}

@@ -1,7 +1,7 @@
-\section{Hardware}
+\subsection{Hardware}
 This section will be about the hardware components used in this project, describing them and the reasons they are used in this project. In the description it will be looked at the more basic technical specification that will be relevant for this project.
 
-\subsection{Hardware platform}
+\subsubsection{Hardware platform}
 \label{sec:hardwarearduino}
 Arduino UNO is a powerful micro controller board which provides the user with ways to communicate with other components such as LCDs, diodes, sensors and other electronic bricks(building blocks) which is a desirable feature in this project. Arduino uses the ATmega328 chip which provides more memory than its predecessors \citep{ArduinoUno}.
 
@@ -19,7 +19,7 @@ The Arduino board is also mounted with an USB-port and jack socket. The board ca
 Programs for Arduino are commonly made in Arduino's own language that are based on C and C++. The produces of the Arduino platform provides a development environment (Arduino IDE) that makes it possible to write and then simply upload the code to the connected Arduino platform. This process also provides a library with functions to communicate with the platform and compatible components \citep{ArduinoLanguage}.
 Arduino is suited for this project because it makes it possible to demonstrate the language and illustrate that the translation works.
 
-\subsection{RFID}
+\subsubsection{RFID}
 To administrate the users collection of purchased drinks the plan is to store the number and kind of drinks on an RFID tag that the customer then can use at the drink machine to get their drinks served.
 
 RFID (Radio Frequency IDentification) is used to identify individual objects using radio waves.
@@ -29,7 +29,7 @@ All tags contains a unique ID that can in no way be changed once made. This ID i
 Tags can be either passive or active. Passive tags do not do anything until a signal from a reader transfers energy to the tag once activated it sends a signal back in return. Active tags have a power source and therefore is able to send a signal on their own, making the read-distance greater.
 The tags can also be either \textit{read only tag} or \textit{read/write tag}. A \textit{read only tag} only sends its ID back when it connects with a reader, while a \textit{read/write tag} have a memory for storing additional information it then sends with the ID \citep{RFID}.
 
-\subsection{Other components}
+\subsubsection{Other components}
 The demonstration situation will require something to illustrate more advanced parts of theoretical machine. The plan is to use LEDs (light emitting diode) to illustrate the different function of the machine, when they are active or inactive. The LED is made of a semiconductor which produces a light when a current runs through the unit.
 
 LEDs are normally easy to use by simply running a current the correct way through the LED.

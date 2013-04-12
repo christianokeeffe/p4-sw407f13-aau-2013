@@ -1,57 +1,57 @@
 function loop return nothing using()
 begin
-	if(digitalRead(12) = HIGH)
+	if(call digitalRead(12) = HIGH)
 	begin
-		LCDPrint("What ID has the drink you want to serve?", 0);
+		call LCDPrint("What ID has the drink you want to serve?", 0);
 		
 		/*Wait for user to press a button*/
-		while(digitalRead(2) != HIGH OR digitalRead(4) != HIGH)
+		while(call digitalRead(2) != HIGH OR call digitalRead(4) != HIGH)
 		begin
-			delay(100);
+			call delay(100);
 		end
 		
 		int drinkID <-- 0;
 		
-		while(digitalRead(12) = LOW)
+		while(call digitalRead(12) = LOW)
 		begin
-			if(digitalRead(4) = HIGH)begin
+			if(call digitalRead(4) = HIGH)begin
 				drinkID <-- drinkID + 1;
 			end
-			else if(digitalRead(2) = HIGH)begin
+			else if(call digitalRead(2) = HIGH)begin
 				drinkID <-- drinkID + 10;
 			end
-			LCDPrint((string)drinkID, 1);
+			call LCDPrint((string)drinkID, 1);
 		end
 		LCDPrint("How many drinks are bought?", 0);
 		/*Wait for user to press a button*/
-		while(digitalRead(2) != HIGH OR digitalRead(4) != HIGH)
+		while(call digitalRead(2) != HIGH OR call digitalRead(4) != HIGH)
 		begin
-			delay(100);
+			call delay(100);
 		end
 		
 		int Amound <-- 0;
-		while(digitalRead(12) == LOW)
+		while(call digitalRead(12) == LOW)
 		begin
-			if(digitalRead(4) == HIGH)
+			if(call digitalRead(4) == HIGH)
 			begin
 				Amound <-- Amound + 1;
 			end
-			else if(digitalRead(2) == HIGH)
+			else if(call digitalRead(2) == HIGH)
 			begin
 				Amound <-- Amound + 10;
 			end
-			LCDPrint((string)Amound, 1);
+			call LCDPrint((string)Amound, 1);
 		end
 		
 		/*RFIDWrite(drinkID, Amound);*/
-		LCDPrint("", 1);
-		LCDPrint("The chip can buy " + (string)Amound + " of drinkID: " + (string)drinkID, 0);
+		call LCDPrint("", 1);
+		call LCDPrint("The chip can buy " + (string)Amound + " of drinkID: " + (string)drinkID, 0);
 	end
 end
 
 function setup return nothing using()
 begin
-	pinMode(4, INPUT);
-	pinMode(2, INPUT);
-	pinMode(12, INPUT);
+	call pinMode(4, INPUT);
+	call pinMode(2, INPUT);
+	call pinMode(12, INPUT);
 end

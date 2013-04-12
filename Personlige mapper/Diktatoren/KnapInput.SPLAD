@@ -49,6 +49,7 @@ begin
 		call LCDPrint("", 1);
 		call LCDPrint("The chip can buy " + string(Amound) + " of drinkID: " + string(drinkID), 0);
 	end
+	return nothing;
 end
 
 function setup return nothing using()

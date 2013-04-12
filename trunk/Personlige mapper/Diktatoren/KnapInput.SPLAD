@@ -22,7 +22,7 @@ begin
 			end
 			call LCDPrint((string)drinkID, 1);
 		end
-		LCDPrint("How many drinks are bought?", 0);
+		call LCDPrint("How many drinks are bought?", 0);
 		/*Wait for user to press a button*/
 		while(call digitalRead(2) != HIGH OR call digitalRead(4) != HIGH)
 		begin

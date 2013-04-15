@@ -30,23 +30,23 @@ begin
 			call delay(100);
 		end
 		
-		int Amound <-- 0;
+		int Amount <-- 0;
 		while(call digitalRead(12) = LOW)
 		begin
 			if(call digitalRead(4) = HIGH)
 			begin
-				Amound <-- Amound + 1;
+				Amount <-- Amount + 1;
 			end
 			else if(call digitalRead(2) = HIGH)
 			begin
-				Amound <-- Amound + 10;
+				Amount <-- Amount + 10;
 			end
-			call LCDPrint(string(Amound), 1);
+			call LCDPrint(string(Amount), 1);
 		end
 		
-		/*RFIDWrite(drinkID, Amound);*/
+		/*RFIDWrite(drinkID, Amount);*/
 		call LCDPrint("", 1);
-		call LCDPrint("The chip can buy " + string(Amound) + " of drinkID: " + string(drinkID), 0);
+		call LCDPrint("The chip can buy " + string(Amount) + " of drinkID: " + string(drinkID), 0);
 	
 	return nothing;
 end

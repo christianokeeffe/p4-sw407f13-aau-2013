@@ -44,7 +44,7 @@ begin
 			call LCDPrint(string(Amount), 1);
 		end
 		
-		/*RFIDWrite(drinkID, Amount);*/
+		RFIDWrite(drinkID, Amount);
 		call LCDPrint("", 1);
 		call LCDPrint("The chip can buy " + string(Amount) + " of drinkID: " + string(drinkID), 0);
 	

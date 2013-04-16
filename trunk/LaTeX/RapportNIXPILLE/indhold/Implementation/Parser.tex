@@ -8,10 +8,10 @@ Generally there are two different approaches to parsing: top-down and bottom-up.
 \subsubsection{Top-down Parsers}
 Then top-down parser starts at the root and works its way to the leaves in a depth-first manner, doing a pre-order traversal of the parse tree. This is done by reading tokens from left to right using a leftmost derivation. Furthermore top-down parsers can be split into table-driven LL and recursive descent parse algorithms.
 
-\subsubsubsection{Table-driven LL Parsers}
+\subsubsubsection{Table-driven LL Parsers:}
 Uses a parse table to determine what to do next. The entries in the parse table is determined by the particular LL(k) grammar. The parser then searches the table to see what to do.
 
-\subsubsubsection{Recursive-descent Parser}
+\subsubsubsection{Recursive-descent Parser:}
 The recursive-descent parsers consists of mutually recursive parsing routines. Each of the non-terminals in the grammar has a parsing procedure that determines if the token stream contains a sequence of tokens derivable from that non-terminal.
 
 \subsubsection{Bottom-Up Parsers}
@@ -19,9 +19,9 @@ The recursive-descent parsers consists of mutually recursive parsing routines. E
 A bottom-up parser has to do a post-order traversal of the parse tree, meaning that it starts from the leaves and works towards the root.
 A bottom-up parser is more powerful and efficient than a top-down parser, but not as simple.
 
-\subsubsubsection{LR}
+\subsubsubsection{LR:}
 A LR parser reads from left to right and because it is a bottom-up parser it uses a reversed rightmost derivation which means it takes terminals and turn them into non-terminals. It is as the LL parser driven from a parse table. The biggest difference is how it is derived and how the parse table is handled.  
 
-\subsubsubsection{LALR}
+\subsubsubsection{LALR:}
 A LALR(Lookahead Ahead LR) parser is one of the most commonly used algorithms today, because it is a powerful algorithm but do not need a very large parse table. It works like the LR parser.
 

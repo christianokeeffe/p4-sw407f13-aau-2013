@@ -111,38 +111,37 @@ When defining the syntax of a programming language, it should balance these char
 \begin{table}[H]
 	\begin{tabular}{l|c|}
 \textbf{Characteristic} 		& \rotatebox{90}{Chosen focus for this project} \\ \hline
-		Simplicity 				& medium \\ \hline
+		Simplicity 				& low \\ \hline
 		Orthogonality 			& low \\ \hline
 		Data types 				& low \\ \hline
 		Syntax design 			& high \\ \hline
 		Support for abstraction & low \\ \hline
-		Expressivity 			& ~ \\ \hline
-		Type checking 			& ~ \\ \hline
-		Exception handling 		& ~ \\ \hline
-		Restricted aliasing 	& ~ \\ \hline
+		Expressivity 			& medium \\ \hline
+		Type checking 			& high \\ \hline
+		Exception handling 		& high \\ \hline
+		Restricted aliasing 	& high \\ \hline
 	\end{tabular}
 	\caption{Overview of trade-offs \citep{sebesta}}
 	\label{tab:langTradeOffs}
 \end{table}
-
+\fxfatal{se lige efter}
 \begin{itemize}
-\item \textbf{Simplicity:}
+\item \textbf{Simplicity:} The project languages do not have many ways the same think can be done. This is done to make writing code simple for beginners.
 
-\item \textbf{Orthogonality:}
+\item \textbf{Orthogonality:} The project languages have a only have 3 types, double, int and char, and 2 special, container and string. it is not possible to make classes or constructs, this is done to help types handling simple for beginners.
 
-\item \textbf{Data types:}
+\item \textbf{Data types:} \fxfatal{regler ikke lavet inu, eks. kan en bool skrives som bool A = true og/eller bool A = 1}
 
-\item \textbf{Syntax design:}
+\item \textbf{Syntax design:} It is not possible to make classes in project languages but there is both "for" and "while" loops because they are relatively simple to use and understand for beginners. All functions and commands start with "begin" and end with "end" to better get understanding where they start and end.
 
-\item \textbf{Support for abstraction:}
+\item \textbf{Support for abstraction:} This is close to non-existent in the project languages, because to help beginners with using the language, a clear types is better to understand.
 
-\item \textbf{Expressivity:}
+\item \textbf{Expressivity:} \fxfatal{ikke helt sikker på hvad vi har bestemt os for}
 
-\item \textbf{Type checking:}
+\item \textbf{Type checking:} Is a major part of the project. The type checking will be done on compile time rather then run time, to help beginners see their errors in their code, instead of running time.
 
-\item \textbf{Exception handling:}
+\item \textbf{Exception handling:} \fxfatal{ikke helt sikker på hvad vi har bestemt os for}
 
-\item \textbf{Restricted aliasing:}
+\item \textbf{Restricted aliasing:} Since at it is know that using aliasing is a dangerous feature in a programming language, the project languages will not have this function, to help beginners.
 \end{itemize}
-
 % til her

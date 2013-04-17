@@ -40,7 +40,7 @@ Using the CFG(Context Free Grammar) written in Extented Backus-Naur Form SableCC
 \subsubsubsection{ANTLR:}
 \textit{ANother Tool for Language Recognition} uses the CFG(Context Free Grammar) written in Extented Backus-Naur Form to generate an LL(*) parser. It has a wide variety of output languages, including, C, C++ and Java.
 ANTLR can also make a tree parsers and combined lexer-parsers. It can automatically generate abstract syntax trees with a parser\citep{ANTLR}. % fra her
-Lexer rules is written with an upper-case beginnings letter so that ANTLR can distinguish between lexer rules and parser rules \citep{ANTLRLexer}. % til er taget fra ANTLR filen
+Lexer rules is written with an upper-case beginnings letter so that ANTLR can distinguish between lexer rules and parser rules \citep{ANTLRLexer}. % til her - taget fra ANTLR filen
 %Those abstract syntax trees can be further processed with a tree parsers.
 
 
@@ -56,8 +56,7 @@ Javacc generate a parser from a formal grammar written in EBNF notation. The out
 Yacc 			& LALR(1) 						& YACC 						& C									\\ \hline
 Cup 			& LALR(1) 						& EBNF 						& java								\\ \hline
 SableCC 		& LALR(1) 						& EBNF 						& C, C++, C\#, java, OCaml, Python	\\ \hline
-ANTLR 			& LL(*) 						& EBNF 						& ActionScript, Ada95, C, C++, C\#, Java, JavaScript,
-																			  Objective-C, Perl, Python, Ruby	\\ \hline
+ANTLR 			& LL(*) 						& EBNF 						& ActionScript, Ada95, C, C++, C\#, Java, JavaScript,Objective-C, Perl, Python, Ruby	\\ \hline
 JavaCC 			& LL(k) 						& EBNF 						& Java, C++(beta)					\\ \hline
 \end{tabularx}
 \end{table}

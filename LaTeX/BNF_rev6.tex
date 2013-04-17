@@ -37,7 +37,11 @@ This section contains the BNF for the programming language of this project; SPLA
 
 <term> $\ra$ <comp> <termend>
 
-<comp> $\ra$ <factor> <compend>
+<comp> $\ra$ <addsub> <compend>
+
+<addsub> $\ra$ <muldiv> <addsubend>
+
+<muldiv> $\ra$ <factor> <muldivend>
 
 <factor> $\ra$ ( <expr> )
 	\alt !(<expr>)
@@ -58,11 +62,20 @@ This section contains the BNF for the programming language of this project; SPLA
 
 <ARRAYCALL> $\ra$ [<NOTZERODIGIT>]
 
-<numeric> $\ra$ <plusminus> <DIGIT> <numericend>
+<numeric> $\ra$ <plusminusorempty> <DIGIT> <numericend>
 
-<plusminus> $\ra$ $\eps$
-	\alt -
-	\alt +
+<addsubend> $\ra$ <plusminus> <addsub>
+
+<muldivend> $\ra$ <gangedivider> <muldiv>
+
+<gangedivider> $\ra$ *
+\alt /
+
+<plusminusorempty> $\ra$ $\eps$
+\alt <plusminus>
+
+<plusminus> $\ra$ -
+\alt +
 
 <numericend> $\ra$ $\eps$
 \alt . <DIGIT>
@@ -104,6 +117,7 @@ This section contains the BNF for the programming language of this project; SPLA
 <exprsymbol> $\ra$ +
 \alt -
 \alt OR 
+
 
 <function> $\ra$ function <id> return <functionmidt>
 
@@ -156,7 +170,7 @@ begin
 			<stmts>
 		end
 		
-<from> $\ra$ from <assign> to <expr> step <plusminus> <DIGIT>
+<from> $\ra$ from <assign> to <expr> step <plusminusorempty> <DIGIT>
 	begin
 		<stmts>
 	end

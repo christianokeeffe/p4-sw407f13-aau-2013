@@ -6,5 +6,7 @@
 \contentsline {fixme}{Fatal: Skal det med?}{12}{subsection.2.3.6}
 \contentsline {fixme}{Fatal: skal det med?}{18}{subsection.3.2.3}
 \contentsline {fixme}{Fatal: Skal det med?}{18}{subsection.3.2.4}
+\contentsline {fixme}{Fatal: Eksempler p\IeC {\r a} hvordan parsing virker, og hvordan tr\IeC {\ae }et bliver bygget}{18}{subsection.3.2.5}
 \contentsline {fixme}{Fatal: ref til afsnittet som parsetr\IeC {\ae }er}{22}{figure.caption.9}
+\contentsline {fixme}{Fatal: Den laver vel b\IeC {\r a}de parsetr\IeC {\ae } og AST? Der mangler at blive beskrevet forskellen p\IeC {\r a} parsetr\IeC {\ae } og AST}{24}{subsection.3.3.6}
 \contentsline {fixme}{Fatal: konklusion mangler}{27}{chapter.4}

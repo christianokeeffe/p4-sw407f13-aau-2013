@@ -30,29 +30,28 @@ Logic programming is fundamentally different from the imperative-, functional-, 
 \subsubsection{Choice of Paradigm in This Project}
 For this project, an imperative approach has been chosen. The reason for this is that the programming language of this project should be simple to understand for newcomers to programming. Also the programs in this programming language will likely remain of a relatively small length, which does not make object-orienting desirable.
 
-\subsection{Design Criteria in This Project}
+\subsection{Design Criteria in this Project}
 To determine how a programming language should be syntactically described, the trade-offs of designing a programming language must be taken into account. The different characteristics of a programming language, that will be used to evaluate trade-offs can be seen on table \ref{tab:langCharacteristics}.
 
 \begin{table}[H]
 	\begin{tabular}{|l|l|}
 		\hline
-		Readability & How easy it is to understand and comprehend a computation \\ \hline
-		Write-ability & How easy it is for the programmer to write a computation clearly, \\
-		~ & correctly, concisely and quickly \\ \hline
-		Reliability & Assures a program behaves the way it is suppose to \\ \hline
-		Orthogonality & A relatively small set of primitive constructs can be \\
-		~ & combined legally in a relatively small number of ways \\ \hline		
-		Uniformity & If some features are similar they should look and behave similar \\ \hline
-		Maintainability & Errors can be found and corrected and new features can be added \\
-		~ & easily \\ \hline
-		Generality & Avoid special cases in the availability or use of constructs and by \\ 
-		~ & combining closely related constructs into a single more general one \\ \hline
-		Extensibility & Provide some general mechanism for the programmer to \\
-		~ & add new constructs to a language \\ \hline
-		Standardability & Allow programs to be transported from one computer \\
-		~ & to another without significant change in language structure \\ \hline
-		Implementability & Ensure a translator or interpreter can be written \\
-		\hline
+		Readability 		& How easy it is to understand and comprehend a computation			  \\ \hline
+		Write-ability 		& How easy it is for the programmer to write a computation clearly,	  \\
+		~ 					& correctly, concisely and quickly 									  \\ \hline
+		Reliability 		& Assures a program behaves the way it is suppose to				  \\ \hline
+		Orthogonality 		& A relatively small set of primitive constructs can be				  \\
+		~ 					& combined legally in a relatively small number of ways				  \\ \hline	
+		Uniformity 			& If some features are similar they should look and behave similar	  \\ \hline
+		Maintainability 	& Errors can be found and corrected and new features can be added	  \\
+		~ 					& easily 															  \\ \hline
+		Generality 			& Avoid special cases in the availability or use of constructs and by \\ 
+		~ 					& combining closely related constructs into a single more general one \\ \hline
+		Extensibility 		& Provide some general mechanism for the programmer to 				  \\
+		~ 					& add new constructs to a language 									  \\ \hline
+		Standardability 	& Allow programs to be transported from one computer 				  \\
+		~ 					& to another without significant change in language structure 		  \\ \hline
+		Implementability	& Ensure a translator or interpreter can be written 				  \\ \hline
 	\end{tabular}
 	\caption{Brief explanation of language characteristics \citep{sebesta}.}
 	\label{tab:langCharacteristics}

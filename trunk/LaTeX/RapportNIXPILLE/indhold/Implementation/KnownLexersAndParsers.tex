@@ -46,16 +46,17 @@ ANTLR can also make a tree parsers and combined lexer-parsers. It can automatica
 Javacc generate a parser from a formal grammar written in EBNF notation. The output is Java source code. JavaCC generates top-down parsers, which limits it to the LL(k) class of grammars (in particular, left recursion cannot be used). JavaCC also generates lexical analyzers in a fashion similar to lex\citep{Javacc}. The tree builder that accompanies it, JJTree, constructs its trees from the bottom uplex\citep{JJTree}.
 
 
-\subsubsection{Comparison table}
+\subsubsection{Comparison Table}
 \begin{table}[H]
 \begin{tabularx}{\textwidth}{|l|c|c|R|}
 \hline
-\textbf{Name} & \textbf{Parsing algorithm} & \textbf{Input notation} & \textbf{Output language}\\ \hline
-Yacc & LALR(1) & YACC & C\\ \hline
-Cup & LALR(1) & EBNF & java\\ \hline
-SableCC & LALR(1) & EBNF & C, C++, C\#, java, OCaml, Python\\ \hline
-ANTLR & LL(*) & EBNF & ActionScript, Ada95, C, C++, C\#, Java, JavaScript, Objective-C, Perl, Python, Ruby\\ \hline
-JavaCC & LL(k) & EBNF & Java, C++(beta)\\ \hline
+\textbf{Name} 	& \textbf{Parsing algorithm} 	& \textbf{Input notation} 	& \textbf{Output language}			\\ \hline
+Yacc 			& LALR(1) 						& YACC 						& C									\\ \hline
+Cup 			& LALR(1) 						& EBNF 						& java								\\ \hline
+SableCC 		& LALR(1) 						& EBNF 						& C, C++, C\#, java, OCaml, Python	\\ \hline
+ANTLR 			& LL(*) 						& EBNF 						& ActionScript, Ada95, C, C++, C\#, Java, JavaScript,
+																			  Objective-C, Perl, Python, Ruby	\\ \hline
+JavaCC 			& LL(k) 						& EBNF 						& Java, C++(beta)					\\ \hline
 \end{tabularx}
 \end{table}
 

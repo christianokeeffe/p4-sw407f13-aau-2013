@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.3.15)  17 APR 2013 11:14
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.3.15)  17 APR 2013 11:30
 entering extended mode
 **Rapport2.tex
 
@@ -2150,7 +2150,7 @@ malia/FormaliaForside.tex") [1
 ]
 ("C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\LaTeX\RapportNIXPILLE\for
 malia/FormaliaTitelblad.tex"
-<billeder/AAUUKSTUDENTREPORTbluergb.png, id=298, 434.46315pt x 284.5029pt>
+<billeder/AAUUKSTUDENTREPORTbluergb.png, id=302, 434.46315pt x 284.5029pt>
 File: billeder/AAUUKSTUDENTREPORTbluergb.png Graphic file (type png)
 
 <use billeder/AAUUKSTUDENTREPORTbluergb.png>
@@ -2257,15 +2257,8 @@ hold/Introduction/ProblemStatement.tex" [1
 ]) [2]
 ("C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\LaTeX\RapportNIXPILLE\ind
 hold/LanguageSpecification/ParadigmsOfProgrammingLanguage.tex"
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 1.
-
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 5.
-
 Package mdframed Info: mdframed works in twoside mode on input line 14.
+
 ("C:\Program Files\MiKTex 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
@@ -2495,14 +2488,14 @@ hold/Implementation/OverviewCompiler.tex"
 LaTeX Warning: Reference `fig:CraftingACompiler2' on page 17 undefined on input
  line 2.
 
-<billeder/OverviewCompiler.PNG, id=606, 420.3705pt x 295.1025pt>
+<billeder/OverviewCompiler.PNG, id=615, 420.3705pt x 295.1025pt>
 File: billeder/OverviewCompiler.PNG Graphic file (type png)
 
 <use billeder/OverviewCompiler.PNG>
 Package pdftex.def Info: billeder/OverviewCompiler.PNG used on input line 3.
 (pdftex.def)             Requested size: 340.8013pt x 239.25684pt.
 
-<billeder/OverviewCompiler2.PNG, id=615, 477.58424pt x 255.354pt>
+<billeder/OverviewCompiler2.PNG, id=624, 477.58424pt x 255.354pt>
 File: billeder/OverviewCompiler2.PNG Graphic file (type png)
 
 <use billeder/OverviewCompiler2.PNG>
@@ -2540,7 +2533,7 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `lst:HeeloWoorld' on page 21 undefined on input line 3
 1.
 
-<billeder/ParsedCode.png, id=677, 697.10437pt x 461.47406pt>
+<billeder/ParsedCode.png, id=686, 697.10437pt x 461.47406pt>
 File: billeder/ParsedCode.png Graphic file (type png)
 
 <use billeder/ParsedCode.png>
@@ -2591,17 +2584,17 @@ port2.aux")
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 119.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 119.
 Package rerunfilecheck Info: File `Rapport2.out' has not changed.
-(rerunfilecheck)             Checksum: 04D695D1CC6CF0EB410B5FC817CA9F05;5419.
+(rerunfilecheck)             Checksum: 580D7598004696821E37C760C9B54A38;5446.
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 35639 strings out of 493921
- 653172 string characters out of 3147282
+ 35641 strings out of 493921
+ 653156 string characters out of 3147282
  785665 words of memory out of 3000000
- 38017 multiletter control sequences out of 15000+200000
+ 38018 multiletter control sequences out of 15000+200000
  29156 words of font info for 71 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
  63i,20n,80p,1109b,1712s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2632,9 +2625,9 @@ onts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTex 2.9/fonts/type1
 /public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTex 2.9/fonts/type1/public/
 amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTex 2.9/fonts/type1/urw/bookman/ubkd
 8a.pfb><C:/Program Files/MiKTex 2.9/fonts/type1/urw/bookman/ubkl8a.pfb>
-Output written on Rapport2.pdf (40 pages, 694541 bytes).
+Output written on Rapport2.pdf (40 pages, 696278 bytes).
 PDF statistics:
- 1556 PDF objects out of 1728 (max. 8388607)
- 204 named destinations out of 1000 (max. 500000)
- 593 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1566 PDF objects out of 1728 (max. 8388607)
+ 205 named destinations out of 1000 (max. 500000)
+ 601 words of extra memory for PDF output out of 10000 (max. 10000000)
 

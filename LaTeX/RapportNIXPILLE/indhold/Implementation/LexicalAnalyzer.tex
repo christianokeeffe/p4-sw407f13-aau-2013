@@ -5,19 +5,19 @@ A lexical analyzer reads the input file, and returns a series of tokens based on
 \begin{tabular}{|l|l|}
 \hline
     	Terminal  	& Regular expression 	\\ \hline
-    	dcl       	& "$[a-z]$"      			\\ 
+    	dcl       	& "$[a-z]$"      		\\ 
     	assign    	& "="      				\\ 
-    	digit     	& "$[0-9]^+$"   			\\ 
+    	digit     	& "$[0-9]^+$"   		\\ 
     	endassign 	& ";"      				\\
-    	blank 		& $" "^+$					\\
+    	blank 		& $" "^+$				\\
     \hline
 \end{tabular}
-\caption{Sample token specification}
+\caption{Sample token specification.}
 \label{tab:tokenspecification}
 \end{table}
 This specification of tokens, would be used by the scanner to determine how tokens looks, and thereby which text-elements are tokens. 
 
-\begin{code}{simplecode}{Simple example of code}
+\begin{code}{simplecode}{Simple example of code.}
 \begin{lstlisting}
 c = 42;
 \end{lstlisting}
@@ -27,14 +27,13 @@ As an example the lines of code seen on listing \ref{lst:simplecode} might be re
 \begin{table}[H]
 \begin{tabular}{|l|l|}
 \hline
-    \textbf{Token}     &\textbf{Lexeme} \\ \hline
-    IDENT     & c      \\ 
-    ASSIGN    & =      \\ 
-    DIGIT     & 42     \\ 
-    SEMICOLON & ;      \\
-    \hline
+    \textbf{Token}	&	\textbf{Lexeme} \\ \hline
+    IDENT     		&	c      			\\ 
+    ASSIGN    		&	=      			\\ 
+    DIGIT     		&	42    			\\ 
+    SEMICOLON 		&	;      			\\ \hline
 \end{tabular}
-\caption{Example of tokens}
+\caption{Example of tokens.}
 \label{tab:tokensexample}
 \end{table}
 The scanner produces a stream of tokens, which is returned to the parser. The parser checks if the tokens conforms to the language-specification \citep{CraftingACompiler}.

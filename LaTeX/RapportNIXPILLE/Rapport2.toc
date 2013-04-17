@@ -44,23 +44,23 @@
 \contentsline {subsection}{\numberline {3.2.3}Language Processing Strategy}{18}{subsection.3.2.3}
 \contentsline {subsection}{\numberline {3.2.4}Compilation Passes}{18}{subsection.3.2.4}
 \contentsline {subsection}{\numberline {3.2.5}Abstract Syntax Trees}{18}{subsection.3.2.5}
-\contentsline {subsection}{\numberline {3.2.6}The Visitor Pattern}{19}{subsection.3.2.6}
-\contentsline {section}{\numberline {3.3}Syntactic Analysis}{19}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Semantic Analysis}{19}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Known lexers and parsers}{19}{subsection.3.3.2}
-\contentsline {subsubsection}{\numberline {3.3.2.1}Lexer}{19}{subsubsection.3.3.2.1}
+\contentsline {subsection}{\numberline {3.2.6}The Visitor Pattern}{18}{subsection.3.2.6}
+\contentsline {section}{\numberline {3.3}Syntactic Analysis}{18}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Semantic Analysis}{18}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Known lexers and parsers}{18}{subsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.2.1}Lexer}{18}{subsubsection.3.3.2.1}
 \contentsline {subsubsection}{\numberline {3.3.2.2}Parser}{19}{subsubsection.3.3.2.2}
 \contentsline {subsubsection}{\numberline {3.3.2.3}Lexer and parser}{19}{subsubsection.3.3.2.3}
-\contentsline {subsubsection}{\numberline {3.3.2.4}Comparison table}{20}{subsubsection.3.3.2.4}
+\contentsline {subsubsection}{\numberline {3.3.2.4}Comparison Table}{20}{subsubsection.3.3.2.4}
 \contentsline {subsection}{\numberline {3.3.3}ANTLR}{20}{subsection.3.3.3}
 \contentsline {subsection}{\numberline {3.3.4}Lexical Analyzer}{22}{subsection.3.3.4}
-\contentsline {subsubsection}{\numberline {3.3.4.1}Scanner Class Generation}{23}{subsubsection.3.3.4.1}
-\contentsline {subsection}{\numberline {3.3.5}Tokens}{23}{subsection.3.3.5}
+\contentsline {subsubsection}{\numberline {3.3.4.1}Scanner Class Generation}{22}{subsubsection.3.3.4.1}
+\contentsline {subsection}{\numberline {3.3.5}Tokens}{22}{subsection.3.3.5}
 \contentsline {subsubsection}{\numberline {3.3.5.1}Reserved Keywords}{23}{subsubsection.3.3.5.1}
-\contentsline {subsubsection}{\numberline {3.3.5.2}Token Specification}{24}{subsubsection.3.3.5.2}
+\contentsline {subsubsection}{\numberline {3.3.5.2}Token Specification}{23}{subsubsection.3.3.5.2}
 \contentsline {subsection}{\numberline {3.3.6}Parser}{24}{subsection.3.3.6}
 \contentsline {subsubsection}{\numberline {3.3.6.1}Top-down Parsers}{24}{subsubsection.3.3.6.1}
-\contentsline {subsubsection}{\numberline {3.3.6.2}Bottom-Up Parsers}{25}{subsubsection.3.3.6.2}
+\contentsline {subsubsection}{\numberline {3.3.6.2}Bottom-Up Parsers}{24}{subsubsection.3.3.6.2}
 \contentsline {section}{\numberline {3.4}Contextual Analysis}{25}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Scope Checking}{25}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}Type Checking}{25}{subsection.3.4.2}

@@ -49,7 +49,7 @@
 \BOOKMARK [3][-]{subsubsection.3.3.2.1}{3.3.2.1 Lexer}{subsection.3.3.2}% 49
 \BOOKMARK [3][-]{subsubsection.3.3.2.2}{3.3.2.2 Parser}{subsection.3.3.2}% 50
 \BOOKMARK [3][-]{subsubsection.3.3.2.3}{3.3.2.3 Lexer and parser}{subsection.3.3.2}% 51
-\BOOKMARK [3][-]{subsubsection.3.3.2.4}{3.3.2.4 Comparison table}{subsection.3.3.2}% 52
+\BOOKMARK [3][-]{subsubsection.3.3.2.4}{3.3.2.4 Comparison Table}{subsection.3.3.2}% 52
 \BOOKMARK [2][-]{subsection.3.3.3}{3.3.3 ANTLR}{section.3.3}% 53
 \BOOKMARK [2][-]{subsection.3.3.4}{3.3.4 Lexical Analyzer}{section.3.3}% 54
 \BOOKMARK [3][-]{subsubsection.3.3.4.1}{3.3.4.1 Scanner Class Generation}{subsection.3.3.4}% 55

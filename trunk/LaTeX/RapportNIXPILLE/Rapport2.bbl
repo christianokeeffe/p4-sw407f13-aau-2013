@@ -1,4 +1,4 @@
-\begin{thebibliography}{25}
+\begin{thebibliography}{26}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -38,6 +38,16 @@
 \newblock \textit{Arduino Build Process}.
 \newblock \url{http://arduino.cc/en/Hacking/BuildProcess} [Last seen:
   2013/03/22].
+
+\bibitem[Bent~Thomsen(2013)]{OverviewCompiler2}
+\textbf{Bent~Thomsen, teacher at Department of Computer~Science},
+  \textbf{2013}.
+\newblock Aalborg~university Bent~Thomsen, teacher at Department of
+  Computer~Science.
+\newblock \textit{Languages and Compilers Lecture 1}.
+\newblock 2013.
+\newblock Slides of a Lecture given 7.2.13 from 15.00 to 16.15 by Bent Thomsen
+  in Department of Computer Science, Aalborg university.
 
 \bibitem[Chomsky(1959)]{Chomsky}
 \textbf{Chomsky}, \textbf{1959}.

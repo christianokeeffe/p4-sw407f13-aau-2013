@@ -1,15 +1,13 @@
 \subsection{Overview of the Compiler}
-
-\figur{0.8}{OverviewCompiler2.PNG}{This is an overview of how the compiler is structured. The figure is from \citep{CraftingACompiler}.}{fig:OverviewCompiler2}
-
-Figure \ref{fig:OverviewCompiler2} shows an overview of each of the different phases in the compiler, what each phase requires as input, and what each step returns to the next phase.
+Figure \ref{fig:CraftingACompiler2} shows an abstract overview of each of the different phases in the compiler, what each phase requires as input, and what each step returns to the next phase.
+\figur{0.8}{OverviewCompiler.PNG}{This is an abstract overview of how the compiler is structured. The figure is from \citep{OverviewCompiler2}.}{fig:OverviewCompiler} 
 
 A compiler is a fundamental part of modern computing. Their job is to translate programming language into machine language. A compiler allows programs to make a virtual computer to ignore the machine-dependency details of machine language and therefor be portable across different computers  \citep{CraftingACompiler}.
-
-\figur{0.8}{OverviewCompiler.PNG}{This is another overview of how the compiler is structured.}{fig:OverviewCompiler}
 
 A compiler consists of 3 different phases. The different phases roughly correspond to the different parts in a language specification which can be seen on figure \ref{fig:OverviewCompiler}. The syntax analysis correspond to the syntax, the contextual analysis to the contextual constraints and the code generation phase roughly corresponds to the semantics.
 
 Given a simple compiler it will go through more than three phases. This can be seen on figure \ref{fig:OverviewCompiler2}. In the syntax analysis phase the compiler consists of a scanner and a parser. The scanner takes the source program and transforms it into a stream of tokens. The parser then uses the tokens to create an abstract syntax tree (AST). In the contextual analysis a symbol table is created from the abstract syntax tree. At the end, the semantic analysis decorate the AST, and translates this into the target language.
 
-The different phases will be described more thorough later in the rapport. \fxfatal{Få lavet konkret henvendelse når opbygningen på rapporten er fastsat.}
+The different phases will be described more thorough later in the rapport. 
+
+\figur{0.8}{OverviewCompiler2.PNG}{This is an more detailed overview of how the compiler is structured. The figure is from \citep{CraftingACompiler}.}{fig:OverviewCompiler2}

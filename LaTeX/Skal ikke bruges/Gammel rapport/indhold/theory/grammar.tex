@@ -1,0 +1,20 @@
+\subsection{Grammar}
+\label{sec:grammar}
+A grammar is used to define the syntax of a language. A context-free grammar (CFG) is a 4-tuple $(V, \Sigma, R, S)$ finite language defined by \citep{sipser}:
+\begin{enumerate}
+	\item $V$ is a finite set called the variables
+	\item $\Sigma$ is a finite set, disjoint from V called the terminals
+	\item $R$ is a finite set of rules, with each rule being a variable and a string or variables and terminals
+	\item $S: S \in V$ is a start variable
+\end{enumerate}
+
+The most common way of writing a CFG is by using Backus-Naur Form (BNF) or Extended Backus-Naur Form (EBNF). BNF is named after John Backus who presented the notation, and Peter Naur who modified Backus' method of notation slightly \citep{sebesta}. By using the BNF-notation it is possible to describe a CFG. It is preferred to have a unambiguously grammar. A CFG is ambiguously if a string derived in the grammar has two or more different leftmost derivations \citep{sipser}. An unambiguously grammar will ensure that a program reading a string using CFG can only read the string in one way.
+It is worth spending time making a grammar unambiguous, because if the grammar is ambiguous, multiple compilations of a program using that grammar can result in different programs with different meanings and programs yielding different results \citep{sebesta}. But it also worth noting that some grammars are inherently ambiguous, meaning that no matter what it can not become unambiguous.
+
+
+A CFG is a part of the $LL(k)$ grammar class if it is possible to produce the leftmost derivation of a string by looking at most $k$ tokens ahead in the string. $LL$ algorithms works on the same subset of free grammars which means that $LL$ parsers works on $LL(k)$ grammars. $LL(k)$ means that the grammar needs to be free of left-recursion which makes it possible to create a top-down leftmost derivation parser.
+The $LL(1)$ have proprieties that makes the grammar attractive for simple compiler construction. One property is that $LL(1)$ grammars are fairly easy compared to $LL(k)\text{ where }k > 1$ to implement because the parser analyzer only has to look one element ahead in order to determine the appropriate parser action. $LL(1)$ is also relatively faster than $LL(k)\text{ where }k > 1$ because of the same reason: The parser only has to look one element ahead. A disadvantage of the $LL$ grammars is that the parser finds syntax errors towards the end of parsing process where a $LR$ parser detects the syntax errors faster. $LL$ is also inferior compared to $LR$ in terms of describing a languages based on the idea that $LL$ is a subclass of the bigger grammar class $LR$. That means with a $LR$ grammar it is possible to describe aspects of a language that might not been possible in a $LL$ grammar \citep{CraftingACompiler} \citep{sebesta}.
+
+A CFG is a part of the $LR(k)$ grammar classes if it is possible to produce the rightmost derivation in reverse of a string by looking at most $k$ tokens ahead in the string. $LR$ grammars are a superset for the $LL$ grammars meaning that $LR$ covers a larger variety of programming language that $LL$. $LR$ parsers are bottom-up parsers meaning that they begin constructing the abstract tree from its leaf and works its way to the root. $LR$ parsers are generally harder to implement by hand than $LL$ parsers but there exists tools which automatic generates $LR$ parsers for a given grammar. $LR(k)$ grammars allows left recursion which means that the $LR$ grammars are a bigger grammar class than $LL$. $LALR$ and $SLAR$ is subclasses of the $LR(k)$ grammars which means that $LR(k)$ describes a larger class of languages at the cost of a bigger parser table in comparison to $SLAR$ and $LALR$. The balance of power and efficiency makes the $LALR(1)$ a popular table building method compare to $LR$ building method \citep{CraftingACompiler} \citep{sebesta}.
+
+Based on these understandings of grammars there will be a section were there will looked into which grammar that will be used in this project.

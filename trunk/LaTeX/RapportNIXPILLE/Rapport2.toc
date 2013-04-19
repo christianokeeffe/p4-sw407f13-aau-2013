@@ -4,7 +4,7 @@
 \contentsline {chapter}{\chapternumberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Environment for this Project}{1}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}Solution in Bars}{1}{subsection.1.1.1}
-\contentsline {section}{\numberline {1.2}Problem statement}{1}{section.1.2}
+\contentsline {section}{\numberline {1.2}Problem Statement}{1}{section.1.2}
 \contentsline {subsection}{\numberline {1.2.1}Sub Statements}{2}{subsection.1.2.1}
 \contentsline {section}{\numberline {1.3}Report Structure}{2}{section.1.3}
 \contentsline {chapter}{\chapternumberline {2}Language Specification}{3}{chapter.2}

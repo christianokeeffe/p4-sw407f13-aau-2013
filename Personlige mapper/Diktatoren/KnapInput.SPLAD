@@ -14,6 +14,7 @@ begin
 		
 		while(call digitalRead(12) = LOW)
 		begin
+			call delay(30);
 			if(call digitalRead(4) = HIGH)
 			begin
 				drinkID <-- drinkID + 1;
@@ -34,6 +35,7 @@ begin
 		int Amount <-- 0;
 		while(call digitalRead(12) = LOW)
 		begin
+			call delay(30);
 			if(call digitalRead(4) = HIGH)
 			begin
 				Amount <-- Amount + 1;
@@ -58,5 +60,7 @@ begin
 	call pinMode(4, INPUT);
 	call pinMode(2, INPUT);
 	call pinMode(12, INPUT);
+	call LCDPrint("Welcome to", 0);
+	call LCDPrint("      SPLAD     ", 1);
 	return nothing;
 end

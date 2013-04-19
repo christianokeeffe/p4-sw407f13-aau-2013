@@ -1,5 +1,5 @@
 \subsection{Type Rules} % er blevet lavet itemize for at bedre kunne få et overblik over typereglerne
-This section contains the type rules for the comparison operator. In the type rules, $E$ are an expression and $C$ are statements.
+This section contains the type rules for the comparison operator. In the type rules, $E$ is an expression and $C$ is a statement.
 \begin{itemize}
 \item Type rule for \textbf{<, >, <=, >=}:
 
@@ -15,7 +15,7 @@ This section contains the type rules for the comparison operator. In the type ru
 
 \item Type rule for \textbf{/}:
 
-"$E_1$ (/) $E_2$" is type correct and of type integer or double if $E_1$ and $E_2$ are type correct and of type integer or double and $E_2$ does not have the value of zero.
+"$E_1$ (/) $E_2$" is type correct and of type double if $E_1$ and $E_2$ are type correct and of type integer or double and $E_2$ does not have the value of zero.
 
 \item Type rule for \textbf{<--} (assign):
 
@@ -25,17 +25,17 @@ This section contains the type rules for the comparison operator. In the type ru
 
 \item Type rule of 'while'-statement: 
 
-"while E begin C end" is type correct if E of type boolean and C are type correct.
+"while $E$ begin $C$ end" is type correct if $E$ is of type boolean and $C$ is type correct.
 
 \item Type rule of 'from to step'-statement: 
 
-"from $E_1$ to $E_2$ step $E_3$ begin C end" are type correct if $E_1$, $E_2$ and $E_3$ are type correct and of type integer, and C are type correct.
+"from $E_1$ to $E_2$ step $E_3$ begin $C$ end" are type correct if $E_1$, $E_2$ and $E_3$ are type correct and of type integer, and $C$ is type correct.
 
 \item This is the type rules for 'if'-statement:
 
-"if(E) begin C end" is type correct if E are type correct and of type boolean, and C are type correct.
+"if($E$) begin $C$ end" is type correct if $E$ is type correct and of type boolean, and $C$ is type correct.
 
 \item Here the type rules for switch/case will be described:
 
-"switch (E) begin case $E_1$: $C_1$ break; ... case $E_n$: $C_n$ break; default: $C_d$ break; end" is type correct if E, $E_1$...$E_n$ are type correct and of type integer, bool, double, char or string and are the same type, and $C_1$...$C_n$ and $C_d$ are type correct.
+"switch ($E$) begin case $E_1$: $C_1$ break; ... case $E_n$: $C_n$ break; default: $C_d$ break; end" is type correct if $E$, $E_1$...$E_n$ are type correct and of type integer, bool, double, char or string and are of the same type, and $C_1$...$C_n$ and $C_d$ are type correct.
 \end{itemize}

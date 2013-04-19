@@ -1,7 +1,7 @@
-string Gin <-- 3;
-string Sugar <-- A0;
-string Soda <-- A2;
-string Lemon <-- A4;
+string Gin <-- "3";
+string Sugar <-- "A0";
+string Soda <-- "A2";
+string Lemon <-- "A4";
 
 function makedrink return nothing using(int DrinkID, int Amount)
 begin

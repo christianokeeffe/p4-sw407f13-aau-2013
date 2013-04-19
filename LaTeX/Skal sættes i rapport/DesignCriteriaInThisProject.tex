@@ -1,35 +1,21 @@
 \subsection{Design Criteria in this Project}
 To determine how a programming language should be syntactically described, the trade-offs of designing a programming language must be taken into account. The different characteristics of a programming language, that will be used to evaluate trade-offs can be seen on table \ref{tab:langCharacteristics}.
-%her fra
 \begin{table}[H]
-	\begin{tabular}{|l|l|}
+	\begin{tabularx}{|l|R|}
 		\hline
 		
 		Readability				& How easy it is to understand and comprehend a computation 		\\ \hline
-		Writability				& How easy it is for the programmer to write a computation clearly, \\
-		~ 						& correctly, concisely and quickly 									\\ \hline
-		Reliability 			& Assures a program behaves the way it is suppose to				\\ \hline
-		Simplicity				& When a program e.g. have a small number of basic constructs, and 	\\
-		~						& it is simple in the way that it have only one way to accomplish	\\
-		~						a particular operation												\\ \hline
-		Orthogonality 			& A relatively small set of primitive constructs can be				\\
-		~ 						& combined legally in a relatively small number of ways				\\ \hline	
-		Data type				& The presence of adequate facilities for defining data types and 	\\
-		~						& data structures.													\\ \hline
-		Syntax design			& The syntax, or form, of the elements of a language. E.g. special	\\
-		~						& words like "while" and "if".										\\ \hline
-		Support for abstraction	& Abstraction means the ability to define and then use complicated	\\
-		~						& structures or operations in ways that allow many of the details	\\
-		~						& to be ignored.													\\ \hline
-		Expressivity			& A language can refer to several different characteristics. It		\\
-		~						& means that a language has relatively convenient, rather than		\\
-		~						& cumbersome, ways of specifying computations.						\\ \hline
-		Type Checking			& Is simply testing for type errors in a given program, either by	\\
-		~						& the compiler or during program execution.							\\ \hline
-		Exception handling		& The ability of a program to intercept run-time errors, take		\\
-		~						& corrective measures, and then continue.							\\ \hline
-		Restricted aliasing		& Aliasing is having two or more distinct names that can be used to	\\
-		~						& access the same memory cell.										\\ \hline
+		Writability				& How easy it is for the programmer to write a computation clearly, correctly, concisely and quickly\\ \hline
+		Reliability 			& Assures a program behaves the way it is suppose to do	\\ \hline
+		Simplicity				& When a program e.g. have a small number of basic constructs, and it is simple in the way that it have only one way to 									accomplish a particular operation\\ \hline
+		Orthogonality 			& A relatively small set of primitive constructs can be combined legally in a relatively small number of ways\\ \hline	
+		Data type				& The presence of adequate facilities for defining data types and data structures.\\ \hline
+		Syntax design			& The syntax, or form, of the elements of a language. E.g. special words like "while" and "if".\\ \hline
+		Support for abstraction	& Abstraction means the ability to define and then use complicated structures or operations in ways that allow many of the 									details	to be ignored.\\ \hline
+		Expressivity			& A language can refer to several different characteristics. It means that a language have a relatively convenient, rather 									than cumbersome, way of specifying computations.\\ \hline
+		Type Checking			& Testing for type errors in a given program, either by the compiler or during program execution.\\ \hline
+		Exception handling		& The ability of a program to intercept run-time errors, take corrective measures, and then continue.\\ \hline
+		Restricted aliasing		& Aliasing is having two or more distinct names that can be used to	access the same memory cell.\\ \hline
 		
 %		Uniformity 			& If some features are similar they should look and behave similar	  \\ \hline
 %		Maintainability 	& Errors can be found and corrected and new features can be added	  \\
@@ -45,7 +31,6 @@ To determine how a programming language should be syntactically described, the t
 	\caption{Brief explanation of language characteristics \citep{sebesta}.}
 	\label{tab:langCharacteristics}
 \end{table}
-%her til + mere nederst
 These characteristics are used to evaluate the the trade-offs of programming language. An overview of these can be seen on table \ref{tab:langTradeOffs}.
 
 \begin{table}[H]
@@ -92,12 +77,11 @@ On the other hand, having a simple-to-write programming language, might not make
 
 When defining the syntax of a programming language, it should balance these characteristics to achieve the right amount of trade-offs for that particular language. For the language of this project, it is important that the language is simple to read and understand, because the target group is the hobbyist-programmer, who might not have much experience in programming.
 
-% nyt fra her
 \begin{table}[H]
 	\begin{tabular}{l|c|}
 \textbf{Characteristic} 		& \rotatebox{90}{Chosen focus for this project} \\ \hline
 		Simplicity 				& high 		\\ \hline
-		Orthogonality 			& medium 		\\ \hline
+		Orthogonality 			& medium 	\\ \hline
 		Data types 				& low 		\\ \hline
 		Syntax design 			& high 		\\ \hline
 		Support for abstraction	& medium	\\ \hline
@@ -111,7 +95,6 @@ When defining the syntax of a programming language, it should balance these char
 \end{table}
 Table \ref{tab:choiceoffocus} shows what paradigms that is in the focus for the project. 
 \begin{itemize}
-%her fra og ned
 \item \textbf{Simplicity:} The language of this project does not have multiple ways of doing the same simple instructions. This is to make writing code simpler for beginners. An example is that it is not possible to increase a variable by 1 by writing "A++;". Instead it has to be written as "A<--A+1;".
 
 \item \textbf{Orthogonality:} The language of this project only has four primitive types, bool, double, int and char, and 2 special types, container and string. It is not possible to make classes or constructs, this is done to simplify types for beginners.
@@ -124,10 +107,9 @@ Table \ref{tab:choiceoffocus} shows what paradigms that is in the focus for the 
 
 \item \textbf{Expressivity:} \fxfatal{ikke helt sikker på hvad vi har bestemt os for}
 
-\item \textbf{Type checking:} Is a major part of the project. The type checking will be done on compile time rather then run time, to help beginners see their errors in their code, instead of running time.
+\item \textbf{Type checking:} Is a major part of the project. The type checking will be done on compile time rather then run time, to help beginners see their errors in their code, instead of at run time.
 
 \item \textbf{Exception handling:} \fxfatal{ikke helt sikker på hvad vi har bestemt os for}
 
-\item \textbf{Restricted aliasing:} Since at it is known that using aliasing is a dangerous feature in a programming language \fxfatal{indsæt kilde her}, the language of this project will not have this feature, to help beginners.
+\item \textbf{Restricted aliasing:} Since it is known that using aliasing is a dangerous feature in a programming language \fxfatal{indsæt kilde her}, the language of this project will not have this feature, to help beginners.
 \end{itemize}
-% til her

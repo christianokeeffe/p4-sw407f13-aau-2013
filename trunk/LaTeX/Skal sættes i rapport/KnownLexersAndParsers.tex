@@ -47,7 +47,6 @@ Lexer rules is written with an upper-case beginnings letter so that ANTLR can di
 \subsubsubsection{JavaCC:}
 Javacc generate a parser from a formal grammar written in EBNF notation. The output is Java source code. JavaCC generates top-down parsers, which limits it to the LL(k) class of grammars (in particular, left recursion cannot be used). JavaCC also generates lexical analyzers in a fashion similar to lex\citep{Javacc}. The tree builder that accompanies it, JJTree, constructs its trees from the bottom uplex\citep{JJTree}.
 
-% herfra
 \subsubsection{Comparison Tables}
 \begin{table}[H]
 \begin{tabular}{\textwidth}{|l|c|c|}
@@ -78,5 +77,4 @@ JavaCC 	& LL(k)   & EBNF & Java, C++(beta)																	  &	Generated \\ \hli
 \label{tab:ComparisonParser}
 \end{table}
 
-%hertil
 Based on the different lexers and parsers attributes (seen on \ref{tab:ComparisonParser}), compared to the expectations of this project, it has been decided that ANTLR best fit the project. The reason behind this is that ANTLR uses the LL(*) parser algorithm, this fits the structure of the CFG grammar for this project. Furthermore ANTLR's output language can be in Java, C or C++, this makes it easier to work on an Arduino. Another possibility could be to write the lexer and parser by hand, but many typingerrors are avoided by using a tool like ANTLR. Futhermore, it is easier to maintain the lexer and parser with a tool. When the grammar is changed, you can just generate a new lexer and parser with the tool. It has therefore been decided to use ANTLR for generating the lexer and parser in this project.

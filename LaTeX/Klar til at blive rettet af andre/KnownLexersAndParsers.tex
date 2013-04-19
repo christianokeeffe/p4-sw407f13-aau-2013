@@ -47,18 +47,37 @@ Lexer rules is written with an upper-case beginnings letter so that ANTLR can di
 \subsubsubsection{JavaCC:}
 Javacc generate a parser from a formal grammar written in EBNF notation. The output is Java source code. JavaCC generates top-down parsers, which limits it to the LL(k) class of grammars (in particular, left recursion cannot be used). JavaCC also generates lexical analyzers in a fashion similar to lex\citep{Javacc}. The tree builder that accompanies it, JJTree, constructs its trees from the bottom uplex\citep{JJTree}.
 
-
-\subsubsection{Comparison Table}
+% herfra
+\subsubsection{Comparison Tables}
 \begin{table}[H]
-\begin{tabularx}{\textwidth}{|l|c|c|R|}
+\begin{tabular}{\textwidth}{|l|c|c|c|}
 \hline
-\textbf{Name} 	& \textbf{Parsing algorithm} 	& \textbf{Input notation} 	& \textbf{Output language}			\\ \hline
-Yacc 			& LALR(1) 						& YACC 						& C									\\ \hline
-Cup.& LALR(1) 						& EBNF 						& java								\\ \hline
-SableCC 		& LALR(1) 						& EBNF 						& C, C++, C\#, java, OCaml, Python	\\ \hline
-ANTLR 			& LL(*) 						& EBNF 						& ActionScript, Ada95, C, C++, C\#, Java, JavaScript,Objective-C, Perl, Python, Ruby	\\ \hline
-JavaCC 			& LL(k) 						& EBNF 						& Java, C++(beta)					\\ \hline
-\end{tabularx}
+\textbf{Name}	& \textbf{Lexer algorithm}	& \textbf{Output language}	\\ \hline
+Lex				& DFA						& C							\\ \hline
+Flex			& DFA table driven			& C, C++					\\ \hline
+Jflex			& DFA						& Java						\\ \hline
+Jlex			& DFA						& Java						\\ \hline
+\end{tabular}
+\caption{Comparison between the different lexical analyzers.}
+\label{tab:ComparisonLexer}
 \end{table}
 
+On table \ref{tab:ComparisonLexer} a comparison between the different lexers can be seen. It has been used in the discussion about how to make the lexer in this project.
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{|l|c|c|R|c|}
+\hline
+\textbf{Name} & \textbf{Parsing algorithm} & \textbf{Input notation} & \textbf{Output language} & \textbf{Lexer}		  \\ \hline
+Yacc 	& LALR(1) & YACC & C																				  &	External  \\ \hline
+Cup		& LALR(1) & EBNF & java																				  &	External  \\ \hline
+SableCC & LALR(1) & EBNF & C, C++, C\#, java, OCaml,Python													  &	Generated \\ \hline
+ANTLR 	& LL(*)   & EBNF & ActionScript, Ada95, C, C++, C\#, Java, JavaScript,Objective-C, Perl, Python, Ruby & Generated \\ \hline
+JavaCC 	& LL(k)   & EBNF & Java, C++(beta)																	  &	Generated \\ \hline
+\end{tabularx}
+\caption{Comparison between the different parsers and  lexer-parsers.}
+\label{tab:ComparisonParser}
+\end{table}
+
+On table \ref{tab:ComparisonParser} a comparison between the different parsers and lexer-parsers can be seen. This table has been used in the discussion about which parser or lexer-parser to use in the project.
+%hertil
 Based on the different lexers and parsers attributes, compared to the expectations of this project, it has been decided that ANTLR best fit the project. The reason behind this is that ANTLR uses the LL(*) parser algorithm, this fits the structure of the CFG grammar for this project. Furthermore ANTLR's output language can be in Java, C or C++, this makes it easier to work on an Arduino. Another possibility could be to write the lexer and parser by hand, but many typingerrors are avoided by using a tool like ANTLR. Futhermore, it is easier to maintain the lexer and parser with a tool. When the grammar is changed, you can just generate a new lexer and parser with the tool. It has therefore been decided to use ANTLR for generating the lexer and parser in this project.

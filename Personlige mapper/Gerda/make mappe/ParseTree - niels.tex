@@ -8,13 +8,23 @@ To help understand the different between abstract syntax tree and parse tree the
 
 \begin{code}{DariableDeclarationEKS}{a simple variable declaration in the project language}
 	\begin{lstlisting}
-		int x <-- 3+(3*2);
+		int x <-- 3+2;
 	\end{lstlisting}
 \end{code}
-\Tree[.numeric  [.plusminusorempty
+\Tree[.program [.root[.dcl[.type[.primitivetype[.int]
+                                [.arraytype]]
+                          [.assign[callid[.id \textit{x}]
+                                         [.arrayidend]
+                                  [.assignend]]]]
+
+
+
+
+\end{document}
+
+\Tree[[.factor ]
+        [.numeric  [.plusminusorempty
                ] \textit{2}
 		[.numericend
                ]
-]
-
-\end{document}
+]]

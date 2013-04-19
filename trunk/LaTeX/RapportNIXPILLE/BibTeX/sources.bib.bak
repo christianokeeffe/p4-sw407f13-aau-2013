@@ -1,4 +1,4 @@
-% This file was created with JabRef 2.7.1.
+% This file was created with JabRef 2.9.2.
 % Encoding: UTF8
 
 @MISC{ANTLR,
@@ -192,6 +192,16 @@
   howpublished = {\url{http://www.pjrc.com/teensy/index.html} [Last seen: 2013/03/11]},
   owner = {Aleksander},
   timestamp = {2013.03.11}
+}
+
+@MISC{funcprog,
+  author = {Robin Popplestone},
+  title = {Lecture 1: What are Programming Paradigms?},
+  howpublished = {\url{http://www.cs.bham.ac.uk/research/projects/poplog/paradigms\_lectures/lecture1.html}
+	[Last seen: 2013/04/17]},
+  year = {1999},
+  owner = {Christian},
+  timestamp = {2013.04.17}
 }
 
 @MISC{SableCC,

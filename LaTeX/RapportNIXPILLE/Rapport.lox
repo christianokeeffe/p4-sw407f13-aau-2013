@@ -1,12 +1,15 @@
 \contentsline {fixme}{Fatal: synopsis mangler}{iii}{Doc-Start}
 \contentsline {fixme}{Fatal: prolog mangler}{v}{chapter*.1}
-\contentsline {fixme}{Fatal: indledning mangler}{1}{chapter.1}
-\contentsline {fixme}{Fatal: Skal det med?}{12}{subsection.2.3.5}
-\contentsline {fixme}{Fatal: Skal det med?}{12}{subsection.2.3.6}
-\contentsline {fixme}{Fatal: skal det med?}{18}{subsection.3.2.3}
-\contentsline {fixme}{Fatal: Skal det med?}{18}{subsection.3.2.4}
-\contentsline {fixme}{Fatal: Eksempler p\IeC {\r a} hvordan parsing virker, og hvordan tr\IeC {\ae }et bliver bygget}{18}{subsection.3.2.5}
-\contentsline {fixme}{Fatal: ref til afsnittet som parsetr\IeC {\ae }er}{22}{figure.caption.9}
-\contentsline {fixme}{Fatal: Den laver vel b\IeC {\r a}de parsetr\IeC {\ae } og AST? Der mangler at blive beskrevet forskellen p\IeC {\r a} parsetr\IeC {\ae } og AST}{24}{subsection.3.3.6}
-\contentsline {fixme}{Fatal: konklusion mangler}{27}{chapter.4}
-\contentsline {fixme}{Fatal: Mangler: for loop, call function, declerations m\IeC {\r a}ske mere}{33}{section.A.1}
+\contentsline {fixme}{Fatal: regler ikke lavet endnu, eks. kan en bool skrives som bool A = true og/eller bool A = 1}{7}{table.caption.4}
+\contentsline {fixme}{Fatal: ikke helt sikker p\IeC {\r a} hvad vi har bestemt os for}{7}{table.caption.4}
+\contentsline {fixme}{Fatal: ikke helt sikker p\IeC {\r a} hvad vi har bestemt os for}{7}{table.caption.4}
+\contentsline {fixme}{Fatal: inds\IeC {\ae }t kilde her}{8}{table.caption.4}
+\contentsline {fixme}{Fatal: Skal det med?}{14}{subsection.2.3.5}
+\contentsline {fixme}{Fatal: Skal det med?}{14}{subsection.2.3.6}
+\contentsline {fixme}{Fatal: skal det med?}{20}{subsection.3.2.3}
+\contentsline {fixme}{Fatal: Skal det med?}{20}{subsection.3.2.4}
+\contentsline {fixme}{Fatal: Eksempler p\IeC {\r a} hvordan parsing virker, og hvordan tr\IeC {\ae }et bliver bygget}{20}{subsection.3.2.5}
+\contentsline {fixme}{Fatal: ref til afsnittet som parsetr\IeC {\ae }er}{24}{figure.caption.11}
+\contentsline {fixme}{Fatal: Den laver vel b\IeC {\r a}de parsetr\IeC {\ae } og AST? Der mangler at blive beskrevet forskellen p\IeC {\r a} parsetr\IeC {\ae } og AST}{26}{subsection.3.3.6}
+\contentsline {fixme}{Fatal: konklusion mangler}{29}{chapter.4}
+\contentsline {fixme}{Fatal: Mangler: for loop, call function, declerations m\IeC {\r a}ske mere}{35}{section.A.1}

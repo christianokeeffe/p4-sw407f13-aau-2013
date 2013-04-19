@@ -1,10 +1,13 @@
-\input{preamble}
-\begin{document}
-
 \section{Parse Tree}
 Parse tree are nearly the same as a abstract syntax tree, but here all internal nodes are labelled with a non-terminal symbol and all leaf labelled with a terminal symbol. Also a sub-tree describe one instance abstraction of a sentence.
 
-To help understand the different between abstract syntax tree and parse tree there will be made one of both over the same variable declaration in code for the project language. \ref{ParseTreeEKS} is a parse tree over the code \ref{VariableDeclarationEKS}, under this text there is a abstract syntax tree for the same code \ref{VariableDeclarationEKS}.
+To help understand the different between abstract syntax tree and parse tree. 2 trees are made, one of each, over the same code for a variable declaration in the projects language. Under this text there is a abstract syntax tree for the same code \ref{VariableDeclarationEKS}. \ref{ParseTreeEKS} is a parse tree over the code \ref{VariableDeclarationEKS}.
+
+\begin{code}{VariableDeclarationEKS}{A simple variable declaration in the project language.}
+	\begin{lstlisting}
+		int x <-- 3+2;
+	\end{lstlisting}
+\end{code}
 
 \Tree[.program [.<-- [.x
 ]
@@ -13,11 +16,4 @@ To help understand the different between abstract syntax tree and parse tree the
                         [.2
                     ]]]]
 
-\begin{code}{VariableDeclarationEKS}{a simple variable declaration in the project language}
-	\begin{lstlisting}
-		int x <-- 3+2;
-	\end{lstlisting}
-\end{code}
-
-\figur{0.7}{parsetree.png}{a parse tree that is made by using ANTLR}{fig:ParseTreeEKS}
-\end{document}
+\figur{0.7}{parsetree.png}{A parse tree that is made by using ANTLR.}{fig:ParseTreeEKS}

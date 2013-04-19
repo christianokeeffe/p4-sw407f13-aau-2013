@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.3.15)  17 APR 2013 11:58
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.3.15)  19 APR 2013 09:22
 entering extended mode
 **Rapport2.tex
 
@@ -2533,7 +2533,7 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `lst:HeeloWoorld' on page 21 undefined on input line 3
 1.
 
-<billeder/ParsedCode.png, id=686, 697.10437pt x 461.47406pt>
+<billeder/ParsedCode.png, id=688, 697.10437pt x 461.47406pt>
 File: billeder/ParsedCode.png Graphic file (type png)
 
 <use billeder/ParsedCode.png>
@@ -2584,7 +2584,7 @@ port2.aux")
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 119.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 119.
 Package rerunfilecheck Info: File `Rapport2.out' has not changed.
-(rerunfilecheck)             Checksum: 580D7598004696821E37C760C9B54A38;5446.
+(rerunfilecheck)             Checksum: FAF423B43CB185E3B300E2103EE32EE0;5446.
 
 
 LaTeX Warning: There were undefined references.
@@ -2625,9 +2625,9 @@ onts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTex 2.9/fonts/type1
 /public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTex 2.9/fonts/type1/public/
 amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTex 2.9/fonts/type1/urw/bookman/ubkd
 8a.pfb><C:/Program Files/MiKTex 2.9/fonts/type1/urw/bookman/ubkl8a.pfb>
-Output written on Rapport2.pdf (40 pages, 700381 bytes).
+Output written on Rapport2.pdf (40 pages, 700827 bytes).
 PDF statistics:
- 1579 PDF objects out of 1728 (max. 8388607)
+ 1581 PDF objects out of 1728 (max. 8388607)
  205 named destinations out of 1000 (max. 500000)
  601 words of extra memory for PDF output out of 10000 (max. 10000000)
 

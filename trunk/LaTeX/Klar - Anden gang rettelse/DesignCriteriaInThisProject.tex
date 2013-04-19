@@ -9,7 +9,7 @@ To determine how a programming language should be syntactically described, the t
 		Writability				& How easy it is for the programmer to write a computation clearly, \\
 		~ 						& correctly, concisely and quickly 									\\ \hline
 		Reliability 			& Assures a program behaves the way it is suppose to				\\ \hline
-		Simplicity				& When a program e.g have a small number of basic constructs, and 	\\
+		Simplicity				& When a program e.g. have a small number of basic constructs, and 	\\
 		~						& it is simple in the way that it have only one way to accomplish	\\
 		~						a particular operation												\\ \hline
 		Orthogonality 			& A relatively small set of primitive constructs can be				\\
@@ -112,15 +112,15 @@ When defining the syntax of a programming language, it should balance these char
 Table \ref{tab:choiceoffocus} shows what paradigms that is in the focus for the project. 
 \begin{itemize}
 %her fra og ned
-\item \textbf{Simplicity:} The project languages do not have many ways the same simple function can be done in code. This is to make writing code simpler for beginners.  E.g. is it not possible to increase a variable by 1 by writing "A++", instead it have to be written as "A=A+1".
+\item \textbf{Simplicity:} The language of this project does not have multiple ways of doing the same simple instructions. This is to make writing code simpler for beginners. An example is that it is not possible to increase a variable by 1 by writing "A++;". Instead it has to be written as "A<--A+1;".
 
-\item \textbf{Orthogonality:} The project languages have a only have four primitive types, bool, double, int and char, and 2 special types, container and string. It is not possible to make classes or constructs, this is done to help types handling simple for beginners.
+\item \textbf{Orthogonality:} The language of this project only has four primitive types, bool, double, int and char, and 2 special types, container and string. It is not possible to make classes or constructs, this is done to simplify types for beginners.
 
 \item \textbf{Data types:} \fxfatal{regler ikke lavet endnu, eks. kan en bool skrives som bool A = true og/eller bool A = 1}
 
-\item \textbf{Syntax design:} It is not possible to make classes in project languages but there is both "for" and "while" loops because they are relatively simple to use and understand for beginners. All functions and commands start with "begin" and end with "end" to better get understanding where they start and end.
+\item \textbf{Syntax design:} It is not possible to make classes in the language of this project but there is both "for" and "while" loops because they are relatively simple to use and understand for beginners. All functions and loops start with "begin" and end with "end" to make it clear where they start and end.
 
-\item \textbf{Support for abstraction:} This is close to non-existent in the project languages, because to help beginners with using the language, a clear types is better to understand.
+\item \textbf{Support for abstraction:} This is close to non-existent in the project languages, because to help beginners with using the language, a simple  type system is simpler to understand.
 
 \item \textbf{Expressivity:} \fxfatal{ikke helt sikker på hvad vi har bestemt os for}
 
@@ -128,6 +128,6 @@ Table \ref{tab:choiceoffocus} shows what paradigms that is in the focus for the 
 
 \item \textbf{Exception handling:} \fxfatal{ikke helt sikker på hvad vi har bestemt os for}
 
-\item \textbf{Restricted aliasing:} Since at it is know that using aliasing is a dangerous feature in a programming language, the project languages will not have this function, to help beginners.
+\item \textbf{Restricted aliasing:} Since at it is known that using aliasing is a dangerous feature in a programming language \fxfatal{indsæt kilde her}, the language of this project will not have this feature, to help beginners.
 \end{itemize}
 % til her

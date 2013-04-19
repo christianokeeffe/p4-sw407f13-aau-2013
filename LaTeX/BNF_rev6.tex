@@ -65,8 +65,10 @@ This section contains the BNF for the programming language of this project; SPLA
 <numeric> $\ra$ <plusminusorempty> <DIGIT> <numericend>
 
 <addsubend> $\ra$ <plusminus> <addsub>
+\alt $\eps$
 
 <muldivend> $\ra$ <gangedivider> <muldiv>
+\alt $\eps$
 
 <gangedivider> $\ra$ *
 \alt /
@@ -107,17 +109,12 @@ This section contains the BNF for the programming language of this project; SPLA
 <termend> $\ra$ <termsymbol> <term>
 \alt$\eps$
 
-<termsymbol> $\ra$ *
-\alt /
-\alt AND 
+<termsymbol> $\ra$ AND 
 
 <exprend> $\ra$ <exprsymbol> <expr>
 \alt$\eps$
 
-<exprsymbol> $\ra$ +
-\alt -
-\alt OR 
-
+<exprsymbol> $\ra$ OR 
 
 <function> $\ra$ function <id> return <functionmidt>
 

@@ -1,6 +1,6 @@
 \subsection{Design Criteria in this Project}
 To determine how a programming language should be syntactically described, the trade-offs of designing a programming language must be taken into account. The different characteristics of a programming language, that will be used to evaluate trade-offs can be seen on table \ref{tab:langCharacteristics}.
-
+%her fra
 \begin{table}[H]
 	\begin{tabular}{|l|l|}
 		\hline
@@ -9,16 +9,27 @@ To determine how a programming language should be syntactically described, the t
 		Writability				& How easy it is for the programmer to write a computation clearly, \\
 		~ 						& correctly, concisely and quickly 									\\ \hline
 		Reliability 			& Assures a program behaves the way it is suppose to				\\ \hline
-		Simplicity				&
+		Simplicity				& When a program e.g have a small number of basic constructs, and 	\\
+		~						& it is simple in the way that it have only one way to accomplish	\\
+		~						a particular operation												\\ \hline
 		Orthogonality 			& A relatively small set of primitive constructs can be				\\
 		~ 						& combined legally in a relatively small number of ways				\\ \hline	
-		Data type				&
-		Syntax design			&
-		Support for abstraction	&
-		Expressivity			&
-		Type Checking			&
-		Exception handling		&
-		Restricted aliasing		&
+		Data type				& The presence of adequate facilities for defining data types and 	\\
+		~						& data structures.													\\ \hline
+		Syntax design			& The syntax, or form, of the elements of a language. E.g. special	\\
+		~						& words like "while" and "if".										\\ \hline
+		Support for abstraction	& Abstraction means the ability to define and then use complicated	\\
+		~						& structures or operations in ways that allow many of the details	\\
+		~						& to be ignored.													\\ \hline
+		Expressivity			& A language can refer to several different characteristics. It		\\
+		~						& means that a language has relatively convenient, rather than		\\
+		~						& cumbersome, ways of specifying computations.						\\ \hline
+		Type Checking			& Is simply testing for type errors in a given program, either by	\\
+		~						& the compiler or during program execution.							\\ \hline
+		Exception handling		& The ability of a program to intercept run-time errors, take		\\
+		~						& corrective measures, and then continue.							\\ \hline
+		Restricted aliasing		& Aliasing is having two or more distinct names that can be used to	\\
+		~						& access the same memory cell.										\\ \hline
 		
 %		Uniformity 			& If some features are similar they should look and behave similar	  \\ \hline
 %		Maintainability 	& Errors can be found and corrected and new features can be added	  \\
@@ -34,7 +45,7 @@ To determine how a programming language should be syntactically described, the t
 	\caption{Brief explanation of language characteristics \citep{sebesta}.}
 	\label{tab:langCharacteristics}
 \end{table}
-
+%her til + mere nederst
 These characteristics are used to evaluate the the trade-offs of programming language. An overview of these can be seen on table \ref{tab:langTradeOffs}.
 
 \begin{table}[H]
@@ -86,7 +97,7 @@ When defining the syntax of a programming language, it should balance these char
 	\begin{tabular}{l|c|}
 \textbf{Characteristic} 		& \rotatebox{90}{Chosen focus for this project} \\ \hline
 		Simplicity 				& high 		\\ \hline
-		Orthogonality 			& low 		\\ \hline
+		Orthogonality 			& medium 		\\ \hline
 		Data types 				& low 		\\ \hline
 		Syntax design 			& high 		\\ \hline
 		Support for abstraction	& medium	\\ \hline
@@ -100,12 +111,12 @@ When defining the syntax of a programming language, it should balance these char
 \end{table}
 Table \ref{tab:choiceoffocus} shows what paradigms that is in the focus for the project. 
 \begin{itemize}
-%alle punkter skal skrives om og skrives rigtigt - tror nogle ting er misforstået.
-\item \textbf{Simplicity:} The project languages do not have many ways the same simple function can be done in code. This is to make writing code simpler for beginners.  e.g. is it not possible to increase a variable by 1 by writing "A++", instead it have to be written as "A=A+1".
+%her fra og ned
+\item \textbf{Simplicity:} The project languages do not have many ways the same simple function can be done in code. This is to make writing code simpler for beginners.  E.g. is it not possible to increase a variable by 1 by writing "A++", instead it have to be written as "A=A+1".
 
-\item \textbf{Orthogonality:} The project languages have a only have 3 primitive types, double, int and char, and 2 special types, container and string. it is not possible to make classes or constructs, this is done to help types handling simple for beginners.
+\item \textbf{Orthogonality:} The project languages have a only have four primitive types, bool, double, int and char, and 2 special types, container and string. It is not possible to make classes or constructs, this is done to help types handling simple for beginners.
 
-\item \textbf{Data types:} \fxfatal{regler ikke lavet inu, eks. kan en bool skrives som bool A = true og/eller bool A = 1}
+\item \textbf{Data types:} \fxfatal{regler ikke lavet endnu, eks. kan en bool skrives som bool A = true og/eller bool A = 1}
 
 \item \textbf{Syntax design:} It is not possible to make classes in project languages but there is both "for" and "while" loops because they are relatively simple to use and understand for beginners. All functions and commands start with "begin" and end with "end" to better get understanding where they start and end.
 

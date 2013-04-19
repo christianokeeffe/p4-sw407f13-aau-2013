@@ -1,0 +1,60 @@
+container Gin <-- 3;
+container Sugar <-- A0;
+container Soda <-- A2;
+container Lemon <-- A4;
+
+function makedrink return nothing using(int DrinkID, int Amount)
+begin
+	switch(DrinkID)
+	begin
+		case 23:
+			LCDPrint("Confirm to make a Tom Collins drink.", 0);
+			while(digitalRead(2) = LOW AND digitalRead(4) = LOW AND digitalRead(12))
+			begin
+				if(digitalRead(12) = HIGH)
+				begin
+					/*RFIDWrite(DrinkID, Amount-1);*/
+					LCDPrint("Pouring gin", 0);
+					LCDPrint("Phase 1/4", 1);
+					pour(Gin, 3);
+					LCDPrint("Pouring lemon", 0);
+					LCDPrint("Phase 2/4", 1);
+					pour(Lemon, 2);
+					LCDPrint("Pouring sugar", 0);
+					LCDPrint("Phase 3/4", 1);
+					pour(Sugar, 1);
+					LCDPrint("Pouring soda", 0);
+					LCDPrint("Phase 4/4", 1);
+					pour(Soda, 5);
+					LCDPrint("Drink is served", 0);
+					LCDPrint("Thank you for using SPLAD", 1);
+				end
+				else
+				begin
+					LCDPrint("Drink making cancelled",0);
+				end
+			end
+			break;
+		default:
+			LCDPrint("Error with RFID data", 0);
+			LCDPrint("Contact staff", 1);
+			break;
+	end
+	return nothing;
+end
+
+function pour(container cont, int Amount)
+begin
+	digitalWrite(cont, HIGH);
+	delay(Amount*1000);
+	digitalWrite(cont, LOW);
+	return nothing;
+end
+
+function setup return nothing using()
+begin
+	call pinMode(4, INPUT);
+	call pinMode(2, INPUT);
+	call pinMode(12, INPUT);
+	return nothing;
+end

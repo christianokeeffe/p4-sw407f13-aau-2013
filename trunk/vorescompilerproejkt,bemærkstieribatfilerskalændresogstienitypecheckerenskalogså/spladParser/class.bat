@@ -1,0 +1,1 @@
+SET CLASSPATH=C:\JavaLib\splad;%CLASSPATH%

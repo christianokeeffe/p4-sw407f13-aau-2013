@@ -3,7 +3,7 @@ string Sugar <-- "A0";
 string Soda <-- "A2";
 string Lemon <-- "A4";
 
-function makedrink return nothing using(int DrinkID, int Amount)
+function RFIDFound return nothing using(int DrinkID, int Amount)
 begin
 	switch(DrinkID)
 	begin

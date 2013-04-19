@@ -1,4 +1,4 @@
-function makedrink return nothing using()
+function RFIDFound return nothing using()
 begin
 	
 		call LCDPrint("What ID has the drink you want to serve?", 0);

@@ -71,3 +71,7 @@
 \contentsline {subsection}{\numberline {3.5.3}Expressions}{25}{subsection.3.5.3}
 \contentsline {chapter}{\chapternumberline {4}Conclusion}{27}{chapter.4}
 \contentsline {chapter}{Bibliography}{29}{section*.15}
+\cftpagenumbersoff {chapter}
+\changetocdepth {0}
+\contentsline {appendix}{\chapternumberline {A}Semantics}{33}{appendix.A}
+\contentsline {section}{\numberline {A.1}Transition Rules}{33}{section.A.1}

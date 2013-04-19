@@ -43,7 +43,7 @@ begin
 	return nothing;
 end
 
-function pour return nothing(int cont, int Amount)
+function pour return nothing using(int cont, int Amount)
 begin
 	call digitalWrite(cont, HIGH);
 	call delay(Amount*1000);

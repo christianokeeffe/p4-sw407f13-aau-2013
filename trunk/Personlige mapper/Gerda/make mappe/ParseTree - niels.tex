@@ -1,7 +1,7 @@
-\section{Parse Tree}
+\section{Parse Tree} \fxfatal{skal den være i section, subsection eller slet ikke i en?}
 Parse tree are nearly the same as a abstract syntax tree, but here all internal nodes are labeled with a non-terminal symbol and all leaves are labeled with a terminal symbol. A sub-tree describes one instance of an abstraction of a sentence.
 
-To help understand the different between abstract syntax tree and parse tree, two trees are made, one of each, over the same code for a variable declaration in the projects language.  
+To help understand the different between abstract syntax tree \ref{fig:abstract-syntax-tree} and parse tree \ref{ParseTreeEKS}, two trees are made, one of each, over the same code for a variable declaration \ref{VariableDeclarationEKS} in the projects language.
 
 \begin{code}{VariableDeclarationEKS}{A simple variable declaration in the project language.}
 	\begin{lstlisting}
@@ -9,15 +9,16 @@ To help understand the different between abstract syntax tree and parse tree, tw
 	\end{lstlisting}
 \end{code}
 
+\begin{figure}[H]
 \Tree[.program [.<-- [.x
 ]
                     [.+ [.3
 ]
                         [.2
                     ]]]]
-                    
+\caption{A abstract syntax tree}
+\label{fig:abstract-syntax-tree}
+\end{figure}
 
 
 \figur{0.7}{parsetree.png}{A parse tree that is made by using ANTLR.}{fig:ParseTreeEKS}
-
-\ref{ParseTreeEKS} is a parse tree over the code \ref{VariableDeclarationEKS}.

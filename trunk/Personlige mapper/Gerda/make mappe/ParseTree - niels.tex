@@ -11,7 +11,7 @@ To help understand the different between abstract syntax tree and parse tree the
 		int x <-- 3+2;
 	\end{lstlisting}
 \end{code}
-\Tree[.program [.root [.dcl [.type [.primitivetype [.int
+\Tree[.program [.roots [.root [.dcl [.type [.primitivetype [.int
 			]
                                    [.arraytype
 			]]
@@ -19,11 +19,15 @@ To help understand the different between abstract syntax tree and parse tree the
 			]]
                                             [.arrayidend
 				]]
-                                  [.assignend [.<--]
-                                              [.expr [.term [.comp [.addsub [.muldiv  [.factor [.numeric [.plusminusorempty] \textit{3} [.numericend]]
+                                  [.assignend [.<--
+]
+                                              [.expr [.term [.comp [.addsub [.muldiv  [.factor [.numeric [.plusminusorempty
+] \textit{3} [.numericend
+]]
                                               ]]]
-                                              [.addsubend]]]]
-]]]]]
+                                              [.addsubend
+]]]]
+]]]]]]
 
 
 

@@ -8,11 +8,11 @@ This section contains the BNF for the programming language of this project; SPLA
 \alt <root> <roots>
  
 <root> $\ra$ <dcl>;
-\alt <callid> <assign>;
+\alt <assign>;
 \alt <function>
 \alt <COMMENT>
 
-<dcl> $\ra$ <type> <id> <dclend>
+<dcl> $\ra$ <type> <assign>
 
 <type> $\ra$ <primitivetype> <arraytype>
 
@@ -28,16 +28,20 @@ This section contains the BNF for the programming language of this project; SPLA
 
 <id> $\ra$ <LETTER>
 
-<dclend> $\ra$ $\eps$
-\alt <assign> 
+<assign> $\ra$ <callid> <assignend>
 
-<assign> $\ra$ "<""-""-" <expr>
+<assignend> $\ra$ "<""-""-" <expr>
+\alt $\eps$
 
 <expr> $\ra$ <term> <exprend>
 
 <term> $\ra$ <comp> <termend>
 
-<comp> $\ra$ <factor> <compend>
+<comp> $\ra$ <addsub> <compend>
+
+<addsub> $\ra$ <muldiv> <addsubend>
+
+<muldiv> $\ra$ <factor> <muldivend>
 
 <factor> $\ra$ ( <expr> )
 	\alt !(<expr>)
@@ -51,18 +55,29 @@ This section contains the BNF for the programming language of this project; SPLA
 	\alt true
 	\alt false
 
-<callid> $\ra$ <id> <arrayiden>
+<callid> $\ra$ <id> <arrayidend>
 
-<arrayiden> $\ra$ <ARRAYCALL>
+<arrayidend> $\ra$ <ARRAYCALL>
 \alt $\eps$
 
 <ARRAYCALL> $\ra$ [<NOTZERODIGIT>]
 
-<numeric> $\ra$ <plusminus> <DIGIT> <numericend>
+<numeric> $\ra$ <plusminusorempty> <DIGIT> <numericend>
 
-<plusminus> $\ra$ $\eps$
-	\alt -
-	\alt +
+<addsubend> $\ra$ <plusminus> <addsub>
+\alt $\eps$
+
+<muldivend> $\ra$ <timesdivide> <muldiv>
+\alt $\eps$
+
+<timesdivide> $\ra$ *
+\alt /
+
+<plusminusorempty> $\ra$ $\eps$
+\alt <plusminus>
+
+<plusminus> $\ra$ -
+\alt +
 
 <numericend> $\ra$ $\eps$
 \alt . <DIGIT>
@@ -94,20 +109,16 @@ This section contains the BNF for the programming language of this project; SPLA
 <termend> $\ra$ <termsymbol> <term>
 \alt$\eps$
 
-<termsymbol> $\ra$ *
-\alt /
-\alt AND 
+<termsymbol> $\ra$ AND 
 
 <exprend> $\ra$ <exprsymbol> <expr>
 \alt$\eps$
 
-<exprsymbol> $\ra$ +
-\alt -
-\alt OR 
+<exprsymbol> $\ra$ OR 
 
-<function> $\ra$ function <id> return <functionmidt>
+<function> $\ra$ function <id> return <functionmid>
 
-<functionmidt> $\ra$ <type> <functionend> <expr>; end
+<functionmid> $\ra$ <type> <functionend> <expr>; end
 \alt nothing <functionend> nothing; end
 
 <functionend> $\ra$
@@ -127,7 +138,7 @@ begin
 <stmts> $\ra$ $\eps$
 	\alt <stmt> <stmts>
 
-<stmt> $\ra$ <callid> <assign>;
+<stmt> $\ra$ <assign>;
 	\alt <nontermif>
 	\alt <nontermwhile>
 	\alt <from>
@@ -156,7 +167,7 @@ begin
 			<stmts>
 		end
 		
-<from> $\ra$ from <callid> <assign> to <expr> step <plusminus> <DIGIT>
+<from> $\ra$ from <assign> to <expr> step <plusminusorempty> <DIGIT>
 	begin
 		<stmts>
 	end

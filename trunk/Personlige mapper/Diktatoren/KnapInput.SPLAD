@@ -10,7 +10,7 @@ begin
 			call delay(20);
 		end
 		call LCDPrint("Drink ID:", 0);
-		call LCDPrint("",1);
+		
 		int drinkID <-- 0;
 		
 		while(call digitalRead(12) = LOW)
@@ -27,6 +27,7 @@ begin
 			call LCDPrint(string(drinkID), 1);
 		end
 		call LCDPrint("Number of drinks", 0);
+		call LCDPrint("",1);
 		/*Wait for user to press a button*/
 		while(call digitalRead(2) != HIGH AND call digitalRead(4) != HIGH)
 		begin

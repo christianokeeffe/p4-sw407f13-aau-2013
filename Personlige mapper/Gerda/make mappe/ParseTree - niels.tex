@@ -13,13 +13,16 @@ To help understand the different between abstract syntax tree and parse tree the
 \end{code}
 \Tree[.program [.root [.dcl [.type [.primitivetype [.int
 			]
-                                [.arraytype
+                                   [.arraytype
 			]]
                           [.assign [.callid [.id \textit{x}
 			]]
-                                         [.arrayidend
+                                            [.arrayidend
 				]]
-                                  [.assignend
+                                  [.assignend [.<--]
+                                              [.expr [.term [.comp [.addsub [.muldiv  [.factor [.numeric [.plusminusorempty] \textit{3} [.numericend]]
+                                              ]]]
+                                              [.addsubend]]]]
 ]]]]]
 
 

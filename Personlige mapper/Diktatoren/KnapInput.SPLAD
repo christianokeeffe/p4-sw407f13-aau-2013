@@ -1,14 +1,15 @@
 function RFIDFound return nothing using()
 begin
 	
-		call LCDPrint("What ID has the drink you want to serve?", 0);
+		call LCDPrint("Type ID of the", 0);
+		call LCDPrint("drink to buy", 1);
 		
 		/*Wait for user to press a button*/
 		while(call digitalRead(2) != HIGH OR call digitalRead(4) != HIGH)
 		begin
 			call delay(100);
 		end
-		
+		call LCDPrint("Drink ID:", 0);
 		int drinkID <-- 0;
 		
 		while(call digitalRead(12) = LOW)
@@ -23,7 +24,7 @@ begin
 			end
 			call LCDPrint(string(drinkID), 1);
 		end
-		call LCDPrint("How many drinks are bought?", 0);
+		call LCDPrint("Number of drinks", 0);
 		/*Wait for user to press a button*/
 		while(call digitalRead(2) != HIGH OR call digitalRead(4) != HIGH)
 		begin
@@ -44,9 +45,10 @@ begin
 			call LCDPrint(string(Amount), 1);
 		end
 		
-		RFIDWrite(drinkID, Amount);
+		call RFIDWrite(drinkID, Amount);
 		call LCDPrint("", 1);
-		call LCDPrint("The chip can buy " + string(Amount) + " of drinkID: " + string(drinkID), 0);
+		call LCDPrint("Amount: " + string(Amount), 0);
+		call LCDPrint("Drink ID: " + string(drinkID), 0);
 	
 	return nothing;
 end

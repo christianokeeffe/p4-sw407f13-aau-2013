@@ -1,4 +1,4 @@
-\begin{thebibliography}{28}
+\begin{thebibliography}{29}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -44,10 +44,9 @@
   \textbf{2013}.
 \newblock Aalborg~university Bent~Thomsen, teacher at Department of
   Computer~Science.
-\newblock \textit{Languages and Compilers Lecture 1}.
-\newblock 2013.
-\newblock Slides of a Lecture given 7.2.13 from 15.00 to 16.15 by Bent Thomsen
-  in Department of Computer Science, Aalborg university.
+\newblock \textit{Languages and Compilers Lecture 1}, 2013.
+\newblock Slides of a Lecture given 7.2.13 by Bent Thomsen in Department of
+  Computer Science, Aalborg university.
 
 \bibitem[Chomsky(1959)]{Chomsky}
 \textbf{Chomsky}, \textbf{1959}.
@@ -55,8 +54,6 @@
 \newblock \textit{On certain formal properties of grammars}.
 \newblock Information and Control, 2\penalty0 (2), \penalty0 137 -- 167, 1959.
 \newblock ISSN 0019-9958.
-\newblock URL
-  \url{http://www.sciencedirect.com/science/article/pii/S0019995859903626}.
 
 \bibitem[Cup()]{CUP}
 \textbf{\textbf{Cup}}.
@@ -106,6 +103,13 @@
 \newblock \textit{Theory behind Lex}.
 \newblock \url{http://dinosaur.compilertools.net/lex/index.html} [Last seen:
   2013/03/15].
+
+\bibitem[Martin(2003)]{ItLatToC}
+\textbf{Martin}, \textbf{2003}.
+\newblock John Martin.
+\newblock \textit{Introducing to Language and the Theory of Computation - Third
+  edition}.
+\newblock Elizabeth A. Jones, 2003.
 
 \bibitem[Norvell()]{Javacc}
 \textbf{\textbf{Norvell}}.

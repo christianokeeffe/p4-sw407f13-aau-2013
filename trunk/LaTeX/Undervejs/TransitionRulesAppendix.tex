@@ -1,4 +1,5 @@
 \section{Transition Rules}
+\label{app:TransitionRules}
 \fxfatal{Mangler: for loop, call function, declerations måske mere}
 
 \begin{longtable}{l l}
@@ -16,8 +17,11 @@
 ~ & \indent\indent and $env_C, \; sto \vdash e \rightarrow_e v_2$ \\
 ~ & \indent\indent and $env_A \: r[v_1] = l$ \\
 ~ & ~ \\
+\caption{Assignments}
+\end{longtable}
 
-
+\begin{longtable}{l l}
+\longtablesetting{2}
 [IF-TRUE] & \[\frac{env_C \: \vdash \langle C, \: sto \rangle \rightarrow sto'}{env_C \: \langle \text{\textbf{if}}(b) \: \text{begin}\;C\;\text{end}, \: sto \rangle \rightarrow sto' }\] \\
 ~ & ~ \\
 ~ & \indent\indent if $env_C, \; sto \vdash b \rightarrow_b \text{true}$ \\
@@ -39,7 +43,7 @@
 ~ & \indent\indent if $env_C, \; sto \vdash b \rightarrow_b \text{false}$ \\
 ~ & ~ \\
 
-[WHL-TRUE] & \[\frac{env_C \: \vdash \langle C, \: sto \rangle \rightarrow sto'' \; env_c \: \vdash \langle \text{\textbf{while}}(b)\;\text{begin}\;C\; \text{end}, \: sto'' \rangle \rightarrow sto'}{env_C \: \vdash \: \langle \text{\textbf{while}}(b) \: \text{begin}\;C\;\text{end}, \: sto \rangle \rightarrow sto' }\] \\
+[WHL-TRUE] & \[\frac{env_C \: \vdash \langle C, \: sto \rangle \rightarrow sto'' \; env_C \: \vdash \langle \text{\textbf{while}}(b)\;\text{begin}\;C\; \text{end}, \: sto'' \rangle \rightarrow sto'}{env_C \: \vdash \: \langle \text{\textbf{while}}(b) \: \text{begin}\;C\;\text{end}, \: sto \rangle \rightarrow sto' }\] \\
 ~ & ~ \\
 ~ & \indent\indent if $env_C, \; sto \vdash b \rightarrow_b \text{true}$ \\
 ~ & ~ \\

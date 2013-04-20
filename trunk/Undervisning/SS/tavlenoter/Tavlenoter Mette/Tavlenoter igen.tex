@@ -1,0 +1,248 @@
+\documentclass[a4paper,10pt,article]{memoir}
+\usepackage[utf8]{inputenc}
+\usepackage[danish]{babel}
+\usepackage{graphicx}
+\input{standard}
+\theoremstyle{definition}
+\newtheorem{intuition}{Intuition}
+
+\title{Tavlenoter \\ \emph{Udvidelser om Bims}}
+\author{Mette Thomsen Pedersen}
+\date{20. april 2013}
+
+%%% BEGIN DOCUMENT
+\begin{document}
+\maketitle
+
+\tableofcontents*
+
+\chapter{Indledning}
+
+Denne forelæsning handler om
+
+\begin{itemize}
+\item Repeat-løkker
+\item Semantisk ækvivalens
+\item For-løkker
+\item Abnorm terminering
+\item Nondeterminisme - God, ond
+\item Parallel sammensætning
+\item GYSER
+\end{itemize}
+
+\chapter{Bims}
+Det der bliver indført her er udvidelser til Bims. Alt der tidligere er defineret omkring Bims gælder stadig.
+
+\underline{\textbf{Big-step-semantik}}
+
+Transitioner på formen: $\langle S,s \rangle \rightarrow s'$
+
+\underline{\textbf{Small-step-semantik}}
+
+Transitioner på formen: $\langle S,s \rangle \Rightarrow s'$ og $\langle S,s \rangle \Rightarrow \langle S',s' \rangle$
+
+\chapter{Repeat-løkker}
+$S::= \dots | \textbf{repeat } S \textbf{ until }b$
+
+\begin{definition}
+
+$\textbf{repeat } S \textbf{ until } b$ udfører altid $S$ mindst én gang; $S$ udføres indtil $b$ bliver sand.
+\end{definition}
+
+\underline{\textbf{Big-step-transitionsregler}}
+
+$[REPEAT-SAND] \text{   } \dfrac{\langle S,s \rangle \rightarrow s'}{\langle \textbf{repeat } S \textbf{ until } b,s \rangle \rightarrow s'} \text{   } s' \vdash b \ra tt$
+
+$[REPEAT-FALSK ]\text{   } \dfrac{\langle S,s \rangle \rightarrow s'' \text{  } \langle \textbf{repeat } S \textbf{ until }b,s'' \rangle \rightarrow s'}{\langle \textbf{repeat } S \textbf{ until } b,s \rangle \ra s'} \text{   } s'' \vdash \ra ff$
+
+$[REPEAT-FALSK]$ er endnu en ikke kompositionel regel.
+
+\begin{saetning}
+For alle $s \in \textbf{ States}$
+
+$\langle \textbf{repeat } S \textbf{ until } b,s \rangle \rightarrow s'$
+
+$\Updownarrow$
+
+$\langle S; \textbf{ while } \neg b \textbf{ do } S,s \rangle \rightarrow s'$
+
+\underline{Alternativ udgave}
+
+$\textbf{repeat } S \textbf{ until } b \sim_{bss} \text{ } S; \textbf{ while } \neg b \textbf{ do }S$
+\end{saetning}
+
+\begin{bevis}
+$\Downarrow )$ Antag $\langle \textbf{repeat } S \textbf{ until } b,s \rangle \rightarrow s'$   (1)
+
+Vis at $\langle S; \textbf{ while } \neg b \textbf{ do } S,s \rangle \rightarrow s'$. Transition (1) blev konkluderet enten med $[REPEAT-SAND]$ eller $[REPEAT-FALSK]$. 
+
+Betragt først $[REPEAT-SAND]$: $\dfrac{\langle S,s \rangle \ra s'}{\langle \textbf{repeat } S \textbf{ until } b,s \rangle \ra s'} \text{   } s' \vdash b \ra tt$. 
+
+Men så har vi $s' \vdash \neg b \rightarrow ff$. Derfor har vi $\langle \textbf{while } \neg b \textbf{ do } S,s' \rangle \rightarrow s'$ ($[WHILE-FALSK]$). 
+
+Dermed har vi: $\dfrac{\langle S,s \rangle \ra s' \text{  } \langle \textbf{while } \neg b \textbf{ do } S,s' \rangle \ra s'}{\langle S; \textbf{ while } \neg b \textbf{ do } S,s \rangle \ra s'}$
+
+Betragt så $[REPEAT-FALSK] \text{   } \dfrac{\langle S,s \rangle \ra s'' \text{  } \langle \textbf{repeat } S \textbf{ until } b,s' \rangle \ra s'}{\langle \textbf{repeat } S \textbf{ until } b,s \rangle \ra s'}$
+
+Vi viser påstanden for alle $h$, hvor derivationstræet før (1) har højde $h$. Basistrin: $h = 0$: Ingen derivationstræer af højde 0 findes.
+
+Dermed har vi pr. induktionsantagelse at $\langle S; \textbf{ while } \neg b \textbf{ do } S,s'' \rangle \rightarrow s'$. 
+
+Den må konkluderet med $[COMP]$: $\dfrac{\langle S,s'' \rangle \ra s^{\{3\}} \text{  } \langle \textbf{while } \neg b \textbf{ do } S,s^{\{3\}} \rangle \ra s'}{\langle S; \textbf{ while } \neg b \textbf{ do } S,s'' \rangle \ra s'}$. 
+
+Da $s'' \vdash \neg b \rightarrow ff$ har vi $s'' \vdash b \rightarrow tt$ så pr. $[REPEAT-SAND]$ $\langle \textbf{while } \neg b \textbf{ do } S,s'' \rangle \rightarrow s'$. 
+
+Så bruger vi $[COMP]$: $\dfrac{\langle S,s \rangle \ra s'' \text{  } \langle \textbf{while } \neg b \textbf{ do } S,s'' \rangle \ra s'}{\langle S; \textbf{ while } \neg b \textbf{ do } S,s \rangle \ra s'}$
+\end{bevis}
+\chapter{Semantisk ækvivalens}
+\begin{definition}
+(Big-step-semantisk-ækvivalens)
+
+Lad $S_1 , S_2 \in \textbf{ Stm}$. Vi siger $S_1 \sim_{bss} S_2$ hvis for alle $s \in \textbf{ States}$
+
+$\langle S_1 ,s \rangle \rightarrow s'$
+
+$\Updownarrow$
+
+$\langle S_2 ,s \rangle \rightarrow s'$
+\end{definition}
+
+\begin{saetning}
+\begin{itemize}
+\item $S_1 \sim_{bss} S_1$ for alle $S_1$
+\item Hvis $S_1 \sim_{bss} S_2$ og $S_2 \sim_{bss} S_3$ så $S_1 \sim_{bss} S_3$
+\item Hvis $S_1 \sim_{bss} S_2$ så $S_2 \sim_{bss} S_1$
+
+$\sim_{bss}$ er en ækvivalensrelation
+\end{itemize}
+\end{saetning}
+
+\chapter{For-løkker}
+$S::= \dots | \textbf{ for } x:=n_1 \textbf{ to } n_2 \textbf{ do } S$
+\begin{intuition}
+Først sættes $x$ til værdi af $n_1$. $S$ udføres; hver udførsel af $S$ tæller $x$ op med 1. Når $x$ har værdi af $n_2$, stop løkken.
+\end{intuition}
+
+Vi anvender en $\mathcal{N}^{-1}: \mathbb{Z} \rightarrow \textbf{ Num}$. fx. $\mathcal{N}^{-1}[|3|] = \underline{3}$
+
+\underline{\textbf{Big-step-regler}}
+
+$[FOR-1] \text{   } \dfrac{\langle S,s[x \mapsto v_1] \rangle \ra s'' \text{  } \langle \textbf{for } x:= n_1 \textbf{ to } n_2 \textbf{ do } S,s'' \rangle \ra s'}{\langle \textbf{for } x:= n_1 \textbf{ to } n_2 \textbf{ do } S,s \rangle \ra s'}$
+
+hvor $\mathcal{N}(|n_1|)=v_1$, $\mathcal{N}(|n_2|)=v_2$, $v_1 < v_2$.
+
+$n_1' = \mathcal{N}^{-1}[|v_1 + 1|]$
+
+$[FOR-2] \text{    } \langle \textbf{for } x:= n_1 \textbf{ to } n_2 \textbf{ do } S,s \rangle \rightarrow s[x \mapsto v_1]$,
+
+hvor $\mathcal{N}[|n_1|] = v_1$, $\mathcal{N}[|n_2|] = v_2$, $v_1 = v_2$.
+
+\chapter{Abnorm terminering}
+$S::= \dots | \textbf{ abort}$
+
+\begin{intuition}
+En $\textbf{abort}$-kommando kan ikke foretage et skridt, dvs:
+
+$\langle \textbf{abort},s \rangle \rightarrow s'$ UMULIGT!
+
+$\langle \textbf{abort},s \rangle \Rightarrow s'$ UMULIGT!
+\end{intuition}
+
+\underline{\textbf{Big-step-regler}}
+
+INGEN!
+
+\underline{\textbf{Small-step-regler}}
+
+INGEN!
+
+$\textbf{while } 0 = 0 \textbf{ do skip}$
+
+For alle $s Ain \textbf{ States}$:
+
+$\langle \textbf{abort},s \rangle \rightarrow s'$
+
+$\Updownarrow$
+
+$\langle \textbf{while } 0 = 0 \textbf{ do skip},s \rangle \rightarrow s'$
+
+$\textbf{abort } \nsim_{bss} \textbf{ skip}$
+
+$\langle \textbf{abort},s \rangle \rightarrow s'$ UMULIGT
+
+men $\langle \textbf{skip},s \rangle \rightarrow s$
+
+\chapter{Nondeterminisme}
+$S::= \dots | S_1 \textbf{ or } S_2$
+
+\begin{intuition}
+$S_1$ eller $S_2$ kan udføres; hvilket der vælges afhænger af \underline{vejret}.
+\end{intuition}
+\underline{\textbf{Big-step-regler}}
+
+$[OR-1] \text{   } \dfrac{\langle S_1,s \rangle \ra s'}{\langle S_1 \textbf{ or } S_2,s \rangle \ra s'}$ 
+
+$[OR-2] \text{   } \dfrac{\langle S_2,s \rangle \ra s'}{\langle S_1 \textbf{ or } S_2,s \rangle \ra s'}$
+
+\underline{\textbf{Small-step-regler}}
+
+$[OR-1] \text{  } \langle S_1 \textbf{ or } S_2,s \rangle \Rightarrow \langle S_1,s \rangle$
+
+$[OR-2] \text{  } \langle S_1 \textbf{ or } S_2,s \rangle \Rightarrow \langle S_2,s \rangle$
+
+
+
+$S = x:= \textbf{ or while } 0=0 \textbf{ do skip}$
+
+\underline{\textbf{Big-step:}}
+
+$\langle S,s \rangle \rightarrow s[x \mapsto 1]$ er eneste transition!
+
+\underline{\textbf{Small-step:}}
+
+$\langle S,s \rangle \Rightarrow \langle x : = 1,s \rangle \Rightarrow s[x \mapsto 1]$
+
+$\langle S,s \rangle \Rightarrow \langle \textbf{while } 0=0 \textbf{ do skip},s \rangle \Rightarrow \langle \textbf{if } 0=0 \textbf{ then skip}; \textbf{ while } 0=0 \textbf{ do skip elske skip},s \rangle \Rightarrow \langle \textbf{skip}; \textbf{ while } 0=0 \textbf{ do skip},s \rangle \Rightarrow \langle \textbf{while } 0=0 \textbf{ do skip},s \rangle \Rightarrow \dots$
+
+\underline{\textbf{Morale}}
+
+Big-step-semantik undertrykker uendelige løkker (kun gode valg beskrives (god nondeterminisme))
+
+Small-step-semantik beskriver \underline{alle} valg (også de onde! (ond nondeterminisme))
+
+\chapter{Parallel sammensætning}
+$S::= \dots | S_1 \textbf{ par } S_2$
+
+\begin{intuition}
+$S_1$ og $S_2$ skal udføres parallelt.
+\end{intuition}
+
+\underline{\textbf{Small-step-regler}}
+
+$[PAR-1] \text{   } \dfrac{\langle S_1 ,s \rangle \Rightarrow \langle S_1' , s' \rangle}{\langle S_1 \textbf{ par } S_2 ,s \rangle \Rightarrow \langle S_1' \textbf{ par } S_2 , s' \rangle}$ 
+
+$[PAR-2] \text{   } \dfrac{\langle S_2 ,s \rangle \Rightarrow \langle S_2' , s' \rangle}{\langle S_1 \textbf{ par } S_2 ,s \rangle \Rightarrow \langle S_1 \textbf{ par } S_2' , s' \rangle}$
+
+$[PAR-3] \text{   } \dfrac{\langle S_1 , s \rangle \Rightarrow s'}{\langle S_1 \textbf{ par } S_2 ,s \rangle \Rightarrow \langle S_2 ,s'}$
+
+$[PAR-4] \text{   } \dfrac{\langle S_2 , s \rangle \Rightarrow s'}{\langle S_1 \textbf{ par } S_2 ,s \rangle \Rightarrow \langle S_1 ,s'}$
+
+\underline{\textbf{Big-step-regler}}
+
+$[PAR-1] \text{   } \dfrac{\langle S_1 ,s \rangle \ra s'' \text{  } \langle S_2 ,s'' \rangle \ra s'}{\langle S_1 \textbf{ par } S_2 ,s \rangle \ra s'}$ - Fanger IKKE parallelitet
+
+$[PAR-2] \text{   } \dfrac{\langle S_2 ,s \rangle \ra s'' \text{  } \langle S_1 ,s'' \rangle \ra s'}{\langle S_1 \textbf{ par } S_2 ,s \rangle \ra s'}$
+
+\underline{\textbf{Morale}}
+
+Til beskrivelse af parallel adfærd: Brug small-step-semantik!
+
+\chapter{GYSER}
+
+\begin{itemize}
+\item Forveksel ikke definitionen af $\sim_{bss}$ og de egenskaber, der gælder om den!
+\item Ingen transitionsregler for $\textbf{abort}$. (Der er præcis de transitioner som transitionsreglerne beskriver, dvs. for $\textbf{abort}$ INGEN!)
+\item Kun small-step-semantik er oplagt til at beskrive parallelitet!
+\end{itemize}
+
+\end{document}

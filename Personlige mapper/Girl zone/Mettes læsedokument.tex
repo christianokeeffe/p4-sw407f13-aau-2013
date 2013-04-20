@@ -1,216 +1,27 @@
 \input{preamble}
 \begin{document}
-\section{Transition Rules}
-\fxfatal{Mangler: for loop, call function, declerations måske mere}
-We use the following names to represent different syntactic categories.
+\subsection{Parse Tree}
+Parse tree are nearly the same as a abstract syntax tree, but here all internal nodes are labeled with a non-terminal symbol and all leaves are labeled with a terminal symbol. A sub-tree describes one instance of an abstraction of a sentence.
 
-\begin{itemize}
-\item $n \in \textbf{Num}$ - Numerals
-\item $v$ - Values
-\item $x \in \textbf{Var}$ - Variables 
-\item $r \in \textbf{Arrays}$ - Array names
-\item $a \in Aexp$ - Arithmetic expression
-\item $b \in Bexp$ - Boolean expression
-\item $e$
-\item $env_C$
-\item $sto$
-\item $env_V$
+To help understand the different between abstract syntax tree \ref{fig:abstract-syntax-tree} and parse tree \ref{ParseTreeEKS}, two trees are made, one of each, over the same code for a variable declaration \ref{VariableDeclarationEKS} in the projects language.
 
-\item $env_A$
-\item $C$
-\item $env_E$
+\begin{code}{VariableDeclarationEKS}{A simple variable declaration in the project language.}
+	\begin{lstlisting}
+		int x <-- 3+2;
+	\end{lstlisting}
+\end{code}
 
-beskriv l side 79
+\begin{figure}[H]
+\Tree[.program [.<-- [.x
+]
+                    [.+ [.3
+]
+                        [.2
+                    ]]]]
+\caption{A abstract syntax tree}
+\label{fig:abstract-syntax-tree}
+\end{figure}
+%%% KAN DER GØRES NOGET VED AT + OG < ER GRÅ I TRÅET OVER? %%%
 
-\end{itemize}
-\begin{longtable}{l l}
-\longtablesetting{2}
-
-[VAR-ASS] & \[env_C, \: \vdash \langle x=e, \; sto \rangle \rightarrow sto[l \mapsto v]\] \\
-~ & ~ \\
-~ & \indent\indent where $env_C, \; sto \vdash e \rightarrow_e v$ \\
-~ & \indent\indent and $env_V \; x=l$ \\
-~ & ~ \\
-
-[ARR-ASS] & \[env_C \: \vdash \langle r[a]=e, \: sto \rangle \rightarrow sto[l \mapsto v_2]\] \\
-~ & ~ \\
-~ & \indent\indent where $env_C, \; sto \vdash a \rightarrow_a v_1$ \\
-~ & \indent\indent and $env_C, \; sto \vdash e \rightarrow_e v_2$ \\
-~ & \indent\indent and $env_A \: r[v_1] = l$ \\
-~ & ~ \\
-
-
-[IF-TRUE] & \[\frac{env_C \: \vdash \langle C, \: sto \rangle \rightarrow sto'}{env_C \: \langle \text{\textbf{if}}(b) \: \text{begin}\;C\;\text{end}, \: sto \rangle \rightarrow sto' }\] \\
-~ & ~ \\
-~ & \indent\indent if $env_C, \; sto \vdash b \rightarrow_b \text{true}$ \\
-~ & ~ \\
-
-
-[IF-FALSE] & \[env_C \: \vdash \langle \text{\textbf{if}}(b)\: \text{begin} \; C \; \text{end}, \: sto \rangle \rightarrow sto\] \\
-~ & ~ \\
-~ & \indent\indent if $env_C, \; sto \vdash b \rightarrow_b \text{false}$ \\
-~ & ~ \\
-
-[IF-ELSE-TRUE] & \[\frac{env_C \: \vdash \langle C_1, \: sto \rangle \rightarrow sto'}{env_C \: \vdash \: \langle \text{\textbf{if}}(b) \: \text{begin}\;C_{1}\;\text{end}, \: \text{\textbf{else}} \: \text{begin}\; C_2 \; \text{end},\: sto \rangle \rightarrow sto' }\] \\
-~ & ~ \\
-~ & \indent\indent if $env_C, \; sto \vdash b \rightarrow_b \text{true}$ \\
-~ & ~ \\
-
-[IF-ELSE-FALSE] & \[\frac{env_C \: \vdash \langle C_2, \: sto \rangle \rightarrow sto'}{env_C \: \vdash \: \langle \text{\textbf{if}}(b) \: \text{begin}\;C_{1}\;\text{end}, \: \text{\textbf{else}} \: \text{begin}\; C_2 \; \text{end},\: sto \rangle \rightarrow sto' }\] \\
-~ & ~ \\
-~ & \indent\indent if $env_C, \; sto \vdash b \rightarrow_b \text{false}$ \\
-~ & ~ \\
-
-[WHL-TRUE] & \[\frac{env_C \: \vdash \langle C, \: sto \rangle \rightarrow sto'' \; env_C \: \vdash \langle \text{\textbf{while}}(b)\;\text{begin}\;C\; \text{end}, \: sto'' \rangle \rightarrow sto'}{env_C \: \vdash \: \langle \text{\textbf{while}}(b) \: \text{begin}\;C\;\text{end}, \: sto \rangle \rightarrow sto' }\] \\
-~ & ~ \\
-~ & \indent\indent if $env_C, \; sto \vdash b \rightarrow_b \text{true}$ \\
-~ & ~ \\
-
-[WHL-FALSE] & \[env_C \: \vdash \langle \text{\textbf{while}}(b) \: \text{begin} \: C \: \text{end}, \: sto \rangle \rightarrow sto\] \\
-~ & ~ \\
-~ & \indent\indent if $env_C, \; sto \vdash b \rightarrow_b \text{false}$ \\
-~ & ~ \\
-
-\caption{Commands}
-\end{longtable}
-
-\begin{longtable}{l l}
-\longtablesetting{2}
-
-[EQL-TRUE] & \[\frac{env_E, \: sto \vdash e_1 \rightarrow_e v_1 \;\; env_E, \: sto \vdash e_2 \rightarrow_e v_2}{env_E, \: sto \vdash e_1 = e_2  \rightarrow_b \text{true}}\] \\
-~ & ~ \\
-~ & \indent\indent if $v_1=v_2$ \\
-~ & ~ \\
-
-
-[EQL-FALSE] & \[\frac{env_E, \: sto \vdash e_1 \rightarrow_e v_1 \;\; env_E, \: sto \vdash e_2 \rightarrow_e v_2}{env_E, \: sto \vdash e_1 = e_2  \rightarrow_b \text{false}}\] \\
-~ & ~ \\
-~ & \indent\indent if $v_1 \neq v_2$ \\
-~ & ~ \\
-
-[NEQ-TRUE] & \[\frac{env_E, \: sto \vdash e_1 \rightarrow_e v_1 \;\; env_E, \: sto \vdash e_2 \rightarrow_e v_2}{env_E, \: sto \vdash e_1 != e_2  \rightarrow_b \text{true}}\] \\
-~ & ~ \\
-~ & \indent\indent if $v_1 \neq v_2$ \\
-~ & ~ \\
-
-[NEQ-FALSE] & \[\frac{env_E, \: sto \vdash e_1 \rightarrow_e v_1 \;\; env_E, \: sto \vdash e_2 \rightarrow_e v_2}{env_E, \: sto \vdash e_1 != e_2  \rightarrow_b \text{false}}\] \\
-~ & ~ \\
-~ & \indent\indent if $v_1 = v_2$ \\
-~ & ~ \\
-
-[GRT-TRUE] & \[\frac{env_E, \: sto \vdash e_1 \rightarrow_e v_1 \;\; env_E, \: sto \vdash e_2 \rightarrow_e v_2}{env_E, \: sto \vdash e_1 > e_2  \rightarrow_b \text{true}}\] \\
-~ & ~ \\
-~ & \indent\indent if $v_1 > v_2$ \\
-~ & ~ \\
-
-[GRT-FALSE] & \[\frac{env_E, \: sto \vdash e_1 \rightarrow_e v_1 \;\; env_E, \: sto \vdash e_2 \rightarrow_e v_2}{env_E, \: sto \vdash e_1 > e_2  \rightarrow_b \text{false}}\] \\
-~ & ~ \\
-~ & \indent\indent if $v_1 \leq v_2$ \\
-~ & ~ \\
-
-[GEQ-TRUE] & \[\frac{env_E, \: sto \vdash e_1 \rightarrow_e v_1 \;\; env_E, \: sto \vdash e_2 \rightarrow_e v_2}{env_E, \: sto \vdash e_1 >= e_2  \rightarrow_b \text{true}}\] \\
-~ & ~ \\
-~ & \indent\indent if $v_1 \geq v_2$ \\
-~ & ~ \\
-
-[GEQ-FALSE] & \[\frac{env_E, \: sto \vdash e_1 \rightarrow_e v_1 \;\; env_E, \: sto \vdash e_2 \rightarrow_e v_2}{env_E, \: sto \vdash e_1 >= e_2  \rightarrow_b \text{false}}\] \\
-~ & ~ \\
-~ & \indent\indent if $v_1 < v_2$ \\
-~ & ~ \\
-
-[LES-TRUE] & \[\frac{env_E, \: sto \vdash e_1 \rightarrow_e v_1 \;\; env_E, \: sto \vdash e_2 \rightarrow_e v_2}{env_E, \: sto \vdash e_1 < e_2  \rightarrow_b \text{true}}\] \\
-~ & ~ \\
-~ & \indent\indent if $v_1 < v_2$ \\
-~ & ~ \\
-
-[LES-FALSE] & \[\frac{env_E, \: sto \vdash e_1 \rightarrow_e v_1 \;\; env_E, \: sto \vdash e_2 \rightarrow_e v_2}{env_E, \: sto \vdash e_1 < e_2  \rightarrow_b \text{false}}\] \\
-~ & ~ \\
-~ & \indent\indent if $v_1 \geq v_2$ \\
-~ & ~ \\
-
-[LEQ-TRUE] & \[\frac{env_E, \: sto \vdash e_1 \rightarrow_e v_1 \;\; env_E, \: sto \vdash e_2 \rightarrow_e v_2}{env_E, \: sto \vdash e_1 <= e_2  \rightarrow_b \text{true}}\] \\
-~ & ~ \\
-~ & \indent\indent if $v_1 \leq v_2$ \\
-~ & ~ \\
-
-[GEQ-FALSE] & \[\frac{env_E, \: sto \vdash e_1 \rightarrow_e v_1 \;\; env_E, \: sto \vdash e_2 \rightarrow_e v_2}{env_E, \: sto \vdash e_1 <= e_2  \rightarrow_b \text{false}}\] \\
-~ & ~ \\
-~ & \indent\indent if $v_1 > v_2$ \\
-~ & ~ \\
-
-[NOT-TRUE] & \[\frac{env_E, \: sto \vdash b \rightarrow_b \text{true}}{env_E, \: sto \vdash !(b)  \rightarrow_b \text{false}}\] \\
-~ & ~ \\
-
-[NOT-FALSE] & \[\frac{env_E, \: sto \vdash b \rightarrow_b \text{false}}{env_E, \: sto \vdash !(b)  \rightarrow_b \text{true}}\] \\
-~ & ~ \\
-
-[AND-TRUE] & \[\frac{env_E, \: sto \vdash b_1 \wedge b_2 \rightarrow_b \text{true}}{env_E, \: sto \vdash b_1  \; \text{AND} \; b_2 \rightarrow_b \text{true}}\] \\
-~ & ~ \\
-
-[AND-FALSE] & \[\frac{env_E, \: sto \vdash b_1 \vee b_2 \rightarrow_b \text{false}}{env_E, \: sto \vdash b_1  \; \text{AND} \; b_2 \rightarrow_b \text{false}}\] \\
-~ & ~ \\
-
-[OR-TRUE] & \[\frac{env_E, \: sto \vdash b_1 \vee b_2 \rightarrow_b \text{true}}{env_E, \: sto \vdash b_1  \; \text{OR} \; b_2 \rightarrow_b \text{true}}\] \\
-~ & ~ \\
-
-[OR-FALSE] & \[\frac{env_E, \: sto \vdash b_1 \wedge b_2 \rightarrow_b \text{false}}{env_E, \: sto \vdash b_1  \; \text{OR} \; b_2 \rightarrow_b \text{false}}\] \\
-~ & ~ \\
-
-[PAR] & \[\frac{env_E, \: sto \vdash b_1 \rightarrow_b v}{env_E, \: sto \vdash (b_1) \rightarrow_b v}\] \\
-~ & ~ \\
-
-
-\caption{Boolean expressions}
-\end{longtable}
-
-
-
-\begin{table}
-\begin{tabular}{l l}
-[ADD] & \[\frac{env_E, \: sto \vdash a_1 \rightarrow_a v_1 \;\; env_E, \: sto \vdash a_2 \rightarrow_a v_2}{env_E, \: sto \vdash a_1 + a_2 \rightarrow_a v}\] \\
-~ & ~ \\
-~ & \indent\indent where $v=v_1+v_2$ \\
-~ & ~ \\
-
-[SUB] & \[\frac{env_E, \: sto \vdash a_1 \rightarrow_a v_1 \;\; env_E, \: sto \vdash a_2 \rightarrow_a v_2}{env_E, \: sto \vdash a_1 - a_2 \rightarrow_a v}\] \\
-~ & ~ \\
-~ & \indent\indent where $v=v_1-v_2$ \\ 
-~ & ~ \\
-
-[MUL] & \[\frac{env_E, \: sto \vdash a_1 \rightarrow_a v_1 \;\; env_E, \: sto \vdash a_2 \rightarrow_a v_2}{env_E, \: sto \vdash a_1 * a_2 \rightarrow_a v}\] \\
-~ & ~ \\
-~ & \indent\indent where $v=v_1 * v_2$ \\ 
-~ & ~ \\
-
-[DIV] & \[\frac{env_E,\: sto \vdash a_1 \rightarrow_a v_1 \;\; env_E,\: sto \vdash a_2 \rightarrow_a v_2}{env_E, \: sto \vdash \frac{a_1}{a_2} \rightarrow_a v}\] \\
-~ & ~ \\
-~ & \indent\indent where $v=\frac{v_1}{v_2}$ \\ 
-~ & ~ \\
-
-[PAR] & \[\frac{env_E, \: sto \vdash a_1 \rightarrow_a v_1}{env_E, \: sto \vdash (a_1) \rightarrow_a v_1}\] \\
-~ & ~ \\
-~ & \indent\indent where $v=\frac{v_1}{v_2}$ \\ 
-~ & ~ \\
-
-[NUM] & \[env_E, \: sto \vdash n \rightarrow_a v\] \\
-~ & ~ \\
-~ & \indent\indent if $\mathcal{N} [n]=v$ \\
-~ & \indent\indent where $\mathcal{N}$ \textbf{: Num} $\ra \mathbb{R}$ \\
-~ & ~ \\
-
-[VAR] & \[env_V, \: sto \vdash x \rightarrow_a v\] \\
-~ & ~ \\
-~ & \indent\indent if $env_V \: x=l \: and \: sto \: l = v$ \\ 
-~ & ~ \\
-
-[ARR] & \[env_A, \: sto \vdash r[a_{1}] \rightarrow_a v_2\] \\
-~ & ~ \\
-~ & \indent\indent if $env_A \, r[v_{1}]=l$ and $sto \: l=v_2$ \\
-~ & \indent\indent where $a_1 \ra_a v_1$ \\
-~ & ~ \\
-
-\end{tabular}
-\caption{Aritmethic expressions}
-\end{table}
-
+\figur{0.7}{parsetree.png}{A parse tree that is made by using ANTLR.}{fig:ParseTreeEKS}
 \end{document}

@@ -25,7 +25,7 @@ begin
 					call pour(Lemon, 2);
 					call LCDPrint("Pouring sugar", 0);
 					call LCDPrint("Phase 3/4", 1);
-					call pour(Sugar, 1);
+					call pour(Sugar, 2);
 					call LCDPrint("Pouring soda", 0);
 					call LCDPrint("Phase 4/4", 1);
 					call pour(Soda, 5);

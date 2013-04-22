@@ -35,7 +35,7 @@ begin
 				end
 				else if (call digitalRead(2) = HIGH OR call digitalRead(4) = HIGH)
 				begin
-					call LCDPrint("Drink making", 0)
+					call LCDPrint("Drink making", 0);
 					call LCDPrint("cancelled",1);
 					run <-- false;
 				end

@@ -146,9 +146,7 @@ begin
 	\alt <COMMENT>
 	
 <nontermif> $\ra$ if(<expr>)
-	begin
-		<stmts>
-	end
+	<block>
 	<endif>
 
 <endif> $\ra$ 
@@ -156,24 +154,16 @@ begin
 	\alt$\eps$
 
 <nontermelse> $\ra$ <nontermif>
-	\alt begin
-		<stmts>
-	end
+	\alt <block>
 
 <nontermwhile> $\ra$ while(<expr>)
-		begin
-			<stmts>
-		end
+		<block>
 		
 <from> $\ra$ from <assign> to <expr> step <plusminusorempty> <DIGIT>
-	begin
-		<stmts>
-	end
+	<block>
 
 <nontermswitch> $\ra$ switch (<expr>)
-		begin
-			<cases>
-		end
+		<block>
 
 <cases> $\ra$ case <expr>:
 			<stmts>
@@ -184,6 +174,11 @@ begin
 		\alt default:
 			<stmts>
 			break;
+
+<block> $\ra$ 
+	begin
+		<stmts>
+	end;
 
 <breakend> $\ra$ <cases>
 \alt default:

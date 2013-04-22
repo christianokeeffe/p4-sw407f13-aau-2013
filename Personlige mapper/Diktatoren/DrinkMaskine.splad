@@ -18,7 +18,7 @@ begin
 			begin
 				if(call digitalRead(12) = HIGH)
 				begin
-					RFIDWrite(DrinkID, Amount-1);
+					call RFIDWrite(DrinkID, Amount-1);
 					call LCDPrint("Pouring gin", 0);
 					call LCDPrint("Phase 1/4", 1);
 					call pour(Gin, 3);

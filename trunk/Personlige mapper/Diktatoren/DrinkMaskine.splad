@@ -1,7 +1,7 @@
-int Gin <-- 3;
-int Sugar <-- A0;
-int Soda <-- A2;
-int Lemon <-- A4;
+container Gin <-- 3;
+container Sugar <-- A0;
+container Soda <-- A2;
+container Lemon <-- A4;
 
 function RFIDFound return nothing using(int DrinkID, int Amount)
 begin
@@ -47,7 +47,7 @@ begin
 	return nothing;
 end
 
-function pour return nothing using(int cont, int Amount)
+function pour return nothing using(container cont, int Amount)
 begin
 	call digitalWrite(cont, HIGH);
 	call delay(Amount*1000);

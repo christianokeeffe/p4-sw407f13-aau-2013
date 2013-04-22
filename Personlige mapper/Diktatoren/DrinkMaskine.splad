@@ -5,7 +5,8 @@ container Lemon <-- A4;
 
 function RFIDFound return nothing using(int DrinkID, int Amount)
 begin
-	if(Amount > 0){
+	if(Amount > 0)
+	begin
 	switch(DrinkID)
 	begin
 		case 23:

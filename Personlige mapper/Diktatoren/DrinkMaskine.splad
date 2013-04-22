@@ -52,8 +52,7 @@ end
 function pour return nothing using(container cont, int Amount)
 begin
 	call digitalWrite(cont, HIGH);
-	/*call delay(Amount*1000);*/
-	call delay(5000);
+	call delay(Amount*1000);
 	call digitalWrite(cont, LOW);
 	return nothing;
 end

@@ -5,6 +5,7 @@ container Lemon <-- A4;
 
 function RFIDFound return nothing using(int DrinkID, int Amount)
 begin
+	if(Amount > 0){
 	switch(DrinkID)
 	begin
 		case 23:
@@ -16,7 +17,7 @@ begin
 			begin
 				if(call digitalRead(12) = HIGH)
 				begin
-					/*RFIDWrite(DrinkID, Amount-1);*/
+					RFIDWrite(DrinkID, Amount-1);
 					call LCDPrint("Pouring gin", 0);
 					call LCDPrint("Phase 1/4", 1);
 					call pour(Gin, 3);
@@ -29,6 +30,9 @@ begin
 					call LCDPrint("Pouring soda", 0);
 					call LCDPrint("Phase 4/4", 1);
 					call pour(Soda, 5);
+					call LCDPrint("Drinks left:", 0);
+					call LCDPrint(string(Amount-1),1);
+					call delay(2000);
 					call LCDPrint("Drink is served", 0);
 					call LCDPrint("    by SPLAD    ", 1);
 					run <-- false;
@@ -45,6 +49,14 @@ begin
 			call LCDPrint("Error with RFID data", 0);
 			call LCDPrint("Contact staff", 1);
 			break;
+	end
+	end
+	else
+	begin
+		call LCDPrint("Your balance is", 0);
+		call LCDPrint("too low", 1);
+		call delay(3000);
+		call LCDClear();
 	end
 	return nothing;
 end

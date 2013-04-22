@@ -18,7 +18,7 @@ begin
 			begin
 				if(call digitalRead(12) = HIGH)
 				begin
-					int test <-- Amount-1;
+					int test <-- Amount - 1;
 					call RFIDWrite(DrinkID, test);
 					call LCDPrint("Pouring gin", 0);
 					call LCDPrint("Phase 1/4", 1);

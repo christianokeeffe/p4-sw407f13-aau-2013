@@ -1,0 +1,86 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[danish]{babel}
+\usepackage[utf8]{inputenc}
+
+\input{standard}
+% -- Indsæt disse linjer efter \input{standard} % Bevisregler
+
+% Med sidebetingelse
+
+\providecommand{\condinfrule}[3]
+ {\parbox{5.5cm}{$$ {\frac{#1}{#2}}{\qquad
+ #3} \hfill $$}}
+
+% Uden sidebetingelse
+
+\providecommand{\infrule}[2]
+ {\parbox{4.5cm}{$$ \frac{#1}{#2}\hspace{.5cm}$$}}
+
+\title{Tekstspørgsmål om indledende begreber i operationel semantik}
+\author{Christian Jødal O'Keeffe}
+\date{} % delete this line to display the current date
+
+%%% BEGIN DOCUMENT
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+\item Lad $A$ og $B$ være mængder. Hvad betyder notationen $A
+  \ra B$ helt præcist? (`$A$ går over i $B$' er et meget dårligt svar.)
+\begin{svar}
+$A \ra B$ angiver mængden af funktioner fra $A$ til $B$, kaldet \textit{funktionsrummet fra $A$ til $B$}:
+
+$A \ra B = \{f|f:A \ra B\}$
+\end{svar}
+\item Lad $A$ og $B$ være mængder. Hvad betyder notationen $A
+  \rightharpoonup B$ helt præcist?  (`$A$ går over i $B$' er et meget dårligt svar.)
+\begin{svar}
+$A \rightharpoonup B$ angiver mængden af partielle funktioner fra $A$ til $B$, kaldet \textit{det partielle funktionsrum fra $A$ til $B$}:
+
+$A \rightharpoonup B = \{f|f:A \rightharpoonup B\}$
+\end{svar}
+\item Herunder er tre sprog-elementer fra \textbf{Bims}. Angiv for
+  hvert af dem hvilken \emph{syntaktisk kategori} det tilhører og
+  hvad dets \emph{umiddelbare bestanddele} er:
+\begin{itemize}
+\item $\underline{7} \mbox{\tt +($\underline{3}$*$\underline{5}$)}$
+\begin{svar}
+De umiddelbare bestanddele er $\underline{7} \mbox{\tt \text{ og} ($\underline{3}$*$\underline{5}$)}$
+
+Syntaktisk kategori: Aritmetisk udtryk
+\end{svar}
+\item $\mbox{\tt while}\; 0=0\; \mbox{\tt do skip}$
+\begin{svar}
+De umiddelbare bestanddele er $0=0$ og $\mbox{\tt skip}$
+Syntaktisk kategori: Statement
+\end{svar}
+\item $\mbox{\tt x}:=4;\mbox{\tt y}:=2$
+\begin{svar}
+De umiddelbare bestanddele er $\mbox{\tt x}:=4\text{ og } \mbox{\tt y}:=2$
+
+Syntaktisk kategori: Statement
+\end{svar}
+\end{itemize}
+\item Angiv de forskellige komponenter i et transitionssystem --
+  hvordan de noteres og hvad terminologien for dem er.
+\begin{svar}
+Et transitionssystem er en tripel $(\Gamma, \ra, T)$, hvor $\Gamma$ er en mængde af konfigurationer, $\ra$ er en binær relation over $\Gamma$ (en delmængde af $\Gamma \times \Gamma$) kaldet transitionsrelationen, og $T \subset \Gamma$ er en mængde af terminalkonfigurationerne.
+\end{svar}
+\item Er transitionsreglen
+\[ \infrule{a_{2} + a_{1} \ra v}{a_{1} + a_{2} \ra v} \]
+kompositionel? Hvis ja, så forklar hvorfor. Hvis nej, så forklar hvorfor ikke.
+\begin{svar}
+Nej, den er ikke kompositionel, idet syntaksdelene i reglens præmisser \textit{ikke} er udmiddelbare bestanddele af syntaksdelene i konklutionen. Hvis man konstruere et derivationstræ, bliver man aldrig færdig, idet udtrykket ikke bliver brudt ned".
+\end{svar}
+\item Er transitionsreglen
+\[ \condinfrule{a_{1} \ra v_1 \quad a_{2} \ra v_2}{a_{1} + a_{2} \ra v}{\text{hvor} \quad v = v_1 + v_2} \]
+kompositionel? Hvis ja, så forklar hvorfor. Hvis nej, så forklar hvorfor ikke.
+\begin{svar}
+Ja, den er kompositionel, idet syntaksdelene i reglens præmisser er udmiddelbare bestanddele af syntaksdelene i konklutionen.
+
+\end{svar}
+
+\end{enumerate}
+\end{document}
+ 

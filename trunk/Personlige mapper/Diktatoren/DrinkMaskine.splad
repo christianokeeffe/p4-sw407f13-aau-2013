@@ -45,9 +45,9 @@ end
 
 function pour return nothing using(string cont, int Amount)
 begin
-	call digitalWrite(cont, HIGH);
+	call digitalWrite(call byte(cont), HIGH);
 	call delay(Amount*1000);
-	call digitalWrite(cont, LOW);
+	call digitalWrite(call byte(cont), LOW);
 	return nothing;
 end
 

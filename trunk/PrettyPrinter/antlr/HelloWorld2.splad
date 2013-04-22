@@ -1,0 +1,12 @@
+int stor <-- 100;
+int lille <-- 1;
+
+function DoSomething return int using ()
+begin
+    int code <-- 10;
+	if(stor >= lille+3*4)
+	begin
+		int code <-- 400;
+	end
+	return code;
+end

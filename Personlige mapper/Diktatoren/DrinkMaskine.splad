@@ -30,7 +30,7 @@ begin
 					call LCDPrint("Phase 4/4", 1);
 					call pour(Soda, 5);
 					call LCDPrint("Drink is served", 0);
-					call LCDPrint("Thank you for using SPLAD", 1);
+					call LCDPrint("    by SPLAD    ", 1);
 					run <-- false;
 				end
 				else if (call digitalRead(2) = HIGH OR call digitalRead(4) = HIGH)
@@ -52,7 +52,8 @@ end
 function pour return nothing using(container cont, int Amount)
 begin
 	call digitalWrite(cont, HIGH);
-	call delay(Amount*1000);
+	/*call delay(Amount*1000);*/
+	call delay(5000);
 	call digitalWrite(cont, LOW);
 	return nothing;
 end

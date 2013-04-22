@@ -8,8 +8,9 @@ begin
 	switch(DrinkID)
 	begin
 		case 23:
-			call LCDPrint("Confirm to make: ", 0);
-			call LCDPrint("Tom Collins drink.", 1);
+			call LCDPrint("Confirm to make:", 0);
+			call LCDPrint("Tom Collins", 1);
+			call delay(100);
 			bool run <-- true;
 			while(run)
 			begin
@@ -32,9 +33,10 @@ begin
 					call LCDPrint("Thank you for using SPLAD", 1);
 					run <-- false;
 				end
-				else
+				else if (call digitalRead(2) = HIGH OR call digitalRead(4) = HIGH)
 				begin
-					call LCDPrint("Drink making cancelled",0);
+					call LCDPrint("Drink making", 0)
+					call LCDPrint("cancelled",1);
 					run <-- false;
 				end
 			end

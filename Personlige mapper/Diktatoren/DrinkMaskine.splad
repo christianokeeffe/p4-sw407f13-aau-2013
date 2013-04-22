@@ -1,15 +1,17 @@
-char Gin <-- 3;
-char Sugar <-- A0;
-char Soda <-- A2;
-char Lemon <-- A4;
+int Gin <-- 3;
+int Sugar <-- A0;
+int Soda <-- A2;
+int Lemon <-- A4;
 
 function RFIDFound return nothing using(int DrinkID, int Amount)
 begin
 	switch(DrinkID)
 	begin
 		case 23:
-			call LCDPrint("Confirm to make a Tom Collins drink.", 0);
-			while(call digitalRead(2) = LOW AND call digitalRead(4) = LOW AND call digitalRead(12))
+			call LCDPrint("Confirm to make: ", 0);
+			call LCDPrint("Tom Collins drink.", 1);
+			bool run <-- true;
+			while(run)
 			begin
 				if(call digitalRead(12) = HIGH)
 				begin
@@ -28,10 +30,12 @@ begin
 					call pour(Soda, 5);
 					call LCDPrint("Drink is served", 0);
 					call LCDPrint("Thank you for using SPLAD", 1);
+					run <-- false;
 				end
 				else
 				begin
 					call LCDPrint("Drink making cancelled",0);
+					run <-- false;
 				end
 			end
 			break;
@@ -43,7 +47,7 @@ begin
 	return nothing;
 end
 
-function pour return nothing using(char cont, int Amount)
+function pour return nothing using(int cont, int Amount)
 begin
 	call digitalWrite(cont, HIGH);
 	call delay(Amount*1000);

@@ -1,11 +1,10 @@
-container Gin <-- A0;
-container Sugar <-- A2;
-container Soda <-- A1;
-container Lemon <-- A5;
+int numberOfContainers <-- 4;
 int ButtonOne <-- 12;
 int ButtonTen <-- 10;
 int ButtonConfirm <-- 13;
 bool IsStaffInput <-- false;
+string[numberOfContainers] ContainerNames;
+container[numberOfContainers] Containers;
 
 function RFIDFound return nothing using(int DrinkID, int Amount)
 begin
@@ -38,6 +37,22 @@ begin
 	return ReturnValue;
 end
 
+function MakeCollins return nothing using(int drinksLeft)
+begin
+	int numberOfSteps <-- 4;
+	int[numberOfSteps][2] recipie;
+	int[1][1] <-- 1;
+	int[1][2] <-- 3;
+	int[2][1] <-- 3;
+	int[2][2] <-- 2;
+	int[3][1] <-- 2;
+	int[3][2] <-- 1;
+	int[4][1] <-- 4;
+	int[4][2] <-- 5;
+	call pourDrink(recipie, numberOfSteps, drinksLeft);
+	return nothing;
+end
+
 function CustomerAction return nothing using(int DrinkID, int Amount)
 begin
 	if(Amount > 0)
@@ -54,23 +69,7 @@ begin
 				if(call digitalRead(12) = HIGH)
 				begin
 					call RFIDWrite(DrinkID, Amount-1);
-					call LCDPrint("Pouring gin", 0);
-					call LCDPrint("Phase 1/4", 1);
-					call pour(Gin, 3);
-					call LCDPrint("Pouring lemon", 0);
-					call LCDPrint("Phase 2/4", 1);
-					call pour(Lemon, 2);
-					call LCDPrint("Pouring sugar", 0);
-					call LCDPrint("Phase 3/4", 1);
-					call pour(Sugar, 2);
-					call LCDPrint("Pouring soda", 0);
-					call LCDPrint("Phase 4/4", 1);
-					call pour(Soda, 5);
-					call LCDPrint("Drinks left:", 0);
-					call LCDPrint(string(Amount-1),1);
-					call delay(2000);
-					call LCDPrint("Drink is served", 0);
-					call LCDPrint("    by SPLAD    ", 1);
+					call MakeCollins(Amount-1);
 					run <-- false;
 				end
 				else if (call digitalRead(2) = HIGH OR call digitalRead(4) = HIGH)
@@ -94,6 +93,24 @@ begin
 		call delay(3000);
 		call LCDClear();
 	end
+	return nothing;
+end
+
+function pourDrink return nothing using(int[][] recipie, int numberOfSteps, int drinksLeft)
+begin
+	int i;
+	from i <-- 0 to numberOfSteps step 1
+	begin
+		call LCDPrint("Pouring " + ContainerNames[recipie[i][1]], 0);
+		call LCDPrint("Phase "+string(i)+"/" + string(numberOfSteps), 1);
+		call pour(Containers[recipie[i][1]], ContainerNames[recipie[i][2]]);
+	end
+	
+	call LCDPrint("Drinks left:", 0);
+	call LCDPrint(string(drinksLeft),1);
+	call delay(2000);
+	call LCDPrint("Drink is served", 0);
+	call LCDPrint("    by SPLAD    ", 1);
 	return nothing;
 end
 
@@ -187,6 +204,7 @@ begin
 	begin
 		ChangeMode(false);
 	end
+	return nothing;
 end
 
 function WaitOnInput return nothing using()
@@ -200,6 +218,19 @@ end
 
 function setup return nothing using()
 begin
+	container Gin <-- A0;
+	container Sugar <-- A2;
+	container Soda <-- A1;
+	container Lemon <-- A5;
+	Containers[1] <-- Gin;
+	ContainerNames[1] <-- "Gin";
+	Containers[2] <-- Sugar;
+	ContainerNames[2] <-- "Sugar";
+	Containers[3] <-- Lemon;
+	ContainerNames[3] <-- "Lemon";
+	Containers[4] <-- Soda;
+	ContainerNames[4] <-- "Soda";
+	
 	call pinMode(Gin, OUTPUT);
 	call pinMode(Sugar, OUTPUT);
 	call pinMode(Soda, OUTPUT);

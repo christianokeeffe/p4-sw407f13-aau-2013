@@ -20,8 +20,8 @@
 \alt container
 \alt string
 
-<arraytype> $\ra$ [<NOTZERODIGIT>]
-\alt$\eps$
+<arraytype> $\ra$ [<expr>]
+\alt $\eps$
 
 <id> $\ra$ <LETTER>
 
@@ -55,10 +55,10 @@
 
 <callid> $\ra$ <id> <arrayidend>
 
-<arrayidend> $\ra$ <ARRAYCALL>
+<arrayidend> $\ra$ <arraycall>
 \alt $\eps$
 
-<ARRAYCALL> $\ra$ [<NOTZERODIGIT>]
+<arraycall> $\ra$ [<expr>]
 
 <numeric> $\ra$ <plusminusorempty> <DIGIT> <numericend>
 

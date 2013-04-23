@@ -198,11 +198,11 @@ function loop return nothing using()
 begin
 	if(call digitalRead(ButtonOne) = HIGH)
 	begin
-		ChangeMode(true);
+		call ChangeMode(true);
 	end
 	else if(call digitalRead(ButtonTen) = HIGH)
 	begin
-		ChangeMode(false);
+		call ChangeMode(false);
 	end
 	return nothing;
 end

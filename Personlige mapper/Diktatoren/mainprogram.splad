@@ -38,6 +38,73 @@ begin
 	return ReturnValue;
 end
 
+function CustomerAction return nothing using(int DrinkID, int Amount)
+begin
+	if(Amount > 0)
+	begin
+	switch(DrinkID)
+	begin
+		case 23:
+			call LCDPrint("Confirm to make:", 0);
+			call LCDPrint("Tom Collins", 1);
+			call delay(100);
+			bool run <-- true;
+			while(run)
+			begin
+				if(call digitalRead(12) = HIGH)
+				begin
+					call RFIDWrite(DrinkID, Amount-1);
+					call LCDPrint("Pouring gin", 0);
+					call LCDPrint("Phase 1/4", 1);
+					call pour(Gin, 3);
+					call LCDPrint("Pouring lemon", 0);
+					call LCDPrint("Phase 2/4", 1);
+					call pour(Lemon, 2);
+					call LCDPrint("Pouring sugar", 0);
+					call LCDPrint("Phase 3/4", 1);
+					call pour(Sugar, 2);
+					call LCDPrint("Pouring soda", 0);
+					call LCDPrint("Phase 4/4", 1);
+					call pour(Soda, 5);
+					call LCDPrint("Drinks left:", 0);
+					call LCDPrint(string(Amount-1),1);
+					call delay(2000);
+					call LCDPrint("Drink is served", 0);
+					call LCDPrint("    by SPLAD    ", 1);
+					run <-- false;
+				end
+				else if (call digitalRead(2) = HIGH OR call digitalRead(4) = HIGH)
+				begin
+					call LCDPrint("Drink making", 0);
+					call LCDPrint("cancelled",1);
+					run <-- false;
+				end
+			end
+			break;
+		default:
+			call LCDPrint("Error with RFID data", 0);
+			call LCDPrint("Contact staff", 1);
+			break;
+	end
+	end
+	else
+	begin
+		call LCDPrint("Your balance is", 0);
+		call LCDPrint("too low", 1);
+		call delay(3000);
+		call LCDClear();
+	end
+	return nothing;
+end
+
+function pour return nothing using(container cont, int Amount)
+begin
+	call digitalWrite(cont, HIGH);
+	call delay(Amount*1000);
+	call digitalWrite(cont, LOW);
+	return nothing;
+end
+
 function StaffAction return nothing using()
 begin
 	call LCDPrint("Type ID of the", 0);
@@ -69,6 +136,7 @@ function StartMsg return nothing using()
 begin
 	call LCDPrint("Welcome to", 0);
 	call LCDPrint("      SPLAD     ", 1);
+	return nothing;
 end
 
 function ChangeMode return bool using(bool mode)

@@ -1,0 +1,144 @@
+container Gin <-- A0;
+container Sugar <-- A2;
+container Soda <-- A1;
+container Lemon <-- A5;
+int ButtonOne <-- 12;
+int ButtonTen <-- 10;
+int ButtonConfirm <-- 13;
+bool IsStaffInput <-- false;
+
+function RFIDFound return nothing using(int DrinkID, int Amount)
+begin
+	if(IsStaffInput)
+	begin
+	end
+	else
+	begin
+		call StaffAction();
+	end
+	return nothing;
+end
+
+function GetInputNumber return int using()
+begin
+	int ReturnValue <-- 0;
+	while(call digitalRead(ButtonConfirm) = LOW)
+	begin
+		call delay(100);
+		if(call digitalRead(ButtonOne) = HIGH)
+		begin
+			ReturnValue <-- ReturnValue + 1;
+		end
+		else if(call digitalRead(ButtonTen) = HIGH)
+		begin
+			ReturnValue <-- ReturnValue + 10;
+		end
+		call LCDPrint(string(ReturnValue), 1);
+	end
+	return ReturnValue;
+end
+
+function StaffAction return nothing using()
+begin
+	call LCDPrint("Type ID of the", 0);
+	call LCDPrint("drink to buy", 1);
+	
+	/*Wait for user to press a button*/
+	call WaitOnInput();
+	call LCDClear();
+	call LCDPrint("Drink ID:", 0);
+	
+	int drinkID <-- call GetInputNumber();
+	call LCDPrint("Number of drinks", 0);
+	call LCDPrint("",1);
+	/*Wait for user to press a button*/
+	call WaitOnInput();
+	
+	int Amount <-- call GetInputNumber();
+	
+	call RFIDWrite(drinkID, Amount);
+	call LCDPrint("", 1);
+	call LCDPrint("Amount: " + string(Amount), 1);
+	call LCDPrint("Drink ID: " + string(drinkID), 0);
+	call delay(2000);
+	call StartMsg();
+	return nothing;
+end
+
+function StartMsg return nothing using()
+begin
+	call LCDPrint("Welcome to", 0);
+	call LCDPrint("      SPLAD     ", 1);
+end
+
+function ChangeMode return bool using(bool mode)
+begin
+	string OutputString <-- "";
+	bool returnValue <-- false;
+	if(mode = true)
+	begin
+		OutputString <-- "staffmode";
+	end
+	else if(mode = false)
+	begin
+		OutputString <-- "customermode";
+	end
+	
+	if(OutputString != "")
+	begin
+		call LCDPrint("Confirm change", 0);
+		call LCDPrint("to " + OutputString, 1);
+		call WaitOnInput();
+		if(call digitalRead(ButtonConfirm) = HIGH)
+		begin
+			returnValue <-- mode;
+			call LCDClear();
+			call LCDPrint(OutputString + " on", 0);
+			call delay(2000);
+			call StartMsg();
+		end
+		else
+		begin
+			call LCDPrint("Customer", 0);
+			call LCDPrint("mode on", 1);
+			call delay(2000);
+			call StartMsg();
+		end
+	end
+	
+	return returnValue;
+end
+
+function loop return nothing using()
+begin
+	if(call digitalRead(ButtonOne) = HIGH)
+	begin
+		ChangeMode(true);
+	end
+	else if(call digitalRead(ButtonTen) = HIGH)
+	begin
+		ChangeMode(false);
+	end
+end
+
+function WaitOnInput return nothing using()
+begin
+	while(call digitalRead(ButtonOne) = LOW AND call digitalRead(ButtonTen) AND call digitalRead(ButtonConfirm))
+	begin
+		call delay(50);
+	end
+	return nothing;
+end
+
+function setup return nothing using()
+begin
+	call pinMode(Gin, OUTPUT);
+	call pinMode(Sugar, OUTPUT);
+	call pinMode(Soda, OUTPUT);
+	call pinMode(Lemon, OUTPUT);
+	call pinMode(ButtonOne, INPUT);
+	call pinMode(ButtonTen, INPUT);
+	call pinMode(ButtonConfirm, INPUT);
+	call StartMsg();
+	return nothing;
+end

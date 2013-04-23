@@ -5,6 +5,7 @@ int ButtonConfirm <-- 13;
 bool IsStaffInput <-- false;
 string[numberOfContainers] ContainerNames;
 container[numberOfContainers] Containers;
+int maxRecipieSize <-- 10;
 
 function RFIDFound return nothing using(int DrinkID, int Amount)
 begin
@@ -40,7 +41,7 @@ end
 function MakeCollins return nothing using(int drinksLeft)
 begin
 	int numberOfSteps <-- 4;
-	int[numberOfSteps][2] recipie;
+	int[maxRecipieSize][2] recipie;
 	recipie[1][1] <-- 1;
 	recipie[1][2] <-- 3;
 	recipie[2][1] <-- 3;
@@ -96,7 +97,7 @@ begin
 	return nothing;
 end
 
-function pourDrink return nothing using(int[][] recipie, int numberOfSteps, int drinksLeft)
+function pourDrink return nothing using(int[maxRecipieSize][2] recipie, int numberOfSteps, int drinksLeft)
 begin
 	int i;
 	from i <-- 0 to numberOfSteps step 1

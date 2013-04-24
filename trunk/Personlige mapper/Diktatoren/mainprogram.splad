@@ -1,11 +1,11 @@
-int numberOfContainers <-- 4;
+const int numberOfContainers <-- 4;
 int ButtonOne <-- 12;
 int ButtonTen <-- 10;
 int ButtonConfirm <-- 13;
 bool IsStaffInput <-- false;
 string ContainerNames[numberOfContainers];
 container Containers[numberOfContainers];
-int maxrecipeSize <-- 10;
+const int maxrecipeSize <-- 10;
 
 function RFIDFound return nothing using(int DrinkID, int Amount)
 begin
@@ -104,7 +104,7 @@ begin
 	begin
 		call LCDPrint("Pouring " + ContainerNames[recipe[i][1]], 0);
 		call LCDPrint("Phase "+string(i)+"/" + string(numberOfSteps), 1);
-		call pour(Containers[recipe[i][1]], ContainerNames[recipe[i][2]]);
+		call pour(Containers[recipe[i][1]], recipe[i][2]);
 	end
 	
 	call LCDPrint("Drinks left:", 0);

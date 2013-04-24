@@ -9,12 +9,13 @@ const int maxrecipeSize <-- 10;
 
 function RFIDFound return nothing using(int DrinkID, int Amount)
 begin
-	if(IsStaffInput)
+	if(IsStaffInput = true)
 	begin
+		call StaffAction();
 	end
 	else
 	begin
-		call StaffAction();
+		call CustomerAction();
 	end
 	return nothing;
 end

@@ -68,7 +68,7 @@ begin
 			bool run <-- true;
 			while(run = true)
 			begin
-				if(call digitalRead(12) = HIGH)
+				if(call digitalRead(ButtonConfirm) = HIGH)
 				begin
 					if(call RFIDWrite(DrinkID, Amount-1))
 					begin
@@ -81,7 +81,7 @@ begin
 					end
 					run <-- false;
 				end
-				else if (call digitalRead(2) = HIGH OR call digitalRead(4) = HIGH)
+				else if (call digitalRead(ButtonOne) = HIGH OR call digitalRead(ButtonTen) = HIGH)
 				begin
 					call LCDPrint("Drink making", 0);
 					call LCDPrint("cancelled",1);

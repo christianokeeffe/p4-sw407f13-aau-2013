@@ -55,10 +55,12 @@
 
 <callid> $\ra$ <id> <arrayidend>
 
-<arrayidend> $\ra$ <arraycall>
+<arrayidend> $\ra$ <arraycall> [ <expr> ]
 \alt $\eps$
 
-<arraycall> $\ra$ [ <expr> ] <arrayidend>
+<arraycall> $\ra$  <arrayidend> [ <expr> ]
+\alt <arrayidend> [ ]
+\alt $\eps$
 
 <numeric> $\ra$ <plusminusorempty> <DIGIT> <numericend>
 

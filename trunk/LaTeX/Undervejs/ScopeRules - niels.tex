@@ -1,2 +1,32 @@
 \subsection{Scope Rules}
-The main think for scope rules 
+It is important to understand how variables is scope. The scope of a variable is the range of statements in which the variable is visible. The variable is visible if it can be referenced in the statement.
+The languages scope rules determine how a variable name is associated with a variable in a particular occurrence or in case of a functional language, how a name is associated with an expression
+then a variable is declared in a program unit or block, it is local at that place. Then the non-local variables are visible within the program unit or block if they are not declared there. And at the last is global variables that is a special category of non-local variables.
+
+\textbf{Static Scope}
+The method of binding names to nonlocal variables i called static scoping. there are 2 There are two categories of static-scoped languages. First one is which subprograms can be nested, which creates nested static scopes. And the other is static scopes is also created by subprograms but nested scopes are created only by nested class definitions and blocks.
+
+\textbf{Blocks}
+Blocks are use to defined new static scopes in many languages. The idea is that it allows a section of code to have its own local variables whose scope is minimized. % phrase block-structured language origin are from blocks
+
+An example on the use of block is the code \ref{BlockCode}. This before the block $\{ \}$ the variable $x$ is set to integer 5, in the block $x$ is set to 10 and a extra variable $y$ is made and is set to integer 15, $y$ is only visible inside block, thereby it can not be call out side the block, but after the block $x$ still have the value 10 that comes which was given inside the block.
+
+\begin{code}{BlockCode}{a simple code with use of blocks}
+\begin{lstlisting}
+int x = 5
+\{
+    int y = 15
+    x = 10
+\} 
+\end{lstlisting}
+\end{code}
+
+\textbf{Declaration Order}
+The main think about declaration order is how the data declarations are made, do they need to be before functions, like C89, before they are used, like C#, or can they be anywhere in the code, like C99, C++, Java and JavaScript.
+
+\textbf{Global Scope}
+In some languages that allow the program structure to be as a sequence of function definitions, like C, C++, PHP. Definitions outside functions in a file create global variables, which make it  visible to those functions. 
+
+
+\textit{Dynamic Scope}
+

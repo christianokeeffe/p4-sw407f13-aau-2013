@@ -72,8 +72,15 @@ begin
 			begin
 				if(call digitalRead(12) = HIGH)
 				begin
-					call RFIDWrite(DrinkID, Amount-1);
+					if(call RFIDWrite(DrinkID, Amount-1))
+					begin
 					call MakeCollins(Amount-1);
+					end
+					else
+					begin
+						call LCDPrint("Error", 0);
+						call LCDPrint("writing to tag", 1);
+					end
 					run <-- false;
 				end
 				else if (call digitalRead(2) = HIGH OR call digitalRead(4) = HIGH)
@@ -144,10 +151,17 @@ begin
 	
 	int Amount <-- call GetInputNumber();
 	
-	call RFIDWrite(drinkID, Amount);
+	if(call RFIDWrite(drinkID, Amount))
+	begin
 	call LCDPrint("", 1);
 	call LCDPrint("Amount: " + string(Amount), 1);
 	call LCDPrint("Drink ID: " + string(drinkID), 0);
+	end
+	else
+	begin
+		call LCDClear();
+		call LCDPrint("ERRROR", 0);
+	end
 	call delay(2000);
 	call StartMsg();
 	return nothing;

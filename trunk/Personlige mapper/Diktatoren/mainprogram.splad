@@ -218,11 +218,11 @@ function loop return nothing using()
 begin
 	if(call digitalRead(ButtonOne) = HIGH)
 	begin
-		call ChangeMode(true);
+		IsStaffInput <-- call ChangeMode(true);
 	end
 	else if(call digitalRead(ButtonTen) = HIGH)
 	begin
-		call ChangeMode(false);
+		IsStaffInput <-- call ChangeMode(false);
 	end
 	return nothing;
 end

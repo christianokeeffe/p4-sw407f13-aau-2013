@@ -226,7 +226,7 @@ end
 function WaitOnInput return nothing using()
 begin
 	call delay(300);
-	while(call digitalRead(ButtonOne) = LOW AND call digitalRead(ButtonTen) AND call digitalRead(ButtonConfirm))
+	while(call digitalRead(ButtonOne) = LOW AND call digitalRead(ButtonTen) =  LOW AND call digitalRead(ButtonConfirm) = LOW)
 	begin
 		call delay(50);
 	end

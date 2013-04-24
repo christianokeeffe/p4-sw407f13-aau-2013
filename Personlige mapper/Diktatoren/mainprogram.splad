@@ -100,7 +100,7 @@ begin
 	return nothing;
 end
 
-function pourDrink return nothing using(int recipe[maxrecipeSize][2], int numberOfSteps, int drinksLeft)
+function pourDrink return nothing using(int recipe[][2], int numberOfSteps, int drinksLeft)
 begin
 	int i;
 	from i <-- 0 to numberOfSteps step 1

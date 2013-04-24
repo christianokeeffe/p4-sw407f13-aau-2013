@@ -15,7 +15,7 @@ begin
 	end
 	else
 	begin
-		call CustomerAction();
+		call CustomerAction(DrinkID, Amount);
 	end
 	return nothing;
 end

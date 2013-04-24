@@ -24,7 +24,7 @@
             <Keywords name="Folders in comment, open"></Keywords>
             <Keywords name="Folders in comment, middle"></Keywords>
             <Keywords name="Folders in comment, close"></Keywords>
-            <Keywords name="Keywords1">int container string bool double HIGH LOW true false nothing INPUT OUTPUT</Keywords>
+            <Keywords name="Keywords1">int container string bool double HIGH LOW true false nothing INPUT OUTPUT const</Keywords>
             <Keywords name="Keywords2">function begin end return using if else case switch while from to step call break default AND OR</Keywords>
             <Keywords name="Keywords3"></Keywords>
             <Keywords name="Keywords4"></Keywords>

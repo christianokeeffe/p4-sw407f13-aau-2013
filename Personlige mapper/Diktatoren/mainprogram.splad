@@ -9,6 +9,8 @@ const int maxrecipeSize <-- 10;
 
 function RFIDFound return nothing using(int DrinkID, int Amount)
 begin
+	call LCDClear();
+	call delay(5000);
 	if(IsStaffInput = true)
 	begin
 		call StaffAction();

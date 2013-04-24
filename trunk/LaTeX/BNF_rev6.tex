@@ -44,7 +44,7 @@
 	\alt !(<expr>)
 	\alt <callid>
 	\alt <numeric>
-	\alt A  <DIGIT>
+	\alt A <DIGIT>
 	\alt <string>
 	\alt <functioncall> 
 	\alt <cast>
@@ -164,6 +164,11 @@ begin
 <from> $\ra$ from <assign> to <expr> step <plusminusorempty> <DIGIT>
 	<block>
 
+<block> $\ra$ 
+	begin
+		<stmts>
+	end
+
 <nontermswitch> $\ra$ switch (<expr>)
 		begin
 			<cases>
@@ -178,11 +183,6 @@ begin
 		\alt default:
 			<stmts>
 			break;
-
-<block> $\ra$ 
-	begin
-		<stmts>
-	end
 
 <breakend> $\ra$ <cases>
 \alt default:

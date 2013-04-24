@@ -11,14 +11,10 @@ function RFIDFound return nothing using(int DrinkID, int Amount)
 begin
 	if(IsStaffInput = true)
 	begin
-		call LCDPrint("Hej", 0);
-		call delay(5000);
 		call StaffAction();
 	end
 	else
 	begin
-		call LCDPrint("Boh", 0);
-		call delay(5000);
 		call CustomerAction(DrinkID, Amount);
 	end
 	return nothing;
@@ -68,7 +64,7 @@ begin
 		case 23:
 			call LCDPrint("Confirm to make:", 0);
 			call LCDPrint("Tom Collins", 1);
-			call delay(100);
+			call delay(1000);
 			bool run <-- true;
 			while(run)
 			begin

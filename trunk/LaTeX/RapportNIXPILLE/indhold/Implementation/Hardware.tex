@@ -1,5 +1,5 @@
-%Se efter "ret herfra" i RFID sektionen
 \subsection{Hardware}
+\label{sec:Hardware}
 This section will be about the hardware components used in this project, describing them and the reasons they are used in this project. The description states the basic technical specification that will be relevant for this project.
 
 \subsubsection{Hardware platform}
@@ -29,11 +29,11 @@ The objects that are able to be read differs a lot. It can be clothes, food, doc
 All tags contains a unique ID that can in no way be changed once made. This ID is used to identify an individual tag.
 Tags can be either passive or active. Passive tags does not do anything until a signal from a reader transfers energy to the tag. Once activated it sends a signal back in return. Active tags have a power source and therefore is able to send a signal on their own, making the read-distance greater.
 The tags can also be either \textit{read only tag} or \textit{read/write tag}. A \textit{read only tag} only sends its ID back when it connects with a reader, while a \textit{read/write tag} have a memory for storing additional information it then sends with the ID \citep{RFID}.
-%ret herfra
+
 An alternative to RFID is NFC (Near Field Communication). NFC uses radio communication like the RFID, but unlike RFID the communication between two NFC devices is two-way. An NFC can also read passive NFC tags and could replace the RFID. We have chosen not to use the NFC devices since we have no need for the two-way communication.
 
 The RFID tags used in this project are passive, high frequency, \textit{read/write} tags. The passive high frequency tags have a maximum read-distance of 1 meter \citep{RFID}, and that is far enough for this project. We are using a \textit{read/write} tag to store drink-ids and drink-counts on the tags and make the reader read and respond to the information.
-%til her
+
 \subsubsection{Other components}
 The demonstration of the product will require something to illustrate more advanced parts of a theoretical machine.
 This is because making a whole drink-mixer just to show that the project product works, will take too much time that instead could have been used to make the product better. 

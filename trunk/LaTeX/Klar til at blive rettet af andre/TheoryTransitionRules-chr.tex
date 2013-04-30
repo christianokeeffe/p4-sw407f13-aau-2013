@@ -4,6 +4,7 @@
 In this section some of the transition rules in SPLAD will be explained. The complete list of all the rules can be seen in appendix \ref{sec:transitionrules}.
 In the following text we use the following names to represent different syntactic categories.
 \fxfatal{bruger vi bigstep eller smallstep? hvad med envP?}
+%% Vi bruger Bigstep. Desuden er envP ikke brugt endnu så derfor er den ikke med.
 \begin{itemize}
 \item $n \in \textbf{Num}$ - Numerals
 \item $v$ - Values
@@ -16,7 +17,9 @@ In the following text we use the following names to represent different syntacti
 \end{itemize}
 
 \subsection{Environment-Store Model}
-In our project we use the \textit{environment-store model} to represent how a variable is bound to a storage cell (called a \textit{location}), in the computer, and that the value of the variable is the content of the bound location. All the possible locations are denoted by \textbf{Loc} and a single location as $l \in \textbf{Loc}$. We assume all locations are integer \fxfatal{hvorfor det?? det holder jo ikke i forhold til vores sprog?}, and therefore $\textbf{Loc} = \mathbb{Z}$. Since all locations are integers you can define a function to find the next location: $\textbf{Loc} \rightarrow \textbf{Loc}$, where $l = l + 1$. \fxfatal{Er dette korrekt?}
+In our project we use the \textit{environment-store model} to represent how a variable is bound to a storage cell (called a \textit{location}), in the computer, and that the value of the variable is the content of the bound location. All the possible locations are denoted by \textbf{Loc} and a single location as $l \in \textbf{Loc}$. We assume all locations are integer \fxfatal{hvorfor det?? det holder jo ikke i forhold til vores sprog? }
+%% Det er bare noget vi gør og har intet med vores sprog at gøre. Det handler om hvordan vi gemmer ting og ikke at alt er integers. se afsnit 6.2 i Hans Hüttels bog
+, and therefore $\textbf{Loc} = \mathbb{Z}$. Since all locations are integers you can define a function to find the next location: $\textbf{Loc} \rightarrow \textbf{Loc}$, where $l = l + 1$. \fxfatal{Er dette korrekt?} %% Ja se afsnit 6.2 i Hans Hüttels bog
 
 We define the set of stores to be the mappings from locations to values $\textbf{Sto } = \textbf{ Loc } \rightharpoonup \mathbb{Z}$, where $sto$ is an single element in $\textbf{Sto}$.
 
@@ -55,9 +58,11 @@ The transition rule for logical-or in SPLAD can be seen on table \ref{tab:OrExp}
 \caption{Transition rule for the boolean expression logical-or.}
 \label{tab:OrExp}
 \end{longtable}\fxfatal{mangler der ikke noget her? en sidebetingelse?}
+% Jo tænkte jeg også... men det er der ikke i de regler der står i vores bilag.. evt skal begge rettes.
 
 \subsection{Declarations}
 \fxfatal{Kan ikke laves siden at transition rules til dette punkt ikke er lavet endnu}
+%% Ja det er så mig der har skrevet denne fxfatal
 
 \subsection{Assignments}
 The transition rule for variable assignment in SPLAD can be seen on table \ref{tab:VarAssign}. When a variable is assigned the contents of $l$ is updated to $v$, where $l$ is the location of $x$ found in the $env_V$ and $v$ is the result of evaluation $e$.
@@ -73,6 +78,7 @@ The transition rule for variable assignment in SPLAD can be seen on table \ref{t
 \label{tab:VarAssign}
 \end{longtable}
 \fxfatal{Hedder det ikke envC, envV i første udtryk i reglen?}
+%% Jo tror jeg du har ret i. Se Tabel 6.1 i Hans Hüttels bog og være sikker på at gemme det i bilaget også. 
 
 \subsection{Commands}
 The transition rule for the while statement in SPLAD can be seen on table \ref{tab:WhileStatement}. The rule have to parts: [WHL-TRUE] and [WHL-FALSE]. If the condition $b$ evaluates to \textit{true} then the [WHL-TRUE] states that $C$ will be executed which will update the \textit{store} (sto) and again call the expression and evaluate the new $b$. If the condition $b$ evaluates to \textit{false} then $C$ is \underline{not} executed and the \textit{store} is not updated. The program exits the while statement. \fxfatal{Hans Hüttels danske bog}

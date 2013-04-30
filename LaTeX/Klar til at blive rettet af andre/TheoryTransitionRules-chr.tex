@@ -1,20 +1,22 @@
+\input{../RapportNixPille/preamble}
+\begin{document}
 \section{Transition Rules}
-In this section some of the transition rules in SPLAD will be explained. The complete list of all the rules can be seen in appendix \ref{app:TransitionRules}.
+In this section some of the transition rules in SPLAD will be explained. The complete list of all the rules can be seen in appendix \ref{sec:transitionrules}.
 In the following text we use the following names to represent different syntactic categories.
-
+\fxfatal{bruger vi bigstep eller smallstep? hvad med envP?}
 \begin{itemize}
 \item $n \in \textbf{Num}$ - Numerals
 \item $v$ - Values
 \item $x \in \textbf{Var}$ - Variables 
 \item $r \in \textbf{Arrays}$ - Array names
-\item $a \in A{exp}$ - Arithmetic expression
-\item $b \in B{exp}$ - Boolean expression
+\item $a \in A_{exp}$ - Arithmetic expression
+\item $b \in B_{exp}$ - Boolean expression
 \item $e \in A_{exp} \cup B_{exp}$ - expressions
 \item $C \in \textbf{Com}$ - Commands
 \end{itemize}
 
 \subsection{Environment-Store Model}
-In our project we use the \textit{environment-store model} to represent how a variable is bound to a storage cell (called a \textit{location}), in the computer, and that the value of the variable is the content of the bound location. All the possible locations are denoted by \textbf{Loc} and a single location as $l \in \textbf{Loc}$. We assume all locations are integer, and therefore $\textbf{Loc} = \mathbb{Z}$. Since all locations are integers er can define a function to find the next location: $\textbf{Loc} \rightarrow \textbf{Loc}$, where $l = l + 1$
+In our project we use the \textit{environment-store model} to represent how a variable is bound to a storage cell (called a \textit{location}), in the computer, and that the value of the variable is the content of the bound location. All the possible locations are denoted by \textbf{Loc} and a single location as $l \in \textbf{Loc}$. We assume all locations are integer \fxfatal{hvorfor det?? det holder jo ikke i forhold til vores sprog?}, and therefore $\textbf{Loc} = \mathbb{Z}$. Since all locations are integers you can define a function to find the next location: $\textbf{Loc} \rightarrow \textbf{Loc}$, where $l = l + 1$. \fxfatal{Er dette korrekt?}
 
 We define the set of stores to be the mappings from locations to values $\textbf{Sto } = \textbf{ Loc } \rightharpoonup \mathbb{Z}$, where $sto$ is an single element in $\textbf{Sto}$.
 
@@ -26,13 +28,10 @@ The following names represent the different environments.
 \item $env_E \in Env_E$ - Expressions declarations
 \end{itemize}
 
-beskriv l side 79\fxfatal{What? hvor hører dette hjemme?}
-\item $sto$
-
 \subsection{Arithmetic Expressions}
 The transition rule for multiplication in SPLAD can be seen on table \ref{tab:MultExp}. The rule states, that if $a_1$ evaluates to $v_1$ and $a_2$ evaluates to $v_2$, using any of the rules from $A_{exp}$, then $a_1 * a_2$ evaluates to $v$ where $v = v_1 * v_2$.
 
-\begin{table}
+\begin{table}[H]
 \begin{tabular}{l l}
 [MUL] & \[\frac{env_E, \: sto \vdash a_1 \rightarrow_a v_1 \;\; env_E, \: sto \vdash a_2 \rightarrow_a v_2}{env_E, \: sto \vdash a_1 * a_2 \rightarrow_a v}\] \\
 ~ & ~ \\
@@ -55,7 +54,7 @@ The transition rule for logical-or in SPLAD can be seen on table \ref{tab:OrExp}
 ~ & ~ \\
 \caption{Transition rule for the boolean expression logical-or.}
 \label{tab:OrExp}
-\end{longtable}
+\end{longtable}\fxfatal{mangler der ikke noget her? en sidebetingelse?}
 
 \subsection{Declarations}
 \fxfatal{Kan ikke laves siden at transition rules til dette punkt ikke er lavet endnu}
@@ -73,6 +72,7 @@ The transition rule for variable assignment in SPLAD can be seen on table \ref{t
 \caption{Transition rule for variable assignment.}
 \label{tab:VarAssign}
 \end{longtable}
+\fxfatal{Hedder det ikke envC, envV i første udtryk i reglen?}
 
 \subsection{Commands}
 The transition rule for the while statement in SPLAD can be seen on table \ref{tab:WhileStatement}. The rule have to parts: [WHL-TRUE] and [WHL-FALSE]. If the condition $b$ evaluates to \textit{true} then the [WHL-TRUE] states that $C$ will be executed which will update the \textit{store} (sto) and again call the expression and evaluate the new $b$. If the condition $b$ evaluates to \textit{false} then $C$ is \underline{not} executed and the \textit{store} is not updated. The program exits the while statement. \fxfatal{Hans Hüttels danske bog}
@@ -91,3 +91,4 @@ The transition rule for the while statement in SPLAD can be seen on table \ref{t
 \caption{Transition rules for the while statement.}
 \label{tab:WhileStatement}
 \end{longtable}
+\end{document}

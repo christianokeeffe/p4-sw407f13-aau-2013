@@ -7,15 +7,19 @@ string ContainerNames[numberOfContainers];
 container Containers[numberOfContainers];
 const int maxrecipeSize <-- 10;
 
-function RFIDFound return nothing using(int DrinkID, int Amount)
+function StartMsg return nothing using()
 begin
-	if(IsStaffInput = true)
+	call LCDPrint("Welcome to", 0);
+	call LCDPrint("      SPLAD     ", 1);
+	return nothing;
+end
+
+function WaitOnInput return nothing using()
+begin
+	call delay(300);
+	while(call digitalRead(ButtonOne) = LOW AND call digitalRead(ButtonTen) =  LOW AND call digitalRead(ButtonConfirm) = LOW)
 	begin
-		call StaffAction();
-	end
-	else
-	begin
-		call CustomerAction(DrinkID, Amount);
+		call delay(50);
 	end
 	return nothing;
 end
@@ -37,6 +41,66 @@ begin
 		call LCDPrint(string(ReturnValue), 1);
 	end
 	return ReturnValue;
+end
+
+function StaffAction return nothing using()
+begin
+	call LCDPrint("Type ID of the", 0);
+	call LCDPrint("drink to buy", 1);
+	
+	/*Wait for user to press a button*/
+	call WaitOnInput();
+	call LCDClear();
+	call LCDPrint("Drink ID:", 0);
+	
+	int drinkID <-- call GetInputNumber();
+	call LCDPrint("Number of drinks", 0);
+	call LCDPrint("",1);
+	/*Wait for user to press a button*/
+	call WaitOnInput();
+	
+	int Amount <-- call GetInputNumber();
+	
+	if(call RFIDWrite(drinkID, Amount))
+	begin
+	call LCDPrint("", 1);
+	call LCDPrint("Amount: " + string(Amount), 1);
+	call LCDPrint("Drink ID: " + string(drinkID), 0);
+	end
+	else
+	begin
+		call LCDClear();
+		call LCDPrint("ERRROR", 0);
+	end
+	call delay(2000);
+	call StartMsg();
+	return nothing;
+end
+
+function pour return nothing using(container cont, int Amount)
+begin
+	call digitalWrite(cont, HIGH);
+	call delay(Amount*1000);
+	call digitalWrite(cont, LOW);
+	return nothing;
+end
+
+function pourDrink return nothing using(int recipe[][2], int numberOfSteps, int drinksLeft)
+begin
+	int i;
+	from i <-- 0 to numberOfSteps - 1 step 1
+	begin
+		call LCDPrint("Pouring " + ContainerNames[recipe[i][0]], 0);
+		call LCDPrint("Phase "+string(i+1)+"/" + string(numberOfSteps), 1);
+		call pour(Containers[recipe[i][0]], recipe[i][1]);
+	end
+	
+	call LCDPrint("Drinks left:", 0);
+	call LCDPrint(string(drinksLeft),1);
+	call delay(2000);
+	call LCDPrint("Drink is served", 0);
+	call LCDPrint("    by SPLAD    ", 1);
+	return nothing;
 end
 
 function MakeCollins return nothing using(int drinksLeft)
@@ -105,70 +169,16 @@ begin
 	return nothing;
 end
 
-function pourDrink return nothing using(int recipe[][2], int numberOfSteps, int drinksLeft)
+function RFIDFound return nothing using(int DrinkID, int Amount)
 begin
-	int i;
-	from i <-- 0 to numberOfSteps - 1 step 1
+	if(IsStaffInput = true)
 	begin
-		call LCDPrint("Pouring " + ContainerNames[recipe[i][0]], 0);
-		call LCDPrint("Phase "+string(i+1)+"/" + string(numberOfSteps), 1);
-		call pour(Containers[recipe[i][0]], recipe[i][1]);
-	end
-	
-	call LCDPrint("Drinks left:", 0);
-	call LCDPrint(string(drinksLeft),1);
-	call delay(2000);
-	call LCDPrint("Drink is served", 0);
-	call LCDPrint("    by SPLAD    ", 1);
-	return nothing;
-end
-
-function pour return nothing using(container cont, int Amount)
-begin
-	call digitalWrite(cont, HIGH);
-	call delay(Amount*1000);
-	call digitalWrite(cont, LOW);
-	return nothing;
-end
-
-function StaffAction return nothing using()
-begin
-	call LCDPrint("Type ID of the", 0);
-	call LCDPrint("drink to buy", 1);
-	
-	/*Wait for user to press a button*/
-	call WaitOnInput();
-	call LCDClear();
-	call LCDPrint("Drink ID:", 0);
-	
-	int drinkID <-- call GetInputNumber();
-	call LCDPrint("Number of drinks", 0);
-	call LCDPrint("",1);
-	/*Wait for user to press a button*/
-	call WaitOnInput();
-	
-	int Amount <-- call GetInputNumber();
-	
-	if(call RFIDWrite(drinkID, Amount))
-	begin
-	call LCDPrint("", 1);
-	call LCDPrint("Amount: " + string(Amount), 1);
-	call LCDPrint("Drink ID: " + string(drinkID), 0);
+		call StaffAction();
 	end
 	else
 	begin
-		call LCDClear();
-		call LCDPrint("ERRROR", 0);
+		call CustomerAction(DrinkID, Amount);
 	end
-	call delay(2000);
-	call StartMsg();
-	return nothing;
-end
-
-function StartMsg return nothing using()
-begin
-	call LCDPrint("Welcome to", 0);
-	call LCDPrint("      SPLAD     ", 1);
 	return nothing;
 end
 
@@ -219,16 +229,6 @@ begin
 	else if(call digitalRead(ButtonTen) = HIGH)
 	begin
 		IsStaffInput <-- call ChangeMode(false);
-	end
-	return nothing;
-end
-
-function WaitOnInput return nothing using()
-begin
-	call delay(300);
-	while(call digitalRead(ButtonOne) = LOW AND call digitalRead(ButtonTen) =  LOW AND call digitalRead(ButtonConfirm) = LOW)
-	begin
-		call delay(50);
 	end
 	return nothing;
 end

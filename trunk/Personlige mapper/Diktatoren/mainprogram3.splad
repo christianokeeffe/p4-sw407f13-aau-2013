@@ -123,7 +123,7 @@ begin
 				begin
 					if(call RFIDWrite(DrinkID, Amount-1))
 					begin
-					call pourDrink(TomCollins);
+					call readyToPour(TomCollins, Amount-1);
 					end
 					else
 					begin

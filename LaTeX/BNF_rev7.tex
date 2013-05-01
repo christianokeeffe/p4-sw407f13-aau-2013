@@ -12,13 +12,21 @@
 
 <dcl> $\ra$ <type> <assign>
 
-<drinkdcl> $\ra$ drink <callid> is begin <drinkstmts> end
+<drinkdcl> $\ra$ drink <id> is begin <drinkstmts> end
+\alt drink <id> as <id> but begin <changedrinkstmt> end
 
 <drinkstmts> $\ra$ <drinkstmt> <drinkstmtsend>
 
-<drinkstmt> $\ra$ <numeric> of <callid>
+<drinkstmt> $\ra$ <numeric> of <id>
 
 <drinkstmtsend> $\ra$, <drinkstmts>
+
+<changedrinkstmts> $\ra$ <changedrinkstmt> <changedrinkstmtsend>
+
+<changedrinkstmt> $\ra$ add <numeric> of <id>
+\alt remove <id>
+
+<changedrinkstmtsend> $\ra$, <changedrinkstmts>
 \alt ;
 
 <type> $\ra$ <constant> <primitivetype>

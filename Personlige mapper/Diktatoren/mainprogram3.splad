@@ -159,6 +159,7 @@ begin
 			run <-- false;
 		end
 	end
+	return nothing;
 end
 
 function CustomerAction return nothing using(int DrinkID, int Amount)

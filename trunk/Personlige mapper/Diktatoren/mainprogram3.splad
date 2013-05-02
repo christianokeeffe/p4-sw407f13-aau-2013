@@ -169,19 +169,19 @@ begin
 	switch(DrinkID)
 	begin
 		case 1:
-			DrinkFound(DrinkID, Amount, TomCollins, "Tom Collins");
+			call DrinkFound(DrinkID, Amount, TomCollins, "Tom Collins");
 			break;
 		case 10:
-			DrinkFound(DrinkID, Amount, SweetTomCollins, "Tom Collins");
+			call DrinkFound(DrinkID, Amount, SweetTomCollins, "Tom Collins");
 			break;
 		case 23:
-			DrinkFound(DrinkID, Amount, SuperSweetTomCollins, "Tom Collins");
+			call DrinkFound(DrinkID, Amount, SuperSweetTomCollins, "Tom Collins");
 			break;
 		case 42:
-			DrinkFound(DrinkID, Amount, StrongTomCollins, "Tom Collins");
+			call DrinkFound(DrinkID, Amount, StrongTomCollins, "Tom Collins");
 			break;
 		case 101:
-			DrinkFound(DrinkID, Amount, SoftwareShot, "Tom Collins");
+			call DrinkFound(DrinkID, Amount, SoftwareShot, "Tom Collins");
 			break;
 		default:
 			call LCDPrint("Error with RFID data", 0);

@@ -12,13 +12,33 @@ drink TomCollins is
 begin
 	add 3 of Gin,
 	add 2 of Sugar,
-	add 1 of Lemon,
+	add 2 of Lemon,
 	add 5 of Soda;
 end
 
 drink SweetCollins as TomCollins but
 begin
-	remove Lemon
+	remove Lemon,
+	add 1 of Lemon,
+	add 1 of Sugar;
+end
+
+drink StrongCollins as TomCollins but
+begin
+	add 3 of Gin;
+end
+
+drink SuperSweetCollins as SweetCollins but
+begin
+	remove Lemon,
+	add 3 of Sugar;
+end
+
+drink SoftwareShot is
+begin
+	add 3 of Gin,
+	add 3 of Sugar,
+	add 3 of Lemon;
 end
 
 function StartMsg return nothing using()
@@ -111,39 +131,56 @@ begin
 	return nothing;
 end
 
+function DrinkFound return nothing using(int DrinkID, int Amount, drink DrinkToServe, string DrinkName)
+begin
+	call LCDPrint("Confirm to make:", 0);
+	call LCDPrint(DrinkName, 1);
+	call delay(1000);
+	bool run <-- true;
+	while(run = true)
+	begin
+		if(call digitalRead(ButtonConfirm) = HIGH)
+		begin
+			if(call RFIDWrite(DrinkID, Amount-1))
+			begin
+			call readyToPour(DrinkToServe, Amount-1);
+			end
+			else
+			begin
+				call LCDPrint("Error", 0);
+				call LCDPrint("writing to tag", 1);
+			end
+			run <-- false;
+		end
+		else if (call digitalRead(ButtonOne) = HIGH OR call digitalRead(ButtonTen) = HIGH)
+		begin
+			call LCDPrint("Drink making", 0);
+			call LCDPrint("cancelled",1);
+			run <-- false;
+		end
+	end
+end
+
 function CustomerAction return nothing using(int DrinkID, int Amount)
 begin
 	if(Amount > 0)
 	begin
 	switch(DrinkID)
 	begin
+		case 1:
+			DrinkFound(DrinkID, Amount, TomCollins, "Tom Collins");
+			break;
+		case 10:
+			DrinkFound(DrinkID, Amount, SweetTomCollins, "Tom Collins");
+			break;
 		case 23:
-			call LCDPrint("Confirm to make:", 0);
-			call LCDPrint("Tom Collins", 1);
-			call delay(2000);
-			bool run <-- true;
-			while(run = true)
-			begin
-				if(call digitalRead(ButtonConfirm) = HIGH)
-				begin
-					if(call RFIDWrite(DrinkID, Amount-1))
-					begin
-					call readyToPour(TomCollins, Amount-1);
-					end
-					else
-					begin
-						call LCDPrint("Error", 0);
-						call LCDPrint("writing to tag", 1);
-					end
-					run <-- false;
-				end
-				else if (call digitalRead(ButtonOne) = HIGH OR call digitalRead(ButtonTen) = HIGH)
-				begin
-					call LCDPrint("Drink making", 0);
-					call LCDPrint("cancelled",1);
-					run <-- false;
-				end
-			end
+			DrinkFound(DrinkID, Amount, SuperSweetTomCollins, "Tom Collins");
+			break;
+		case 42:
+			DrinkFound(DrinkID, Amount, StrongTomCollins, "Tom Collins");
+			break;
+		case 101:
+			DrinkFound(DrinkID, Amount, SoftwareShot, "Tom Collins");
 			break;
 		default:
 			call LCDPrint("Error with RFID data", 0);

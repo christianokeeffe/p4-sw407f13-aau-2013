@@ -172,13 +172,13 @@ begin
 			call DrinkFound(DrinkID, Amount, TomCollins, "Tom Collins");
 			break;
 		case 10:
-			call DrinkFound(DrinkID, Amount, SweetTomCollins, "Tom Collins");
+			call DrinkFound(DrinkID, Amount, SweetCollins, "Tom Collins");
 			break;
 		case 23:
-			call DrinkFound(DrinkID, Amount, SuperSweetTomCollins, "Tom Collins");
+			call DrinkFound(DrinkID, Amount, SuperSweetCollins, "Tom Collins");
 			break;
 		case 42:
-			call DrinkFound(DrinkID, Amount, StrongTomCollins, "Tom Collins");
+			call DrinkFound(DrinkID, Amount, StrongCollins, "Tom Collins");
 			break;
 		case 101:
 			call DrinkFound(DrinkID, Amount, SoftwareShot, "Tom Collins");

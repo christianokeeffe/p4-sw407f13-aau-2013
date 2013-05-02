@@ -181,7 +181,7 @@ begin
 			call DrinkFound(DrinkID, Amount, StrongCollins, "Strong Collins");
 			break;
 		case 101:
-			call DrinkFound(DrinkID, Amount, SoftwareShot, "Tom Collins");
+			call DrinkFound(DrinkID, Amount, SoftwareShot, "Software Shot");
 			break;
 		default:
 			call LCDPrint("Error with RFID data", 0);

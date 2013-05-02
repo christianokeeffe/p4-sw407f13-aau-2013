@@ -20,13 +20,14 @@
 <drinkstmt> $\ra$ add <numeric> of <id>
 
 <drinkstmtsend> $\ra$, <drinkstmts>
+\alt ;
 
 <changedrinkstmts> $\ra$ <changedrinkstmt> <changedrinkstmtsend>
 
-<changedrinkstmt> $\ra$ add <numeric> of <id>
+<changedrinkstmt> $\ra$ <drinkstmt>
 \alt remove <id>
 
-<changedrinkstmtsend> $\ra$, <changedrinkstmts>
+<changedrinkstmtsend> $\ra$; <changedrinkstmts>
 \alt ;
 
 <type> $\ra$ <constant> <primitivetype>

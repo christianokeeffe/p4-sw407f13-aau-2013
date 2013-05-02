@@ -121,7 +121,7 @@ end
 
 function readyToPour return nothing using(drink InputDrink, int drinksLeft)
 begin
-	call pourDrink(TomCollins);
+	call pourDrink(InputDrink);
 	
 	call LCDPrint("Drinks left:", 0);
 	call LCDPrint(string(drinksLeft),1);

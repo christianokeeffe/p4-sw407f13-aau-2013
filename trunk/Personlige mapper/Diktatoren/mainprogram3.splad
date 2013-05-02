@@ -10,10 +10,15 @@ container Lemon <-- A5;
 
 drink TomCollins is
 begin
-	3 of Gin,
-	2 of Sugar,
-	1 of Lemon,
-	5 of Soda;
+	add 3 of Gin,
+	add 2 of Sugar,
+	add 1 of Lemon,
+	add 5 of Soda;
+end
+
+drink SweetCollins as TomCollins but
+begin
+	remove Lemon
 end
 
 function StartMsg return nothing using()

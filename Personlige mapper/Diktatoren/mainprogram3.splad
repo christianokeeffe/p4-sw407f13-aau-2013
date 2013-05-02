@@ -10,16 +10,16 @@ container Lemon <-- A5;
 
 drink TomCollins is
 begin
-	add 3 of Gin,
-	add 2 of Sugar,
-	add 2 of Lemon,
+	add 3 of Gin;
+	add 2 of Sugar;
+	add 2 of Lemon;
 	add 5 of Soda;
 end
 
 drink SweetCollins as TomCollins but
 begin
-	remove Lemon,
-	add 1 of Lemon,
+	remove Lemon;
+	add 1 of Lemon;
 	add 1 of Sugar;
 end
 
@@ -30,14 +30,14 @@ end
 
 drink SuperSweetCollins as SweetCollins but
 begin
-	remove Lemon,
+	remove Lemon;
 	add 3 of Sugar;
 end
 
 drink SoftwareShot is
 begin
-	add 3 of Gin,
-	add 3 of Sugar,
+	add 3 of Gin;
+	add 3 of Sugar;
 	add 3 of Lemon;
 end
 

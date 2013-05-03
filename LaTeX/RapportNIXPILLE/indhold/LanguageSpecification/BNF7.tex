@@ -31,6 +31,7 @@
 \alt ;
 
 <type> $\ra$ <constant> <primitivetype>
+\alt <specialtype>
 
 <constant> $\ra$ const
 \alt $\eps$
@@ -39,10 +40,10 @@
 \alt double
 \alt int
 \alt char
-\alt container
 \alt string
-\alt button 
-\alt drink 
+
+<specialtype> $\ra$ drink 
+\alt container 
 
 <id> $\ra$ <LETTER>
 
@@ -73,7 +74,7 @@
 	\alt HIGH
 	\alt true
 	\alt false
-	\alt INPUT
+	\alt INPUT 
 	\alt OUTPUT 
 
 <callid> $\ra$ <id> <arrayidend>
@@ -212,7 +213,10 @@ begin
 <stmts>
 break;
 \alt$\eps$
-
+\end{grammar}
+\subsection{Lexicon}
+\input{indhold/LanguageSpecification/lexiconintro}
+\begin{grammar}
 <STRINGTOKEN> $\ra$ '' .*? '' 
 
 <LETTER> $\ra$ [a - zA - Z]$~^+$

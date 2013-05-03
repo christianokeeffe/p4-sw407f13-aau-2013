@@ -89,6 +89,15 @@
   timestamp = {2013.03.15}
 }
 
+@BOOK{HHTree,
+  title = {Transitions and Trees},
+  publisher = {Cambridge University Press},
+  year = {2010},
+  author = {Hans Hüttel},
+  owner = {Christian},
+  timestamp = {2013.05.03}
+}
+
 @MISC{Jflex,
   author = {Jflex},
   title = {Theory behind Jflex},

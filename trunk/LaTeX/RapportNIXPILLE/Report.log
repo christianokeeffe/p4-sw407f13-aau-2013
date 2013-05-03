@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.10.22)  3 MAY 2013 14:48
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.10.22)  3 MAY 2013 16:05
 entering extended mode
 **C:/Users/Christian/Documents/Arbejde/UNI/P4/svn/LaTeX/RapportNIXPILLE/Report.
 tex
@@ -2286,7 +2286,7 @@ LaTeX Font Info:    Try loading font information for U+stmry on input line 3.
 ]
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\formalia
 /FormaliaTitelblad.tex
-<billeder/AAUUKSTUDENTREPORTbluergb.png, id=338, 434.46315pt x 284.5029pt>
+<billeder/AAUUKSTUDENTREPORTbluergb.png, id=334, 434.46315pt x 284.5029pt>
 File: billeder/AAUUKSTUDENTREPORTbluergb.png Graphic file (type png)
 
 <use billeder/AAUUKSTUDENTREPORTbluergb.png>
@@ -2612,25 +2612,23 @@ See the caption package documentation for explanation.
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
 LanguageSpecification/bnfintro.tex)
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
-LanguageSpecification/BNF6.tex [11] [12] [13])
-
-LaTeX Warning: Marginpar on page 14 moved by 0.67662pt.
-
-
+LanguageSpecification/BNF7.tex [11] [12] [13]
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
-LanguageSpecification/Semantics.tex [14])
+LanguageSpecification/lexiconintro.tex) [14])
+(C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
+LanguageSpecification/Semantics.tex) [15]
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
 LanguageSpecification/TheoryTransitionRules.tex
 
-LaTeX Warning: Reference `app:TransitionRules' on page 15 undefined on input li
+LaTeX Warning: Reference `app:TransitionRules' on page 16 undefined on input li
 ne 1.
 
-[15]
+
 Overfull \hbox (55.16943pt too wide) in paragraph at lines 35--41
 [][] 
  []
 
-
+[16]
 Overfull \hbox (84.81839pt too wide) in alignment at lines 48--49
  [] [] 
  []
@@ -2650,7 +2648,7 @@ Overfull \hbox (84.81839pt too wide) in alignment at lines 49--57
  [] [] 
  []
 
-[16]
+
 Overfull \hbox (77.36812pt too wide) in alignment at lines 65--66
  [] [] 
  []
@@ -2690,9 +2688,9 @@ Overfull \hbox (94.54933pt too wide) in alignment at lines 80--92
  [] [] 
  []
 
-)
+[17])
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
-LanguageSpecification/TypeRules.tex [17]) [18]
+LanguageSpecification/TypeRules.tex) [18]
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
 Implementation/Architecture.tex
 
@@ -2710,14 +2708,14 @@ Implementation/OverviewCompiler.tex
 LaTeX Warning: Reference `fig:CraftingACompiler2' on page 21 undefined on input
  line 3.
 
-<billeder/OverviewCompiler.PNG, id=701, 420.3705pt x 295.1025pt>
+<billeder/OverviewCompiler.PNG, id=696, 420.3705pt x 295.1025pt>
 File: billeder/OverviewCompiler.PNG Graphic file (type png)
 
 <use billeder/OverviewCompiler.PNG>
 Package pdftex.def Info: billeder/OverviewCompiler.PNG used on input line 4.
 (pdftex.def)             Requested size: 340.8013pt x 239.25684pt.
  [21]
-<billeder/OverviewCompiler2.PNG, id=716, 477.58424pt x 255.354pt>
+<billeder/OverviewCompiler2.PNG, id=711, 477.58424pt x 255.354pt>
 File: billeder/OverviewCompiler2.PNG Graphic file (type png)
 
 <use billeder/OverviewCompiler2.PNG>
@@ -2748,7 +2746,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 10.
 See the caption package documentation for explanation.
 
-<billeder/parsetree.png, id=737, 307.90031pt x 473.51906pt>
+<billeder/parsetree.png, id=732, 307.90031pt x 473.51906pt>
 File: billeder/parsetree.png Graphic file (type png)
 
 <use billeder/parsetree.png>
@@ -2785,7 +2783,7 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `lst:HeeloWoorld' on page 27 undefined on input line 3
 1.
 
-<billeder/ParsedCode.png, id=795, 697.10437pt x 461.47406pt>
+<billeder/ParsedCode.png, id=790, 697.10437pt x 461.47406pt>
 File: billeder/ParsedCode.png Graphic file (type png)
 
 <use billeder/ParsedCode.png>
@@ -2899,25 +2897,25 @@ Overfull \hbox (56.53784pt too wide) in paragraph at lines 148--192
 AED: lastpage setting LastPage
 \tf@toc=\write7
 \tf@lox=\write8
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 129.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 129.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 127.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 127.
 
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\Report.a
 ux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 129.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 129.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 127.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 127.
 Package rerunfilecheck Info: File `Report.out' has not changed.
-(rerunfilecheck)             Checksum: AFA73A7BE1E3ACD32425F02FBA8CE07A;6077.
+(rerunfilecheck)             Checksum: 26F1E24135CED3C385458EC5A14F9388;6000.
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 36265 strings out of 493921
- 661370 string characters out of 3147269
- 787247 words of memory out of 3000000
- 38550 multiletter control sequences out of 15000+200000
+ 36268 strings out of 493921
+ 661676 string characters out of 3147269
+ 788247 words of memory out of 3000000
+ 38551 multiletter control sequences out of 15000+200000
  30713 words of font info for 73 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
  63i,20n,84p,1177b,1714s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2944,9 +2942,9 @@ nts/type1/public/cm-super/sfti1000.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /public/cm-super/sftt0900.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/c
 m-super/sftt1000.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/bookman/ubkd8
 a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/bookman/ubkl8a.pfb>
-Output written on Report.pdf (50 pages, 868724 bytes).
+Output written on Report.pdf (50 pages, 869130 bytes).
 PDF statistics:
- 1109 PDF objects out of 1200 (max. 8388607)
- 239 named destinations out of 1000 (max. 500000)
- 678 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1104 PDF objects out of 1200 (max. 8388607)
+ 238 named destinations out of 1000 (max. 500000)
+ 670 words of extra memory for PDF output out of 10000 (max. 10000000)
 

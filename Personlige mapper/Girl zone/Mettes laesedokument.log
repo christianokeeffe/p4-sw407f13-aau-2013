@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.3.15)  6 MAY 2013 11:45
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.3.15)  6 MAY 2013 11:47
 entering extended mode
 **Mettes*laesedokument.tex
 
@@ -2334,6 +2334,13 @@ LaTeX Warning: Command \textbullet invalid in math mode on input line 82.
 
 Missing character: There is no ˆ in font cmr10!
 
+LaTeX Warning: Command \textbullet invalid in math mode on input line 85.
+
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 85.
+
+Missing character: There is no ˆ in font cmr10!
+
 Overfull \hbox (110.81824pt too wide) in alignment at lines 76--101
  [] [] 
  []
@@ -2341,59 +2348,59 @@ Overfull \hbox (110.81824pt too wide) in alignment at lines 76--101
 [1{C:/Users/Mette/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ]
-Overfull \hbox (110.81824pt too wide) in alignment at lines 101--104
+Overfull \hbox (110.81824pt too wide) in alignment at lines 101--103
  [] [] 
  []
 
 
-Overfull \hbox (93.02887pt too wide) in alignment at lines 106--107
+Overfull \hbox (93.02887pt too wide) in alignment at lines 105--106
  [] [] 
  []
 
 
-Overfull \hbox (93.02887pt too wide) in alignment at lines 107--107
+Overfull \hbox (93.02887pt too wide) in alignment at lines 106--106
  [] [] 
  []
 
 
-Overfull \hbox (93.02887pt too wide) in alignment at lines 107--107
+Overfull \hbox (93.02887pt too wide) in alignment at lines 106--106
  [] [] 
  []
 
 
-Overfull \hbox (93.02887pt too wide) in alignment at lines 107--134
+Overfull \hbox (93.02887pt too wide) in alignment at lines 106--133
  [] [] 
  []
 
 
-Overfull \hbox (93.02887pt too wide) in alignment at lines 134--159
+Overfull \hbox (93.02887pt too wide) in alignment at lines 133--158
  [] [] 
  []
 
 [2]
-Overfull \hbox (93.02887pt too wide) in alignment at lines 159--187
+Overfull \hbox (93.02887pt too wide) in alignment at lines 158--186
  [] [] 
  []
 
 
-Overfull \hbox (93.02887pt too wide) in alignment at lines 187--194
+Overfull \hbox (93.02887pt too wide) in alignment at lines 186--193
  [] [] 
  []
 
 [3]
-Overfull \hbox (56.53784pt too wide) in paragraph at lines 199--242
+Overfull \hbox (56.53784pt too wide) in paragraph at lines 198--241
 [][] 
  []
 
 [4] [5] 
 AED: lastpage setting LastPage
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 245.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 245.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 244.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 244.
 
 ("C:\Users\Mette\Documents\Universitetet\Alt om P4\P4\Personlige mapper\Girl zo
 ne\Mettes laesedokument.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 245.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 245.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 244.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 244.
 Package rerunfilecheck Info: File `Mettes*laesedokument.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
  ) 
@@ -2417,7 +2424,7 @@ ts/cm/cmr10.pfb><C:/Program Files/MiKTex 2.9/fonts/type1/public/amsfonts/cm/cmr
 Program Files/MiKTex 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program 
 Files/MiKTex 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiK
 Tex 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Mettes laesedokument.pdf" (5 pages, 119381 bytes).
+Output written on "Mettes laesedokument.pdf" (5 pages, 119463 bytes).
 PDF statistics:
  197 PDF objects out of 1000 (max. 8388607)
  12 named destinations out of 1000 (max. 500000)

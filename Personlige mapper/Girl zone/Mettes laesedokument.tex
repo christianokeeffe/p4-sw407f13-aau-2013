@@ -82,8 +82,7 @@
 [FROM-TRUE] & \[\frac{•}{env_V, env_P \vdash \langle \textbf{from } x <-- n_1 \textbf{ to } n_2 \textbf{ step } n_3 \textbf{ begin } C \textbf{ end}, sto\rangle} \rightarrow sto'\] \\
 ~ & ~ \\
 
-[FROM-FALSE] & ~ \\
-~ & ~ \\
+[FROM-FALSE] & \[\frac{•}{env_V, env_P \vdash \langle \textbf{from } x <-- n_1 \textbf{ to } n_2 \textbf{ step } n_3 \textbf{ begin } C \textbf{ end}, sto\rangle} \rightarrow sto'\] \\
 ~ & ~ \\
 
 [CALL-BY-VAL] & \[\frac{env_V'[x \mapsto l][\text{next} \mapsto \text{new } l, env_P' \vdash \langle S, sto[l \mapsto v] \rangle \rightarrow sto'}{env_V, env_P \vdash \langle \textbf{call } p(a), sto \rangle \rightarrow sto'}\] \\

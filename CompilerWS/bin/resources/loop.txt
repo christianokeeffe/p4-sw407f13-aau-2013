@@ -1,0 +1,15 @@
+seek();
+delay(50);
+parse();
+delay(50);
+set_flag();
+delay(50);
+if (flag == 1) {
+  String resultstring = RFIDRead();
+  int resultlength = resultstring.length() + 1;
+  char temparray[resultlength];
+  resultstring.toCharArray(temparray,resultlength);
+  String id = String(temparray[0]) + String(temparray[1]) + String(temparray[2]) + String(temparray[3]);
+  String count = String(temparray[5]) + String(temparray[6]) + String(temparray[7]) + String(temparray[8]);
+  RFIDFound(id.toInt(), count.toInt());
+}

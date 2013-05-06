@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.10.22)  3 MAY 2013 16:05
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.10.22)  6 MAY 2013 11:46
 entering extended mode
 **C:/Users/Christian/Documents/Arbejde/UNI/P4/svn/LaTeX/RapportNIXPILLE/Report.
 tex
@@ -2365,7 +2365,7 @@ leder/AAUUKSTUDENTREPORTbluergb.png>] [4
 
 ]
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\formalia
-/FormaliaProlog.tex)
+/FormaliaProlog.tex ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1pbk.fd"))
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\formalia
 /FormaliaUnderskriftsside.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 6--16
@@ -2377,9 +2377,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--16
 
  []
 
-[5] [6
+[5
 
-] ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1pbk.fd")
+] [6
+
+]
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\Report.t
 oc [7]) [8]
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
@@ -2708,14 +2710,14 @@ Implementation/OverviewCompiler.tex
 LaTeX Warning: Reference `fig:CraftingACompiler2' on page 21 undefined on input
  line 3.
 
-<billeder/OverviewCompiler.PNG, id=696, 420.3705pt x 295.1025pt>
+<billeder/OverviewCompiler.PNG, id=700, 420.3705pt x 295.1025pt>
 File: billeder/OverviewCompiler.PNG Graphic file (type png)
 
 <use billeder/OverviewCompiler.PNG>
 Package pdftex.def Info: billeder/OverviewCompiler.PNG used on input line 4.
 (pdftex.def)             Requested size: 340.8013pt x 239.25684pt.
  [21]
-<billeder/OverviewCompiler2.PNG, id=711, 477.58424pt x 255.354pt>
+<billeder/OverviewCompiler2.PNG, id=715, 477.58424pt x 255.354pt>
 File: billeder/OverviewCompiler2.PNG Graphic file (type png)
 
 <use billeder/OverviewCompiler2.PNG>
@@ -2746,7 +2748,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 10.
 See the caption package documentation for explanation.
 
-<billeder/parsetree.png, id=732, 307.90031pt x 473.51906pt>
+<billeder/parsetree.png, id=736, 307.90031pt x 473.51906pt>
 File: billeder/parsetree.png Graphic file (type png)
 
 <use billeder/parsetree.png>
@@ -2783,7 +2785,7 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `lst:HeeloWoorld' on page 27 undefined on input line 3
 1.
 
-<billeder/ParsedCode.png, id=790, 697.10437pt x 461.47406pt>
+<billeder/ParsedCode.png, id=794, 697.10437pt x 461.47406pt>
 File: billeder/ParsedCode.png Graphic file (type png)
 
 <use billeder/ParsedCode.png>
@@ -2905,18 +2907,18 @@ ux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 127.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 127.
 Package rerunfilecheck Info: File `Report.out' has not changed.
-(rerunfilecheck)             Checksum: 26F1E24135CED3C385458EC5A14F9388;6000.
+(rerunfilecheck)             Checksum: 34F9C8B17D29E3260E135D564E4F8B6E;6000.
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 36268 strings out of 493921
- 661676 string characters out of 3147269
- 788247 words of memory out of 3000000
- 38551 multiletter control sequences out of 15000+200000
- 30713 words of font info for 73 fonts, out of 3000000 for 9000
+ 36296 strings out of 493921
+ 661952 string characters out of 3147269
+ 787247 words of memory out of 3000000
+ 38567 multiletter control sequences out of 15000+200000
+ 34165 words of font info for 89 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
  63i,20n,84p,1177b,1714s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.enc}{C:/Pro
@@ -2932,19 +2934,20 @@ ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files
 KTeX 2.9/fonts/type1/public/cm-super/sfbx1000.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/cm-super/sfbx1200.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
 e1/public/cm-super/sfcc1200.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
-/cm-super/sfrm0800.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super
-/sfrm0900.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1000
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfsl1000.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfss0900.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/cm-super/sfsx1000.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/cm-super/sfti0900.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/cm-super/sfti1000.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/cm-super/sftt0900.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/c
-m-super/sftt1000.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/bookman/ubkd8
-a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/bookman/ubkl8a.pfb>
-Output written on Report.pdf (50 pages, 869130 bytes).
+/cm-super/sfrm0600.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super
+/sfrm0800.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm0900
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1000.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfsl1000.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/cm-super/sfss0900.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/cm-super/sfsx1000.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/cm-super/sfti0900.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/cm-super/sfti1000.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/c
+m-super/sftt0900.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/s
+ftt1000.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/bookman/ubkd8a.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/urw/bookman/ubkl8a.pfb>
+Output written on Report.pdf (50 pages, 886768 bytes).
 PDF statistics:
- 1104 PDF objects out of 1200 (max. 8388607)
- 238 named destinations out of 1000 (max. 500000)
+ 1111 PDF objects out of 1200 (max. 8388607)
+ 239 named destinations out of 1000 (max. 500000)
  670 words of extra memory for PDF output out of 10000 (max. 10000000)
 

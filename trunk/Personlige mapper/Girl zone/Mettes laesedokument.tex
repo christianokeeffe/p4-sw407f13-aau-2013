@@ -2,13 +2,14 @@
 \begin{document}
 \section{Transition Rules}
 \label{app:TransitionRules}
-\fxfatal{Mangler: form (for) loop, call function, måske mere}
+%\fxfatal{Mangler: form (for) loop, call function, måske mere}
 
 \begin{longtable}{l l}
 \longtablesetting{2}
-[VAR-DECL] & \[\frac{\langle D_V, env_V[x \mapsto l][\text{next} \mapsto \text{new } l], sto[l \mapsto v] \rangle \rightarrow_{DV} (env_V', sto')}{\langle \textbf{var } x <-- a; D_V, env_V, sto \rangle \rightarrow_{DV} (env_v', sto')} \] \\
+[VAR-DECL] & \[\frac{\langle D_V, env_V[x \mapsto l][\text{next} \mapsto \text{new } l], sto[l \mapsto v] \rangle \rightarrow_{DV} (env_V', sto')}{\langle \textbf{var } x <-- a; D_V, env_V, sto \rangle \rightarrow_{DV} (env_V', sto')} \] \\
 ~ & ~ \\
-~ & \indent\indent where $env_V, sto \vdash a \rightarrow_a v \text{ og } l = env_V \text{ next}$ \\
+~ & \indent\indent where $env_V, sto \vdash a \rightarrow_a v$ \\
+~ & \indent\indent and $l = env_V \text{ next}$\\
 ~ & ~ \\
 
 [EMPTY-VAR-DECL] & \[\langle \varepsilon, env_V, sto \rangle \rightarrow_{DV} (env_V, sto) \] \\
@@ -25,7 +26,7 @@
 \caption{Declarations}
 \end{longtable}
 
-\fxfatal{Spørg Hans om håndtering af flere variabler i funktions deklaration.}
+%\fxfatal{Spørg Hans om håndtering af flere variabler i funktions deklaration.}
 
 \begin{longtable}{l l}
 \longtablesetting{2}
@@ -105,28 +106,28 @@
 \begin{longtable}{l l}
 \longtablesetting{2}
 
-[EQL-TRUE] & \[\frac{env_E, \: sto \vdash e_1 \rightarrow_e v_1 \;\; env_E, \: sto \vdash e_2 \rightarrow_e v_2}{env_E, \: sto \vdash e_1 = e_2  \rightarrow_b \text{true}}\] \\
+[EQL-TRUE] & \[\frac{env_V, \: sto \vdash a_1 \rightarrow_a v_1 \;\; env_V, \: sto \vdash a_2 \rightarrow_e v_2}{env_V, \: sto \vdash a_1 = a_2  \rightarrow_b \text{true}}\] \\
 ~ & ~ \\
 ~ & \indent\indent if $v_1=v_2$ \\
 ~ & ~ \\
 
 
-[EQL-FALSE] & \[\frac{env_E, \: sto \vdash e_1 \rightarrow_e v_1 \;\; env_E, \: sto \vdash e_2 \rightarrow_e v_2}{env_E, \: sto \vdash e_1 = e_2  \rightarrow_b \text{false}}\] \\
+[EQL-FALSE] & \[\frac{env_V, \: sto \vdash a_1 \rightarrow_a v_1 \;\; env_V, \: sto \vdash a_2 \rightarrow_a v_2}{env_V, \: sto \vdash a_1 = a_2  \rightarrow_b \text{false}}\] \\
 ~ & ~ \\
 ~ & \indent\indent if $v_1 \neq v_2$ \\
 ~ & ~ \\
 
-[NEQ-TRUE] & \[\frac{env_E, \: sto \vdash e_1 \rightarrow_e v_1 \;\; env_E, \: sto \vdash e_2 \rightarrow_e v_2}{env_E, \: sto \vdash e_1 != e_2  \rightarrow_b \text{true}}\] \\
+[NEQ-TRUE] & \[\frac{env_V, \: sto \vdash a_1 \rightarrow_a v_1 \;\; env_V, \: sto \vdash a_2 \rightarrow_a v_2}{env_V, \: sto \vdash a_1 != a_2  \rightarrow_b \text{true}}\] \\
 ~ & ~ \\
 ~ & \indent\indent if $v_1 \neq v_2$ \\
 ~ & ~ \\
 
-[NEQ-FALSE] & \[\frac{env_E, \: sto \vdash e_1 \rightarrow_e v_1 \;\; env_E, \: sto \vdash e_2 \rightarrow_e v_2}{env_E, \: sto \vdash e_1 != e_2  \rightarrow_b \text{false}}\] \\
+[NEQ-FALSE] & \[\frac{env_V, \: sto \vdash a_1 \rightarrow_a v_1 \;\; env_V, \: sto \vdash a_2 \rightarrow_a v_2}{env_V, \: sto \vdash a_1 != a_2  \rightarrow_b \text{false}}\] \\
 ~ & ~ \\
 ~ & \indent\indent if $v_1 = v_2$ \\
 ~ & ~ \\
 
-[GRT-TRUE] & \[\frac{env_E, \: sto \vdash e_1 \rightarrow_e v_1 \;\; env_E, \: sto \vdash e_2 \rightarrow_e v_2}{env_E, \: sto \vdash e_1 > e_2  \rightarrow_b \text{true}}\] \\
+[GRT-TRUE] & \[\frac{env_V, \: sto \vdash a_1 \rightarrow_a v_1 \;\; env_V, \: sto \vdash a_2 \rightarrow_a v_2}{env_V, \: sto \vdash a_1 > a_2  \rightarrow_b \text{true}}\] \\
 ~ & ~ \\
 ~ & \indent\indent if $v_1 > v_2$ \\
 ~ & ~ \\
@@ -136,46 +137,47 @@
 ~ & \indent\indent if $v_1 \leq v_2$ \\
 ~ & ~ \\
 
-[GEQ-TRUE] & \[\frac{env_E, \: sto \vdash e_1 \rightarrow_e v_1 \;\; env_E, \: sto \vdash e_2 \rightarrow_e v_2}{env_E, \: sto \vdash e_1 >= e_2  \rightarrow_b \text{true}}\] \\
+[GEQ-TRUE] & \[\frac{env_V, \: sto \vdash a_1 \rightarrow_a v_1 \;\; env_V, \: sto \vdash a_2 \rightarrow_a v_2}{env_V, \: sto \vdash a_1 >= a_2  \rightarrow_b \text{true}}\] \\
 ~ & ~ \\
 ~ & \indent\indent if $v_1 \geq v_2$ \\
 ~ & ~ \\
 
-[GEQ-FALSE] & \[\frac{env_E, \: sto \vdash e_1 \rightarrow_e v_1 \;\; env_E, \: sto \vdash e_2 \rightarrow_e v_2}{env_E, \: sto \vdash e_1 >= e_2  \rightarrow_b \text{false}}\] \\
+[GEQ-FALSE] & \[\frac{env_V, \: sto \vdash a_1 \rightarrow_a v_1 \;\; env_V, \: sto \vdash a_2 \rightarrow_a v_2}{env_V, \: sto \vdash a_1 >= a_2  \rightarrow_b \text{false}}\] \\
 ~ & ~ \\
 ~ & \indent\indent if $v_1 < v_2$ \\
 ~ & ~ \\
 
-[LES-TRUE] & \[\frac{env_E, \: sto \vdash e_1 \rightarrow_e v_1 \;\; env_E, \: sto \vdash e_2 \rightarrow_e v_2}{env_E, \: sto \vdash e_1 < e_2  \rightarrow_b \text{true}}\] \\
+[LES-TRUE] & \[\frac{env_V, \: sto \vdash a_1 \rightarrow_a v_1 \;\; env_V, \: sto \vdash a_2 \rightarrow_a v_2}{env_V, \: sto \vdash a_1 < a_2  \rightarrow_b \text{true}}\] \\
 ~ & ~ \\
 ~ & \indent\indent if $v_1 < v_2$ \\
 ~ & ~ \\
 
-[LES-FALSE] & \[\frac{env_E, \: sto \vdash e_1 \rightarrow_e v_1 \;\; env_E, \: sto \vdash e_2 \rightarrow_e v_2}{env_E, \: sto \vdash e_1 < e_2  \rightarrow_b \text{false}}\] \\
+[LES-FALSE] & \[\frac{env_V, \: sto \vdash a_1 \rightarrow_a v_1 \;\; env_V, \: sto \vdash a_2 \rightarrow_a v_2}{env_V, \: sto \vdash a_1 < a_2  \rightarrow_b \text{false}}\] \\
 ~ & ~ \\
 ~ & \indent\indent if $v_1 \geq v_2$ \\
 ~ & ~ \\
 
-[LEQ-TRUE] & \[\frac{env_E, \: sto \vdash e_1 \rightarrow_e v_1 \;\; env_E, \: sto \vdash e_2 \rightarrow_e v_2}{env_E, \: sto \vdash e_1 <= e_2  \rightarrow_b \text{true}}\] \\
+[LEQ-TRUE] & \[\frac{env_V, \: sto \vdash a_1 \rightarrow_a v_1 \;\; env_V, \: sto \vdash a_2 \rightarrow_a v_2}{env_V, \: sto \vdash a_1 <= a_2  \rightarrow_b \text{true}}\] \\
 ~ & ~ \\
 ~ & \indent\indent if $v_1 \leq v_2$ \\
 ~ & ~ \\
 
-[GEQ-FALSE] & \[\frac{env_E, \: sto \vdash e_1 \rightarrow_e v_1 \;\; env_E, \: sto \vdash e_2 \rightarrow_e v_2}{env_E, \: sto \vdash e_1 <= e_2  \rightarrow_b \text{false}}\] \\
+[GEQ-FALSE] & \[\frac{env_V, \: sto \vdash a_1 \rightarrow_a v_1 \;\; env_V, \: sto \vdash a_2 \rightarrow_a v_2}{env_V, \: sto \vdash a_1 <= a_2  \rightarrow_b \text{false}}\] \\
 ~ & ~ \\
 ~ & \indent\indent if $v_1 > v_2$ \\
 ~ & ~ \\
 
-[NOT-TRUE] & \[\frac{env_E, \: sto \vdash b \rightarrow_b \text{true}}{env_E, \: sto \vdash !(b)  \rightarrow_b \text{false}}\] \\
+[NOT-TRUE] & \[\frac{env_V, \: sto \vdash b \rightarrow_b \text{true}}{env_V, \: sto \vdash !(b)  \rightarrow_b \text{false}}\] \\
 ~ & ~ \\
 
-[NOT-FALSE] & \[\frac{env_E, \: sto \vdash b \rightarrow_b \text{false}}{env_E, \: sto \vdash !(b)  \rightarrow_b \text{true}}\] \\
+[NOT-FALSE] & \[\frac{env_V, \: sto \vdash b \rightarrow_b \text{false}}{env_V, \: sto \vdash !(b)  \rightarrow_b \text{true}}\] \\
 ~ & ~ \\
 
-[AND-TRUE] & \[\frac{env_E, \: sto \vdash b_1 \wedge b_2 \rightarrow_b \text{true}}{env_E, \: sto \vdash b_1  \; \text{AND} \; b_2 \rightarrow_b \text{true}}\] \\
+[AND-TRUE] & \[\frac{env_V, \: sto \vdash b_1 \rightarrow_b \text{true} \: env_V, sto \vdash b_2 \rightarrow_b \text{true}}{env_V, \: sto \vdash b_1  \; \text{AND} \; b_2 \rightarrow_b \text{true}}\] \\
 ~ & ~ \\
 
-[AND-FALSE] & \[\frac{env_E, \: sto \vdash b_1 \vee b_2 \rightarrow_b \text{false}}{env_E, \: sto \vdash b_1  \; \text{AND} \; b_2 \rightarrow_b \text{false}}\] \\
+[AND-FALSE] & \[\frac{env_V, \: sto \vdash b_i \rightarrow_b \text{false}}{env_V, \: sto \vdash b_1  \; \text{AND} \; b_2 \rightarrow_b \text{false}}\] \\
+~ & \indent\indent $(i \in \{1,2 \})$ \\
 ~ & ~ \\
 
 [OR-TRUE] & \[\frac{env_E, \: sto \vdash b_1 \vee b_2 \rightarrow_b \text{true}}{env_E, \: sto \vdash b_1  \; \text{OR} \; b_2 \rightarrow_b \text{true}}\] \\
@@ -195,32 +197,30 @@
 
 \begin{table}
 \begin{tabular}{l l}
-[ADD] & \[\frac{env_E, \: sto \vdash a_1 \rightarrow_a v_1 \;\; env_E, \: sto \vdash a_2 \rightarrow_a v_2}{env_E, \: sto \vdash a_1 + a_2 \rightarrow_a v}\] \\
+[ADD] & \[\frac{env_V, \: sto \vdash a_1 \rightarrow_a v_1 \;\; env_V, \: sto \vdash a_2 \rightarrow_a v_2}{env_V, \: sto \vdash a_1 + a_2 \rightarrow_a v}\] \\
 ~ & ~ \\
 ~ & \indent\indent where $v=v_1+v_2$ \\
 ~ & ~ \\
 
-[SUB] & \[\frac{env_E, \: sto \vdash a_1 \rightarrow_a v_1 \;\; env_E, \: sto \vdash a_2 \rightarrow_a v_2}{env_E, \: sto \vdash a_1 - a_2 \rightarrow_a v}\] \\
+[SUB] & \[\frac{env_V, \: sto \vdash a_1 \rightarrow_a v_1 \;\; env_V, \: sto \vdash a_2 \rightarrow_a v_2}{env_V, \: sto \vdash a_1 - a_2 \rightarrow_a v}\] \\
 ~ & ~ \\
 ~ & \indent\indent where $v=v_1-v_2$ \\ 
 ~ & ~ \\
 
-[MUL] & \[\frac{env_E, \: sto \vdash a_1 \rightarrow_a v_1 \;\; env_E, \: sto \vdash a_2 \rightarrow_a v_2}{env_E, \: sto \vdash a_1 * a_2 \rightarrow_a v}\] \\
+[MUL] & \[\frac{env_V, \: sto \vdash a_1 \rightarrow_a v_1 \;\; env_V, \: sto \vdash a_2 \rightarrow_a v_2}{env_V, \: sto \vdash a_1 * a_2 \rightarrow_a v}\] \\
 ~ & ~ \\
 ~ & \indent\indent where $v=v_1 * v_2$ \\ 
 ~ & ~ \\
 
-[DIV] & \[\frac{env_E,\: sto \vdash a_1 \rightarrow_a v_1 \;\; env_E,\: sto \vdash a_2 \rightarrow_a v_2}{env_E, \: sto \vdash \frac{a_1}{a_2} \rightarrow_a v}\] \\
+[DIV] & \[\frac{env_V,\: sto \vdash a_1 \rightarrow_a v_1 \;\; env_V,\: sto \vdash a_2 \rightarrow_a v_2}{env_V, \: sto \vdash \frac{a_1}{a_2} \rightarrow_a v}\] \\
 ~ & ~ \\
 ~ & \indent\indent where $v=\frac{v_1}{v_2}$ \\ 
 ~ & ~ \\
 
-[PAR] & \[\frac{env_E, \: sto \vdash a_1 \rightarrow_a v_1}{env_E, \: sto \vdash (a_1) \rightarrow_a v_1}\] \\
-~ & ~ \\
-~ & \indent\indent where $v=\frac{v_1}{v_2}$ \\ 
+[PAR] & \[\frac{env_V, \: sto \vdash a_1 \rightarrow_a v_1}{env_V, \: sto \vdash (a_1) \rightarrow_a v_1}\] \\
 ~ & ~ \\
 
-[NUM] & \[env_E, \: sto \vdash n \rightarrow_a v\] \\
+[NUM] & \[env_V, \: sto \vdash n \rightarrow_a v\] \\
 ~ & ~ \\
 ~ & \indent\indent if $\mathcal{N} [n]=v$ \\
 ~ & \indent\indent where $\mathcal{N}$ \textbf{: Num} $\ra \mathbb{R}$ \\
@@ -228,7 +228,8 @@
 
 [VAR] & \[env_V, \: sto \vdash x \rightarrow_a v\] \\
 ~ & ~ \\
-~ & \indent\indent if $env_V \: x=l \: and \: sto \: l = v$ \\ 
+~ & \indent\indent if $env_V \: x=l$\\
+~ & \indent\indent $and \: sto \: l = v$ \\
 ~ & ~ \\
 
 [ARR] & \[env_A, \: sto \vdash r[a_{1}] \rightarrow_a v_2\] \\

@@ -533,16 +533,16 @@ public class CodeGenrator extends SPLADBaseVisitor<String>{
 	@Override
 	public String visitProgram(SPLADParser.ProgramContext ctx) {
 		//Add the predefined functions to the string and loopbuffer
-		setupbuffer.append(PrintContentofFile("C:\\test\\setup.txt"));
-		loopbuffer.append(PrintContentofFile("C:\\test\\loop.txt"));
+		setupbuffer.append(PrintContentofFile("src/resources/setup.txt"));
+		loopbuffer.append(PrintContentofFile("src/resources/loop.txt"));
 		
 		//String buffer for the whole content to return.
 		StringBuffer ContentBuffer = new StringBuffer();
-		StringBuffer ContentString = new StringBuffer();
+		StringBuffer HeaderBuffer = new StringBuffer();
 		
 		//Add the predefined content and visit roots.
-		ContentString.append(PrintContentofFile("C:\\test\\header.txt"));
-		ContentString.append(visit(ctx.roots()));
+		HeaderBuffer.append(PrintContentofFile("src/resources/header.txt"));
+		HeaderBuffer.append(visit(ctx.roots()));
 		
 		//Add the arrays containing the names and pins of the containers.
 		if(ListOfContainers.size() != 0)
@@ -558,7 +558,7 @@ public class CodeGenrator extends SPLADBaseVisitor<String>{
 		}
 		
 		//Add the content of the program to the ContentBuffer
-		ContentBuffer.append(ContentString);
+		ContentBuffer.append(HeaderBuffer);
 		
 		//Add the setup and loop function
 		ContentBuffer.append("void setup() {\n" + setupfirstbuffer.toString() + "\n" +

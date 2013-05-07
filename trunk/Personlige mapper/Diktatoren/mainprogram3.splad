@@ -6,20 +6,55 @@ bool IsStaffInput <-- false;
 container Gin <-- A0;
 container Sugar <-- A2;
 container Soda <-- A1;
-container Lemon <-- A5;
+container Lime <-- A5;
+container Rum <-- 6;
+container Ice <-- 0;
+container Cream <-- A4;
+container Mintleaves <-- 1; /*Green*/
+container Banana <-- A3; /*Yellow*/
 
 drink TomCollins is
 begin
 	add 3 of Gin;
 	add 2 of Sugar;
-	add 2 of Lemon;
+	add 2 of Lime;
 	add 5 of Soda;
+end
+
+drink BananaShake is 
+begin
+	add 5 of Banana;
+	add 5 of Cream;
+	add 2 of Ice;
+end
+
+drink Mojito is
+begin
+	add 2 of Soda;
+	add 2 of Rum;
+	add 2 of Lime;
+	add 2 of Sugar;
+	add 5 of Ice;
+	add 3 of MintLeaves;
+end
+
+drink AllTogether is
+begin
+	add 2 of Gin;
+	add 2 of Sugar;
+	add 2 of Soda;
+	add 2 of Lime;
+	add 2 of Rum;
+	add 2 of Ice;
+	add 2 of Cream;
+	add 2 of Mintlevaes;
+	add 2 of Banana;
 end
 
 drink SweetCollins as TomCollins but
 begin
-	remove Lemon;
-	add 1 of Lemon;
+	remove Lime;
+	add 1 of Lime;
 	add 1 of Sugar;
 end
 
@@ -30,7 +65,7 @@ end
 
 drink SuperSweetCollins as SweetCollins but
 begin
-	remove Lemon;
+	remove Lime;
 	add 3 of Sugar;
 end
 
@@ -38,7 +73,7 @@ drink SoftwareShot is
 begin
 	add 3 of Gin;
 	add 3 of Sugar;
-	add 3 of Lemon;
+	add 3 of Lime;
 end
 
 function StartMsg return nothing using()
@@ -180,6 +215,14 @@ begin
 		case 42:
 			call DrinkFound(DrinkID, Amount, StrongCollins, "Strong Collins");
 			break;
+		case 55: 
+			call DrinkFound(DrinkID, Amount, BananaShake, "Banana Shake");
+			break;
+		case 60: 
+			call DrinkFound(DrinkID, Amount, Mojito, "Mojito");
+			break;
+		case 65:
+			call DrinkFound(DrinkID, Amount, AllTogether, "All Together"
 		case 101:
 			call DrinkFound(DrinkID, Amount, SoftwareShot, "Software Shot");
 			break;

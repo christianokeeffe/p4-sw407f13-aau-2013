@@ -1,1 +1,0 @@
-grun SPLAD program -gui

@@ -1,6 +1,6 @@
-lcd.begin(16, 2);
+lcdSW407F13.begin(16, 2);
 Serial.begin(9600);
 Serial.println("Start");
-rfid.begin(19200);
+rfidSW407F13.begin(19200);
 delay(10);
 halt();

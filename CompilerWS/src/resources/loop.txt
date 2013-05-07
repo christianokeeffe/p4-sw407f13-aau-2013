@@ -1,15 +1,15 @@
-seek();
+seekSW407F13();
 delay(50);
-parse();
+parseSW407F13();
 delay(50);
-set_flag();
+set_flagSW407F13();
 delay(50);
-if (flag == 1) {
-  String resultstring = RFIDRead();
-  int resultlength = resultstring.length() + 1;
-  char temparray[resultlength];
-  resultstring.toCharArray(temparray,resultlength);
-  String id = String(temparray[0]) + String(temparray[1]) + String(temparray[2]) + String(temparray[3]);
-  String count = String(temparray[5]) + String(temparray[6]) + String(temparray[7]) + String(temparray[8]);
-  RFIDFound(id.toInt(), count.toInt());
+if (flagSW407F13 == 1) {
+  String resultstringSW407F13 = RFIDReadSW407F13();
+  int resultlengthSW407F13 = resultstringSW407F13.length() + 1;
+  char temparraySW407F13[resultlengthSW407F13];
+  resultstringSW407F13.toCharArray(temparraySW407F13,resultlengthSW407F13);
+  String idSW407F13 = String(temparraySW407F13[0]) + String(temparraySW407F13[1]) + String(temparraySW407F13[2]) + String(temparraySW407F13[3]);
+  String countSW407F13 = String(temparraySW407F13[5]) + String(temparraySW407F13[6]) + String(temparraySW407F13[7]) + String(temparraySW407F13[8]);
+  RFIDFound(idSW407F13.toInt(), countSW407F13.toInt());
 }

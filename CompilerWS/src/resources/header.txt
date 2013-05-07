@@ -1,371 +1,310 @@
 #include <SoftwareSerial.h>
 #include <LiquidCrystal.h>
 
-LiquidCrystal lcd(2, A4, 3, 4, 5, 9);
-SoftwareSerial rfid(7, 8);
-
-//Prototypes
-void halt(void);
-void parse(void);
-void print_serial(void);
-void read_serial(void);
-void seek(void);
-void set_flag(void);
-void LCDPrint(String input, int line);
-void pourDrink(int drink[ ][2]);
-boolean authenticate(String tempid, String tempcount);
-boolean write_Block(String paraid, String paracount);
-boolean RFIDWrite(int id, int count);
-String RFIDRead(void);
-
+LiquidCrystal lcdSW407F13(2, A4, 3, 4, 5, 9);
+SoftwareSerial rfidSW407F13(7, 8);
 
 //Global var
-int flag = 0;
-int Str1[11];
-int Str2[11];
-int Str3[11];
-int Str4[11];
+int flagSW407F13 = 0;
+int Str1SW407F13[11];
+int Str2SW407F13[11];
+int Str3SW407F13[11];
+int Str4SW407F13[11];
 
-char in1 = 0;
-char in2 = 0;
-char in3 = 0;
-char in4 = 0;
+char in1SW407F13 = 0;
+char in2SW407F13 = 0;
+char in3SW407F13 = 0;
+char in4SW407F13 = 0;
 
-int chksum;
-int chkchksum;
-int stringlength;
+int chksumSW407F13;
+int chkchksumSW407F13;
+int stringlengthSW407F13;
 
-byte auth = 76;
+byte authSW407F13 = 76;
 
-void halt()
+void haltSW407F13()
 {
-  rfid.write((uint8_t)255);
-  rfid.write((uint8_t)0);
-  rfid.write((uint8_t)1);
-  rfid.write((uint8_t)147);
-  rfid.write((uint8_t)148);
+  rfidSW407F13.write((uint8_t)255);
+  rfidSW407F13.write((uint8_t)0);
+  rfidSW407F13.write((uint8_t)1);
+  rfidSW407F13.write((uint8_t)147);
+  rfidSW407F13.write((uint8_t)148);
 }
 
-void parse()
+void parseSW407F13()
 {
-  while(rfid.available()){
-    if(rfid.read() == 255){
-      for(int i=1;i<11;i++){
-        Str1[i]= rfid.read();
+  while(rfidSW407F13.available()){
+    if(rfidSW407F13.read() == 255){
+      for(int iSW407F13=1;iSW407F13<11;iSW407F13++){
+        Str1SW407F13[iSW407F13]= rfidSW407F13.read();
       }
     }
   }
 }
 
-void seek()
+void seekSW407F13()
 {
   //search for RFID tag
-  rfid.write((uint8_t)255);
-  rfid.write((uint8_t)0);
-  rfid.write((uint8_t)1);
-  rfid.write((uint8_t)130);
-  rfid.write((uint8_t)131);
+  rfidSW407F13.write((uint8_t)255);
+  rfidSW407F13.write((uint8_t)0);
+  rfidSW407F13.write((uint8_t)1);
+  rfidSW407F13.write((uint8_t)130);
+  rfidSW407F13.write((uint8_t)131);
   delay(10);
 }
 
-void set_flag()
+void set_flagSW407F13()
 {
-  if(Str1[2] == 6){
-    flag++;
+  if(Str1SW407F13[2] == 6){
+    flagSW407F13++;
   }
   else{
-    flag = 0;
+    flagSW407F13 = 0;
   }
 }
 
-boolean authenticate(String tempid, String tempcount) //Attempt to authenticate block 0x01 with Transport Key
+boolean authenticateSW407F13(String tempidSW407F13, String tempcountSW407F13) //Attempt to authenticate block 0x01 with Transport Key
 {
-  boolean returnvalue = false;
-  rfid.write((uint8_t)255);
-  rfid.write((uint8_t)0);
-  rfid.write((uint8_t)3);
-  rfid.write((uint8_t)133);
-  rfid.write((uint8_t)1);
-  rfid.write((uint8_t)255);
-  rfid.write((uint8_t)136);
+  boolean returnvalueSW407F13 = false;
+  rfidSW407F13.write((uint8_t)255);
+  rfidSW407F13.write((uint8_t)0);
+  rfidSW407F13.write((uint8_t)3);
+  rfidSW407F13.write((uint8_t)133);
+  rfidSW407F13.write((uint8_t)1);
+  rfidSW407F13.write((uint8_t)255);
+  rfidSW407F13.write((uint8_t)136);
 
   delay(50);
-  while(rfid.available()){
-    if(rfid.read() == 255){
-      for(int i=1;i<11;i++){
-        Str2[i]= rfid.read();
+  while(rfidSW407F13.available()){
+    if(rfidSW407F13.read() == 255){
+      for(int iSW407F13=1;iSW407F13<11;iSW407F13++){
+        Str2SW407F13[iSW407F13]= rfidSW407F13.read();
       }
     }
   }
-    /*Serial.print("Login Status: "); //Status of Login attempt
-    Serial.print(Str2[1], HEX);
-    Serial.print(Str2[2], HEX);
-    Serial.print(Str2[3], HEX);
-    Serial.print(Str2[4], HEX);
-    
-    if(Str2[4] == auth){Serial.print(" (Successful!)");} //If successful, tell the user
-    else {Serial.print(" (Failed.)");} //If any other that successful
-    
-    Serial.println();  //Make some breathing room on the terminal
-*/
 
-  rfid.write((uint8_t)255);
-  rfid.write((uint8_t)0);
-  rfid.write((uint8_t)2);
-  rfid.write((uint8_t)135);
-  rfid.write((uint8_t)1);
-  rfid.write((uint8_t)138);
+  rfidSW407F13.write((uint8_t)255);
+  rfidSW407F13.write((uint8_t)0);
+  rfidSW407F13.write((uint8_t)2);
+  rfidSW407F13.write((uint8_t)135);
+  rfidSW407F13.write((uint8_t)1);
+  rfidSW407F13.write((uint8_t)138);
   
   delay(50);
-  while(rfid.available()){
-    if(rfid.read() == 255){
-      for(int i=1;i<11;i++){
-        Str4[i]= rfid.read();
+  while(rfidSW407F13.available()){
+    if(rfidSW407F13.read() == 255){
+      for(int iSW407F13=1;i<11;iSW407F13++){
+        Str4SW407F13[i]= rfidSW407F13.read();
       }
     }
   }
-   /* Serial.print("Read Status: "); //Return Read attempt status
-    Serial.print(Str4[1], HEX);
-    Serial.print(Str4[2], HEX);
-    Serial.print(Str4[3], HEX);
-    Serial.print(Str4[4], HEX);
-    Serial.println();
-    Serial.print("Block Content: "); 
-    
-     in1 = char(Str4[5]);
-     in2 = char(Str4[6]);
-     in3 = char(Str4[7]);
-     in4 = char(Str4[8]);
-   
-    Serial.print(in1); //Return contents of block 0x01
-    Serial.print(in2);
-    Serial.print(in3);
-    Serial.print(in4);
-    Serial.println(); */
-
-    //flag2 = 1;
      
-   if(Str2[4] == auth){returnvalue = write_Block(tempid, tempcount);}
-   return returnvalue;
+   if(Str2SW407F13[4] == authSW407F13){returnvalueSW407F13 = write_BlockSW407F13(tempidSW407F13, tempcountSW407F13);}
+   return returnvalueSW407F13;
  }
  
 
-boolean write_Block(String paraid, String paracount){
-    boolean returnvalue = false;
+boolean write_BlockSW407F13(String paraidSW407F13, String paracountSW407F13){
+    boolean returnvalueSW407F13 = false;
     
-    int idlength = paraid.length() + 1;
-    char idarray[idlength];
+    int idlengthSW407F13 = paraidSW407F13.length() + 1;
+    char idarraySW407F13[idlengthSW407F13];
     
-    paraid.toCharArray(idarray,idlength);
+    paraidSW407F13.toCharArray(idarraySW407F13,idlengthSW407F13);
     
-    /*Serial.print("To Write: "); //Return Bytes to Write
-    Serial.print(idarray[0]);
-    Serial.print(idarray[1]);
-    Serial.print(idarray[2]);
-    Serial.print(idarray[3]);
-       
-    Serial.println(); //Back up, everyone, give me some space */
     //write to tag
-    rfid.write((uint8_t)255); //Command header
-    rfid.write((uint8_t)0); //Reserved
-    rfid.write((uint8_t)6); 
-    rfid.write((uint8_t)138); //Write value block command 
-    rfid.write((uint8_t)1); //Number of block to write, change this to write to another block
+    rfidSW407F13.write((uint8_t)255); //Command header
+    rfidSW407F13.write((uint8_t)0); //Reserved
+    rfidSW407F13.write((uint8_t)6); 
+    rfidSW407F13.write((uint8_t)138); //Write value block command 
+    rfidSW407F13.write((uint8_t)1); //Number of block to write, change this to write to another block
   
     //data to write
-    rfid.write((uint8_t)byte(idarray[0])); //Send four bytes from ealier:
-    rfid.write((uint8_t)byte(idarray[1]));
-    rfid.write((uint8_t)byte(idarray[2]));
-    rfid.write((uint8_t)byte(idarray[3]));
+    rfidSW407F13.write((uint8_t)byte(idarraySW407F13[0])); //Send four bytes from ealier:
+    rfidSW407F13.write((uint8_t)byte(idarraySW407F13[1]));
+    rfidSW407F13.write((uint8_t)byte(idarraySW407F13[2]));
+    rfidSW407F13.write((uint8_t)byte(idarraySW407F13[3]));
   
     //close write command
-    chksum = 6+138+1+byte(idarray[0])+byte(idarray[1])+byte(idarray[2])+byte(idarray[3]); //calculate checksum
-    rfid.write((uint8_t)chksum);
+    chksumSW407F13 = 6+138+1+byte(idarraySW407F13[0])+byte(idarraySW407F13[1])+byte(idarraySW407F13[2])+byte(idarraySW407F13[3]); //calculate checksum
+    rfidSW407F13.write((uint8_t)chksumSW407F13);
   
     delay(50); //get response
-    while(rfid.available()){
-      if(rfid.read() == 255){
-        for(int i=1;i<11;i++){
-          Str3[i]= rfid.read();
+    while(rfidSW407F13.available()){
+      if(rfidSW407F13.read() == 255){
+        for(int iSW407F13=1;iSW407F13<11;iSW407F13++){
+          Str3SW407F13[iSW407F13]= rfidSW407F13.read();
         }
       }
     }
  
-    chkchksum = Str3[1] + Str3[2] + Str3[3] + Str3[4] + Str3[5] + Str3[6] + Str3[7] + Str3[8];
+    chkchksumSW407F13 = Str3SW407F13[1] + Str3SW407F13[2] + Str3SW407F13[3] + Str3SW407F13[4] + Str3SW407F13[5] + Str3SW407F13[6] + Str3SW407F13[7] + Str3SW407F13[8];
 
-    if(chksum == chkchksum)
+    if(chksumSW407F13 == chkchksumSW407F13)
     {
-      returnvalue = true;
+      returnvalueSW407F13 = true;
     }
     else
     {
-      returnvalue = false;
+      returnvalueSW407F13 = false;
     }
     
-    int countlength = paracount.length() + 1;
-    char countarray[countlength];
+    int countlengthSW407F13 = paracountSW407F13.length() + 1;
+    char countarraySW407F13[countlengthSW407F13];
     
-    paracount.toCharArray(countarray,countlength);
+    paracountSW407F13.toCharArray(countarraySW407F13,countlengthSW407F13);
     
-    /*Serial.print("To Write: "); //Return Bytes to Write
-    Serial.print(countarray[0]);
-    Serial.print(countarray[1]);
-    Serial.print(countarray[2]);
-    Serial.print(countarray[3]);
+    rfidSW407F13.write((uint8_t)255); //Command header
+    rfidSW407F13.write((uint8_t)0); //Reserved
+    rfidSW407F13.write((uint8_t)6); 
+    rfidSW407F13.write((uint8_t)138); //Write value block command 
+    rfidSW407F13.write((uint8_t)2); //Number of block to write, change this to write to another block
     
-    Serial.println();*/
-    
-    rfid.write((uint8_t)255); //Command header
-    rfid.write((uint8_t)0); //Reserved
-    rfid.write((uint8_t)6); 
-    rfid.write((uint8_t)138); //Write value block command 
-    rfid.write((uint8_t)2); //Number of block to write, change this to write to another block
-    
-    rfid.write((uint8_t)byte(countarray[0]));
-    rfid.write((uint8_t)byte(countarray[1]));
-    rfid.write((uint8_t)byte(countarray[2]));
-    rfid.write((uint8_t)byte(countarray[3]));
+    rfidSW407F13.write((uint8_t)byte(countarraySW407F13[0]));
+    rfidSW407F13.write((uint8_t)byte(countarraySW407F13[1]));
+    rfidSW407F13.write((uint8_t)byte(countarraySW407F13[2]));
+    rfidSW407F13.write((uint8_t)byte(countarraySW407F13[3]));
   
-    chksum = 6+138+2+byte(countarray[0])+byte(countarray[1])+byte(countarray[2])+byte(countarray[3]); //calculate checksum
-    rfid.write((uint8_t)chksum);
+    chksumSW407F13 = 6+138+2+byte(countarraySW407F13[0])+byte(countarraySW407F13[1])+byte(countarraySW407F13[2])+byte(countarraySW407F13[3]); //calculate checksum
+    rfidSW407F13.write((uint8_t)chksumSW407F13);
 
     delay(50); //get response
-    while(rfid.available()){
-      if(rfid.read() == 255){
-        for(int i=1;i<11;i++){
-          Str3[i]= rfid.read();
+    while(rfidSW407F13.available()){
+      if(rfidSW407F13.read() == 255){
+        for(int iSW407F13=1;i<11;iSW407F13++){
+          Str3SW407F13[i]= rfidSW407F13.read();
         }
       }
     }
   
-    chkchksum = Str3[1] + Str3[2] + Str3[3] + Str3[4] + Str3[5] + Str3[6] + Str3[7] + Str3[8];
+    chkchksumSW407F13 = Str3SW407F13[1] + Str3SW407F13[2] + Str3SW407F13[3] + Str3SW407F13[4] + Str3SW407F13[5] + Str3SW407F13[6] + Str3SW407F13[7] + Str3SW407F13[8];
 
-    if(chksum == chkchksum)
+    if(chksumSW407F13 == chkchksumSW407F13)
     {
-      returnvalue = true;
+      returnvalueSW407F13 = true;
     }
     else
     {
-      returnvalue = false;
+      returnvalueSW407F13 = false;
     }
-    return returnvalue;
+    return returnvalueSW407F13;
 }
 
-boolean RFIDWrite (int id, int count){
-  String tempid;
-  String tempcount;
-  if (id < 10){
-    tempid = "000" + String(id);
+boolean RFIDWrite (int idSW407F13, int countSW407F13){
+  String tempidSW407F13;
+  String tempcountSW407F13;
+  if (idSW407F13 < 10){
+    tempidSW407F13 = "000" + String(idSW407F13);
   }
-  else if (id < 100 && id >= 10) {
-    tempid = "00" + String(id);
+  else if (idSW407F13 < 100 && idSW407F13 >= 10) {
+    tempidSW407F13 = "00" + String(idSW407F13);
   }
-  else if (id < 1000 && id >= 100) {
-    tempid = "0" +  String(id);
+  else if (idSW407F13 < 1000 && idSW407F13 >= 100) {
+    tempidSW407F13 = "0" +  String(idSW407F13);
   }
   else {
-    tempid = String(id);
+    tempidSW407F13 = String(idSW407F13);
   }
   
-  if (count < 10){
-    tempcount = "000" + String(count);
+  if (countSW407F13 < 10){
+    tempcountSW407F13 = "000" + String(countSW407F13);
   }
-  else if (count < 100 && count >= 10) {
-    tempcount = "00" + String(count);
+  else if (countSW407F13 < 100 && countSW407F13 >= 10) {
+    tempcountSW407F13 = "00" + String(countSW407F13);
   }
-  else if (count < 1000 && count >= 100) {
-    tempcount = "0" +  String(count);
+  else if (countSW407F13 < 1000 && countSW407F13 >= 100) {
+    tempcountSW407F13 = "0" +  String(countSW407F13);
   }
   else {
-    tempcount = String(count);
+    tempcountSW407F13 = String(countSW407F13);
   }
 
-  return (authenticate(tempid, tempcount));
+  return (authenticateSW407F13(tempidSW407F13, tempcountSW407F13));
 }
 
-String RFIDRead (){
-  byte auth = 76;
-  String Fetchedid;
-  String Fetchedcount;
-  char a, b, c, d;
+String RFIDReadSW407F13 (){
+  byte authSW407F13 = 76;
+  String FetchedidSW407F13;
+  String FetchedcountSW407F13;
+  char aSW407F13, bSW407F13, cSW407F13, dSW407F13;
   
-  rfid.write((uint8_t)255);
-  rfid.write((uint8_t)0);
-  rfid.write((uint8_t)3);
-  rfid.write((uint8_t)133);
-  rfid.write((uint8_t)1);
-  rfid.write((uint8_t)255);
-  rfid.write((uint8_t)136);
+  rfidSW407F13.write((uint8_t)255);
+  rfidSW407F13.write((uint8_t)0);
+  rfidSW407F13.write((uint8_t)3);
+  rfidSW407F13.write((uint8_t)133);
+  rfidSW407F13.write((uint8_t)1);
+  rfidSW407F13.write((uint8_t)255);
+  rfidSW407F13.write((uint8_t)136);
 
   delay(50);
-  while(rfid.available()){
-    if(rfid.read() == 255){
-      for(int i=1;i<11;i++){
-        Str2[i]= rfid.read();
+  while(rfidSW407F13.available()){
+    if(rfidSW407F13.read() == 255){
+      for(int iSW407F13=1;iSW407F13<11;iSW407F13++){
+        Str2SW407F13[iSW407F13]= rfidSW407F13.read();
       }
     }
   }
 
   delay(50);
   
-  rfid.write((uint8_t)255);
-  rfid.write((uint8_t)0);
-  rfid.write((uint8_t)2);
-  rfid.write((uint8_t)135);
-  rfid.write((uint8_t)1);
-  rfid.write((uint8_t)138);
+  rfidSW407F13.write((uint8_t)255);
+  rfidSW407F13.write((uint8_t)0);
+  rfidSW407F13.write((uint8_t)2);
+  rfidSW407F13.write((uint8_t)135);
+  rfidSW407F13.write((uint8_t)1);
+  rfidSW407F13.write((uint8_t)138);
   
   delay(50);
-  while(rfid.available()){
-    if(rfid.read() == 255){
-      for(int i=1;i<11;i++){
-        Str1[i]= rfid.read();
+  while(rfidSW407F13.available()){
+    if(rfidSW407F13.read() == 255){
+      for(int iSW407F13=1;iSW407F13<11;iSW407F13++){
+        Str1SW407F13[iSW407F13]= rfidSW407F13.read();
       }
     }
   }
   
-  a = char(Str1[5]);
-  b = char(Str1[6]);
-  c = char(Str1[7]);
-  d = char(Str1[8]);
+  aSW407F13 = char(Str1SW407F13[5]);
+  bSW407F13 = char(Str1SW407F13[6]);
+  cSW407F13 = char(Str1SW407F13[7]);
+  dSW407F13 = char(Str1SW407F13[8]);
   
-  Fetchedid = String(a) + String(b) + String(c) + String(d);
+  FetchedidSW407F13 = String(aSW407F13) + String(bSW407F13) + String(cSW407F13) + String(dSW407F13);
   
-  rfid.write((uint8_t)255);
-  rfid.write((uint8_t)0);
-  rfid.write((uint8_t)2);
-  rfid.write((uint8_t)135);
-  rfid.write((uint8_t)2);
-  rfid.write((uint8_t)139);
+  rfidSW407F13.write((uint8_t)255);
+  rfidSW407F13.write((uint8_t)0);
+  rfidSW407F13.write((uint8_t)2);
+  rfidSW407F13.write((uint8_t)135);
+  rfidSW407F13.write((uint8_t)2);
+  rfidSW407F13.write((uint8_t)139);
 
   delay(50);
-  while(rfid.available()){
-    if(rfid.read() == 255){
-      for(int i=1;i<11;i++){
-        Str1[i]= rfid.read();
+  while(rfidSW407F13.available()){
+    if(rfidSW407F13.read() == 255){
+      for(int iSW407F13=1;iSW407F13<11;iSW407F13++){
+        Str1SW407F13[i]= rfidSW407F13.read();
       }
     }
   }
-  a = char(Str1[5]); //Convert contents of block 0x01 from Hex
-  b = char(Str1[6]);
-  c = char(Str1[7]);
-  d = char(Str1[8]);
+  aSW407F13 = char(Str1SW407F13[5]); //Convert contents of block 0x01 from Hex
+  bSW407F13 = char(Str1SW407F13[6]);
+  cSW407F13 = char(Str1SW407F13[7]);
+  dSW407F13 = char(Str1SW407F13[8]);
   
-  Fetchedcount = String(a) + String(b) + String(c) + String(d);
+  FetchedcountSW407F13 = String(aSW407F13) + String(bSW407F13) + String(cSW407F13) + String(dSW407F13);
   
-  return (Fetchedid + "#" + Fetchedcount);
+  return (FetchedidSW407F13 + "#" + FetchedcountSW407F13);
 }
 
 void LCDPrint(String input, int line)
 {
-lcd.setCursor(0,line);
-lcd.print("                ");
-lcd.setCursor(0,line);
-lcd.print(input);
+lcdSW407F13.setCursor(0,line);
+lcdSW407F13.print("                ");
+lcdSW407F13.setCursor(0,line);
+lcdSW407F13.print(input);
 }
 
 void LCDClear(){
-  lcd.clear();
+  lcdSW407F13.clear();
 }
 
 void pourDrink (double drink[ ][2])

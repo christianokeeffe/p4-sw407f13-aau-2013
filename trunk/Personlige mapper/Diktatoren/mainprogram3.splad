@@ -61,19 +61,6 @@ begin
 	add 1 of Sugar;
 end
 
-/*A strong Tom Collins*/
-drink StrongCollins as TomCollins but
-begin
-	add 3 of Gin;
-end
-
-/*A super sweet Tom Collins*/
-drink SuperSweetCollins as SweetCollins but
-begin
-	remove Lime;
-	add 3 of Sugar;
-end
-
 /*A software shot*/
 drink SoftwareShot is
 begin
@@ -235,12 +222,6 @@ begin
 				break;
 			case 10:
 				call DrinkFound(DrinkID, Amount, SweetCollins, "Sweet Collins");
-				break;
-			case 23:
-				call DrinkFound(DrinkID, Amount, SuperSweetCollins, "S. Sweet Collins");
-				break;
-			case 42:
-				call DrinkFound(DrinkID, Amount, StrongCollins, "Strong Collins");
 				break;
 			case 55: 
 				call DrinkFound(DrinkID, Amount, BananaShake, "Banana Shake");

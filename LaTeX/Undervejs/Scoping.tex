@@ -1,34 +1,13 @@
-\section{Scoping}
-%\begin{code}{code:StaticDynamicScoping}{A simple code showing the difference between static and dynamic scoping.}
-%\begin{listing}
-%const int b = 5;
-%int foo()
-%{
-%	int a = b + 5;
-%	return a;
-%}
-%
-%int bar()
-%{
-%	int b = 2;
-%	return foo();
-%}
-%
-%int main()
-%{
-%	foo();
-%	bar();
-%	return 0;
-%}
-%\end{listing}
-%\end{code}
-
-%The code \ref{code:StaticDynamicScoping} will in both cases return 10 in the foo() function, but in bar() the result will differ. With static scoping the bar() function will return 10 while with dynamic scoping it will return 7. 
-
-
 \subsection{Scoping in our Project}
 In our project we have chosen to use static scoping. Because the program languages that is made in the project group is a imperative program languages, where it make more sense that it have static scoping. And static scoping is used by well use program languages like C, C# and Java. \ref{Programming_Community_Index}
 
-Data that is used for scoping, is save in a list (scopecontrol) that is made of lists and these lists hold variable names. The scoping is taken care of in 6 different places in the parse tree visitor, in visit-program, visit-block, visit-from, visit-DCL, visit-Subparams and visit-callid. In visit-program it is needed to make a scope, This is because there are global variables and they need a scope to be places in. In visit-block a new list is added to the list of lists, after all the element is visit the scope 
+When scope checking a list that can hold others lists is made, this list is called scopecontrol, each list in scopecontrol is a scope. The lists that are stored in scopecontrol are use to store variable names. Scoping is break up in six places in the visitor. For making sure that global variables is save into scopecontrol a global scope is needed to be made in visit-program, this scope will be remove then it is finis with visiting the program.
 
+There are a few ways to make blocks in the project languages. First one is in visit-block, one get to visit-block from if, while and from-statement. In visit-block a new list of strings is made, then it is added to scopecontrol, thereafter all that are in the scope is visited, when this is done it will remove the list that it have made from scopecontrol and return.
+
+Visit-function is a little unique way to makes blocks, they can only be in the outer scope so the function names is not taken care of in the scope checker. But here the visit-block can not be used since there can be sent parameter to the function from where it is called, therefore it need to make the list and add it to scopecontrol before the parameter are declared, after this all elements in the function is visited it will remove the list from scopecontrol.
+
+Visit-DCL and visit-subparams work nearly the same way. Visit-DCL and visit-subparams is where variables names is inserted into the innermost scope, that have the last index in scopecontrol and is a list of strings, to get the last index in scopecontrol, there is used a build-in function in lists: size, this return the number of element in a given list, but to get the right index it is needed to minus one to size since a list start at zero and not one.
+
+The main part if scope checker is in visit-callid, it need to look through all known scopes to see if a variable with that name exist. This is done by using two for-loop, can be seen in code example , where the first one go through scopecontrol and the second one is for each element in the list that are in scopecontrol in those for-loop there is a if-statement that look for the variable name that is being call at the moment with the lists variable names, if it is in a list it will return from the visit-callid, but if it is not found in the lists it will put a error message into the list of errors.
 

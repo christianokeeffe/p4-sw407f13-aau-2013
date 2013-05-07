@@ -13,10 +13,9 @@ public class TypeCheck extends SPLADBaseVisitor<Value> {
 		String id = ctx.expr().getText();
 		
 		Value val = visit(ctx.expr());
-		
+			
 		memory.put(id, val);
 		
-		int lol = 3+3;
 		return val;
 	}
 	

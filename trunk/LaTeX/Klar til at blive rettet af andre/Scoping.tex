@@ -1,0 +1,16 @@
+\subsection{Scoping in our Project}
+In our project we have chosen to use static scoping. Because the program languages that is made in the project group is a imperative program languages, where it make more sense that it have static scoping. And static scoping are used by well use program languages like C, C# and Java. \ref{Programming_Community_Index}
+
+When scope checking a lists is made that can hold others lists, this list is called scopecontrol, each list in scopecontrol is a "scope". The scope lists are used to store variable names. Scope checking is break up in six different places in the tree visitor, visit-program, visit-block, visit-function, visit-DCL visit-subparams and visit-callid.
+
+For making sure that global variables is save into scopecontrol a global scope is needed to be made in visit-program, this scope will be remove then we are finis with visiting the program.
+
+There are a two ways to make blocks in our project languages, not counting the one that make the global scope. First one is in visit-block, one get to visit-block from if, while and from-statement. In visit-block a new list of strings is made, then it is added to scopecontrol, thereafter all that are in the scope is visited, when this is done it will remove the list that it have made from scopecontrol and return.
+
+the second way to make new blocks is by visit-function, because it work in a little unique way to make blocks and a function names is not taken care of in the scope checker, because a function can only be made in the outer scope. The visit-block can not be used with making scopes for functions since there can be sent parameter to the function from where it is called, therefore it need to make the list and add it to scopecontrol before the parameter are declared. After parameter are declared all elements in the function are visited and it will remove the list from scopecontrol before returning.
+
+Visit-DCL and visit-subparams, with work nearly the same way, is where variables names is inserted into the innermost scope, that have the last index in scopecontrol and is a list of strings, to get the last index in scopecontrol, there is used a build-in function in lists: size, this return the number of element in a given list, but to get the right index number it is needed to minus one to size since a list start at zero and not one.
+
+The main part of scope checker is in visit-callid, here it need to look through all known scopes to see if a variable name exist. This is done by using two for-loop, can be seen in code example \ref{code:scopecallid}, the first one go through scopecontrol and the second one is for each element in the list that are in scopecontrol in those for-loop there is a if-statement that look for the variable name that is being call at the moment with the lists variable names, if it is in a list it will return from the visit-callid, but if it is not found in the lists it will put a error message into the list of errors and return fromvisit-callid, this is done to help with finding more errors.
+
+\kode{code:scopecallid}{code snippet of where the name of a variable is look through all scopes}{scopecallid.txt} \fxfatal{ref ikke lavet i kode}

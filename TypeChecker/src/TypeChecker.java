@@ -1610,7 +1610,4 @@ public class TypeChecker extends SPLADBaseVisitor<Value>{
 		}
 		return null;
 	}
-
-
-
 }

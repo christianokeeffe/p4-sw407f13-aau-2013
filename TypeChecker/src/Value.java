@@ -1,4 +1,4 @@
-
+//latex start Value
 public class Value {
 	public static Value VOID = new Value(new Object());
 
@@ -12,7 +12,9 @@ public class Value {
     {
     	this.value = "";
     }
+//latex end
 
+//latex start isType
     public boolean isDouble() 
     {
 		if(this.toString().matches("((-)?[0-9]+)\\.([0-9]){1,2}"))
@@ -30,7 +32,7 @@ public class Value {
 		}
 		return false;
     }
-    
+//latex end
     public boolean isDrink()
     {
 		if(this.toString().equals("drink"))
@@ -136,7 +138,7 @@ public class Value {
     	{
     		return "bool";
     	}
-    	else if(this.toString().equals("container") || this.isContainer())
+    	else if(this.isContainer())
     	{
     		return "container";
     	}

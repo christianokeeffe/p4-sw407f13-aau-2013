@@ -28,3 +28,43 @@ In some languages that allow a program structure to be a sequence of function de
 
 \textit{Dynamic Scope}
 With dynamic scope, the scope can only be determined at run time, because it is based on the calling sequence of sub-programs and not there their spatial relationship to one a other.
+
+\textit{The difference between dynamic and static scope}
+To help better understand the difference between dynamic and static Scope a larger code example is being shown here \ref{code:StaticDynamicScoping}.
+\begin{code}{code:StaticDynamicScoping}{A simple code showing the difference between static and dynamic scoping.}
+\begin{listing}
+const int b = 5;
+int foo()
+{
+	int a = b + 5;
+	return a;
+}
+
+int bar()
+{
+	int b = 2;
+	return foo();
+}
+
+int main()
+{
+	foo();
+	bar();
+	return 0;
+}
+\end{listing}
+\end{code}
+The code \ref{code:StaticDynamicScoping} will in both cases return 10 in the foo() function, but in bar() the result will differ. With static scoping the bar() function will return 10 while with dynamic scoping it will return 7.
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -3,4 +3,4 @@ Serial.begin(9600);
 Serial.println("Start");
 rfidSW407F13.begin(19200);
 delay(10);
-halt();
+haltSW407F13();

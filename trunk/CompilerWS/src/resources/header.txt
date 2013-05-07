@@ -93,8 +93,8 @@ boolean authenticateSW407F13(String tempidSW407F13, String tempcountSW407F13) //
   delay(50);
   while(rfidSW407F13.available()){
     if(rfidSW407F13.read() == 255){
-      for(int iSW407F13=1;i<11;iSW407F13++){
-        Str4SW407F13[i]= rfidSW407F13.read();
+      for(int iSW407F13=1;iSW407F13<11;iSW407F13++){
+        Str4SW407F13[iSW407F13]= rfidSW407F13.read();
       }
     }
   }
@@ -171,8 +171,8 @@ boolean write_BlockSW407F13(String paraidSW407F13, String paracountSW407F13){
     delay(50); //get response
     while(rfidSW407F13.available()){
       if(rfidSW407F13.read() == 255){
-        for(int iSW407F13=1;i<11;iSW407F13++){
-          Str3SW407F13[i]= rfidSW407F13.read();
+        for(int iSW407F13=1;iSW407F13<11;iSW407F13++){
+          Str3SW407F13[iSW407F13]= rfidSW407F13.read();
         }
       }
     }

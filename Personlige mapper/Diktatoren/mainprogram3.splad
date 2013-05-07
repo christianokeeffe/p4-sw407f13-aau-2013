@@ -1,15 +1,18 @@
+/*Buttons for input*/
 int ButtonOne <-- 12;
 int ButtonTen <-- 10;
 int ButtonConfirm <-- 13;
+
+/*Bool for checking if it is staffmode or not*/
 bool IsStaffInput <-- false;
 
-container Gin <-- A0;
-container Sugar <-- A2;
-container Soda <-- A1;
-container Lime <-- A5;
-container Rum <-- 6;
-container Ice <-- 0;
-container Cream <-- A4;
+container Gin <-- A0; /*Red*/
+container Sugar <-- A2;/*Red*/
+container Soda <-- A1;/*Red*/
+container Lime <-- A5;/*Red*/
+container Rum <-- 6;/*Red*/
+container Ice <-- 0;/*Red*/
+container Cream <-- A4;/*Red*/
 container Mintleaves <-- 1; /*Green*/
 container Banana <-- A3; /*Yellow*/
 
@@ -222,7 +225,8 @@ begin
 			call DrinkFound(DrinkID, Amount, Mojito, "Mojito");
 			break;
 		case 65:
-			call DrinkFound(DrinkID, Amount, AllTogether, "All Together"
+			call DrinkFound(DrinkID, Amount, AllTogether, "All Together");
+			break;
 		case 101:
 			call DrinkFound(DrinkID, Amount, SoftwareShot, "Software Shot");
 			break;

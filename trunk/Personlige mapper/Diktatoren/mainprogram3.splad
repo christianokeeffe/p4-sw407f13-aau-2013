@@ -49,7 +49,6 @@ begin
 	add 2 of Soda;
 	add 2 of Lime;
 	add 2 of Rum;
-	add 2 of Cream;
 	add 2 of Mintleaves;
 	add 2 of Banana;
 end

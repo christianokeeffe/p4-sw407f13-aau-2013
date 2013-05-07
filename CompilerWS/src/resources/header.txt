@@ -281,7 +281,7 @@ String RFIDReadSW407F13 (){
   while(rfidSW407F13.available()){
     if(rfidSW407F13.read() == 255){
       for(int iSW407F13=1;iSW407F13<11;iSW407F13++){
-        Str1SW407F13[i]= rfidSW407F13.read();
+        Str1SW407F13[iSW407F13]= rfidSW407F13.read();
       }
     }
   }

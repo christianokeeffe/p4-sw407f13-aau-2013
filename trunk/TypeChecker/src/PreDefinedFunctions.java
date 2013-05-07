@@ -4,7 +4,9 @@ import java.util.ArrayList;
 public class PreDefinedFunctions {
 	public ArrayList<Function> GetPreDefinedFunctions()
 	{
+	//latex start LCDPrint
 		ArrayList<Function> Functions = new ArrayList<Function>();
+		
 		
 		Function LCDPrint = new Function();
 		
@@ -23,6 +25,8 @@ public class PreDefinedFunctions {
 		LCDPrint.Name = "LCDPrint";
 		LCDPrint.ReturnType = "nothing";
 		Functions.add(LCDPrint);
+		
+	//latex end
 		
 		Function LCDClear = new Function();
 		LCDClear.Name = "LCDClear";
@@ -44,6 +48,7 @@ public class PreDefinedFunctions {
 		RFIDWrite.Params = RFIDWriteParams;
 		Functions.add(RFIDWrite);
 		
+		//latex start PourDrink
 		Function PourDrink = new Function();
 		ParamsType PourDrinkParam = new ParamsType();
 		
@@ -55,7 +60,7 @@ public class PreDefinedFunctions {
 		PourDrinkParams.add(PourDrinkParam);
 		PourDrink.Params = PourDrinkParams;
 		Functions.add(PourDrink);
-		
+		//latex end
 				
 		return Functions;
 	}
@@ -63,13 +68,13 @@ public class PreDefinedFunctions {
 	public ArrayList<Variable> PreDefinedVariables()
 	{
 		ArrayList<Variable> Variables = new ArrayList<Variable>();
-		
+		//latex start OUTPUT
 		Variable Output = new Variable();
 		Output.Id = "OUTPUT";
 		Output.Type = "int";
 		Output.Value = "0";
 		Variables.add(Output);
-		
+		//latex end
 		Variable Input = new Variable();
 		Input.Id = "INPUT";
 		Input.Type = "int";

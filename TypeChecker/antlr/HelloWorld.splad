@@ -1,0 +1,273 @@
+int ButtonOne <-- 12;
+int ButtonTen <-- 10;
+int ButtonConfirm <-- 13;
+bool IsStaffInput <-- false;
+
+container Gin <-- A0;
+container Sugar <-- A2;
+container Soda <-- A1;
+container Lemon <-- A5;
+
+drink TomCollins is
+begin
+	add 3 of Gin;
+	add 2 of Sugar;
+	add 2 of Lemon;
+	add 5 of Soda;
+end
+
+drink SweetCollins as TomCollins but
+begin
+	remove Lemon;
+	add 1 of Lemon;
+	add 1 of Sugar;
+end
+
+drink StrongCollins as TomCollins but
+begin
+	add 3 of Gin;
+end
+
+drink SuperSweetCollins as SweetCollins but
+begin
+	remove Lemon;
+	add 3 of Sugar;
+end
+
+drink SoftwareShot is
+begin
+	add 3 of Gin;
+	add 3 of Sugar;
+	add 3 of Lemon;
+end
+
+function StartMsg return nothing using()
+begin
+	call LCDPrint("Welcome to", 0);
+	call LCDPrint("      SPLAD     ", 1);
+	return nothing;
+end
+
+function WaitOnInput return nothing using()
+begin
+	call delay(300);
+	while(call digitalRead(ButtonOne) = LOW AND call digitalRead(ButtonTen) =  LOW AND call digitalRead(ButtonConfirm) = LOW)
+	begin
+		call delay(50);
+	end
+	return nothing;
+end
+
+function GetInputNumber return int using()
+begin
+	int ReturnValue <-- 0;
+	while(call digitalRead(ButtonConfirm) = LOW)
+	begin
+		call delay(100);
+		if(call digitalRead(ButtonOne) = HIGH)
+		begin
+			ReturnValue <-- ReturnValue + 1;
+		end
+		else if(call digitalRead(ButtonTen) = HIGH)
+		begin
+			ReturnValue <-- ReturnValue + 10;
+		end
+		call LCDPrint(string(ReturnValue), 1);
+	end
+	return ReturnValue;
+end
+
+function StaffAction return nothing using()
+begin
+	call LCDPrint("Type ID of the", 0);
+	call LCDPrint("drink to buy", 1);
+	
+	/*Wait for user to press a button*/
+	call WaitOnInput();
+	call LCDClear();
+	call LCDPrint("Drink ID:", 0);
+	
+	int drinkID <-- call GetInputNumber();
+	call LCDPrint("Number of drinks", 0);
+	call LCDPrint("",1);
+	/*Wait for user to press a button*/
+	call WaitOnInput();
+	
+	int Amount <-- call GetInputNumber();
+	
+	if(call RFIDWrite(drinkID, Amount))
+	begin
+	call LCDPrint("", 1);
+	call LCDPrint("Amount: " + string(Amount), 1);
+	call LCDPrint("Drink ID: " + string(drinkID), 0);
+	end
+	else
+	begin
+		call LCDClear();
+		call LCDPrint("ERRROR", 0);
+	end
+	call delay(2000);
+	call StartMsg();
+	return nothing;
+end
+
+function pour return nothing using(container cont, int Amount)
+begin
+	call digitalWrite(cont, HIGH);
+	call delay(Amount*1000);
+	call digitalWrite(cont, LOW);
+	return nothing;
+end
+
+function readyToPour return nothing using(drink InputDrink, int drinksLeft)
+begin
+	call pourDrink(InputDrink);
+	
+	call LCDPrint("Drinks left:", 0);
+	call LCDPrint(string(drinksLeft),1);
+	call delay(2000);
+	call LCDPrint("Drink is served", 0);
+	call LCDPrint("    by SPLAD    ", 1);
+	return nothing;
+end
+
+function DrinkFound return nothing using(int DrinkID, int Amount, drink DrinkToServe, string DrinkName)
+begin
+	call LCDPrint("Confirm to make:", 0);
+	call LCDPrint(DrinkName, 1);
+	call delay(1000);
+	bool run <-- true;
+	while(run = true)
+	begin
+		if(call digitalRead(ButtonConfirm) = HIGH)
+		begin
+			if(call RFIDWrite(DrinkID, Amount-1))
+			begin
+			call readyToPour(DrinkToServe, Amount-1);
+			end
+			else
+			begin
+				call LCDPrint("Error", 0);
+				call LCDPrint("writing to tag", 1);
+			end
+			run <-- false;
+		end
+		else if (call digitalRead(ButtonOne) = HIGH OR call digitalRead(ButtonTen) = HIGH)
+		begin
+			call LCDPrint("Drink making", 0);
+			call LCDPrint("cancelled",1);
+			run <-- false;
+		end
+	end
+	return nothing;
+end
+
+function CustomerAction return nothing using(int DrinkID, int Amount)
+begin
+	if(Amount > 0)
+	begin
+	switch(DrinkID)
+	begin
+		case 1:
+			call DrinkFound(DrinkID, Amount, TomCollins, "Tom Collins");
+			break;
+		case 10:
+			call DrinkFound(DrinkID, Amount, SweetCollins, "Sweet Collins");
+			break;
+		case 23:
+			call DrinkFound(DrinkID, Amount, SuperSweetCollins, "S. Sweet Collins");
+			break;
+		case 42:
+			call DrinkFound(DrinkID, Amount, StrongCollins, "Strong Collins");
+			break;
+		case 101:
+			call DrinkFound(DrinkID, Amount, SoftwareShot, "Software Shot");
+			break;
+		default:
+			call LCDPrint("Error with RFID data", 0);
+			call LCDPrint("Contact staff", 1);
+			break;
+	end
+	end
+	else
+	begin
+		call LCDPrint("Your balance is", 0);
+		call LCDPrint("too low", 1);
+		call delay(3000);
+		call LCDClear();
+	end
+	return nothing;
+end
+
+function RFIDFound return nothing using(int DrinkID, int Amount)
+begin
+	if(IsStaffInput = true)
+	begin
+		call StaffAction();
+	end
+	else
+	begin
+		call CustomerAction(DrinkID, Amount);
+	end
+	return nothing;
+end
+
+function ChangeMode return bool using(bool mode)
+begin
+	string OutputString <-- "";
+	bool returnValue <-- false;
+	if(mode = true)
+	begin
+		OutputString <-- "staffmode";
+	end
+	else if(mode = false)
+	begin
+		OutputString <-- "customermode";
+	end
+	
+	if(OutputString != "")
+	begin
+		call LCDPrint("Confirm change", 0);
+		call LCDPrint("to " + OutputString, 1);
+		call WaitOnInput();
+		if(call digitalRead(ButtonConfirm) = HIGH)
+		begin
+			returnValue <-- mode;
+			call LCDClear();
+			call LCDPrint(OutputString + " on", 0);
+			call delay(2000);
+			call StartMsg();
+		end
+		else
+		begin
+			call LCDPrint("Customer", 0);
+			call LCDPrint("mode on", 1);
+			call delay(2000);
+			call StartMsg();
+		end
+	end
+	
+	return returnValue;
+end
+
+function loop return nothing using()
+begin
+	if(call digitalRead(ButtonOne) = HIGH)
+	begin
+		IsStaffInput <-- call ChangeMode(true);
+	end
+	else if(call digitalRead(ButtonTen) = HIGH)
+	begin
+		IsStaffInput <-- call ChangeMode(false);
+	end
+	return nothing;
+end
+
+function setup return nothing using()
+begin	
+	call pinMode(ButtonOne, INPUT);
+	call pinMode(ButtonTen, INPUT);
+	call pinMode(ButtonConfirm, INPUT);
+	call StartMsg();
+	return nothing;
+end

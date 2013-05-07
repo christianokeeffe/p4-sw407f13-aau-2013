@@ -10,9 +10,8 @@ bool IsStaffInput <-- false;
 container Gin <-- A0; /*Red*/
 container Sugar <-- A2;/*Red*/
 container Soda <-- A1;/*Red*/
-container Lime <-- A5;/*Red*/
+container Lime <-- 11;/*Red*/
 container Rum <-- 6;/*Red*/
-container Cream <-- 11;/*Red*/
 container Mintleaves <-- A5; /*Green*/
 container Banana <-- A3; /*Yellow*/
 
@@ -29,7 +28,7 @@ end
 drink BananaShake is 
 begin
 	add 5 of Banana;
-	add 5 of Cream;
+	add 5 of Rum;
 end
 
 /*A mojito drink*/

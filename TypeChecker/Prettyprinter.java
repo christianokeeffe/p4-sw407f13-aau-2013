@@ -12,7 +12,6 @@ public class Prettyprinter extends SPLADBaseVisitor<Value> {
 		
 		String id = ctx.expr().getText();
 		
-		//System.out.print("<-- ");
 		Value val = visit(ctx.expr());
 		
 		memory.put(id, val)

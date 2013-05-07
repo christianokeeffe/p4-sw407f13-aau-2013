@@ -1,0 +1,106 @@
+container Vodka <-- 15;
+container BlueCuracao <-- 18;
+container Sprite <-- 10;
+container Ice <-- 1;
+container WhiteRum <-- 3;
+container PineappleJucie <-- 4;
+container CoconutMilk <-- 44;
+return nothing;
+
+function Setup return nothing using()
+begin
+	/*Do something */
+end
+
+function QuantityToTime return double using (double Quantity)
+begin
+	double result;
+	if( Quantity > 0.0 AND Quantity < 100.0)
+	begin
+		result <-- Quantity*1.25;
+	end
+	else if(Quantity = 101.0)
+	begin
+		result <-- Quantity*0.1;
+	end
+	else
+	begin
+		result <-- Quantity;
+	end
+	return result;
+end
+
+function OpenValve return bool using (int Pin, double Time)
+begin
+	call Output(Pin, HIGH);
+	call delay(int(Time*1000));
+	call Output(Pin, LOW);
+	return true;
+end
+
+function Pour return bool using (container Name, double Quantity)
+begin
+	int ValvePin <-- Name;
+	call OpenValve(ValvePin, QuantityToTime(Quantity));
+	return true;
+end
+
+function Serve return bool using ()
+begin
+	/* Implement serve function */
+	
+	call LCDPrint("Drink ready, enjoy!");
+	return true;
+end
+
+function Ice return bool using (int Quantity)
+begin
+	/* Implement ice function */
+	return false;
+end
+
+function Shake return bool using (int Duration)
+begin
+	/* Implement shake function */
+	return false;
+end
+
+function Stir return bool using (int Duration)
+begin
+	/* Implement stir function */
+	return false;
+end
+
+function LCDPrint return bool using (string Text)
+begin
+	/* Implement PrintLCD */
+	return false;
+end
+
+function MakeDrink return bool using (int DrinkID)
+begin
+	switch(DrinkID)
+	begin
+		case 13102: /* IsBjorn: */
+			call LCDPrint("Now mixing IsBjorn");
+			call Pour(Vodka, 2.0);
+			call Pour(BlueCuracao, 0.2);
+			call Pour(Sprite, 10.0);
+			call Ice(4);
+			call Serve();
+		break;
+		case 13132: /* Pina Colada: */
+			call LCDPrint("Now mixing Pina Colada");
+			call Pour(WhiteRum, 5.0);
+			call Pour(PineappleJucie, 10.0);
+			call Pour(CoconutMilk, 5.0);
+			call Shake(15);
+			call Ice(2);
+			call Serve();
+		break;
+		default:
+			call LCDPrint("Unknown drink");
+		break;
+	end
+	return true;
+end

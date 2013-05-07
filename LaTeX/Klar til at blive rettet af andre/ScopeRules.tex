@@ -27,12 +27,12 @@ The main think about declaration order is how the data declarations are made, do
 In some languages that allow a program structure to be a sequence of function definitions, like C, C++, PHP. Definitions outside functions in a file create global variables, which make it  visible to those functions.
 
 \textit{Dynamic Scope}
-With dynamic scope, the scope can only be determined at run time, because it is based on the calling sequence of sub-programs and not there their spatial relationship to one a other.
+With dynamic scope, the scope is determined at run time, because it is based on the calling sequence of sub-programs and not there their spatial relationship to one a other.
 
 \textit{The difference between dynamic and static scope}
 To help better understand the difference between dynamic and static Scope a larger code example is being shown here \ref{code:StaticDynamicScoping}.
-\begin{code}{code:StaticDynamicScoping}{A simple code showing the difference between static and dynamic scoping.}
-\begin{listing}
+\begin{code}{code:StaticDynamicScoping}{A simple code showing the difference between static and dynamic scoping. Taken from \ref{StaticvsDynamic}}
+\begin{lstlisting}
 const int b = 5;
 int foo()
 {
@@ -52,7 +52,7 @@ int main()
 	bar();
 	return 0;
 }
-\end{listing}
+\end{lstlisting}
 \end{code}
 The code \ref{code:StaticDynamicScoping} will in both cases return 10 in the foo() function, but in bar() the result will differ. With static scoping the bar() function will return 10 while with dynamic scoping it will return 7.
 

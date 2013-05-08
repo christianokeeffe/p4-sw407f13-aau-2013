@@ -8,7 +8,7 @@
 \raggedbottom
 \usepackage[all]{nowidow}
 \usepackage[T1]{fontenc}  % Hjælper med orddeling ved æ, ø og å. Sætter fontene til at være ps-fonte, i stedet for bmp	
-\usepackage{syntax}
+\usepackage{syntax} %til BNF
 \usepackage{everyshi}
 \makeatletter
 \let\totalpages\relax
@@ -229,6 +229,8 @@ morekeywords={int, container, string, bool, double, HIGH, LOW, true, false, noth
 
 \pagestyle{custom}
 
+\usepackage{newfloat}
+
 %%%% CUSTOM COMMANDS %%%%
 
 % Billede hack %
@@ -251,9 +253,37 @@ morekeywords={int, container, string, bool, double, HIGH, LOW, true, false, noth
 			\end{pmatrix}$
 }
 
+% declare the floating environment {Grammar}
+% this will also define \listofGrammars:
+\DeclareFloatingEnvironment[
+  % the file extension for the file used to create the list:
+  fileext   = logr,% don't use log here!
+  % the heading for the list:
+  listname  = {List of Grammars},
+  % the name used in captions:
+  name      = Grammar,
+  % the default floating parameters if the environment is used
+  % without optional argument:
+  placement = htp
+]{Grammar}
+
+%grammatik
+\newenvironment{grammatik}[2]
+{
+\def\fooNoI{#1} \def\fooNoII{#2}
+\begin{Grammar}
+\begin{grammar}
+}
+{
+\end{grammar}
+\caption{\fooNoII}\label{lst:\fooNoI}
+\end{Grammar}
+}
+
 %kode
 \newcommand{\kode}[3]{
 \noindent
+\newline
 \begin{minipage}{\textwidth}
 \begin{mdframed}
 		\lstinputlisting{kode/#3}
@@ -263,7 +293,7 @@ morekeywords={int, container, string, bool, double, HIGH, LOW, true, false, noth
 }
 
 \newenvironment{code}[2]
-{\def\fooNoI{#1} \def\fooNoII{#2}\noindent \begin{minipage}{\textwidth}\begin{mdframed}}{\end{mdframed}\lstcapt{\fooNoII}\label{lst:\fooNoI}\end{minipage}}
+{\def\fooNoI{#1} \def\fooNoII{#2}\noindent\newline \begin{minipage}{\textwidth}\begin{mdframed}}{\end{mdframed}\lstcapt{\fooNoII}\label{lst:\fooNoI}\end{minipage}}
 
 % quotering
 \newcommand{\gaas}[{1}]{``#1''}

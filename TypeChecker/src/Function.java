@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-
+//latex start Function
 public class Function {
 	String Name;
 	ArrayList<ParamsType> Params;
@@ -11,3 +11,4 @@ public class Function {
         return this.Name;
     }
 }
+//latex end

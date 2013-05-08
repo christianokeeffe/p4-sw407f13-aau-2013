@@ -8,7 +8,7 @@ public class Error {
 	  this.ErrorNumber = ErrNmbr;
 	  this.ErrorBody = ErrBdy;
 	}
-
+//latex start Error
 	public String GetErrorMessage()
 	{
 		String ErrorMessage;
@@ -24,6 +24,7 @@ public class Error {
 	         	break;
 	         	case 2:  ErrorMessage = "Value \"" + this.ErrorBody +"\" is not of type numeric\n";
 	            break;
+				//latex end
 	         	case 3:  ErrorMessage = "Value \"" + this.ErrorBody +"\" is not of type string\n";
 	            break;
 	         	case 4:  ErrorMessage = "Dangling operator \"" + this.ErrorBody +"\"\n";

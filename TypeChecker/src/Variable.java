@@ -1,4 +1,4 @@
-
+//latex start Variable
 public class Variable {
 	String Id;
 	String Type;
@@ -6,3 +6,4 @@ public class Variable {
 	boolean constant = false;
 	boolean isArray = false;
 }
+//latex end

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.10.22)  6 MAY 2013 11:46
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.10.22)  8 MAY 2013 11:41
 entering extended mode
 **C:/Users/Christian/Documents/Arbejde/UNI/P4/svn/LaTeX/RapportNIXPILLE/Report.
 tex
@@ -2156,7 +2156,17 @@ Package: lastpage 2011/09/01 v1.2k Refers to last page's name (HMM; JPG)
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\genmisc\nth.sty"
 Package: nth 2002/02/27
-))
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\newfloat.sty"
+Package: newfloat 2011/11/16 v1.0a Defining new floating environments (AR)
+)
+Package newfloat Info: New float `Grammar' with options ` fileext = logr,listna
+me = {List of Grammars}, name = Grammar, placement = htp ' on input line 268.
+\c@Grammar=\count355
+Package newfloat Info: float type `Grammar'=4 on input line 268.
+\c@logrdepth=\count356
+\enitdp@Description=\count357
+)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
 Package: babel 2008/07/08 v3.8m The Babel package
 
@@ -2171,7 +2181,7 @@ Language: english 2005/03/30 v3.3o English support from the babel system
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
 File: babel.def 2008/07/08 v3.8m Babel common definitions
-\babel@savecnt=\count355
+\babel@savecnt=\count358
 \U@D=\dimen328
 )
 \l@canadian = a dialect from \language\l@american 
@@ -2199,21 +2209,21 @@ LaTeX Font Info:    ... okay on input line 3.
  ABD: EveryShipout initializing macros
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count356
+\scratchcounter=\count359
 \scratchdimen=\dimen329
 \scratchbox=\box108
-\nofMPsegments=\count357
-\nofMParguments=\count358
+\nofMPsegments=\count360
+\nofMParguments=\count361
 \everyMPshowfont=\toks52
-\MPscratchCnt=\count359
+\MPscratchCnt=\count362
 \MPscratchDim=\dimen330
-\MPnumerator=\count360
-\makeMPintoPDFobject=\count361
+\MPnumerator=\count363
+\makeMPintoPDFobject=\count364
 \everyMPtoPDFconversion=\toks53
 ) ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 3.
 \AtBeginShipoutBox=\box109
-\c@lstlisting=\count362
+\c@lstlisting=\count365
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
@@ -2238,7 +2248,7 @@ Package: nameref 2012/07/31 v2.42 Cross-referencing by name of section
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count363
+\c@section@level=\count366
 LaTeX Info: Redefining \Ref on input line 503.
 )
 Redoing nameref's sectioning
@@ -2261,7 +2271,7 @@ Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             http://www.ctan.org/tex-archive/ 
 (lastpage)             install/macros/latex/contrib/pageslts.tds.zip
 (lastpage)             ! on input line 3.
-\c__siunitx_mathsf_int=\count364
+\c__siunitx_mathsf_int=\count367
 LaTeX Font Info:    Try loading font information for U+msa on input line 3.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
@@ -2274,7 +2284,7 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 LaTeX Font Info:    Try loading font information for U+stmry on input line 3.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\stmaryrd\ustmry.fd")
-\c__siunitx_mathtt_int=\count365
+\c__siunitx_mathtt_int=\count368
 
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\formalia
 /FormaliaForside.tex) [1
@@ -2614,23 +2624,33 @@ See the caption package documentation for explanation.
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
 LanguageSpecification/bnfintro.tex)
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
-LanguageSpecification/BNF7.tex [11] [12] [13]
+LanguageSpecification/BNF7.tex
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
-LanguageSpecification/lexiconintro.tex) [14])
+LanguageSpecification/lexiconintro.tex
+Package FiXme Info: inner mode detected;
+(FiXme)             turning margin layout form off on input line 1.
+)
+Package hyperref Info: bookmark level for unknown Grammar defaults to 0 on inpu
+t line 231.
+
+
+LaTeX Warning: Float too large for page by 1998.15952pt on input line 231.
+
+)
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
-LanguageSpecification/Semantics.tex) [15]
+LanguageSpecification/Semantics.tex [11] [12])
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
 LanguageSpecification/TheoryTransitionRules.tex
 
-LaTeX Warning: Reference `app:TransitionRules' on page 16 undefined on input li
+LaTeX Warning: Reference `app:TransitionRules' on page 13 undefined on input li
 ne 1.
 
-
+[13]
 Overfull \hbox (55.16943pt too wide) in paragraph at lines 35--41
 [][] 
  []
 
-[16]
+
 Overfull \hbox (84.81839pt too wide) in alignment at lines 48--49
  [] [] 
  []
@@ -2671,6 +2691,10 @@ Overfull \hbox (77.36812pt too wide) in alignment at lines 66--74
  []
 
 
+Overfull \vbox (99.58574pt too high) has occurred while \output is active []
+
+
+[14]
 Overfull \hbox (94.54933pt too wide) in alignment at lines 79--80
  [] [] 
  []
@@ -2690,43 +2714,43 @@ Overfull \hbox (94.54933pt too wide) in alignment at lines 80--92
  [] [] 
  []
 
-[17])
+)
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
-LanguageSpecification/TypeRules.tex) [18]
+LanguageSpecification/TypeRules.tex [15]) [16]
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
 Implementation/Architecture.tex
 
-LaTeX Warning: Reference `sec:VisitorPattern' on page 19 undefined on input lin
+LaTeX Warning: Reference `sec:VisitorPattern' on page 17 undefined on input lin
 e 1.
 
 )
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
-Implementation/Hardware.tex [19
+Implementation/Hardware.tex [17
 
-] [20])
+] [18])
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
 Implementation/OverviewCompiler.tex
 
-LaTeX Warning: Reference `fig:CraftingACompiler2' on page 21 undefined on input
+LaTeX Warning: Reference `fig:CraftingACompiler2' on page 19 undefined on input
  line 3.
 
-<billeder/OverviewCompiler.PNG, id=700, 420.3705pt x 295.1025pt>
+<billeder/OverviewCompiler.PNG, id=691, 420.3705pt x 295.1025pt>
 File: billeder/OverviewCompiler.PNG Graphic file (type png)
 
 <use billeder/OverviewCompiler.PNG>
 Package pdftex.def Info: billeder/OverviewCompiler.PNG used on input line 4.
 (pdftex.def)             Requested size: 340.8013pt x 239.25684pt.
- [21]
-<billeder/OverviewCompiler2.PNG, id=715, 477.58424pt x 255.354pt>
+ [19]
+<billeder/OverviewCompiler2.PNG, id=706, 477.58424pt x 255.354pt>
 File: billeder/OverviewCompiler2.PNG Graphic file (type png)
 
 <use billeder/OverviewCompiler2.PNG>
 Package pdftex.def Info: billeder/OverviewCompiler2.PNG used on input line 14.
 (pdftex.def)             Requested size: 340.8013pt x 182.22604pt.
-) [22 <C:/Users/Christian/Documents/Arbejde/UNI/P4/svn/LaTeX/RapportNIXPILLE/bi
+) [20 <C:/Users/Christian/Documents/Arbejde/UNI/P4/svn/LaTeX/RapportNIXPILLE/bi
 lleder/OverviewCompiler.PNG>]
 
-LaTeX Warning: Marginpar on page 23 moved by 0.67662pt.
+LaTeX Warning: Marginpar on page 21 moved by 0.67662pt.
 
 
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
@@ -2748,24 +2772,24 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 10.
 See the caption package documentation for explanation.
 
-<billeder/parsetree.png, id=736, 307.90031pt x 473.51906pt>
+<billeder/parsetree.png, id=727, 307.90031pt x 473.51906pt>
 File: billeder/parsetree.png Graphic file (type png)
 
 <use billeder/parsetree.png>
 Package pdftex.def Info: billeder/parsetree.png used on input line 22.
 (pdftex.def)             Requested size: 298.1987pt x 458.63374pt.
- [23 <C:/Users/Christian/Documents/Arbejde/UNI/P4/svn/LaTeX/RapportNIXPILLE/bil
+ [21 <C:/Users/Christian/Documents/Arbejde/UNI/P4/svn/LaTeX/RapportNIXPILLE/bil
 leder/OverviewCompiler2.PNG>])
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
-Implementation/KnownLexersAndParsers.tex [24 <C:/Users/Christian/Documents/Arbe
-jde/UNI/P4/svn/LaTeX/RapportNIXPILLE/billeder/parsetree.png>] [25]
-Overfull \hbox (9.4004pt too wide) in paragraph at lines 75--75
+Implementation/KnownLexersAndParsers.tex [22 <C:/Users/Christian/Documents/Arbe
+jde/UNI/P4/svn/LaTeX/RapportNIXPILLE/billeder/parsetree.png>] [23]
+Overfull \hbox (9.4004pt too wide) in paragraph at lines 76--76
 \T1/cmr/m/n/10.95 JavaScript,Objective- 
  []
 
 )
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
-Implementation/ANTLR.tex [26]
+Implementation/ANTLR.tex [24]
 Package mdframed Info: mdframed works in twoside mode on input line 7.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
@@ -2781,20 +2805,20 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 28.
 See the caption package documentation for explanation.
 
+[25]
 
-LaTeX Warning: Reference `lst:HeeloWoorld' on page 27 undefined on input line 3
+LaTeX Warning: Reference `lst:HeeloWoorld' on page 26 undefined on input line 3
 1.
 
-<billeder/ParsedCode.png, id=794, 697.10437pt x 461.47406pt>
+<billeder/ParsedCode.png, id=791, 697.10437pt x 461.47406pt>
 File: billeder/ParsedCode.png Graphic file (type png)
 
 <use billeder/ParsedCode.png>
 Package pdftex.def Info: billeder/ParsedCode.png used on input line 33.
 (pdftex.def)             Requested size: 426.0pt x 282.00574pt.
- [27])
+ [26])
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
-Implementation/LexicalAnalyzer.tex [28 <C:/Users/Christian/Documents/Arbejde/UN
-I/P4/svn/LaTeX/RapportNIXPILLE/billeder/ParsedCode.png>]
+Implementation/LexicalAnalyzer.tex
 Package mdframed Info: mdframed works in twoside mode on input line 21.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
@@ -2810,21 +2834,22 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 24.
 See the caption package documentation for explanation.
 
-)
+[27 <C:/Users/Christian/Documents/Arbejde/UNI/P4/svn/LaTeX/RapportNIXPILLE/bill
+eder/ParsedCode.png>])
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
-Implementation/Tokens.tex [29])
+Implementation/Tokens.tex [28])
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
-Implementation/Parser.tex [30]) [31] [32
-
-]
+Implementation/Parser.tex [29]) [30]
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\formalia
 /FormaliaKonklusion.tex)
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\Report.b
-bl [33] [34
+bl [31
 
-] [35]) [36]
+] [32
+
+] [33]) [34]
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\Report.l
-ox) [37] [38
+ox) [35] [36
 
 ]
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\appendix
@@ -2853,7 +2878,7 @@ Overfull \hbox (110.81824pt too wide) in alignment at lines 34--54
  [] [] 
  []
 
-[39
+[37
 
 ]
 Overfull \hbox (93.02887pt too wide) in alignment at lines 56--57
@@ -2885,7 +2910,7 @@ Overfull \hbox (93.02887pt too wide) in alignment at lines 109--137
  [] [] 
  []
 
-[40]
+[38]
 Overfull \hbox (93.02887pt too wide) in alignment at lines 137--143
  [] [] 
  []
@@ -2895,7 +2920,7 @@ Overfull \hbox (56.53784pt too wide) in paragraph at lines 148--192
 [][] 
  []
 
-) [41] [42] 
+) [39] [40] 
 AED: lastpage setting LastPage
 \tf@toc=\write7
 \tf@lox=\write8
@@ -2907,20 +2932,20 @@ ux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 127.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 127.
 Package rerunfilecheck Info: File `Report.out' has not changed.
-(rerunfilecheck)             Checksum: 34F9C8B17D29E3260E135D564E4F8B6E;6000.
+(rerunfilecheck)             Checksum: 173A0D794BBD1022B936E644CBD7AD3A;6000.
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 36296 strings out of 493921
- 661952 string characters out of 3147269
- 787247 words of memory out of 3000000
- 38567 multiletter control sequences out of 15000+200000
- 34165 words of font info for 89 fonts, out of 3000000 for 9000
+ 36446 strings out of 493921
+ 664515 string characters out of 3147269
+ 793960 words of memory out of 3000000
+ 38717 multiletter control sequences out of 15000+200000
+ 34924 words of font info for 90 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
- 63i,20n,84p,1177b,1714s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,20n,84p,1177b,1732s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.enc}{C:/Pro
 gram Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{C:/Program Fil
 es/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKTeX 2.9/font
@@ -2945,9 +2970,9 @@ nts/type1/public/cm-super/sfti0900.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 m-super/sftt0900.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/s
 ftt1000.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/bookman/ubkd8a.pfb><C:
 /Program Files/MiKTeX 2.9/fonts/type1/urw/bookman/ubkl8a.pfb>
-Output written on Report.pdf (50 pages, 886768 bytes).
+Output written on Report.pdf (48 pages, 884503 bytes).
 PDF statistics:
- 1111 PDF objects out of 1200 (max. 8388607)
- 239 named destinations out of 1000 (max. 500000)
+ 1102 PDF objects out of 1200 (max. 8388607)
+ 238 named destinations out of 1000 (max. 500000)
  670 words of extra memory for PDF output out of 10000 (max. 10000000)
 

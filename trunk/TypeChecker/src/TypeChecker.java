@@ -1503,7 +1503,7 @@ public class TypeChecker extends SPLADBaseVisitor<Value>{
 		}
 		return new Value(Comp);
 	}
-	
+	//latex start DrinkDcl
 	@Override public Value visitDrinkdcl(SPLADParser.DrinkdclContext ctx) 
 	{ 
 	    Value ID  = visit(ctx.id(0));
@@ -1527,6 +1527,7 @@ public class TypeChecker extends SPLADBaseVisitor<Value>{
 		
 		return null; 
 	}
+	//latex end
 	
 	@Override public Value visitChangedrinkstmts(SPLADParser.ChangedrinkstmtsContext ctx)
 	{ 

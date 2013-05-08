@@ -181,7 +181,6 @@ public class TypeChecker extends SPLADBaseVisitor<Value>{
 	@Override
 	public Value visitRoot(SPLADParser.RootContext ctx) {
 		if(ctx.dcl() != null){
-			//visit(ctx.dcl());
 			visit(ctx.dcl());
 		}
 		else if (ctx.function() != null){
@@ -1226,7 +1225,7 @@ public class TypeChecker extends SPLADBaseVisitor<Value>{
 					Error err = new Error(6, str);
 					ErrList.add(err);
 				}
-				
+				//latex start IntError
 				if(type.toString().equals("int") || type.toString().equals("container"))
 				{
 					if(str.contains("."))
@@ -1235,6 +1234,7 @@ public class TypeChecker extends SPLADBaseVisitor<Value>{
 						ErrList.add(err);
 					}
 				}
+				//latex end
 			}
 		}
 		

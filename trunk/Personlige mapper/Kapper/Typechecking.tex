@@ -1,0 +1,32 @@
+\section{Type checking}
+In this section we will describe how we type check code using the visitor pattern from the pretty printer \fxfatal{ref mangler}.
+
+\subsection*{Value}
+We use a class called "Value" to be able to return almost any type of data through the visitor pattern.
+\kode{Value type}{Value}{Value.txt}
+This class as can be seen on listing \ref{lst:Value} allows us to write "Value p = new Value(5)" thus we can return the value 5 up our tree. This can also be used to combine different types and return them as a value. This is useful because we do not always know what type will be returned and this makes it possible to convert everything into the same type which we can evaluate later.
+\kode{How to evaluate Value}{isType}{isType.txt}
+When we evaluate the type value we could use functions like those seen on listing \ref{lst:isType} which returns "true" or "false". In the code example we make use of regular expressions to determine if it is an int or double by looking at what it contains like numbers and symbols in the defined order. We use similar functions for each other type we have in the language.
+
+\subsection*{Container and drink}
+We have made two special types "container" and "drink".
+
+\subsection*{Functions}
+We have made a class functions as seen on listing \ref{lst:Function} to make it easier to store the name, parameters and return value of a function and later retrieve the specific data that we need. Every time a function is found it is added our function memory. This allows us to find it when for instance the function is called later in code and thus we can see if the call have the right setup simply by 
+\kode{Function class}{Function}{Function.txt}
+The code that programmer writes is intended to be compiled to an Arduino platform and as such needs to have certain functions to work properly, such as a function "setup" and "loop" and thus we check if they are present. But some commands like LCDPrint and RFIDWrite are predefined in the Arduino language and can be used without a declaration, so we have also defined them in our language like seen on listing \ref{lst:LCDPrint}
+\kode{Defining LCDPrint}{LCDPrint}{LCDPrint.txt}
+We will not implement all Arduino functions because it would take too much time and effort, so we have decided to only take the ones involved with the LCD and RFID. Furthermore we have defined our own function \ref{lst:PourDrink} so we can type check it.
+\kode{Predefining function PourDrink}{PourDrink}{PourDrink.txt}
+
+\subsection*{Variables}
+In our language "INPUT" and "OUTPUT" would be seen as variables and by default be undefined so we predefined them like seen on listing \ref{lst:OUTPUT}. This is also done for "A0" to "A5" since these are used when determining input and output for the Arduino board, we have defined them with the type "container".
+\kode{Predefining OUTPUT}{OUTPUT}{OUTPUT.txt}
+We have made a variable class to be make it easier to store and retrieve the necessary data. This class be seen on listing \ref{lst:Variable}. In the class we have added two boolean expressions to make it easier handle constants and arrays, so if we meet a constant or an array we set the appropriate expression to true this allows us to make a simple check to see if you can assign a new value to the variable.
+\kode{Variable class}{Variable}{Variable.txt}
+
+\subsection*{Error handling}
+We have made an error class to notify the programmer of mistakes he might make when writing his code. When an error is encountered we send a number and an id to our error class as seen on listing \ref{lst:IntError}.
+\kode{Int Error}{IntError}{IntError.txt}
+Our error class contains a switch case an excerpt of this can be seen on listing \ref{lst:Error}. The error found is saved to a list that will be shown when all the nodes have been visited.
+\kode{Switch case error handling}{Error}{Error.txt}

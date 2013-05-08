@@ -12,7 +12,7 @@ To specify the language, so it will make the program as suitable as possible for
 \item[Mechanism for pouring ingredients:] A mechanism for pouring the right amount of ingredients into the drink.
 \end{inddes}
 These are by our assessment the most central aspects of the drink machine system. We will now make a judgment of each of the listed aspects, and see if it is possible to make a structure in the language which will support the programmer on in any other way make it easier implement this aspect in the system.
-\subsection{A drink:}
+\subsection{A drink}
 The concept of a drink is one of the most central aspects of a drink machine system. A drink should contain a recipe as a list of ingredients, and how much of the ingredients to pour. A drink do also have a name, and should have a form for ID which can be stored on a RFID-tag. We should make a structure which can implement a drink type and assign the recipe to the drink. The structure should be following the same design criterias as the rest of the language, and should be inspirited by the other structures in the language. To fulfill these requirements, the declaration of a drink should have a block with "begin" and "end", and in the block have the "recipe". The result can be seen on listing \ref{lst:drink1}.
 
 \begin{code}{drink1}{The first example of a declaration of a drink}
@@ -38,7 +38,7 @@ end
 \end{lstlisting}
 \end{code}
 
-In some situations, a drink could be very much alike from an other drink, with only a few changes. For an example could it be a drink with a double shot of alcohol. In this case, it would be the exactly same drink, but with more of one ingredient. It could also be an ingredient that should be remove, for example alcohol to make it non-alcohol ore it someone is allergic to some of the elements in a drink. Because of these situations and many more, it could be preferable to have a way to inherit the recipe from an other drink, and then modify it. The declaration of a drink which inherits from an other drink should be very much alike the normal drinkdeclaration as seen on listing \ref{lst:drink2}, but also with so significant modifications, so it is easy to see that this drink inherits from an other drink. The block structure should be the same, and the way of add an amount of an ingredient should be the same. We have to add a now command to the block statement: "remove". With the remove statement, it should be possible to completely remove an ingredient from a drink.
+In some situations, a drink could be very much alike from an other drink, with only a few changes. For an example could it be a drink with a double shot of alcohol. In this case, it would be the exactly same drink, but with more of one ingredient. It could also be an ingredient that should be remove, for example alcohol to make it non-alcohol ore it someone is allergic to some of the elements in a drink. Because of these situations and many more, it could be preferable to have a way to inherit the recipe from an other drink, and then modify it. The declaration of a drink which inherits from an other drink should be very much alike the normal drinkdeclaration as seen on listing \ref{lst:drink2}, but also with so significant modifications, so it is easy to see that this drink inherits from an other drink. The block structure should be the same, and the way of add an amount of an ingredient should be the same. We have to add a now command to the block statement: "remove". With the remove statement, it should be possible to completely remove an ingredient from a drink. It should be easy to read, and for that we have decided that the declaration statement before the block should be "drink [drinkname] as [drinkname of drink to inherit] but" to say that the drink is as the other drink, but with changes. The final structure will therefore be as seen on listing \ref{lst:drinkinherit}.
 
 \begin{code}{drinkinherit}{The structure of how to declare a drink which inherits the recipe from an other drink}
 \begin{lstlisting}[mathescape]
@@ -51,5 +51,30 @@ begin
 end
 \end{lstlisting}
 \end{code}
+
+We have now defined how the structure of the type drink should be. To formally define the syntax, we use BNF which can be seen on grammar \ref{gra:drinkgram}.
+
+\begin{grammatik}{drinkgram}{The grammar for the drink declaration}
+<drinkdcl> $\ra$ drink <id> is begin <drinkstmts> end
+\alt drink <id> as <id> but begin <changedrinkstmts> end
+
+<drinkstmts> $\ra$ <drinkstmt> <drinkstmtsend>
+
+<drinkstmt> $\ra$ add <numeric> of <id>
+
+<drinkstmtsend> $\ra$ ; <drinkstmts>
+\alt ;
+
+<changedrinkstmts> $\ra$ <changedrinkstmt> <changedrinkstmtsend>
+
+<changedrinkstmt> $\ra$ <drinkstmt>
+\alt remove <id>
+
+<changedrinkstmtsend> $\ra$ ; <changedrinkstmts>
+\alt ;
+\end{grammar}
+
+\subsection{An ingredient}
+With the drink type defined above, we should now focus on, how to define an ingredient. 
 
 \end{document}

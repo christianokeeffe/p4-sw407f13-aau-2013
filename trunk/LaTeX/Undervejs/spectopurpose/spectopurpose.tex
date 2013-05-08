@@ -1,0 +1,55 @@
+\input{../../RapportNIXPILLE/preamble}
+\begin{document}
+\section{Specification of the language to the purpose}
+To specify the language, so it will make the program as suitable as possible for writing drink machines, we looked at what the central aspects of a drink machine is:
+\begin{inddes}
+\item[A drink:] A drink is central to this machine. A drink should be the product made by the machine, defined by a number of ingredients. A drink should be like a recipe.
+\item[An ingredient:] An ingredient is the elements of a drink. It will in the machine be contained in a container. 
+\item[A RFID-tag:] A RFID-tag with a drink ID and an amount of how many drinks there are left.
+\item[A RFID-RW:] A RFID-reader and writer for Arduino, to write and read the content of a RFID-tag.
+\item[A LCD:] For communicating with the user, a LCD is in most situations preferable.
+\item[Buttons:] For getting input from users, buttons are a possibility. 
+\item[Mechanism for pouring ingredients:] A mechanism for pouring the right amount of ingredients into the drink.
+\end{inddes}
+These are by our assessment the most central aspects of the drink machine system. We will now make a judgment of each of the listed aspects, and see if it is possible to make a structure in the language which will support the programmer on in any other way make it easier implement this aspect in the system.
+\subsection{A drink:}
+The concept of a drink is one of the most central aspects of a drink machine system. A drink should contain a recipe as a list of ingredients, and how much of the ingredients to pour. A drink do also have a name, and should have a form for ID which can be stored on a RFID-tag. We should make a structure which can implement a drink type and assign the recipe to the drink. The structure should be following the same design criterias as the rest of the language, and should be inspirited by the other structures in the language. To fulfill these requirements, the declaration of a drink should have a block with "begin" and "end", and in the block have the "recipe". The result can be seen on listing \ref{lst:drink1}.
+
+\begin{code}{drink1}{The first example of a declaration of a drink}
+\begin{lstlisting}
+drink [drinkname] is
+begin
+	[recipe]
+end
+\end{lstlisting}
+\end{code}
+
+We have now decided how to define a element of the type drink. We must now look at the body of the block in the declaration. To make as readable as possible, it should be written a little like a normal recipe. Because of that, we have decided to state it in the form "add [number] of [ingredient]", where [number] is a number representing the amount of the ingredient to add. The declaration of a drink will now be defined as seen on listing \ref{lst:drink2}.
+
+\begin{code}{drink2}{The final structure of how to declare a drink}
+\begin{lstlisting}[mathescape]
+drink [drinkname] is
+begin
+	add [number] of [ingredient];
+	add [number] of [ingredient];
+	$\vdots$
+	add [number] of [ingredient];
+end
+\end{lstlisting}
+\end{code}
+
+In some situations, a drink could be very much alike from an other drink, with only a few changes. For an example could it be a drink with a double shot of alcohol. In this case, it would be the exactly same drink, but with more of one ingredient. It could also be an ingredient that should be remove, for example alcohol to make it non-alcohol ore it someone is allergic to some of the elements in a drink. Because of these situations and many more, it could be preferable to have a way to inherit the recipe from an other drink, and then modify it. The declaration of a drink which inherits from an other drink should be very much alike the normal drinkdeclaration as seen on listing \ref{lst:drink2}, but also with so significant modifications, so it is easy to see that this drink inherits from an other drink. The block structure should be the same, and the way of add an amount of an ingredient should be the same. We have to add a now command to the block statement: "remove". With the remove statement, it should be possible to completely remove an ingredient from a drink.
+
+\begin{code}{drinkinherit}{The structure of how to declare a drink which inherits the recipe from an other drink}
+\begin{lstlisting}[mathescape]
+drink [drinkname] as [drinkname of drink to inherit] but
+begin
+	add [number] of [ingredient];
+	remove [ingredient];
+	$\vdots$
+	add [number] of [ingredient];
+end
+\end{lstlisting}
+\end{code}
+
+\end{document}

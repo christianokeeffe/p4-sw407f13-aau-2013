@@ -4,7 +4,7 @@ In this section we will describe how we type check code using the visitor patter
 \subsection*{Value}
 We use a class called "Value" to be able to return almost any type of data through the visitor pattern.
 \kode{Value type}{Value}{Value.txt}
-This class as can be seen on listing \ref{lst:Value} allows us to write "Value p = new Value(5)" thus we can return the value 5 up our tree. This can also be used to combine different types and return them as a value. This is useful because we do not always know what type will be returned and this makes it possible to convert everything into the same type which we can evaluate later.
+This class, as can be seen on listing \ref{lst:Value}, allows us to write expressions like "Value p = new Value(5)" thus we can return the value 5. This can also be used to combine different types and return them as a value. This is useful because we do not always know what type will be returned and this makes it possible to convert everything into the same type which we can evaluate later.
 \kode{How to evaluate Value}{isType}{isType.txt}
 When we evaluate the type value we use functions like those seen on listing \ref{lst:isType} which returns "true" or "false". In the code example we make use of regular expressions to determine if it is an int or double by looking at what it contains like numbers and symbols in the defined order. We use similar functions for each other type we have in the language.
 

@@ -143,6 +143,17 @@
   timestamp = {2013.04.09}
 }
 
+@MISC{StaticvsDynamic,
+  author = {msujaws},
+  title = {Static vs. Dynamic Scoping},
+  howpublished = {\url{http://msujaws.wordpress.com/2011/05/03/static-vs-dynamic-scoping/}
+	[Last seen: 2013/05/07]},
+  month = {3 May},
+  year = {2011},
+  owner = {Niels},
+  timestamp = {2013.05.07}
+}
+
 @MISC{Javacc,
   author = {Theodore S. Norvell},
   title = {The JavaCC FAQ},
@@ -286,10 +297,5 @@
 	2013/03/15]},
   owner = {Kasper},
   timestamp = {2013.03.15}
-}
-
-@MISC{,
-  owner = {Niels},
-  timestamp = {2013.05.07}
 }
 

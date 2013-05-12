@@ -6,6 +6,7 @@ public class Main{
 	
 	static String file = "C:/Users/Aleksander/Documents/P4/Personlige mapper/Diktatoren/mainprogram3.splad";
 	
+	//latex start generatParseTree
 	public final static SPLADParser generatParseTree(){
 		CharStream program = null;
 		try {
@@ -19,6 +20,7 @@ public class Main{
 		parser.setBuildParseTree(true);
 		return parser;
 	}
+	//latex end
 	
 	public static void main(String[] args) {
 

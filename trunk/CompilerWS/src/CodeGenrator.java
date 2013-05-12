@@ -323,6 +323,7 @@ public class CodeGenrator extends SPLADBaseVisitor<String>{
 	}
 	
 	@Override
+	//latex start nodexp
 	public String visitRoots(SPLADParser.RootsContext ctx) {
 		if (ctx.root() != null){
 			return visit(ctx.root()) + visit(ctx.roots());
@@ -331,6 +332,7 @@ public class CodeGenrator extends SPLADBaseVisitor<String>{
 			return "";
 		}
 	}
+	//latex end
 	
 	@Override
 	public String visitStmt(SPLADParser.StmtContext ctx) {
@@ -545,6 +547,8 @@ public class CodeGenrator extends SPLADBaseVisitor<String>{
 		HeaderBuffer.append(visit(ctx.roots()));
 		
 		//Add the arrays containing the names and pins of the containers.
+		
+		//latex start container
 		if(ListOfContainers.size() != 0)
 		{
 			ContentBuffer.append("String ContainersnameSW407F13[" + ListOfContainers.size() + "];\n");
@@ -559,6 +563,7 @@ public class CodeGenrator extends SPLADBaseVisitor<String>{
 		
 		//Add the content of the program to the ContentBuffer
 		ContentBuffer.append(HeaderBuffer);
+		//latex end
 		
 		//Add the setup and loop function
 		ContentBuffer.append("void setup() {\n" + setupfirstbuffer.toString() + "\n" +
@@ -609,6 +614,7 @@ public class CodeGenrator extends SPLADBaseVisitor<String>{
 	}
 	
 	//Reed contendt of file, and return it.
+	//latex start pcontent
 	private String PrintContentofFile(String path){
 		BufferedReader in;
 		StringBuffer result = new StringBuffer();
@@ -625,7 +631,8 @@ public class CodeGenrator extends SPLADBaseVisitor<String>{
 			return null;
 		}
 	}
-
+	//latex end
+	
 	@Override
 	public String visitTimesdivide(SPLADParser.TimesdivideContext ctx) {
 		if (ctx.getText().equals("*")){
@@ -677,6 +684,7 @@ public class CodeGenrator extends SPLADBaseVisitor<String>{
 		StringBuffer tempreturnstring = new StringBuffer();
 		
 		//If a new empty drink is declared, visit the drinkstatements
+		//latex start drinkdclup
 		if (ctx.drinkstmts() != null){
 			visit(ctx.drinkstmts());
 		}
@@ -699,9 +707,11 @@ public class CodeGenrator extends SPLADBaseVisitor<String>{
 			
 			//Visit the statements
 			visit(ctx.changedrinkstmts());
+			//latex end
 		}
 		
 		//Add the decleration of the drink as an twodimensional double array;
+		//latex start drinkdcldown
 		tempreturnstring.append("double " + drinkHolder.drinkid + "[" + (drinkHolder.getIngredientcount()+1) + "][2];\n");
 		//The first element in the array will hold the size of the array.
 		setupfirstbuffer.append(drinkHolder.drinkid + "[" + 0 + "][0] =" + drinkHolder.getIngredientcount() + ";\n" + drinkHolder.drinkid + "[" + 0 + "][1] =" + drinkHolder.getIngredientcount() + ";\n");
@@ -718,7 +728,7 @@ public class CodeGenrator extends SPLADBaseVisitor<String>{
 		
 		//add the drink to the list of drinks
 		ListOfDrinks.add(drinkHolder);
-		
+		//latex end
 		return tempreturnstring.toString();
 	}
 

@@ -28,7 +28,6 @@
 \usepackage{color}
 \definecolor{darkgray}{rgb}{0.95,0.95,0.95}
 \usepackage{listings}
-\usepackage{tikz}
 \usepackage{qtree}
 
 
@@ -279,6 +278,13 @@ morekeywords={int, container, string, bool, double, HIGH, LOW, true, false, noth
 \caption{\fooNoII}\label{lst:\fooNoI}
 \end{Grammar}
 }
+
+%tikz
+\usepackage{tikz}
+\usetikzlibrary{shadows}
+\tikzstyle{mynodestyle} = [draw,outer sep=3,inner sep=3,minimum size=10,line width=1, very thick, draw=black!55, top color=white,bottom color=black!20]
+
+\usetikzlibrary{arrows}
 
 %kode
 \newcommand{\kode}[3]{

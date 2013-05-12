@@ -1,4 +1,4 @@
-% This file was created with JabRef 2.9.2.
+% This file was created with JabRef 2.8.1.
 % Encoding: UTF8
 
 @MISC{ANTLR,
@@ -7,6 +7,14 @@
   howpublished = {\url{http://www.antlr.org/about.html} [Last seen: 2013/03/15]},
   owner = {Kasper},
   timestamp = {2013.03.15}
+}
+
+@MISC{DownloadANTLR,
+  author = {ANTLR},
+  title = {Download ANTLR},
+  howpublished = {\url{http://www.antlr.org/download.html} [Last seen: 2013/05/12]},
+  owner = {Aleksander},
+  timestamp = {2013.05.12}
 }
 
 @MISC{arduinobuild,
@@ -39,6 +47,22 @@
   howpublished = {\url{http://arduino.cc/en/Main/ArduinoBoardUno} [Last seen: 2013/02/18]},
   owner = {Aleksander},
   timestamp = {2013.02.19}
+}
+
+@MISC{Buildproc,
+  author = {Arduino},
+  title = {Arduino Build Process},
+  howpublished = {\url{http://arduino.cc/en/Hacking/BuildProcess} [Last seen: 2013/05/12]},
+  owner = {Aleksander},
+  timestamp = {2013.05.12}
+}
+
+@MISC{ARVDUDE,
+  author = {AVRDUDE},
+  howpublished = {\url{http://www.nongnu.org/avrdude/} [Last seen: 2013/05/12]},
+  year = {2010},
+  owner = {Aleksander},
+  timestamp = {2013.05.12}
 }
 
 @MISC{OverviewCompiler2,

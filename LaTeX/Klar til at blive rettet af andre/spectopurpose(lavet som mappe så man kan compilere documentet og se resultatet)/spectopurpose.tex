@@ -72,9 +72,49 @@ We have now defined how the structure of the type drink should be. To formally d
 
 <changedrinkstmtsend> $\ra$ ; <changedrinkstmts>
 \alt ;
-\end{grammar}
+\end{grammatik}
 
 \subsection{An ingredient}
-With the drink type defined above, we should now focus on, how to define an ingredient. In the psychical machine, an ingredient will in most cases be a liquid in a container. It could also be leaves or fruit, also in a container. 
+With the drink type defined above, we should now focus on, how to define an ingredient. In the psychical machine, an ingredient will in most cases be a liquid in a container. It could also be leaves or fruit, also in a container. When pouring an ingredient, no matter what ingredient it is, the drink machine should in some way (different from the type of ingredient) send a signal to the container to open and pour the wanted amount of the ingredient. When sending the signal in Arduino, you change the output voltage on a pin, so to make it easier for the programmer, we could implement a type container which hold the pinnumber for the signal to the container. The structure of this can be seen on listing \ref{lst:container}.
+
+\begin{code}{container}{The structure of how to declare a container}
+\begin{lstlisting}[mathescape]
+container [containername] <-- [containerpin]
+\end{lstlisting}
+\end{code}
+
+\subsection{A RFID-tag}
+\label{sec:RFIDtag}
+For a customer to use the drink machine, they should buy an RFID-tag with information of which drink and how many of the drink they have bought. An solution of these RFID-tags for writing and reading, is to take care of this for the programmer, so they should not deal with how to store the information and read it. It should therefore be provided by functions build into the language. This can be seen in section \ref{sec:RFIDRW}.
+
+\subsection{A RFID-RW}
+\label{sec:RFIDRW}
+To read and write the RFID-tags, an RFID reader and writer is required. To simplify the communication with the RFID-RW, the language could, as mentioned in section \ref{sec:RFIDtag}. When writing information to a tag, you should call a function with two parameters: the drink ID and the number of drinks. The function will be called RFIDWrite. A call to the function could be as the example seen on listing \ref{lst:RFIDWrite}.
+
+\begin{code}{RFIDWrite}{An example of the call to RFIDWrite.}
+\begin{lstlisting}[mathescape]
+call RFIDWrite([drinkID], [Amount]);
+\end{lstlisting}
+\end{code}
+
+\subsection{A LCD}
+For communicating the the user of the drink machine, a LCD would be preferable like the one seen on figure \ref{fig:lcd}. 
+
+\figur{0.5}{lcd.jpg}{An example of a LCD to use in a drink machine. \citep{letlcd}}{fig:lcd}
+
+Like the function provided to the RFID-RW (see section \ref{sec:RFIDRW}), it could simplify the programmers job if the language provided a function to print text on the LCD. The function should take two parameters: the string to print on the display and an integer which indicates which line to print the string on. This function will be call LCDPrint. It should also be possible to clear the LCD. The function to do this will be called LCDClear. An example of a call to the functions can be seen on listing \ref{lst:lcd}.
+
+\begin{code}{lcd}{An example of how to call the LCD functions.}
+\begin{lstlisting}[mathescape]
+call LCDPrint("[text to print]", [linenumber]);
+call LCDClear();
+\end{lstlisting}
+\end{code}
+
+\subsection{Buttons}
+To get input from either the staff or the customer, buttons could be used. It could be possible to make a button type in the language, and make some operations of the button easier. This could be making a listener, which will call a function when a button is pressed, or other buttons functions to be build into the language. This is considers as an good idea, but because it is not essensial for the project is will not be implemented, but it could be made if the language was further developed.
+
+\subsection{Mechanism for pouring ingredients}
+The mechanism to pour the ingredient would be very different. A liquid will for example not be poured the same way a leaves. For this reason, it has been decided not to supporting the pouring mechanism in any special way in the language, because the possibilities of how the pouring mechanism will be too many.
 
 \end{document}

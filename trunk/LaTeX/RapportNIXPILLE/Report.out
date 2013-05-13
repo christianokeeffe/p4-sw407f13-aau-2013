@@ -24,11 +24,11 @@
 \BOOKMARK [2][-]{subsection.2.3.2}{2.3.2 Grammar}{section.2.3}% 24
 \BOOKMARK [2][-]{subsection.2.3.3}{2.3.3 Choice of Grammar}{section.2.3}% 25
 \BOOKMARK [2][-]{subsection.2.3.4}{2.3.4 The BNF of SPLAD}{section.2.3}% 26
+\BOOKMARK [2][-]{subsection.2.3.5}{2.3.5 Lexicon}{section.2.3}% 27
 \BOOKMARK [2][-]{subsection.2.3.6}{2.3.6 EBNF?}{section.2.3}% 28
 \BOOKMARK [1][-]{section.2.4}{2.4 Semantics}{chapter.2}% 29
 \BOOKMARK [2][-]{subsection.2.4.1}{2.4.1 Scoping}{section.2.4}% 30
 \BOOKMARK [3][-]{subsubsection.2.4.1.1}{2.4.1.1 Symbol Tables}{subsection.2.4.1}% 31
-\BOOKMARK [2][-]{subsection.2.3.5}{2.3.5 Lexicon}{section.2.3}% 27
 \BOOKMARK [2][-]{subsection.2.4.2}{2.4.2 Transition Rules}{section.2.4}% 32
 \BOOKMARK [2][-]{subsection.2.4.3}{2.4.3 Environment-Store Model}{section.2.4}% 33
 \BOOKMARK [2][-]{subsection.2.4.4}{2.4.4 Arithmetic Expressions}{section.2.4}% 34

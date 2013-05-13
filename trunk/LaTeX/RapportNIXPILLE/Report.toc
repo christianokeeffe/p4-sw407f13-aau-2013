@@ -26,19 +26,19 @@
 \contentsline {subsection}{\numberline {2.3.2}Grammar}{8}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}Choice of Grammar}{10}{subsection.2.3.3}
 \contentsline {subsection}{\numberline {2.3.4}The BNF of SPLAD}{11}{subsection.2.3.4}
-\contentsline {subsection}{\numberline {2.3.6}EBNF?}{11}{subsection.2.3.6}
-\contentsline {section}{\numberline {2.4}Semantics}{11}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Scoping}{11}{subsection.2.4.1}
-\contentsline {subsubsection}{\numberline {2.4.1.1}Symbol Tables}{11}{subsubsection.2.4.1.1}
 \contentsline {subsection}{\numberline {2.3.5}Lexicon}{12}{subsection.2.3.5}
-\contentsline {subsection}{\numberline {2.4.2}Transition Rules}{13}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}Environment-Store Model}{13}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.3.6}EBNF?}{13}{subsection.2.3.6}
+\contentsline {section}{\numberline {2.4}Semantics}{13}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Scoping}{13}{subsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.1.1}Symbol Tables}{13}{subsubsection.2.4.1.1}
+\contentsline {subsection}{\numberline {2.4.2}Transition Rules}{14}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Environment-Store Model}{14}{subsection.2.4.3}
 \contentsline {subsection}{\numberline {2.4.4}Arithmetic Expressions}{14}{subsection.2.4.4}
-\contentsline {subsection}{\numberline {2.4.5}Boolean Expressions}{14}{subsection.2.4.5}
-\contentsline {subsection}{\numberline {2.4.6}Declarations}{14}{subsection.2.4.6}
-\contentsline {subsection}{\numberline {2.4.7}Assignments}{14}{subsection.2.4.7}
-\contentsline {subsection}{\numberline {2.4.8}Commands}{14}{subsection.2.4.8}
-\contentsline {subsection}{\numberline {2.4.9}Type Rules}{15}{subsection.2.4.9}
+\contentsline {subsection}{\numberline {2.4.5}Boolean Expressions}{15}{subsection.2.4.5}
+\contentsline {subsection}{\numberline {2.4.6}Declarations}{15}{subsection.2.4.6}
+\contentsline {subsection}{\numberline {2.4.7}Assignments}{15}{subsection.2.4.7}
+\contentsline {subsection}{\numberline {2.4.8}Commands}{15}{subsection.2.4.8}
+\contentsline {subsection}{\numberline {2.4.9}Type Rules}{16}{subsection.2.4.9}
 \contentsline {section}{\numberline {2.5}Code Examples}{16}{section.2.5}
 \contentsline {chapter}{\chapternumberline {3}Implementation}{17}{chapter.3}
 \contentsline {section}{\numberline {3.1}Design Criteria}{17}{section.3.1}

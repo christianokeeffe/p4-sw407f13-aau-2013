@@ -3,7 +3,7 @@ import java.util.List;
 
 public class ScopeRuleChecker extends SPLADBaseVisitor<String>{
 	// scope start
-	List<List> Scopecontrol = new ArrayList<List>();
+	List<List<String>> Scopecontrol = new ArrayList<List<String>>();
 	List<String> listOfErrors = new ArrayList<String>();
 	int count = 0 ;
 	// scopes slut

@@ -75,6 +75,8 @@ while executing---line 1516 of file bibtex/harvard.bst
 Warning--empty  in Lex
 1 is an integer literal, not a string, for entry ItLatToC
 while executing---line 1516 of file bibtex/harvard.bst
+0 is an integer literal, not a string, for entry StaticvsDynamic
+while executing---line 1516 of file bibtex/harvard.bst
 Warning--empty year in Javacc
 Warning--empty year in Javacc
 1 is an integer literal, not a string, for entry Javacc
@@ -124,4 +126,4 @@ Warning--empty year in Yacc
 1 is an integer literal, not a string, for entry Yacc
 while executing---line 1516 of file bibtex/harvard.bst
 Warning--empty  in Yacc
-(There were 35 error messages)
+(There were 36 error messages)

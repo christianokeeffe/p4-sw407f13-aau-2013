@@ -1,4 +1,4 @@
-\begin{thebibliography}{29}
+\begin{thebibliography}{30}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -110,6 +110,14 @@
 \newblock \textit{Introducing to Language and the Theory of Computation - Third
   edition}.
 \newblock Elizabeth A. Jones, 2003.
+
+\bibitem[msujaws(2011)]{StaticvsDynamic}
+\textbf{msujaws}, \textbf{3 May 2011}.
+\newblock msujaws.
+\newblock \textit{Static vs. Dynamic Scoping}.
+\newblock
+  \url{http://msujaws.wordpress.com/2011/05/03/static-vs-dynamic-scoping/}
+  [Last seen: 2013/05/07], 2011.
 
 \bibitem[Norvell()]{Javacc}
 \textbf{\textbf{Norvell}}.

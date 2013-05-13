@@ -29,55 +29,61 @@
 \contentsline {subsection}{\numberline {2.3.5}Lexicon}{12}{subsection.2.3.5}
 \contentsline {subsection}{\numberline {2.3.6}EBNF?}{13}{subsection.2.3.6}
 \contentsline {section}{\numberline {2.4}Semantics}{13}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Scoping}{13}{subsection.2.4.1}
-\contentsline {subsubsection}{\numberline {2.4.1.1}Symbol Tables}{13}{subsubsection.2.4.1.1}
-\contentsline {subsection}{\numberline {2.4.2}Transition Rules}{14}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}Environment-Store Model}{14}{subsection.2.4.3}
-\contentsline {subsection}{\numberline {2.4.4}Arithmetic Expressions}{14}{subsection.2.4.4}
-\contentsline {subsection}{\numberline {2.4.5}Boolean Expressions}{15}{subsection.2.4.5}
-\contentsline {subsection}{\numberline {2.4.6}Declarations}{15}{subsection.2.4.6}
-\contentsline {subsection}{\numberline {2.4.7}Assignments}{15}{subsection.2.4.7}
-\contentsline {subsection}{\numberline {2.4.8}Commands}{15}{subsection.2.4.8}
-\contentsline {subsection}{\numberline {2.4.9}Type Rules}{16}{subsection.2.4.9}
-\contentsline {section}{\numberline {2.5}Code Examples}{16}{section.2.5}
-\contentsline {chapter}{\chapternumberline {3}Implementation}{17}{chapter.3}
-\contentsline {section}{\numberline {3.1}Design Criteria}{17}{section.3.1}
-\contentsline {section}{\numberline {3.2}Architecture}{17}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Hardware}{17}{subsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.1.1}Hardware platform}{17}{subsubsection.3.2.1.1}
-\contentsline {subsubsection}{\numberline {3.2.1.2}RFID}{18}{subsubsection.3.2.1.2}
-\contentsline {subsubsection}{\numberline {3.2.1.3}Other components}{19}{subsubsection.3.2.1.3}
-\contentsline {subsection}{\numberline {3.2.2}Overview of the Compiler}{19}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Language Processing Strategy}{21}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Compilation Passes}{21}{subsection.3.2.4}
-\contentsline {subsection}{\numberline {3.2.5}Abstract Syntax Trees}{21}{subsection.3.2.5}
-\contentsline {subsection}{\numberline {3.2.6}Parse Tree}{21}{subsection.3.2.6}
-\contentsline {subsection}{\numberline {3.2.7}The Visitor Pattern}{23}{subsection.3.2.7}
-\contentsline {section}{\numberline {3.3}Syntactic Analysis}{23}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Semantic Analysis}{23}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Known lexers and parsers}{23}{subsection.3.3.2}
-\contentsline {subsubsection}{\numberline {3.3.2.1}Lexer}{23}{subsubsection.3.3.2.1}
-\contentsline {subsubsection}{\numberline {3.3.2.2}Parser}{23}{subsubsection.3.3.2.2}
-\contentsline {subsubsection}{\numberline {3.3.2.3}Lexer and parser}{23}{subsubsection.3.3.2.3}
-\contentsline {subsubsection}{\numberline {3.3.2.4}Comparison Tables}{24}{subsubsection.3.3.2.4}
-\contentsline {subsection}{\numberline {3.3.3}ANTLR}{25}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Lexical Analyzer}{27}{subsection.3.3.4}
-\contentsline {subsection}{\numberline {3.3.5}Tokens}{28}{subsection.3.3.5}
-\contentsline {subsubsection}{\numberline {3.3.5.1}Reserved Keywords}{28}{subsubsection.3.3.5.1}
-\contentsline {subsubsection}{\numberline {3.3.5.2}Token Specification}{29}{subsubsection.3.3.5.2}
-\contentsline {subsection}{\numberline {3.3.6}Parser}{29}{subsection.3.3.6}
-\contentsline {subsubsection}{\numberline {3.3.6.1}Top-down Parsers}{29}{subsubsection.3.3.6.1}
-\contentsline {subsubsection}{\numberline {3.3.6.2}Bottom-Up Parsers}{30}{subsubsection.3.3.6.2}
-\contentsline {section}{\numberline {3.4}Contextual Analysis}{30}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Scope Checking}{30}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Type Checking}{30}{subsection.3.4.2}
-\contentsline {section}{\numberline {3.5}Code Generation}{30}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Declaration}{30}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Commands}{30}{subsection.3.5.2}
-\contentsline {subsection}{\numberline {3.5.3}Expressions}{30}{subsection.3.5.3}
-\contentsline {chapter}{\chapternumberline {4}Conclusion}{31}{chapter.4}
-\contentsline {chapter}{Bibliography}{33}{section*.21}
+\contentsline {subsection}{\numberline {2.4.1}Scope Rules}{13}{subsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.1.1}Static Scope}{13}{subsubsection.2.4.1.1}
+\contentsline {subsubsection}{\numberline {2.4.1.2}Dynamic Scope}{13}{subsubsection.2.4.1.2}
+\contentsline {subsubsection}{\numberline {2.4.1.3}Declaration Order}{14}{subsubsection.2.4.1.3}
+\contentsline {subsubsection}{\numberline {2.4.1.4}Global Scope}{14}{subsubsection.2.4.1.4}
+\contentsline {subsubsection}{\numberline {2.4.1.5}The difference between dynamic and static scope}{14}{subsubsection.2.4.1.5}
+\contentsline {subsection}{\numberline {2.4.2}Scoping}{14}{subsection.2.4.2}
+\contentsline {subsubsection}{\numberline {2.4.2.1}Symbol Tables}{15}{subsubsection.2.4.2.1}
+\contentsline {subsection}{\numberline {2.4.3}Transition Rules}{15}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Environment-Store Model}{16}{subsection.2.4.4}
+\contentsline {subsection}{\numberline {2.4.5}Arithmetic Expressions}{16}{subsection.2.4.5}
+\contentsline {subsection}{\numberline {2.4.6}Boolean Expressions}{16}{subsection.2.4.6}
+\contentsline {subsection}{\numberline {2.4.7}Declarations}{17}{subsection.2.4.7}
+\contentsline {subsection}{\numberline {2.4.8}Assignments}{17}{subsection.2.4.8}
+\contentsline {subsection}{\numberline {2.4.9}Commands}{17}{subsection.2.4.9}
+\contentsline {subsection}{\numberline {2.4.10}Type Rules}{17}{subsection.2.4.10}
+\contentsline {section}{\numberline {2.5}Code Examples}{18}{section.2.5}
+\contentsline {chapter}{\chapternumberline {3}Implementation}{19}{chapter.3}
+\contentsline {section}{\numberline {3.1}Design Criteria}{19}{section.3.1}
+\contentsline {section}{\numberline {3.2}Architecture}{19}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Hardware}{19}{subsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.1.1}Hardware platform}{19}{subsubsection.3.2.1.1}
+\contentsline {subsubsection}{\numberline {3.2.1.2}RFID}{20}{subsubsection.3.2.1.2}
+\contentsline {subsubsection}{\numberline {3.2.1.3}Other components}{21}{subsubsection.3.2.1.3}
+\contentsline {subsection}{\numberline {3.2.2}Overview of the Compiler}{21}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Language Processing Strategy}{23}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Compilation Passes}{23}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}Abstract Syntax Trees}{23}{subsection.3.2.5}
+\contentsline {subsection}{\numberline {3.2.6}Parse Tree}{23}{subsection.3.2.6}
+\contentsline {subsection}{\numberline {3.2.7}The Visitor Pattern}{25}{subsection.3.2.7}
+\contentsline {section}{\numberline {3.3}Syntactic Analysis}{25}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Semantic Analysis}{25}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Known lexers and parsers}{25}{subsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.2.1}Lexer}{25}{subsubsection.3.3.2.1}
+\contentsline {subsubsection}{\numberline {3.3.2.2}Parser}{25}{subsubsection.3.3.2.2}
+\contentsline {subsubsection}{\numberline {3.3.2.3}Lexer and parser}{25}{subsubsection.3.3.2.3}
+\contentsline {subsubsection}{\numberline {3.3.2.4}Comparison Tables}{26}{subsubsection.3.3.2.4}
+\contentsline {subsection}{\numberline {3.3.3}ANTLR}{27}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Lexical Analyzer}{29}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.5}Tokens}{30}{subsection.3.3.5}
+\contentsline {subsubsection}{\numberline {3.3.5.1}Reserved Keywords}{30}{subsubsection.3.3.5.1}
+\contentsline {subsubsection}{\numberline {3.3.5.2}Token Specification}{31}{subsubsection.3.3.5.2}
+\contentsline {subsection}{\numberline {3.3.6}Parser}{31}{subsection.3.3.6}
+\contentsline {subsubsection}{\numberline {3.3.6.1}Top-down Parsers}{31}{subsubsection.3.3.6.1}
+\contentsline {subsubsection}{\numberline {3.3.6.2}Bottom-Up Parsers}{32}{subsubsection.3.3.6.2}
+\contentsline {section}{\numberline {3.4}Contextual Analysis}{32}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Scope Checking}{32}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Type Checking}{32}{subsection.3.4.2}
+\contentsline {section}{\numberline {3.5}Code Generation}{32}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Declaration}{32}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Commands}{32}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}Expressions}{32}{subsection.3.5.3}
+\contentsline {chapter}{\chapternumberline {4}Conclusion}{33}{chapter.4}
+\contentsline {chapter}{Bibliography}{35}{section*.21}
 \cftpagenumbersoff {chapter}
 \changetocdepth {0}
-\contentsline {appendix}{\chapternumberline {A}Semantics}{37}{appendix.A}
-\contentsline {section}{\numberline {A.1}Transition Rules}{37}{section.A.1}
+\contentsline {appendix}{\chapternumberline {A}Semantics}{39}{appendix.A}
+\contentsline {section}{\numberline {A.1}Transition Rules}{39}{section.A.1}

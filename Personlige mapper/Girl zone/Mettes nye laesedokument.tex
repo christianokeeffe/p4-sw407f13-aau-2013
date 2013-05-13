@@ -1,0 +1,229 @@
+\input{preamble}
+\begin{document}
+\chapter{Transition Rules}
+\label{app:TransitionRules}
+
+\section{Abstract Syntax}
+\begin{align*}
+S::= \; & x := a \; | \; r[a_1] := a_2 \; | \; S_1; \; S_2 \; | \; \text{if} \; b \; \text{do} \; S \; | \; \text{if} \; b \; \text{do} \; S_1 \; \text{else do} \; S_2 \; | \; \text{while} \; b \; \text{do} \; S \\
+~ & | \; \text{from} \; x := a_1 \; \text{to} \; a_2 \; \text{step} \; a_3 \; \text{do} \; S \; | \; \text{call} \; p(\vec{x}) \; | \; \text{begin} \; D_V \; D_P \; S \; \text{end} \\
+a::= \; & n \; | \; x \; | \; a_1 + a_2 \; | \; a_1 - a_2 \; | \; a_1 * a_2 \; | \; a_1 / a_2 \; | \; (a) \\
+b::= \; &a_1 = a_2 \; | \; a_1 > a_2 \; | \; a_1 < a_2 \; | \; \neg b \; | \; b_1 \; \wedge \; b_2 \; | \; b_1 \; \vee \; b_2 \; | \; (b) \\
+D_V::= \; & \text{var} \; x := a; \; D_V \; | \; \varepsilon \\
+D_P::= \; & \text{proc} \; p \; \text{is} \; S;\;  D_P \; | \; \varepsilon \\
+D_A::= \; & \text{array} \; r[a_1] := a_2; \; D_A \; | \; \varepsilon \\
+\end{align*}
+
+
+\begin{longtable}{l l}
+\longtablesetting{2}
+~ & Transitioner er på formen: $env_V, env_P \vdash \langle S, sto \rangle \rightarrow sto'$ \\
+~ & ~ \\
+
+[VAR-ASS] & $env_V, env_P \vdash \langle x <-- a, sto \rangle \rightarrow sto[l \mapsto v]$ \\
+~ & ~ \\
+~ & \indent\indent where $env_V, sto \vdash a \rightarrow_a v$ \\
+~ & \indent\indent and $env_V \; x = l$ \\
+~ & ~ \\
+
+[ARR-ASS] & $env_V, env_P \vdash \langle r[a_1] <-- a_2, sto \rangle \rightarrow sto[l \mapsto v_2]$ \\
+~ & ~ \\
+~ & \indent\indent where $env_V, sto \vdash a_1 \rightarrow_a v_1$ \\
+~ & \indent\indent and $env_V, sto \vdash a_2 \rightarrow_a v_2$ \\
+~ & \indent\indent and $??? [r[v_1] = l$ \\
+~ & ~ \\
+
+[COMP] & $\dfrac{\begin{matrix} env_V, env_P \vdash \langle S_1, sto \rangle \rightarrow sto'' \\ env_V, env_P \vdash \langle S_2, sto'' \rangle \rightarrow sto' \end{matrix}}{env_V, env_P \vdash  \langle S_1; S_2, sto \rangle \rightarrow sto'}$ \\
+~ & ~ \\
+
+[IF-TRUE] & $\dfrac{env_V, env_P \vdash \langle S, sto \rangle \rightarrow sto'}{env_V, env_P \vdash \langle \text{if} \; b \; \text{begin} \; S \; \text{end}, sto \rangle \rightarrow sto'}$ \\
+~ & ~ \\
+~ & \indent\indent if $env_V, sto \vdash b \rightarrow_b \text{TRUE}$ \\
+~ & ~ \\
+
+[IF-FALSE] & $env_V, env_P \vdash \langle \text{if} \; b \; \text{begin} \; S \; \text{end}, sto \rangle \rightarrow sto$ \\
+~ & ~ \\
+~ & \indent\indent if $env_V, sto \vdash b \rightarrow_b \text{FALSE}$\\
+~ & ~ \\
+
+[IF-ELSE-TRUE] & $\dfrac{env_V, env_P \vdash \langle S_1, sto \rangle \rightarrow sto'}{env_V, env_P \vdash \langle \text{if} \; b \; \text{begin} \; S_1 \; \text{end else begin} \; S_2 \; \text{end}, sto \rangle \rightarrow sto'}$ \\
+~ & ~ \\
+~ & \indent\indent if $env_V, sto \vdash b \rightarrow_b \text{TRUE}$ \\
+~ & ~ \\
+
+[IF-ELSE-FALSE] & $\dfrac{env_V, env_P \vdash \langle S_2, sto \rangle \rightarrow sto'}{env_V, env_P \vdash \langle \text{if} \; b \; \text{begin} \; S_1 \; \text{end else begin} \; S_2 \; \text{end}, sto \rangle \rightarrow sto'}$ \\
+~ & ~ \\
+~ & \indent\indent if $env_V, sto \vdash b \rightarrow_b \text{FALSE}$\\
+~ & ~ \\
+
+[WHILE-TRUE] & $\dfrac{\begin{matrix} env_V, env_P \vdash \langle S, sto \rangle \rightarrow sto'' \\ env_V, env_P \vdash  \langle \text{while} \; b \; \text{begin} \; S \; \text{end}, sto'' \rangle \rightarrow sto' \end{matrix}}{env_V, env_P \vdash \langle \text{while} \; b \; \text{begin} \; S \; \text{end}, sto \rangle \rightarrow sto'}$ \\
+~ & ~ \\
+~ & \indent\indent if $env_V, sto \vdash b \rightarrow_b \text{TRUE}$\\
+~ & ~ \\
+
+[WHILE-FALSE] & $env_V, env_P \vdash \langle \text{while} \; b \; \text{begin} \; S \; \text{end}, sto \rangle \rightarrow sto$ \\
+~ & ~ \\
+~ & \indent\indent if $env_V, sto \vdash b \rightarrow_b \text{FALSE}$\\
+~ & ~ \\
+
+[FROM-TRUE] & $\dfrac{}{env_V, env_P \vdash \langle \text{from} \; x <-- a_1 \; \text{to} \; a_2 \; \text{step} \; a_3 \; \text{begin} \; S \; \text{end}  \rangle \rightarrow sto'}$ \\
+~ & ~ \\
+~ & \indent\indent where $env_V, sto \vdash a_1 \rightarrow_a v_1$\\
+~ & \indent\indent and $env_V, sto \vdash a_2 \rightarrow_a v_2$\\
+~ & \indent\indent and $env_V, sto \vdash a_3 \rightarrow_a v_3$\\
+~ & \indent\indent and $v_1 \leq v_2$ \\
+~ & ~ \\
+
+[FROM-FALSE]& $\dfrac{}{env_V, env_P \vdash \langle \text{from} \; x <-- a_1 \; \text{to} \; a_2 \; \text{step} \; a_3 \; \text{begin} \; S \; \text{end}  \rangle \rightarrow sto'}$ \\
+~ & ~ \\
+~ & \indent\indent where $env_V, sto \vdash a_1 \rightarrow_a v_1$\\
+~ & \indent\indent and $env_V, sto \vdash a_2 \rightarrow_a v_2$\\
+~ & \indent\indent and $env_V, sto \vdash a_3 \rightarrow_a v_3$\\
+~ & \indent\indent and $v_1 > v_2$ \\
+~ & ~ \\
+
+[CALL] & $\dfrac{}{env_V, env_P \vdash \langle \text{call} \; p(\vec{x}), sto \rangle \rightarrow sto'}$\\
+~ & ~ \\
+~ & \indent\indent \\
+~ & ~ \\
+
+[BLOK] & $\dfrac{\begin{matrix} \langle D_V, env_V, sto \rangle \rightarrow_{DV} (env_V', sto'') \\ env_V' \vdash \langle D_P, env_P \rangle \rightarrow_{DP} env_P' \\ env_V' env_P' \vdash \langle S, sto'' \rangle \rightarrow sto' \end{matrix}}{env_V, env_P \vdash \langle \text{begin} \; D_V \; D_P \; S \; \text{end}, sto \rangle \rightarrow sto' }$ \\
+\caption{Statements}
+\end{longtable}
+
+\begin{longtable}{l l}
+\longtablesetting{2}
+~ & Transitioner er på formen: $env_V, sto \vdash a \rightarrow_a v$ \\
+~ & ~ \\
+
+[NUM] & $env_V, sto \vdash n \rightarrow_a v$ \\
+~ & ~ \\
+~ & \indent\indent if $\mathcal{N}[[n]] = v$\\
+~ & ~ \\
+
+[VAR] & $env_V, sto \vdash x \rightarrow_a v$ \\
+~ & ~ \\
+~ & \indent\indent if $env_V \; x = l$ \\
+~ & \indent\indent and $sto \; l = v$ \\
+~ & ~ \\
+
+[ADD] & $\dfrac{env_V, sto \vdash a_1 \rightarrow_a v_1 \; \; \; env_V, sto \vdash a_2 \rightarrow_a v_2}{env_V, sto \vdash a_1 + a_2 \rightarrow_a v}$ \\
+~ & ~ \\
+~ & \indent\indent where $v = v_1 + v_2$\\
+~ & ~ \\
+
+[SUB] & $\dfrac{env_V, sto \vdash a_1 \rightarrow_a v_1 \; \; \; env_V, sto \vdash a_2 \rightarrow_a v_2}{env_V, sto \vdash a_1 - a_2 \rightarrow_a v}$ \\
+~ & ~ \\
+~ & \indent\indent where $v = v_1 - v_2$ \\
+~ & ~ \\
+
+[MULT] & $\dfrac{env_V, sto \vdash a_1 \rightarrow_a v_1 \; \; \; env_V, sto \vdash a_2 \rightarrow_a v_2}{env_V, sto \vdash a_1 \cdot a_2 \rightarrow_a v}$ \\
+~ & ~ \\
+~ & \indent\indent where $v = v_1 \cdot v_2$ \\
+~ & ~ \\
+
+[DIV] & $\dfrac{env_V, sto \vdash a_1 \rightarrow_a v_1 \; \; \; env_V, sto \vdash a_2 \rightarrow_a v_2}{env_V, sto \vdash a_1 / a_2 \rightarrow_a v}$ \\
+~ & ~ \\
+~ & \indent\indent where $v = v_1 / v_2$ \\
+~ & ~ \\
+
+[PAR] & $\dfrac{env_V, sto \vdash a_1 \rightarrow_a v_1}{env_V, sto \vdash (a_1) \rightarrow_a v_1}$ \\
+~ & ~ \\
+\caption{Arithmetic expressions}
+\end{longtable}
+
+\begin{longtable}{l l}
+\longtablesetting{2}
+~ & Transitioner på formen: $env_V, sto \vdash b \rightarrow_b t$ \\
+
+[EQUAL-TRUE] & $\dfrac{env_V, sto \vdash a_1 \rightarrow_a v_1 \; \; \; env_V, sto \vdash a_2 \rightarrow_a v_2}{env_V, sto \vdash a_1 = a_2 \rightarrow_b \text{TRUE}}$ \\
+~ & ~ \\
+~ & \indent\indent if $v_1 = v_2$ \\
+~ & ~ \\
+
+[EQUAL-FALSE] & $\dfrac{env_V, sto \vdash a_1 \rightarrow_a v_1 \; \; \; env_V, sto \vdash a_2 \rightarrow_a v_2}{env_V, sto \vdash a_1 = a_2 \rightarrow_b \text{FALSE}}$ \\
+~ & ~ \\
+~ & \indent\indent if $v_1 \neq v_2$ \\
+~ & ~ \\
+
+[GRT-TRUE] & $\dfrac{env_V, sto \vdash a_1 \rightarrow_a v_1 \; \; \; env_V, sto \vdash a_2 \rightarrow_a v_2}{env_V, sto \vdash a_1 > a_2 \rightarrow_b \text{TRUE}}$ \\
+~ & ~ \\
+~ & \indent\indent if $v_1 > v_2$ \\
+~ & ~ \\
+
+[GRT-FALSE] & $\dfrac{env_V, sto \vdash a_1 \rightarrow_a v_1 \; \; \; env_V, sto \vdash a_2 \rightarrow_a v_2}{env_V, sto \vdash a_1 > a_2 \rightarrow_b \text{FALSE}}$ \\
+~ & ~ \\
+~ & \indent\indent if $v_1 \ngtr v_2$ \\
+~ & ~ \\
+
+[LES-TRUE] & $\dfrac{env_V, sto \vdash a_1 \rightarrow_a v_1 \; \; \; env_V, sto \vdash a_2 \rightarrow_a v_2}{env_V, sto \vdash a_1 < a_2 \rightarrow_b \text{TRUE}}$ \\
+~ & ~ \\
+~ & \indent\indent if $v_1 < v_2$ \\
+~ & ~ \\
+
+[LES-FALSE] & $\dfrac{env_V, sto \vdash a_1 \rightarrow_a v_1 \; \; \; env_V, sto \vdash a_2 \rightarrow_a v_2}{env_V, sto \vdash a_1 < a_2 \rightarrow_b \text{FALSE}}$ \\
+~ & ~ \\
+~ & \indent\indent if $v_1 \nless v_2$ \\
+~ & ~ \\
+
+[NOT-1] & $\dfrac{env_V, sto \vdash b \rightarrow_b \text{TRUE}}{env_V, sto \vdash !b \rightarrow_b \text{FALSE}}$ \\
+~ & ~ \\
+
+[NOT-2] & $\dfrac{env_V, sto \vdash b \rightarrow_b \text{TRUE}}{env_V, sto \vdash !b \rightarrow_b \text{FALSE}}$ \\
+~ & ~ \\
+
+[AND-TRUE] & $\dfrac{env_V, sto \vdash b_1 \rightarrow_b \text{TRUE} \; \; \; env_V, sto \vdash b_2 \rightarrow_b \text{TRUE}}{env_V, sto \vdash b_1 \wedge b_2 \rightarrow_b \text{TRUE}}$ \\
+~ & ~ \\
+
+[AND-FALSE] & $\dfrac{env_V, sto \vdash b_i \rightarrow_b \text{FALSE}}{env_V, sto \vdash b_1 \wedge b_2 \rightarrow_b \text{FALSE}}$ \\
+~ & ~ \\
+~ & \indent\indent where $i \in {1,2}$ \\
+~ & ~ \\
+
+[OR-TRUE] & $\dfrac{env_V, sto \vdash b_i \rightarrow_b \text{TRUE}}{env_V, sto \vdash b_1 \vee b_2 \rightarrow_b \text{TRUE}}$ \\
+~ & ~ \\
+~ & \indent\indent where $i \in {1,2}$ \\
+~ & ~ \\
+
+[OR-FALSE] & $\dfrac{env_V, sto \vdash b_1 \rightarrow_b \text{FALSE} \; \; \; env_V, sto \vdash b_2 \rightarrow_b \text{FALSE}}{env_V, sto \vdash b_1 \vee b_2 \rightarrow_b \text{FALSE}}$ \\
+~ & ~ \\
+
+[PAR-BOOL] & $\dfrac{env_V, sto \vdash b \rightarrow_b v}{env_V, sto \vdash (b) \rightarrow_b v}$ \\
+~ & ~ \\
+\caption{Boolean expressions}
+\end{longtable}
+
+\begin{longtable}{l l}
+\longtablesetting{2}
+~ & Transitioner på formen: $\langle D_V, env_V, sto \rangle \rightarrow_{DV} (env_V', sto')$ \\
+
+[VAR-DECL] & $\dfrac{\langle D_V, env_V'', sto[l \mapsto v] \rangle \rightarrow_{DV} (env_V', sto'}{\text{var} \; x <-- a; D_V, env_V, sto \rangle \rightarrow_{DV} (env_V', sto')}$ \\
+~ & ~ \\
+~ & \indent\indent where $env_V, sto \vdash a \rightarrow_a v$ \\
+~ & \indent\indent and $l = env_V \; \text{next}$ \\
+~ & \indent\indent and $env_V'' = env_V[x \mapsto l][\text{next} \mapsto \text{new} \; l]$ \\
+~ & ~ \\
+
+[EMPTY-VAR] & $\langle \varepsilon, env_V, sto \rangle \rightarrow_{DV} (env_V, sto)$ \\
+~ & ~ \\
+
+~ & Transitioner på formen: $env_V \vdash \langle D_P, env_P \rangle \rightarrow_{DP} env_P'$ \\
+
+[PROC-DECL] & $\dfrac{env_V \vdash \langle D_P, env_P[p \mapsto (S, env_V, env_P)] \rangle \rightarrow_{DP} env_P'}{env_V \vdash \langle \text{proc} \; p \; \text{is} \; S; D_P, env_P \rangle \rightarrow_{DP} env_P'}$ \\
+~ & ~ \\
+
+[EMPTY-PROC] & $env_V \vdash \langle \varepsilon, env_P \rangle \rightarrow_{DP} env_P'$ \\
+~ & ~ \\
+
+[ARRAY-DECL] & $$ \\
+~ & ~ \\
+~ & \indent\indent \\
+~ & ~ \\
+
+[EMPTY-ARRAY] & $$ \\
+~ & ~ \\
+~ & \indent\indent \\
+~ & ~ \\
+\caption{Declarations}
+\end{longtable}
+\end{document}

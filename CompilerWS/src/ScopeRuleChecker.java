@@ -431,9 +431,9 @@ public class ScopeRuleChecker extends SPLADBaseVisitor<String>{
 		String Temp2 = "";
 		Temp = Temp.replaceAll("\\s","");
 		//latex start scopecallid
-		for(int i=Scopecontrol.size()-1; i >= 0; i--)
+		for(int i = Scopecontrol.size()-1; i >= 0; i--)
 		{
-			for(int j=Scopecontrol.size()-1; j >= 0; j--)
+			for(int j = Scopecontrol.size()-1; j >= 0; j--)
 			{
 				Temp2 = Scopecontrol.get(i).get(j).toString();
 				if(Temp.equals(Temp2)) //Scopecontrol.get(i).contains(Scopecontrol.get(i).get(j).toString())

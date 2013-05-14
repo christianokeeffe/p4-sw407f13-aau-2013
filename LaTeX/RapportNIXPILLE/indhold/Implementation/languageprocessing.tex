@@ -1,4 +1,5 @@
 \subsection{Language Processing Strategy}
+\label{sec:LanguageProcessingStrategy}
 This section will describe the language processing strategy in this project. To introduce what is called tombstone diagrams, a small example of a tombstone diagram for the Java-language is presented in figure \ref{fig:tombjava}. This figure shows that Java-compiler takes some java-code and turns it into byte code on machine M. The Java-virtual machine(JVM) can then execute the byte code. This makes the bytecode platform-independent, because if there is a JVM-implementation for an architecture, Java byte code can be compiled on another architecture and be executed on the first architecture. The tombstone to the left should be read as: Compiler written in machine-code $M$, takes a Java-source program and turns it into byte-code while running on architecture $M$.
 
 \figur{1}{javacompiler.png}{Tombstone diagram for the Java-compiler}{fig:tombjava}

@@ -55,14 +55,14 @@ public class Main{
 		
 		PrintWriter toFileWriter;
 		try {
-			toFileWriter = new PrintWriter(fileName, "UTF-16");
+			toFileWriter = new PrintWriter(fileName, "UTF-8");
 			toFileWriter.print(generator.visit(generatedParseTree().program()));
 			toFileWriter.close();
 		} catch (FileNotFoundException e) {
 			System.out.println("The file could not be generated");
 			e.printStackTrace();
 		} catch (UnsupportedEncodingException e) {
-			System.out.println("The system does not support UTF-16 format");
+			System.out.println("The system does not support UTF-8 format");
 			e.printStackTrace();
 		}
 		

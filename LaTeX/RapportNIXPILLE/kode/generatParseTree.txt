@@ -5,9 +5,11 @@ public final static SPLADParser generatedParseTree(){
   } catch (IOException e) {
     e.printStackTrace();
   }
+   
   SPLADLexer lexer = new SPLADLexer(program);
   CommonTokenStream tokens = new CommonTokenStream(lexer);
   SPLADParser parser = new SPLADParser(tokens);
+   
   parser.setBuildParseTree(true);
   return parser;
 }

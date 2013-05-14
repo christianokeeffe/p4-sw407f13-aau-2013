@@ -27,6 +27,7 @@ public class ValueTest {
 	    assertFalse("string is not a double", new Value("double").isDouble());
 	}
 
+	//latex start valueisint
 	@Test
 	public void testIsInt() {
 	    Value test = new Value(10);
@@ -38,6 +39,7 @@ public class ValueTest {
 	    assertTrue("HIGH is int", new Value("HIGH").isInt());
 	    assertTrue("LOW is int", new Value("LOW").isInt());
 	}
+	//latex end
 
 	@Test
 	public void testIsDrink() {

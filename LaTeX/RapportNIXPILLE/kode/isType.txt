@@ -1,5 +1,7 @@
+//Check if value is double
 public boolean isDouble() 
 {
+  //If value matches the regular expressions, it must a double
   if(this.toString().matches("((-)?[0-9]+)\\.([0-9]){1,2}"))
   {
     return true;
@@ -7,8 +9,10 @@ public boolean isDouble()
   return false;
 }
  
+//Check if value is type int
 public boolean isInt()
 {
+  //The vale must match the regular expression, or be HIGH, LOW, OUTPUT or INPUT
   if(this.toString().matches("(-)?[0-9]+") || this.toString().equals("HIGH") || this.toString().equals("LOW") || this.toString().equals("INPUT") || this.toString().equals("OUTPUT"))
   {
     return true;

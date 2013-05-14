@@ -2,15 +2,29 @@ This is BibTeX, Version 0.99dThe top-level auxiliary file: Report.aux
 The style file: bibtex/harvard.bst
 url: is an unknown function---line 330 of file bibtex/harvard.bst
 Database file #1: BibTeX/sources.bib
+Warning--I didn't find a database entry for "AVRDUDE"
 Name 1 in "Charles N. Fischer, and Ron, K. Cyton and Richard, J. LeBlanc. Jr." has a comma at the end for entry CraftingACompiler
 while executing---line 1434 of file bibtex/harvard.bst
 Name 1 in "Charles N. Fischer, and Ron, K. Cyton and Richard, J. LeBlanc. Jr." has a comma at the end for entry CraftingACompiler
 while executing---line 1434 of file bibtex/harvard.bst
+Warning--to sort, need author or key in codecover
+`editor' is a missing field, not a string, for entry codecover
+while executing---line 1516 of file bibtex/harvard.bst
+Warning--empty year in codecover
+Warning--empty year in codecover
+1 is an integer literal, not a string, for entry codecover
+while executing---line 1516 of file bibtex/harvard.bst
+Warning--empty  in codecover
 Warning--empty year in ANTLR
 Warning--empty year in ANTLR
 1 is an integer literal, not a string, for entry ANTLR
 while executing---line 1516 of file bibtex/harvard.bst
 Warning--empty  in ANTLR
+Warning--empty year in DownloadANTLR
+Warning--empty year in DownloadANTLR
+1 is an integer literal, not a string, for entry DownloadANTLR
+while executing---line 1516 of file bibtex/harvard.bst
+Warning--empty  in DownloadANTLR
 Warning--empty year in ArduinoLCD
 Warning--empty year in ArduinoLCD
 1 is an integer literal, not a string, for entry ArduinoLCD
@@ -26,6 +40,11 @@ Warning--empty year in ArduinoUno
 1 is an integer literal, not a string, for entry ArduinoUno
 while executing---line 1516 of file bibtex/harvard.bst
 Warning--empty  in ArduinoUno
+Warning--empty year in Buildproc
+Warning--empty year in Buildproc
+1 is an integer literal, not a string, for entry Buildproc
+while executing---line 1516 of file bibtex/harvard.bst
+Warning--empty  in Buildproc
 Warning--empty year in arduinobuild
 Warning--empty year in arduinobuild
 1 is an integer literal, not a string, for entry arduinobuild
@@ -68,6 +87,11 @@ Warning--empty year in Jlex
 1 is an integer literal, not a string, for entry Jlex
 while executing---line 1516 of file bibtex/harvard.bst
 Warning--empty  in Jlex
+Warning--empty year in letlcd
+Warning--empty year in letlcd
+1 is an integer literal, not a string, for entry letlcd
+while executing---line 1516 of file bibtex/harvard.bst
+Warning--empty  in letlcd
 Warning--empty year in Lex
 Warning--empty year in Lex
 1 is an integer literal, not a string, for entry Lex
@@ -126,4 +150,4 @@ Warning--empty year in Yacc
 1 is an integer literal, not a string, for entry Yacc
 while executing---line 1516 of file bibtex/harvard.bst
 Warning--empty  in Yacc
-(There were 36 error messages)
+(There were 41 error messages)

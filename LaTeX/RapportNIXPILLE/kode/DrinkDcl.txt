@@ -1,3 +1,4 @@
+//Handle the declaration of drinks
 @Override public Value visitDrinkdcl(SPLADParser.DrinkdclContext ctx) 
 { 
   Value ID  = visit(ctx.id(0));
@@ -17,6 +18,7 @@
   var.Type = "drink";
   var.Value = "drink";
    
+  //Add drink to variable memory
   VariableMemory.put(ID.toString(), var);
    
   return null; 

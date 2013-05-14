@@ -1,3 +1,4 @@
+//If the type is int or container, it the expression must not contain "."
 if(type.toString().equals("int") || type.toString().equals("container"))
 {
   if(str.contains("."))

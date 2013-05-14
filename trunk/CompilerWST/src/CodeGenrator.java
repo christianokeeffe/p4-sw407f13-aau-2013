@@ -461,16 +461,17 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 	public String visitDcl(SPLADParser.DclContext ctx) {
 		//If the type of the variable declared is container, do the following:
 		if(ctx.type().primitivetype()!= null){
-		if(ctx.type().primitivetype().getText().trim().equals("container") && ctx.assign().assignend().expr() != null){
-			//In the setupfunction, set the pin of the container to "OUTPUT"
-			setupbuffer.append("pinMode(" + visit(ctx.assign().assignend().expr()) + ", OUTPUT);\n");
-			
-			//Add the container to the list of containers
-			Container tempcont = new Container();
-			tempcont.containername = visit(ctx.assign().callid().id());
-			tempcont.pinid = visit(ctx.assign().assignend().expr());
-			ListOfContainers.add(tempcont);
-		}}
+			if(ctx.type().primitivetype().getText().trim().equals("container") && ctx.assign().assignend().expr() != null){
+				//In the setupfunction, set the pin of the container to "OUTPUT"
+				setupbuffer.append("pinMode(" + visit(ctx.assign().assignend().expr()) + ", OUTPUT);\n");
+				
+				//Add the container to the list of containers
+				Container tempcont = new Container();
+				tempcont.containername = visit(ctx.assign().callid().id());
+				tempcont.pinid = visit(ctx.assign().assignend().expr());
+				ListOfContainers.add(tempcont);
+			}
+		}
 		
 		//Add the name of the declarated variable to the present scope
 		String Temp = ctx.assign().callid().id().getText();
@@ -737,6 +738,12 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 
 	@Override
 	public String visitDrinkdcl(SPLADParser.DrinkdclContext ctx) {
+		//Add the name of the declarated variable to the present scope
+		String Temp = visit(ctx.id(0));
+		Temp = Temp.replaceAll("\\s","");
+		int ScopeRange = Scopecontrol.size()-1;
+		Scopecontrol.get(ScopeRange).add(Temp);
+		
 		//Add new empty drink to the drinkHolder.
 		drinkHolder = new Drinks(visit(ctx.id(0)));
 		

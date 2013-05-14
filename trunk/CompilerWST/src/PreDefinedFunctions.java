@@ -59,6 +59,62 @@ public class PreDefinedFunctions {
 		PourDrink.Params = PourDrinkParams;
 		Functions.add(PourDrink);
 		//latex end
+		
+		Function delay = new Function();
+		ParamsType delayParam = new ParamsType();
+		
+		delayParam.id = "x";
+		delayParam.type = "int";
+		delay.Name = "delay";
+		delay.ReturnType = "nothing";
+		ArrayList<ParamsType> delayParams = new ArrayList<ParamsType>();
+		delayParams.add(delayParam);
+		delay.Params = delayParams;
+		Functions.add(delay);
+		
+		Function digitalread = new Function();
+		ParamsType digitalreadParam = new ParamsType();
+		
+		digitalreadParam.id = "x";
+		digitalreadParam.type = "container";
+		digitalread.Name = "digitalRead";
+		digitalread.ReturnType = "int";
+		ArrayList<ParamsType> digitalreadParams = new ArrayList<ParamsType>();
+		digitalreadParams.add(digitalreadParam);
+		digitalread.Params = digitalreadParams;
+		Functions.add(digitalread);
+		
+		Function digitalwrite = new Function();
+		ParamsType digitalwriteParam = new ParamsType();
+		
+		digitalwriteParam.id = "x";
+		digitalwriteParam.type = "container";
+		digitalwrite.Name = "digitalWrite";
+		digitalwrite.ReturnType = "nothing";
+		ArrayList<ParamsType> digitalwriteParams = new ArrayList<ParamsType>();
+		digitalwriteParams.add(digitalwriteParam);
+		ParamsType digitalwriteParam2 = new ParamsType();
+		digitalwriteParam2.id = "y";
+		digitalwriteParam2.type = "int";
+		digitalwriteParams.add(digitalwriteParam2);
+		digitalwrite.Params = digitalwriteParams;
+		Functions.add(digitalwrite);
+		
+		Function pinmode = new Function();
+		ParamsType pinmodeParam = new ParamsType();
+		
+		pinmodeParam.id = "x";
+		pinmodeParam.type = "container";
+		pinmode.Name = "pinMode";
+		pinmode.ReturnType = "nothing";
+		ArrayList<ParamsType> pinmodeParams = new ArrayList<ParamsType>();
+		pinmodeParams.add(pinmodeParam);
+		ParamsType pinmodeParam2 = new ParamsType();
+		pinmodeParam2.id = "y";
+		pinmodeParam2.type = "int";
+		pinmodeParams.add(pinmodeParam2);
+		pinmode.Params = pinmodeParams;
+		Functions.add(pinmode);
 				
 		return Functions;
 	}
@@ -78,6 +134,18 @@ public class PreDefinedFunctions {
 		Input.Type = "int";
 		Input.Value = "1";
 		Variables.add(Input);
+		
+		Variable HIGH = new Variable();
+		HIGH.Id = "HIGH";
+		HIGH.Type = "int";
+		HIGH.Value = "1";
+		Variables.add(HIGH);
+		
+		Variable LOW = new Variable();
+		LOW.Id = "LOW";
+		LOW.Type = "int";
+		LOW.Value = "0";
+		Variables.add(LOW);
 		
 		Variable A0 = new Variable();
 		A0.Id = "A0";

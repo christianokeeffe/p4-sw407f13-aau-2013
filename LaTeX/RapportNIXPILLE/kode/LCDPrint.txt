@@ -1,0 +1,20 @@
+ArrayList<Function> Functions = new ArrayList<Function>();
+ 
+Function LCDPrint = new Function();
+ 
+ParamsType LCDPrintParamsString = new ParamsType();
+ParamsType LCDPrintParamsLine= new ParamsType();
+ 
+LCDPrintParamsString.id = "x";
+LCDPrintParamsString.type = "\"string\"";
+LCDPrintParamsLine.id = "y";
+LCDPrintParamsLine.type = "3";
+ 
+ArrayList<ParamsType> LCDPrintParams = new ArrayList<ParamsType>();
+LCDPrintParams.add(LCDPrintParamsString);
+LCDPrintParams.add(LCDPrintParamsLine);
+LCDPrint.Params = LCDPrintParams;
+LCDPrint.Name = "LCDPrint";
+LCDPrint.ReturnType = "nothing";
+Functions.add(LCDPrint);
+ 

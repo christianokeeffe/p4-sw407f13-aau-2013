@@ -1,0 +1,8 @@
+if(type.toString().equals("int") || type.toString().equals("container"))
+{
+  if(str.contains("."))
+  {
+    Error err = new Error(1, str);
+    ErrList.add(err);
+  }
+}

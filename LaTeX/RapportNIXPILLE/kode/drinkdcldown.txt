@@ -1,0 +1,16 @@
+tempreturnstring.append("double " + drinkHolder.drinkid + "[" + (drinkHolder.getIngredientcount()+1) + "][2];\n");
+//The first element in the array will hold the size of the array.
+setupfirstbuffer.append(drinkHolder.drinkid + "[" + 0 + "][0] =" + drinkHolder.getIngredientcount() + ";\n" + drinkHolder.drinkid + "[" + 0 + "][1] =" + drinkHolder.getIngredientcount() + ";\n");
+ 
+//Add the ingrediens of the drink to the array.
+for (int i = 0; i < drinkHolder.getIngredientcount(); i++){
+  int counter = 0;
+  while (ListOfContainers.size() > counter && !ListOfContainers.get(counter).containername.equals(drinkHolder.ListOfIngredient.get(i).Ingredientid)){
+    counter++;
+  }
+  int place = i + 1;
+  setupfirstbuffer.append(drinkHolder.drinkid + "[" + place + "][0] =" + counter + ";\n" + drinkHolder.drinkid + "[" + place + "][1] =" + drinkHolder.ListOfIngredient.get(i).IngredientAmount + ";\n");
+}
+ 
+//add the drink to the list of drinks
+ListOfDrinks.add(drinkHolder);

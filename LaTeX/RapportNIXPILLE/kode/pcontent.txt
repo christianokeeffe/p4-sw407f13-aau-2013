@@ -1,0 +1,16 @@
+private String PrintContentofFile(String path){
+  BufferedReader in;
+  StringBuffer result = new StringBuffer();
+  try{
+    in = new BufferedReader(new FileReader(path));
+    while (in.ready()){
+      String fileintxt = in.readLine();
+      result.append(fileintxt+"\n");
+    }
+    in.close();
+    return result.toString();
+  }
+  catch (IOException IOerror){
+    return null;
+  }
+}

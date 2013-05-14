@@ -1,5 +1,6 @@
 \subsection{Scope Rules}
-The scope of a variable is the range of statements where variables are visible. The variable is visible if it can be referenced in the statement.
+\label{sec:scoperules}
+The scope of a variable is the block of the program in which it is accessible. A variable is local to a block, if it is declared in that block. A variable is non-local to a block if it is not declared in that block, but is still visible in that block (ex. global variables) \citep{sebesta}.
 The languages scope rules determine how a variable name is associated with a variable in a particular occurrence or when working with a functional language, it needs to know how a name is associated with an expression when a variable is declared in a program unit or block. When a variable is declared in a program unit or block it is local for that part. Then the non-local variables are visible within the program unit or block if they are not declared there. Lastly there are global variables these are a special category of non-local variables.
 
 \subsubsection{Static Scope}
@@ -55,3 +56,6 @@ int main()
 \end{lstlisting}
 \end{code}
 The code \ref{lst:StaticDynamicScoping} will in both cases return 10 in the foo() function, but in bar() the result will differ. With static scoping the bar() function will return 10 because at compile time b was set to 5 while with dynamic scoping it will return 7 because at run time b is set to 2.
+
+\subsection{Scoping In This Project}
+In SPLAD static scoping is used. This means that scopes are computed at compile time, based on the program text input. The main reason for this, is that programs for the Arduino platform is mainly written in C, which also uses static scoping. This makes the compilation from SPLAD to C simpler for the compiler \citep{arduinobuild}. Static scoping means that a hierarchy of scopes are maintained during compilation. To determine the name of used variables, the compiler must first check if the variable is in the current scope. If it is, the value of the variable is found, and the compiler can proceed, else it must recursively search the scope hierarchy for the variable. When done, if the variable is still not found, the compiler returns an error, because an undeclared variable is used \citep{sebesta}.

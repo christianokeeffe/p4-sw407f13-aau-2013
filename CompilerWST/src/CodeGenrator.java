@@ -460,6 +460,7 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 	@Override
 	public String visitDcl(SPLADParser.DclContext ctx) {
 		//If the type of the variable declared is container, do the following:
+		if(ctx.type().primitivetype()!= null){
 		if(ctx.type().primitivetype().getText().trim().equals("container") && ctx.assign().assignend().expr() != null){
 			//In the setupfunction, set the pin of the container to "OUTPUT"
 			setupbuffer.append("pinMode(" + visit(ctx.assign().assignend().expr()) + ", OUTPUT);\n");
@@ -469,7 +470,7 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 			tempcont.containername = visit(ctx.assign().callid().id());
 			tempcont.pinid = visit(ctx.assign().assignend().expr());
 			ListOfContainers.add(tempcont);
-		}
+		}}
 		
 		//Add the name of the declarated variable to the present scope
 		String Temp = ctx.assign().callid().id().getText();
@@ -510,7 +511,7 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 		Temp = Temp.replaceAll("\\s","");
 		Scopecontrol.get(Scopecontrol.size()-1).add(Temp);
 		
-		if (ctx.type().primitivetype().getText().trim().equals("drink")){
+		if (ctx.type().primitivetype() != null && ctx.type().primitivetype().getText().trim().equals("drink")){
 			//If the type is a drink, add the arrays for the twodimensional array.
 			return visit(ctx.type()) + visit(ctx.callid()) + "[ ][2] " + visit(ctx.subparamsend());
 		}
@@ -564,7 +565,7 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 		//latex start scopecallid
 		for(int i = Scopecontrol.size()-1; i >= 0; i--)
 		{
-			for(int j = Scopecontrol.size()-1; j >= 0; j--)
+			for(int j = Scopecontrol.get(i).size()-1; j >= 0; j--)
 			{
 				Temp2 = Scopecontrol.get(i).get(j).toString();
 				if(Temp.equals(Temp2))
@@ -777,7 +778,7 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 		//Add the ingrediens of the drink to the array.
 		for (int i = 0; i < drinkHolder.getIngredientcount(); i++){
 			int counter = 0;
-			while (!ListOfContainers.get(counter).containername.equals(drinkHolder.ListOfIngredient.get(i).Ingredientid)){
+			while (ListOfContainers.size() > counter && !ListOfContainers.get(counter).containername.equals(drinkHolder.ListOfIngredient.get(i).Ingredientid)){
 				counter++;
 			}
 			int place = i + 1;

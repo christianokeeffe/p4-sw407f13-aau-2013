@@ -1,10 +1,10 @@
 \subsection{Scopecheck}
 \label{sec:scopecheck}
-In our project we have chosen to use static scoping. Because the program languages that is made in the project group is a imperative program languages, where it make more sense that it have static scoping, the programs for the Arduino platform use static scoping, se section % Scoping under Semantics
+In our project we have chosen to use static scoping. Because the program languages that is made in the project group is a imperative program languages, where it make more sense that it have static scoping, the programs for the Arduino platform use static scoping, se section \ref{sec:scoperules}
 And static scoping are used by well use program languages like C, C\# and Java \citep{ProgrammingCommunityIndex}.
 When a variable is used in SPLAD, the variable is needed to have been declared in the scope or in a outer scope and the variable need to be declared before it is use.
 
-When scope checking is started, a lists called "scopecontrol" is made which can hold others lists. Each list in scopecontrol is a "scope". The scope lists are used to store variable names. An example of this setup can be seen on figure \ref{fig:scopediagram}. To show the errors that are relate to scoping that are in the code, will be save into a list that is called "listOfErrors". Scope checking is break up in six different places in the tree visitor: visitProgram, visitBlock, visitSwitch, visitFunction, visitDcl, visitSubparams and visitCallid.
+When scope checking is started, a lists called "scopecontrol" is made which can hold others lists. Each list in scopecontrol is a "scope". The scope lists are used to store variable names. An example of this setup can be seen on figure \ref{fig:scopediagram}. To show the errors that are relate to scoping that are in the code, will be save into a list that is called "listOfErrors". Scope checking is break up in nine different places in the tree visitor: visitProgram, visitBlock, visitCases, visitBreakend, visitEndcase, visitFunction, visitDcl, visitSubparams and visitCallid.
 
 \begin{figure}[H]
 
@@ -34,9 +34,10 @@ There are a three ways to make blocks in our project languages, not counting the
 \fxfatal{Hvad med blocken ved switch?}
 \fxfatal{Indsæt kodeeksempel}
 
-The second way to make new blocks is by making a function, and thereby visit the visitor visitFunction. A function name is not taken care of in the scope checker, because a function can only be declared in the outer scope. The visitBlock cannot be used to make scopes for functions, since there can be sent parameters to the function from where it is called. It must therefore make the list and add it to scopecontrol before the parameter are declared. After the parameters are declared, all statements in the function will be visited and it will then remove the list from scopecontrol before returning.
+The second way to make new blocks is when making a function, and thereby visit the visitor visitFunction. A function name is not taken care of in the scope checker, because a function can only be declared in the outer scope. The visitBlock cannot be used to make scopes for functions, since there can be sent parameters to the function from where it is called. It must therefore make the list and add it to scopecontrol before the parameter are declared. After the parameters are declared, all statements in the function will be visited and it will then remove the list from scopecontrol before returning.
 
-The third way to make new blocks is then visitSwitch is being use. In this case there is a new scope for each case that are in the switch
+The third way to make new blocks is when a making a switch. It will visit visitCases and thereafter visitEndcase. In visitEndcase it can either make a new visitCases, make a break and visit visitBreakend or make a default case and return. When making a default case in visitEndcase there is needed to make a scope and remove it again. In visitBreakend there is made a default case too, but here it is after a break, and again there is made a scope for the default case.
+
 
 VisitDcl and visitSubparams is where variables names is inserted into the innermost scope, that have the last index in scopecontrol and is a list of strings.
 

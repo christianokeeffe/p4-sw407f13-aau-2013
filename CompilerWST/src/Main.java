@@ -11,6 +11,7 @@ public class Main{
 	
 	static String file;
 	
+	//Function for generating a parse tree
 	//latex start generatParseTree
 	public final static SPLADParser generatedParseTree(){
 		CharStream program = null;
@@ -28,11 +29,14 @@ public class Main{
 	//latex end
 	
 	public static void main(String[] args) {
-
+		
 		BufferedReader inputreader = new BufferedReader(new InputStreamReader(System.in));
+		//Declaring the code generator
 		CodeGenrator generator = new CodeGenrator();
+		//Declaring the type checker
 		TypeChecker TypeCheck = new TypeChecker();
 		
+		//Find the source code to compile
 		System.out.println("Enter the path to the file you want compiled:");
 		try {
 			file = inputreader.readLine();
@@ -41,6 +45,7 @@ public class Main{
 			e2.printStackTrace();
 		}
 		
+		//Read the command prompt and stores the input, which we be used for the output file name
 		System.out.println("Enter the desired name of the output file");
 		
 		String fileName ="";
@@ -51,13 +56,26 @@ public class Main{
 			e1.printStackTrace();
 		}
 		
+		//Type checks the source code
 		TypeCheck.visit(generatedParseTree().program());
 		
 		PrintWriter toFileWriter;
 		try {
-			toFileWriter = new PrintWriter(fileName, "UTF-8");
-			toFileWriter.print(generator.visit(generatedParseTree().program()));
-			toFileWriter.close();
+			//Generates code and checks the scopes
+			String OutputCode = generator.visit(generatedParseTree().program());
+			//If no scope errors then the file is created
+			if (generator.listOfErrors.isEmpty()){
+				toFileWriter = new PrintWriter(fileName, "UTF-8");
+				toFileWriter.print(OutputCode);
+				toFileWriter.close();
+			}
+			else{
+				//If there were errors they are printed to the user
+				for(int i = 0; i < generator.listOfErrors.size();i++)
+				{
+					System.out.println(generator.listOfErrors.get(i));
+				}
+			}
 		} catch (FileNotFoundException e) {
 			System.out.println("The file could not be generated");
 			e.printStackTrace();
@@ -66,17 +84,12 @@ public class Main{
 			e.printStackTrace();
 		}
 		
+		//Prints the type errors and warnings
 		if(!TypeCheck.ErrList.isEmpty())
 		{
 	        for (Error e : TypeCheck.ErrList) {
 	            System.out.print(e.GetErrorMessage());
 	        }
 		}
-		
-		for(int i = 0; i < generator.listOfErrors.size();i++)
-		{
-			System.out.println(generator.listOfErrors.get(i));
-		}
-		
 	}
 }

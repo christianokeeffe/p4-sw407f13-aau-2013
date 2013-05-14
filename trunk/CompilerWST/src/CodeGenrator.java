@@ -267,7 +267,7 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 	@Override
 	public String visitAssignend(SPLADParser.AssignendContext ctx) {
 		if (ctx.expr() != null) {
-		return "= " + visit(ctx.expr());
+			return "= " + visit(ctx.expr());
 		}
 		else {
 			return "";
@@ -441,7 +441,7 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 				return "(" + visit(ctx.expr()) + ")";
 			}
 			else {
-				return "";
+				return "ERROR";
 			}
 			
 		}

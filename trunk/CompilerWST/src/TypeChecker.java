@@ -26,7 +26,7 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 			id = id.substring(0, id.indexOf('['));
 		}
 		
-		if(ctx.assignend() != null)
+		if(ctx.assignend().expr() != null)
 		{
 			Expr = visit(ctx.assignend());
 			Var.Value = Expr.toString();
@@ -188,6 +188,9 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 		else if(ctx.drinkdcl() != null)
 		{
 			visit(ctx.drinkdcl());
+		}else if (ctx.assign() != null)
+		{
+			visit(ctx.assign());
 		}
 		return null;
 	}
@@ -298,7 +301,16 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 	
 	@Override public Value visitArraycall(SPLADParser.ArraycallContext ctx) 
 	{ 
-		return visitChildren(ctx); 
+		if (ctx.expr() != null){
+			visit(ctx.expr());
+			return visit(ctx.arraycall());
+		}
+		else if (ctx.arraycall() != null){
+			return visit(ctx.arraycall());
+		}
+		else {
+			return null;
+		}
 	}
 
 	
@@ -1071,6 +1083,12 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 			else if (splitarray[0].equals("false")){
 				val = new Value("false");
 			}
+			else if (splitarray[0].equals("INPUT")){
+				val = new Value("INPUT");
+			}
+			else if (splitarray[0].equals("OUTPUT")){
+				val = new Value("OUTPUT");
+			}
 			else if (splitarray[0].matches("A[0-5]")){
 				val = new Value(splitarray[0]);
 			}
@@ -1277,9 +1295,6 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 		if(ctx.arraycall() != null)
 		{
 			visit(ctx.arraycall());
-		}
-		if(ctx.expr() != null)
-		{
 			Size = visit(ctx.expr());
 		}
 		return Size;

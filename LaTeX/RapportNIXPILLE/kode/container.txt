@@ -1,5 +1,4 @@
-if(ListOfContainers.size() != 0)
-{
+if (ListOfContainers.size() != 0){
   ContentBuffer.append("String ContainersnameSW407F13[" + ListOfContainers.size() + "];\n");
   ContentBuffer.append("int ContainerspinSW407F13[" + ListOfContainers.size() + "];\n");
 }

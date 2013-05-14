@@ -98,19 +98,19 @@ Table \ref{tab:choiceoffocus} shows what paradigms that is in the focus for the 
 \begin{itemize}
 \item \textbf{Simplicity:} The language of this project does not have multiple ways of doing the same simple instructions. This is to make writing code simpler for beginners. An example is that it is not possible to increase a variable by 1 by writing "A++;". Instead it has to be written as "A<--A+1;".
 
-\item \textbf{Orthogonality:} The language of this project only has four primitive types, bool, double, int and char, and 2 special types, container and string. It is not possible to make classes or constructs, this is done to simplify types for beginners.
+\item \textbf{Orthogonality:} It is not possible to make classes or constructs, this is done to simplify types for beginners. However it is possible to combine various other constructs, for example calling a function in an expression. 
 
-\item \textbf{Data types:} \fxfatal{regler ikke lavet endnu, eks. kan en bool skrives som bool A = true og/eller bool A = 1}
+\item \textbf{Data types:} The language of this project has five primitive types, bool, double, int, char and string and 2 special types, container and drink. 
 
 \item \textbf{Syntax design:} It is not possible to make classes in the language of this project but there is both "for" and "while" loops because they are relatively simple to use and understand for beginners. All functions and loops start with "begin" and end with "end" to make it clear where they start and end.
 
 \item \textbf{Support for abstraction:} This is close to non-existent in the project languages, because to help beginners with using the language, a simple  type system is simpler to understand.
 
-\item \textbf{Expressivity:} \fxfatal{ikke helt sikker på hvad vi har bestemt os for}
+\item \textbf{Expressivity:} Shorthands have not been implemented in SPLAD, this is to increase the readability of the program, as described in listing \ref{lst:ifstmtnormal}.
 
 \item \textbf{Type checking:} Is a major part of the project. The type checking will be done on compile time rather then run time, to help beginners see their errors in their code, instead of at run time.
 
-\item \textbf{Exception handling:} \fxfatal{ikke helt sikker på hvad vi har bestemt os for}
+\item \textbf{Exception handling:} Because the Arduino will execute the program-code in the end, the handling of exceptions such as array overflows, is left to the Arduino.
 
 \item \textbf{Restricted aliasing:} Since it is known that using aliasing is a dangerous feature in a programming language  \citep{sebesta}, the language of this project will not have this feature, to help beginners.
 \end{itemize}

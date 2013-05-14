@@ -1,9 +1,11 @@
-\begin{grammatik}{test1}{test2}
+\subsubsection{Grammar - Drinks}
+This section contains the grammar related to types
+\begin{grammatik}{Types}{Grammar for types}
 <program> $\ra$ <roots>
 
 <roots> $\ra$ $\eps$
 \alt <root> <roots>
- 
+
 <root> $\ra$ <dcl>;
 \alt <assign>;
 \alt <function>
@@ -11,24 +13,6 @@
 \alt <drinkdcl>
 
 <dcl> $\ra$ <type> <assign>
-
-<drinkdcl> $\ra$ drink <id> is begin <drinkstmts> end
-\alt drink <id> as <id> but begin <changedrinkstmts> end
-
-<drinkstmts> $\ra$ <drinkstmt> <drinkstmtsend>
-
-<drinkstmt> $\ra$ add <numeric> of <id>
-
-<drinkstmtsend> $\ra$ ; <drinkstmts>
-\alt ;
-
-<changedrinkstmts> $\ra$ <changedrinkstmt> <changedrinkstmtsend>
-
-<changedrinkstmt> $\ra$ <drinkstmt>
-\alt remove <id>
-
-<changedrinkstmtsend> $\ra$ ; <changedrinkstmts>
-\alt ;
 
 <type> $\ra$ <constant> <primitivetype>
 \alt <specialtype>
@@ -46,7 +30,33 @@
 \alt container 
 
 <id> $\ra$ <LETTER>
+\end{grammatik}
 
+\subsubsection{Grammar - Drinks}
+This section contains the grammar related to drinks
+\begin{grammatik}{drinks}{Grammar related to drinks}
+<drinkdcl> $\ra$ drink <id> is begin <drinkstmts> end
+\alt drink <id> as <id> but begin <changedrinkstmts> end
+
+<drinkstmts> $\ra$ <drinkstmt> <drinkstmtsend>
+
+<drinkstmt> $\ra$ add <numeric> of <id>
+
+<drinkstmtsend> $\ra$ ; <drinkstmts>
+\alt ;
+
+<changedrinkstmts> $\ra$ <changedrinkstmt> <changedrinkstmtsend>
+
+<changedrinkstmt> $\ra$ <drinkstmt>
+\alt remove <id>
+
+<changedrinkstmtsend> $\ra$ ; <changedrinkstmts>
+\alt ;
+\end{grammatik}
+
+\subsubsection{Grammar - Assign}
+This section contains the grammar related to assignments.
+\begin{grammatik}{assign}{Grammar related to assignments}
 <assign> $\ra$ <callid> <assignend>
 
 <assignend> $\ra$ "<""-""-" <expr>
@@ -87,7 +97,11 @@
 \alt $\eps$
 
 <numeric> $\ra$ <plusminusorempty> <DIGIT> <numericend>
+\end{grammatik}
 
+\subsubsection{Grammar - Expressions}
+This section contains the grammar related to expressions.
+\begin{grammatik}{expr}{The grammar related to expressions}
 <addsubend> $\ra$ <plusminus> <addsub>
 \alt $\eps$
 
@@ -118,8 +132,6 @@
 <subcallexprend> $\ra$ , <subcallexpr>
 \alt$\eps$
 
-<cast> $\ra$ <type> (<expr>)
-
 <compend> $\ra$ <comparisonoperator> <comp>
 \alt$\eps$
 
@@ -139,6 +151,12 @@
 \alt$\eps$
 
 <exprsymbol> $\ra$ OR 
+\end{grammatik}
+
+\subsubsection{Grammar - Functions}
+This section contains the grammar related to functions.
+\begin{grammatik}{func}{The grammar related to functions}
+<cast> $\ra$ <type> (<expr>)
 
 <function> $\ra$ function <id> return <functionmid>
 
@@ -170,7 +188,11 @@ begin
 	\alt <functioncall>;
 	\alt <nontermswitch>
 	\alt <COMMENT>
-	
+\end{grammatik}
+
+\subsubsection{Grammar - Loops}
+This section contains the grammar related to loops.
+\begin{grammatik}{loop}{The grammar related to loops}
 <nontermif> $\ra$ if(<expr>)
 	<block>
 	<endif>
@@ -213,10 +235,11 @@ begin
 <stmts>
 break;
 \alt$\eps$
-\end{grammar}
-\subsection{Lexicon}
-\input{indhold/LanguageSpecification/lexiconintro}
-\begin{grammar}
+\end{grammatik}
+
+\subsubsection{Lexicon}
+\input{lexiconintro}
+\begin{grammatik}{lexicon}{The grammar for the lexicon}
 <STRINGTOKEN> $\ra$ '' .*? '' 
 
 <LETTER> $\ra$ [a - zA - Z]$~^+$

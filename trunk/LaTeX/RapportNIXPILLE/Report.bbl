@@ -1,15 +1,25 @@
-\begin{thebibliography}{30}
+\begin{thebibliography}{34}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
+\bibitem[cod()]{codecover}
+\textit{\textbf{\textbf{ANTLR}}}.
+\newblock URL \url{http://codecover.org/}.
+
 \bibitem[Antlr()]{ANTLR}
 \textbf{\textbf{Antlr}}.
 \newblock Antlr.
 \newblock \textit{Theory behind Antlr}.
 \newblock \url{http://www.antlr.org/about.html} [Last seen: 2013/03/15].
+
+\bibitem[ANTLR()]{DownloadANTLR}
+\textbf{\textbf{ANTLR}}.
+\newblock ANTLR.
+\newblock \textit{Download ANTLR}.
+\newblock \url{http://www.antlr.org/download.html} [Last seen: 2013/05/12].
 
 \bibitem[Arduino({\natexlab{a}})]{ArduinoLCD}
 \textbf{Arduino}, \textbf{{\natexlab{a}}}.
@@ -32,8 +42,15 @@
 \newblock \url{http://arduino.cc/en/Main/ArduinoBoardUno} [Last seen:
   2013/02/18].
 
-\bibitem[Arduino({\natexlab{d}})]{arduinobuild}
+\bibitem[Arduino({\natexlab{d}})]{Buildproc}
 \textbf{Arduino}, \textbf{{\natexlab{d}}}.
+\newblock Arduino.
+\newblock \textit{Arduino Build Process}.
+\newblock \url{http://arduino.cc/en/Hacking/BuildProcess} [Last seen:
+  2013/05/12].
+
+\bibitem[Arduino({\natexlab{e}})]{arduinobuild}
+\textbf{Arduino}, \textbf{{\natexlab{e}}}.
 \newblock Arduino.
 \newblock \textit{Arduino Build Process}.
 \newblock \url{http://arduino.cc/en/Hacking/BuildProcess} [Last seen:
@@ -96,6 +113,14 @@
 \newblock
   \url{http://www.cs.princeton.edu/~appel/modern/java/JLex/current/manual.html}
   [Last seen: 2013/03/15].
+
+\bibitem[let elektronik()]{letlcd}
+\textbf{\textbf{elektronik}}.
+\newblock let elektronik.
+\newblock \textit{LCD 16x2 Characters - Green Yellow back light}.
+\newblock
+  \url{http://www.let-elektronik.dk/lcd-16x2-characters-green-yellow-back-light.html}
+  [Last seen: 2013/05/12].
 
 \bibitem[Lex()]{Lex}
 \textbf{\textbf{Lex}}.

@@ -26,7 +26,7 @@ public class Value {
     
     public boolean isInt()
     {
-		if(this.toString().matches("(-)?[0-9]+"))
+		if(this.toString().matches("(-)?[0-9]+") || this.toString().equals("HIGH") || this.toString().equals("LOW") || this.toString().equals("INPUT") || this.toString().equals("OUTPUT"))
 		{
 			return true;
 		}

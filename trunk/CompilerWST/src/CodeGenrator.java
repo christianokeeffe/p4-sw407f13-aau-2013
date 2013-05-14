@@ -486,11 +486,12 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 		}
 		
 		//Add the name of the declarated variable to the present scope
+		//latex start visitDCL
 		String Temp = ctx.assign().callid().id().getText();
 		Temp = Temp.replaceAll("\\s","");
 		int ScopeRange = Scopecontrol.size()-1;
 		Scopecontrol.get(ScopeRange).add(Temp);
-		
+		//latex end
 		return visit(ctx.type()) + visit(ctx.assign());
 	}
 	
@@ -753,6 +754,7 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 	@Override
 	public String visitBlock(SPLADParser.BlockContext ctx) {
 		//Add a scope to the list of scopes
+		//latex start visitBlock
 		List<String> Templist = new ArrayList<String>();
 		Scopecontrol.add(Templist);
 		
@@ -760,6 +762,7 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 		
 		Scopecontrol.remove(Scopecontrol.size()-1);
 		return Temp;
+		//latex end
 	}
 
 	@Override

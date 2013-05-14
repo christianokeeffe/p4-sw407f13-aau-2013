@@ -20,9 +20,11 @@ public class Main{
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		//latex start MainSyntacticAnalysis
 		SPLADLexer lexer = new SPLADLexer(program);
 		CommonTokenStream tokens = new CommonTokenStream(lexer);
 		SPLADParser parser = new SPLADParser(tokens);
+		//latex end
 		parser.setBuildParseTree(true);
 		return parser;
 	}

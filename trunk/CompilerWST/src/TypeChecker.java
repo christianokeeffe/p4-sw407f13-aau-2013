@@ -7,9 +7,11 @@ import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
 public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLADVisitor<Value>{
 	
+	//Creates the lists used for errors
 	List<Error> ErrList = new ArrayList<Error>();
 	List<String> ErrorFunctions = new ArrayList<String>();
 	
+	//Creates the maps used for function and variable memory
 	Map<String, Variable> VariableMemory = new HashMap<String, Variable>();
 	Map<String, Function> FunctionMemory = new HashMap<String, Function>();
 	
@@ -31,10 +33,12 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 			Expr = visit(ctx.assignend());
 			Var.Value = Expr.toString();
 			
+			//Checks if we know the variable id already
 			if(VariableMemory.containsKey(id))
 			{
 				Var = VariableMemory.get(id);
 				
+				//If we do, and the variable is a constant and not is an array, no assign must be made, and an error is added to the list
 				if(Var.constant == true && Var.isArray == false)
 				{
 					Error err = new Error(18, id);
@@ -42,6 +46,7 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 				}
 				else if(Var.Type.equals("int") || Var.Type.equals("double"))
 				{
+					//If the type is int or double, the assign must be a numeric expression, else add error to the list 
 					if(!Expr.isNumericExpression())
 					{
 						Error err = new Error(2, Expr.toString());
@@ -51,6 +56,7 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 			}
 			else
 			{
+				//If we do not know the variable, the variable is now known and must be added to the list
 				Variable nVar = new Variable();
 				nVar.Id = id;
 				nVar.Value = Expr.toString();
@@ -76,16 +82,21 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 		{
 			val = visit(ctx.expr());
 			
+			//Splits the expressions, so each part can be type checked
 			String[] NewArr = val.toString().split("[\\+\\-\\*\\/]");
 			
 			for(String str : NewArr)
 			{
+				//If it is not a string
 				if(str.length() > 1 && str.charAt(0) != '"' && str.charAt(str.length()-1) != '"')
 				{
+					//If it is not a char
 					if(str.charAt(0) != '\'' && str.length() != 3)
 					{
+						//If it is not bool or numeric
 						if(!new Value(str).isNumeric() && !str.equals("true") && !str.equals("false"))
 						{
+							//We have now determined that we have a variable, so we check the variable memory and the function memory
 							if(!VariableMemory.containsKey(str))
 							{
 								int trigger = 0;
@@ -109,6 +120,7 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 								}
 								if(trigger == 0)
 								{
+									//If the variable was not known, add error
 									Error err = new Error(5, str);
 									ErrList.add(err);
 								}
@@ -235,7 +247,6 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 		if(TermSymbol.equals("") && Term.equals(""))
 		{
 			return null;
-			
 		}
 		else
 		{
@@ -285,6 +296,7 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 			assign = new Value(assign.toString().substring(assign.toString().indexOf("<--")+3, assign.toString().length()));
 		}
 		
+		//The first part of the from loop must be either an int or a numeric expression
 		if(!assign.isInt())
 		{
 			Error err = new Error(12, assign.toString());
@@ -355,6 +367,7 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 		
 		if(ctx.specialtype() != null)
 		{
+			//Every special type is a constant
 			val = visit(ctx.specialtype());
 			val = new Value("const," + val.toString());
 		}
@@ -385,10 +398,12 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 	@Override
 	public Value visitFunction(SPLADParser.FunctionContext ctx) {
 		
+		//Get the id of the function
 		String Funcid = ctx.id().getText();
 		
 		Value type = new Value("");
 		
+		//Get the return type of the function
 		if (ctx.functionmid().type() != null){
 			type = visit(ctx.functionmid().type());
 		}
@@ -399,9 +414,11 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 				
 		if(!ctx.functionmid().functionend().params().getText().equals(""))
 		{
+			//Split the parameters so they can be added to the list of parameters
 			String Params[] = ctx.functionmid().functionend().params().getText().split(",");
 			ArrayList<ParamsType> ParamsList = new ArrayList<ParamsType>();
 
+			//Find the type of each parameter
 			for(String s : Params)
 			{
 				if(s.substring(0, 3).equals("int"))
@@ -456,6 +473,7 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 			}
 			Function func = new Function();
 			
+			//Add the function to the functionmemory
 			func.Name = Funcid;
 			func.Params = ParamsList;
 			func.ReturnType = type.toString();
@@ -473,11 +491,6 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 		
 		Value id = visit(ctx.id());
 		Value mid = visit(ctx.functionmid());
-
-		
-		//FunctionMemory.put(Funcid, ctx.functionmid().functionend().params().getText());
-	
-		
 		
 		return new Value(id.toString() + type.toString() + mid.toString());
 	}
@@ -486,18 +499,20 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 	public Value visitId(SPLADParser.IdContext ctx) {
 		String id = ctx.getText();
 		
+		//If the id is a variable, return the value
 		if(VariableMemory.containsKey(id))
 		{
 			return new Value(VariableMemory.get(id).Value);
 		}
 		
-		
+		//If the id is a function, return the function
 		if(FunctionMemory.containsKey(id))
 		{
 			return new Value(FunctionMemory.get(id));
 		}
 		else
 		{
+			//If the variable is a parameter in a function, return the tyope
 			for(Function f : FunctionMemory.values())
 			{
 				if(f.Params != null)
@@ -518,7 +533,7 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 			}
 			
 		}
-		
+		//If the id is not known, we return the same id
 		return new Value(id);
 	}
 	
@@ -529,8 +544,10 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 		Function cFunc = new Function();
 		int RequiredParams = -1;
 		
+		//If we do not know the called function
 		if(!FunctionMemory.containsKey(id.toString()))
 		{
+			//If the called function is not already on the list of unknown functions, add it
 			if(!ErrorFunctions.contains(id.toString()))
 			{
 				ErrorFunctions.add(id.toString());
@@ -540,6 +557,7 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 		}
 		else
 		{
+			//else the number of parameters is set
 			cFunc = (Function)id.value;
 			if(cFunc.Params != null)
 			{
@@ -560,6 +578,7 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 		
 		List<Value> Params = new ArrayList<Value>();
 		
+		//Determine the parameters
 		for(i = 0; i<= callCharArray.length-1; i++)
 		{
 			if(callCharArray[i] == '"')
@@ -571,11 +590,9 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 				else
 				{
 					StringFlag = 0;
-					//Params.add(new Value(CallExpr.toString().substring(location, i+1)));
-					//location = i+2;
-					//i=i+1;
 				}
 			}
+			//Add the parameters to params
 			else if(callCharArray[i] == ',' && StringFlag != 1)
 			{
 				Params.add(new Value(CallExpr.toString().substring(location, i)));
@@ -593,7 +610,7 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 		if(RequiredParams != -1)
 		{
 			int wrongNumberofParametersFlag = 0;
-		
+			//Check if the right number of parameters is used 
 			if(Params.size() > RequiredParams)
 			{
 				wrongNumberofParametersFlag = 1;
@@ -610,7 +627,8 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 			if(wrongNumberofParametersFlag == 0)
 			{
 				for(i=0; i< RequiredParams; i++)
-				{
+				{	
+					//Check that the formal parameters is the same types as the actual parameters
 					if(!new Value(cFunc.Params.get(i).type).isSameType(new Value(Params.get(i))))
 					{
 						Error err = new Error(15, cFunc.Name + ". Got " + Params.get(i).GetType() + " expecting " + cFunc.Params.get(i).type);
@@ -704,6 +722,7 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 				String CompType = "";
 				for(String s : valArr)
 				{
+					//Verify that types are compared correctly
 					Value nVal = new Value(s);
 					if(nVal.isNumeric())
 					{
@@ -816,6 +835,7 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 					}
 				}
 				
+				//If the compared types are not equal, add error
 				if(!CompType.equals(ValType))
 				{
 					//FunctionID
@@ -828,6 +848,7 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 			}
 			else
 			{				
+				//If the < or > operator is used, the compared types must be numeric
 				for(String s : valArr)
 				{
 					Value nVal = new Value(s);
@@ -960,6 +981,7 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 			Value Assign = visit(ctx.assign());
 			String VariableID = Assign.toString().substring(0, Assign.toString().indexOf("<--"));	
 			
+			//Get the variable value from memory
 			if(!VariableMemory.containsKey(VariableID))
 			{
 				int trigger  = 0;
@@ -1126,7 +1148,7 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 			Expr = visit(ctx.expr());
 		}
 		
-		
+		//Type check the expression
 		if(Type.toString().equals("int"))
 		{
 			if(!Expr.toString().equals("int") && !Expr.isInt())
@@ -1171,6 +1193,7 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 		
 		if(Expression.equals(""))
 		{
+			//Set the expression based on the type
 			if(type.toString().equals("string"))
 			{
 				Expression = "\"string\"";
@@ -1201,6 +1224,7 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 		if(Expression.equals("double") || Expression.equals("int") || Expression.equals("char") || Expression.equals("string")
 		|| Expression.equals("bool"))
 		{
+			//Type check the expression and the type
 			if(Expression.equals("double") || Expression.equals("int") && !(type.toString().equals("double") || type.toString().equals("int")))
 			{
 				Error err = new Error(2, "");
@@ -1217,10 +1241,12 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 		
 		if(type.toString().equals("double") || type.toString().equals("int") || type.toString().equals("container"))
 		{
+			//if the type is numeric, the expression must be checked
 			for(String str : NewArr)
 			{
 				Value nVal = new Value(str);
 				
+				//If the string is not numeric, not a variable, and not a string, add error
 				if(!nVal.isNumeric() && !str.equals(""))
 				{
 					Variable Var = VariableMemory.get(str);
@@ -1240,6 +1266,7 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 					ErrList.add(err);
 				}
 				//latex start IntError
+				//If the type is int or container, it the expression must not contain "."
 				if(type.toString().equals("int") || type.toString().equals("container"))
 				{
 					if(str.contains("."))
@@ -1254,6 +1281,7 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 		
 		if(type.toString().equals("string"))
 		{
+			//If the type is a string, it must contain a '"' at the beginning and end
 			if(Expression != null && !Expression.equals(""))
 			{
 				String ExprString = Expression;
@@ -1268,6 +1296,7 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 		Variable Var = new Variable();
 		
 		String VarType = type.toString();
+		//if the type contains const, the constant flag must be set in the variable
 		if(type.toString().contains("const"))
 		{
 			Var.constant = true;
@@ -1278,6 +1307,7 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 			Var.Type = type.toString();
 		}
 		
+		//Add the variable to variable memory
 		Var.Id = VariableId;
 		Var.Value = Expression;
 		Var.isArray = isArray;
@@ -1327,7 +1357,7 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 		Value Type =  visit(ctx.type());
 		Value Expr =  visit(ctx.expr());
 		
-		//Trying to cast to numeric, expr must also be type numeric
+		//Check if the types are valid
 		if(Type.toString().equals("double") || Type.toString().equals("int"))
 		{
 			if(!Expr.isNumeric())
@@ -1348,6 +1378,7 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 			}
 		}
 		
+		//Get the type, and return appropriate value
 		if(Type.toString().equals("string"))
 		{
 			return new Value("\"string\"");
@@ -1438,6 +1469,7 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 	@Override
 	public Value visitProgram(SPLADParser.ProgramContext ctx) {
 
+		//Add the predefined functions and variables
 		PreDefinedFunctions PreFunctions = new PreDefinedFunctions();
 		
 		for(Function f : PreFunctions.GetPreDefinedFunctions())
@@ -1452,6 +1484,7 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 		
 		visit(ctx.roots());
 		
+		//Check if the provided source contains the functions setup and loop, which are required
 		if(!FunctionMemory.containsKey("setup"))
 		{
 			Error err = new Error(21, "setup");
@@ -1507,6 +1540,7 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 		return new Value(Comp);
 	}
 	//latex start DrinkDcl
+	//Handle the declaration of drinks
 	@Override public Value visitDrinkdcl(SPLADParser.DrinkdclContext ctx) 
 	{ 
 	    Value ID  = visit(ctx.id(0));
@@ -1526,6 +1560,7 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 		var.Type = "drink";
 		var.Value = "drink";
 		
+		//Add drink to variable memory
 		VariableMemory.put(ID.toString(), var);
 		
 		return null; 
@@ -1552,6 +1587,7 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 		visit(ctx.numeric());
 		Value id = visit(ctx.id());
 		
+		//Verify that the drink exists in memory, else it must be a container
 		if(!VariableMemory.containsKey(ctx.id().getText()))
 		{
 			Error err = new Error(19, id.toString());
@@ -1586,7 +1622,7 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 		}
 		else if(ctx.id() != null)
 		{
-			//We must remove ingredient, we must check if it is a container
+			//Before we remove an ingredient, we must check if it is a container
 			visit(ctx.id());
 			
 			if(!VariableMemory.containsKey(ctx.id().getText()))

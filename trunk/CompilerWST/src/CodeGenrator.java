@@ -12,6 +12,7 @@ import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SPLADVisitor<String>{
 	//Lists for scopechecking
 	List<List<String>> Scopecontrol = new ArrayList<List<String>>();
+	List<String> CodeGeneratorErrors = new ArrayList<String>();
 	List<String> listOfErrors = new ArrayList<String>();
 	int count = 0 ;
 	
@@ -46,12 +47,13 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 	
 	@Override
 	public String visitTermsymbol(SPLADParser.TermsymbolContext ctx){
-		//Convers the "AND" from the SPLAD syntax to "&&" which is used on Arduino.
+		//Convert the "AND" from the SPLAD syntax to "&&" which is used on Arduino.
 		if (ctx.getText().trim().equals("AND")){
 			return "&&";
 		}
 		else {
-			return "ERROR";
+			CodeGeneratorErrors.add("Syntax error");
+			return "";
 		}
 	}
 	
@@ -62,7 +64,8 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 			return "||";
 		}
 		else {
-			return "ERROR";
+			CodeGeneratorErrors.add("Syntax error");
+			return "";
 		}
 	}
 	
@@ -92,7 +95,8 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 			return visit(ctx.drinkdcl()) + "\n";
 		}
 		else{
-			return "ERROR";
+			CodeGeneratorErrors.add("Syntax error");
+			return "";
 		}
 	}
 	
@@ -290,7 +294,8 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 			case "!=":
 				return "!=";
 			default:
-				return "ERROR";
+				CodeGeneratorErrors.add("Syntax error: Not valid comparison operator");
+				return "";
 		}
 	}
 	
@@ -380,7 +385,8 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 			return visit(ctx.nontermswitch());
 		}
 		else {
-			return "ERROR";
+			CodeGeneratorErrors.add("Syntax error");
+			return "";
 		}
 	}
 	
@@ -446,7 +452,8 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 				return "(" + visit(ctx.expr()) + ")";
 			}
 			else {
-				return "ERROR";
+				CodeGeneratorErrors.add("Syntax error");
+				return "";
 			}
 			
 		}
@@ -535,7 +542,8 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 			return "-";
 		}
 		else {
-			return "ERROR";
+			CodeGeneratorErrors.add("Syntax error: This is not plus or minus");
+			return "";
 		}
 	}
 	
@@ -702,7 +710,8 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 		}
 		catch (IOException IOerror){
 			System.out.println("Could not read the file");
-			return "ERROR";
+			CodeGeneratorErrors.add("Syntax error");
+			return "";
 		}
 	}
 	//latex end
@@ -716,7 +725,8 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 			return "/";
 		}
 		else{
-			return "ERROR";
+			CodeGeneratorErrors.add("Syntax error: This is not divide or times");
+			return "";
 		}
 	}
 
@@ -889,7 +899,8 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 			return "const int ";
 		}else
 		{
-			return "ERROR";
+			CodeGeneratorErrors.add("Syntax error: Unknown special type");
+			return "";
 		}
 	}
 }

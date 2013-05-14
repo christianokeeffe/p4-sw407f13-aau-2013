@@ -33,6 +33,10 @@ public class ValueTest {
 	    assertTrue("10 must be an int", test.isInt());
 	    assertFalse("10.0 is not int", new Value(10.0).isInt());
 	    assertFalse("string is not", new Value("int").isInt());
+	    assertTrue("OUTPUT is int", new Value("OUTPUT").isInt());
+	    assertTrue("INPUT is int", new Value("INPUT").isInt());
+	    assertTrue("HIGH is int", new Value("HIGH").isInt());
+	    assertTrue("LOW is int", new Value("LOW").isInt());
 	}
 
 	@Test

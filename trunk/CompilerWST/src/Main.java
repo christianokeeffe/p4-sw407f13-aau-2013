@@ -64,17 +64,20 @@ public class Main{
 			//Generates code and checks the scopes
 			String OutputCode = generator.visit(generatedParseTree().program());
 			//If no scope errors then the file is created
-			if (generator.listOfErrors.isEmpty()){
+			if (generator.listOfErrors.isEmpty() && generator.CodeGeneratorErrors.isEmpty()){
 				toFileWriter = new PrintWriter(fileName, "UTF-8");
 				toFileWriter.print(OutputCode);
 				toFileWriter.close();
 			}
-			else{
-				//If there were errors they are printed to the user
-				for(int i = 0; i < generator.listOfErrors.size();i++)
-				{
-					System.out.println(generator.listOfErrors.get(i));
-				}
+
+			for(String scopeerr : generator.listOfErrors)
+			{
+				System.out.println(scopeerr);
+			}
+			
+			for(String err : generator.CodeGeneratorErrors)
+			{
+				System.out.println(err);
 			}
 		} catch (FileNotFoundException e) {
 			System.out.println("The file could not be generated");

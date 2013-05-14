@@ -1,8 +1,11 @@
-This section will follow up on the informal description of our type rules
+\input{../RapportNIXPILLE/preamble}
+\begin{document}
+This section will follow up on the informal description of our type rules.
+
 \begin{longtable}{l l l l}
 \longtablesetting{4}
 ~&~&~&~\\
-$[SUBS_{EXP}]$ & $\dfrac{E \vdash e_1 : T \: \; E \vdash e_2 : T}{E \vdash e_1 - e_2:T} $ & $[NUM_{EXP}]$ & $E\vdash n:T$\\
+$[SUB_{EXP}]$ & $\dfrac{E \vdash e_1 : T \: \; E \vdash e_2 : T}{E \vdash e_1 - e_2:T} $ & $[NUM_{EXP}]$ & $E\vdash n:T$\\
 ~ & ~ & ~& ~ \\
 $[ADD_{EXP}]$ & $\dfrac{E \vdash e_1 : T \: \; E \vdash e_2 : T}{E \vdash e_1 + e_2:T} $ & $[VAR_{EXP}]$ & $\dfrac{E(x)=T}{E \vdash x:T}$\\
 ~ & ~& ~& ~ \\
@@ -24,34 +27,35 @@ $[LorE_{EXP}]$ & $\dfrac{E \vdash e_1 : T \: \; E \vdash e_2 : T}{E \vdash e_1 <
 ~ & ~& ~& ~ \\
 $[AND_{EXP}]$ & $\dfrac{E \vdash e_1 : \text{Bool} \: \; E \vdash e_2 : \text{Bool}}{E \vdash e_1\: AND\: e_2:\text{Bool}} $ \\
 ~ & ~& ~& ~ \\
- $[NEG_{EXP}]$ & $\dfrac{E \vdash e_1 :\text{Bool}}{E \vdash !e_1:\text{Bool}}$\\
+ $[NOT_{EXP}]$ & $\dfrac{E \vdash e_1 :\text{Bool}}{E \vdash !e_1:\text{Bool}}$\\
 ~ & ~& ~& ~ \\
 $[OR_{EXP}]$ & $\dfrac{E \vdash e_1 : \text{Bool} \: \; E \vdash e_2 : \text{Bool}}{E \vdash e_1 \: OR \: e_2:\text{Bool}} $&~&~\\
 ~ & ~& ~& ~ \\
-\caption{Type rules for expressions}
+\caption{Type rules for expressions.}
 \label{tab:expressions}
 \end{longtable}
 \begin{longtable}{l l l l}
 \longtablesetting{4}
 ~&~&~&~\\
-$[VAR_{DEC}]$ & $\dfrac{E[x \mapsto T]\vdash D_V : \text{ok} \:\:\: E\vdash a:T}{E \vdash \text{var} \; T \; x:=a;D_V:\text{ok}}$ &$[EMPTY_{DEC}]$ & $E \vdash \epsilon:\text{ok}$\\
+$[VAR_{DEC}]$ & $\dfrac{E[x \mapsto T]\vdash D_V : \text{ok} \:\:\: E\vdash a:T}{E \vdash \text{var} \; T \; x:=a;D_V:\text{ok}}$ &$[EMPTY_{DEC}]$ & $E \vdash \eps:\text{ok}$\\
 ~&~&~&~\\
 $[FUNC_{DEC}]$ & $\dfrac{E[f \mapsto (x:T \rightarrow \text{ok})]\vdash D_F:\text{ok}}{E \vdash \text{func}\; f(T\;x)\; is\; S,D_F:\text{ok}} $\\
-\caption{Type rules for declarations}
+\caption{Type rules for declarations.}
 \label{tab:declarations}
 \end{longtable}
+\fxfatal{Husk at tjekke op på function declarations parametere, der skal vist være flere}
 \begin{longtable}{l l}
 \longtablesetting{2}
 ~&~\\
-$[SKIP_{STM}]$ & $E\vdash \text{skip : ok}$\\
-~&~\\
+%$[SKIP_{STM}]$ & $E\vdash \text{skip : ok}$\\
+%~&~\\
 $[WHILE_{STM}]$ & $\dfrac{ E \vdash e:\text{Bool} \:\:\: E\vdash S:\text{ok}}{E\vdash \text{while}\:e \: \text{do}\: S: \text{ok}}$\\
 ~&~\\
 $[FROM_{STM}]$ & $\dfrac{E\vdash e_1:\text{Int}\:\:\:E\vdash e_2:\text{Int}\:\:\:E\vdash e_3:\text{Int}\:\:\: E\vdash S:\text{ok}}{E\vdash \text{from}\;e_1 \; \text{to}\; e_2\; \text{step} \; e_3\: \text{do} \;S:\text{ok}}$\\
 ~&~\\
 $[IF_{STM}]$ & $\dfrac{E\vdash e:\text{Bool} \:\:\:E\vdash S_1:ok\:\:\:E\vdash S_2:ok}{if(e)\; \text{then}\;S_1\; else\; S_2:\text{ok} }$\\
 ~&~\\
-$[SWITCH_{STM}]$ & $\dfrac{E\vdash x:T \:\:\: E\vdash E_1:T \:\:\: E\vdash E_k:T \:\:\:E\vdash S_1:\text{ok}\:\:\: E\vdash S_k:\text{ok}}{\text{switch}\; x\;\text{case}\;E_1\; \text{do}\; S_1\;\text{break} ...\;\text{case}\;E_k\;\text{do}\;S_k\;\text{break}:\text{ok}}$\\
+$[SWITCH_{STM}]$ & $\dfrac{E\vdash x:T \:\:\: E\vdash E_1:T \dots \:\:\: E\vdash E_k:T \:\:\:E\vdash S_1:\text{ok} \dots\:\:\: E\vdash S_k:\text{ok}}{\text{switch}\; x\;\text{case}\;E_1\; \text{do}\; S_1\;\text{break} ...\;\text{case}\;E_k\;\text{do}\;S_k\;\text{break}:\text{ok}}$\\
 ~&~\\
 $[ASS_{STM}]$ & $\dfrac{E\vdash x:T\:\:\: E\vdash a:T}{E\vdash x<--a:\text{ok}}$\\
 ~&~\\
@@ -62,6 +66,7 @@ $[BLOCK_{STM}]$ & $\dfrac{E\vdash D_V \text{ : ok} \:\:\: E_1\vdash D_F \text{ :
 ~& $\text{and }E_2=E(D_F,E_1)$\\
 ~&~\\
 $[CALL_{STM}]$ & $\dfrac{E\vdash f:(x:T\rightarrow\text{ok})\:\:\:E\vdash e:T}{E\vdash \text{call}\;f(e):ok}$\\
-\caption{Type rules for statements}
+\caption{Type rules for statements.}
 \label{tab:statements}
 \end{longtable}
+\end{document}

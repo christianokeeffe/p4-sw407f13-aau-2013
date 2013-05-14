@@ -1,0 +1,4 @@
+String Temp = ctx.assign().callid().id().getText();
+Temp = Temp.replaceAll("\\s","");
+int ScopeRange = Scopecontrol.size()-1;
+Scopecontrol.get(ScopeRange).add(Temp);

@@ -1,0 +1,7 @@
+List<String> Templist = new ArrayList<String>();
+Scopecontrol.add(Templist);
+ 
+String Temp = "{" + visit(ctx.stmts()) + "}";
+ 
+Scopecontrol.remove(Scopecontrol.size()-1);
+return Temp;

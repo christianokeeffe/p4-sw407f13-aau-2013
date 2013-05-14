@@ -1,0 +1,11 @@
+\section{Component Setup}
+To illustrate the drink mixer construction and the functions of the program language we have made a simple prototype of a drink mixer. The prototype serve as a test rig for the testing the program language. The whole construction is made out of the Arduino board, a breadboard, a LCD, the RFID module, three buttons, LEDs, resistors and wires. For more about the components see section \ref{sec:Hardware}.
+
+The breadboard is used for constructing prototypes and is ideal for changes, because it allows easily replacement of components or restructuring of the set up. The breadboard is used for mounting LEDs, resistors, buttons, wires and the LCD.
+Normally the RFID module is mounted directly on the Arduino board as a shield. A shield extends the boards pins which allows for other modules to use the free pins, but because the RFID module caused some rather questionable result with the LCD, it have been decided not to mount the RFID module, but instead hook it up with wires as seen on figure \ref{fig:HWsetup}.
+
+The buttons are used for controlling the program at runtime. The LEDs are used to symbolize the containers, which holds the different ingredients that are used when making a drink. The LEDs will light up when their ingredient is being used by the drink mixer. The LCD is used to provide the user with information when using the drink mixer.
+
+\figur{1}{HardwareSetup.png}{In this figure a illustrative resemble of a drink mixer can be seen.}{fig:HWsetup}
+
+The components are wired up to the Arduino board. The whole construction can be seen in figure \ref{fig:HWsetup}.

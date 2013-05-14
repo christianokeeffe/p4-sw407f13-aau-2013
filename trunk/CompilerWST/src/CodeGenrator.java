@@ -326,7 +326,12 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 	
 	@Override
 	public String visitCases(SPLADParser.CasesContext ctx) {
-		return "case " + visit(ctx.expr()) + ":\n{\n" + visit(ctx.stmts()) + "}\n" + visit(ctx.endcase());
+		//Add a scope to the list of scopes
+		List<String> Templist = new ArrayList<String>();
+		Scopecontrol.add(Templist);
+		String Temp = "case " + visit(ctx.expr()) + ":\n{\n" + visit(ctx.stmts()) + "}\n" + visit(ctx.endcase());
+		Scopecontrol.remove(Scopecontrol.size()-1);
+		return Temp;
 	}
 	
 	@Override
@@ -548,7 +553,14 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 			return "break;\n" + visit(ctx.breakend());
 		}
 		else {
-			return "default:\n" + visit(ctx.stmts()) + "break;\n";
+			//Add a scope to the list of scopes
+			List<String> Templist = new ArrayList<String>();
+			Scopecontrol.add(Templist);
+			
+			String Temp = "default:\n" + visit(ctx.stmts()) + "break;\n";
+			
+			Scopecontrol.remove(Scopecontrol.size()-1);
+			return Temp;
 		}
 	}
 	
@@ -649,7 +661,14 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 			return visit(ctx.cases());
 		}
 		else if (ctx.stmts() != null){
-			return "default:\n" + visit(ctx.stmts()) + "break;\n";
+			//Add a scope to the list of scopes
+			List<String> Templist = new ArrayList<String>();
+			Scopecontrol.add(Templist);
+			
+			String Temp = "default:\n" + visit(ctx.stmts()) + "break;\n";
+			
+			Scopecontrol.remove(Scopecontrol.size()-1);
+			return Temp;
 		}
 		else {
 			return "";

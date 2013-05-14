@@ -8,6 +8,7 @@ public class Value {
         this.value = value;
     }
     
+    //Default constructor returns empty but not null value object
     public Value()
     {
     	this.value = "";
@@ -15,8 +16,10 @@ public class Value {
 //latex end
 
 //latex start isType
+    //Check if value is double
     public boolean isDouble() 
     {
+    	//If value matches the regular expressions, it must a double
 		if(this.toString().matches("((-)?[0-9]+)\\.([0-9]){1,2}"))
 		{
 			return true;
@@ -24,8 +27,10 @@ public class Value {
 		return false;
     }
     
+    //Check if value is type int
     public boolean isInt()
     {
+    	//The vale must match the regular expression, or be HIGH, LOW, OUTPUT or INPUT
 		if(this.toString().matches("(-)?[0-9]+") || this.toString().equals("HIGH") || this.toString().equals("LOW") || this.toString().equals("INPUT") || this.toString().equals("OUTPUT"))
 		{
 			return true;
@@ -42,6 +47,7 @@ public class Value {
 		return false;
     }
     
+    //A value is numeric if it is either a double or int
     public boolean isNumeric()
     {
     	if(this.isInt() || this.isDouble() || this.toString().equals("int") || this.toString().equals("double"))
@@ -51,6 +57,7 @@ public class Value {
     	return false;
     }
     
+    //Returns ture if the value is a numeric expression
     public boolean isNumericExpression()
     {    	
     	String StringToVerify = this.toString();
@@ -114,6 +121,7 @@ public class Value {
     	return false;
     }
     
+    //Checks two value if they are the same type, else returns false
     public boolean isSameType(Value val)
     {
     	if(this.isBool() && val.isBool())
@@ -144,6 +152,7 @@ public class Value {
     	return false;
     }
     
+    //Returns the type of the value represented as string
     public String GetType()
     {
     	if(this.isBool() || this.toString().equals("bool"))

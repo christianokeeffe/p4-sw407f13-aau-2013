@@ -1,9 +1,9 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Scanner;
 
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
@@ -465,8 +465,8 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 	@Override
 	public String visitDcl(SPLADParser.DclContext ctx) {
 		//If the type of the variable declared is container, do the following:
-		if(ctx.type().primitivetype()!= null){
-			if(ctx.type().primitivetype().getText().trim().equals("container") && ctx.assign().assignend().expr() != null){
+		if(ctx.type().specialtype() != null){
+			if(ctx.type().specialtype().getText().trim().equals("container") && ctx.assign().assignend().expr() != null){
 				//In the setupfunction, set the pin of the container to "OUTPUT"
 				setupbuffer.append("pinMode(" + visit(ctx.assign().assignend().expr()) + ", OUTPUT);\n");
 				
@@ -517,7 +517,7 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 		Temp = Temp.replaceAll("\\s","");
 		Scopecontrol.get(Scopecontrol.size()-1).add(Temp);
 		
-		if (ctx.type().primitivetype() != null && ctx.type().primitivetype().getText().trim().equals("drink")){
+		if (ctx.type().specialtype() != null && ctx.type().specialtype().getText().trim().equals("drink")){
 			//If the type is a drink, add the arrays for the twodimensional array.
 			return visit(ctx.type()) + visit(ctx.callid()) + "[ ][2] " + visit(ctx.subparamsend());
 		}
@@ -600,22 +600,21 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 		Scopecontrol.add(GlobalScope);
 		
 		//Add the predefined functions to the string and loopbuffer
-		setupbuffer.append(PrintContentofFile("src/resources/setup.txt"));
-		loopbuffer.append(PrintContentofFile("src/resources/loop.txt"));
+		setupbuffer.append(PrintContentofFile("resources/setup.txt"));
+		loopbuffer.append(PrintContentofFile("resources/loop.txt"));
 		
 		//String buffer for the whole content to return.
 		StringBuffer ContentBuffer = new StringBuffer();
 		StringBuffer HeaderBuffer = new StringBuffer();
 		
 		//Add the predefined content and visit roots.
-		HeaderBuffer.append(PrintContentofFile("src/resources/header.txt"));
+		HeaderBuffer.append(PrintContentofFile("resources/header.txt"));
 		HeaderBuffer.append(visit(ctx.roots()));
 		
 		//Add the arrays containing the names and pins of the containers.
 		
 		//latex start container
-		if(ListOfContainers.size() != 0)
-		{
+		if (ListOfContainers.size() != 0){
 			ContentBuffer.append("String ContainersnameSW407F13[" + ListOfContainers.size() + "];\n");
 			ContentBuffer.append("int ContainerspinSW407F13[" + ListOfContainers.size() + "];\n");
 		}
@@ -688,19 +687,22 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 	//Reed contendt of file, and return it.
 	//latex start pcontent
 	private String PrintContentofFile(String path){
-		BufferedReader in;
-		StringBuffer result = new StringBuffer();
+		InputStream in;
+		StringBuffer fileintxt = new StringBuffer();
 		try{
-			in = new BufferedReader(new FileReader(path));
-			while (in.ready()){
-				String fileintxt = in.readLine();
-				result.append(fileintxt+"\n");
+			ClassLoader CLoader = this.getClass().getClassLoader();
+			in = CLoader.getResourceAsStream(path);
+			Scanner test = new Scanner(in,"UTF-8");
+			while(test.hasNext()){
+				fileintxt.append(test.useDelimiter("\\A").next());
 			}
 			in.close();
-			return result.toString();
+			test.close();
+			return fileintxt.toString();
 		}
 		catch (IOException IOerror){
-			return null;
+			System.out.println("Could not read the file");
+			return "ERROR";
 		}
 	}
 	//latex end
@@ -880,11 +882,11 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 	public String visitSpecialtype(SPLADParser.SpecialtypeContext ctx) {
 		//The structure of the implementation of the type Drink is a two dimensional double array. The array implementation will be added in an other visitor.	
 		if(ctx.getText().trim().equals("drink")){
-			return "double";
+			return "double ";
 		}
 		//In arduino, an output pin, which the value of the class Container specifies, is handled as an int
 		else if(ctx.getText().trim().equals("container")){
-			return "const int";
+			return "const int ";
 		}else
 		{
 			return "ERROR";

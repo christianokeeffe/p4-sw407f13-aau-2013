@@ -1,8 +1,0 @@
-\subsection{Syntactic Analysis}
-%Til retter - læs hvad der står under contextual analysis i deres rapport, og tjek om det ikke er det rigtige
-Syntactic analysis is the first phase of the compilation process from SPLAD to the programming language that arduino use, that is made of a lexer and a parser. The syntactic analyzer read through the SPLAD program and check of the program can hold up to the syntax specification of SPLAD and if it does make a parse tree that is used by the contextual analysis.
-
-When making a parse tree on a SPLAD program we use ANTLR's generate functions, this can be seen in the code snippet\ref{lst:MainCode}. First function to be used is the lexer, can be seen on line 1, where it can be seen that the lexer need the program code. Then making the tokens the functions that be seen on line 2 is used, here it can be seen that the token generator need the lexer output for making the tokens. And for making the parser the tokens are needed this functions can be seen on line 3.
-\fxfatal{passer linje talenede}
-
-\kode{MainCode}{code snippet where the generate functions from ANTLR is used}{MainSyntacticAnalysis.txt}

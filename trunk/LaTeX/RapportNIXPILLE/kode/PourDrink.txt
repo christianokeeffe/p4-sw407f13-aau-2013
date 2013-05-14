@@ -1,0 +1,11 @@
+Function PourDrink = new Function();
+ParamsType PourDrinkParam = new ParamsType();
+ 
+PourDrinkParam.id = "x";
+PourDrinkParam.type = "drink";
+PourDrink.Name = "pourDrink";
+PourDrink.ReturnType = "nothing";
+ArrayList<ParamsType> PourDrinkParams = new ArrayList<ParamsType>();
+PourDrinkParams.add(PourDrinkParam);
+PourDrink.Params = PourDrinkParams;
+Functions.add(PourDrink);

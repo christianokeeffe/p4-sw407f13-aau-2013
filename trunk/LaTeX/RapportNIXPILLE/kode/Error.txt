@@ -1,0 +1,15 @@
+public String GetErrorMessage()
+{
+  String ErrorMessage;
+   
+  if(this.ErrorBody.equals("Syntax Error"))
+  {
+    ErrorMessage = "Syntax Error";
+  }
+  else
+  {
+     switch (this.ErrorNumber) {
+       case 1:  ErrorMessage = "Value \"" + this.ErrorBody +"\" is not of type int\n";
+       break;
+       case 2:  ErrorMessage = "Value \"" + this.ErrorBody +"\" is not of type numeric\n";
+        break;

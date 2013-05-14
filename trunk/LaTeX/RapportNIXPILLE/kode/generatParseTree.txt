@@ -1,0 +1,13 @@
+public final static SPLADParser generatedParseTree(){
+  CharStream program = null;
+  try {
+    program = new ANTLRFileStream(file);
+  } catch (IOException e) {
+    e.printStackTrace();
+  }
+  SPLADLexer lexer = new SPLADLexer(program);
+  CommonTokenStream tokens = new CommonTokenStream(lexer);
+  SPLADParser parser = new SPLADParser(tokens);
+  parser.setBuildParseTree(true);
+  return parser;
+}

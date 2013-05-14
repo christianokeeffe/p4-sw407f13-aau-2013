@@ -1,0 +1,22 @@
+if (ctx.drinkstmts() != null){
+  visit(ctx.drinkstmts());
+}
+//Else it must be a drink which inherits from an other drink
+else {
+  //Find the drink to inherit from
+  int k = 0;
+  while(!ListOfDrinks.get(k).drinkid.equals(visit(ctx.id(1)))){
+    k++;
+  }
+   
+  //Add every ingredient from the inherited drink to the new empty drink in the drinkHolder.
+  for(Iterator<Ingredients> j = ListOfDrinks.get(k).ListOfIngredient.iterator(); j.hasNext();){
+    Ingredients tempingredient = new Ingredients();
+    Ingredients tempnextingredient = j.next();
+    tempingredient.Ingredientid = tempnextingredient.Ingredientid;
+    tempingredient.IngredientAmount = tempnextingredient.IngredientAmount;
+    drinkHolder.ListOfIngredient.add(tempingredient);
+  }
+   
+  //Visit the statements
+  visit(ctx.changedrinkstmts());

@@ -1,0 +1,8 @@
+public String visitRoots(SPLADParser.RootsContext ctx) {
+  if (ctx.root() != null){
+    return visit(ctx.root()) + visit(ctx.roots());
+  }
+  else {
+    return "";
+  }
+}

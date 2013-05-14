@@ -1,0 +1,5 @@
+Variable Output = new Variable();
+Output.Id = "OUTPUT";
+Output.Type = "int";
+Output.Value = "0";
+Variables.add(Output);

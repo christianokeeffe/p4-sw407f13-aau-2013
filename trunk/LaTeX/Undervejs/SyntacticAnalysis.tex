@@ -1,2 +1,6 @@
 \subsection{Syntactic Analysis}
-because we are using ANTLR to make a scanner and a lexer \fafatal{parser?} that kan make a parse tree over a given code in code in SPLAD, 
+The first phase of the compilation process from SPLAD to the programming language that arduino use is syntactic analysis, that is made of a lexer \fxfatal{section ref} and a parser \fxfatal{section ref}. the The syntactic analyzer read through the SPLAD program and check of the program can hold up to the syntax specification of SPLAD and make a parse tree that is used by the contextual analysis.
+
+For making a parse tree with ANTLR's generate functions over a given code, this can be seen in the code snippet \fxfatal{kodestykke fra main filen}.
+
+When making a parse tree with the ANTLR generate functions, first one to be used is the lexer, can be seen on line \fxfatal{linje}, where it can be seen that the lexer need the program code. Then finding the tokens the command that be seen on line \fxfatal{linje} is used, here it can be seen that the token generator need the lexer output for making the tokens. And for making the parser the tokens are needed, the command that be seen on line \fxfatal{linje}.

@@ -1,0 +1,58 @@
+\subsection{Unit Testing}
+This section will describe how unit tests have been used to ensure a higher rate of reliability to the compiler of this project. 
+
+\subsubsection{Unit Testing in General}
+The basic idea in unit testing is to test small parts of your program. Suppose one had a custom class Foo, with the method Bar, which does some calculations, and returns them. One might want to test this method to ensure that it works as expected - this can be done using unit tests. A unit test for the above situation, could then be the following:
+\begin{enumerate}
+	\item Create an object of the "Foo" class.
+	\item Call the "Bar" method with appropriate parameters. 
+	\item Check that the result it what is expected.
+\end{enumerate}
+Now this might seem simple, but unit testing is a very powerful tool for ensuring reliability in programs. Suppose that you have a very large and complex project, creating unit test while developing the project, ensures that each part of the project works as expected.
+
+A unit test can essentially be 1 very simple line. The test-framework JUnit for Java is used in this project for unit testing. A unit test can be seen on listing \ref{lst:simpleunittest}, which checks that a method returns true. The annotation "@Test" tells JUnit that the following method is a unit test. The function "assertTrue" is a part of a unit test - here we assert that the method with the supplied parameters \emph{must} return true.
+
+\begin{code}{simpleunittest}{Simple unit test}
+\begin{lstlisting}
+	@Test
+	public void testIsGreater() {
+	    assertTrue("10 > 0 must return true", Value v = new Value(10).GreaterThan(0));
+	}
+\end{lstlisting}
+\end{code}
+
+Test-frameworks like JUnit can automatically create test-skeletons, which then can be implemented in a desired way. When some unit tests have been implemented, most test-frameworks can then tell how much of the program code is covered by these tests. This is called the code-coverage, and can be used to check that a desirable amount of the program has been tested.
+
+\subsubsection{Unit Testing in This Project}
+In this project only the Value-class has been properly unit tested. This is because of the difficulties arising when trying to unit test methods in the visitor pattern, which requires nodes as input - it would require building a lot of parse trees for testing method under different conditions. However, every method in the type-checker uses the Value-class, which is very essential. Therefore it was decided to focus on having a decent code-coverage of the Value-class, which has been achieved with a code-coverage at 100\%. JUnit, which is the test-framework used in this project, does not include a way to see the code-coverage. Therefore an additional plugin "CodeCover" \citep{codecover} to Eclipse has been used. This plugin is not only able to tell the code-coverage percentage. But it is also able to tell exactly which parts of the program code is covered, which is not covered, and which is partially covered by unit tests. By partially covered, CodeCover means methods which have only been tested in one direction. For example a method is partially covered, if there is a test for it, where the method returns true, but not a test where the method returns false. Additionally CodeCover is able to identify different kinds of code-coverage like these that are used in this project: Statement-, branch-, and term-coverage. Statement-coverage covers the very simplest type of tests. For example ensuring that "i--" is actually executed successfully and is considered a successful statement-test.
+Branch-coverage covers conditional statements, for example if-else statements. CodeCover can complete a test, and tell which branch of the if-else statement has been taken. This is useful for discovering parts of a program which is never executed. Suppose one had a condition in an if-statement, which always returned true - the entire if-statement would then be useless, and could perhaps be removed, or corrected, if this behavior was a result of a programming error. Conditional-coverage covers the basic boolean terms in a conditional expression. 
+
+It should be noted that CodeCover also supports loop-coverage, ?-operator-coverage and Synchronized-coverage. But since these types of constructs are not used in the Value-class, they are not described further. 
+
+As mentioned above, the Value-class in this project is 100\% covered by unit tests. This includes 100\% statement-coverage, 100\% branch-coverage and 100\% term-coverage. Some unit test for the Value-class is very simple. For example the test for the Value.isint() method is very simple, as can be seen on listing \ref{lst:isint}. The unit test for the Value.isint() method simply test three conditions: It assumes that the number 10 is an integer. It assumes that the number 10.0 is not integer, and it assumes that the string "int" also is not an int. These three tests all passes, and the code-coverage of the Value.isint() method becomes 100\%. 
+
+\kode{Simple unit test of the Value.isint() method}{isint}{valueisint.txt}
+
+A more complex test is the unit test for the Value.GetType() method. This is a longer test, because this test must test for each type. The unit test for Value.GetType() method can be seen on listing \ref{lst:gettype}. It should be noted that this is only a part of the Value.GetType() method, because of the length of the method. As it can be seen, each type must be checked, to see if the Value.GetType() returns the appropriate string, for each type. Therefore the test contains test-cases for both bool, int, double, string, char, container and drink. 
+
+\begin{code}{gettype}{Unit test for the Value.GetType() method}
+\begin{lstlisting}
+	@Test
+	public void testGetType() {
+	    Value test = new Value(true);
+	    //Test bool
+	    assertTrue("true must be bool", test.GetType().equals("bool"));
+	    assertTrue("bool is type bool", new Value("bool").GetType().equals("bool"));
+	    
+	    //Test int
+	    assertTrue("20 is int", new Value(20).GetType().equals("int"));
+	    assertFalse("1.0 is not int", new Value(1.0).GetType().equals("int"));
+	    assertTrue("int is type int", new Value("int").GetType().equals("int"));
+	
+		...    
+	}
+\end{lstlisting}
+\end{code}
+\fxfatal{tjek om "..." kommer til at stå rigtigt}
+
+The use of unit tests did actually result in code-changes, because it was discovered that the method Value.IsNumericExpression(), which determine if the value is a numeric expression, for example "10+4-1*4+4.0", did not accept numeric expression containing parentheses, which, of course, are valid in numeric expression. This resulted in small modification, which essentially removes all parentheses. Recall that the goal of the type-checker is to type-check programs, \emph{not} to evaluate expressions. Therefore parentheses can be completely ignored in numeric expressions. 

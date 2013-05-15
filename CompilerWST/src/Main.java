@@ -20,11 +20,13 @@ public class Main{
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
+		//makes a lexer based on the source program
 		SPLADLexer lexer = new SPLADLexer(program);
+		//makes a stream of tokens based on the lexer
 		CommonTokenStream tokens = new CommonTokenStream(lexer);
+		//makes the parse based on the stream of tokens
 		SPLADParser parser = new SPLADParser(tokens);
-		
+		//builds the parse tree
 		parser.setBuildParseTree(true);
 		return parser;
 	}
@@ -71,12 +73,12 @@ public class Main{
 				toFileWriter.print(OutputCode);
 				toFileWriter.close();
 			}
-
+			//Prints the scope errors
 			for(String scopeerr : generator.listOfErrors)
 			{
 				System.out.println(scopeerr);
 			}
-			
+			//Prints the code generations error, should only happen in extreme cases
 			for(String err : generator.CodeGeneratorErrors)
 			{
 				System.out.println(err);
@@ -90,11 +92,8 @@ public class Main{
 		}
 		
 		//Prints the type errors and warnings
-		if(!TypeCheck.ErrList.isEmpty())
-		{
-	        for (Error e : TypeCheck.ErrList) {
-	            System.out.print(e.GetErrorMessage());
-	        }
-		}
+        for (Error e : TypeCheck.ErrList) {
+            System.out.print(e.GetErrorMessage());
+        }
 	}
 }

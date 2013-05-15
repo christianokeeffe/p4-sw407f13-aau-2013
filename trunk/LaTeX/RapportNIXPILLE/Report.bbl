@@ -1,4 +1,4 @@
-\begin{thebibliography}{34}
+\begin{thebibliography}{35}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -55,6 +55,11 @@
 \newblock \textit{Arduino Build Process}.
 \newblock \url{http://arduino.cc/en/Hacking/BuildProcess} [Last seen:
   2013/03/22].
+
+\bibitem[AVRDUDE(2010)]{AVRDUDE}
+\textbf{AVRDUDE}, \textbf{2010}.
+\newblock \textit{AVRDUDE}.
+\newblock \url{http://www.nongnu.org/avrdude/} [Last seen: 2013/05/12], 2010.
 
 \bibitem[Bent~Thomsen(2013)]{OverviewCompiler2}
 \textbf{Bent~Thomsen, teacher at Department of Computer~Science},

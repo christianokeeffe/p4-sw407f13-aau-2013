@@ -3,7 +3,7 @@ ANTLR (ANother Tool for Language Recognition) is a tool for generating a parser 
 In the SPLAD language it has been decided that a lexer rule should all be written in upper-case. This is done in order to better distinguish between lexer parser rules when writing or reading the grammar. Lexer starts from the top of the rules and work its way down through the rules, meaning that it will try to generate tokens from the very first rule and work its way down until it meets a possible match between a given input and a rule. Because of this the most complex rules should be placed first in the grammar in order for the lexer to generate the correct tokens. 
 The token stream from the lexer are then parsed following the parser rules that have been defined in the grammar. Parser rules are all written with lower-case in contrast to the lexer rules. ANTLR works with $LL(*)$ grammars which means that the parser uses left-most derivation to parse the token stream. ANTLR can generate a abstract syntax tree for the grammar by incorporating specific operators in the grammar that tells if an element should be a root node of a subtree with its children or if an element should be left out of the tree construction. ANTLR also allows the use of rewritten rules to generate a tree from the given grammar \citep{ANTLRTreeCon}.
 
-\begin{code}{lst:HeeloWoorld}{Here the code for the simple "Hello world" program can be seen.}
+\begin{code}{HeeloWoorld}{Here the code for the simple "Hello world" program can be seen.}
 \begin{lstlisting}
 function setup return nothing using()
 begin

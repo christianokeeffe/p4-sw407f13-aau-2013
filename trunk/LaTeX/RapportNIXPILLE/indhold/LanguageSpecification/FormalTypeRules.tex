@@ -8,21 +8,13 @@ $[SUB_{EXP}]$ & $\dfrac{E \vdash e_1 : T \: \; E \vdash e_2 : T}{E \vdash e_1 - 
 ~ & ~ & ~& ~ \\
 $[ADD_{EXP}]$ & $\dfrac{E \vdash e_1 : T \: \; E \vdash e_2 : T}{E \vdash e_1 + e_2:T} $ & $[VAR_{EXP}]$ & $\dfrac{E(x)=T}{E \vdash x:T}$\\
 ~ & ~& ~& ~ \\
-$[MULT_{EXP}]$ & $\dfrac{E \vdash e_1 : T \: \; E \vdash e_2 : T}{E \vdash e_1 * e_2:T} $ & $[PAREN_{EXP}]$ & $\dfrac{E \vdash e_1 :T}{E \vdash (e_1):T}$\\
+$[MULT_{EXP}]$ & $\dfrac{E \vdash e_1 : T \: \; E \vdash e_2 : T}{E \vdash e_1 * e_2:T} $ & $[PAR_{EXP}]$ & $\dfrac{E \vdash e_1 :T}{E \vdash (e_1):T}$\\
 ~ & ~& ~& ~ \\
-$[DIVIDE_{EXP}]$ & $\dfrac{E \vdash e_1 : T \: \; E \vdash e_2 : T}{E \vdash e_1 / e_2:\text{Double}} $ & ~ & ~\\
+$[DIV_{EXP}]$ & $\dfrac{E \vdash e_1 : T \: \; E \vdash e_2 : T}{E \vdash e_1 / e_2:\text{Double}} $ & ~ & ~\\
 ~ & ~& ~& ~ \\
 $[EQUAL_{EXP}]$ & $\dfrac{E \vdash e_1 : T \: \; E \vdash e_2 : T}{E \vdash e_1 = e_2:\text{Bool}} $ \\
 ~ & ~& ~& ~ \\
-$[NOTEQUAL_{EXP}]$ & $\dfrac{E \vdash e_1 : T \: \; E \vdash e_2 : T}{E \vdash e_1 != e_2:\text{Bool}} $\\ 
-~ & ~& ~& ~ \\
-$[GREATER_{EXP}]$ & $\dfrac{E \vdash e_1 : T \: \; E \vdash e_2 : T}{E \vdash e_1 > e_2:\text{Bool}} $\\
-~ & ~& ~& ~ \\
-$[LESSER_{EXP}]$ & $\dfrac{E \vdash e_1 : T \: \; E \vdash e_2 : T}{E \vdash e_1 < e_2:\text{Bool}}$\\
-~ & ~& ~& ~ \\
-$[GorE_{EXP}]$ & $\dfrac{E \vdash e_1 : T \: \; E \vdash e_2 : T}{E \vdash e_1 >= e_2:\text{Bool}} $\\
-~ & ~& ~& ~ \\
-$[LorE_{EXP}]$ & $\dfrac{E \vdash e_1 : T \: \; E \vdash e_2 : T}{E \vdash e_1 <= e_2:\text{Bool}} $\\
+$[GRT_{EXP}]$ & $\dfrac{E \vdash e_1 : T \: \; E \vdash e_2 : T}{E \vdash e_1 > e_2:\text{Bool}} $\\
 ~ & ~& ~& ~ \\
 $[AND_{EXP}]$ & $\dfrac{E \vdash e_1 : \text{Bool} \: \; E \vdash e_2 : \text{Bool}}{E \vdash e_1\: AND\: e_2:\text{Bool}} $ \\
 ~ & ~& ~& ~ \\

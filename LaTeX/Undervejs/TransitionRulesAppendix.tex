@@ -8,7 +8,7 @@ S::= \; & x := a \; | \; r[a_1] := a_2 \; | \; S_1; \; S_2 \; | \; \text{if} \; 
 a::= \; & n \; | \; x \; | \; a_1 + a_2 \; | \; a_1 - a_2 \; | \; a_1 * a_2 \; | \; a_1 / a_2 \; | \; (a) \; | \; r[a_i]\\
 b::= \; &a_1 = a_2 \; | \; a_1 > a_2 \; | \; a_1 < a_2 \; | \; \neg b \; | \; b_1 \; \wedge \; b_2 \; | \; b_1 \; \vee \; b_2 \; | \; (b) \\
 D_V::= \; & \text{var} \; x := a; \; D_V \; | \; \varepsilon \\
-D_P::= \; & \text{proc} \; p \; \text{is} \; S;\;  D_P \; | \; \varepsilon \\
+D_P::= \; & \text{func} \; p \; \text{is} \; S;\;  D_P \; | \; \varepsilon \\
 D_A::= \; & \text{array} \; r[a_1]; \; D_A \; | \; \varepsilon \\
 \end{align*}
 
@@ -82,7 +82,9 @@ D_A::= \; & \text{array} \; r[a_1]; \; D_A \; | \; \varepsilon \\
 ~ & \indent\indent and $v_1 > v_2$ \\
 ~ & ~ \\
 
-[CALL] & $\dfrac{env_V'[\vec{z} \mapsto \vec{l}][\text{next} \mapsto l'], env_P' \vdash \langle S, sto \rangle \rightarrow sto'}{env_V, env_P \vdash \langle \text{call} \; p(\vec{x}), sto \rangle \rightarrow sto'}$\\
+[CALL] & $\dfrac{env_V'[\vec{z} \mapsto \vec{l}], env_P' \vdash \langle S, sto[\vec{l} \mapsto \vec{v}] \rangle \rightarrow sto'}{env_V, env_P \vdash \langle \text{call} \; p(\vec{a}), sto \rangle \rightarrow sto'}$
+
+\dfrac{env_V'[\vec{z} \mapsto \vec{l}][\text{next} \mapsto l'], env_P' \vdash \langle S, sto \rangle \rightarrow sto'}{env_V, env_P \vdash \langle \text{call} \; p(\vec{x}), sto \rangle \rightarrow sto'}$\\
 ~ & ~ \\
 ~ & \indent\indent where $env_V \; \vec{x} = \vec{l}$ \\
 ~ & \indent\indent and $env_P \; p = (S, \vec{z}, env_V', env_P')$ \\
@@ -234,7 +236,7 @@ D_A::= \; & \text{array} \; r[a_1]; \; D_A \; | \; \varepsilon \\
 ~ & Transitioner på formen: $\langle D_A, env_V, sto \rangle \rightarrow_{DA} (env_V', sto')$ \\
 ~ & ~ \\
 
-[ARRAY-DEC] & $\dfrac{\langle D_A, env_V[r \mapsto l, \text{next} l + v + 1],  sto[l \mapsto r] \rangle \rightarrow_{DA} (env_V', sto')}{\langle ??? r[a_1], D_A, env_V, sto \rangle \rightarrow_{DA} (env_V', sto')}$ \\
+[ARRAY-DEC] & $\dfrac{\langle D_A, env_V[r \mapsto l, \text{next} \mapsto l + v + 1],  sto[l \mapsto r] \rangle \rightarrow_{DA} (env_V', sto')}{\langle ??? r[a_1], D_A, env_V, sto \rangle \rightarrow_{DA} (env_V', sto')}$ \\
 ~ & ~ \\
 ~ & \indent\indent where $env_V, sto \vdash a_1 \rightarrow_a v$ \\
 ~ & \indent\indent and $l = env_V \text{next}$ \\
@@ -326,7 +328,7 @@ D_A::= \; & \text{array} \; r[a_1]; \; D_A \; | \; \varepsilon \\
 %~ & \indent\indent if $env_C, \; sto \vdash b \rightarrow_b \text{false}$ \\
 %~ & ~ \\
 %
-%[FROM-TRUE] & \[\frac{•}{env_V, env_P \vdash \langle \textbf{from } x <-- n_1 \textbf{ to } n_2 \textbf{ step } n_3 \textbf{ begin } C \textbf{ end}, sto\rangle} \rightarrow sto'\] \\
+%[FROM-TRUE] & \[\frac{}{env_V, env_P \vdash \langle \textbf{from } x <-- n_1 \textbf{ to } n_2 \textbf{ step } n_3 \textbf{ begin } C \textbf{ end}, sto\rangle} \rightarrow sto'\] \\
 %~ & ~ \\
 %
 %[FROM-FALSE] & ~ \\

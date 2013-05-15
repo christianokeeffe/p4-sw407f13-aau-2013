@@ -35,11 +35,11 @@ Here the abstract syntax of SPLAD can be seen. An abstract syntax is bla bla bla
 \begin{align*}
 S::= \; & x := a \; | \; r[a_1] := a_2 \; | \; S_1; \; S_2 \; | \; \text{if} \; b \; \text{do} \; S \; | \; \text{if} \; b \; \text{do} \; S_1 \; \text{else do} \; S_2 \; | \; \text{while} \; b \; \text{do} \; S \\
 ~ & | \; \text{from} \; x := a_1 \; \text{to} \; a_2 \; \text{step} \; a_3 \; \text{do} \; S \; | \; \text{call} \; p(\vec{x}) \; | \; \text{begin} \; D_V \; D_P \; S \; \text{end} \\
-a::= \; & n \; | \; x \; | \; a_1 + a_2 \; | \; a_1 - a_2 \; | \; a_1 * a_2 \; | \; a_1 / a_2 \; | \; (a) \\
+a::= \; & n \; | \; x \; | \; a_1 + a_2 \; | \; a_1 - a_2 \; | \; a_1 * a_2 \; | \; a_1 / a_2 \; | \; (a) \; | \; r[a_i]\\
 b::= \; &a_1 = a_2 \; | \; a_1 > a_2 \; | \; a_1 < a_2 \; | \; \neg b \; | \; b_1 \; \wedge \; b_2 \; | \; b_1 \; \vee \; b_2 \; | \; (b) \\
 D_V::= \; & \text{var} \; x := a; \; D_V \; | \; \varepsilon \\
-D_P::= \; & \text{proc} \; p \; \text{is} \; S;\;  D_P \; | \; \varepsilon \\
-D_A::= \; & \text{array} \; r[a_1] := a_2; \; D_A \; | \; \varepsilon \\
+D_P::= \; & \text{func} \; p \; \text{is} \; S;\;  D_P \; | \; \varepsilon \\
+D_A::= \; & \text{array} \; r[a_1]; \; D_A \; | \; \varepsilon \\
 \end{align*}
 
 \subsection{Statements}
@@ -99,7 +99,7 @@ The transition rules for the variable declarations are on the form: $\langle D_V
 
 \begin{longtable}{l l}
 \longtablesetting{2}
-[VAR-DECL] & $\dfrac{\langle D_V, env_V'', sto[l \mapsto v] \rangle \rightarrow_{DV} (env_V', sto'}{\text{var} \; x <-- a; D_V, env_V, sto \rangle \rightarrow_{DV} (env_V', sto')}$ \\
+[VAR-DEC] & $\dfrac{\langle D_V, env_V'', sto[l \mapsto v] \rangle \rightarrow_{DV} (env_V', sto'}{\text{var} \; x <-- a; D_V, env_V, sto \rangle \rightarrow_{DV} (env_V', sto')}$ \\
 ~ & ~ \\
 ~ & \indent\indent where $env_V, sto \vdash a \rightarrow_a v$ \\
 ~ & \indent\indent and $l = env_V \; \text{next}$ \\
@@ -109,27 +109,27 @@ The transition rules for the variable declarations are on the form: $\langle D_V
 \label{tab:VarDecl}
 \end{longtable}
 
-\subsection{Procedure Declaration}
-The transition rules for the procedure declarations are on the form: $env_V \vdash \langle D_P, env_P \rangle \rightarrow_{DP} env_P'$
+\subsection{Function Declaration}
+The transition rules for the function declarations are on the form: $env_V \vdash \langle D_P, env_P \rangle \rightarrow_{DP} env_P'$
 
 \fxfatal{bla bla bla}
 \begin{longtable}{l l}
 \longtablesetting{2}
-[PROC-DECL] & $\dfrac{env_V \vdash \langle D_P, env_P[p \mapsto (S, env_V, env_P)] \rangle \rightarrow_{DP} env_P'}{env_V \vdash \langle \text{proc} \; p \; \text{is} \; S; D_P, env_P \rangle \rightarrow_{DP} env_P'}$ \\
+[FUNC-DEC] & $\dfrac{env_V \vdash \langle D_P, env_P[p \mapsto (S, env_V, env_P)] \rangle \rightarrow_{DP} env_P'}{env_V \vdash \langle \text{func} \; p \; \text{is} \; S; D_P, env_P \rangle \rightarrow_{DP} env_P'}$ \\
 ~ & ~ \\
-\caption{Transition rules for the procedure declarations.}
+\caption{Transition rules for the function declarations.}
 \label{tab:ProcDecl}
 \end{longtable}
 
 \subsection{Array Declaration}
-The transition rules for the variable declarations are on the form: ???
+The transition rules for the variable declarations are on the form: $\langle d_A, env_V, sto \rangle \rightarrow_{DA} (env_V', sto')$
 
 \fxfatal{bla bla bla}
 
-\begin{longtable}{l l}
-\longtablesetting{2}
-\fxfatal{Den er ikke lavet i billaget endnu.}
-\caption{Transition rules for the array declarations.}
-\label{tab:ArrayDecl}
-\end{longtable}
+%\begin{longtable}{l l}
+%\longtablesetting{2}
+%\fxfatal{Den er ikke lavet i billaget endnu.}
+%\caption{Transition rules for the array declarations.}
+%\label{tab:ArrayDecl}
+%\end{longtable}
 \end{document}

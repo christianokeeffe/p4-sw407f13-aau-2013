@@ -8,8 +8,8 @@ public String GetErrorMessage()
   }
   else
   {
-     switch (this.ErrorNumber) {
-       case 1:  ErrorMessage = "Value \"" + this.ErrorBody +"\" is not of type int\n";
-       break;
-       case 2:  ErrorMessage = "Value \"" + this.ErrorBody +"\" is not of type numeric\n";
-        break;
+   switch (this.ErrorNumber) {
+     case 1:  ErrorMessage = "Value \"" + this.ErrorBody +"\" is not of type int\n";
+     break;
+     case 2:  ErrorMessage = "Value \"" + this.ErrorBody +"\" is not of type numeric\n";
+      break;

@@ -82,14 +82,13 @@ D_A::= \; & \text{array} \; r[a_1]; \; D_A \; | \; \varepsilon \\
 ~ & \indent\indent and $v_1 > v_2$ \\
 ~ & ~ \\
 
-[CALL] & $\dfrac{env_V'[\vec{z} \mapsto \vec{l}], env_P' \vdash \langle S, sto[\vec{l} \mapsto \vec{v}] \rangle \rightarrow sto'}{env_V, env_P \vdash \langle \text{call} \; p(\vec{a}), sto \rangle \rightarrow sto'}$
-
-\dfrac{env_V'[\vec{z} \mapsto \vec{l}][\text{next} \mapsto l'], env_P' \vdash \langle S, sto \rangle \rightarrow sto'}{env_V, env_P \vdash \langle \text{call} \; p(\vec{x}), sto \rangle \rightarrow sto'}$\\
+[CALL] & $\dfrac{env_V'[\vec{z} \mapsto \vec{l}], env_P' \vdash \langle S, sto[\vec{l} \mapsto \vec{v}] \rangle \rightarrow sto'}{env_V, env_P \vdash \langle \text{call} \; p(\vec{a}), sto \rangle \rightarrow sto'}$ \\
 ~ & ~ \\
-~ & \indent\indent where $env_V \; \vec{x} = \vec{l}$ \\
-~ & \indent\indent and $env_P \; p = (S, \vec{z}, env_V', env_P')$ \\
-~ & \indent\indent and $|\vec{x}| = |\vec{z}|$ \\
-~ & \indent\indent and $env_V, next = l'$ \\
+~ & \indent\indent where $env_P \; p = (S, \vec{z}, env_V', env_P')$ \\
+~ & \indent\indent and $|\vec{a}| = |\vec{z}|$ \\
+~ & \indent\indent and $env_V, sto \vdash a_i \rightarrowv_1 for every 1 \leq i \leq |\vec{a}|$ \\
+~ & \indent\indent and $l_1 = env_V \; \text{new}$ \\
+~ & \indent\indent and $l_{i+1} = l_i for each 1 < i < |\vec{a}|$ \\
 ~ & ~ \\
 
 [BLOCK] & $\dfrac{\begin{matrix} \langle D_V, env_V, sto \rangle \rightarrow_{DV} (env_V', sto'') \\ env_V' \vdash \langle D_P, env_P \rangle \rightarrow_{DP} env_P' \\ env_V', env_P' \vdash \langle S, sto'' \rangle \rightarrow sto' \end{matrix}}{env_V, env_P \vdash \langle \text{begin} \; D_V \; D_P \; S \; \text{end}, sto \rangle \rightarrow sto' }$ \\

@@ -1,17 +1,16 @@
 \contentsline {fixme}{Fatal: synopsis mangler}{iii}{Doc-Start}
 \contentsline {fixme}{Fatal: Mangler konklusion og appendix, men det venter vi med til vi er n\IeC {\r a}et l\IeC {\ae }ngere}{3}{section.1.3}
-\contentsline {fixme}{Fatal: Skal det med?}{24}{subsection.2.3.7}
-\contentsline {fixme}{Fatal: Kan ikke laves siden at transition rules til dette punkt ikke er lavet endnu}{28}{subsection.2.4.8}
+\contentsline {fixme}{Fatal: Skal det med?}{23}{subsection.2.3.7}
+\contentsline {fixme}{Fatal: Kan ikke laves siden at transition rules til dette punkt ikke er lavet endnu}{27}{subsection.2.4.8}
 \contentsline {fixme}{Fatal: Hans H\IeC {\"u}ttels danske bog}{28}{subsection.2.4.10}
 \contentsline {fixme}{Fatal: Husk at tjekke op p\IeC {\r a} function declarations parametere, der skal vist v\IeC {\ae }re flere}{30}{table.2.9}
 \contentsline {fixme}{Fatal: mangler kilde}{35}{subsubsection.3.2.1.2}
 \contentsline {fixme}{Fatal: er det korrekt ref? f\IeC {\o }r stod der fig:CraftingACompiler2, men det synes jeg ikke gav mening}{35}{subsection.3.2.2}
-\contentsline {fixme}{Fatal: Skal det med? - JA!}{39}{subsection.3.2.4}
-\contentsline {fixme}{Fatal: Eksempler p\IeC {\r a} hvordan parsing virker, og hvordan tr\IeC {\ae }et bliver bygget}{40}{subsection.3.2.5}
-\contentsline {fixme}{Fatal: ref til afsnittet som parsetr\IeC {\ae }er}{45}{figure.caption.26}
-\contentsline {fixme}{Fatal: Den passer overhovedet ikke, og er det ikke m\IeC {\ae }rkeligt det kommer to gange?}{47}{table.caption.30}
-\contentsline {fixme}{Fatal: Den laver vel b\IeC {\r a}de parsetr\IeC {\ae } og AST? Der mangler at blive beskrevet forskellen p\IeC {\r a} parsetr\IeC {\ae } og AST}{47}{subsection.3.3.5}
-\contentsline {fixme}{Fatal: Memmory samt hvordan den bruges i visitorpattern. Hvor bliver den brugt? hvordan bruges det? er lidt mere en beskrivelse af valueklassen, og ikke selve typetjekket... alts\IeC {\r a} mangler der lidt at der tjekkes for retur af functionerne samt mere.}{53}{lstlisting.3.13}
-\contentsline {fixme}{Fatal: tjek om "..." kommer til at st\IeC {\r a} rigtigt}{61}{lstlisting.3.22}
+\contentsline {fixme}{Fatal: Skal det med? - JA!}{38}{subsection.3.2.4}
+\contentsline {fixme}{Fatal: Eksempler p\IeC {\r a} hvordan parsing virker, og hvordan tr\IeC {\ae }et bliver bygget}{39}{subsection.3.2.5}
+\contentsline {fixme}{Fatal: Den passer overhovedet ikke, og er det ikke m\IeC {\ae }rkeligt det kommer to gange?}{46}{table.caption.30}
+\contentsline {fixme}{Fatal: Den laver vel b\IeC {\r a}de parsetr\IeC {\ae } og AST? Der mangler at blive beskrevet forskellen p\IeC {\r a} parsetr\IeC {\ae } og AST}{46}{subsection.3.3.5}
+\contentsline {fixme}{Fatal: Memmory samt hvordan den bruges i visitorpattern. Hvor bliver den brugt? hvordan bruges det? er lidt mere en beskrivelse af valueklassen, og ikke selve typetjekket... alts\IeC {\r a} mangler der lidt at der tjekkes for retur af functionerne samt mere.}{52}{lstlisting.3.13}
+\contentsline {fixme}{Fatal: tjek om "..." kommer til at st\IeC {\r a} rigtigt}{60}{lstlisting.3.22}
 \contentsline {fixme}{Fatal: konklusion mangler}{63}{chapter.4}
 \contentsline {fixme}{Fatal: Mangler: for loop, call function, declerations m\IeC {\r a}ske mere}{69}{section.A.1}

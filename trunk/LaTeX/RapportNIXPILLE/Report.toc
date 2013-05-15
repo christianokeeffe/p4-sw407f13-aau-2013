@@ -40,14 +40,13 @@
 \contentsline {subsubsection}{\numberline {2.3.5.4}Grammar - Expressions}{20}{subsubsection.2.3.5.4}
 \contentsline {subsubsection}{\numberline {2.3.5.5}Grammar - Functions}{22}{subsubsection.2.3.5.5}
 \contentsline {subsubsection}{\numberline {2.3.5.6}Grammar - Loops}{22}{subsubsection.2.3.5.6}
-\contentsline {subsubsection}{\numberline {2.3.5.7}Lexicon}{23}{subsubsection.2.3.5.7}
 \contentsline {subsection}{\numberline {2.3.6}Lexicon}{23}{subsection.2.3.6}
-\contentsline {subsection}{\numberline {2.3.7}EBNF?}{24}{subsection.2.3.7}
-\contentsline {section}{\numberline {2.4}Semantics}{24}{section.2.4}
+\contentsline {subsection}{\numberline {2.3.7}EBNF?}{23}{subsection.2.3.7}
+\contentsline {section}{\numberline {2.4}Semantics}{23}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Scope Rules}{24}{subsection.2.4.1}
 \contentsline {subsubsection}{\numberline {2.4.1.1}Static Scope}{24}{subsubsection.2.4.1.1}
 \contentsline {subsubsection}{\numberline {2.4.1.2}Dynamic Scope}{24}{subsubsection.2.4.1.2}
-\contentsline {subsubsection}{\numberline {2.4.1.3}Declaration Order}{25}{subsubsection.2.4.1.3}
+\contentsline {subsubsection}{\numberline {2.4.1.3}Declaration Order}{24}{subsubsection.2.4.1.3}
 \contentsline {subsubsection}{\numberline {2.4.1.4}Global Scope}{25}{subsubsection.2.4.1.4}
 \contentsline {subsubsection}{\numberline {2.4.1.5}The difference between dynamic and static scope}{25}{subsubsection.2.4.1.5}
 \contentsline {subsection}{\numberline {2.4.2}Scoping In This Project}{25}{subsection.2.4.2}
@@ -56,8 +55,8 @@
 \contentsline {subsection}{\numberline {2.4.5}Environment-Store Model}{27}{subsection.2.4.5}
 \contentsline {subsection}{\numberline {2.4.6}Arithmetic Expressions}{27}{subsection.2.4.6}
 \contentsline {subsection}{\numberline {2.4.7}Boolean Expressions}{27}{subsection.2.4.7}
-\contentsline {subsection}{\numberline {2.4.8}Declarations}{28}{subsection.2.4.8}
-\contentsline {subsection}{\numberline {2.4.9}Assignments}{28}{subsection.2.4.9}
+\contentsline {subsection}{\numberline {2.4.8}Declarations}{27}{subsection.2.4.8}
+\contentsline {subsection}{\numberline {2.4.9}Assignments}{27}{subsection.2.4.9}
 \contentsline {subsection}{\numberline {2.4.10}Commands}{28}{subsection.2.4.10}
 \contentsline {subsection}{\numberline {2.4.11}Informal Type Rules}{28}{subsection.2.4.11}
 \contentsline {subsection}{\numberline {2.4.12}Formal Type Rules}{29}{subsection.2.4.12}
@@ -71,37 +70,37 @@
 \contentsline {subsubsection}{\numberline {3.2.1.3}Other components}{35}{subsubsection.3.2.1.3}
 \contentsline {subsection}{\numberline {3.2.2}Overview of the Compiler}{35}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Language Processing Strategy}{37}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Compilation Passes}{39}{subsection.3.2.4}
-\contentsline {subsection}{\numberline {3.2.5}Abstract Syntax Trees}{39}{subsection.3.2.5}
-\contentsline {subsection}{\numberline {3.2.6}Parse Tree}{40}{subsection.3.2.6}
-\contentsline {subsection}{\numberline {3.2.7}The Visitor Pattern}{41}{subsection.3.2.7}
-\contentsline {section}{\numberline {3.3}Syntactic Analysis}{41}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Known lexers and parsers}{42}{subsection.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.1.1}Lexer}{42}{subsubsection.3.3.1.1}
-\contentsline {subsubsection}{\numberline {3.3.1.2}Parser}{42}{subsubsection.3.3.1.2}
-\contentsline {subsubsection}{\numberline {3.3.1.3}Lexer and parser}{42}{subsubsection.3.3.1.3}
-\contentsline {subsubsection}{\numberline {3.3.1.4}Comparison Tables}{43}{subsubsection.3.3.1.4}
-\contentsline {subsection}{\numberline {3.3.2}ANTLR}{44}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Lexical Analyzer}{45}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Tokens}{46}{subsection.3.3.4}
-\contentsline {subsubsection}{\numberline {3.3.4.1}Reserved Keywords}{46}{subsubsection.3.3.4.1}
-\contentsline {subsubsection}{\numberline {3.3.4.2}Token Specification}{47}{subsubsection.3.3.4.2}
-\contentsline {subsection}{\numberline {3.3.5}Parser}{47}{subsection.3.3.5}
-\contentsline {subsubsection}{\numberline {3.3.5.1}Top-down Parsers}{47}{subsubsection.3.3.5.1}
-\contentsline {subsubsection}{\numberline {3.3.5.2}Bottom-Up Parsers}{48}{subsubsection.3.3.5.2}
-\contentsline {section}{\numberline {3.4}Contextual Analysis}{48}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Scope Checking}{48}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Type Checking}{48}{subsection.3.4.2}
-\contentsline {subsubsection}{\numberline {3.4.2.1}Value}{48}{subsubsection.3.4.2.1}
-\contentsline {subsubsection}{\numberline {3.4.2.2}Functions}{50}{subsubsection.3.4.2.2}
-\contentsline {subsubsection}{\numberline {3.4.2.3}Variables}{51}{subsubsection.3.4.2.3}
-\contentsline {subsubsection}{\numberline {3.4.2.4}Drink}{52}{subsubsection.3.4.2.4}
-\contentsline {subsubsection}{\numberline {3.4.2.5}Error Handling}{52}{subsubsection.3.4.2.5}
-\contentsline {section}{\numberline {3.5}Code Generation}{53}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Unit Testing}{58}{subsection.3.5.1}
-\contentsline {subsubsection}{\numberline {3.5.1.1}Unit Testing in General}{58}{subsubsection.3.5.1.1}
-\contentsline {subsubsection}{\numberline {3.5.1.2}Unit Testing in This Project}{59}{subsubsection.3.5.1.2}
-\contentsline {section}{\numberline {3.6}Component Setup}{61}{section.3.6}
+\contentsline {subsection}{\numberline {3.2.4}Compilation Passes}{38}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}Abstract Syntax Trees}{38}{subsection.3.2.5}
+\contentsline {subsection}{\numberline {3.2.6}Parse Tree}{39}{subsection.3.2.6}
+\contentsline {subsection}{\numberline {3.2.7}The Visitor Pattern}{40}{subsection.3.2.7}
+\contentsline {section}{\numberline {3.3}Syntactic Analysis}{40}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Known lexers and parsers}{41}{subsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.1.1}Lexer}{41}{subsubsection.3.3.1.1}
+\contentsline {subsubsection}{\numberline {3.3.1.2}Parser}{41}{subsubsection.3.3.1.2}
+\contentsline {subsubsection}{\numberline {3.3.1.3}Lexer and parser}{41}{subsubsection.3.3.1.3}
+\contentsline {subsubsection}{\numberline {3.3.1.4}Comparison Tables}{42}{subsubsection.3.3.1.4}
+\contentsline {subsection}{\numberline {3.3.2}ANTLR}{43}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Lexical Analyzer}{44}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Tokens}{45}{subsection.3.3.4}
+\contentsline {subsubsection}{\numberline {3.3.4.1}Reserved Keywords}{45}{subsubsection.3.3.4.1}
+\contentsline {subsubsection}{\numberline {3.3.4.2}Token Specification}{46}{subsubsection.3.3.4.2}
+\contentsline {subsection}{\numberline {3.3.5}Parser}{46}{subsection.3.3.5}
+\contentsline {subsubsection}{\numberline {3.3.5.1}Top-down Parsers}{46}{subsubsection.3.3.5.1}
+\contentsline {subsubsection}{\numberline {3.3.5.2}Bottom-Up Parsers}{47}{subsubsection.3.3.5.2}
+\contentsline {section}{\numberline {3.4}Contextual Analysis}{47}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Scope Checking}{47}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Type Checking}{47}{subsection.3.4.2}
+\contentsline {subsubsection}{\numberline {3.4.2.1}Value}{47}{subsubsection.3.4.2.1}
+\contentsline {subsubsection}{\numberline {3.4.2.2}Functions}{49}{subsubsection.3.4.2.2}
+\contentsline {subsubsection}{\numberline {3.4.2.3}Variables}{50}{subsubsection.3.4.2.3}
+\contentsline {subsubsection}{\numberline {3.4.2.4}Drink}{51}{subsubsection.3.4.2.4}
+\contentsline {subsubsection}{\numberline {3.4.2.5}Error Handling}{51}{subsubsection.3.4.2.5}
+\contentsline {section}{\numberline {3.5}Code Generation}{52}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Unit Testing}{57}{subsection.3.5.1}
+\contentsline {subsubsection}{\numberline {3.5.1.1}Unit Testing in General}{57}{subsubsection.3.5.1.1}
+\contentsline {subsubsection}{\numberline {3.5.1.2}Unit Testing in This Project}{58}{subsubsection.3.5.1.2}
+\contentsline {section}{\numberline {3.6}Component Setup}{60}{section.3.6}
 \contentsline {chapter}{\chapternumberline {4}Conclusion}{63}{chapter.4}
 \contentsline {chapter}{Bibliography}{65}{section*.33}
 \cftpagenumbersoff {chapter}

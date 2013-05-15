@@ -1,0 +1,20 @@
+\section{Language Processor}
+This section will introduce several different techniques for processing a language, and compare them briefly. This will result in a section describing the choice of language processor for this project, and the reasoning for this choice.
+
+\subsection{Compiler}
+A compiler can be viewed as a translator for a programming language. The compiler translates one programming language (source code) into another (target code), typically from a high-level programming language like C to a low-level language like machine code. Generally compilers generates one of three types of target code: Pure Machine Code, Augmented Machine Code and Virtual Machine Code \citep{CraftingACompiler}. An overview of the compiler is described in section \ref{sec:OverviewCompiler}.
+
+\subsubsection*{Pure Machine Code} 
+Pure Machine Code is code for one machines instruction set - this is excluding any operating system- or library functions. Pure machine code is rare because of the exclusion of such as the use of libraries and is mostly used in compilers for implementation languages, which are used for implementing e.g. operating systems.
+ 
+\subsubsection*{Augmented Machine Code}
+The most common approach when compiling, is having a compiler generate augmented machine code. This form of machine code includes operating system- and library routines, which allow the compiles program to be executed on any machine given that the particular machine is equipped with the necessary operating system.
+
+\subsubsection*{Virtual Machine Code} 
+Virtual machine code is a type of code which consists of \emph{virtual} instructions. This approach is for example used by the Java compiler, which compiles Java-source program to Java byte-code, which is virtual instructions. The byte-code can then be executed in the Java Virtual Machine (JVM), which means that if an implementation of the JVM exists for a particular machine, the Java byte-code can be executed. This is a clever approach, because if the compiler compiles language $L$ into virtual instructions, and the compiler is written in language $L$, the compiler can compile itself into virtual instructions. If the virtual machine is simple, it is relatively simple to port the virtual machine to a another architecture, allowing the compiler to work on many different architectures. The process of porting a compiler to another architecture this way is called bootstrapping \citep{CraftingACompiler}. 
+
+\subsection{Interpreter}
+Interpreters differs from compilers because where compilers generate some target code, interpreters execute programs directly. This approach is desirable when a high degree of platform independence is needed, because no machine code is generated - instructions are simply performed inside the interpreter. This is achieved because porting an interpreter to another architecture merely required one to recompile the interpreter on a different machine. Another advantage is that programs can be modified on run time, which allows interactive debugging, where it is possible to see values of variables at given times in a program. 
+
+\subsection{Choice of Language Processor for This Project}
+Because the language of this project is targeted the Arduino platform, it is desirable to either compile SPLAD into Arduino machine code, or compile SPLAD to the C/C++ like programming language that Arduino uses. Because it was deemed too time consuming to translate to Arduino directly to machine code compared other parts of the project, it was decided that the SPLAD-compiler should convert the provided source program written in SPLAD, to the Arduino programming language. This approach was also used in the first versions of the C++ compiler "CFront" \citep{sebesta}, which compiled C++ into C, and then used a C compiler to compile the program to machine code instructions. Therefore the SPLAD compiler outputs a .ino file, which can be compiled by the Arduino compiler, which also allows uploading to the Arduino platform. 

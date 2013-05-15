@@ -25,43 +25,43 @@
 \contentsline {subsubsection}{\numberline {2.3.1.4}Type - 0: Recursively Enumerable}{10}{subsubsection.2.3.1.4}
 \contentsline {subsection}{\numberline {2.3.2}Grammar}{11}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}Choice of Grammar}{12}{subsection.2.3.3}
-\contentsline {section}{\numberline {2.4}Specification of the language compared to the purpose}{13}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}A drink}{14}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}An ingredient}{15}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}A RFID-tag}{16}{subsection.2.4.3}
-\contentsline {subsection}{\numberline {2.4.4}A RFID-RW}{16}{subsection.2.4.4}
-\contentsline {subsection}{\numberline {2.4.5}A LCD}{16}{subsection.2.4.5}
-\contentsline {subsection}{\numberline {2.4.6}Buttons}{17}{subsection.2.4.6}
-\contentsline {subsection}{\numberline {2.4.7}Mechanism for pouring ingredients}{17}{subsection.2.4.7}
-\contentsline {subsection}{\numberline {2.4.8}The BNF of SPLAD}{17}{subsection.2.4.8}
-\contentsline {subsubsection}{\numberline {2.4.8.1}Grammar - Drinks}{18}{subsubsection.2.4.8.1}
-\contentsline {subsubsection}{\numberline {2.4.8.2}Grammar - Drinks}{18}{subsubsection.2.4.8.2}
-\contentsline {subsubsection}{\numberline {2.4.8.3}Grammar - Assign}{19}{subsubsection.2.4.8.3}
-\contentsline {subsubsection}{\numberline {2.4.8.4}Grammar - Expressions}{20}{subsubsection.2.4.8.4}
-\contentsline {subsubsection}{\numberline {2.4.8.5}Grammar - Functions}{22}{subsubsection.2.4.8.5}
-\contentsline {subsubsection}{\numberline {2.4.8.6}Grammar - Loops}{22}{subsubsection.2.4.8.6}
-\contentsline {subsubsection}{\numberline {2.4.8.7}Lexicon}{23}{subsubsection.2.4.8.7}
-\contentsline {subsection}{\numberline {2.4.9}Lexicon}{23}{subsection.2.4.9}
-\contentsline {subsection}{\numberline {2.4.10}EBNF?}{24}{subsection.2.4.10}
-\contentsline {section}{\numberline {2.5}Semantics}{24}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Scope Rules}{24}{subsection.2.5.1}
-\contentsline {subsubsection}{\numberline {2.5.1.1}Static Scope}{24}{subsubsection.2.5.1.1}
-\contentsline {subsubsection}{\numberline {2.5.1.2}Dynamic Scope}{24}{subsubsection.2.5.1.2}
-\contentsline {subsubsection}{\numberline {2.5.1.3}Declaration Order}{25}{subsubsection.2.5.1.3}
-\contentsline {subsubsection}{\numberline {2.5.1.4}Global Scope}{25}{subsubsection.2.5.1.4}
-\contentsline {subsubsection}{\numberline {2.5.1.5}The difference between dynamic and static scope}{25}{subsubsection.2.5.1.5}
-\contentsline {subsection}{\numberline {2.5.2}Scoping In This Project}{25}{subsection.2.5.2}
-\contentsline {subsection}{\numberline {2.5.3}Symbol Tables}{26}{subsection.2.5.3}
-\contentsline {subsection}{\numberline {2.5.4}Transition Rules}{26}{subsection.2.5.4}
-\contentsline {subsection}{\numberline {2.5.5}Environment-Store Model}{27}{subsection.2.5.5}
-\contentsline {subsection}{\numberline {2.5.6}Arithmetic Expressions}{27}{subsection.2.5.6}
-\contentsline {subsection}{\numberline {2.5.7}Boolean Expressions}{27}{subsection.2.5.7}
-\contentsline {subsection}{\numberline {2.5.8}Declarations}{28}{subsection.2.5.8}
-\contentsline {subsection}{\numberline {2.5.9}Assignments}{28}{subsection.2.5.9}
-\contentsline {subsection}{\numberline {2.5.10}Commands}{28}{subsection.2.5.10}
-\contentsline {subsection}{\numberline {2.5.11}Informal Type Rules}{28}{subsection.2.5.11}
-\contentsline {subsection}{\numberline {2.5.12}Formal Type Rules}{29}{subsection.2.5.12}
-\contentsline {section}{\numberline {2.6}Code Examples}{31}{section.2.6}
+\contentsline {subsection}{\numberline {2.3.4}Specification of the language compared to the purpose}{13}{subsection.2.3.4}
+\contentsline {subsubsection}{\numberline {2.3.4.1}A drink}{14}{subsubsection.2.3.4.1}
+\contentsline {subsubsection}{\numberline {2.3.4.2}An ingredient}{15}{subsubsection.2.3.4.2}
+\contentsline {subsubsection}{\numberline {2.3.4.3}A RFID-tag}{16}{subsubsection.2.3.4.3}
+\contentsline {subsubsection}{\numberline {2.3.4.4}A RFID-RW}{16}{subsubsection.2.3.4.4}
+\contentsline {subsubsection}{\numberline {2.3.4.5}A LCD}{16}{subsubsection.2.3.4.5}
+\contentsline {subsubsection}{\numberline {2.3.4.6}Buttons}{17}{subsubsection.2.3.4.6}
+\contentsline {subsubsection}{\numberline {2.3.4.7}Mechanism for pouring ingredients}{17}{subsubsection.2.3.4.7}
+\contentsline {subsection}{\numberline {2.3.5}The BNF of SPLAD}{17}{subsection.2.3.5}
+\contentsline {subsubsection}{\numberline {2.3.5.1}Grammar - Drinks}{18}{subsubsection.2.3.5.1}
+\contentsline {subsubsection}{\numberline {2.3.5.2}Grammar - Drinks}{18}{subsubsection.2.3.5.2}
+\contentsline {subsubsection}{\numberline {2.3.5.3}Grammar - Assign}{19}{subsubsection.2.3.5.3}
+\contentsline {subsubsection}{\numberline {2.3.5.4}Grammar - Expressions}{20}{subsubsection.2.3.5.4}
+\contentsline {subsubsection}{\numberline {2.3.5.5}Grammar - Functions}{22}{subsubsection.2.3.5.5}
+\contentsline {subsubsection}{\numberline {2.3.5.6}Grammar - Loops}{22}{subsubsection.2.3.5.6}
+\contentsline {subsubsection}{\numberline {2.3.5.7}Lexicon}{23}{subsubsection.2.3.5.7}
+\contentsline {subsection}{\numberline {2.3.6}Lexicon}{23}{subsection.2.3.6}
+\contentsline {subsection}{\numberline {2.3.7}EBNF?}{24}{subsection.2.3.7}
+\contentsline {section}{\numberline {2.4}Semantics}{24}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Scope Rules}{24}{subsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.1.1}Static Scope}{24}{subsubsection.2.4.1.1}
+\contentsline {subsubsection}{\numberline {2.4.1.2}Dynamic Scope}{24}{subsubsection.2.4.1.2}
+\contentsline {subsubsection}{\numberline {2.4.1.3}Declaration Order}{25}{subsubsection.2.4.1.3}
+\contentsline {subsubsection}{\numberline {2.4.1.4}Global Scope}{25}{subsubsection.2.4.1.4}
+\contentsline {subsubsection}{\numberline {2.4.1.5}The difference between dynamic and static scope}{25}{subsubsection.2.4.1.5}
+\contentsline {subsection}{\numberline {2.4.2}Scoping In This Project}{25}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Symbol Tables}{26}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Transition Rules}{26}{subsection.2.4.4}
+\contentsline {subsection}{\numberline {2.4.5}Environment-Store Model}{27}{subsection.2.4.5}
+\contentsline {subsection}{\numberline {2.4.6}Arithmetic Expressions}{27}{subsection.2.4.6}
+\contentsline {subsection}{\numberline {2.4.7}Boolean Expressions}{27}{subsection.2.4.7}
+\contentsline {subsection}{\numberline {2.4.8}Declarations}{28}{subsection.2.4.8}
+\contentsline {subsection}{\numberline {2.4.9}Assignments}{28}{subsection.2.4.9}
+\contentsline {subsection}{\numberline {2.4.10}Commands}{28}{subsection.2.4.10}
+\contentsline {subsection}{\numberline {2.4.11}Informal Type Rules}{28}{subsection.2.4.11}
+\contentsline {subsection}{\numberline {2.4.12}Formal Type Rules}{29}{subsection.2.4.12}
+\contentsline {section}{\numberline {2.5}Code Examples}{31}{section.2.5}
 \contentsline {chapter}{\chapternumberline {3}Implementation}{33}{chapter.3}
 \contentsline {section}{\numberline {3.1}Design Criteria}{33}{section.3.1}
 \contentsline {section}{\numberline {3.2}Architecture}{33}{section.3.2}

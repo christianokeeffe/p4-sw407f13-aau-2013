@@ -6,14 +6,6 @@ Name 1 in "Charles N. Fischer, and Ron, K. Cyton and Richard, J. LeBlanc. Jr." h
 while executing---line 1434 of file bibtex/harvard.bst
 Name 1 in "Charles N. Fischer, and Ron, K. Cyton and Richard, J. LeBlanc. Jr." has a comma at the end for entry CraftingACompiler
 while executing---line 1434 of file bibtex/harvard.bst
-Warning--to sort, need author or key in codecover
-`editor' is a missing field, not a string, for entry codecover
-while executing---line 1516 of file bibtex/harvard.bst
-Warning--empty year in codecover
-Warning--empty year in codecover
-1 is an integer literal, not a string, for entry codecover
-while executing---line 1516 of file bibtex/harvard.bst
-Warning--empty  in codecover
 Warning--empty year in ANTLR
 Warning--empty year in ANTLR
 1 is an integer literal, not a string, for entry ANTLR
@@ -130,6 +122,11 @@ Warning--empty year in SableCC
 1 is an integer literal, not a string, for entry SableCC
 while executing---line 1516 of file bibtex/harvard.bst
 Warning--empty  in SableCC
+Warning--empty year in codecover
+Warning--empty year in codecover
+1 is an integer literal, not a string, for entry codecover
+while executing---line 1516 of file bibtex/harvard.bst
+Warning--empty  in codecover
 1 is an integer literal, not a string, for entry sebesta
 while executing---line 1516 of file bibtex/harvard.bst
 1 is an integer literal, not a string, for entry sipser
@@ -151,4 +148,4 @@ Warning--empty year in Yacc
 1 is an integer literal, not a string, for entry Yacc
 while executing---line 1516 of file bibtex/harvard.bst
 Warning--empty  in Yacc
-(There were 42 error messages)
+(There were 41 error messages)

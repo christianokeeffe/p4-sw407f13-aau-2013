@@ -5,10 +5,6 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[cod()]{codecover}
-\textit{\textbf{\textbf{ANTLR}}}.
-\newblock URL \url{http://codecover.org/}.
-
 \bibitem[Antlr()]{ANTLR}
 \textbf{\textbf{Antlr}}.
 \newblock Antlr.
@@ -206,6 +202,12 @@
 \newblock SableCC.
 \newblock \textit{SableCC homesite}.
 \newblock \url{http://sablecc.org/wiki} [Last seen: 2013/03/15].
+
+\bibitem[Schmidberger()]{codecover}
+\textbf{\textbf{Schmidberger}}.
+\newblock Rainer Schmidberger.
+\newblock \textit{Codecover.org}.
+\newblock \url{http://codecover.org/} [Last seen: 2013/05/15].
 
 \bibitem[Sebesta(2009)]{sebesta}
 \textbf{Sebesta}, \textbf{2009}.

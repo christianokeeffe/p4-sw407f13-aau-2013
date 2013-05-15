@@ -38,12 +38,12 @@ The second way to make new blocks is when making a function, and thereby visit t
 The third way to make new blocks is when a making a switch. It will visit visitCases and thereafter visitEndcase. In visitEndcase it can either make a new visitCases, make a break and visit visitBreakend or make a default case and return. When making a default case in visitEndcase there is needed to make a scope and remove it again. In visitBreakend there is made a default case too, but here it is after a break, and again there is made a scope for the default case.
 
 
-VisitDcl and visitSubparams is where variables names is inserted into the innermost scope, that have the last index in scopecontrol and is a list of strings. It can be seen in the code snippet \ref{gra:visitBlock} for VisitDcl.
+VisitDcl and visitSubparams is where variables names is inserted into the innermost scope, that have the last index in scopecontrol and is a list of strings. It can be seen in the code snippet \ref{gra:visitDCL} for VisitDcl.
 
-\kode{visitBlock}{our visitor with scope check for  visitDCL}{visitDCL.txt}
+\kode{visitDCL}{our visitor with scope check for  visitDCL}{visitDCL.txt}
 
-The main part of scope checker is in visitCallid. Here it needs to look through all known scopes to see if a variable name exist. This is done by using two for-loops, which can be seen in code example \ref{lst:scopecallid}. The first one goes through scopecontrol and the second one is for each element in the list that are in scopecontrol. In this for-loops there is a if-statement that look for the variable name that is being called at the moment with the lists variable names. If it is in a list it will return from the visitCallid, but if it is not found in the lists it will put into the list "listOfErrors" and return from visitCallid.
+The main part of scope checker is in visitCallid. Here it needs to look through all known scopes to see if a variable name exist. This is done by using two for-loops, which can be seen in code example \ref{lst:visitCallid}. The first one goes through scopecontrol and the second one is for each element in the list that are in scopecontrol. In this for-loops there is a if-statement that look for the variable name that is being called at the moment with the lists variable names. If it is in a list it will return from the visitCallid, but if it is not found in the lists it will put into the list "listOfErrors" and return from visitCallid.
 
-\kode{scopecallid}{code snippet of where the name of a variable is look through all scopes}{scopecallid.txt}
+\kode{visitCallid}{code snippet of where the name of a variable is look through all scopes}{scopecallid.txt}
 
 After the scopecheck is done, it will print all the errors in the list of errors.

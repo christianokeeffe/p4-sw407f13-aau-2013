@@ -1,0 +1,14 @@
+\input{../RapportNIXPILLE/preamble}
+\begin{document}
+\begin{longtable}{l l}
+\longtablesetting{2}
+$[CALL_{STM}]$ & $\dfrac{E\vdash f:(\vec{x}:\vec{T}\rightarrow\text{ok})\:\:\:E\vdash \vec{e}:\vec{T}}{E\vdash \text{call}\;f(\vec{e}):ok}$\\
+~& $\text{where }x_i:T_i \text{ and } e_i:T_i$\\
+~& $\text{for all }1 < i < |\vec{e}|$\\
+
+ELLER:&~\\
+$[CALL_{STM}]$ & $\dfrac{E\vdash f:(\vec{x}:\vec{T})\:\:\:E\vdash \vec{e}:\vec{T}}{E\vdash \text{call}\;f(\vec{e}):ok}$\\
+~& $\text{where }x_i:T_i \rightarrow\text{ok} \text{ and } e_i:T_i$\\
+~& $\text{for all }1 < i < |\vec{e}|$\\
+\end{longtable}
+\end{document}

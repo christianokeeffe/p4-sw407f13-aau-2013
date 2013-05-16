@@ -1,4 +1,4 @@
-\begin{thebibliography}{36}
+\begin{thebibliography}{37}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -158,6 +158,12 @@
 \newblock
   \url{http://www.engr.mun.ca/~theo/JavaCC-FAQ/javacc-faq-moz.htm\#jjtree-and-jtb}
   [Last seen: 2013/03/15].
+
+\bibitem[Nosowitz(2011)]{NFC}
+\textbf{Nosowitz}, \textbf{01 2011}.
+\newblock Dan Nosowitz.
+\newblock \textit{Everything You Need to Know About Near Field Communication}.
+\newblock http://www.popsci.com/, 2011.
 
 \bibitem[Nørmark(2010{\natexlab{a}})]{ProgrammingParadigms}
 \textbf{Nørmark}, \textbf{July 7 2010{\natexlab{a}}}.

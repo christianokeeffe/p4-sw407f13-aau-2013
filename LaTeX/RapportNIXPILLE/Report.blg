@@ -101,6 +101,8 @@ Warning--empty year in Javacc
 1 is an integer literal, not a string, for entry Javacc
 while executing---line 1516 of file bibtex/harvard.bst
 Warning--empty  in Javacc
+0 is an integer literal, not a string, for entry NFC
+while executing---line 1516 of file bibtex/harvard.bst
 0 is an integer literal, not a string, for entry ProgrammingParadigms
 while executing---line 1516 of file bibtex/harvard.bst
 0 is an integer literal, not a string, for entry ProgrammingParadigms2
@@ -150,4 +152,4 @@ Warning--empty year in Yacc
 1 is an integer literal, not a string, for entry Yacc
 while executing---line 1516 of file bibtex/harvard.bst
 Warning--empty  in Yacc
-(There were 42 error messages)
+(There were 43 error messages)

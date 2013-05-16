@@ -201,20 +201,13 @@ cases
 'end' ;
 
 cases : 'case' expr':' 
-stmts 
+stmts 'break'
 endcase ;
 
 endcase : cases 
-| 'break' ';' breakend 
 | 'default'':' 
 stmts 
 'break' ';' ;
-
-breakend : cases 
-| 'default'':' 
-stmts 
-'break' ';' 
-|/* epsilon */ ;
 
 
 

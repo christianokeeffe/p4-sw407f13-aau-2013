@@ -76,7 +76,7 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 	
 	@Override
 	public String visitNontermswitch(SPLADParser.NontermswitchContext ctx) {
-		return "switch(" + visit(ctx.expr()) + ")\n{\n" + visit(ctx.cases()) + "}\n";
+		return "switch(" + visit(ctx.expr()) + ")\n{\n" + visit(ctx.casescases()) + "}\n";
 	}
 	
 	@Override
@@ -334,7 +334,7 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 		//Add a scope to the list of scopes
 		List<String> Templist = new ArrayList<String>();
 		Scopecontrol.add(Templist);
-		String Temp = "case " + visit(ctx.expr()) + ":\n{\n" + visit(ctx.stmts()) + "}\n" + visit(ctx.endcase());
+		String Temp = "case " + visit(ctx.expr()) + ":\n" + visit(ctx.stmts()) + "\n break;\n" + visit(ctx.endcase());
 		Scopecontrol.remove(Scopecontrol.size()-1);
 		return Temp;
 	}
@@ -558,9 +558,6 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 		if (ctx.cases() != null){
 			return visit(ctx.cases());
 		}
-		else if (ctx.breakend() != null){
-			return "break;\n" + visit(ctx.breakend());
-		}
 		else {
 			//Add a scope to the list of scopes
 			List<String> Templist = new ArrayList<String>();
@@ -661,26 +658,6 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 	@Override
 	public String visitFunctionend(SPLADParser.FunctionendContext ctx) {
 		return "(" + visit(ctx.params()) + ")\n{\n" + visit(ctx.stmts()) + "return ";
-	}
-	
-	@Override
-	public String visitBreakend(SPLADParser.BreakendContext ctx) {
-		if (ctx.cases() != null){
-			return visit(ctx.cases());
-		}
-		else if (ctx.stmts() != null){
-			//Add a scope to the list of scopes
-			List<String> Templist = new ArrayList<String>();
-			Scopecontrol.add(Templist);
-			
-			String Temp = "default:\n" + visit(ctx.stmts()) + "break;\n";
-			
-			Scopecontrol.remove(Scopecontrol.size()-1);
-			return Temp;
-		}
-		else {
-			return "";
-		}
 	}
 	
 	@Override

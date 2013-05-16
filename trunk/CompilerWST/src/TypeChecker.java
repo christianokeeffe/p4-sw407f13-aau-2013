@@ -1406,22 +1406,17 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 	@Override
 	public Value visitEndcase(SPLADParser.EndcaseContext ctx) {
 		Value cases = new Value();
-		Value breakEnd = new Value();
 		Value stmts = new Value();
 		
 		if (ctx.cases() != null)
 		{
 			cases =	visit(ctx.cases());
 		}
-		else if (ctx.breakend() != null)
-		{
-			breakEnd = visit(ctx.breakend());
-		}
 		else 
 		{
 		 	stmts = visit(ctx.stmts());
 		}
-		return new Value(cases.toString() + breakEnd.toString() + stmts.toString());
+		return new Value(cases.toString() + stmts.toString());
 	}
 	
 	@Override
@@ -1511,22 +1506,6 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 		Value Stmt = visit(ctx.stmts());
 		
 		return new Value(Param.toString() + Stmt.toString());
-	}
-	
-	@Override
-	public Value visitBreakend(SPLADParser.BreakendContext ctx) {
-		Value cases = new Value();
-		Value stmts = new Value();
-		
-		if (ctx.cases() != null)
-		{
-			cases = visit(ctx.cases());
-		}
-		else if (ctx.stmts() != null)
-		{
-			stmts = visit(ctx.stmts());
-		}
-		return new Value(cases.toString() + stmts.toString());
 	}
 	
 	@Override

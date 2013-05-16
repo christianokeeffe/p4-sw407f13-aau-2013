@@ -77,12 +77,38 @@ D_A::= \; & \text{array} \; r[a_1]; \; D_A \; | \; \varepsilon \\
 ~ & \indent\indent and $l = env_V x$ \\
 ~ & ~ \\
 
-[FROM-FALSE]& $env_V, env_P \vdash \langle \text{from} \; x <-- a_1 \; \text{to} \; a_2 \; \text{step} \; a_3 \; \text{begin} \; S \; \text{end}, sto  \rangle \rightarrow sto$ \\
+[FROM-FALSE] & $env_V, env_P \vdash \langle \text{from} \; x <-- a_1 \; \text{to} \; a_2 \; \text{step} \; a_3 \; \text{begin} \; S \; \text{end}, sto  \rangle \rightarrow sto$ \\
 ~ & ~ \\
 ~ & \indent\indent where $env_V, sto \vdash a_1 \rightarrow_a v_1$\\
 ~ & \indent\indent and $env_V, sto \vdash a_2 \rightarrow_a v_2$\\
 ~ & \indent\indent and $env_V, sto \vdash a_3 \rightarrow_a v_3$\\
 ~ & \indent\indent and $v_1 > v_2$ \\
+~ & ~ \\
+
+\fxfatal{Disse 3 herunder skal ligges ned!!}
+
+[SWITCH-1] & $\dfrac{env_V, env_P \vdash \langle S, sto\rangle \rightarrow (sto')}{env_V, env_P \vdash \langle \text{switch}(a) \; \text{begin} \; \text{case} \; a_1: \; S_1 \; \text{break}; \; \text{default}: \; S \; \text{break}; \; \text{end}, sto \rangle \rightarrow sto'}$ \\
+~ & ~ \\
+~ & \indent\indent Where $k > 0$\\
+~ & \indent\indent and $env_V, sto \vdash a \rightarrow_a v$ \\
+~ & \indent\indent and $env_V, sto \vdash a_1 \rightarrow_a v_1$ \\
+~ & \indent\indent and $v \neq v_1$ \\
+~ & ~ \\
+
+[SWITCH-2] & $\dfrac{env_V, env_P \vdash \langle S_1, sto \rangle \rightarrow sto'}{env_V, env_P \vdash \langle \text{switch}(a) \; \text{begin} \; \text{case}}$ \\
+~ & ~ \\
+~ & \indent\indent Where $$ \\
+~ & \indent\indent and $$ \\
+~ & \indent\indent and $$ \\
+~ & \indent\indent and $$ \\
+~ & ~ \\
+
+[SWITCH-3] & $$ \\
+~ & ~ \\
+~ & \indent\indent Where $$ \\
+~ & \indent\indent and $$ \\
+~ & \indent\indent and $$ \\
+~ & \indent\indent and $$ \\
 ~ & ~ \\
 
 [CALL] & $\dfrac{env_V'[\vec{z} \mapsto \vec{l}], env_P' \vdash \langle S, sto[\vec{l} \mapsto \vec{v}] \rangle \rightarrow sto'}{env_V, env_P \vdash \langle \text{call} \; p(\vec{a}), sto \rangle \rightarrow sto'}$ \\

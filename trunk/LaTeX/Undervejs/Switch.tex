@@ -1,0 +1,35 @@
+\input{../RapportNIXPILLE/preamble}
+\begin{document}
+\begin{landscape}
+\begin{longtable}{l l}
+\longtablesetting{2}
+~ & Transitioner er på formen: $env_V, env_P \vdash \langle S, sto \rangle \rightarrow sto'$ \\
+~ & ~ \\
+
+[SWITCH-1] & $\dfrac{env_V, env_P \vdash \langle S, sto\rangle \rightarrow (sto')}{env_V, env_P \vdash \langle \text{switch}(a) \; \text{begin} \; \text{case} \; a_1: \; S_1 \; \text{break}; \; \text{default}: \; S \; \text{break}; \; \text{end}, sto \rangle \rightarrow sto'}$ \\
+~ & ~ \\
+~ & \indent\indent Where $k > 0$\\
+~ & \indent\indent and $env_V, sto \vdash a \rightarrow_a v$ \\
+~ & \indent\indent and $env_V, sto \vdash a_1 \rightarrow_a v_1$ \\
+~ & \indent\indent and $v \neq v_1$ \\
+~ & ~ \\
+
+[SWITCH-2] & $\dfrac{env_V, env_P \vdash \langle S_1, sto \rangle \rightarrow sto'}{env_V, env_P \vdash \langle \text{switch}(a) \; \text{begin} \; \text{case} \; a_1: \; S_1 \; \text{break}; \; \dots \; \text{case} \; a_k: \; S_k \; \text{break}; \; \text{default}: \; S \; \text{break}; \; \text{end}, sto \rangle \rightarrow sto'}$ \\
+~ & ~ \\
+~ & \indent\indent Where $k > 1$ \\
+~ & \indent\indent and $env_V, sto \vdash a \rightarrow_a v$ \\
+~ & \indent\indent and $env_V, sto \vdash a_1 \rightarrow_a v_1$ \\
+~ & \indent\indent and $v = v_1$ \\
+~ & ~ \\
+
+[SWITCH-3] & $\dfrac{env_V, env_P \vdash \langle \text{switch}(a) \; \text{begin} \; \text{case} \; a_2: \; S_2 \; \text{break}; \; \dots \; \text{case} \; a_k: \; S_k \; \text{break}; \; \text{default}: \; S \; \text{break}; \; \text{end}, sto \rangle \rightarrow sto'}{env_V, env_P \vdash \langle \text{switch}(a) \; \text{begin} \; \text{case} \; a_1: \; S_1 \; \text{break}; \; \dots \; \text{case} \; a_k: \; S_k \; \text{break}; \; \text{default}: \; S \; \text{break}; \; \text{end}, sto \rangle \rightarrow sto'}$ \\
+~ & ~ \\
+~ & \indent\indent Where $k > 1$ \\
+~ & \indent\indent and $env_V, sto \vdash a \rightarrow_a v$ \\
+~ & \indent\indent and $env_V, sto \vdash a_1 \rightarrow_a v_1$ \\
+~ & \indent\indent and $v \neq v_1$ \\
+~ & ~ \\
+\caption{Statements}
+\end{longtable}
+\end{landscape}
+\end{document}

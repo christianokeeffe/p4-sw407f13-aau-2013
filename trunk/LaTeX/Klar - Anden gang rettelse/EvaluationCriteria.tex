@@ -1,0 +1,35 @@
+\section{Evaluation Criteria for the Compiler}
+To steer the development of the compiler in the wanted direction and to express which areas that we in the project group find important to the compiler. To express these priorities we uses a table, see table \ref{tab:criteria} were we rate each criteria by the importance compare to each other.
+
+\begin{tabular}{| c | c | c | c | c | c | c |}
+\hline
+\textbf{Criteria} & \rotatebox{90}{Very Important} & \rotatebox{90}{Important} & \rotatebox{90}{Less Important} & \rotatebox{90}{Irrelevant}\\ \hline
+Reliable      		& \bullet &   &   &   &      \\ \hline
+Effectiveness       &   &   & \bullet &   &      \\ \hline
+Correctness         & \bullet &   &   &   &      \\ \hline
+Testable        	&   &   & \bullet &   &      \\ \hline
+Maintainable		&   &   & \bullet &   &      \\ \hline
+Moveable        	&   & \bullet &   &   &      \\ \hline
+Recycle     		&   &   &   & \bullet &      \\ \hline
+Safe         		&   &   &   & \bullet &      \\ \hline
+
+\end{tabular}
+\caption{This table will be used to prioritize the different criteria compared to the compiler in this project.}
+\label{tab:criteria}
+\end{table}
+
+We want the compiler and its output to be as reliable as possible because the compiler should not generate errors on its own. The programmer should be able to write a correct program, compile it and be able to run it, hence we do not want the compiler to be a source of errors. Therefore we have prioritized the criteria reliable as very important.
+
+The effectiveness of the compiler is not as important as the compilers functionality. We have deemed that the compiler does not have to run as effective based on the idea that the compiler will run on modern computers and is aimed at hobby programming. Therefore the effectiveness is rated as less important compared to the other criteria.
+
+The compiler should fulfill the given criteria to achieve the properties set for this projects compiler. Therefore we have set the correctness criteria as very important.
+
+We have deemed that we should be able to test the compiler to check if its correctness but we do not deem the testable criteria as important as other properties. Therefore it have been rated as less important.
+
+Because the compiler is meant as a product and the focus have not been to simplify the compiler so it were easier to maintain. This would be attractive if said compiler should be used for further development later but that is not the case. Therefore have we rated maintainable criteria as less important.
+
+We want the compiler to be able to run on the operating system of choice so the users are not restricted by their operating system. Since the compiler is written in Java, it makes it able to run on different operating systems as long as the Java virtual machine is implemented for their architecture. Therefore we have rated the moveable criteria as important.
+
+The recycle criteria have been rated as irrelevant because its not in the intention to make parts of compiler usable out of the context. Meaning different parts of the compiler is context dependent.
+
+We have also rated the safe criteria as irrelevant because we do not think that it is necessary for a compiler to fulfill the goal of the projects.

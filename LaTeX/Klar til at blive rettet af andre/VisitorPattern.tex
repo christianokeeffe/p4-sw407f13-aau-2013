@@ -1,0 +1,36 @@
+\subsection{Visitor pattern}
+\label{sec:VisitorPattern}
+Visitor pattern is for traversing an AST or a parse tree during the semantic analysis and code generation, to help manage the large number of phase and node interactions. A phase is started by visiting the first node in the abstract syntax tree, to reach every node there must be a \textit{visit} in the preceding node.
+Single dispatch is used by most object-oriented languages to determine which $visit$ must be used. The method is based on the type of the object $f$. But there are a few problems with single dispatch, such as that it finds a match based on the declared type of its parameters when it is called. This is where the visitor pattern comes in with a form of double dispatch, the idea is to make use of the abstract class \ref{GenericVisitor} that all nodes implement. If the visit method is called without the accept method, it will try to visit the abstract node. For example if a phase contained a method $visit(IfNode$ $n)$ like in \ref{ConcreteVisitor}, it will not invoked the actual $IfNode$, this is because the supplied parameter is based on the declared type $(AbstractNode)$. Therefore the specific node accepts a visitor as can be seen in \ref{ConcreteNode} and thus determines the type of the node which allows it to be visited because it now knows the actual $IfNode$ and the code it contains can be executed.
+
+Here is an example of a basic visitor model:
+
+\begin{code}{GenericVisitor}{A generic Visitor}
+\begin{lstlisting}
+\textbf{class} \textit{Visitor}
+	\textbf{procedure} visit(\textit{AbstractNode n})
+		\textit{n}.Accept(\textbf{this})
+	\textbf{end}
+\textbf{end}
+\end{lstlisting}
+\end{code}
+
+\begin{code}{ConcreteVisitor}{A concrete Visitor}
+\begin{lstlisting}
+\textbf{class}\textit{TypeChecking} \textbf{extends} \textit{Visitor}
+	\textbf{procedure} VISIT(\textit{IfNode i})
+	\textbf{end}
+\textbf{end}
+\end{lstlisting}
+\end{code}
+
+\begin{code}{ConcreteNode}{A concrete Node}
+\begin{lstlisting}
+\textbf{class} \textit{IfNode} \textbf{extends} \textit{AbstractNode}
+	\textbf{procedure} ACCEPT(\textit{Visitor v})
+		\textit{v}.VISIT(\textbf{this})
+	\textbf{end}
+	\dots
+\textbf{end}
+\end{lstlisting}
+\end{code}

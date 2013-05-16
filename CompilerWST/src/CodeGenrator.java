@@ -76,7 +76,7 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 	
 	@Override
 	public String visitNontermswitch(SPLADParser.NontermswitchContext ctx) {
-		return "switch(" + visit(ctx.expr()) + ")\n{\n" + visit(ctx.casescases()) + "}\n";
+		return "switch(" + visit(ctx.expr()) + ")\n{\n" + visit(ctx.cases()) + "}\n";
 	}
 	
 	@Override

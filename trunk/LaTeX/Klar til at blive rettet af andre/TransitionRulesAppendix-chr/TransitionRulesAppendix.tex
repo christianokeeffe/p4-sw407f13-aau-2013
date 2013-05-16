@@ -1,4 +1,4 @@
-\input{../RapportNIXPILLE/preamble}
+\input{../../RapportNIXPILLE/preamble}
 \begin{document}
 
 \chapter{Transition Rules}
@@ -8,8 +8,9 @@
 \begin{align*}
 S::= \; & x := a \; | \; r[a_1] := a_2 \; | \; S_1; \; S_2 \; | \; \text{if} \; b \; \text{do} \; S \; | \; \text{if} \; b \; \text{do} \; S_1 \; \text{else do} \; S_2 \; | \; \text{while} \; b \; \text{do} \; S \\
 ~ & | \; \text{from} \; x := a_1 \; \text{to} \; a_2 \; \text{step} \; a_3 \; \text{do} \; S \\
-~ & | \; \text{switch}(a) \; \text{case} a_1: \; S_1 \; \text{break}; \; \dots \; \text{case} a_k: \; S_k \; \text{break}; \; \text{default}: \; S \; \text{break} \\
-~ & | \; \text{call} \; p(\vec{x}) \; | \; \text{begin} \; D_V \; D_A \; D_P \; S \; \text{end} \\
+~ & | \; \text{call} \; p(\vec{x}) \; | \; \text{begin} \; Q \; \text{end} \;\\
+~ & | \; \text{switch}(a) \; \text{case } a_1: \; S_1 \; \text{break}; \; \dots \; \text{case} a_k: \; S_k \; \text{break}; \; \text{default}: \; S \; \text{break} \\
+Q::= \; & D_p \; Q | D_v \; Q | S \; Q | $\eps$ \\
 a::= \; & n \; | \; x \; | \; a_1 + a_2 \; | \; a_1 - a_2 \; | \; a_1 * a_2 \; | \; a_1 / a_2 \; | \; (a) \; | \; r[a_i]\\
 b::= \; &a_1 = a_2 \; | \; a_1 > a_2 \; | \; a_1 < a_2 \; | \; \neg b \; | \; b_1 \; \wedge \; b_2 \; | \; b_1 \; \vee \; b_2 \; | \; (b) \\
 D_V::= \; & \text{var} \; x := a; \; D_V \; | \; \varepsilon \\
@@ -35,6 +36,8 @@ D_A::= \; & \text{array} \; r[a_1]; \; D_A \; | \; \varepsilon \\
 ~ & \indent\indent and $env_V, sto \vdash a_2 \rightarrow_a v_2$ \\
 ~ & \indent\indent and $env_V \; r = l_1$ \\
 ~ & \indent\indent and $l_2 = l_1 + v_1$ \\
+~ & \indent\indent and $v_3 = sto \; l_1$ \\
+~ & \indent\indent and $1 \leq v_1 \leq v_3$ \\
 ~ & ~ \\
 
 [COMP] & $\dfrac{\begin{matrix} env_V, env_P \vdash \langle S_1, sto \rangle \rightarrow sto'' \\ env_V, env_P \vdash \langle S_2, sto'' \rangle \rightarrow sto' \end{matrix}}{env_V, env_P \vdash  \langle S_1; S_2, sto \rangle \rightarrow sto'}$ \\
@@ -70,7 +73,7 @@ D_A::= \; & \text{array} \; r[a_1]; \; D_A \; | \; \varepsilon \\
 ~ & \indent\indent if $env_V, sto \vdash b \rightarrow_b \text{false}$\\
 ~ & ~ \\
 
-[FROM-TRUE] & $\dfrac{\begin{matrix} env_V, env_P \vdash \langle S, sto[l \vdash v_1] \rangle \rightarrow sto'' \\ \langle \text{from} \, x <-- a_1 + a_3 \; \text{to} \; a_2 \; \text{step} \; a_3 \; \text{begin} \; S \; \text{end}, sto'' \rightarrow sto' \end{matrix}}{env_V, env_P \vdash \langle \text{from} \; x <-- a_1 \; \text{to} \; a_2 \; \text{step} \; a_3 \; \text{begin} \; S \; \text{end}, sto  \rangle \rightarrow sto'}$ \\
+[FROM-TRUE] & $\dfrac{\begin{matrix} env_V, env_P \vdash \langle S, sto[l \mapsto v_1] \rangle \rightarrow sto'' \\ \langle \text{from} \, x <-- a_1 + a_3 \; \text{to} \; a_2 \; \text{step} \; a_3 \; \text{begin} \; S \; \text{end}, sto'' \rightarrow sto' \end{matrix}}{env_V, env_P \vdash \langle \text{from} \; x <-- a_1 \; \text{to} \; a_2 \; \text{step} \; a_3 \; \text{begin} \; S \; \text{end}, sto  \rangle \rightarrow sto'}$ \\
 ~ & ~ \\
 ~ & \indent\indent where $env_V, sto \vdash a_1 \rightarrow_a v_1$\\
 ~ & \indent\indent and $env_V, sto \vdash a_2 \rightarrow_a v_2$\\
@@ -87,19 +90,33 @@ D_A::= \; & \text{array} \; r[a_1]; \; D_A \; | \; \varepsilon \\
 ~ & \indent\indent and $v_1 > v_2$ \\
 ~ & ~ \\
 
-~ & \fxfatal{Disse 3 herunder skal ligges ned!!} \\
 
+[CALL] & $\dfrac{env_V'[\vec{z} \mapsto \vec{l}], env_P' \vdash \langle S, sto[\vec{l} \mapsto \vec{v}] \rangle \rightarrow sto'}{env_V, env_P \vdash \langle \text{call} \; p(\vec{a}), sto \rangle \rightarrow sto'}$ \\
+~ & ~ \\
+~ & \indent\indent where $env_P \; p = (S, \vec{z}, env_V', env_P')$ \\
+~ & \indent\indent and $|\vec{a}| = |\vec{z}|$ \\
+~ & \indent\indent and $env_V, sto \vdash a_i \rightarrow v_i \; \text{for each} \; 1 \leq i \leq |\vec{a}|$ \\
+~ & \indent\indent and $l_1 = env_V \; \text{new}$ \\
+~ & \indent\indent and $l_{i+1} = \text{new} \; l_i \; \text{for each} \; 1 \leq i < |\vec{a}|$ \\
+~ & ~ \\
+
+%mangler at blive rettet
+[BLOCK] & $\dfrac{\begin{matrix} \langle D_V, env_V, sto \rangle \rightarrow_{DV} (env_V', sto'') \\ env_V' \vdash \langle D_P, env_P \rangle \rightarrow_{DP} env_P' \\ env_V', env_P' \vdash \langle S, sto'' \rangle \rightarrow sto' \end{matrix}}{env_V, env_P \vdash \langle \text{begin} \; D_V \; D_P \; S \; \text{end}, sto \rangle \rightarrow sto' }$ \\
+\caption{Statements}
+\end{longtable}
+\begin{landscape}
+\begin{longtable}{l l}
+\longtablesetting{2}
 [SWITCH-1] & $\dfrac{env_V, env_P \vdash \langle S, sto\rangle \rightarrow (sto')}{env_V, env_P \vdash \langle \text{switch}(a) \; \text{begin} \; \text{case} \; a_1: \; S_1 \; \text{break}; \; \text{default}: \; S \; \text{break}; \; \text{end}, sto \rangle \rightarrow sto'}$ \\
 ~ & ~ \\
-~ & \indent\indent Where $k > 0$\\
-~ & \indent\indent and $env_V, sto \vdash a \rightarrow_a v$ \\
+~ & \indent\indent Where $env_V, sto \vdash a \rightarrow_a v$ \\
 ~ & \indent\indent and $env_V, sto \vdash a_1 \rightarrow_a v_1$ \\
 ~ & \indent\indent and $v \neq v_1$ \\
 ~ & ~ \\
 
 [SWITCH-2] & $\dfrac{env_V, env_P \vdash \langle S_1, sto \rangle \rightarrow sto'}{env_V, env_P \vdash \langle \text{switch}(a) \; \text{begin} \; \text{case} \; a_1: \; S_1 \; \text{break}; \; \dots \; \text{case} \; a_k: \; S_k \; \text{break}; \; \text{default}: \; S \; \text{break}; \; \text{end}, sto \rangle \rightarrow sto'}$ \\
 ~ & ~ \\
-~ & \indent\indent Where $k > 1$ \\
+~ & \indent\indent Where $k > 0$ \\
 ~ & \indent\indent and $env_V, sto \vdash a \rightarrow_a v$ \\
 ~ & \indent\indent and $env_V, sto \vdash a_1 \rightarrow_a v_1$ \\
 ~ & \indent\indent and $v = v_1$ \\
@@ -113,18 +130,9 @@ D_A::= \; & \text{array} \; r[a_1]; \; D_A \; | \; \varepsilon \\
 ~ & \indent\indent and $v \neq v_1$ \\
 ~ & ~ \\
 
-[CALL] & $\dfrac{env_V'[\vec{z} \mapsto \vec{l}], env_P' \vdash \langle S, sto[\vec{l} \mapsto \vec{v}] \rangle \rightarrow sto'}{env_V, env_P \vdash \langle \text{call} \; p(\vec{a}), sto \rangle \rightarrow sto'}$ \\
-~ & ~ \\
-~ & \indent\indent where $env_P \; p = (S, \vec{z}, env_V', env_P')$ \\
-~ & \indent\indent and $|\vec{a}| = |\vec{z}|$ \\
-~ & \indent\indent and $env_V, sto \vdash a_i \rightarrow v_i \text{for each} \; 1 \leq i \leq |\vec{a}|$ \\
-~ & \indent\indent and $l_1 = env_V \; \text{new}$ \\
-~ & \indent\indent and $l_{i+1} = l_i \; \text{for each} \; 1 < i < |\vec{a}|$ \\
-~ & ~ \\
-
-[BLOCK] & $\dfrac{\begin{matrix} \langle D_V, env_V, sto \rangle \rightarrow_{DV} (env_V', sto'') \\ env_V' \vdash \langle D_P, env_P \rangle \rightarrow_{DP} env_P' \\ env_V', env_P' \vdash \langle S, sto'' \rangle \rightarrow sto' \end{matrix}}{env_V, env_P \vdash \langle \text{begin} \; D_V \; D_P \; S \; \text{end}, sto \rangle \rightarrow sto' }$ \\
 \caption{Statements}
 \end{longtable}
+\end{landscape}
 
 \begin{longtable}{l l}
 \longtablesetting{2}

@@ -1,14 +1,17 @@
 \subsection{Visitor pattern}
 \label{sec:VisitorPattern}
-Visitor pattern is for traversing a AST or a parse tree during semantic analysis and code generation, to help manage the large numbers phase and node interactions. A phase made by writing \textit{visit} methods in the phase's class, there is a \textit{visit} for each kind node for action must be performed.
+Visitor pattern is for traversing an AST or a parse tree during the semantic analysis and code generation, to help manage the large number of phase and node interactions. A phase is traversed by writing \textit{visit} method in the phase's class, to reach every node there must be a \textit{visit} in the preceding node.
 
-here is an example on how Generic visit look like:
+Here is an example of what a \textit{Generic visit} looks like:
 
-$f.visit(\textbf{AbstractNode \; n})
-\;\; n.Accept(this)
-end$
+\begin{code}{GenericVisitor}{A generic Visitor}
+\begin{lstlisting}
+\textbf{class} \textit{Visitor}
+	\textbf{procedure} visit(\textit{AbstractNode n})
+		\textit{n}.Accept(\textbf{this})
+	\textbf{end}
+\textbf{end}
+\end{lstlisting}
+\end{code}
 
-% næsten det samme som står i bogen
-Single dispatch is used by most object-oriented languages to determine which $visit$ must be use. The method is based on the type of the object $f$. But there is a few problem with single dispatch, such as that it find a match based on the declared type of its parameters when it is called. For example if a phase contained a method $visit(IfNode$ $n)$, it will not invoked an a actual $IfNode$, this is because the is based on the declared type $(AbstractNode)$ of the supplied parameter.
-
-Another option is to use double dispatch, this is use to allows to invoke $visit$ the compiler's phase $f$ and the supplied node $n$ actual type.
+Single dispatch is used by most object-oriented languages to determine which $visit$ must be used. The method is based on the type of the object $f$. But there are a few problems with single dispatch, such as that it finds a match based on the declared type of its parameters when it is called. This is where the visitor pattern comes in with a form of double dispatch, the idea is to make use of the abstract class that all nodes implement. But if the visit method is called as it is, it will try to visit the abstract node. For example if a phase contained a method $visit(IfNode$ $n)$, it will not invoked the actual $IfNode$, this is because the supplied parameter is based on the declared type $(AbstractNode)$. Therefore the specific node accepts a visitor and thus determines the type of the node which allows it to be visited because it now knows the actual $IfNode$ and the code it contains can be executed.

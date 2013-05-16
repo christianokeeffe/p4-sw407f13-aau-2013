@@ -80,27 +80,25 @@
 \BOOKMARK [3][-]{subsubsection.3.3.1.4}{3.3.1.4 Comparison Tables}{subsection.3.3.1}% 80
 \BOOKMARK [2][-]{subsection.3.3.2}{3.3.2 ANTLR}{section.3.3}% 81
 \BOOKMARK [2][-]{subsection.3.3.3}{3.3.3 Lexical Analyzer}{section.3.3}% 82
-\BOOKMARK [2][-]{subsection.3.3.4}{3.3.4 Tokens}{section.3.3}% 83
-\BOOKMARK [3][-]{subsubsection.3.3.4.1}{3.3.4.1 Reserved Keywords}{subsection.3.3.4}% 84
-\BOOKMARK [3][-]{subsubsection.3.3.4.2}{3.3.4.2 Token Specification}{subsection.3.3.4}% 85
-\BOOKMARK [2][-]{subsection.3.3.5}{3.3.5 Parser}{section.3.3}% 86
-\BOOKMARK [3][-]{subsubsection.3.3.5.1}{3.3.5.1 Top-down Parsers}{subsection.3.3.5}% 87
-\BOOKMARK [3][-]{subsubsection.3.3.5.2}{3.3.5.2 Bottom-Up Parsers}{subsection.3.3.5}% 88
-\BOOKMARK [1][-]{section.3.4}{3.4 Contextual Analysis}{chapter.3}% 89
-\BOOKMARK [2][-]{subsection.3.4.1}{3.4.1 Scope Checking}{section.3.4}% 90
-\BOOKMARK [2][-]{subsection.3.4.2}{3.4.2 Type Checking}{section.3.4}% 91
-\BOOKMARK [3][-]{subsubsection.3.4.2.1}{3.4.2.1 Value}{subsection.3.4.2}% 92
-\BOOKMARK [3][-]{subsubsection.3.4.2.2}{3.4.2.2 Functions}{subsection.3.4.2}% 93
-\BOOKMARK [3][-]{subsubsection.3.4.2.3}{3.4.2.3 Variables}{subsection.3.4.2}% 94
-\BOOKMARK [3][-]{subsubsection.3.4.2.4}{3.4.2.4 Drink}{subsection.3.4.2}% 95
-\BOOKMARK [3][-]{subsubsection.3.4.2.5}{3.4.2.5 Error Handling}{subsection.3.4.2}% 96
-\BOOKMARK [1][-]{section.3.5}{3.5 Code Generation}{chapter.3}% 97
-\BOOKMARK [2][-]{subsection.3.5.1}{3.5.1 Unit Testing}{section.3.5}% 98
-\BOOKMARK [3][-]{subsubsection.3.5.1.1}{3.5.1.1 Unit Testing in General}{subsection.3.5.1}% 99
-\BOOKMARK [3][-]{subsubsection.3.5.1.2}{3.5.1.2 Unit Testing in This Project}{subsection.3.5.1}% 100
-\BOOKMARK [1][-]{section.3.6}{3.6 Component Setup}{chapter.3}% 101
-\BOOKMARK [0][-]{chapter.4}{4 Conclusion}{}% 102
-\BOOKMARK [0][-]{section*.33}{Bibliography}{}% 103
-\BOOKMARK [0][-]{appendix.A}{A Semantics}{}% 104
-\BOOKMARK [1][-]{section.A.1}{A.1 Transition Rules}{appendix.A}% 105
-\BOOKMARK [0][-]{appendix.B}{B Program written in SPLAD}{}% 106
+\BOOKMARK [3][-]{subsubsection.3.3.3.1}{3.3.3.1 Tokens}{subsection.3.3.3}% 83
+\BOOKMARK [2][-]{subsection.3.3.4}{3.3.4 Parser}{section.3.3}% 84
+\BOOKMARK [3][-]{subsubsection.3.3.4.1}{3.3.4.1 Top-down Parsers}{subsection.3.3.4}% 85
+\BOOKMARK [3][-]{subsubsection.3.3.4.2}{3.3.4.2 Bottom-Up Parsers}{subsection.3.3.4}% 86
+\BOOKMARK [1][-]{section.3.4}{3.4 Contextual Analysis}{chapter.3}% 87
+\BOOKMARK [2][-]{subsection.3.4.1}{3.4.1 Scope Checking}{section.3.4}% 88
+\BOOKMARK [2][-]{subsection.3.4.2}{3.4.2 Type Checking}{section.3.4}% 89
+\BOOKMARK [3][-]{subsubsection.3.4.2.1}{3.4.2.1 Value}{subsection.3.4.2}% 90
+\BOOKMARK [3][-]{subsubsection.3.4.2.2}{3.4.2.2 Functions}{subsection.3.4.2}% 91
+\BOOKMARK [3][-]{subsubsection.3.4.2.3}{3.4.2.3 Variables}{subsection.3.4.2}% 92
+\BOOKMARK [3][-]{subsubsection.3.4.2.4}{3.4.2.4 Drink}{subsection.3.4.2}% 93
+\BOOKMARK [3][-]{subsubsection.3.4.2.5}{3.4.2.5 Error Handling}{subsection.3.4.2}% 94
+\BOOKMARK [1][-]{section.3.5}{3.5 Code Generation}{chapter.3}% 95
+\BOOKMARK [2][-]{subsection.3.5.1}{3.5.1 Unit Testing}{section.3.5}% 96
+\BOOKMARK [3][-]{subsubsection.3.5.1.1}{3.5.1.1 Unit Testing in General}{subsection.3.5.1}% 97
+\BOOKMARK [3][-]{subsubsection.3.5.1.2}{3.5.1.2 Unit Testing in This Project}{subsection.3.5.1}% 98
+\BOOKMARK [1][-]{section.3.6}{3.6 Component Setup}{chapter.3}% 99
+\BOOKMARK [0][-]{chapter.4}{4 Conclusion}{}% 100
+\BOOKMARK [0][-]{section*.35}{Bibliography}{}% 101
+\BOOKMARK [0][-]{appendix.A}{A Semantics}{}% 102
+\BOOKMARK [1][-]{section.A.1}{A.1 Transition Rules}{appendix.A}% 103
+\BOOKMARK [0][-]{appendix.B}{B Program written in SPLAD}{}% 104

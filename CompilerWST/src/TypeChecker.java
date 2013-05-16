@@ -1480,14 +1480,14 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 		visit(ctx.roots());
 		
 		//Check if the provided source contains the functions setup and loop, which are required
-		if(!FunctionMemory.containsKey("setup"))
+		if(!FunctionMemory.containsKey("pour"))
 		{
-			Error err = new Error(21, "setup");
+			Error err = new Error(21, "pour");
 			ErrList.add(err);
 		}
-		if(!FunctionMemory.containsKey("loop"))
+		if(!FunctionMemory.containsKey("RFIDFound"))
 		{
-			Error err = new Error(21, "loop");
+			Error err = new Error(21, "RFIDFound");
 			ErrList.add(err);
 		}
 

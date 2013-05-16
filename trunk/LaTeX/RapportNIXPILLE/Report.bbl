@@ -1,4 +1,4 @@
-\begin{thebibliography}{35}
+\begin{thebibliography}{36}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -91,6 +91,12 @@
 \newblock Flex.
 \newblock \textit{Theory behind Flex}.
 \newblock \url{http://flex.sourceforge.net/manual/} [Last seen: 2013/03/15].
+
+\bibitem[Hüttel(2010)]{HHTree}
+\textbf{Hüttel}, \textbf{2010}.
+\newblock Hans Hüttel.
+\newblock \textit{Transitions and Trees}.
+\newblock Cambridge University Press, 2010.
 
 \bibitem[Jflex()]{Jflex}
 \textbf{\textbf{Jflex}}.

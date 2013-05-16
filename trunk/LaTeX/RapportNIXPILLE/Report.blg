@@ -65,6 +65,8 @@ Warning--empty year in Flex
 1 is an integer literal, not a string, for entry Flex
 while executing---line 1516 of file bibtex/harvard.bst
 Warning--empty  in Flex
+1 is an integer literal, not a string, for entry HHTree
+while executing---line 1516 of file bibtex/harvard.bst
 Warning--empty year in Jflex
 Warning--empty year in Jflex
 1 is an integer literal, not a string, for entry Jflex
@@ -148,4 +150,4 @@ Warning--empty year in Yacc
 1 is an integer literal, not a string, for entry Yacc
 while executing---line 1516 of file bibtex/harvard.bst
 Warning--empty  in Yacc
-(There were 41 error messages)
+(There were 42 error messages)

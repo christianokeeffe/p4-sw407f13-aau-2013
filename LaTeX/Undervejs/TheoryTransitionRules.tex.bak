@@ -10,7 +10,31 @@ In the following text we use the following names to represent different syntacti
 \item $a \in \mathbf{A_{exp}}$ - Arithmetic expression
 \item $b \in \mathbf{B_{exp}}$ - Boolean expression
 \item $S \in \textbf{Stm}$ - Statements
+\item $p, q \dots \in \textbf{Pnames}$ - Function names
+\item $D_V \in \textbf{ErkV}$ - Variable declarations
+\item $D_P \in \textbf{ErkP}$ - Function declarations
+\item $D_A \in \textbf{ErkA}$ - Array declarations
 \end{itemize}
+
+\subsection{Abstract Syntax}
+In order to describe the behavior of a program, er must first account for its syntax. We use the notion of abstract syntax, since it will allow us to describe the essential structure of the program. An abstract syntax is defined as follows. We assume a collection of syntactic categories and for each syntactic category we give a finite set of formation rules that define how the the inhabitants of the category can be build \citep{HHTree}.
+Here the abstract syntax of SPLAD can be seen. 
+\fxfatal{bla bla bla}
+\begin{align*}
+S::= \; & x := a \; | \; r[a_1] := a_2 \; | \; S_1; \; S_2 \; | \; \text{if} \; b \; \text{do} \; S \; | \; \text{if} \; b \; \text{do} \; S_1 \; \text{else do} \; S_2 \; | \; \text{while} \; b \; \text{do} \; S \\
+~ & | \; \text{from} \; x := a_1 \; \text{to} \; a_2 \; \text{step} \; a_3 \; \text{do} \; S \; | \; \text{call} \; p(\vec{x}) \; | \; \text{begin} \; D_V \; D_P \; S \; \text{end} \\
+a::= \; & n \; | \; x \; | \; a_1 + a_2 \; | \; a_1 - a_2 \; | \; a_1 * a_2 \; | \; a_1 / a_2 \; | \; (a) \; | \; r[a_i]\\
+b::= \; &a_1 = a_2 \; | \; a_1 > a_2 \; | \; a_1 < a_2 \; | \; \neg b \; | \; b_1 \; \wedge \; b_2 \; | \; b_1 \; \vee \; b_2 \; | \; (b) \\
+D_V::= \; & \text{var} \; x := a; \; D_V \; | \; \varepsilon \\
+D_P::= \; & \text{func} \; p \; \text{is} \; S;\;  D_P \; | \; \varepsilon \\
+D_A::= \; & \text{array} \; r[a_1]; \; D_A \; | \; \varepsilon \\
+\end{align*}
+
+\subsection{Transition Systems}
+
+
+\subsection{Big-step-semantic and small-step-semantic}
+\fxfatal{Forklar hvad det er, og at vi bruger big-step.}
 
 \subsection{Environment-Store Model}
 In our project we use the \textit{environment-store model} to represent how a variable is bound to a storage cell (called a \textit{location}), in the computer, and that the value of the variable is the content of the bound location. All the possible locations are denoted by \textbf{Loc} and a single location as $l \in \textbf{Loc}$. We assume all locations are integer, and therefore $\textbf{Loc} = \mathbb{Z}$. Since all locations are integers we can define a function to find the next location: $\textbf{Loc} \rightarrow \textbf{Loc}$, where $l = l + 1$. 
@@ -25,23 +49,6 @@ The following names represent the different environments.
 \item $env_A \in Env_A$ - Array environment
 \item $env_P \in Env_P$ - Procedure environment
 \end{itemize}
-
-\subsection{Big-step-semantic and small-step-semantic}
-\fxfatal{Forklar hvad det er, og at vi bruger big-step.}
-
-\subsection{Abstract Syntax}
-In order to describe the behavior of a program, er must first account for its syntax. We use the notion of abstract syntax, since it will allow us to describe the essential structure of the program. An abstract syntax is defined as follows. We assume a collection of syntactic categories and for each syntactic category we give a finite set of formation rules that define how the the inhabitants of the category can be build \citep{HHTree}.
-Here the abstract syntax of SPLAD can be seen. An abstract syntax is bla bla bla...
-\fxfatal{bla bla bla}
-\begin{align*}
-S::= \; & x := a \; | \; r[a_1] := a_2 \; | \; S_1; \; S_2 \; | \; \text{if} \; b \; \text{do} \; S \; | \; \text{if} \; b \; \text{do} \; S_1 \; \text{else do} \; S_2 \; | \; \text{while} \; b \; \text{do} \; S \\
-~ & | \; \text{from} \; x := a_1 \; \text{to} \; a_2 \; \text{step} \; a_3 \; \text{do} \; S \; | \; \text{call} \; p(\vec{x}) \; | \; \text{begin} \; D_V \; D_P \; S \; \text{end} \\
-a::= \; & n \; | \; x \; | \; a_1 + a_2 \; | \; a_1 - a_2 \; | \; a_1 * a_2 \; | \; a_1 / a_2 \; | \; (a) \; | \; r[a_i]\\
-b::= \; &a_1 = a_2 \; | \; a_1 > a_2 \; | \; a_1 < a_2 \; | \; \neg b \; | \; b_1 \; \wedge \; b_2 \; | \; b_1 \; \vee \; b_2 \; | \; (b) \\
-D_V::= \; & \text{var} \; x := a; \; D_V \; | \; \varepsilon \\
-D_P::= \; & \text{func} \; p \; \text{is} \; S;\;  D_P \; | \; \varepsilon \\
-D_A::= \; & \text{array} \; r[a_1]; \; D_A \; | \; \varepsilon \\
-\end{align*}
 
 \subsection{Statements}
 The transition rules for the statements are on the form: $env_V, env_P \vdash \langle S, sto \rangle \rightarrow sto'$.
@@ -94,9 +101,9 @@ The transition rule for logical-or in SPLAD can be seen on table \ref{tab:OrExp}
 \end{longtable}
 
 \subsection{Variable Declaration}
-The transition rules for the variable declarations are on the form: $\langle D_V, env_V, sto \rangle \rightarrow_{DV} (env_V', sto')$
+The transition rules for the variable declarations are on the form: $\langle D_V, env_V, sto \rangle \rightarrow_{DV} (env_V', sto')$ and the configurations are defined by $\Gramma_{DV} = (\textbf{ErkV} \times \textbf{EnvV} \times \textbf{Sto}) \cup \textbf{EnvV \times \textbf{Sto}}$ and $\Tau_{DV} = \textbf{EnvV} \times \textbf{Sto}$.
 
-\fxfatal{Bla bla bla}
+On table \ref{tab:VarDecl} the transition rules for variable declaration can be seen.
 
 \begin{longtable}{l l}
 \longtablesetting{2}

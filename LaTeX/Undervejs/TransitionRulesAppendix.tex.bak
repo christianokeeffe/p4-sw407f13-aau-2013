@@ -7,7 +7,7 @@
 \section{Abstract Syntax}
 \begin{align*}
 S::= \; & x := a \; | \; r[a_1] := a_2 \; | \; S_1; \; S_2 \; | \; \text{if} \; b \; \text{do} \; S \; | \; \text{if} \; b \; \text{do} \; S_1 \; \text{else do} \; S_2 \; | \; \text{while} \; b \; \text{do} \; S \\
-~ & | \; \text{from} \; x := a_1 \; \text{to} \; a_2 \; \text{step} \; a_3 \; \text{do} \; S \; | \; \text{call} \; p(\vec{x}) \; | \; \text{begin} \; D_V \; D_A \; D_P \; S \; \text{end} \\
+~ & | \; \text{from} \; x := a_1 \; \text{to} \; a_2 \; \text{step} \; a_3 \; \text{do} \; S \; | \; \text{switch}(a) \; \text{case} a_1: \; S_1 \; \text{break}; \; \dots \; \text{case} a_k: \; S_k \; \text{}\; | \; \text{call} \; p(\vec{x}) \; | \; \text{begin} \; D_V \; D_A \; D_P \; S \; \text{end} \\
 a::= \; & n \; | \; x \; | \; a_1 + a_2 \; | \; a_1 - a_2 \; | \; a_1 * a_2 \; | \; a_1 / a_2 \; | \; (a) \; | \; r[a_i]\\
 b::= \; &a_1 = a_2 \; | \; a_1 > a_2 \; | \; a_1 < a_2 \; | \; \neg b \; | \; b_1 \; \wedge \; b_2 \; | \; b_1 \; \vee \; b_2 \; | \; (b) \\
 D_V::= \; & \text{var} \; x := a; \; D_V \; | \; \varepsilon \\
@@ -85,7 +85,7 @@ D_A::= \; & \text{array} \; r[a_1]; \; D_A \; | \; \varepsilon \\
 ~ & \indent\indent and $v_1 > v_2$ \\
 ~ & ~ \\
 
-\fxfatal{Disse 3 herunder skal ligges ned!!}
+~ & \fxfatal{Disse 3 herunder skal ligges ned!!} \\
 
 [SWITCH-1] & $\dfrac{env_V, env_P \vdash \langle S, sto\rangle \rightarrow (sto')}{env_V, env_P \vdash \langle \text{switch}(a) \; \text{begin} \; \text{case} \; a_1: \; S_1 \; \text{break}; \; \text{default}: \; S \; \text{break}; \; \text{end}, sto \rangle \rightarrow sto'}$ \\
 ~ & ~ \\
@@ -95,20 +95,20 @@ D_A::= \; & \text{array} \; r[a_1]; \; D_A \; | \; \varepsilon \\
 ~ & \indent\indent and $v \neq v_1$ \\
 ~ & ~ \\
 
-[SWITCH-2] & $\dfrac{env_V, env_P \vdash \langle S_1, sto \rangle \rightarrow sto'}{env_V, env_P \vdash \langle \text{switch}(a) \; \text{begin} \; \text{case}}$ \\
+[SWITCH-2] & $\dfrac{env_V, env_P \vdash \langle S_1, sto \rangle \rightarrow sto'}{env_V, env_P \vdash \langle \text{switch}(a) \; \text{begin} \; \text{case} \; a_1: \; S_1 \; \text{break}; \; \dots \; \text{case} \; a_k: \; S_k \; \text{break}; \; \text{default}: \; S \; \text{break}; \; \text{end}, sto \rangle \rightarrow sto'}$ \\
 ~ & ~ \\
-~ & \indent\indent Where $$ \\
-~ & \indent\indent and $$ \\
-~ & \indent\indent and $$ \\
-~ & \indent\indent and $$ \\
+~ & \indent\indent Where $k > 1$ \\
+~ & \indent\indent and $env_V, sto \vdash a \rightarrow_a v$ \\
+~ & \indent\indent and $env_V, sto \vdash a_1 \rightarrow_a v_1$ \\
+~ & \indent\indent and $v = v_1$ \\
 ~ & ~ \\
 
-[SWITCH-3] & $$ \\
+[SWITCH-3] & $\dfrac{env_V, env_P \vdash \langle \text{switch}(a) \; \text{begin} \; \text{case} \; a_2: \; S_2 \; \text{break}; \; \dots \; \text{case} \; a_k: \; S_k \; \text{break}; \; \text{default}: \; S \; \text{break}; \; \text{end}, sto \rangle \rightarrow sto'}{env_V, env_P \vdash \langle \text{switch}(a) \; \text{begin} \; \text{case} \; a_1: \; S_1 \; \text{break}; \; \dots \; \text{case} \; a_k: \; S_k \; \text{break}; \; \text{default}: \; S \; \text{break}; \; \text{end}, sto \rangle \rightarrow sto'}$ \\
 ~ & ~ \\
-~ & \indent\indent Where $$ \\
-~ & \indent\indent and $$ \\
-~ & \indent\indent and $$ \\
-~ & \indent\indent and $$ \\
+~ & \indent\indent Where $k > 1$ \\
+~ & \indent\indent and $env_V, sto \vdash a \rightarrow_a v$ \\
+~ & \indent\indent and $env_V, sto \vdash a_1 \rightarrow_a v_1$ \\
+~ & \indent\indent and $v \neq v_1$ \\
 ~ & ~ \\
 
 [CALL] & $\dfrac{env_V'[\vec{z} \mapsto \vec{l}], env_P' \vdash \langle S, sto[\vec{l} \mapsto \vec{v}] \rangle \rightarrow sto'}{env_V, env_P \vdash \langle \text{call} \; p(\vec{a}), sto \rangle \rightarrow sto'}$ \\

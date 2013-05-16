@@ -67,3 +67,53 @@ container OrangeJuice <-- A5;
 container RedGrenadine <-- 1;
 \end{lstlisting}
 \end{code}
+
+Now that every part of the example program is defined, it can be put together, the whole example can be seen on listing \ref{lst:exfull}. The RFIDFound function is called when the RFID reader reads a RFID-tag. The tag contains the id 0 or 1, depending on the drink. If the tag contains 0, the drink Tom Collins is poured. 
+
+\begin{code}{exfull}{The example program put together}
+\begin{lstlisting}
+container Gin <-- A0;
+container Sugar <-- A1;
+container Lime <-- A2;
+container Soda <-- A3;
+container Tequila <-- A4;
+container OrangeJuice <-- A5;
+container RedGrenadine <-- 1;
+
+drink TomCollins is
+begin
+	add 3 of Gin;
+	add 2 of Sugar;
+	add 2 of Lime;
+	add 5 of Soda;
+end
+
+drink TequilaSunrise is 
+begin
+	add 2 of Tequila;
+	add 5 of OrangeJuice;
+	add 1 of RedGrenadine;
+end
+
+function RFIDFound return nothing using(int DrinkID, int Amount)
+begin
+	if(DrinkID = 0)
+	begin
+		pourDrink(TomCollins);
+	end
+	else
+	begin
+		pourDrink(TequilaSunrise);
+	end
+	return nothing;
+end
+
+function pour return nothing using(container c, int Amount)
+begin
+	call digitalWrite(c, HIGH);
+	call delay(Amount*1000);
+	call digitalWrite(c, LOW);
+	return nothing;
+end
+\end{lstlisting}
+\end{code}

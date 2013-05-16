@@ -222,19 +222,14 @@ This section contains the grammar related to loops. This can be seen on \ref{gra
 
 <cases> $\ra$ case <expr>:
 			<stmts>
+			break; 
 		<endcase>
 		
 <endcase> $\ra$ <cases>
-		\alt break; <breakend>
 		\alt default:
 			<stmts>
 			break;
 
-<breakend> $\ra$ <cases>
-\alt default:
-<stmts>
-break;
-\alt$\eps$
 \end{grammatik}
 
 \input{indhold/LanguageSpecification/lexiconintro}

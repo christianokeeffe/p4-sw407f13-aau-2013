@@ -1,9 +1,9 @@
 \subsection{Overview of the Compiler}
 \label{sec:OverviewCompiler}
-Figure \ref{fig:OverviewCompiler} shows an abstract overview of each of the different phases in the compiler, what each phase requires as input, and what each step returns to the next phase.
+Figure \ref{fig:OverviewCompiler} shows an abstract overview of each of the different phases in a compiler, what each phase requires as input, and what each step returns to the next phase.
 \figur{0.6}{OverviewCompiler.PNG}{This is an abstract overview of how the compiler is structured. The figure is from \citep{OverviewCompiler2}.}{fig:OverviewCompiler} 
 
-A compiler is a fundamental part of modern computing. Their purpose is to translate a programming language into machine language. A compiler allows programs to make a virtual computer and thereby ignore the machine-dependent details of machine language. This makes the compiled program portable across different computers \citep{CraftingACompiler}.
+A compiler is a fundamental part of modern computing. Its purpose is to translate a programming language into a lower level programming language. A compiler can also compile source code into virtual instructions, which can be executed by virtual machines, as is the case for the Java-compiler. This makes the compiled program portable across different computers \citep{CraftingACompiler}.
 
 A compiler consists mainly of three different phases. The different phases roughly correspond to the different parts in a language specification which can be seen on figure \ref{fig:OverviewCompiler}. The syntax analysis correspond to the syntax, the contextual analysis to the contextual constraints and the code generation phase roughly corresponds to the semantics.
 

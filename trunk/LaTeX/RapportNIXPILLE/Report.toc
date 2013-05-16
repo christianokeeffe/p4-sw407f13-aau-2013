@@ -82,12 +82,10 @@
 \contentsline {subsubsection}{\numberline {3.3.1.4}Comparison Tables}{40}{subsubsection.3.3.1.4}
 \contentsline {subsection}{\numberline {3.3.2}ANTLR}{41}{subsection.3.3.2}
 \contentsline {subsection}{\numberline {3.3.3}Lexical Analyzer}{42}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Tokens}{43}{subsection.3.3.4}
-\contentsline {subsubsection}{\numberline {3.3.4.1}Reserved Keywords}{43}{subsubsection.3.3.4.1}
-\contentsline {subsubsection}{\numberline {3.3.4.2}Token Specification}{43}{subsubsection.3.3.4.2}
-\contentsline {subsection}{\numberline {3.3.5}Parser}{44}{subsection.3.3.5}
-\contentsline {subsubsection}{\numberline {3.3.5.1}Top-down Parsers}{44}{subsubsection.3.3.5.1}
-\contentsline {subsubsection}{\numberline {3.3.5.2}Bottom-Up Parsers}{45}{subsubsection.3.3.5.2}
+\contentsline {subsubsection}{\numberline {3.3.3.1}Tokens}{43}{subsubsection.3.3.3.1}
+\contentsline {subsection}{\numberline {3.3.4}Parser}{44}{subsection.3.3.4}
+\contentsline {subsubsection}{\numberline {3.3.4.1}Top-down Parsers}{44}{subsubsection.3.3.4.1}
+\contentsline {subsubsection}{\numberline {3.3.4.2}Bottom-Up Parsers}{45}{subsubsection.3.3.4.2}
 \contentsline {section}{\numberline {3.4}Contextual Analysis}{45}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Scope Checking}{45}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}Type Checking}{45}{subsection.3.4.2}
@@ -102,7 +100,7 @@
 \contentsline {subsubsection}{\numberline {3.5.1.2}Unit Testing in This Project}{56}{subsubsection.3.5.1.2}
 \contentsline {section}{\numberline {3.6}Component Setup}{58}{section.3.6}
 \contentsline {chapter}{\chapternumberline {4}Conclusion}{61}{chapter.4}
-\contentsline {chapter}{Bibliography}{63}{section*.33}
+\contentsline {chapter}{Bibliography}{63}{section*.35}
 \cftpagenumbersoff {chapter}
 \changetocdepth {0}
 \contentsline {appendix}{\chapternumberline {A}Semantics}{67}{appendix.A}

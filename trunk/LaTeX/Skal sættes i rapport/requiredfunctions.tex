@@ -1,10 +1,10 @@
 \section{Requirements to the Programmer}
-There are certain requirements to the programmer, when he/she is writing in SPLAD. He/She must implement the functions:
+There are certain requirements to the programmer, when they are writing in SPLAD. The programmer must implement the functions:
 \begin{itemize}
 	\item {\color[rgb]{0,0,1}function} pour {\color[rgb]{0,0,1}return} {\color[rgb]{0.545,0.133,0.133}nothing} {\color[rgb]{0,0,1}using}({\color[rgb]{0.545,0.133,0.133}container} cont, {\color[rgb]{0.545,0.133,0.133}int} Amount)
 	\item {\color[rgb]{0,0,1}function} RFIDFound {\color[rgb]{0,0,1}return} {\color[rgb]{0.545,0.133,0.133}nothing} {\color[rgb]{0,0,1}using}({\color[rgb]{0.545,0.133,0.133}int} DrinkID, {\color[rgb]{0.545,0.133,0.133}int} Amount)
 \end{itemize}
-The programmer must implement these two functions, so that the SPLAD framework can call the functions. The pour function is called, when an ingredient must be poured. The programmer should then handle how to pour from his container.
+These two functions are implemented, so that the SPLAD framework can call the functions. The pour function is called, when a drink is to be mixed with pourDrink function. The programmer should then handle how to pour the ingredients from their containers.
 The RFIDFound function is called when a RFID-tag is found, and the programmer should then, with the content of the RFID-tag as parameters, handle what to do with the tag.
 
 \section{Functions provided by SPLAD}

@@ -107,4 +107,4 @@
 \changetocdepth {0}
 \contentsline {appendix}{\chapternumberline {A}Semantics}{67}{appendix.A}
 \contentsline {section}{\numberline {A.1}Transition Rules}{67}{section.A.1}
-\contentsline {appendix}{\chapternumberline {B}Test program written in SPLAD}{71}{appendix.B}
+\contentsline {appendix}{\chapternumberline {B}Program written in SPLAD}{71}{appendix.B}

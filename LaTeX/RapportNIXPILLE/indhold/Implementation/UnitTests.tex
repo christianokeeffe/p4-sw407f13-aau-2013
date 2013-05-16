@@ -53,6 +53,5 @@ A more complex test is the unit test for the Value.GetType() method. This is a l
 	}
 \end{lstlisting}
 \end{code}
-\fxfatal{tjek om "..." kommer til at stå rigtigt}
 
 The use of unit tests did actually result in code-changes, because it was discovered that the method Value.IsNumericExpression(), which determine if the value is a numeric expression, for example "10+4-1*4+4.0", did not accept numeric expression containing parentheses, which, of course, are valid in numeric expression. This resulted in small modification, which essentially removes all parentheses. Recall that the goal of the type-checker is to type-check programs, \emph{not} to evaluate expressions. Therefore parentheses can be completely ignored in numeric expressions. 

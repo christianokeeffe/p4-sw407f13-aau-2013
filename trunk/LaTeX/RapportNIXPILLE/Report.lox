@@ -8,6 +8,5 @@
 \contentsline {fixme}{Fatal: Den passer overhovedet ikke, og er det ikke m\IeC {\ae }rkeligt det kommer to gange?}{44}{table.caption.30}
 \contentsline {fixme}{Fatal: Den laver vel b\IeC {\r a}de parsetr\IeC {\ae } og AST? Der mangler at blive beskrevet forskellen p\IeC {\r a} parsetr\IeC {\ae } og AST}{44}{subsection.3.3.5}
 \contentsline {fixme}{Fatal: Memmory samt hvordan den bruges i visitorpattern. Hvor bliver den brugt? hvordan bruges det? er lidt mere en beskrivelse af valueklassen, og ikke selve typetjekket... alts\IeC {\r a} mangler der lidt at der tjekkes for retur af functionerne samt mere.}{50}{lstlisting.3.13}
-\contentsline {fixme}{Fatal: tjek om "..." kommer til at st\IeC {\r a} rigtigt}{58}{lstlisting.3.22}
 \contentsline {fixme}{Fatal: konklusion mangler}{61}{chapter.4}
 \contentsline {fixme}{Fatal: Mangler: for loop, call function, declerations m\IeC {\r a}ske mere}{67}{section.A.1}

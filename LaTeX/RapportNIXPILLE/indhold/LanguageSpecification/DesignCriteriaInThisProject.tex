@@ -13,7 +13,7 @@ To determine how a programming language should be syntactically described, the t
 		Data type				& The presence of adequate facilities for defining data types and data structures.\\ \hline
 		Syntax design			& The syntax, or form, of the elements of a language. E.g. special words like "while" and "if".\\ \hline
 		Support for abstraction	& Abstraction means the ability to define and then use complicated structures or operations in ways that allow many of the 									details	to be ignored.\\ \hline
-		Expressivity			& A language can refer to several different characteristics. It means that a language have a relatively convenient, rather 									than cumbersome, way of specifying computations.\\ \hline
+		Expressivity			& A language can refer to several different characteristics. It means that a language has a relatively convenient, rather 									than cumbersome, way of specifying computations.\\ \hline
 		Type Checking			& Testing for type errors in a given program, either by the compiler or during program execution.\\ \hline
 		Exception handling		& The ability of a program to intercept run-time errors, take corrective measures, and then continue.\\ \hline
 		Restricted aliasing		& Aliasing is having two or more distinct names that can be used to	access the same memory cell.\\ \hline
@@ -83,7 +83,7 @@ When defining the syntax of a programming language, it should balance these char
 \textbf{Characteristic} 		& \rotatebox{90}{Chosen focus for this project} \\ \hline
 		Simplicity 				& high 		\\ \hline
 		Orthogonality 			& medium 	\\ \hline
-		Data types 				& low 		\\ \hline
+		Data types 				& medium 	\\ \hline
 		Syntax design 			& high 		\\ \hline
 		Support for abstraction	& medium	\\ \hline
 		Expressivity 			& low 		\\ \hline
@@ -100,17 +100,17 @@ Table \ref{tab:choiceoffocus} shows what paradigms that is in the focus for the 
 
 \item \textbf{Orthogonality:} It is not possible to make classes or constructs, this is done to simplify types for beginners. However it is possible to combine various other constructs, for example calling a function in an expression. 
 
-\item \textbf{Data types:} The language of this project has five primitive types, bool, double, int, char and string and 2 special types, container and drink. 
+\item \textbf{Data types:} The language of this project has five primitive types, bool, double, int, char and string and 2 special types, container and drink. The two special types are described in section \ref{sec:specific}.
 
 \item \textbf{Syntax design:} It is not possible to make classes in the language of this project but there is both "for" and "while" loops because they are relatively simple to use and understand for beginners. All functions and loops start with "begin" and end with "end" to make it clear where they start and end.
 
-\item \textbf{Support for abstraction:} This is close to non-existent in the project languages, because to help beginners with using the language, a simple  type system is simpler to understand.
+\item \textbf{Support for abstraction:} Our language is an abstraction of the Arduino language. This is done to simplify the programming of a Arduino platform and help the user by making it more simple.
 
 \item \textbf{Expressivity:} Shorthands have not been implemented in SPLAD, this is to increase the readability of the program, as described in listing \ref{lst:ifstmtnormal}.
 
 \item \textbf{Type checking:} Is a major part of the project. The type checking will be done on compile time rather then run time, to help beginners see their errors in their code, instead of at run time.
 
-\item \textbf{Exception handling:} Because the Arduino will execute the program-code in the end, the handling of exceptions such as array overflows, is left to the Arduino.
+\item \textbf{Exception handling:} Because the Arduino will execute the program-code in the end. The compiler will handle scope, type and code generation exceptions. The handling of Arduino based exceptions such as function provided by the Arduino language is left to the Arduino. This is done because we do not know all the provided function and therefore can not check them.
 
 \item \textbf{Restricted aliasing:} Since it is known that using aliasing is a dangerous feature in a programming language  \citep{sebesta}, the language of this project will not have this feature, to help beginners.
 \end{itemize}

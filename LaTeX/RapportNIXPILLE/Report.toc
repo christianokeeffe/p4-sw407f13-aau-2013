@@ -27,9 +27,9 @@
 \contentsline {subsection}{\numberline {2.3.3}Choice of Grammar}{12}{subsection.2.3.3}
 \contentsline {subsection}{\numberline {2.3.4}Specification of the language compared to the purpose}{13}{subsection.2.3.4}
 \contentsline {subsubsection}{\numberline {2.3.4.1}A drink}{14}{subsubsection.2.3.4.1}
-\contentsline {subsubsection}{\numberline {2.3.4.2}An ingredient}{16}{subsubsection.2.3.4.2}
-\contentsline {subsubsection}{\numberline {2.3.4.3}A RFID-tag}{16}{subsubsection.2.3.4.3}
-\contentsline {subsubsection}{\numberline {2.3.4.4}A RFID-RW}{16}{subsubsection.2.3.4.4}
+\contentsline {subsubsection}{\numberline {2.3.4.2}Ingredients}{16}{subsubsection.2.3.4.2}
+\contentsline {subsubsection}{\numberline {2.3.4.3}An RFID-tag}{16}{subsubsection.2.3.4.3}
+\contentsline {subsubsection}{\numberline {2.3.4.4}An RFID-RW}{16}{subsubsection.2.3.4.4}
 \contentsline {subsubsection}{\numberline {2.3.4.5}An LCD}{17}{subsubsection.2.3.4.5}
 \contentsline {subsubsection}{\numberline {2.3.4.6}Buttons}{17}{subsubsection.2.3.4.6}
 \contentsline {subsubsection}{\numberline {2.3.4.7}Mechanism for pouring ingredients}{18}{subsubsection.2.3.4.7}
@@ -71,46 +71,46 @@
 \contentsline {subsubsection}{\numberline {3.2.1.1}Hardware platform}{34}{subsubsection.3.2.1.1}
 \contentsline {subsubsection}{\numberline {3.2.1.2}RFID}{35}{subsubsection.3.2.1.2}
 \contentsline {subsubsection}{\numberline {3.2.1.3}Other components}{36}{subsubsection.3.2.1.3}
-\contentsline {subsection}{\numberline {3.2.2}Overview of the Compiler}{36}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}Language Processor}{38}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Compiler}{38}{subsection.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.1.1}Pure Machine Code}{38}{subsubsection.3.3.1.1}
-\contentsline {subsubsection}{\numberline {3.3.1.2}Augmented Machine Code}{38}{subsubsection.3.3.1.2}
-\contentsline {subsubsection}{\numberline {3.3.1.3}Virtual Machine Code}{38}{subsubsection.3.3.1.3}
-\contentsline {subsection}{\numberline {3.3.2}Interpreter}{39}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Choice of Language Processor for This Project}{39}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Language Processing Strategy}{39}{subsection.3.3.4}
-\contentsline {subsection}{\numberline {3.3.5}Compilation phases}{41}{subsection.3.3.5}
-\contentsline {subsection}{\numberline {3.3.6}Abstract Syntax Trees}{41}{subsection.3.3.6}
-\contentsline {subsection}{\numberline {3.3.7}Parse Tree}{41}{subsection.3.3.7}
-\contentsline {subsection}{\numberline {3.3.8}The Visitor Pattern}{43}{subsection.3.3.8}
-\contentsline {section}{\numberline {3.4}Syntactic Analysis}{43}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Known lexers and parsers}{44}{subsection.3.4.1}
-\contentsline {subsubsection}{\numberline {3.4.1.1}Lexer}{44}{subsubsection.3.4.1.1}
-\contentsline {subsubsection}{\numberline {3.4.1.2}Parser}{44}{subsubsection.3.4.1.2}
-\contentsline {subsubsection}{\numberline {3.4.1.3}Lexer and parser}{44}{subsubsection.3.4.1.3}
-\contentsline {subsubsection}{\numberline {3.4.1.4}Comparison Tables}{45}{subsubsection.3.4.1.4}
-\contentsline {subsection}{\numberline {3.4.2}ANTLR}{46}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Lexical Analyzer}{47}{subsection.3.4.3}
-\contentsline {subsubsection}{\numberline {3.4.3.1}Tokens}{48}{subsubsection.3.4.3.1}
-\contentsline {subsection}{\numberline {3.4.4}Parser}{49}{subsection.3.4.4}
-\contentsline {subsubsection}{\numberline {3.4.4.1}Top-down Parsers}{49}{subsubsection.3.4.4.1}
-\contentsline {subsubsection}{\numberline {3.4.4.2}Bottom-Up Parsers}{50}{subsubsection.3.4.4.2}
-\contentsline {section}{\numberline {3.5}Contextual Analysis}{50}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Scope Checking}{50}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Type Checking}{52}{subsection.3.5.2}
-\contentsline {subsubsection}{\numberline {3.5.2.1}Tree traversal}{52}{subsubsection.3.5.2.1}
-\contentsline {subsubsection}{\numberline {3.5.2.2}Value}{53}{subsubsection.3.5.2.2}
-\contentsline {subsubsection}{\numberline {3.5.2.3}Function}{54}{subsubsection.3.5.2.3}
-\contentsline {subsubsection}{\numberline {3.5.2.4}Variable}{56}{subsubsection.3.5.2.4}
-\contentsline {subsubsection}{\numberline {3.5.2.5}Drink}{57}{subsubsection.3.5.2.5}
-\contentsline {subsubsection}{\numberline {3.5.2.6}Error Handling}{57}{subsubsection.3.5.2.6}
-\contentsline {section}{\numberline {3.6}Code Generation}{58}{section.3.6}
-\contentsline {section}{\numberline {3.7}Code Generation}{59}{section.3.7}
-\contentsline {subsection}{\numberline {3.7.1}Unit Testing}{64}{subsection.3.7.1}
-\contentsline {subsubsection}{\numberline {3.7.1.1}Unit Testing in General}{64}{subsubsection.3.7.1.1}
-\contentsline {subsubsection}{\numberline {3.7.1.2}Unit Testing in This Project}{65}{subsubsection.3.7.1.2}
-\contentsline {section}{\numberline {3.8}Component Setup}{67}{section.3.8}
+\contentsline {section}{\numberline {3.3}Overview of the Compiler}{36}{section.3.3}
+\contentsline {section}{\numberline {3.4}Language Processor}{38}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Compiler}{38}{subsection.3.4.1}
+\contentsline {subsubsection}{\numberline {3.4.1.1}Pure Machine Code}{38}{subsubsection.3.4.1.1}
+\contentsline {subsubsection}{\numberline {3.4.1.2}Augmented Machine Code}{38}{subsubsection.3.4.1.2}
+\contentsline {subsubsection}{\numberline {3.4.1.3}Virtual Machine Code}{38}{subsubsection.3.4.1.3}
+\contentsline {subsection}{\numberline {3.4.2}Interpreter}{39}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Choice of Language Processor for This Project}{39}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Language Processing Strategy}{39}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.5}Compilation passes}{41}{subsection.3.4.5}
+\contentsline {subsection}{\numberline {3.4.6}Abstract Syntax Trees}{41}{subsection.3.4.6}
+\contentsline {subsection}{\numberline {3.4.7}Parse Tree}{41}{subsection.3.4.7}
+\contentsline {subsection}{\numberline {3.4.8}The Visitor Pattern}{43}{subsection.3.4.8}
+\contentsline {section}{\numberline {3.5}Syntactic Analysis}{43}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Known lexers and parsers}{44}{subsection.3.5.1}
+\contentsline {subsubsection}{\numberline {3.5.1.1}Lexer}{44}{subsubsection.3.5.1.1}
+\contentsline {subsubsection}{\numberline {3.5.1.2}Parser}{44}{subsubsection.3.5.1.2}
+\contentsline {subsubsection}{\numberline {3.5.1.3}Lexer and parser}{44}{subsubsection.3.5.1.3}
+\contentsline {subsubsection}{\numberline {3.5.1.4}Comparison Tables}{45}{subsubsection.3.5.1.4}
+\contentsline {subsection}{\numberline {3.5.2}ANTLR}{46}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}Lexical Analyzer}{47}{subsection.3.5.3}
+\contentsline {subsubsection}{\numberline {3.5.3.1}Tokens}{48}{subsubsection.3.5.3.1}
+\contentsline {subsection}{\numberline {3.5.4}Parser}{49}{subsection.3.5.4}
+\contentsline {subsubsection}{\numberline {3.5.4.1}Top-down Parsers}{49}{subsubsection.3.5.4.1}
+\contentsline {subsubsection}{\numberline {3.5.4.2}Bottom-Up Parsers}{50}{subsubsection.3.5.4.2}
+\contentsline {section}{\numberline {3.6}Contextual Analysis}{50}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Scope Checking}{50}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}Type Checking}{52}{subsection.3.6.2}
+\contentsline {subsubsection}{\numberline {3.6.2.1}Tree traversal}{52}{subsubsection.3.6.2.1}
+\contentsline {subsubsection}{\numberline {3.6.2.2}Value}{53}{subsubsection.3.6.2.2}
+\contentsline {subsubsection}{\numberline {3.6.2.3}Function}{54}{subsubsection.3.6.2.3}
+\contentsline {subsubsection}{\numberline {3.6.2.4}Variable}{56}{subsubsection.3.6.2.4}
+\contentsline {subsubsection}{\numberline {3.6.2.5}Drink}{57}{subsubsection.3.6.2.5}
+\contentsline {subsubsection}{\numberline {3.6.2.6}Error Handling}{57}{subsubsection.3.6.2.6}
+\contentsline {section}{\numberline {3.7}Code Generation}{58}{section.3.7}
+\contentsline {section}{\numberline {3.8}Code Generation}{59}{section.3.8}
+\contentsline {subsection}{\numberline {3.8.1}Unit Testing}{64}{subsection.3.8.1}
+\contentsline {subsubsection}{\numberline {3.8.1.1}Unit Testing in General}{64}{subsubsection.3.8.1.1}
+\contentsline {subsubsection}{\numberline {3.8.1.2}Unit Testing in This Project}{65}{subsubsection.3.8.1.2}
+\contentsline {section}{\numberline {3.9}Component Setup}{67}{section.3.9}
 \contentsline {chapter}{\chapternumberline {4}Conclusion}{69}{chapter.4}
 \contentsline {chapter}{Bibliography}{71}{section*.34}
 \cftpagenumbersoff {chapter}

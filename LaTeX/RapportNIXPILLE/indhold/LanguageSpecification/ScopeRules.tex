@@ -1,7 +1,7 @@
 \subsection{Scope Rules}
 \label{sec:scoperules}
 The scope of a variable is the block of the program in which it is accessible. A variable is local to a block, if it is declared in that block. A variable is non-local to a block if it is not declared in that block, but is still visible in that block (ex. global variables) \citep{sebesta}.
-The languages scope rules determine how a variable name is associated with a variable in a particular occurrence or when working with a functional language, it needs to know how a name is associated with an expression when a variable is declared in a program unit or block. When a variable is declared in a program unit or block it is local for that part. Then the non-local variables are visible within the program unit or block if they are not declared there. Lastly there are global variables these are a special category of non-local variables.
+The scope rules of the language determine how a variable name is associated with a variable in a particular occurrence. When working with a functional language, it needs to know how a name is associated with an expression when a variable is declared in a program unit or block. When a variable is declared in a program unit or block it is local for that part. Then the non-local variables are visible within the program unit or block if they are not declared there. Lastly there are global variables which are a special category of non-local variables.
 
 \subsubsection{Static Scope}
 Static scoping method was introduced in ALGOL 60, which is the method of binding names to non-local variables. There are two categories of static-scoped languages. First one is which sub-programs can be nested, this creates nested static scopes. And the other is static scopes which is also created by sub-programs but nested scopes are created only by nested class definitions and blocks.
@@ -9,7 +9,7 @@ Static scoping method was introduced in ALGOL 60, which is the method of binding
 \subsubsubsection{Blocks}
 Blocks are used to define new static scopes in many languages. The idea is that it allows a section of code to have its own local variables.
 
-An example on the use of blocks can be seen in code example \ref{lst:BlockCode}. Before the block $\{ \}$ the variable $x$ is initialized and set to integer 5, in the block, $x$ is set to 10 and a extra variable $y$ is initialized and is set to integer 15, $y$ is only visible inside block, thereby it can not be call outside of the block, but after the block, $x$ still have the value 10 that was given inside the block.
+An example on the use of blocks can be seen in code example \ref{lst:BlockCode}. Before the block $\{ \}$ the variable $x$ is initialized and set to integer 5, in the block, $x$ is set to 10 and a extra variable $y$ is initialized and is set to integer 15, $y$ is only visible inside block, thereby it can not be called outside of the block, but after the block, $x$ still have the value 10 that was given inside the block.
 
 \begin{code}{BlockCode}{a simple code with use of blocks}
 \begin{lstlisting}

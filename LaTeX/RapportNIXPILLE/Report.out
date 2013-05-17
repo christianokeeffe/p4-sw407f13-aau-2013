@@ -39,66 +39,76 @@
 \BOOKMARK [3][-]{subsubsection.2.3.5.5}{2.3.5.5 Grammar - Functions}{subsection.2.3.5}% 39
 \BOOKMARK [3][-]{subsubsection.2.3.5.6}{2.3.5.6 Grammar - Loops}{subsection.2.3.5}% 40
 \BOOKMARK [2][-]{subsection.2.3.6}{2.3.6 Lexicon}{section.2.3}% 41
-\BOOKMARK [2][-]{subsection.2.3.7}{2.3.7 EBNF?}{section.2.3}% 42
-\BOOKMARK [1][-]{section.2.4}{2.4 Semantics}{chapter.2}% 43
-\BOOKMARK [2][-]{subsection.2.4.1}{2.4.1 Scope Rules}{section.2.4}% 44
-\BOOKMARK [3][-]{subsubsection.2.4.1.1}{2.4.1.1 Static Scope}{subsection.2.4.1}% 45
-\BOOKMARK [3][-]{subsubsection.2.4.1.2}{2.4.1.2 Dynamic Scope}{subsection.2.4.1}% 46
-\BOOKMARK [3][-]{subsubsection.2.4.1.3}{2.4.1.3 Declaration Order}{subsection.2.4.1}% 47
-\BOOKMARK [3][-]{subsubsection.2.4.1.4}{2.4.1.4 Global Scope}{subsection.2.4.1}% 48
-\BOOKMARK [3][-]{subsubsection.2.4.1.5}{2.4.1.5 The difference between dynamic and static scope}{subsection.2.4.1}% 49
-\BOOKMARK [2][-]{subsection.2.4.2}{2.4.2 Scoping In This Project}{section.2.4}% 50
-\BOOKMARK [2][-]{subsection.2.4.3}{2.4.3 Symbol Tables}{section.2.4}% 51
-\BOOKMARK [2][-]{subsection.2.4.4}{2.4.4 Transition Rules}{section.2.4}% 52
-\BOOKMARK [2][-]{subsection.2.4.5}{2.4.5 Environment-Store Model}{section.2.4}% 53
-\BOOKMARK [2][-]{subsection.2.4.6}{2.4.6 Arithmetic Expressions}{section.2.4}% 54
-\BOOKMARK [2][-]{subsection.2.4.7}{2.4.7 Boolean Expressions}{section.2.4}% 55
-\BOOKMARK [2][-]{subsection.2.4.8}{2.4.8 Declarations}{section.2.4}% 56
-\BOOKMARK [2][-]{subsection.2.4.9}{2.4.9 Assignments}{section.2.4}% 57
-\BOOKMARK [2][-]{subsection.2.4.10}{2.4.10 Commands}{section.2.4}% 58
-\BOOKMARK [2][-]{subsection.2.4.11}{2.4.11 Informal Type Rules}{section.2.4}% 59
-\BOOKMARK [2][-]{subsection.2.4.12}{2.4.12 Formal Type Rules}{section.2.4}% 60
-\BOOKMARK [1][-]{section.2.5}{2.5 Code Examples}{chapter.2}% 61
-\BOOKMARK [0][-]{chapter.3}{3 Implementation}{}% 62
-\BOOKMARK [1][-]{section.3.1}{3.1 Design Criteria}{chapter.3}% 63
-\BOOKMARK [1][-]{section.3.2}{3.2 Architecture}{chapter.3}% 64
-\BOOKMARK [2][-]{subsection.3.2.1}{3.2.1 Hardware}{section.3.2}% 65
-\BOOKMARK [3][-]{subsubsection.3.2.1.1}{3.2.1.1 Hardware platform}{subsection.3.2.1}% 66
-\BOOKMARK [3][-]{subsubsection.3.2.1.2}{3.2.1.2 RFID}{subsection.3.2.1}% 67
-\BOOKMARK [3][-]{subsubsection.3.2.1.3}{3.2.1.3 Other components}{subsection.3.2.1}% 68
-\BOOKMARK [2][-]{subsection.3.2.2}{3.2.2 Overview of the Compiler}{section.3.2}% 69
-\BOOKMARK [2][-]{subsection.3.2.3}{3.2.3 Language Processing Strategy}{section.3.2}% 70
-\BOOKMARK [2][-]{subsection.3.2.4}{3.2.4 Compilation Passes}{section.3.2}% 71
-\BOOKMARK [2][-]{subsection.3.2.5}{3.2.5 Abstract Syntax Trees}{section.3.2}% 72
-\BOOKMARK [2][-]{subsection.3.2.6}{3.2.6 Parse Tree}{section.3.2}% 73
-\BOOKMARK [2][-]{subsection.3.2.7}{3.2.7 The Visitor Pattern}{section.3.2}% 74
-\BOOKMARK [1][-]{section.3.3}{3.3 Syntactic Analysis}{chapter.3}% 75
-\BOOKMARK [2][-]{subsection.3.3.1}{3.3.1 Known lexers and parsers}{section.3.3}% 76
-\BOOKMARK [3][-]{subsubsection.3.3.1.1}{3.3.1.1 Lexer}{subsection.3.3.1}% 77
-\BOOKMARK [3][-]{subsubsection.3.3.1.2}{3.3.1.2 Parser}{subsection.3.3.1}% 78
-\BOOKMARK [3][-]{subsubsection.3.3.1.3}{3.3.1.3 Lexer and parser}{subsection.3.3.1}% 79
-\BOOKMARK [3][-]{subsubsection.3.3.1.4}{3.3.1.4 Comparison Tables}{subsection.3.3.1}% 80
-\BOOKMARK [2][-]{subsection.3.3.2}{3.3.2 ANTLR}{section.3.3}% 81
-\BOOKMARK [2][-]{subsection.3.3.3}{3.3.3 Lexical Analyzer}{section.3.3}% 82
-\BOOKMARK [3][-]{subsubsection.3.3.3.1}{3.3.3.1 Tokens}{subsection.3.3.3}% 83
-\BOOKMARK [2][-]{subsection.3.3.4}{3.3.4 Parser}{section.3.3}% 84
-\BOOKMARK [3][-]{subsubsection.3.3.4.1}{3.3.4.1 Top-down Parsers}{subsection.3.3.4}% 85
-\BOOKMARK [3][-]{subsubsection.3.3.4.2}{3.3.4.2 Bottom-Up Parsers}{subsection.3.3.4}% 86
-\BOOKMARK [1][-]{section.3.4}{3.4 Contextual Analysis}{chapter.3}% 87
-\BOOKMARK [2][-]{subsection.3.4.1}{3.4.1 Scope Checking}{section.3.4}% 88
-\BOOKMARK [2][-]{subsection.3.4.2}{3.4.2 Type Checking}{section.3.4}% 89
-\BOOKMARK [3][-]{subsubsection.3.4.2.1}{3.4.2.1 Value}{subsection.3.4.2}% 90
-\BOOKMARK [3][-]{subsubsection.3.4.2.2}{3.4.2.2 Functions}{subsection.3.4.2}% 91
-\BOOKMARK [3][-]{subsubsection.3.4.2.3}{3.4.2.3 Variables}{subsection.3.4.2}% 92
-\BOOKMARK [3][-]{subsubsection.3.4.2.4}{3.4.2.4 Drink}{subsection.3.4.2}% 93
-\BOOKMARK [3][-]{subsubsection.3.4.2.5}{3.4.2.5 Error Handling}{subsection.3.4.2}% 94
-\BOOKMARK [1][-]{section.3.5}{3.5 Code Generation}{chapter.3}% 95
-\BOOKMARK [2][-]{subsection.3.5.1}{3.5.1 Unit Testing}{section.3.5}% 96
-\BOOKMARK [3][-]{subsubsection.3.5.1.1}{3.5.1.1 Unit Testing in General}{subsection.3.5.1}% 97
-\BOOKMARK [3][-]{subsubsection.3.5.1.2}{3.5.1.2 Unit Testing in This Project}{subsection.3.5.1}% 98
-\BOOKMARK [1][-]{section.3.6}{3.6 Component Setup}{chapter.3}% 99
-\BOOKMARK [0][-]{chapter.4}{4 Conclusion}{}% 100
-\BOOKMARK [0][-]{section*.35}{Bibliography}{}% 101
-\BOOKMARK [0][-]{appendix.A}{A Semantics}{}% 102
-\BOOKMARK [1][-]{section.A.1}{A.1 Transition Rules}{appendix.A}% 103
-\BOOKMARK [0][-]{appendix.B}{B Program written in SPLAD}{}% 104
+\BOOKMARK [1][-]{section.2.4}{2.4 Semantics}{chapter.2}% 42
+\BOOKMARK [2][-]{subsection.2.4.1}{2.4.1 Scope Rules}{section.2.4}% 43
+\BOOKMARK [3][-]{subsubsection.2.4.1.1}{2.4.1.1 Static Scope}{subsection.2.4.1}% 44
+\BOOKMARK [3][-]{subsubsection.2.4.1.2}{2.4.1.2 Dynamic Scope}{subsection.2.4.1}% 45
+\BOOKMARK [3][-]{subsubsection.2.4.1.3}{2.4.1.3 Declaration Order}{subsection.2.4.1}% 46
+\BOOKMARK [3][-]{subsubsection.2.4.1.4}{2.4.1.4 Global Scope}{subsection.2.4.1}% 47
+\BOOKMARK [3][-]{subsubsection.2.4.1.5}{2.4.1.5 The difference between dynamic and static scope}{subsection.2.4.1}% 48
+\BOOKMARK [2][-]{subsection.2.4.2}{2.4.2 Scoping In This Project}{section.2.4}% 49
+\BOOKMARK [2][-]{subsection.2.4.3}{2.4.3 Symbol Tables}{section.2.4}% 50
+\BOOKMARK [2][-]{subsection.2.4.4}{2.4.4 Transition Rules}{section.2.4}% 51
+\BOOKMARK [2][-]{subsection.2.4.5}{2.4.5 Environment-Store Model}{section.2.4}% 52
+\BOOKMARK [2][-]{subsection.2.4.6}{2.4.6 Arithmetic Expressions}{section.2.4}% 53
+\BOOKMARK [2][-]{subsection.2.4.7}{2.4.7 Boolean Expressions}{section.2.4}% 54
+\BOOKMARK [2][-]{subsection.2.4.8}{2.4.8 Declarations}{section.2.4}% 55
+\BOOKMARK [2][-]{subsection.2.4.9}{2.4.9 Assignments}{section.2.4}% 56
+\BOOKMARK [2][-]{subsection.2.4.10}{2.4.10 Commands}{section.2.4}% 57
+\BOOKMARK [2][-]{subsection.2.4.11}{2.4.11 Informal Type Rules}{section.2.4}% 58
+\BOOKMARK [2][-]{subsection.2.4.12}{2.4.12 Formal Type Rules}{section.2.4}% 59
+\BOOKMARK [1][-]{section.2.5}{2.5 Requirements to the Programmer}{chapter.2}% 60
+\BOOKMARK [1][-]{section.2.6}{2.6 Functions provided by SPLAD}{chapter.2}% 61
+\BOOKMARK [1][-]{section.2.7}{2.7 Code Examples}{chapter.2}% 62
+\BOOKMARK [0][-]{chapter.3}{3 Implementation}{}% 63
+\BOOKMARK [1][-]{section.3.1}{3.1 Design Criteria}{chapter.3}% 64
+\BOOKMARK [1][-]{section.3.2}{3.2 Architecture}{chapter.3}% 65
+\BOOKMARK [2][-]{subsection.3.2.1}{3.2.1 Hardware}{section.3.2}% 66
+\BOOKMARK [3][-]{subsubsection.3.2.1.1}{3.2.1.1 Hardware platform}{subsection.3.2.1}% 67
+\BOOKMARK [3][-]{subsubsection.3.2.1.2}{3.2.1.2 RFID}{subsection.3.2.1}% 68
+\BOOKMARK [3][-]{subsubsection.3.2.1.3}{3.2.1.3 Other components}{subsection.3.2.1}% 69
+\BOOKMARK [2][-]{subsection.3.2.2}{3.2.2 Overview of the Compiler}{section.3.2}% 70
+\BOOKMARK [1][-]{section.3.3}{3.3 Evaluation Criteria for the Compiler}{chapter.3}% 71
+\BOOKMARK [1][-]{section.3.4}{3.4 Language Processor}{chapter.3}% 72
+\BOOKMARK [2][-]{subsection.3.4.1}{3.4.1 Compiler}{section.3.4}% 73
+\BOOKMARK [3][-]{subsubsection.3.4.1.1}{3.4.1.1 Pure Machine Code}{subsection.3.4.1}% 74
+\BOOKMARK [3][-]{subsubsection.3.4.1.2}{3.4.1.2 Augmented Machine Code}{subsection.3.4.1}% 75
+\BOOKMARK [3][-]{subsubsection.3.4.1.3}{3.4.1.3 Virtual Machine Code}{subsection.3.4.1}% 76
+\BOOKMARK [2][-]{subsection.3.4.2}{3.4.2 Interpreter}{section.3.4}% 77
+\BOOKMARK [2][-]{subsection.3.4.3}{3.4.3 Choice of Language Processor for This Project}{section.3.4}% 78
+\BOOKMARK [2][-]{subsection.3.4.4}{3.4.4 Language Processing Strategy}{section.3.4}% 79
+\BOOKMARK [2][-]{subsection.3.4.5}{3.4.5 Compilation phases}{section.3.4}% 80
+\BOOKMARK [2][-]{subsection.3.4.6}{3.4.6 Abstract Syntax Trees}{section.3.4}% 81
+\BOOKMARK [2][-]{subsection.3.4.7}{3.4.7 Parse Tree}{section.3.4}% 82
+\BOOKMARK [2][-]{subsection.3.4.8}{3.4.8 The Visitor Pattern}{section.3.4}% 83
+\BOOKMARK [1][-]{section.3.5}{3.5 Syntactic Analysis}{chapter.3}% 84
+\BOOKMARK [2][-]{subsection.3.5.1}{3.5.1 Known lexers and parsers}{section.3.5}% 85
+\BOOKMARK [3][-]{subsubsection.3.5.1.1}{3.5.1.1 Lexer}{subsection.3.5.1}% 86
+\BOOKMARK [3][-]{subsubsection.3.5.1.2}{3.5.1.2 Parser}{subsection.3.5.1}% 87
+\BOOKMARK [3][-]{subsubsection.3.5.1.3}{3.5.1.3 Lexer and parser}{subsection.3.5.1}% 88
+\BOOKMARK [3][-]{subsubsection.3.5.1.4}{3.5.1.4 Comparison Tables}{subsection.3.5.1}% 89
+\BOOKMARK [2][-]{subsection.3.5.2}{3.5.2 ANTLR}{section.3.5}% 90
+\BOOKMARK [2][-]{subsection.3.5.3}{3.5.3 Lexical Analyzer}{section.3.5}% 91
+\BOOKMARK [3][-]{subsubsection.3.5.3.1}{3.5.3.1 Tokens}{subsection.3.5.3}% 92
+\BOOKMARK [2][-]{subsection.3.5.4}{3.5.4 Parser}{section.3.5}% 93
+\BOOKMARK [3][-]{subsubsection.3.5.4.1}{3.5.4.1 Top-down Parsers}{subsection.3.5.4}% 94
+\BOOKMARK [3][-]{subsubsection.3.5.4.2}{3.5.4.2 Bottom-Up Parsers}{subsection.3.5.4}% 95
+\BOOKMARK [1][-]{section.3.6}{3.6 Contextual Analysis}{chapter.3}% 96
+\BOOKMARK [2][-]{subsection.3.6.1}{3.6.1 Scope Checking}{section.3.6}% 97
+\BOOKMARK [2][-]{subsection.3.6.2}{3.6.2 Type Checking}{section.3.6}% 98
+\BOOKMARK [3][-]{subsubsection.3.6.2.1}{3.6.2.1 Tree traversal}{subsection.3.6.2}% 99
+\BOOKMARK [3][-]{subsubsection.3.6.2.2}{3.6.2.2 Value}{subsection.3.6.2}% 100
+\BOOKMARK [3][-]{subsubsection.3.6.2.3}{3.6.2.3 Function}{subsection.3.6.2}% 101
+\BOOKMARK [3][-]{subsubsection.3.6.2.4}{3.6.2.4 Variable}{subsection.3.6.2}% 102
+\BOOKMARK [3][-]{subsubsection.3.6.2.5}{3.6.2.5 Drink}{subsection.3.6.2}% 103
+\BOOKMARK [3][-]{subsubsection.3.6.2.6}{3.6.2.6 Error Handling}{subsection.3.6.2}% 104
+\BOOKMARK [1][-]{section.3.7}{3.7 Code Generation}{chapter.3}% 105
+\BOOKMARK [2][-]{subsection.3.7.1}{3.7.1 Unit Testing}{section.3.7}% 106
+\BOOKMARK [3][-]{subsubsection.3.7.1.1}{3.7.1.1 Unit Testing in General}{subsection.3.7.1}% 107
+\BOOKMARK [3][-]{subsubsection.3.7.1.2}{3.7.1.2 Unit Testing in This Project}{subsection.3.7.1}% 108
+\BOOKMARK [1][-]{section.3.8}{3.8 Component Setup}{chapter.3}% 109
+\BOOKMARK [0][-]{chapter.4}{4 Conclusion}{}% 110
+\BOOKMARK [0][-]{section*.37}{Bibliography}{}% 111
+\BOOKMARK [0][-]{appendix.A}{A Semantics}{}% 112
+\BOOKMARK [1][-]{section.A.1}{A.1 Transition Rules}{appendix.A}% 113
+\BOOKMARK [0][-]{appendix.B}{B Program written in SPLAD}{}% 114

@@ -1,6 +1,6 @@
 \section{SPLAD Code Examples}
 This section will contain small code examples written in the SPLAD language. Each example will be described line by line, and in the end put together to a working SPLAD program.
-When writing a SPLAD program, it is important to keep in mind the functions which must be implemented. These functions are "pour" and "RFIDFound". Lets se how an implementation of the "pour" function could look like. This can be seen on listing \ref{lst:expour}. On line 1 of the pour example, the function is declared. The function takes to parameters as input, a container and an amount. here the amount is actually implemented as time. So if pour is called with container x and amount 100. It would in principle open the valve on container x for 100 seconds. Its line 3 on listing \ref{lst:expour} which opens the valve. Then on line 4, the Arduino is told to wait for a given number of milliseconds times 1000, which if amount was 100, corresponds to the Arduino waiting for 100 seconds. On line 5, the container valve is closed again, and on line 6 the function returns nothing. The example is very close to the implementation used in the test program which can be seen in appendix \ref{??} \fxfatal{indsæt korrekt ref}.
+When writing a SPLAD program, it is important to keep in mind the functions that must be implemented. These functions are "pour" and "RFIDFound". First we will see how an implementation of the "pour" function could look like. This can be seen on listing \ref{lst:expour}. On line 1 of the "pour" example, the function is declared. The function takes two parameters as input, a container and an amount. Amount is actually implemented as time because it represents how long a nozzle will have to be open for a given amount to be poured. So if "pour" is called with container x and amount 100 it would in principle open the valve on container x for 100 seconds. It is the function on line 3 on listing \ref{lst:expour} that opens the valve. Then on line 4, the Arduino is told to wait for a given number of milliseconds times 1000, which if "amount" was 100, corresponds to the Arduino waiting for 100 seconds. On line 5, the container valve is closed again, and on line 6 the function returns "nothing". The example is very close to the implementation used in the test program which can be seen in appendix \ref{chap:testprocapp}.
 
 \begin{code}{expour}{Implementation of the pour function}
 \begin{lstlisting}
@@ -33,7 +33,7 @@ end
 \end{lstlisting}
 \end{code}
 
-Now we have the required functions, but the two drinks in the above example has not been declared. The drink declarations can be seen on \ref{lst:exdrinkdec}. On line 1, the declaration the drink TomCollins begins, next, from line 3 to line 6 the various ingredients are added. The same principles are valid for the declaration of the TequilaSunrise. It is clear that the declaration of a drink is very much like a recipe for a drink. 
+Now we have the required functions, but the two drinks in the above example has not been declared. The drink declarations can be seen on listing \ref{lst:exdrinkdec}. On line 1, the declaration the drink TomCollins begins, next, from line 3 to line 6 the various ingredients are added. The same principles are valid for the declaration of the TequilaSunrise. It is clear that the declaration of a drink is very much like a recipe for a drink. 
 
 \begin{code}{exdrinkdec}{Declaring the drinks}
 \begin{lstlisting}
@@ -54,7 +54,7 @@ end
 \end{lstlisting}
 \end{code}
 
-Lastly we need to declare the containers for the drinks. This is even simpler than declaring the drinks. The declaration of the ingredients can be seen on listing \ref{lst:exindec}. It is pretty straightforward to declare the various drinks. The only requirement is that the containers are assigned to a pin on the Arduino board. These pins range from A0-A5 and 1-13 on an Arduino Uno.
+Lastly we need to declare the containers for the drinks. This is even simpler than declaring the drinks. The declaration of the ingredients can be seen on listing \ref{lst:exindec}. It is pretty straightforward to declare the various drinks. The only requirement is that the containers are assigned to a pin on the Arduino board. These pins range from A0-A5 and 1-13 on an Arduino Uno platform.
 
 \begin{code}{exindec}{Declaring the containers}
 \begin{lstlisting}

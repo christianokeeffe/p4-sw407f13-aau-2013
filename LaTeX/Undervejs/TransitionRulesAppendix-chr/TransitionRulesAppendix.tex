@@ -107,7 +107,7 @@ D_A::= \; & \text{array} \; r[a_1]; \; D_A \; | \; \varepsilon \\
 [BLOCK] & $\dfrac{\langle Q, env_P, env_V, sto \rangle \rightarrow_{Q} (env_V', env_P', sto'') \rangle \rightarrow sto'}{env_V, env_P \vdash \langle \text{begin} \; Q \; \text{end}, sto \rangle \rightarrow sto' }$ \\
 \caption{Statements}
 \end{longtable}
-\fxfatal{OPDATER BLOCK}
+\fxfatal{OPDATER BLOCK og skriv om Q}
 \begin{landscape}
 \begin{longtable}{l l}
 \longtablesetting{2}
@@ -278,11 +278,11 @@ D_A::= \; & \text{array} \; r[a_1]; \; D_A \; | \; \varepsilon \\
 ~ & Transitioner på formen: $\langle D_A, env_V, sto \rangle \rightarrow_{DA} (env_V', sto')$ \\
 ~ & ~ \\
 
-[ARRAY-DEC] & $\dfrac{\langle D_A, env_V[r \mapsto l, \text{next} \mapsto l + v + 1],  sto[l \mapsto v] \rangle \rightarrow_{DA} (env_V', sto')}{\langle r[a_1], D_A, env_V, sto \rangle \rightarrow_{DA} (env_V', sto')}$ \\
+[ARRAY-DEC] & $\dfrac{\langle D_A, env_V[r \mapsto l, \text{next} \mapsto l + v + 1],  sto[l \mapsto v] \rangle \rightarrow_{DA} (env_V', sto')}{\langle \text{array} \; r[a_1], D_A, env_V, sto \rangle \rightarrow_{DA} (env_V', sto')}$ \\
 ~ & ~ \\
 ~ & \indent\indent where $env_V, sto \vdash a_1 \rightarrow_a v$ \\
 ~ & \indent\indent and $l = env_V \text{next}$ \\
-~ & \indent\indent and $l > 0$ \\
+~ & \indent\indent and $v > 0$ \\
 ~ & ~ \\
 
 [EMPTY-ARRAY] & $\langle \varepsilon, env_V, sto \rangle \rightarrow_{DA} (env_V, sto)$ \\

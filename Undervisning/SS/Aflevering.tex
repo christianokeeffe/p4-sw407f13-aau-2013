@@ -1,0 +1,65 @@
+\chapter{Arrays}
+We assume that the set of locations to be the natural numbers, i.e. $\textbf{Loc} = \mathbb{N}$, and we can then find the location $k$ positions from the location $l$ as the location $l + k$
+
+\section{Abstract syntax}
+\begin{align*}
+S::= & \dots \; | \; x[a]:= a \; | \; \text{begin} \; D_V \; D_A \; D_P \; S \; \text{end} \\
+a::= & \dots \; | x[a] \\
+D_A::= & \text{array} \; x \; \text{of} \;  [1..n]; \; D_A \; | \; \varepsilon \\
+\end{align*}
+
+\section{Statements}
+The transition system for the statements are as follows: $(\Gamma_{\mathbf{Stm}}, \rightarrow, \Tau_{\mathbf{Stm}})$, where the configurations are: $\Gamma_{\mathbf{Stm}} = \textbf{Stm} \times \textbf{Sto} \cup \textbf{Sto}$ and the end configurations are: $\Tau_{\mathbf{Stm}} = \textbf{Sto}$.
+The transition rules are on the form: $env_V, env_P \vdash \langle S, sto \rangle \rightarrow sto'$
+
+\begin{table}[H]
+\begin{tabular}{l l}
+[ARR-ASS] & $env_V, env_P \vdash \langle x[a_1]:= a_2, sto \rangle \rightarrow sto[l_2 \mapsto v_2]$ \\
+~ & ~ \\
+~ & \indent\indent where $env_V, sto \vdash a_1 \rightarrow_a v_1$ \\
+~ & \indent\indent and $env_V, sto \vdash a_2 \rightarrow_a v_2$ \\
+~ & \indent\indent and $env_V \; r = l_1$ \\
+~ & \indent\indent and $l_2 = l_1 + v_1$ \\
+~ & \indent\indent and $v_3 = sto \; l_1$ \\
+~ & \indent\indent and $1 \leq v_1 \leq v_3$ \\
+\end{tabular}
+\end{table}
+
+
+\begin{table}[H]
+\begin{tabular}{l}
+[BLOCK] & $\dfrac{\begin{vmatrix} \langle D_V, env_V, sto \rangle \rightarrow_{DV} (env_V', sto'') \\ \langle D_A, env_V', sto'' \rangle \rightarrow_{DA} (env_V'', sto^{3}) \\ env_V'' \vdash \langle D_P, env_P \rangle \rightarrow_{DP} env_P' \\ env_V'', env_P' \vdash \langle S, sto^{3} \rangle \rightarrow sto' \end{vmatrix}}{env_v, env_P \vdash \langle \text{begin} \; D_V \; D_A \; D_P \; S \; \text{end}, sto \rangle \rightarrow sto'}$
+\end{tabular}
+\end{table}
+
+\section{Arithmetic Expressions}
+The transition system for the arithmetic expressions are as follows: $(\Gamma_{\mathbf{Aexp}}, \rightarrow_a, \Tau_{\mathbf{Aexp}})$, where the configurations are: $\Gamma_{\mathbf{Aexp}} = \textbf{Aexp} \cup \mathbb{Z}$ and the end configurations are: $\Tau_{\mathbf{Aexp}} = \mathbb{Z}$. 
+The transition rules are on the form: $env_V, sto \vdash a \rightarrow_a v$.
+
+\begin{table}[H]
+\begin{tabular}{l l}
+[ARR] & $env_V, sto \vdash x[a_1] \rightarrow_a a_2$ \\
+~ & ~ \\
+where} \; $env_V, sto \vdash a_1 \rightarrow_a v_1$ \\
+and} \; $env_V, sto \vdash a_2 \rightarrow_a v_2$ \\
+and} $env_V \; x = l$ \\
+and} $sto \; l = v_3$ \\
+and} $0 < v_1 \leq v_3$ \\
+and} $sto(l + v_1) = v_2$ \\
+\end{tabular}
+\end{table}
+
+\section{Array Declaration}
+The transition system for the array declaration are as follows: $ $, where the configurations are: $ $ and the end configurations are: $ $. 
+The transition rules are on the form: $\langle D_A, env_V, sto \rangle \rightarrow_{DA} (env_V', sto')$.
+
+\begin{table}[H]
+\begin{tabular}{l}
+$\dfrac{D_A, env_V[x \mapsto l, \; \text{next} \mapsto l + v + 1], sto[l \mapsto v] \rangle \rightarrow_{DA} (env_V', sto')}{\langle \text{array} \; x \; \text{of} \; [1..n], D_A, env_V, sto \rangle \rightarrow_{DA} (env_V', sto'}$ \\
+where $env_V, sto \vdash n \rightarrow_a v$ \\
+and $l = env_V \; \text{next}$ \\
+and $n > 0$ \\
+\\
+$\langle \varepsilon, env_V, sto \rangle \rightarrow_{DA} (env_V, sto)$
+\end{tabular}
+\end{table}

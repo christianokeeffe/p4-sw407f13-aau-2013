@@ -33,26 +33,7 @@ This section contains the grammar related to types. This can be seen on \ref{gra
 \end{grammatik}
 
 \subsubsection{Grammar - Drinks}
-This section contains the grammar related to drinks This can be seen on \ref{gra:drinks}
-\begin{grammatik}{drinks}{Grammar related to drinks}
-<drinkdcl> $\ra$ drink <id> is begin <drinkstmts> end
-\alt drink <id> as <id> but begin <changedrinkstmts> end
-
-<drinkstmts> $\ra$ <drinkstmt> <drinkstmtsend>
-
-<drinkstmt> $\ra$ add <numeric> of <id>
-
-<drinkstmtsend> $\ra$ ; <drinkstmts>
-\alt ;
-
-<changedrinkstmts> $\ra$ <changedrinkstmt> <changedrinkstmtsend>
-
-<changedrinkstmt> $\ra$ <drinkstmt>
-\alt remove <id>
-
-<changedrinkstmtsend> $\ra$ ; <changedrinkstmts>
-\alt ;
-\end{grammatik}
+The grammar for the drinks is described in section \ref{gra:drinkgram}.
 
 \subsubsection{Grammar - Assign}
 This section contains the grammar related to assignments. This can be seen on \ref{gra:assign}

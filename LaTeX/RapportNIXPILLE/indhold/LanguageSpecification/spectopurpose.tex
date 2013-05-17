@@ -2,11 +2,11 @@
 To specify the language, so it will make the program as suitable as possible for writing code to be used in a drink machine, we looked at what the central aspects of a drink machine are:
 \begin{inddes}
 \item[A drink:] A drink is central to this machine. A drink should be the product made by the machine, defined by a number of ingredients. A drink should be like a recipe.
-\item[An ingredient:] An ingredient is an element of a drink. They will be stored in a container with the machine. 
-\item[A RFID-tag:] An RFID-tag will contain a drink ID and an amount of how many drinks there are left.
-\item[A RFID-RW:] An RFID-reader and writer for Arduino, to write and read the content of an RFID-tag.
+\item[An ingredient:] An ingredient is an element of a drink. They will be stored in a container within the machine. 
+\item[A RFID-tag:] An RFID-tag will contain a drink ID and an amount of how many drinks there are left for the holder of the tag.
+\item[A RFID-RW:] An RFID-reader and writer for Arduino, to write and read the content of an RFID-tag. See section \ref{SolutionInBars} for details on how an RFID works.
 \item[A LCD:] For communicating with the user, an LCD is in most situations preferable.
-\item[Buttons:] For getting input from users, buttons are a possibility. 
+\item[Buttons:] For getting input from users, buttons are a possibility like a button to allow the user to confirm the making of a drink. 
 \item[Mechanism for pouring ingredients:] A mechanism for pouring the right amount of ingredients into the drink.
 \end{inddes}
 These are by our assessment the most central aspects of the drink machine system. We will now make a judgment of each of the listed aspects, and see if it is possible to make a structure in the language which will support the programmer or in any other way make it easier to implement this aspect in the system.
@@ -95,7 +95,7 @@ call RFIDWrite([drinkID], [Amount]);
 \end{lstlisting}
 \end{code}
 
-\subsubsection{A LCD}
+\subsubsection{An LCD}
 For communicating with the user of the drink machine, an LCD would be preferable like the one seen in figure \ref{fig:lcd}.
 
 \figur{0.5}{lcd.jpg}{An example of a LCD to use in a drink machine. \citep{letlcd}}{fig:lcd}

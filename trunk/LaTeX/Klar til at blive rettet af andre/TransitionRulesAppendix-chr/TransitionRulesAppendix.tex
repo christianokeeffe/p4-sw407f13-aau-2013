@@ -10,7 +10,7 @@ S::= \; & x := a \; | \; r[a_1] := a_2 \; | \; S_1; \; S_2 \; | \; \text{if} \; 
 ~ & | \; \text{from} \; x := a_1 \; \text{to} \; a_2 \; \text{step} \; a_3 \; \text{do} \; S \\
 ~ & | \; \text{call} \; p(\vec{x}) \; | \; \text{begin} \; Q \; \text{end} \;\\
 ~ & | \; \text{switch}(a) \; \text{case } a_1: \; S_1 \; \text{break}; \; \dots \; \text{case} a_k: \; S_k \; \text{break}; \; \text{default}: \; S \; \text{break} \\
-Q::= \; & D_p \; Q | D_v \; Q | S \; Q | $\eps$ \\
+Q::= \; & D_p \; Q | D_v \; Q | S \; Q | \varepsilon \\
 a::= \; & n \; | \; x \; | \; a_1 + a_2 \; | \; a_1 - a_2 \; | \; a_1 * a_2 \; | \; a_1 / a_2 \; | \; (a) \; | \; r[a_i]\\
 b::= \; &a_1 = a_2 \; | \; a_1 > a_2 \; | \; a_1 < a_2 \; | \; \neg b \; | \; b_1 \; \wedge \; b_2 \; | \; b_1 \; \vee \; b_2 \; | \; (b)\\
 D_V::= \; & \text{var} \; x := a; \; D_V \; | \; \varepsilon \\

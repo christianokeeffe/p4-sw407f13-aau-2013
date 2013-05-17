@@ -26,16 +26,18 @@ We will not implement all Arduino functions because it would take too much time 
 
 \subsubsection{Variable}
 \label{sec:Variable}
-In our language "INPUT" and "OUTPUT" would be seen as variables and by default be undefined so we predefined them like seen on listing \ref{lst:OUTPUT}. This is also done for "A0" to "A5" since these are used when determining input and output for the Arduino board. We have defined them with the type "container", because a container can have one of these values as its output.
-\kode{Predefining OUTPUT}{OUTPUT}{OUTPUT.txt}
 We have made a "variable" class to be make it easier to store and retrieve the necessary data as it is put into our "variablememory". This class can be seen on listing \ref{lst:Variable}. In this class we have added two boolean expressions to make it easier to handle constants and arrays, so if we meet a constant or an array we set the appropriate expression to true. This will allows us to make a simple check to see if it is allowed to assign a new value to the variable.
 \kode{Variable class}{Variable}{Variable.txt}
+
+In our language "INPUT" and "OUTPUT" would be seen as variables and by default be undefined so we predefined them like seen on listing \ref{lst:OUTPUT}. This is also done for "A0" to "A5" since these are used when determining input and output for the Arduino board. We have defined them with the type "container", because a container can have one of these values as its output.
+\kode{Predefining OUTPUT}{OUTPUT}{OUTPUT.txt}
+
 When we make a declaration we first find the ID and then the type of the ID, then we visit the node "assign" that traverses the tree all the way down to the factor node and returns the value.
 
 \subsubsection{Drink}
 Our special type "drink" has its own separate declaration method, the initial part can be seen on listing \ref{lst:DrinkDcl}. First we check if it is a new drink will or will not inherit from another drink. This is done be looking at how many IDs are present, if there are two then it means that will inherit from an existing drink. If there is only one ID then that means a new drink will not inherit from another drink.
 \kode{Drink declaration}{DrinkDcl}{DrinkDcl.txt}
-Whether or not its inherits from an existing drink, the type checker needs to check if the expressions used in the body are valid containers. If any of the expressions are invalid then an error for the given drink will be added to the list.
+Whether or not it inherits from an existing drink, the type checker needs to check if the expressions used in the body are valid containers. If any of the expressions are invalid then an error for the given drink will be added to the list.
 
 \subsubsection{Error Handling}
 We have made an "error" class to notify the programmer of the mistakes the type checker have found while checking the program. When an error is encountered we send a number and an id to our "error" class as seen on listing \ref{lst:IntError}.

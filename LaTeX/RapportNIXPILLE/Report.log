@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.10.22)  17 MAY 2013 13:16
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.10.22)  17 MAY 2013 14:12
 entering extended mode
 **C:/Users/Christian/Documents/Arbejde/UNI/P4/svn/LaTeX/RapportNIXPILLE/Report.
 tex
@@ -2162,9 +2162,9 @@ Package: nth 2002/02/27
 Package: newfloat 2011/11/16 v1.0a Defining new floating environments (AR)
 )
 Package newfloat Info: New float `Grammar' with options ` fileext = logr,listna
-me = {List of Grammars}, name = Grammar, placement = H ' on input line 267.
+me = {List of Grammars}, name = Grammar, placement = H ' on input line 274.
 \c@Grammar=\count355
-Package newfloat Info: float type `Grammar'=4 on input line 267.
+Package newfloat Info: float type `Grammar'=4 on input line 274.
 \c@logrdepth=\count356
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
@@ -2314,14 +2314,14 @@ LaTeX Font Info:    Try loading font information for U+stmry on input line 3.
 
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\formalia
 /FormaliaForside.tex
-<billeder/HardwareSetup.png, id=482, 602.25pt x 451.6875pt>
+<billeder/HardwareSetup.png, id=490, 602.25pt x 451.6875pt>
 File: billeder/HardwareSetup.png Graphic file (type png)
 
 <use billeder/HardwareSetup.png>
 Package pdftex.def Info: billeder/HardwareSetup.png used on input line 16.
 (pdftex.def)             Requested size: 340.8013pt x 255.61055pt.
 
-<billeder/AAUUKSTUDENTREPORTbluergb.png, id=483, 434.46315pt x 284.5029pt>
+<billeder/AAUUKSTUDENTREPORTbluergb.png, id=491, 434.46315pt x 284.5029pt>
 File: billeder/AAUUKSTUDENTREPORTbluergb.png Graphic file (type png)
 
 <use billeder/AAUUKSTUDENTREPORTbluergb.png>
@@ -2748,7 +2748,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 96.
 See the caption package documentation for explanation.
 
-<billeder/lcd.jpg, id=839, 401.5pt x 268.00125pt>
+<billeder/lcd.jpg, id=847, 401.5pt x 268.00125pt>
 File: billeder/lcd.jpg Graphic file (type jpg)
  <use billeder/lcd.jpg>
 Package pdftex.def Info: billeder/lcd.jpg used on input line 101.
@@ -2815,7 +2815,7 @@ LanguageSpecification/Semantics.tex [25])
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
 LanguageSpecification/TheoryTransitionRules.tex [26]
 Overfull \hbox (55.16943pt too wide) in paragraph at lines 35--41
-[][] 
+ [][] 
  []
 
 
@@ -2857,10 +2857,6 @@ Overfull \hbox (77.36812pt too wide) in alignment at lines 66--66
 Overfull \hbox (77.36812pt too wide) in alignment at lines 66--74
  [] [] 
  []
-
-
-Overfull \vbox (72.17024pt too high) has occurred while \output is active []
-
 
 [27]
 Overfull \hbox (94.54933pt too wide) in alignment at lines 79--80
@@ -2927,7 +2923,7 @@ e 1.
 Implementation/Hardware.tex [33] [34])
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
 Implementation/OverviewCompiler.tex
-<billeder/OverviewCompiler.PNG, id=1064, 420.3705pt x 295.1025pt>
+<billeder/OverviewCompiler.PNG, id=1070, 420.3705pt x 295.1025pt>
 File: billeder/OverviewCompiler.PNG Graphic file (type png)
 
 <use billeder/OverviewCompiler.PNG>
@@ -2935,7 +2931,7 @@ Package pdftex.def Info: billeder/OverviewCompiler.PNG used on input line 4.
 (pdftex.def)             Requested size: 255.6026pt x 179.43588pt.
  [35 <C:/Users/Christian/Documents/Arbejde/UNI/P4/svn/LaTeX/RapportNIXPILLE/bil
 leder/OverviewCompiler.PNG>]
-<billeder/OverviewCompiler2.PNG, id=1087, 477.58424pt x 255.354pt>
+<billeder/OverviewCompiler2.PNG, id=1093, 477.58424pt x 255.354pt>
 File: billeder/OverviewCompiler2.PNG Graphic file (type png)
 
 <use billeder/OverviewCompiler2.PNG>
@@ -2949,14 +2945,14 @@ Implementation/EvaluationCriteria.tex [36 <C:/Users/Christian/Documents/Arbejde
 Implementation/compilerchoice.tex [37])
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
 Implementation/languageprocessing.tex [38]
-<billeder/javacompiler.png, id=1120, 359.84438pt x 166.37157pt>
+<billeder/javacompiler.png, id=1126, 359.84438pt x 166.37157pt>
 File: billeder/javacompiler.png Graphic file (type png)
 
 <use billeder/javacompiler.png>
 Package pdftex.def Info: billeder/javacompiler.png used on input line 5.
 (pdftex.def)             Requested size: 213.0pt x 98.48076pt.
 
-<billeder/spladcompilercompilationprocess.png, id=1124, 360.59718pt x 310.15875
+<billeder/spladcompilercompilationprocess.png, id=1130, 360.59718pt x 310.15875
 pt>
 File: billeder/spladcompilercompilationprocess.png Graphic file (type png)
  <use billeder/spladcompilercompilationprocess.png>
@@ -2965,7 +2961,7 @@ nput line 10.
 (pdftex.def)             Requested size: 213.0pt x 183.20503pt.
  [39 <C:/Users/Christian/Documents/Arbejde/UNI/P4/svn/LaTeX/RapportNIXPILLE/bil
 leder/javacompiler.png>]
-<billeder/spladcompiler.png, id=1134, 295.1025pt x 348.55219pt>
+<billeder/spladcompiler.png, id=1140, 295.1025pt x 348.55219pt>
 File: billeder/spladcompiler.png Graphic file (type png)
 
 <use billeder/spladcompiler.png>
@@ -2996,7 +2992,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 11.
 See the caption package documentation for explanation.
 
-<billeder/parsetree.png, id=1153, 307.90031pt x 473.51906pt>
+<billeder/parsetree.png, id=1159, 307.90031pt x 473.51906pt>
 File: billeder/parsetree.png Graphic file (type png)
 
 <use billeder/parsetree.png>
@@ -3030,7 +3026,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 28.
 See the caption package documentation for explanation.
 
-<billeder/ParsedCode.png, id=1216, 1009.52156pt x 428.35031pt>
+<billeder/ParsedCode.png, id=1222, 1009.52156pt x 428.35031pt>
 File: billeder/ParsedCode.png Graphic file (type png)
 
 <use billeder/ParsedCode.png>
@@ -3581,7 +3577,7 @@ Overfull \hbox (93.02887pt too wide) in alignment at lines 137--143
 
 
 Overfull \hbox (56.53784pt too wide) in paragraph at lines 148--192
-[][] 
+ [][] 
  []
 
 )
@@ -3602,15 +3598,15 @@ Package mdframed Info: You first box width is to small
 AED: lastpage setting LastPage
 \tf@toc=\write7
 \tf@lox=\write8
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 131.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 131.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 133.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 133.
 
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\Report.a
 ux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 131.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 131.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 133.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 133.
 Package rerunfilecheck Info: File `Report.out' has not changed.
-(rerunfilecheck)             Checksum: 0EF396F5FB4ACF8CFD4E7A7BF4370E1C;9178.
+(rerunfilecheck)             Checksum: 07FAF56C60F459A981B8AB03D6012442;9361.
 
 
 LaTeX Warning: There were undefined references.
@@ -3620,10 +3616,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 38304 strings out of 493921
- 709497 string characters out of 3147269
- 2542340 words of memory out of 3000000
- 39534 multiletter control sequences out of 15000+200000
+ 38309 strings out of 493921
+ 709603 string characters out of 3147269
+ 2542473 words of memory out of 3000000
+ 39539 multiletter control sequences out of 15000+200000
  34854 words of font info for 90 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
  77i,20n,84p,1619b,1732s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -3652,9 +3648,9 @@ m-super/sftt0900.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/s
 ftt1000.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfxc1000.p
 fb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/bookman/ubkd8a.pfb><C:/Program 
 Files/MiKTeX 2.9/fonts/type1/urw/bookman/ubkl8a.pfb>
-Output written on Report.pdf (92 pages, 1929359 bytes).
+Output written on Report.pdf (92 pages, 1930060 bytes).
 PDF statistics:
- 2532 PDF objects out of 2984 (max. 8388607)
+ 2538 PDF objects out of 2984 (max. 8388607)
  1063 named destinations out of 1200 (max. 500000)
- 1085 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1101 words of extra memory for PDF output out of 10000 (max. 10000000)
 

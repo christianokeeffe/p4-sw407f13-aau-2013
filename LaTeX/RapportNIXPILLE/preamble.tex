@@ -232,6 +232,13 @@ morekeywords={int, container, string, bool, double, HIGH, LOW, true, false, noth
 
 %%%% CUSTOM COMMANDS %%%%
 
+\let\originaltable\table
+\let\endoriginaltable\endtable
+\renewenvironment{table}[1][H]{%
+  \originaltable[#1]
+  \centering}%
+  {\endoriginaltable}
+
 % Billede hack %
 \newcommand{\figur}[4]{
 		\begin{figure}[H] \centering

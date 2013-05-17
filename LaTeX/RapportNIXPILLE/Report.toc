@@ -8,7 +8,7 @@
 \contentsline {subsection}{\numberline {1.2.1}Sub Statements}{2}{subsection.1.2.1}
 \contentsline {section}{\numberline {1.3}Report Structure}{3}{section.1.3}
 \contentsline {chapter}{\chapternumberline {2}Language Specification}{5}{chapter.2}
-\contentsline {section}{\numberline {2.1}Paradigms of Programming Language}{5}{section.2.1}
+\contentsline {section}{\numberline {2.1}Programming Language Paradigms}{5}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Imperative Programming}{5}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}Functional Programming}{5}{subsection.2.1.2}
 \contentsline {subsection}{\numberline {2.1.3}Object-Oriented Programming}{6}{subsection.2.1.3}
@@ -50,6 +50,8 @@
 \contentsline {subsubsection}{\numberline {2.4.1.5}The difference between dynamic and static scope}{25}{subsubsection.2.4.1.5}
 \contentsline {subsection}{\numberline {2.4.2}Scoping In This Project}{25}{subsection.2.4.2}
 \contentsline {subsection}{\numberline {2.4.3}Symbol Tables}{25}{subsection.2.4.3}
+\contentsline {subsubsection}{\numberline {2.4.3.1}Multiple Symbol Tables}{25}{subsubsection.2.4.3.1}
+\contentsline {subsubsection}{\numberline {2.4.3.2}One Symbol Table}{26}{subsubsection.2.4.3.2}
 \contentsline {subsection}{\numberline {2.4.4}Transition Rules}{26}{subsection.2.4.4}
 \contentsline {subsection}{\numberline {2.4.5}Environment-Store Model}{26}{subsection.2.4.5}
 \contentsline {subsection}{\numberline {2.4.6}Arithmetic Expressions}{27}{subsection.2.4.6}
@@ -59,7 +61,7 @@
 \contentsline {subsection}{\numberline {2.4.10}Commands}{28}{subsection.2.4.10}
 \contentsline {subsection}{\numberline {2.4.11}Informal Type Rules}{28}{subsection.2.4.11}
 \contentsline {subsection}{\numberline {2.4.12}Formal Type Rules}{29}{subsection.2.4.12}
-\contentsline {section}{\numberline {2.5}Requirements to the Programmer}{30}{section.2.5}
+\contentsline {section}{\numberline {2.5}Requirements to the Programmer}{31}{section.2.5}
 \contentsline {section}{\numberline {2.6}Functions provided by SPLAD}{31}{section.2.6}
 \contentsline {section}{\numberline {2.7}Code Examples}{31}{section.2.7}
 \contentsline {chapter}{\chapternumberline {3}Implementation}{33}{chapter.3}
@@ -111,7 +113,7 @@
 \contentsline {subsubsection}{\numberline {3.8.1.2}Unit Testing in This Project}{64}{subsubsection.3.8.1.2}
 \contentsline {section}{\numberline {3.9}Component Setup}{66}{section.3.9}
 \contentsline {chapter}{\chapternumberline {4}Conclusion}{69}{chapter.4}
-\contentsline {chapter}{Bibliography}{71}{section*.37}
+\contentsline {chapter}{Bibliography}{71}{section*.35}
 \cftpagenumbersoff {chapter}
 \changetocdepth {0}
 \contentsline {appendix}{\chapternumberline {A}Semantics}{75}{appendix.A}

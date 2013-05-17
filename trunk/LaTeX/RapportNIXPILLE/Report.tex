@@ -45,19 +45,20 @@
 \renewcommand{\ind}[1]{\input{indhold/LanguageSpecification/#1}}
 \chapter{Language Specification}
 \label{chap:lanspec}
+\ind{LanguageSpecificationIntro}
 \ind{ParadigmsOfProgrammingLanguage}
 \section{Design Criteria}
+\ind{DesignCriteriaIntro}
 \ind{ProgrammingAnArduino-basedDrinks-machine}
 \ind{DesignCriteriaInThisProject}
 \section{Syntax}
+\ind{SyntaxIntro}
 \ind{GrammarTypes}
 \ind{Grammar}
 \ind{ChoiceOfGrammar}
 \ind{spectopurpose}
 \ind{bnfintro}
 \ind{BNF7}
-\subsection{EBNF?}
-\fxfatal{Skal det med?}
 \section{Semantics}
 \ind{SemanticsIntro}
 \ind{ScopeRules}
@@ -66,6 +67,7 @@
 \ind{TheoryTransitionRules}
 \ind{InformalTypeRules}
 \ind{FormalTypeRules}
+\ind{requiredfunctions}
 \section{Code Examples}
 
 \renewcommand{\ind}[1]{\input{indhold/Implementation/#1}}
@@ -76,10 +78,11 @@
 \ind{Architecture}	
 \ind{Hardware}
 \ind{OverviewCompiler}
+\ind{EvaluationCriteria}
+\ind{compilerchoice}
 \ind{languageprocessing}
 \subsection{Compilation Passes}
-\label{sec:CompilationPasses}
-\fxfatal{Skal det med? - JA!}
+\input{CompilationPasses}
 \ind{AbstractSyntaxTrees}
 \ind{ParseTree}
 \subsection{The Visitor Pattern}
@@ -91,7 +94,7 @@
 \ind{Tokens}
 \ind{Parser}
 \ind{ContextualAnalysis}
-\subsection{Scope Checking}
+\ind{Scoping}
 \ind{Typechecking}
 \ind{CodeGeneration}
 \ind{UnitTests}

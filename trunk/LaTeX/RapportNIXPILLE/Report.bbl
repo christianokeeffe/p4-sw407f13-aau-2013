@@ -1,4 +1,4 @@
-\begin{thebibliography}{37}
+\begin{thebibliography}{38}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -232,6 +232,14 @@
 \newblock Michael Sipser.
 \newblock \textit{Introduction to the Theory of Computation}.
 \newblock PWS Publishing, 3 udgave, 2013.
+
+\bibitem[Softwere(2013)]{ProgrammingCommunityIndex}
+\textbf{Softwere}, \textbf{April 2013}.
+\newblock TIOBE Softwere.
+\newblock \textit{Programming Community Index for April 2013}.
+\newblock
+  \url{http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html} [Last
+  seen: 2013/05/03], 2013.
 
 \bibitem[Specialisten()]{RFID}
 \textbf{\textbf{Specialisten}}.

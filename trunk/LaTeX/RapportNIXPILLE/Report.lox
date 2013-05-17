@@ -1,12 +1,9 @@
 \contentsline {fixme}{Fatal: synopsis mangler}{iii}{Doc-Start}
 \contentsline {fixme}{Fatal: Mangler konklusion og appendix, men det venter vi med til vi er n\IeC {\r a}et l\IeC {\ae }ngere}{3}{section.1.3}
-\contentsline {fixme}{Fatal: Skal det med?}{23}{subsection.2.3.7}
 \contentsline {fixme}{Fatal: Kan ikke laves siden at transition rules til dette punkt ikke er lavet endnu}{27}{subsection.2.4.8}
 \contentsline {fixme}{Fatal: Husk at tjekke op p\IeC {\r a} function declarations parametere, der skal vist v\IeC {\ae }re flere}{30}{table.2.9}
-\contentsline {fixme}{Fatal: Skal det med? - JA!}{36}{subsection.3.2.4}
-\contentsline {fixme}{Fatal: Eksempler p\IeC {\r a} hvordan parsing virker, og hvordan tr\IeC {\ae }et bliver bygget}{37}{subsection.3.2.5}
-\contentsline {fixme}{Fatal: Den passer overhovedet ikke, og er det ikke m\IeC {\ae }rkeligt det kommer to gange?}{44}{table.caption.32}
-\contentsline {fixme}{Fatal: Den laver vel b\IeC {\r a}de parsetr\IeC {\ae } og AST? Der mangler at blive beskrevet forskellen p\IeC {\r a} parsetr\IeC {\ae } og AST}{44}{subsection.3.3.4}
-\contentsline {fixme}{Fatal: Memmory samt hvordan den bruges i visitorpattern. Hvor bliver den brugt? hvordan bruges det? er lidt mere en beskrivelse af valueklassen, og ikke selve typetjekket... alts\IeC {\r a} mangler der lidt at der tjekkes for retur af functionerne samt mere.}{50}{lstlisting.3.13}
-\contentsline {fixme}{Fatal: konklusion mangler}{61}{chapter.4}
-\contentsline {fixme}{Fatal: Mangler: for loop, call function, declerations m\IeC {\r a}ske mere}{67}{section.A.1}
+\contentsline {fixme}{Fatal: Eksempler p\IeC {\r a} hvordan parsing virker, og hvordan tr\IeC {\ae }et bliver bygget}{41}{subsection.3.4.6}
+\contentsline {fixme}{Fatal: Den passer overhovedet ikke, og er det ikke m\IeC {\ae }rkeligt det kommer to gange?}{48}{table.caption.33}
+\contentsline {fixme}{Fatal: Den laver vel b\IeC {\r a}de parsetr\IeC {\ae } og AST? Der mangler at blive beskrevet forskellen p\IeC {\r a} parsetr\IeC {\ae } og AST}{48}{subsection.3.5.4}
+\contentsline {fixme}{Fatal: konklusion mangler}{67}{chapter.4}
+\contentsline {fixme}{Fatal: Mangler: for loop, call function, declerations m\IeC {\r a}ske mere}{73}{section.A.1}

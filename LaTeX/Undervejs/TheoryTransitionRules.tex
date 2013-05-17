@@ -36,7 +36,7 @@ D_A::= \; & \text{array} \; r[a_1]; \; D_A \; | \; \varepsilon \\
 \fxfatal{Forklar hvad det er, og at vi bruger big-step.}
 
 \subsection{Environment-Store Model}
-In our project we use the \textit{environment-store model} to represent how a variable is bound to a storage cell (called a \textit{location}), in the computer, and that the value of the variable is the content of the bound location. All the possible locations are denoted by \textbf{Loc} and a single location as $l \in \textbf{Loc}$. We assume all locations are integer, and therefore $\textbf{Loc} = \mathbb{Z}$. Since all locations are integers we can define a function to find the next location: $\textbf{Loc} \rightarrow \textbf{Loc}$, where $l = l + 1$. 
+In our project we use the \textit{environment-store model} to represent how a variable is bound to a storage cell (called a \textit{location}), in the computer, and that the value of the variable is the content of the bound location. All the possible locations are denoted by \textbf{Loc} and a single location as $l \in \textbf{Loc}$. We assume all locations are integer, and therefore $\textbf{Loc} = \mathbb{N}$. Since all locations are integers we can define a function to find the next location: $\textbf{Loc} \rightarrow \textbf{Loc}$, where $l = l + 1$. 
 
 We define the set of stores to be the mappings from locations to values $\textbf{Sto } = \textbf{ Loc } \rightharpoonup \mathbb{Z}$, where $sto$ is an single element in $\textbf{Sto}$.
 

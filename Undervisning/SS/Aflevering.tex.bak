@@ -25,7 +25,6 @@ The transition rules are on the form: $env_V, env_P \vdash \langle S, sto \rangl
 ~ & \indent\indent and $l_2 = l_1 + v_1$ \\
 ~ & \indent\indent and $v_3 = sto \; l_1$ \\
 ~ & \indent\indent and $1 \leq v_1 \leq v_3$ \\
-~ & ~\\
 \end{tabular}
 \end{table}
 
@@ -50,7 +49,6 @@ The transition rules are on the form: $env_V, sto \vdash a \rightarrow_a v$.
 ~ & \indent\indent and $sto \; l = v_3$ \\
 ~ & \indent\indent and $0 < v_1 \leq v_3$ \\
 ~ & \indent\indent and $sto(l + v_1) = v_2$ \\
-~ & ~\\
 \end{tabular}
 \end{table}
 
@@ -60,14 +58,12 @@ The transition rules are on the form: $\langle D_A, env_V, sto \rangle \rightarr
 
 \begin{table}[H]
 \begin{tabular}{l l}
-[ARRAY-DEC] & $\dfrac{\langle D_A, env_V[x \mapsto l, \; \text{next} \mapsto l + v + 1], sto[l \mapsto v] \rangle \rightarrow_{DA} (env_V', sto')}{\langle \text{array} \; x \; \text{of} \; [1..n], D_A, env_V, sto \rangle \rightarrow_{DA} (env_V', sto'}$ \\
-~ & ~\\
+[ARRAY-DEC] & $\dfrac{D_A, env_V[x \mapsto l, \; \text{next} \mapsto l + v + 1], sto[l \mapsto v] \rangle \rightarrow_{DA} (env_V', sto')}{\langle \text{array} \; x \; \text{of} \; [1..n], D_A, env_V, sto \rangle \rightarrow_{DA} (env_V', sto'}$ \\
 ~ & \indent\indent where $env_V, sto \vdash n \rightarrow_a v$ \\
 ~ & \indent\indent and $l = env_V \; \text{next}$ \\
 ~ & \indent\indent and $n > 0$ \\
 ~ & ~\\
-~[EMPTY-ARRAY] & $\langle \varepsilon, env_V, sto \rangle \rightarrow_{DA} (env_V, sto)$ \\
-~ & ~\\
+[EMPTY-ARRAY] & $\langle \varepsilon, env_V, sto \rangle \rightarrow_{DA} (env_V, sto)$
 \end{tabular}
 \end{table}
 

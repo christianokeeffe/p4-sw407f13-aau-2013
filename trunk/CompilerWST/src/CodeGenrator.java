@@ -620,10 +620,9 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 		//Add the arrays containing the names and pins of the containers.
 		
 		//latex start container
-		if (ListOfContainers.size() != 0){
-			ContentBuffer.append("String ContainersnameSW407F13[" + ListOfContainers.size() + "];\n");
-			ContentBuffer.append("int ContainerspinSW407F13[" + ListOfContainers.size() + "];\n");
-		}
+		ContentBuffer.append("String ContainersnameSW407F13[" + ListOfContainers.size() + "];\n");
+		ContentBuffer.append("int ContainerspinSW407F13[" + ListOfContainers.size() + "];\n");
+		
 		
 		//Add content to the arrays in the setupfirstbuffer.
 		for (int i = 0; i < ListOfContainers.size(); i++){

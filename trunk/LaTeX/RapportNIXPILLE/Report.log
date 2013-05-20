@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.10.22)  17 MAY 2013 14:57
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.10.22)  20 MAY 2013 09:30
 entering extended mode
 **C:/Users/Christian/Documents/Arbejde/UNI/P4/svn/LaTeX/RapportNIXPILLE/Report.
 tex
@@ -2898,12 +2898,7 @@ Overfull \hbox (84.24123pt too wide) in alignment at lines 39--39
  []
 
 
-Overfull \hbox (84.24123pt too wide) in alignment at lines 39--62
- [] [] 
- []
-
-
-Overfull \hbox (84.24123pt too wide) in alignment at lines 62--69
+Overfull \hbox (84.24123pt too wide) in alignment at lines 39--63
  [] [] 
  []
 
@@ -3002,10 +2997,26 @@ Package pdftex.def Info: billeder/parsetree.png used on input line 23.
 (pdftex.def)             Requested size: 298.1987pt x 458.63374pt.
 ) [42]
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
-Implementation/SyntacticAnalysis.tex)
+Implementation/SyntacticAnalysis.tex [43 <C:/Users/Christian/Documents/Arbejde/
+UNI/P4/svn/LaTeX/RapportNIXPILLE/billeder/parsetree.png>]
+Package mdframed Info: mdframed works in twoside mode on input line 8.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+)
+Package mdframed Info: mdframed inside minipage 
+ mdframed uses option nobreak mdframed on input line 13.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 13.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 13.
+See the caption package documentation for explanation.
+
+)
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
-Implementation/KnownLexersAndParsers.tex [43 <C:/Users/Christian/Documents/Arbe
-jde/UNI/P4/svn/LaTeX/RapportNIXPILLE/billeder/parsetree.png>] [44]
+Implementation/KnownLexersAndParsers.tex [44]
 Overfull \hbox (9.4004pt too wide) in paragraph at lines 76--76
 \T1/cmr/m/n/10.95 JavaScript,Objective- 
  []
@@ -3028,15 +3039,16 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 28.
 See the caption package documentation for explanation.
 
-<billeder/ParsedCode.png, id=1225, 1009.52156pt x 428.35031pt>
+[46] <billeder/ParsedCode.png, id=1236, 1009.52156pt x 428.35031pt>
 File: billeder/ParsedCode.png Graphic file (type png)
 
 <use billeder/ParsedCode.png>
 Package pdftex.def Info: billeder/ParsedCode.png used on input line 33.
 (pdftex.def)             Requested size: 426.0pt x 180.75558pt.
- [46])
+)
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
-Implementation/LexicalAnalyzer.tex
+Implementation/LexicalAnalyzer.tex [47 <C:/Users/Christian/Documents/Arbejde/UN
+I/P4/svn/LaTeX/RapportNIXPILLE/billeder/ParsedCode.png>]
 Package mdframed Info: mdframed works in twoside mode on input line 21.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
@@ -3052,8 +3064,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 24.
 See the caption package documentation for explanation.
 
-[47 <C:/Users/Christian/Documents/Arbejde/UNI/P4/svn/LaTeX/RapportNIXPILLE/bill
-eder/ParsedCode.png>])
+)
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
 Implementation/Tokens.tex [48])
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
@@ -3142,9 +3153,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 44--45
 
  []
 
-)
+[52])
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
-Implementation/Typechecking.tex [52]
+Implementation/Typechecking.tex
 Package mdframed Info: mdframed works in twoside mode on input line 13.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
@@ -3188,7 +3199,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--17
 
  []
 
-[53]
+[53] [54]
 Package mdframed Info: mdframed works in twoside mode on input line 21.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
@@ -3257,7 +3268,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--26
 
  []
 
-[54] [55]
+[55]
 Package mdframed Info: mdframed works in twoside mode on input line 30.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
@@ -3322,8 +3333,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--39
 
  []
 
+[57]
 Package mdframed Info: mdframed works in twoside mode on input line 42.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\kode/Int
@@ -3371,9 +3383,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 41--1
 
  []
 
-[57] [58])
+[58])
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
-Implementation/CodeGeneration.tex
+Implementation/CodeGeneration.tex [59]
 Package mdframed Info: mdframed works in twoside mode on input line 9.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
@@ -3401,7 +3413,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
 
-[59]
+[60]
 Package mdframed Info: mdframed works in twoside mode on input line 15.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
@@ -3428,9 +3440,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
  []
 
-[60]
 Package mdframed Info: mdframed works in twoside mode on input line 19.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\kode/pco
@@ -3455,8 +3466,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--20
 
  []
 
+[61]
 Package mdframed Info: mdframed works in twoside mode on input line 23.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\kode/con
@@ -3481,7 +3493,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
  []
 
-[61]
+[62]
 Package mdframed Info: mdframed works in twoside mode on input line 27.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
@@ -3508,7 +3520,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
  []
 
-[62]
+[63]
 Package mdframed Info: mdframed works in twoside mode on input line 32.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
@@ -3535,9 +3547,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--33
 
  []
 
-[63])
+[64])
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
-Implementation/UnitTests.tex [64]
+Implementation/UnitTests.tex [65]
 Package mdframed Info: mdframed works in twoside mode on input line 16.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
@@ -3553,7 +3565,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 22.
 See the caption package documentation for explanation.
 
-[65]
+[66]
 Package mdframed Info: mdframed works in twoside mode on input line 34.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
@@ -3594,25 +3606,25 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 55.
 See the caption package documentation for explanation.
 
-[66])
+[67])
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
 Implementation/ComponentSetup.tex
 File: billeder/HardwareSetup.png Graphic file (type png)
  <use billeder/HardwareSetup.png>
 Package pdftex.def Info: billeder/HardwareSetup.png used on input line 10.
 (pdftex.def)             Requested size: 426.0pt x 319.51491pt.
- [67])
-[68]
+ [68])
+[69] [70
+
+]
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\formalia
 /FormaliaKonklusion.tex)
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\Report.b
-bl [69
+bl [71] [72
 
-] [70
-
-] [71] [72]) [73]
+] [73] [74]) [75]
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\Report.l
-ox) [74]
+ox) [76]
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\appendix
 /TransitionRules.tex
 Overfull \hbox (110.81824pt too wide) in alignment at lines 5--6
@@ -3639,7 +3651,7 @@ Overfull \hbox (110.81824pt too wide) in alignment at lines 34--54
  [] [] 
  []
 
-[75
+[77
 
 
 ]
@@ -3672,7 +3684,7 @@ Overfull \hbox (93.02887pt too wide) in alignment at lines 109--137
  [] [] 
  []
 
-[76]
+[78]
 Overfull \hbox (93.02887pt too wide) in alignment at lines 137--143
  [] [] 
  []
@@ -3684,7 +3696,7 @@ Overfull \hbox (56.53784pt too wide) in paragraph at lines 148--192
 
 )
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\appendix
-/fullcodeapp.tex [77] [78]
+/fullcodeapp.tex [79] [80]
 Package mdframed Info: mdframed works in twoside mode on input line 4.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
@@ -3694,9 +3706,9 @@ alprogram.txt)
 Package mdframed Info: You first box width is to small
  mdframed fixed it
 (mdframed)              on input line 5.
- [79
+ [81
 
-] [80] [81] [82] [83]) [84] 
+] [82] [83] [84] [85]) [86] 
 AED: lastpage setting LastPage
 \tf@toc=\write7
 \tf@lox=\write8
@@ -3718,10 +3730,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 38308 strings out of 493921
- 709588 string characters out of 3147269
- 2542847 words of memory out of 3000000
- 39540 multiletter control sequences out of 15000+200000
+ 38320 strings out of 493921
+ 709832 string characters out of 3147269
+ 2542870 words of memory out of 3000000
+ 39543 multiletter control sequences out of 15000+200000
  34854 words of font info for 90 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
  77i,20n,84p,1619b,1732s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -3750,9 +3762,9 @@ m-super/sftt0900.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/s
 ftt1000.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfxc1000.p
 fb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/bookman/ubkd8a.pfb><C:/Program 
 Files/MiKTeX 2.9/fonts/type1/urw/bookman/ubkl8a.pfb>
-Output written on Report.pdf (92 pages, 1930466 bytes).
+Output written on Report.pdf (94 pages, 1934095 bytes).
 PDF statistics:
- 2535 PDF objects out of 2984 (max. 8388607)
- 1061 named destinations out of 1200 (max. 500000)
+ 2552 PDF objects out of 2984 (max. 8388607)
+ 1068 named destinations out of 1200 (max. 500000)
  1093 words of extra memory for PDF output out of 10000 (max. 10000000)
 

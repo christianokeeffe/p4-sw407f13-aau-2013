@@ -113,8 +113,7 @@
 \contentsline {section}{\numberline {3.9}Component Setup}{69}{section.3.9}
 \contentsline {subsection}{\numberline {3.9.1}Test of program written in SPLAD}{70}{subsection.3.9.1}
 \contentsline {chapter}{\chapternumberline {4}Discussion and perspectivation}{71}{chapter.4}
-\contentsline {subsection}{\numberline {4.0.2}Putting the Project into Perspective}{71}{subsection.4.0.2}
-\contentsline {subsubsection}{\numberline {4.0.2.1}Further Development}{71}{subsubsection.4.0.2.1}
+\contentsline {section}{\numberline {4.1}Further Development}{71}{section.4.1}
 \contentsline {chapter}{\chapternumberline {5}Conclusion}{73}{chapter.5}
 \contentsline {chapter}{Bibliography}{75}{section*.34}
 \cftpagenumbersoff {chapter}

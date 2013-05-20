@@ -61,7 +61,7 @@
 \contentsline {subsection}{\numberline {2.4.10}Commands}{28}{subsection.2.4.10}
 \contentsline {subsection}{\numberline {2.4.11}Informal Type Rules}{28}{subsection.2.4.11}
 \contentsline {subsection}{\numberline {2.4.12}Formal Type Rules}{29}{subsection.2.4.12}
-\contentsline {section}{\numberline {2.5}Requirements to the Programmer}{31}{section.2.5}
+\contentsline {section}{\numberline {2.5}Requirements to the Programmer}{30}{section.2.5}
 \contentsline {section}{\numberline {2.6}Functions provided by SPLAD}{31}{section.2.6}
 \contentsline {section}{\numberline {2.7}Code Examples}{31}{section.2.7}
 \contentsline {chapter}{\chapternumberline {3}Implementation}{33}{chapter.3}
@@ -88,33 +88,33 @@
 \contentsline {subsection}{\numberline {3.5.1}Known lexers and parsers}{44}{subsection.3.5.1}
 \contentsline {subsubsection}{\numberline {3.5.1.1}Lexer}{44}{subsubsection.3.5.1.1}
 \contentsline {subsubsection}{\numberline {3.5.1.2}Parser}{44}{subsubsection.3.5.1.2}
-\contentsline {subsubsection}{\numberline {3.5.1.3}Lexer and parser}{44}{subsubsection.3.5.1.3}
+\contentsline {subsubsection}{\numberline {3.5.1.3}Lexer and parser}{45}{subsubsection.3.5.1.3}
 \contentsline {subsubsection}{\numberline {3.5.1.4}Comparison Tables}{45}{subsubsection.3.5.1.4}
 \contentsline {subsection}{\numberline {3.5.2}ANTLR}{46}{subsection.3.5.2}
-\contentsline {subsection}{\numberline {3.5.3}Lexical Analyzer}{47}{subsection.3.5.3}
+\contentsline {subsection}{\numberline {3.5.3}Lexical Analyzer}{48}{subsection.3.5.3}
 \contentsline {subsubsection}{\numberline {3.5.3.1}Tokens}{48}{subsubsection.3.5.3.1}
 \contentsline {subsection}{\numberline {3.5.4}Parser}{49}{subsection.3.5.4}
-\contentsline {subsubsection}{\numberline {3.5.4.1}Top-down Parsers}{49}{subsubsection.3.5.4.1}
+\contentsline {subsubsection}{\numberline {3.5.4.1}Top-down Parsers}{50}{subsubsection.3.5.4.1}
 \contentsline {subsubsection}{\numberline {3.5.4.2}Bottom-Up Parsers}{50}{subsubsection.3.5.4.2}
 \contentsline {section}{\numberline {3.6}Contextual Analysis}{50}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}Scope Checking}{50}{subsection.3.6.1}
-\contentsline {subsection}{\numberline {3.6.2}Type Checking}{52}{subsection.3.6.2}
-\contentsline {subsubsection}{\numberline {3.6.2.1}Tree traversal}{52}{subsubsection.3.6.2.1}
+\contentsline {subsection}{\numberline {3.6.1}Scope Checking}{51}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}Type Checking}{53}{subsection.3.6.2}
+\contentsline {subsubsection}{\numberline {3.6.2.1}Tree traversal}{53}{subsubsection.3.6.2.1}
 \contentsline {subsubsection}{\numberline {3.6.2.2}Value}{53}{subsubsection.3.6.2.2}
-\contentsline {subsubsection}{\numberline {3.6.2.3}Function}{54}{subsubsection.3.6.2.3}
+\contentsline {subsubsection}{\numberline {3.6.2.3}Function}{55}{subsubsection.3.6.2.3}
 \contentsline {subsubsection}{\numberline {3.6.2.4}Variable}{56}{subsubsection.3.6.2.4}
 \contentsline {subsubsection}{\numberline {3.6.2.5}Drink}{57}{subsubsection.3.6.2.5}
-\contentsline {subsubsection}{\numberline {3.6.2.6}Error Handling}{57}{subsubsection.3.6.2.6}
-\contentsline {section}{\numberline {3.7}Code Generation}{58}{section.3.7}
-\contentsline {section}{\numberline {3.8}Code Generation}{59}{section.3.8}
-\contentsline {subsection}{\numberline {3.8.1}Unit Testing}{64}{subsection.3.8.1}
-\contentsline {subsubsection}{\numberline {3.8.1.1}Unit Testing in General}{64}{subsubsection.3.8.1.1}
-\contentsline {subsubsection}{\numberline {3.8.1.2}Unit Testing in This Project}{65}{subsubsection.3.8.1.2}
-\contentsline {section}{\numberline {3.9}Component Setup}{67}{section.3.9}
-\contentsline {chapter}{\chapternumberline {4}Conclusion}{69}{chapter.4}
-\contentsline {chapter}{Bibliography}{71}{section*.34}
+\contentsline {subsubsection}{\numberline {3.6.2.6}Error Handling}{58}{subsubsection.3.6.2.6}
+\contentsline {section}{\numberline {3.7}Code Generation}{59}{section.3.7}
+\contentsline {section}{\numberline {3.8}Code Generation}{60}{section.3.8}
+\contentsline {subsection}{\numberline {3.8.1}Unit Testing}{65}{subsection.3.8.1}
+\contentsline {subsubsection}{\numberline {3.8.1.1}Unit Testing in General}{65}{subsubsection.3.8.1.1}
+\contentsline {subsubsection}{\numberline {3.8.1.2}Unit Testing in This Project}{66}{subsubsection.3.8.1.2}
+\contentsline {section}{\numberline {3.9}Component Setup}{68}{section.3.9}
+\contentsline {chapter}{\chapternumberline {4}Conclusion}{71}{chapter.4}
+\contentsline {chapter}{Bibliography}{73}{section*.34}
 \cftpagenumbersoff {chapter}
 \changetocdepth {0}
-\contentsline {appendix}{\chapternumberline {A}Semantics}{75}{appendix.A}
-\contentsline {section}{\numberline {A.1}Transition Rules}{75}{section.A.1}
-\contentsline {appendix}{\chapternumberline {B}Program written in SPLAD}{79}{appendix.B}
+\contentsline {appendix}{\chapternumberline {A}Semantics}{77}{appendix.A}
+\contentsline {section}{\numberline {A.1}Transition Rules}{77}{section.A.1}
+\contentsline {appendix}{\chapternumberline {B}Program written in SPLAD}{81}{appendix.B}

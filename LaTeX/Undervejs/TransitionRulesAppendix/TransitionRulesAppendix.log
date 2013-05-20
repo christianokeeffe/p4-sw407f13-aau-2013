@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.3.15)  20 MAY 2013 11:27
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.3.15)  20 MAY 2013 12:58
 entering extended mode
 **TransitionRulesAppendix.tex
 
@@ -2320,17 +2320,17 @@ Overfull \hbox (15.64812pt too wide) in alignment at lines 21--21
  []
 
 
-Overfull \hbox (15.64812pt too wide) in alignment at lines 21--48
+Overfull \hbox (15.64812pt too wide) in alignment at lines 21--46
  [] [] 
  []
 
 
-Overfull \hbox (15.64812pt too wide) in alignment at lines 48--73
+Overfull \hbox (15.64812pt too wide) in alignment at lines 46--71
  [] [] 
  []
 
 
-Overfull \hbox (15.64812pt too wide) in alignment at lines 73--97
+Overfull \hbox (15.64812pt too wide) in alignment at lines 71--95
  [] [] 
  []
 
@@ -2338,7 +2338,7 @@ Overfull \hbox (15.64812pt too wide) in alignment at lines 73--97
 
 
 ]
-Overfull \hbox (15.64812pt too wide) in alignment at lines 97--107
+Overfull \hbox (15.64812pt too wide) in alignment at lines 95--107
  [] [] 
  []
 
@@ -2347,58 +2347,27 @@ Overfull \hbox (15.64812pt too wide) in alignment at lines 97--107
 ] [5
 
 ] [6]
-Overfull \hbox (184.80219pt too wide) in alignment at lines 251--252
+Overfull \hbox (7.34674pt too wide) in alignment at lines 251--252
  [] [] 
  []
 
 
-Overfull \hbox (184.80219pt too wide) in alignment at lines 252--252
+Overfull \hbox (7.34674pt too wide) in alignment at lines 252--252
  [] [] 
  []
 
 
-Overfull \hbox (184.80219pt too wide) in alignment at lines 252--252
- [] [] 
- []
-
-Runaway argument?
-{env_V \vdash \langle \text {func} \; p(\text {var} \; \vec {x}) \; \text \ETC.
-! Paragraph ended before \@genfrac was complete.
-<to be read again> 
-                   \par 
-l.274 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.278 ~ &
-          Transitioner på formen: $\langle D_A, env_V, sto \rangle \rightar...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Extra alignment tab has been changed to \cr.
-<recently read> \endtemplate 
-                             
-l.278 ~ &
-          Transitioner på formen: $\langle D_A, env_V, sto \rangle \rightar...
-You have given more \span or & marks than there were
-in the preamble to the \halign or \valign now in progress.
-So I'll assume that you meant to type \cr instead.
-
-
-Overfull \hbox (184.80219pt too wide) in alignment at lines 252--287
+Overfull \hbox (7.34674pt too wide) in alignment at lines 252--252
  [] [] 
  []
 
 
-Overfull \hbox (184.80219pt too wide) in alignment at lines 287--291
+Overfull \hbox (7.34674pt too wide) in alignment at lines 252--285
+ [] [] 
+ []
+
+
+Overfull \hbox (7.34674pt too wide) in alignment at lines 285--291
  [] [] 
  []
 
@@ -2418,7 +2387,7 @@ Package rerunfilecheck Info: File `TransitionRulesAppendix.out' has not changed
 Here is how much of TeX's memory you used:
  35351 strings out of 493921
  646177 string characters out of 3147282
- 772999 words of memory out of 3000000
+ 771999 words of memory out of 3000000
  38013 multiletter control sequences out of 15000+200000
  19194 words of font info for 56 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
@@ -2436,7 +2405,7 @@ onts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTex 2.9/fonts/type
 1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTex 2.9/fonts/type1/u
 rw/bookman/ubkd8a.pfb><C:/Program Files/MiKTex 2.9/fonts/type1/urw/bookman/ubkl
 8a.pfb>
-Output written on TransitionRulesAppendix.pdf (7 pages, 123331 bytes).
+Output written on TransitionRulesAppendix.pdf (7 pages, 123656 bytes).
 PDF statistics:
  215 PDF objects out of 1000 (max. 8388607)
  15 named destinations out of 1000 (max. 500000)

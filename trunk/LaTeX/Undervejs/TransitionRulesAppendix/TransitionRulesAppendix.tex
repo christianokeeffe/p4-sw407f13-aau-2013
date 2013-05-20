@@ -19,8 +19,8 @@ D_A::= \; & \text{array} \; r[a_1] \\
 
 \begin{longtable}{l l}
 \longtablesetting{2}
-%~ & Transitioner er på formen: $env_V, env_P \vdash \langle S, sto \rangle \rightarrow sto'$ \\
-%~ & ~ \\
+~ & Transitioner er på formen: $env_V, env_P \vdash \langle S, sto \rangle \rightarrow sto'$ \\
+~ & ~ \\
 
 [VAR-ASS] & $env_V, env_P \vdash \langle x <-- a, sto \rangle \rightarrow sto[l \mapsto v]$ \\
 ~ & ~ \\
@@ -269,8 +269,8 @@ D_A::= \; & \text{array} \; r[a_1] \\
 [FUNC-DEC] & $\dfrac{env_V \vdash \langle D_P, env_P[p \mapsto (S, env_V, env_P)] \rangle \rightarrow_{DP} env_P'}{env_V \vdash \langle \text{proc} \; p \; \text{is begin} \; S \; \text{end}, env_P \rangle \rightarrow_{DP} env_P'}$ \\
 ~ & ~ \\
 
-[FUNC-PARA-DEC] & $\dfrac{env_V \vdash \langle D_P, env_P[p \mapsto(S, \vec{x}, env_V, env_P)] \rangle \rightarrow_{DP} \; env_P'}{env_V \vdash \langle \text{func} \; p(\text{var} \; \vec{x}) \; \text{is begin} \; S \; \text{end}, \; env_P \rangle \rightarrow_{DP} env_P'$ \\
-~ & ~ \\
+[FUNC-PARA-DEC] & $\dfrac{env_V \vdash \langle D_P, env_P[p \mapsto(S, \vec{x}, env_V, env_P)] \rangle \rightarrow_{DP} \; env_P'}{env_V \vdash \langle \text{func} \; p(\text{var} \; \vec{x}) \; \text{is begin} \; S \; \text{end}, \; env_P \rangle \rightarrow_{DP} env_P'}$ \\
+~ & ~ \\ 
 
 %[EMPTY-FUNC] & $env_V \vdash \langle \varepsilon, env_P \rangle \rightarrow_{DP} env_P'$ \\
 %~ & ~ \\

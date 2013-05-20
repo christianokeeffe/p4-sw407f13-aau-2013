@@ -266,11 +266,11 @@ D_A::= \; & \text{array} \; r[a_1] \\
 ~ & Transitioner på formen: $env_V \vdash \langle D_P, env_P \rangle \rightarrow_{DP} env_P'$ \\
 ~ & ~ \\
 
-[FUNC-DEC] & $\dfrac{env_V \vdash \langle D_P, env_P[p \mapsto (S, env_V, env_P)] \rangle \rightarrow_{DP} env_P'}{env_V \vdash \langle \text{proc} \; p \; \text{is} \; S; D_P, env_P \rangle \rightarrow_{DP} env_P'}$ \\
+[FUNC-DEC] & $\dfrac{env_V \vdash \langle D_P, env_P[p \mapsto (S, env_V, env_P)] \rangle \rightarrow_{DP} env_P'}{env_V \vdash \langle \text{proc} \; p \; \text{is begin} \; S \; \text{end}, env_P \rangle \rightarrow_{DP} env_P'}$ \\
 ~ & ~ \\
 
-[FUNC-PARA-DEC] & $\dfrac{env_V \vdash \langle D_P, env_P[p \mapsto(S, \vec{x}, env_V, env_P)] \rangle \rightarrow_{DP} \; env_P'}{env_V \vdash \langle \text{func} \; p(\text{var} \; \vec{x}) \; \text{is begin} \;}$ \\
-~ & ~ \\
+[FUNC-PARA-DEC] & $\dfrac{env_V \vdash \langle D_P, env_P[p \mapsto(S, \vec{x}, env_V, env_P)] \rangle \rightarrow_{DP} \; env_P'}{env_V \vdash \langle \text{func} \; p(\text{var} \; \vec{x}) \; \text{is begin} \; S \; \text{end}, \; env_P \rangle \rightarrow_{DP} env_P'}$ \\
+~ & ~ \\ 
 
 %[EMPTY-FUNC] & $env_V \vdash \langle \varepsilon, env_P \rangle \rightarrow_{DP} env_P'$ \\
 %~ & ~ \\
@@ -278,15 +278,15 @@ D_A::= \; & \text{array} \; r[a_1] \\
 ~ & Transitioner på formen: $\langle D_A, env_V, sto \rangle \rightarrow_{DA} (env_V', sto')$ \\
 ~ & ~ \\
 
-[ARRAY-DEC] & $\dfrac{\langle D_A, env_V[r \mapsto l, \text{next} \mapsto l + v + 1],  sto[l \mapsto v] \rangle \rightarrow_{DA} (env_V', sto')}{\langle \text{array} \; r[a_1], D_A, env_V, sto \rangle \rightarrow_{DA} (env_V', sto')}$ \\
+[ARRAY-DEC] & $\dfrac{\langle D_A, env_V[r \mapsto l, \text{next} \mapsto l + v + 1],  sto[l \mapsto v] \rangle \rightarrow_{DA} (env_V', sto')}{\langle \text{array} \; r[a_1], env_V, sto \rangle \rightarrow_{DA} (env_V', sto')}$ \\
 ~ & ~ \\
 ~ & \indent\indent where $env_V, sto \vdash a_1 \rightarrow_a v$ \\
 ~ & \indent\indent and $l = env_V \text{next}$ \\
 ~ & \indent\indent and $v > 0$ \\
 ~ & ~ \\
 
-[EMPTY-ARRAY] & $\langle \varepsilon, env_V, sto \rangle \rightarrow_{DA} (env_V, sto)$ \\
-~ & ~ \\
+%[EMPTY-ARRAY] & $\langle \varepsilon, env_V, sto \rangle \rightarrow_{DA} (env_V, sto)$ \\
+%~ & ~ \\
 \caption{Declarations}
 \end{longtable}
 

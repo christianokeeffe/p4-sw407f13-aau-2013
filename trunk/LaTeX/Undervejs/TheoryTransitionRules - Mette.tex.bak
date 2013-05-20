@@ -101,7 +101,9 @@ The transition rule for logical-or in SPLAD can be seen on table \ref{tab:OrExp}
 \end{longtable}
 
 \subsection{Variable Declaration}
-The transition rules for the variable declarations are on the form: $\langle D_V, env_V, sto \rangle \rightarrow_{DV} (env_V', sto')$. The transition system are defined by: $\Gamma_{\mathbf{ErkV}}, \rightarrow_{DV}, \Tau_{\mathbf{ErkV}}$ and the configurations are defined by $\Gamma_{DV} = (\textbf{ErkV} \times \textbf{EnvV} \times \textbf{Sto}) \cup (\textbf{EnvV} \times \textbf{Sto})$ and $\Tau_{DV} = (\textbf{EnvV} \times \textbf{Sto})$. The end configurations are defined by $\Tau_{\mathbf{ErkV}} = \textbf{EnvV} \times \textbf{Sto}$.
+The transition rules for the variable declarations are on the form: $\langle D_V, env_V, sto \rangle \rightarrow_{DV} (env_V', sto')$. The transition system are defined by: $\Gamma_{\mathbf{}}$ and the configurations are defined by $ $. The end configurations are defined by $ $.
+
+ and the configurations are defined by $\Gramma_{DV} = (\textbf{ErkV} \times \textbf{EnvV} \times \textbf{Sto}) \cup \textbf{EnvV} \times \textbf{Sto}$ and $\Tau_{DV} = \textbf{EnvV} \times \textbf{Sto}$.
 
 On table \ref{tab:VarDecl} the transition rules for variable declaration can be seen. It is done by binding $l$ to the next available location and binding $x$ to this location. The function $new$ is then used to point at the next available location. Then $env_V$ is updated to include the new variable, while the store remains unchanged.
 

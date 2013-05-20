@@ -103,8 +103,8 @@
 \BOOKMARK [3][-]{subsubsection.3.6.2.4}{3.6.2.4 Variable}{subsection.3.6.2}% 103
 \BOOKMARK [3][-]{subsubsection.3.6.2.5}{3.6.2.5 Drink}{subsection.3.6.2}% 104
 \BOOKMARK [3][-]{subsubsection.3.6.2.6}{3.6.2.6 Error Handling}{subsection.3.6.2}% 105
-\BOOKMARK [1][-]{section.3.7}{3.7 Code Generation}{chapter.3}% 106
-\BOOKMARK [1][-]{section.3.8}{3.8 Code Generation}{chapter.3}% 107
+\BOOKMARK [1][-]{section.3.7}{3.7 Theory of Code Generation}{chapter.3}% 106
+\BOOKMARK [1][-]{section.3.8}{3.8 Code Generation of SPLAD}{chapter.3}% 107
 \BOOKMARK [2][-]{subsection.3.8.1}{3.8.1 Unit Testing}{section.3.8}% 108
 \BOOKMARK [3][-]{subsubsection.3.8.1.1}{3.8.1.1 Unit Testing in General}{subsection.3.8.1}% 109
 \BOOKMARK [3][-]{subsubsection.3.8.1.2}{3.8.1.2 Unit Testing in This Project}{subsection.3.8.1}% 110

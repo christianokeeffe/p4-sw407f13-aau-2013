@@ -196,6 +196,16 @@
   timestamp = {2013.03.15}
 }
 
+@MISC{NFC,
+  author = {Dan Nosowitz},
+  title = {Everything You Need to Know About Near Field Communication},
+  howpublished = {http://www.popsci.com/},
+  month = {01},
+  year = {2011},
+  owner = {Christian},
+  timestamp = {2013.05.16}
+}
+
 @MISC{ProgrammingParadigms,
   author = {Kurt Nørmark},
   title = {Overview of the four main programming paradigms},

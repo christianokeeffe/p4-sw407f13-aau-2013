@@ -101,15 +101,15 @@ When defining the syntax of a programming language, it should balance these char
 Table \ref{tab:choiceoffocus} shows what paradigms that is in the focus for the project. 
 \begin{itemize}
 %%Ret herfra
-\item \textbf{Simplicity:} The language of this project will not have have multiple ways of doing the same simple instructions. This is to make writing code simpler for beginners. An example is that it will not be possible to increase a variable by 1 by writing "A++;". Instead it has to be written as "A<--A+1;".
+\item \textbf{Simplicity:} The language of this project will not have multiple ways of doing the same simple instructions. This is to make writing code simpler for beginners. An example is that it will not be possible to increase a variable by one by writing "A++;". Instead it has to be written as "A<--A+1;".
 
 \item \textbf{Orthogonality:} It will not be possible to make classes or constructs, this is to simplify types for beginners. However it will be possible to combine various other constructs, for example calling a function in an expression. 
 
-\item \textbf{Data types:} The language of this project will have five primitive types, bool, double, int, char and string and 2 special types, container and drink. The two special types are described in section \ref{sec:specific}.
+\item \textbf{Data types:} The language of this project will have five primitive types, bool, double, int, char and string and two special types, container and drink. The two special types are described in section \ref{sec:specific}.
 
-\item \textbf{Syntax design:} It will not be possible to make classes in the language of this project but there will be both "for" and "while" loops because they are relatively simple to use and understand for beginners. All functions and loops will start with "begin" and end with "end" to make it clear where they start and end.
+\item \textbf{Syntax design:} It will not be possible to make classes in the language of this project but there will be both "for" and "while" loops because they are relatively simple to use and understand for beginners. All functions and loops will start with "begin" and end with "end" to make it clear where they starts and ends.
 
-\item \textbf{Support for abstraction:} Our language will be an abstraction of the Arduino language. This is done to simplify the programming to the Arduino platform and help the user by making it more simple.
+\item \textbf{Support for abstraction:} Our language will be an abstraction of the Arduino language. This is done to simplify the programming for the Arduino platform and help the user by making it more simple.
 
 \item \textbf{Expressivity:} Shorthands will not be implemented in SPLAD, this is to increase the readability of the programs, as described in listing \ref{lst:ifstmtnormal}.
 
@@ -117,5 +117,5 @@ Table \ref{tab:choiceoffocus} shows what paradigms that is in the focus for the 
 
 \item \textbf{Exception handling:} Because the Arduino will execute the program-code in the end. The compiler will handle scope, type and code generation exceptions. The handling of Arduino based exceptions such as function provided by the Arduino language is left to the Arduino. This is done because we do not know all the provided function and therefore can not check them.
 
-\item \textbf{Restricted aliasing:} Since it is known that using aliasing is a dangerous feature in a programming language  \citep{sebesta}, the language of this project will not have this feature, to help beginners.
+\item \textbf{Restricted aliasing:} Since it is known that using aliasing is a dangerous feature in a programming language \citep{sebesta}, the language of this project will not have this feature, to help beginners.
 \end{itemize}

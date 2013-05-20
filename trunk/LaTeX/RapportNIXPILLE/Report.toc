@@ -105,8 +105,8 @@
 \contentsline {subsubsection}{\numberline {3.6.2.4}Variable}{57}{subsubsection.3.6.2.4}
 \contentsline {subsubsection}{\numberline {3.6.2.5}Drink}{58}{subsubsection.3.6.2.5}
 \contentsline {subsubsection}{\numberline {3.6.2.6}Error Handling}{59}{subsubsection.3.6.2.6}
-\contentsline {section}{\numberline {3.7}Code Generation}{60}{section.3.7}
-\contentsline {section}{\numberline {3.8}Code Generation}{61}{section.3.8}
+\contentsline {section}{\numberline {3.7}Theory of Code Generation}{60}{section.3.7}
+\contentsline {section}{\numberline {3.8}Code Generation of SPLAD}{61}{section.3.8}
 \contentsline {subsection}{\numberline {3.8.1}Unit Testing}{66}{subsection.3.8.1}
 \contentsline {subsubsection}{\numberline {3.8.1.1}Unit Testing in General}{66}{subsubsection.3.8.1.1}
 \contentsline {subsubsection}{\numberline {3.8.1.2}Unit Testing in This Project}{67}{subsubsection.3.8.1.2}

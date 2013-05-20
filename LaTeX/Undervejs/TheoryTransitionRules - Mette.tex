@@ -10,7 +10,7 @@ In the following text we use the following names to represent different syntacti
 \item $a \in \mathbf{A_{exp}}$ - Arithmetic expression
 \item $b \in \mathbf{B_{exp}}$ - Boolean expression
 \item $S \in \textbf{Stm}$ - Statements
-\item $p, q \dots \in \textbf{Pnames}$ - Function names
+\item $p \in \textbf{Pnames}$ - Function names
 \item $D_V \in \textbf{ErkV}$ - Variable declarations
 \item $D_P \in \textbf{ErkP}$ - Function declarations
 \item $D_A \in \textbf{ErkA}$ - Array declarations
@@ -20,13 +20,14 @@ In the following text we use the following names to represent different syntacti
 In order to describe the behavior of a program, er must first account for its syntax. We use the notion of abstract syntax, since it will allow us to describe the essential structure of the program. An abstract syntax is defined as follows. We assume a collection of syntactic categories and for each syntactic category we give a finite set of formation rules that define how the the inhabitants of the category can be build \citep{HHTree}.
 Here the abstract syntax of SPLAD can be seen. 
 \begin{align*}
-S::= \; & x := a \; | \; r[a_1] := a_2 \; | \; S_1; \; S_2 \; | \; \text{if} \; b \; \text{do} \; S \; | \; \text{if} \; b \; \text{do} \; S_1 \; \text{else do} \; S_2 \; | \; \text{while} \; b \; \text{do} \; S \\
-~ & | \; \text{from} \; x := a_1 \; \text{to} \; a_2 \; \text{step} \; a_3 \; \text{do} \; S \; | \; \text{call} \; p(\vec{x}) \; | \; \text{begin} \; D_V \; D_P \; S \; \text{end} \\
+S::= \; & x := a \; | \; r[a_1] := a_2 \; | \; S_1; \; S_2 \; | \; \text{if} \; b \; \text{begin} \; S \; \text{end} \; | \; \text{if} \; b \; \text{begin} \; S_1 \; \text{end} \; \text{else begin} \; S_2 \; \text{end} \\
+~ & \text{while} \; b \; \text{begin} \; S \; \text{end} \; | \; \text{from} \; x := a_1 \; \text{to} \; a_2 \; \text{step} \; a_3 \; \text{begin} \; S \; \text{end} \; | \; \text{call} \; p(\vec{x}) \; | \; D_V \; | \; D_A \; | \; D_P \\
+~ & | \; \text{switch}(a) \; \text{begin} \; \text{case } a_1: \; S_1 \; \text{break}; \; \dots \; \text{case} a_k: \; S_k \; \text{break}; \; \text{default}: \; S \; \text{break} \; \text{end} \\
 a::= \; & n \; | \; x \; | \; a_1 + a_2 \; | \; a_1 - a_2 \; | \; a_1 * a_2 \; | \; a_1 / a_2 \; | \; (a) \; | \; r[a_i]\\
-b::= \; &a_1 = a_2 \; | \; a_1 > a_2 \; | \; a_1 < a_2 \; | \; \neg b \; | \; b_1 \; \wedge \; b_2 \; | \; b_1 \; \vee \; b_2 \; | \; (b) \\
-D_V::= \; & \text{var} \; x := a; \; D_V \; | \; \varepsilon \\
-D_P::= \; & \text{func} \; p \; \text{is} \; S;\;  D_P \; | \; \varepsilon \\
-D_A::= \; & \text{array} \; r[a_1]; \; D_A \; | \; \varepsilon \\
+b::= \; &a_1 = a_2 \; | \; a_1 > a_2 \; | \; a_1 < a_2 \; | \; \neg b \; | \; b_1 \; \wedge \; b_2 \; | \; b_1 \; \vee \; b_2 \; | \; (b)\\
+D_V::= \; & \text{var} \; x := a \\
+D_P::= \; & \text{func} \; p \; \text{is} \; \text{begin} \; S \; \text{end} \; | \; \text{func} \; p(\p \vec{x}) \; \text{is} \; \text{begin} \; S \; \text{end} \\
+D_A::= \; & \text{array} \; r[a_1] \\
 \end{align*}
 
 \subsection{Transition Systems}

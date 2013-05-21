@@ -34,10 +34,6 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 	//The holder for the object of the class drink, which is beeing added.
 	private Drinks drinkHolder;
 	
-	//Bools for verifying that the user has implemented the pour and RFIDFound functions.
-	private boolean haspour = false;
-	private boolean hasrfidfound = false;
-	
 	//From here, the visitors according the BNF for SPLAD will generate code using the parsetree.
 	
 	@Override
@@ -208,13 +204,6 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 			return "";
 		}
 		else {
-			//Check if the function is the required pour og RFIDFound functions
-			if (ctx.id().getText().equals("pour")){
-				haspour = true;
-			}
-			if (ctx.id().getText().equals("RFIDFound")){
-				hasrfidfound = true;
-			}
 			
 			String tempstring = "";
 			
@@ -637,14 +626,6 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 		//Add the setup and loop function
 		ContentBuffer.append("void setup() {\n" + setupfirstbuffer.toString() + "\n" +
 				setupbuffer.toString() + "return;\n}\n" + "void loop() {\n" + loopbuffer.toString() + "return;\n}\n");
-		
-		//Check if the required functions is implemented
-		if (haspour == false){
-			System.out.println("Your program does not contain a pour function, please see to, it is made.");
-		}
-		if (hasrfidfound == false){
-			System.out.println("Your program does not contain a RFIDFound function, please see to, it is made.");
-		}
 		
 		return ContentBuffer.toString();
 	}

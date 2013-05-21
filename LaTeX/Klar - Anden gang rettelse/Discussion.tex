@@ -1,0 +1,71 @@
+\section{Discussion}
+\label{sec:discussion}
+This section contains a debate about the goals of this project, and if they have been met. There is also a section which contains the reflections about the project.
+
+\subsection{Characteristic of SPLAD}
+This section compares the design criteria set forward in section \ref{sec:DesignCriteria}, and checks if these criteria have actually been met.
+
+"Simplicity" was set to be high for SPLAD. This, as explained in section \ref{sec:simplespladc} has been achieved. 
+
+\subsection{Simplicity of SPALD compared with C}
+\label{sec:simplespladc}
+This section will compare pieces of code written in SPLAD, with pieces of code written in C. The first code example, seen on listing \ref{lst:helloworldsplad}, is an example of a simple SPLAD program, which prints out "HelloWorld" to the LCD.
+
+\begin{code}{helloworldsplad}{Hello world program in SPLAD}
+\begin{lstlisting}
+function pour return nothing using(int a, double b)
+begin
+	return nothing;
+end
+
+function RFIDFound return nothing using(int a, int b)
+begin
+	string message <-- "Hello World!";
+	/* Print message on line 1 on LCD */
+	call LCDPrint(message, 1);
+
+	return nothing;
+end
+\end{lstlisting}
+\end{code}
+
+Line 1-4 of listing \ref{lst:helloworldsplad} contains the pour function, which is required by the SPLAD compiler, but is not relevant in this small example. The string "message" is declared on line 7, which is what will be printed to the LCD. On line 9, the function LCDPrint, which is provided by the SPLAD compiler is called, and the message is printed to the display. The message will be printed when an RFID-tag is found by the RFID-reader.
+
+A hello world program written in Arudino C/C++, can be seen on listing \ref{lst:helloworldc}. It should be noted that this is an example provided by the Arduino IDE \citep{LCDtut}. Line 2 of this example includes the LCD Library. On line 5 the LCD display must be initialized with the pins on the Arduino. On line 9, the LCD display is setup, which means that the appropriate number of columns and rows is set depending on the particular model used. And on line 11, the message is printed to the LCD.
+ 
+\begin{code}{helloworldc}{Hello world program in Arduino C/C++}
+\begin{lstlisting}
+// include the library code:
+#include <LiquidCrystal.h>
+
+// initialize the library with the numbers of the interface pins
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+
+void setup() {
+  // set up the LCD's number of columns and rows: 
+  lcd.begin(16, 2);
+  char message[ ] = "Hello World";
+  // Print a message to the LCD.
+  lcd.print(message);
+}
+
+void loop() {
+
+}
+\end{lstlisting}
+\end{code}
+The difference between the SPLAD program, and the Arduino program is clear: The SPLAD program is much more specialized with the target being drink machines, which means that there is an LCD print function provided by default. This is not the case in a normal Arduino program, because Arduino is aimed at a much more general purpose. This means that users of the SPLAD language need not think about which pins the LCD is connected to while writing programs. Arduino does not provide a string-type, which means that strings are implemented by char arrays. In the SPLAD language there is a string type, which might seem more intuitive for novice programmers. The assignment is a bit different in SPLAD compared to C-notation. In SPLAD an assignment is denoted by '<--', which makes it completely clear what is assigned to what. In C, the assignment is denoted by '=', which might confuse novice programmers, because '=' generally is used to denote equality in for example mathematics. Also when using the '=', it is not really clear what is assigned to what.
+
+\subsection{Other Criteria}
+
+"Orthogonality" was set to medium for our language since it is not possible to create classes or custom constructs in our language. But it is possible to call a function in an expression and to define functions. Therefore this criteria has also been met to an acceptable extend.
+
+"Data types" was set to medium for our SPLAD language. Because SPLAD only have five primitive types and two special types, SPLAD has relatively many types, but not too many types to confuse people, which makes it simple to keep an overview of them. On top of that, it is not possible to make classes. Therefore the criteria about data types is met.
+
+"Syntax design" was set to be high for SPLAD. Since most of SPLAD has been created this way to give a better understanding of the different constructs, such as for-loops, and beginning and endings of block statements. Therefore this criteria has been achieved in SPLAD.
+
+"Support for abstraction" was set to be medium for SPLAD, because our language is an abstraction of the Arduino programming language. Examples of the abstraction can be seen in section \ref{sec:simplespladc} they make programming drink machines based on the Arduino platform easier.
+
+The criteria "Expressivity" was set to low for SPLAD. Since SPLAD has a focus to be as simple as possible, the expressivity is not in focus for SPLAD. 
+
+"Type checking" was set to high for SPLAD. To make sure that all type errors that could be found are found when a program is compiled, a lot of work and tests have been made while creating the type checker. There were some problems, like the build-in functions that an Arduino program has access to. This makes it hard to make a type checker that will find all errors. But all types, expressions, parameters which are in SPLAD are type-checked therefore this criteria is met. 

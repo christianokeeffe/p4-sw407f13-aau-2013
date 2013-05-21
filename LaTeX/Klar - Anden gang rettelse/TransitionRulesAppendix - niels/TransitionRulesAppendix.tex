@@ -6,8 +6,9 @@
 
 \section{Abstract Syntax}
 \begin{align*}
+R ::= \; & D_P \; | \; D_A \; | D_V \; | R_1 \; R_2 \;  | \;\eps \\
 S::= \; & x := a \; | \; r[a_1] := a_2 \; | \; S_1; \; S_2 \; | \; \text{if} \; b \; \text{begin} \; S \; \text{end} \; | \; \text{if} \; b \; \text{begin} \; S_1 \; \text{end} \; \text{else begin} \; S_2 \; \text{end} \\
-~ & \text{while} \; b \; \text{begin} \; S \; \text{end} \; | \; \text{from} \; x := a_1 \; \text{to} \; a_2 \; \text{step} \; a_3 \; \text{begin} \; S \; \text{end} \; | \; \text{call} \; p(\vec{x}) \; | \; D_V \; | \; D_A \; | \; D_P \\
+~ & \text{while} \; b \; \text{begin} \; S \; \text{end} \; | \; \text{from} \; x := a_1 \; \text{to} \; a_2 \; \text{step} \; a_3 \; \text{begin} \; S \; \text{end} \; | \; \text{call} \; p(\vec{x}) \; | \; D_V \; | \; D_A \; \\
 ~ & | \; \text{switch}(a) \; \text{begin} \; \text{case } a_1: \; S_1 \; \text{break}; \; \dots \; \text{case } a_k: \; S_k \; \text{break}; \; \text{default}: \; S \; \text{break} \; \text{end} \\
 a::= \; & n \; | \; x \; | \; a_1 + a_2 \; | \; a_1 - a_2 \; | \; a_1 * a_2 \; | \; a_1 / a_2 \; | \; (a) \; | \; r[a_i]\\
 b::= \; &a_1 = a_2 \; | \; a_1 > a_2 \; | \; a_1 < a_2 \; | \; \neg b \; | \; b_1 \; \wedge \; b_2 \; | \; b_1 \; \vee \; b_2 \; | \; (b)\\
@@ -15,6 +16,13 @@ D_V::= \; & \text{var} \; x := a \\
 D_P::= \; & \; \text{func} \; p(\vec{x}) \; \text{is} \; \text{begin} \; S \; \text{end} \\
 D_A::= \; & \text{array} \; r[a_1] \\
 \end{align*}
+
+\begin{longtable}{l l}
+\longtablesetting{2}
+[COMP] & $\dfrac{\begin{matrix} env_V \vdash \langle R_1, sto \rangle \rightarrow sto'' \\ env_V, env_P \vdash \langle R_2, sto'' \rangle \rightarrow sto' \end{matrix}}{env_V, env_P \vdash  \langle R_1 \; R_2, sto \rangle \rightarrow sto'}$ \\
+~ & ~ \\
+\caption{Root statements}
+\end{longtable}
 
 
 \begin{longtable}{l l}

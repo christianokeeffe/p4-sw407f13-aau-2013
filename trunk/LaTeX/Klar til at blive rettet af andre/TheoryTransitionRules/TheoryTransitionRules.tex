@@ -11,13 +11,13 @@ In the following text we use the following names to represent different syntacti
 \item $b \in \mathbf{B_{exp}}$ - Boolean expression
 \item $S \in \textbf{Stm}$ - Statements
 \item $p \in \textbf{Pnames}$ - Procedure names
-\item $D_V \in \textbf{ErkV}$ - Variable declarations
-\item $D_P \in \textbf{ErkP}$ - Procedure declarations
-\item $D_A \in \textbf{ErkA}$ - Array declarations
+\item $D_V \in \textbf{DecV}$ - Variable declarations
+\item $D_P \in \textbf{DecP}$ - Procedure declarations
+\item $D_A \in \textbf{DecA}$ - Array declarations
 \end{itemize}
 
 \subsection{Abstract Syntax}
-In order to describe the behavior of a program, er must first account for its syntax. We use the notion of abstract syntax, since it will allow us to describe the essential structure of the program. An abstract syntax is defined as follows. We assume a collection of syntactic categories and for each syntactic category we give a finite set of formation rules that define how the the inhabitants of the category can be build \citep{HHTree}.
+In order to describe the behavior of a program, one must first account for its syntax. We use the notion of abstract syntax, since it will allow us to describe the essential structure of the program. An abstract syntax is defined as follows. We assume a collection of syntactic categories and for each syntactic category we give a finite set of formation rules which defines how the the inhabitants of the category can be build \citep{HHTree}.
 Here the abstract syntax of SPLAD can be seen. 
 \begin{align*}
 S::= \; & x := a \; | \; r[a_1] := a_2 \; | \; S_1; \; S_2 \; | \; \text{if} \; b \; \text{begin} \; S \; \text{end} \; | \; \text{if} \; b \; \text{begin} \; S_1 \; \text{end} \; \text{else begin} \; S_2 \; \text{end} \\
@@ -121,7 +121,6 @@ The transition rules for the procedure declarations are on the form: $env_V \vda
 
 On table \ref{tab:ProcDec} the transitions rules for the procedure declaration with none or multiple parameters can be seen. The rule states that the new procedure is stored in the procedure environment along with the statement, formal parameters, and procedure- and variable-bindings from the time of declaration.
 
-\fxfatal{bla bla bla}
 \begin{longtable}{l l}
 \longtablesetting{2}
 

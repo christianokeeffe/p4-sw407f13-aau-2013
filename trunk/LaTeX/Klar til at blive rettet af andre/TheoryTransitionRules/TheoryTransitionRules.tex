@@ -52,7 +52,11 @@ The following names represent the different environments.
 \item $env_P \in Env_P$ - Procedure environment
 \end{itemize}
 
+\subsection{Root statements}
+The root statements are like regular statements (described below in section \ref{sec:statements}), but ensures that all procedure declaration will be make in the global scope. 
+
 \subsection{Statements}
+\label{sec:statements}
 The transition rules for the statements are on the form: $env_V, env_P \vdash \langle S, sto \rangle \rightarrow sto'$. The transition system are defined by: $(\Gamma_{\mathbf{Stm}}, \rightarrow, \Tau_{\mathbf{Stm}})$ and the configurations are defined by $\Gamma_{\mathbf{Stm}} = \textbf{Stm} \times \textbf{Sto} \cup \textbf{Sto}$. The end configurations are defined by $\Tau_{\mathbf{Stm}} = \textbf{Sto}$.
 
 On table \ref{tab:VarAssign} the assignment rule for variables can be seen. The rule states, that if $a$ evaluates to $v$, and $x$ points to the location $l$, then $v$ is stored in the $l$.

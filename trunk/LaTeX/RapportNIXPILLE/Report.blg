@@ -52,6 +52,11 @@ Warning--empty year in CUP
 1 is an integer literal, not a string, for entry CUP
 while executing---line 1516 of file bibtex/harvard.bst
 Warning--empty  in CUP
+Warning--empty year in LCDtut
+Warning--empty year in LCDtut
+1 is an integer literal, not a string, for entry LCDtut
+while executing---line 1516 of file bibtex/harvard.bst
+Warning--empty  in LCDtut
 Name 1 in "Charles N. Fischer, and Ron, K. Cyton and Richard, J. LeBlanc. Jr." has a comma at the end for entry CraftingACompiler
 while executing---line 1516 of file bibtex/harvard.bst
 Name 1 in "Charles N. Fischer, and Ron, K. Cyton and Richard, J. LeBlanc. Jr." has a comma at the end for entry CraftingACompiler
@@ -154,4 +159,4 @@ Warning--empty year in Yacc
 1 is an integer literal, not a string, for entry Yacc
 while executing---line 1516 of file bibtex/harvard.bst
 Warning--empty  in Yacc
-(There were 44 error messages)
+(There were 45 error messages)

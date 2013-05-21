@@ -30,11 +30,12 @@ $[OR_{EXP}]$ & $\dfrac{E \vdash e_1 : \text{Bool} \: \; E \vdash e_2 : \text{Boo
 ~&~&~&~\\
 $[VAR_{DEC}]$ & $\dfrac{E[x \mapsto T]\vdash D_V : \text{ok} \:\:\: E\vdash a:T}{E \vdash \text{var} \; T \; x:=a;D_V:\text{ok}}$ &$[EMPTY_{DEC}]$ & $E \vdash \eps:\text{ok}$\\
 ~&~&~&~\\
-$[FUNC_{DEC}]$ & $\dfrac{E[f \mapsto (x:T \rightarrow \text{ok})]\vdash D_F:\text{ok}}{E \vdash \text{func}\; f(T\;x)\; is\; S,D_F:\text{ok}} $\\
+$[FUNC_{DEC}]$ & $\dfrac{E[f \mapsto (\vec{x}:\vec{T} \rightarrow \text{ok})]\vdash D_F:\text{ok}}{E \vdash \text{func}\; f(T_1\;x_1,\; T_2\; x_2 \dots T_k \; x_k)\; is\; S,D_F:\text{ok}} $\\
+~& $\text{where }0 \leq k$\\
 \caption{Type rules for declarations.}
 \label{tab:declarations}
 \end{longtable}
-\fxfatal{Husk at tjekke op på function declarations parametere, der skal vist være flere}
+
 \begin{longtable}{l l}
 \longtablesetting{2}
 ~&~\\

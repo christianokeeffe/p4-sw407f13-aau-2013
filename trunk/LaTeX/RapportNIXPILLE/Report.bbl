@@ -1,4 +1,4 @@
-\begin{thebibliography}{38}
+\begin{thebibliography}{39}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -79,6 +79,13 @@
 \newblock \textit{Theory behind CUP}.
 \newblock \url{http://www2.cs.tum.edu/projects/cup/manual.html} [Last seen:
   2013/03/15].
+
+\bibitem[David A.~Mellis()]{LCDtut}
+\textbf{\textbf{David A.~Mellis, Limor~Fried}}.
+\newblock Tom~Igoe David A.~Mellis, Limor~Fried.
+\newblock \textit{LiquidCrystal - "Hello World!"}.
+\newblock web.
+\newblock URL \url{http://www.arduino.cc/en/Tutorial/LiquidCrystal}.
 
 \bibitem[Fischer et~al.(2009)Fischer, Ron, og Richard]{CraftingACompiler}
 \textbf{Fischer et~al.}, \textbf{2009}.

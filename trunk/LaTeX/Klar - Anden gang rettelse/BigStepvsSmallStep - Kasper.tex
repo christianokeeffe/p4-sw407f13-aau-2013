@@ -1,7 +1,0 @@
-\subsection{Big-step vs. Small-step}
-\label{sec:BvsS}
-There are two ways to describe computations of transition systems, big-step and small-step. In Big-step-semantics a transition describes the full computation, meaning there are not any steps in the computation - the whole computation is done in one step. To describe the steps of a computation, small-step-semantics are used. These allows to describe each step in the computation itself \citep{HHTree}.
-
-The property of big-step-semantics makes it easier to formulate the transition rules because they do not have to describe the steps in the computations. The downside of big-step-semantics is that it makes it almost impossible to describe parallelism in a language. The reason for this, is that to describe parallelism in a language, it will be necessary to describe each step of the computations so that the system for example is allowed to switch between two statements. This is also the reason why small-step-semantics is the most reasonable choice when describing parallelism. On the other hand small-step-semantics is not as easy to describe as big-step-semantics \citep{HHTree}.
-
-We have decided to use big-step-semantic because we do not wish to describe parallelism in this project. Therefore big-step-semantic is a more appealing choice because it is easier to formulate rather than small-step-semantics.

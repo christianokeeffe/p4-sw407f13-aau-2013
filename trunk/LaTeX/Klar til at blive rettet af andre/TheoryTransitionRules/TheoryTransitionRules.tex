@@ -1,4 +1,4 @@
-\input{../RapportNixPille/preamble}
+\input{../../RapportNixPille/preamble}
 \begin{document}
 \section{Transition Rules}
 In this section some of the transition rules in SPLAD will be explained. The complete list of all the rules can be seen in appendix \ref{sec:transitionrules}.
@@ -20,8 +20,9 @@ In the following text we use the following names to represent different syntacti
 In order to describe the behavior of a program, one must first account for its syntax. We use the notion of abstract syntax, since it will allow us to describe the essential structure of the program. An abstract syntax is defined as follows. We assume a collection of syntactic categories and for each syntactic category we give a finite set of formation rules which defines how the the inhabitants of the category can be build \citep{HHTree}.
 Here the abstract syntax of SPLAD can be seen. 
 \begin{align*}
+Root ::= \; & D_P \; Root \;| \;\eps \\
 S::= \; & x := a \; | \; r[a_1] := a_2 \; | \; S_1; \; S_2 \; | \; \text{if} \; b \; \text{begin} \; S \; \text{end} \; | \; \text{if} \; b \; \text{begin} \; S_1 \; \text{end} \; \text{else begin} \; S_2 \; \text{end} \\
-~ & \text{while} \; b \; \text{begin} \; S \; \text{end} \; | \; \text{from} \; x := a_1 \; \text{to} \; a_2 \; \text{step} \; a_3 \; \text{begin} \; S \; \text{end} \; | \; \text{call} \; p(\vec{x}) \; | \; D_V \; | \; D_A \; | \; D_P \\
+~ & \text{while} \; b \; \text{begin} \; S \; \text{end} \; | \; \text{from} \; x := a_1 \; \text{to} \; a_2 \; \text{step} \; a_3 \; \text{begin} \; S \; \text{end} \; | \; \text{call} \; p(\vec{x}) \; | \; D_V \; | \; D_A \; \\
 ~ & | \; \text{switch}(a) \; \text{begin} \; \text{case } a_1: \; S_1 \; \text{break}; \; \dots \; \text{case} a_k: \; S_k \; \text{break}; \; \text{default}: \; S \; \text{break} \; \text{end} \\
 a::= \; & n \; | \; x \; | \; a_1 + a_2 \; | \; a_1 - a_2 \; | \; a_1 * a_2 \; | \; a_1 / a_2 \; | \; (a) \; | \; r[a_i]\\
 b::= \; &a_1 = a_2 \; | \; a_1 > a_2 \; | \; a_1 < a_2 \; | \; \neg b \; | \; b_1 \; \wedge \; b_2 \; | \; b_1 \; \vee \; b_2 \; | \; (b)\\

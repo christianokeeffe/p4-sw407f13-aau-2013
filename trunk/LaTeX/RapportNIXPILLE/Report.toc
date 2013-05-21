@@ -63,61 +63,61 @@
 \contentsline {subsection}{\numberline {2.4.12}Formal Type Rules}{29}{subsection.2.4.12}
 \contentsline {section}{\numberline {2.5}Requirements to the Programmer}{30}{section.2.5}
 \contentsline {section}{\numberline {2.6}Functions provided by SPLAD}{31}{section.2.6}
-\contentsline {section}{\numberline {2.7}Code Examples}{31}{section.2.7}
-\contentsline {chapter}{\chapternumberline {3}Implementation}{33}{chapter.3}
-\contentsline {section}{\numberline {3.1}Evaluation Criteria for the Compiler}{33}{section.3.1}
-\contentsline {section}{\numberline {3.2}Architecture}{34}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Hardware}{34}{subsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.1.1}Hardware platform}{34}{subsubsection.3.2.1.1}
-\contentsline {subsubsection}{\numberline {3.2.1.2}RFID}{35}{subsubsection.3.2.1.2}
-\contentsline {subsubsection}{\numberline {3.2.1.3}Other components}{36}{subsubsection.3.2.1.3}
-\contentsline {section}{\numberline {3.3}Overview of the Compiler}{36}{section.3.3}
-\contentsline {section}{\numberline {3.4}Language Processor}{38}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Compiler}{38}{subsection.3.4.1}
-\contentsline {subsubsection}{\numberline {3.4.1.1}Pure Machine Code}{38}{subsubsection.3.4.1.1}
-\contentsline {subsubsection}{\numberline {3.4.1.2}Augmented Machine Code}{38}{subsubsection.3.4.1.2}
-\contentsline {subsubsection}{\numberline {3.4.1.3}Virtual Machine Code}{38}{subsubsection.3.4.1.3}
-\contentsline {subsection}{\numberline {3.4.2}Interpreter}{39}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Choice of Language Processor for This Project}{39}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Language Processing Strategy}{39}{subsection.3.4.4}
-\contentsline {subsection}{\numberline {3.4.5}Compilation passes}{41}{subsection.3.4.5}
-\contentsline {subsection}{\numberline {3.4.6}Abstract Syntax Trees}{41}{subsection.3.4.6}
-\contentsline {subsection}{\numberline {3.4.7}Parse Tree}{41}{subsection.3.4.7}
-\contentsline {subsection}{\numberline {3.4.8}Visitor Pattern}{43}{subsection.3.4.8}
-\contentsline {section}{\numberline {3.5}Syntactic Analysis}{44}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Known lexers and parsers}{45}{subsection.3.5.1}
-\contentsline {subsubsection}{\numberline {3.5.1.1}Lexer}{45}{subsubsection.3.5.1.1}
-\contentsline {subsubsection}{\numberline {3.5.1.2}Parser}{45}{subsubsection.3.5.1.2}
-\contentsline {subsubsection}{\numberline {3.5.1.3}Lexer and parser}{46}{subsubsection.3.5.1.3}
-\contentsline {subsubsection}{\numberline {3.5.1.4}Comparison Tables}{46}{subsubsection.3.5.1.4}
-\contentsline {subsection}{\numberline {3.5.2}ANTLR}{47}{subsection.3.5.2}
-\contentsline {subsection}{\numberline {3.5.3}Lexical Analyzer}{49}{subsection.3.5.3}
-\contentsline {subsubsection}{\numberline {3.5.3.1}Tokens}{49}{subsubsection.3.5.3.1}
-\contentsline {subsection}{\numberline {3.5.4}Parser}{50}{subsection.3.5.4}
-\contentsline {subsubsection}{\numberline {3.5.4.1}Top-down Parsers}{51}{subsubsection.3.5.4.1}
-\contentsline {subsubsection}{\numberline {3.5.4.2}Bottom-Up Parsers}{51}{subsubsection.3.5.4.2}
-\contentsline {section}{\numberline {3.6}Contextual Analysis}{51}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}Scope Checking}{52}{subsection.3.6.1}
-\contentsline {subsection}{\numberline {3.6.2}Type Checking}{54}{subsection.3.6.2}
-\contentsline {subsubsection}{\numberline {3.6.2.1}Tree traversal}{54}{subsubsection.3.6.2.1}
-\contentsline {subsubsection}{\numberline {3.6.2.2}Value}{54}{subsubsection.3.6.2.2}
-\contentsline {subsubsection}{\numberline {3.6.2.3}Function}{56}{subsubsection.3.6.2.3}
-\contentsline {subsubsection}{\numberline {3.6.2.4}Variable}{57}{subsubsection.3.6.2.4}
-\contentsline {subsubsection}{\numberline {3.6.2.5}Drink}{58}{subsubsection.3.6.2.5}
-\contentsline {subsubsection}{\numberline {3.6.2.6}Error Handling}{59}{subsubsection.3.6.2.6}
-\contentsline {section}{\numberline {3.7}Theory of Code Generation}{60}{section.3.7}
-\contentsline {section}{\numberline {3.8}Code Generation of SPLAD}{61}{section.3.8}
-\contentsline {subsection}{\numberline {3.8.1}Unit Testing}{66}{subsection.3.8.1}
-\contentsline {subsubsection}{\numberline {3.8.1.1}Unit Testing in General}{66}{subsubsection.3.8.1.1}
-\contentsline {subsubsection}{\numberline {3.8.1.2}Unit Testing in This Project}{67}{subsubsection.3.8.1.2}
-\contentsline {section}{\numberline {3.9}Component Setup}{69}{section.3.9}
-\contentsline {subsection}{\numberline {3.9.1}Test of program written in SPLAD}{70}{subsection.3.9.1}
-\contentsline {chapter}{\chapternumberline {4}Discussion and perspectivation}{71}{chapter.4}
-\contentsline {section}{\numberline {4.1}Further Development}{71}{section.4.1}
-\contentsline {chapter}{\chapternumberline {5}Conclusion}{73}{chapter.5}
-\contentsline {chapter}{Bibliography}{75}{section*.34}
+\contentsline {section}{\numberline {2.7}SPLAD Code Examples}{31}{section.2.7}
+\contentsline {chapter}{\chapternumberline {3}Implementation}{35}{chapter.3}
+\contentsline {section}{\numberline {3.1}Evaluation Criteria for the Compiler}{35}{section.3.1}
+\contentsline {section}{\numberline {3.2}Architecture}{36}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Hardware}{36}{subsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.1.1}Hardware platform}{36}{subsubsection.3.2.1.1}
+\contentsline {subsubsection}{\numberline {3.2.1.2}RFID}{37}{subsubsection.3.2.1.2}
+\contentsline {subsubsection}{\numberline {3.2.1.3}Other components}{38}{subsubsection.3.2.1.3}
+\contentsline {section}{\numberline {3.3}Overview of the Compiler}{38}{section.3.3}
+\contentsline {section}{\numberline {3.4}Language Processor}{40}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Compiler}{40}{subsection.3.4.1}
+\contentsline {subsubsection}{\numberline {3.4.1.1}Pure Machine Code}{40}{subsubsection.3.4.1.1}
+\contentsline {subsubsection}{\numberline {3.4.1.2}Augmented Machine Code}{40}{subsubsection.3.4.1.2}
+\contentsline {subsubsection}{\numberline {3.4.1.3}Virtual Machine Code}{40}{subsubsection.3.4.1.3}
+\contentsline {subsection}{\numberline {3.4.2}Interpreter}{41}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Choice of Language Processor for This Project}{41}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Language Processing Strategy}{41}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.5}Compilation passes}{43}{subsection.3.4.5}
+\contentsline {subsection}{\numberline {3.4.6}Abstract Syntax Trees}{43}{subsection.3.4.6}
+\contentsline {subsection}{\numberline {3.4.7}Parse Tree}{43}{subsection.3.4.7}
+\contentsline {subsection}{\numberline {3.4.8}Visitor Pattern}{45}{subsection.3.4.8}
+\contentsline {section}{\numberline {3.5}Syntactic Analysis}{46}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Known lexers and parsers}{47}{subsection.3.5.1}
+\contentsline {subsubsection}{\numberline {3.5.1.1}Lexer}{47}{subsubsection.3.5.1.1}
+\contentsline {subsubsection}{\numberline {3.5.1.2}Parser}{47}{subsubsection.3.5.1.2}
+\contentsline {subsubsection}{\numberline {3.5.1.3}Lexer and parser}{48}{subsubsection.3.5.1.3}
+\contentsline {subsubsection}{\numberline {3.5.1.4}Comparison Tables}{48}{subsubsection.3.5.1.4}
+\contentsline {subsection}{\numberline {3.5.2}ANTLR}{49}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}Lexical Analyzer}{51}{subsection.3.5.3}
+\contentsline {subsubsection}{\numberline {3.5.3.1}Tokens}{51}{subsubsection.3.5.3.1}
+\contentsline {subsection}{\numberline {3.5.4}Parser}{52}{subsection.3.5.4}
+\contentsline {subsubsection}{\numberline {3.5.4.1}Top-down Parsers}{53}{subsubsection.3.5.4.1}
+\contentsline {subsubsection}{\numberline {3.5.4.2}Bottom-Up Parsers}{53}{subsubsection.3.5.4.2}
+\contentsline {section}{\numberline {3.6}Contextual Analysis}{53}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Scope Checking}{54}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}Type Checking}{56}{subsection.3.6.2}
+\contentsline {subsubsection}{\numberline {3.6.2.1}Tree traversal}{56}{subsubsection.3.6.2.1}
+\contentsline {subsubsection}{\numberline {3.6.2.2}Value}{56}{subsubsection.3.6.2.2}
+\contentsline {subsubsection}{\numberline {3.6.2.3}Function}{58}{subsubsection.3.6.2.3}
+\contentsline {subsubsection}{\numberline {3.6.2.4}Variable}{59}{subsubsection.3.6.2.4}
+\contentsline {subsubsection}{\numberline {3.6.2.5}Drink}{60}{subsubsection.3.6.2.5}
+\contentsline {subsubsection}{\numberline {3.6.2.6}Error Handling}{61}{subsubsection.3.6.2.6}
+\contentsline {section}{\numberline {3.7}Theory of Code Generation}{62}{section.3.7}
+\contentsline {section}{\numberline {3.8}Code Generation of SPLAD}{63}{section.3.8}
+\contentsline {subsection}{\numberline {3.8.1}Unit Testing}{68}{subsection.3.8.1}
+\contentsline {subsubsection}{\numberline {3.8.1.1}Unit Testing in General}{68}{subsubsection.3.8.1.1}
+\contentsline {subsubsection}{\numberline {3.8.1.2}Unit Testing in This Project}{69}{subsubsection.3.8.1.2}
+\contentsline {section}{\numberline {3.9}Component Setup}{71}{section.3.9}
+\contentsline {subsection}{\numberline {3.9.1}Test of program written in SPLAD}{72}{subsection.3.9.1}
+\contentsline {chapter}{\chapternumberline {4}Discussion and perspectivation}{73}{chapter.4}
+\contentsline {section}{\numberline {4.1}Further Development}{73}{section.4.1}
+\contentsline {chapter}{\chapternumberline {5}Conclusion}{75}{chapter.5}
+\contentsline {chapter}{Bibliography}{77}{section*.34}
 \cftpagenumbersoff {chapter}
 \changetocdepth {0}
-\contentsline {appendix}{\chapternumberline {A}Semantics}{79}{appendix.A}
-\contentsline {section}{\numberline {A.1}Transition Rules}{79}{section.A.1}
-\contentsline {appendix}{\chapternumberline {B}Program written in SPLAD}{83}{appendix.B}
+\contentsline {appendix}{\chapternumberline {A}Semantics}{81}{appendix.A}
+\contentsline {section}{\numberline {A.1}Transition Rules}{81}{section.A.1}
+\contentsline {appendix}{\chapternumberline {B}Program written in SPLAD}{85}{appendix.B}

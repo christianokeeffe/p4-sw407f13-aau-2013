@@ -1487,7 +1487,6 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 		}
 		else if(!FunctionMemory.get("pour").Params.get(0).type.equals("1") || !FunctionMemory.get("pour").Params.get(1).type.equals("3.1"))
 		{
-			Function f = FunctionMemory.get("pour");
 			Error err = new Error(22, "pour");
 			ErrList.add(err);
 		}

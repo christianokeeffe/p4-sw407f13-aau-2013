@@ -8,11 +8,11 @@
 \begin{align*}
 S::= \; & x := a \; | \; r[a_1] := a_2 \; | \; S_1; \; S_2 \; | \; \text{if} \; b \; \text{begin} \; S \; \text{end} \; | \; \text{if} \; b \; \text{begin} \; S_1 \; \text{end} \; \text{else begin} \; S_2 \; \text{end} \\
 ~ & \text{while} \; b \; \text{begin} \; S \; \text{end} \; | \; \text{from} \; x := a_1 \; \text{to} \; a_2 \; \text{step} \; a_3 \; \text{begin} \; S \; \text{end} \; | \; \text{call} \; p(\vec{x}) \; | \; D_V \; | \; D_A \; | \; D_P \\
-~ & | \; \text{switch}(a) \; \text{begin} \; \text{case } a_1: \; S_1 \; \text{break}; \; \dots \; \text{case} a_k: \; S_k \; \text{break}; \; \text{default}: \; S \; \text{break} \; \text{end} \\
+~ & | \; \text{switch}(a) \; \text{begin} \; \text{case } a_1: \; S_1 \; \text{break}; \; \dots \; \text{case } a_k: \; S_k \; \text{break}; \; \text{default}: \; S \; \text{break} \; \text{end} \\
 a::= \; & n \; | \; x \; | \; a_1 + a_2 \; | \; a_1 - a_2 \; | \; a_1 * a_2 \; | \; a_1 / a_2 \; | \; (a) \; | \; r[a_i]\\
 b::= \; &a_1 = a_2 \; | \; a_1 > a_2 \; | \; a_1 < a_2 \; | \; \neg b \; | \; b_1 \; \wedge \; b_2 \; | \; b_1 \; \vee \; b_2 \; | \; (b)\\
 D_V::= \; & \text{var} \; x := a \\
-D_P::= \; & \text{func} \; p \; \text{is} \; \text{begin} \; S \; \text{end} \; | \; \text{func} \; p(\vec{x}) \; \text{is} \; \text{begin} \; S \; \text{end} \\
+D_P::= \; & \; \text{func} \; p(\vec{x}) \; \text{is} \; \text{begin} \; S \; \text{end} \\
 D_A::= \; & \text{array} \; r[a_1] \\
 \end{align*}
 
@@ -119,7 +119,7 @@ D_A::= \; & \text{array} \; r[a_1] \\
 ~ & ~ \\
 ~ & \indent\indent Where $k > 0$ \\
 ~ & \indent\indent and $env_V, sto \vdash a \rightarrow_a v$ \\
-~ & \indent\indent and $env_V, sto \vdash a_1 \rightarrow_a v_1$ \\
+~ & \indent\indent and $env_V, sto \vdash a_1 \rightarrow_a v_1$ \fxfatal{kunne det ikke være bedre med "k" i stedet for 1?} \\
 ~ & \indent\indent and $v = v_1$ \\
 ~ & ~ \\
 
@@ -188,7 +188,7 @@ D_A::= \; & \text{array} \; r[a_1] \\
 
 \begin{longtable}{l l}
 \longtablesetting{2}
-~ & Transitioner på formen: $env_V, sto \vdash b \rightarrow_b t$ \\
+~ & Transitioner på formen: $env_V, sto \vdash b \rightarrow_b \text{bool}$ \\
 ~ & ~ \\
 
 [EQUAL-TRUE] & $\dfrac{env_V, sto \vdash a_1 \rightarrow_a v_1 \; \; \; env_V, sto \vdash a_2 \rightarrow_a v_2}{env_V, sto \vdash a_1 = a_2 \rightarrow_b \text{true}}$ \\
@@ -224,7 +224,7 @@ D_A::= \; & \text{array} \; r[a_1] \\
 [NOT-1] & $\dfrac{env_V, sto \vdash b \rightarrow_b \text{true}}{env_V, sto \vdash !b \rightarrow_b \text{false}}$ \\
 ~ & ~ \\
 
-[NOT-2] & $\dfrac{env_V, sto \vdash b \rightarrow_b \text{true}}{env_V, sto \vdash !b \rightarrow_b \text{false}}$ \\
+[NOT-2] & $\dfrac{env_V, sto \vdash b \rightarrow_b \text{false}}{env_V, sto \vdash !b \rightarrow_b \text{true}}$ \\
 ~ & ~ \\
 
 [AND-TRUE] & $\dfrac{env_V, sto \vdash b_1 \rightarrow_b \text{true} \; \; \; env_V, sto \vdash b_2 \rightarrow_b \text{true}}{env_V, sto \vdash b_1 \wedge b_2 \rightarrow_b \text{true}}$ \\
@@ -266,10 +266,10 @@ D_A::= \; & \text{array} \; r[a_1] \\
 ~ & Transitioner på formen: $env_V \vdash \langle D_P, env_P \rangle \rightarrow_{DP} env_P'$ \\
 ~ & ~ \\
 
-[FUNC-DEC] & $\dfrac{env_V \vdash \langle D_P, env_P[p \mapsto (S, env_V, env_P)] \rangle \rightarrow_{DP} env_P'}{env_V \vdash \langle \text{proc} \; p \; \text{is begin} \; S \; \text{end}, env_P \rangle \rightarrow_{DP} env_P'}$ \\
-~ & ~ \\
+%[FUNC-DEC] & $\dfrac{env_V \vdash \langle D_P, env_P[p \mapsto (S, env_V, env_P)] \rangle \rightarrow_{DP} env_P'}{env_V \vdash \langle \text{proc} \; p \; \text{is begin} \; S \; \text{end}, env_P \rangle \rightarrow_{DP} env_P'}$ \\
+%~ & ~ \\
 
-[FUNC-PARA-DEC] & $\dfrac{env_V \vdash \langle D_P, env_P[p \mapsto(S, \vec{x}, env_V, env_P)] \rangle \rightarrow_{DP} \; env_P'}{env_V \vdash \langle \text{func} \; p(\text{var} \; \vec{x}) \; \text{is begin} \; S \; \text{end}, \; env_P \rangle \rightarrow_{DP} env_P'}$ \\
+[PROC-PARA-DEC] & $\dfrac{env_V \vdash \langle D_P, env_P[p \mapsto(S, \vec{x}, env_V, env_P)] \rangle \rightarrow_{DP} \; env_P'}{env_V \vdash \langle \text{function} \; p \; \text{using}(\text{var} \; \vec{x}) \; \text{begin} \; S \; \text{end}, \; env_P \rangle \rightarrow_{DP} env_P'}$ \\
 ~ & ~ \\ 
 
 %[EMPTY-FUNC] & $env_V \vdash \langle \varepsilon, env_P \rangle \rightarrow_{DP} env_P'$ \\

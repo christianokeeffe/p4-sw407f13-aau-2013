@@ -1485,8 +1485,9 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 			Error err = new Error(21, "pour");
 			ErrList.add(err);
 		}
-		else if(!FunctionMemory.get("pour").Params.get(0).type.equals("int") || !FunctionMemory.get("pour").Params.get(1).type.equals("double"))
+		else if(!FunctionMemory.get("pour").Params.get(0).type.equals("1") || !FunctionMemory.get("pour").Params.get(1).type.equals("3.1"))
 		{
+			Function f = FunctionMemory.get("pour");
 			Error err = new Error(22, "pour");
 			ErrList.add(err);
 		}
@@ -1496,7 +1497,7 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 			Error err = new Error(21, "RFIDFound");
 			ErrList.add(err);
 		}
-		else if(!FunctionMemory.get("RFIDFound").Params.get(0).type.equals("int") || !FunctionMemory.get("RFIDFound").Params.get(1).type.equals("int"))
+		else if(!FunctionMemory.get("RFIDFound").Params.get(0).type.equals("1") || !FunctionMemory.get("RFIDFound").Params.get(1).type.equals("1"))
 		{
 			Error err = new Error(22, "RFIDFound");
 			ErrList.add(err);

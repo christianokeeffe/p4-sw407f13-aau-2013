@@ -1,26 +1,33 @@
-\input{../../RapportNIXPILLE/preamble}
-\begin{document}
-
 \chapter{Transition Rules}
 \label{app:TransitionRules}
 
 \section{Abstract Syntax}
 \begin{align*}
+R ::= \; & D_P \; D_A \; D_V \; | R_1 \; R_2 \; \\
 S::= \; & x := a \; | \; r[a_1] := a_2 \; | \; S_1; \; S_2 \; | \; \text{if} \; b \; \text{begin} \; S \; \text{end} \; | \; \text{if} \; b \; \text{begin} \; S_1 \; \text{end} \; \text{else begin} \; S_2 \; \text{end} \\
-~ & \text{while} \; b \; \text{begin} \; S \; \text{end} \; | \; \text{from} \; x := a_1 \; \text{to} \; a_2 \; \text{step} \; a_3 \; \text{begin} \; S \; \text{end} \; | \; \text{call} \; p(\vec{x}) \; | \; D_V \; | \; D_A \; | \; D_P \\
-~ & | \; \text{switch}(a) \; \text{begin} \; \text{case } a_1: \; S_1 \; \text{break}; \; \dots \; \text{case} a_k: \; S_k \; \text{break}; \; \text{default}: \; S \; \text{break} \; \text{end} \\
+~ & \text{while} \; b \; \text{begin} \; S \; \text{end} \; | \; \text{from} \; x := a_1 \; \text{to} \; a_2 \; \text{step} \; a_3 \; \text{begin} \; S \; \text{end} \; | \; \text{call} \; p(\vec{x}) \; | \; D_V \; | \; D_A \; \\
+~ & | \; \text{switch}(a) \; \text{begin} \; \text{case } a_1: \; S_1 \; \text{break}; \; \dots \; \text{case } a_k: \; S_k \; \text{break}; \; \text{default}: \; S \; \text{break} \; \text{end} \\
 a::= \; & n \; | \; x \; | \; a_1 + a_2 \; | \; a_1 - a_2 \; | \; a_1 * a_2 \; | \; a_1 / a_2 \; | \; (a) \; | \; r[a_i]\\
 b::= \; &a_1 = a_2 \; | \; a_1 > a_2 \; | \; a_1 < a_2 \; | \; \neg b \; | \; b_1 \; \wedge \; b_2 \; | \; b_1 \; \vee \; b_2 \; | \; (b)\\
-D_V::= \; & \text{var} \; x := a \\
-D_P::= \; & \text{func} \; p \; \text{is} \; \text{begin} \; S \; \text{end} \; | \; \text{func} \; p(\vec{x}) \; \text{is} \; \text{begin} \; S \; \text{end} \\
-D_A::= \; & \text{array} \; r[a_1] \\
+D_V::= \; & \text{var} \; x := a \;|\; \eps\\
+D_P::= \; & \; \text{func} \; p(\vec{x}) \; \text{is} \; \text{begin} \; S \; \text{end}  \;|\; \eps\\
+D_A::= \; & \text{array} \; r[a_1]  \;|\; \eps\\
 \end{align*}
+
+\begin{longtable}{l l}
+\longtablesetting{2}
+[BLOCK] & $\dfrac{\begin{matrix} \langle D_V, env_V, sto \rangle \rightarrow_{DV} (env_V', sto'') \\ \langle D_A, env_V', sto'' \rangle \rightarrow_{DA} (env_V'', sto') \\ env_V'' \vdash \langle D_P, env_P \rangle \rightarrow_{DP} env_P' \end{matrix}}{env_V, env_P \vdash \langle \; D_V \; D_A \; D_P, sto \rangle \rightarrow sto'}$\\
+~ & ~ \\
+~[ROOT] & $\dfrac{\begin{matrix} env_V, env_P \vdash \langle R_1, sto \rangle \rightarrow sto'' \\ env_V, env_P \vdash \langle R_2, sto'' \rangle \rightarrow sto' \end{matrix}}{env_V, env_P \vdash  \langle R_1; R_2, sto \rangle \rightarrow sto'}$ \\
+~ & ~ \\
+\caption{Root statements}
+\end{longtable}
 
 
 \begin{longtable}{l l}
 \longtablesetting{2}
-%~ & Transitioner er på formen: $env_V, env_P \vdash \langle S, sto \rangle \rightarrow sto'$ \\
-%~ & ~ \\
+~ & Transitions are on the form: $env_V, env_P \vdash \langle S, sto \rangle \rightarrow sto'$ \\
+~ & ~ \\
 
 [VAR-ASS] & $env_V, env_P \vdash \langle x <-- a, sto \rangle \rightarrow sto[l \mapsto v]$ \\
 ~ & ~ \\
@@ -33,9 +40,9 @@ D_A::= \; & \text{array} \; r[a_1] \\
 ~ & \indent\indent where $env_V, sto \vdash a_1 \rightarrow_a v_1$ \\
 ~ & \indent\indent and $env_V, sto \vdash a_2 \rightarrow_a v_2$ \\
 ~ & \indent\indent and $env_V \; r = l_1$ \\
-~ & \indent\indent and $l_2 = l_1 + v_1$ \\
+~ & \indent\indent and $l_2 = l_1 + v_1+1$ \\
 ~ & \indent\indent and $v_3 = sto \; l_1$ \\
-~ & \indent\indent and $1 \leq v_1 \leq v_3$ \\
+~ & \indent\indent and $0 \leq v_1 \leq v_3$ \\
 ~ & ~ \\
 
 [COMP] & $\dfrac{\begin{matrix} env_V, env_P \vdash \langle S_1, sto \rangle \rightarrow sto'' \\ env_V, env_P \vdash \langle S_2, sto'' \rangle \rightarrow sto' \end{matrix}}{env_V, env_P \vdash  \langle S_1; S_2, sto \rangle \rightarrow sto'}$ \\
@@ -137,7 +144,7 @@ D_A::= \; & \text{array} \; r[a_1] \\
 
 \begin{longtable}{l l}
 \longtablesetting{2}
-~ & Transitioner er på formen: $env_V, sto \vdash a \rightarrow_a v$ \\
+~ & Transitions are on the form: $env_V, sto \vdash a \rightarrow_a v$ \\
 ~ & ~ \\
 
 [NUM] & $env_V, sto \vdash n \rightarrow_a v$ \\
@@ -188,7 +195,7 @@ D_A::= \; & \text{array} \; r[a_1] \\
 
 \begin{longtable}{l l}
 \longtablesetting{2}
-~ & Transitioner på formen: $env_V, sto \vdash b \rightarrow_b t$ \\
+~ & Transitions are on the form: $env_V, sto \vdash b \rightarrow_b \text{bool}$ \\
 ~ & ~ \\
 
 [EQUAL-TRUE] & $\dfrac{env_V, sto \vdash a_1 \rightarrow_a v_1 \; \; \; env_V, sto \vdash a_2 \rightarrow_a v_2}{env_V, sto \vdash a_1 = a_2 \rightarrow_b \text{true}}$ \\
@@ -224,7 +231,7 @@ D_A::= \; & \text{array} \; r[a_1] \\
 [NOT-1] & $\dfrac{env_V, sto \vdash b \rightarrow_b \text{true}}{env_V, sto \vdash !b \rightarrow_b \text{false}}$ \\
 ~ & ~ \\
 
-[NOT-2] & $\dfrac{env_V, sto \vdash b \rightarrow_b \text{true}}{env_V, sto \vdash !b \rightarrow_b \text{false}}$ \\
+[NOT-2] & $\dfrac{env_V, sto \vdash b \rightarrow_b \text{false}}{env_V, sto \vdash !b \rightarrow_b \text{true}}$ \\
 ~ & ~ \\
 
 [AND-TRUE] & $\dfrac{env_V, sto \vdash b_1 \rightarrow_b \text{true} \; \; \; env_V, sto \vdash b_2 \rightarrow_b \text{true}}{env_V, sto \vdash b_1 \wedge b_2 \rightarrow_b \text{true}}$ \\
@@ -250,7 +257,7 @@ D_A::= \; & \text{array} \; r[a_1] \\
 
 \begin{longtable}{l l}
 \longtablesetting{2}
-~ & Transitioner på formen: $\langle D_V, env_V, sto \rangle \rightarrow_{DV} (env_V', sto')$ \\
+~ & Transitions are on the form: $\langle D_V, env_V, sto \rangle \rightarrow_{DV} (env_V', sto')$ \\
 ~ & ~ \\
 
 [VAR-DEC] & $\dfrac{\langle D_V, env_V'', sto[l \mapsto v] \rangle \rightarrow_{DV} (env_V', sto')}{\text{var} \; x <-- a, env_V, sto \rangle \rightarrow_{DV} (env_V', sto')}$ \\
@@ -260,22 +267,22 @@ D_A::= \; & \text{array} \; r[a_1] \\
 ~ & \indent\indent and $env_V'' = env_V[x \mapsto l][\text{next} \mapsto \text{new} \; l]$ \\
 ~ & ~ \\
 
-%[EMPTY-VAR] & $\langle \varepsilon, env_V, sto \rangle \rightarrow_{DV} (env_V, sto)$ \\
+[EMPTY-VAR] & $\langle \varepsilon, env_V, sto \rangle \rightarrow_{DV} (env_V, sto)$ \\
+~ & ~ \\
+
+~ & Transitions are on the form: $env_V \vdash \langle D_P, env_P \rangle \rightarrow_{DP} env_P'$ \\
+~ & ~ \\
+
+%[FUNC-DEC] & $\dfrac{env_V \vdash \langle D_P, env_P[p \mapsto (S, env_V, env_P)] \rangle \rightarrow_{DP} env_P'}{env_V \vdash \langle \text{proc} \; p \; \text{is begin} \; S \; \text{end}, env_P \rangle \rightarrow_{DP} env_P'}$ \\
 %~ & ~ \\
 
-~ & Transitioner på formen: $env_V \vdash \langle D_P, env_P \rangle \rightarrow_{DP} env_P'$ \\
-~ & ~ \\
-
-[FUNC-DEC] & $\dfrac{env_V \vdash \langle D_P, env_P[p \mapsto (S, env_V, env_P)] \rangle \rightarrow_{DP} env_P'}{env_V \vdash \langle \text{proc} \; p \; \text{is begin} \; S \; \text{end}, env_P \rangle \rightarrow_{DP} env_P'}$ \\
-~ & ~ \\
-
-[FUNC-PARA-DEC] & $\dfrac{env_V \vdash \langle D_P, env_P[p \mapsto(S, \vec{x}, env_V, env_P)] \rangle \rightarrow_{DP} \; env_P'}{env_V \vdash \langle \text{func} \; p(\text{var} \; \vec{x}) \; \text{is begin} \; S \; \text{end}, \; env_P \rangle \rightarrow_{DP} env_P'}$ \\
+[PROC-PARA-DEC] & $\dfrac{env_V \vdash \langle D_P, env_P[p \mapsto(S, \vec{x}, env_V, env_P)] \rangle \rightarrow_{DP} \; env_P'}{env_V \vdash \langle \text{function} \; p \; \text{using}(\text{var} \; \vec{x}) \; \text{begin} \; S \; \text{end}, \; env_P \rangle \rightarrow_{DP} env_P'}$ \\
 ~ & ~ \\ 
 
-%[EMPTY-FUNC] & $env_V \vdash \langle \varepsilon, env_P \rangle \rightarrow_{DP} env_P'$ \\
-%~ & ~ \\
+[EMPTY-PROC] & $env_V \vdash \langle \varepsilon, env_P \rangle \rightarrow_{DP} env_P'$ \\
+~ & ~ \\
 
-~ & Transitioner på formen: $\langle D_A, env_V, sto \rangle \rightarrow_{DA} (env_V', sto')$ \\
+~ & Transitions are on the form: $\langle D_A, env_V, sto \rangle \rightarrow_{DA} (env_V', sto')$ \\
 ~ & ~ \\
 
 [ARRAY-DEC] & $\dfrac{\langle D_A, env_V[r \mapsto l, \text{next} \mapsto l + v + 1],  sto[l \mapsto v] \rangle \rightarrow_{DA} (env_V', sto')}{\langle \text{array} \; r[a_1], env_V, sto \rangle \rightarrow_{DA} (env_V', sto')}$ \\
@@ -285,8 +292,8 @@ D_A::= \; & \text{array} \; r[a_1] \\
 ~ & \indent\indent and $v > 0$ \\
 ~ & ~ \\
 
-%[EMPTY-ARRAY] & $\langle \varepsilon, env_V, sto \rangle \rightarrow_{DA} (env_V, sto)$ \\
-%~ & ~ \\
+[EMPTY-ARRAY] & $\langle \varepsilon, env_V, sto \rangle \rightarrow_{DA} (env_V, sto)$ \\
+~ & ~ \\
 \caption{Declarations}
 \end{longtable}
 
@@ -532,5 +539,3 @@ D_A::= \; & \text{array} \; r[a_1] \\
 %\end{tabular}
 %\caption{Aritmethic expressions}
 %\end{table}
-
-\end{document}

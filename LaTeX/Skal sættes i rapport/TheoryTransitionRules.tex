@@ -1,5 +1,3 @@
-\input{../../RapportNixPille/preamble}
-\begin{document}
 \section{Transition Rules}
 In this section some of the transition rules in SPLAD will be explained. The complete list of all the rules can be seen in appendix \ref{sec:transitionrules}.
 In the following text we use the following names to represent different syntactic categories.
@@ -33,11 +31,21 @@ D_A::= \; & \text{array} \; r[a_1]  \;|\; \eps\\
 
 We assume a collection of syntactic categories and for each syntactic category we give a finite set of formation rules which defines how the the inhabitants of the category can be build \citep{HHTree}.
 
-\subsection{Transition Systems}
+\subsection{Transition System}
+A transition system is used to describe how the constructions of a programming language behaves given a state and a cause. The cause is represented as a transition and given a state it will result in a movement in the system.
 
+A transition system is defined as a tuple with three sets, hence a triple. These three sets are: A set of configurations ($\Gamma$), a set of transition relations $(\rightarrow)$ and a set of terminal configurations $(\Tau)$.
+A configuration is a description of a program and the state of it. Transition relations describes how the program moves from state to state. The terminal configuration describes the states where the program ends, meaning that when one of these are reached the program terminates \citep{HHTree}.
 
-\subsection{Big-step-semantic and small-step-semantic}
-\fxfatal{Forklar hvad det er, og at vi bruger big-step.}
+We uses the transition system to describe the semantics of our programming language. It gives us a tool to formally describe precisely how the language should behave. This results in a more precise way of implementing the rules we want, compared to if it was described in a informal way. There are two ways of using a transition system, big-step and small-step, see section \ref{sec:BvsS}. In this section we also describe which of the two we have chosen to use and the reason for this choice.
+
+\subsection{Big-step vs. Small-step semantics}
+\label{sec:BvsS}
+There are two ways to describe the computation of transition systems, big-step and small-step. In Big-step-semantics a transition describes the full computation, meaning there are not multiple steps in the computation - the whole computation is done in one step. To describe a computation step by step, small-step-semantics are used. These allow each step in the computation itself to be described \citep{HHTree}.
+
+The property of big-step-semantics make it easier to formulate the transition rules because they do not have to describe the steps in the computations. The downside of big-step-semantics is that it makes it almost impossible to describe parallelism in a language. The reason for this, is that to describe parallelism in a language, it will be necessary to describe each step of the computations so that the system for example is allowed to switch between two statements. This is also the reason why small-step-semantics is the most reasonable choice when describing parallelism. On the other hand small-step-semantics is not as easy to describe as big-step-semantics \citep{HHTree}.
+
+We have decided to use big-step-semantic because we do not wish to describe parallelism in this project. Therefore big-step-semantic is a more appealing choice because it is easier to formulate rather than small-step-semantics.
 
 \subsection{Environment-Store Model}
 In our project we use the \textit{environment-store model} to represent how a variable is bound to a storage cell (called a \textit{location}), in a computer, and that the value of the variable is the content of the bound location. All the possible locations are denoted by \textbf{Loc} and a single location as $l \in \textbf{Loc}$. We assume all locations are integer, and therefore $\textbf{Loc} = \mathbb{N}$. Since all locations are integers we can define a function to find the next location: $\textbf{Loc} \rightarrow \textbf{Loc}$, where $l = l + 1$. 
@@ -149,4 +157,3 @@ The transitions rules for the array declaration can be seen on table \ref{tab:Ar
 \caption{Transition rules for the array declarations.}
 \label{tab:ArrayDec}
 \end{longtable}
-\end{document}

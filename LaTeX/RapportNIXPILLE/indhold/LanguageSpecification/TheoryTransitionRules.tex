@@ -1,92 +1,159 @@
+\subsection{Transition Rules}
 In this section some of the transition rules in SPLAD will be explained. The complete list of all the rules can be seen in appendix \ref{sec:transitionrules}.
 In the following text we use the following names to represent different syntactic categories.
-
 \begin{itemize}
 \item $n \in \textbf{Num}$ - Numerals
-\item $v$ - Values
 \item $x \in \textbf{Var}$ - Variables 
 \item $r \in \textbf{Arrays}$ - Array names
-\item $a \in A{exp}$ - Arithmetic expression
-\item $b \in B{exp}$ - Boolean expression
-\item $e \in A_{exp} \cup B_{exp}$ - expressions
-\item $C \in \textbf{Com}$ - Commands
+\item $a \in \mathbf{A_{exp}}$ - Arithmetic expression
+\item $b \in \mathbf{B_{exp}}$ - Boolean expression
+\item $S \in \textbf{Stm}$ - Statements
+\item $R \in \textbf{Stm}$ - Root statements
+\item $p \in \textbf{Pnames}$ - Procedure names
+\item $D_V \in \textbf{DecV}$ - Variable declarations
+\item $D_P \in \textbf{DecP}$ - Procedure declarations
+\item $D_A \in \textbf{DecA}$ - Array declarations
 \end{itemize}
 
-\subsection{Environment-Store Model}
-In our project we use the \textit{environment-store model} to represent how a variable is bound to a storage cell (called a \textit{location}), in the computer, and that the value of the variable is the content of the bound location. All the possible locations are denoted by \textbf{Loc} and a single location as $l \in \textbf{Loc}$. We assume all locations are integer, and therefore $\textbf{Loc} = \mathbb{Z}$. Since all locations are integers er can define a function to find the next location: $\textbf{Loc} \rightarrow \textbf{Loc}$, where $l = l + 1$
+\subsubsection{Abstract Syntax}
+In order to describe the behavior of a program, one must first account for its syntax. We use the notion of abstract syntax, since it will allow us to describe the essential structure of the program. An abstract syntax is defined as follows. 
+\begin{align*}
+R ::= \; & D_P \; D_A \; D_V \; | R_1 \; R_2 \; \\
+S::= \; & x := a \; | \; r[a_1] := a_2 \; | \; S_1; \; S_2 \; | \; \text{if} \; b \; \text{begin} \; S \; \text{end} \; | \; \text{if} \; b \; \text{begin} \; S_1 \; \text{end} \; \text{else begin} \; S_2 \; \text{end} \\
+~ & \text{while} \; b \; \text{begin} \; S \; \text{end} \; | \; \text{from} \; x := a_1 \; \text{to} \; a_2 \; \text{step} \; a_3 \; \text{begin} \; S \; \text{end} \; | \; \text{call} \; p(\vec{x}) \; | \; D_V \; | \; D_A \; \\
+~ & | \; \text{switch}(a) \; \text{begin} \; \text{case } a_1: \; S_1 \; \text{break}; \; \dots \; \text{case } a_k: \; S_k \; \text{break}; \; \text{default}: \; S \; \text{break} \; \text{end} \\
+a::= \; & n \; | \; x \; | \; a_1 + a_2 \; | \; a_1 - a_2 \; | \; a_1 * a_2 \; | \; a_1 / a_2 \; | \; (a) \; | \; r[a_i]\\
+b::= \; &a_1 = a_2 \; | \; a_1 > a_2 \; | \; a_1 < a_2 \; | \; \neg b \; | \; b_1 \; \wedge \; b_2 \; | \; b_1 \; \vee \; b_2 \; | \; (b)\\
+D_V::= \; & \text{var} \; x := a \;|\; \eps\\
+D_P::= \; & \; \text{func} \; p(\vec{x}) \; \text{is} \; \text{begin} \; S \; \text{end}  \;|\; \eps\\
+D_A::= \; & \text{array} \; r[a_1]  \;|\; \eps\\
+\end{align*}
 
-We define the set of stores to be the mappings from locations to values $\textbf{Sto } = \textbf{ Loc } \rightharpoonup \mathbb{Z}$, where $sto$ is an single element in $\textbf{Sto}$.
+We assume a collection of syntactic categories and for each syntactic category we give a finite set of formation rules which defines how the the inhabitants of the category can be build \citep{HHTree}.
 
-The following names represent the different environments.
+\subsubsection{Transition System}
+A transition system is used to describe how the constructions of a programming language behaves given a state and a cause. The cause is represented as a transition and given a state it will result in a movement in the system.
+
+A transition system is defined as a tuple with three sets, hence a triple. These three sets are: A set of configurations ($\Gamma$), a set of transition relations $(\rightarrow)$ and a set of terminal configurations $(\Tau)$.
+A configuration is a description of a program and the state of it. Transition relations describes how the program moves from state to state. The terminal configuration describes the states where the program ends, meaning that when one of these are reached the program terminates \citep{HHTree}.
+
+We uses the transition system to describe the semantics of our programming language. It gives us a tool to formally describe precisely how the language should behave. This results in a more precise way of implementing the rules we want, compared to if it was described in a informal way. There are two ways of using a transition system, big-step and small-step, see section \ref{sec:BvsS}. In this section we also describe which of the two we have chosen to use and the reason for this choice.
+
+\subsubsection{Big-step vs. Small-step semantics}
+\label{sec:BvsS}
+There are two ways to describe the computation of transition systems, big-step and small-step. In Big-step-semantics a transition describes the full computation, meaning there are not multiple steps in the computation - the whole computation is done in one step. To describe a computation step by step, small-step-semantics are used. These allow each step in the computation itself to be described \citep{HHTree}.
+
+The property of big-step-semantics make it easier to formulate the transition rules because they do not have to describe the steps in the computations. The downside of big-step-semantics is that it makes it almost impossible to describe parallelism in a language. The reason for this, is that to describe parallelism in a language, it will be necessary to describe each step of the computations so that the system for example is allowed to switch between two statements. This is also the reason why small-step-semantics is the most reasonable choice when describing parallelism. On the other hand small-step-semantics is not as easy to describe as big-step-semantics \citep{HHTree}.
+
+We have decided to use big-step-semantic because we do not wish to describe parallelism in this project. Therefore big-step-semantic is a more appealing choice because it is easier to formulate rather than small-step-semantics.
+
+\subsubsection{Environment-Store Model}
+In our project we use the \textit{environment-store model} to represent how a variable is bound to a storage cell (called a \textit{location}), in a computer, and that the value of the variable is the content of the bound location. All the possible locations are denoted by \textbf{Loc} and a single location as $l \in \textbf{Loc}$. We assume all locations are integer, and therefore $\textbf{Loc} = \mathbb{N}$. Since all locations are integers we can define a function to find the next location: $\textbf{Loc} \rightarrow \textbf{Loc}$, where $l = l + 1$. 
+
+We define the set of stores to be the mappings from locations to values $\textbf{Sto } = \textbf{ Loc } \rightharpoonup \mathbb{Z}$, where $sto$ is a single element in $\textbf{Sto}$.
+
+A variable-environment is like a symbol table containing each variable and stores the variables address. The store then describe which value that is on each address.
+
+The following names represent the different environments. 
 \begin{itemize}
-\item $env_V \in Env_V$ - Variable declarations
-\item $env_A \in Env_A$ - Array declarations
-\item $env_C \in Env_C$ - Constant declarations
-\item $env_E \in Env_E$ - Expressions declarations
+\item $env_V \in Env_V$ - Variable environment
+\item $env_A \in Env_A$ - Array environment
+\item $env_P \in Env_P$ - Procedure environment
 \end{itemize}
 
-%beskriv l side 79
-%\item $sto$
+\subsubsection{Statements}
+The transition rules for the statements are on the form: $env_V, env_P \vdash \langle S, sto \rangle \rightarrow sto'$. The transition system is defined by: $(\Gamma_{\mathbf{Stm}}, \rightarrow, \Tau_{\mathbf{Stm}})$ and the configurations are defined by $\Gamma_{\mathbf{Stm}} = \textbf{Stm} \times \textbf{Sto} \cup \textbf{Sto}$. The end configurations are defined by $\Tau_{\mathbf{Stm}} = \textbf{Sto}$.
 
-\subsection{Arithmetic Expressions}
-The transition rule for multiplication in SPLAD can be seen on table \ref{tab:MultExp}. The rule states, that if $a_1$ evaluates to $v_1$ and $a_2$ evaluates to $v_2$, using any of the rules from $A_{exp}$, then $a_1 * a_2$ evaluates to $v$ where $v = v_1 * v_2$.
-
-\begin{table}
-\begin{tabular}{l l}
-[MUL] & \[\frac{env_E, \: sto \vdash a_1 \rightarrow_a v_1 \;\; env_E, \: sto \vdash a_2 \rightarrow_a v_2}{env_E, \: sto \vdash a_1 * a_2 \rightarrow_a v}\] \\
-~ & ~ \\
-~ & \indent\indent where $v=v_1 * v_2$ \\ 
-~ & ~ \\
-\end{tabular}
-\caption{The transition rule for the arithmetic multiplication expression.}
-\label{tab:MultExp}
-\end{table}
-
-\subsection{Boolean Expressions}
-The transition rule for logical-or in SPLAD can be seen on table \ref{tab:OrExp}. The rules have to parts: [OR-TRUE] and [OR-FALSE]. The [OR-TRUE] rule states that either $b_1$ or $b_2$ evaluates to \textit{true}, using any of the rules from $B_{exp}$ then the expression $b_1 OR b_2$ evaluates to \textit{true}. [OR-FALSE] states that if both $b_1$ and $b_2$ evaluates to \textit{false} then the expression $b_1 OR b_2$ evaluates to \textit{false}.
+On table \ref{tab:VarAssign} the assignment rule for variables can be seen. The rule states, that if $a$ evaluates to $v$, and $x$ points to the location $l$, then $v$ is stored in the $l$.
 
 \begin{longtable}{l l}
 \longtablesetting{2}
-[OR-TRUE] & \[\frac{env_E, \: sto \vdash b_1 \vee b_2 \rightarrow_b \text{true}}{env_E, \: sto \vdash b_1  \; \text{OR} \; b_2 \rightarrow_b \text{true}}\] \\
+[VAR-ASS] & $env_V, env_P \vdash \langle x <-- a, sto \rangle \rightarrow sto[l \mapsto v]$ \\
 ~ & ~ \\
-
-[OR-FALSE] & \[\frac{env_E, \: sto \vdash b_1 \wedge b_2 \rightarrow_b \text{false}}{env_E, \: sto \vdash b_1  \; \text{OR} \; b_2 \rightarrow_b \text{false}}\] \\
-~ & ~ \\
-\caption{Transition rule for the boolean expression logical-or.}
-\label{tab:OrExp}
-\end{longtable}
-
-\subsection{Declarations}
-\fxfatal{Kan ikke laves siden at transition rules til dette punkt ikke er lavet endnu}
-
-\subsection{Assignments}
-The transition rule for variable assignment in SPLAD can be seen on table \ref{tab:VarAssign}. When a variable is assigned the contents of $l$ is updated to $v$, where $l$ is the location of $x$ found in the $env_V$ and $v$ is the result of evaluation $e$.
-
-\begin{longtable}{l l}
-\longtablesetting{2}
-[VAR-ASS] & \[env_C, \: \vdash \langle x=e, \; sto \rangle \rightarrow sto[l \mapsto v]\] \\
-~ & ~ \\
-~ & \indent\indent where $env_C, \; sto \vdash e \rightarrow_e v$ \\
-~ & \indent\indent and $env_V \; x=l$ \\
+~ & \indent\indent where $env_V, sto \vdash a \rightarrow_a v$ \\
+~ & \indent\indent and $env_V \; x = l$ \\
 ~ & ~ \\
 \caption{Transition rule for variable assignment.}
 \label{tab:VarAssign}
 \end{longtable}
 
-\subsection{Commands}
-The transition rule for the while statement in SPLAD can be seen on table \ref{tab:WhileStatement}. The rule have to parts: [WHL-TRUE] and [WHL-FALSE]. If the condition $b$ evaluates to \textit{true} then the [WHL-TRUE] states that $C$ will be executed which will update the \textit{store} (sto) and again call the expression and evaluate the new $b$. If the condition $b$ evaluates to \textit{false} then $C$ is \underline{not} executed and the \textit{store} is not updated. The program exits the while statement. \citep{HHTree}
+\subsubsection{Arithmetic Expressions}
+The transition rules for the arithmetic expressions are on the form: $env_V, sto \vdash a \rightarrow_a v$. The transition system is defined by: $(\Gamma_{\mathbf{Aexp}}, \rightarrow_a, \Tau_{\mathbf{Aexp}})$ and the configurations are defined by $\Gamma_{\mathbf{Aexp}} = \textbf{Aexp} \cup \mathbb{Z}$. The end configurations are defined by $\Tau_{\mathbf{Aexp}} = \mathbb{Z}$.
+
+The transition rule for multiplication in SPLAD can be seen on table \ref{tab:MultExp}. The rule states, that if $a_1$ evaluates to $v_1$ and $a_2$ evaluates to $v_2$, using any of the rules from the arithmetic expressions, then $a_1 \cdot a_2$ evaluates to $v$ where $v = v_1 \cdot v_2$.
 
 \begin{longtable}{l l}
 \longtablesetting{2}
-[WHL-TRUE] & \[\frac{env_C \: \vdash \langle C, \: sto \rangle \rightarrow sto'' \; env_C \: \vdash \langle \text{\textbf{while}}(b)\;\text{begin}\;C\; \text{end}, \: sto'' \rangle \rightarrow sto'}{env_C \: \vdash \: \langle \text{\textbf{while}}(b) \: \text{begin}\;C\;\text{end}, \: sto \rangle \rightarrow sto' }\] \\
+[MULT] & $\dfrac{env_V, sto \vdash a_1 \rightarrow_a v_1 \; \; \; env_V, sto \vdash a_2 \rightarrow_a v_2}{env_V, sto \vdash a_1 \cdot a_2 \rightarrow_a v}$ \\
 ~ & ~ \\
-~ & \indent\indent if $env_C, \; sto \vdash b \rightarrow_b \text{true}$ \\
+~ & \indent\indent where $v = v_1 \cdot v_2$ \\
+~ & ~ \\
+\caption{The transition rule for the arithmetic multiplication expression.}
+\label{tab:MultExp}
+\end{longtable}
+
+\subsubsection{Boolean Expression}
+The transition rules for boolean expressions are on the form: $env_V, sto \vdash b \rightarrow_b t$. The transition system is defined by: $(\Gamma_{\mathbf{Bexp}}, \rightarrow_b, \Tau_{\mathbf{Bexp}})$ and the configurations are defined by $\Gamma_{\mathbf{Bexp}} = \textbf{Bexp} \cup \{tt, ff\}$. The end configurations are defined by $\Tau_{\mathbf{Bexp}} = \{tt, ff\}$.
+
+The transition rule for logical-or in SPLAD can be seen on table \ref{tab:OrExp}. The rules have two parts: [OR-TRUE] and [OR-FALSE]. The [OR-TRUE] rule states that either $b_1$ or $b_2$ evaluates to \textit{TRUE}, using any of the rules from the boolean expressions, then the expression $b_1 \; \text{OR} \; b_2$ evaluates to \textit{TRUE}. [OR-FALSE] states that if both $b_1$ and $b_2$ evaluate to \textit{FALSE} then the expression $b_1 \; \text{OR } \; b_2$ evaluates to \textit{FALSE}.
+
+\begin{longtable}{l l}
+\longtablesetting{2}
+[OR-TRUE] & $\dfrac{env_V, sto \vdash b_i \rightarrow_b \text{TRUE}}{env_V, sto \vdash b_1 \vee b_2 \rightarrow_b \text{TRUE}}$ \\
+~ & ~ \\
+~ & \indent\indent where $i \in {1,2}$ \\
 ~ & ~ \\
 
-[WHL-FALSE] & \[env_C \: \vdash \langle \text{\textbf{while}}(b) \: \text{begin} \: C \: \text{end}, \: sto \rangle \rightarrow sto\] \\
+[OR-FALSE] & $\dfrac{env_V, sto \vdash b_1 \rightarrow_b \text{FALSE} \; \; \; env_V, sto \vdash b_2 \rightarrow_b \text{FALSE}}{env_V, sto \vdash b_1 \vee b_2 \rightarrow_b \text{FALSE}}$ \\
 ~ & ~ \\
-~ & \indent\indent if $env_C, \; sto \vdash b \rightarrow_b \text{false}$ \\
+\caption{Transition rule for the boolean expression logical-or.}
+\label{tab:OrExp}
+\end{longtable}
+
+\subsubsection{Variable Declaration}
+The transition rules for the variable declarations are on the form: $\langle D_V, env_V, sto \rangle \rightarrow_{DV} (env_V', sto')$. The transition system is defined by: $\Gamma_{\mathbf{DecV}}, \rightarrow_{DV}, \Tau_{\mathbf{DecV}}$ and the configurations are defined by $\Gamma_{DV} = (\textbf{DecV} \times \textbf{EnvV} \times \textbf{Sto}) \cup (\textbf{EnvV} \times \textbf{Sto})$ and $\Tau_{DV} = (\textbf{EnvV} \times \textbf{Sto})$. The end configurations are defined by $\Tau_{\mathbf{DecV}} = \textbf{EnvV} \times \textbf{Sto}$.
+
+The transition rules for variable declaration can be seen on table \ref{tab:VarDec}. It is done by binding $l$ to the next available location and binding $x$ to this location. The function $new$ is then used to point at the next available location. Then $env_V$ is updated to include the new variable, while the store remains unchanged.
+
+\begin{longtable}{l l}
+\longtablesetting{2}
+[VAR-DEC] & $\dfrac{\langle D_V, env_V'', sto[l \mapsto v] \rangle \rightarrow_{DV} (env_V', sto'}{\text{var} \; x <-- a; D_V, env_V, sto \rangle \rightarrow_{DV} (env_V', sto')}$ \\
 ~ & ~ \\
-\caption{Transition rules for the while statement.}
-\label{tab:WhileStatement}
+~ & \indent\indent where $env_V, sto \vdash a \rightarrow_a v$ \\
+~ & \indent\indent and $l = env_V \; \text{next}$ \\
+~ & \indent\indent and $env_V'' = env_V[x \mapsto l][\text{next} \mapsto \text{new} \; l]$ \\
+~ & ~ \\
+\caption{Transition rules for the variable declarations.}
+\label{tab:VarDec}
+\end{longtable}
+
+\subsubsection{Procedure Declaration}
+The transition rules for the procedure declarations are on the form: $env_V \vdash \langle D_P, env_P \rangle \rightarrow_{DP} env_P'$. The transition system is defined by: $(\Gamma_{\mathbf{DecP}}, \rightarrow_{DP}, \Tau_{\mathbf{DecP}})$ and the configurations are defined by $\Gamma_{DP} = (\textbf{DecP} \times \textbf{EnvP}) \cup \textbf{EnvP}$ and $\Tau_{DP} = \textbf{EnvP}$. The end configurations are defined by $\Tau_{\mathbf{DecP}} = \textbf{EnvP}$.
+
+The transitions rules for procedure declaration with none to multiple parameters can be seen on table \ref{tab:ProcDec}. The rule states that the new procedure is stored in the procedure environment along with the statement, formal parameters, and procedure- and variable-bindings from the time of declaration.
+
+\begin{longtable}{l l}
+\longtablesetting{2}
+
+[PROC-PARA-DEC] & $\dfrac{env_V \vdash \langle D_P, env_P[p \mapsto(S, \vec{x}, env_V, env_P)] \rangle \rightarrow_{DP} \; env_P'}{env_V \vdash \langle \text{func} \; p(\text{var} \; \vec{x}) \; \text{is begin} \; S \; \text{end}, \; env_P \rangle \rightarrow_{DP} env_P'}$ \\
+~ & ~ \\
+\caption{Transition rules for the procedure declarations.}
+\label{tab:ProcDec}
+\end{longtable}
+
+\subsubsection{Array Declaration}
+The transition rules for the variable declarations are on the form: $\langle D_A, env_V, sto \rangle \rightarrow_{DA} (env_V', sto')$. The transition system is defined by: $(\Gamma_{\mathbf{DecA}}, \rightarrow_{DA}, \Tau_{\mathbf{DecA}})$ and the configurations are defined by $\Gamma_{DA} = (\textbf{DecA} \times \textbf{EnvV} \times \textbf{Sto}) \cup (\textbf{EnvV} \times \textbf{Sto})$ and $\Tau_{DA} = \textbf{EnvV} \times \textbf{Sto}$. The end configurations are defined by $\Tau_{\mathbf{DecA}} = \textbf{EnvV} \times \textbf{Sto}$.
+
+The transitions rules for the array declaration can be seen on table \ref{tab:ArrayDec}. The rule states that a number of locations equal to the length of the array plus one is allocated, and the pointer is set to point at the next available location. The length of the array is then stored in the first location of the array. 
+
+\begin{longtable}{l l}
+\longtablesetting{2}
+[ARRAY-DEC] & $\dfrac{\langle D_A, env_V[r \mapsto l, \text{next} \mapsto l + v + 1],  sto[l \mapsto v] \rangle \rightarrow_{DA} (env_V', sto')}{\langle \text{array} \; r[a_1], env_V, sto \rangle \rightarrow_{DA} (env_V', sto')}$ \\
+~ & ~ \\
+~ & \indent\indent where $env_V, sto \vdash a_1 \rightarrow_a v$ \\
+~ & \indent\indent and $l = env_V \text{next}$ \\
+~ & \indent\indent and $v > 0$ \\
+~ & ~ \\
+\caption{Transition rules for the array declarations.}
+\label{tab:ArrayDec}
 \end{longtable}

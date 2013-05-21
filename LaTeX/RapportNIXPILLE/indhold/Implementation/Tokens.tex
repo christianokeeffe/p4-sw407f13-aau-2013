@@ -30,18 +30,16 @@ A parser needs a stream of tokens to parse a program correctly. These tokens are
 \begin{table}[H]
 \begin{tabular}{|l|l|}
 \hline
-PRIMITIVETYPE	& 'int' | 'double' | 'bool' | 'char' | 'container' | 'string' \\
-STRINGTOKEN		& " $\dots$ " \\
-DIGIT 			& $[0 - 9]^+$ \\
-NOTZERODIGIT 	& $[1-9][0-9]^*$ \\
-LETTER 			& $[A-Za-z]^+$\\
-COMMENT 		& /* $\dots$ */ \\
+STRINGTOKEN & '' .*? '' \\
+LETTER & [a - zA - Z]$~^+$\\
+DIGIT & [0 - 9]$~^+$\\
+NOTZERODIGIT & [1-9][0-9]$~^*$\\
+COMMENT& /* .*? */\\
 WHITESPACE 		& \textbackslash r | \textbackslash n | \textbackslash t \\
 OTHER 			& $\varepsilon$ \\ \hline
 \end{tabular}
 \caption{The tokens in SPLAD.}
 \label{tab:tokens}
 \end{table}
-\fxfatal{Den passer overhovedet ikke, og er det ikke mærkeligt det kommer to gange?}
 
 Further work would be making a lexer to generate a token for the parser. Another options was to find a suited tool for generating a lexer for the given rules. This is a valid option because making a lexer can be automated and therefore already exists a lot of good lexer generators that can be used, see section \ref{sec:KnownLexersAndParsers}.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.10.22)  21 MAY 2013 14:39
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.10.22)  21 MAY 2013 16:10
 entering extended mode
 **C:/Users/Christian/Documents/Arbejde/UNI/P4/svn/LaTeX/RapportNIXPILLE/Report.
 tex
@@ -2442,12 +2442,7 @@ Introduction/ProblemStatement.tex [1
 
 ])
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
-Introduction/ReportStructure.tex [2]
-
-LaTeX Warning: Reference `chap:perspektivering' on page 3 undefined on input li
-ne 6.
-
-) [3] [4
+Introduction/ReportStructure.tex [2]) [3] [4
 
 ]
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
@@ -2748,7 +2743,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 97.
 See the caption package documentation for explanation.
 
-<billeder/lcd.jpg, id=899, 401.5pt x 268.00125pt>
+<billeder/lcd.jpg, id=900, 401.5pt x 268.00125pt>
 File: billeder/lcd.jpg Graphic file (type jpg)
  <use billeder/lcd.jpg>
 Package pdftex.def Info: billeder/lcd.jpg used on input line 102.
@@ -2814,11 +2809,6 @@ See the caption package documentation for explanation.
 LanguageSpecification/Semantics.tex [25])
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
 LanguageSpecification/TheoryTransitionRules.tex
-
-LaTeX Warning: Reference `sec:transitionrules' on page 26 undefined on input li
-ne 2.
-
-
 Overfull \hbox (31.17831pt too wide) in paragraph at lines 30--30
 [] 
  []
@@ -2878,14 +2868,10 @@ Overfull \hbox (84.24123pt too wide) in alignment at lines 40--64
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
 LanguageSpecification/requiredfunctions.tex)
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
-LanguageSpecification/CodeExamples.tex
-
-LaTeX Warning: Reference `chap:testprocapp' on page 33 undefined on input line 
-3.
-
-[33]
+LanguageSpecification/CodeExamples.tex [33]
 Package mdframed Info: mdframed works in twoside mode on input line 6.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 Package mdframed Info: mdframed inside minipage 
@@ -2974,14 +2960,14 @@ Implementation/Architecture.tex)
 Implementation/Hardware.tex [40] [41])
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
 Implementation/OverviewCompiler.tex
-<billeder/OverviewCompiler.PNG, id=1272, 420.3705pt x 295.1025pt>
+<billeder/OverviewCompiler.PNG, id=1275, 420.3705pt x 295.1025pt>
 File: billeder/OverviewCompiler.PNG Graphic file (type png)
 
 <use billeder/OverviewCompiler.PNG>
 Package pdftex.def Info: billeder/OverviewCompiler.PNG used on input line 4.
 (pdftex.def)             Requested size: 255.6026pt x 179.43588pt.
  [42]
-<billeder/OverviewCompiler2.PNG, id=1293, 477.58424pt x 255.354pt>
+<billeder/OverviewCompiler2.PNG, id=1296, 477.58424pt x 255.354pt>
 File: billeder/OverviewCompiler2.PNG Graphic file (type png)
 
 <use billeder/OverviewCompiler2.PNG>
@@ -2995,14 +2981,14 @@ istian/Documents/Arbejde/UNI/P4/svn/LaTeX/RapportNIXPILLE/billeder/OverviewComp
 iler2.PNG>])
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
 Implementation/languageprocessing.tex
-<billeder/javacompiler.png, id=1320, 359.84438pt x 166.37157pt>
+<billeder/javacompiler.png, id=1323, 359.84438pt x 166.37157pt>
 File: billeder/javacompiler.png Graphic file (type png)
 
 <use billeder/javacompiler.png>
 Package pdftex.def Info: billeder/javacompiler.png used on input line 5.
 (pdftex.def)             Requested size: 213.0pt x 98.48076pt.
  [45]
-<billeder/spladcompilercompilationprocess.png, id=1331, 322.20375pt x 281.55188
+<billeder/spladcompilercompilationprocess.png, id=1334, 322.20375pt x 281.55188
 pt>
 File: billeder/spladcompilercompilationprocess.png Graphic file (type png)
  <use billeder/spladcompilercompilationprocess.png>
@@ -3010,7 +2996,7 @@ Package pdftex.def Info: billeder/spladcompilercompilationprocess.png used on i
 nput line 10.
 (pdftex.def)             Requested size: 213.0pt x 186.13412pt.
 
-<billeder/spladcompiler.png, id=1333, 462.97969pt x 309.40594pt>
+<billeder/spladcompiler.png, id=1336, 462.97969pt x 309.40594pt>
 File: billeder/spladcompiler.png Graphic file (type png)
 
 <use billeder/spladcompiler.png>
@@ -3043,7 +3029,7 @@ See the caption package documentation for explanation.
 
 [47 <C:/Users/Christian/Documents/Arbejde/UNI/P4/svn/LaTeX/RapportNIXPILLE/bill
 eder/spladcompiler.png>]
-<billeder/parsetree.png, id=1363, 307.90031pt x 473.51906pt>
+<billeder/parsetree.png, id=1366, 307.90031pt x 473.51906pt>
 File: billeder/parsetree.png Graphic file (type png)
 
 <use billeder/parsetree.png>
@@ -3143,7 +3129,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 28.
 See the caption package documentation for explanation.
 
-[53] <billeder/ParsedCode.png, id=1463, 1009.52156pt x 428.35031pt>
+[53] <billeder/ParsedCode.png, id=1466, 1009.52156pt x 428.35031pt>
 File: billeder/ParsedCode.png Graphic file (type png)
 
 <use billeder/ParsedCode.png>
@@ -3729,16 +3715,7 @@ Package pdftex.def Info: billeder/HardwareSetup.png used on input line 10.
 (pdftex.def)             Requested size: 426.0pt x 319.51491pt.
  [75])
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\indhold/
-Implementation/TestComponent.tex
-
-LaTeX Warning: Reference `fig:HardwwareSetup' on page 76 undefined on input lin
-e 2.
-
-
-LaTeX Warning: Reference `fig:HardwareSetup' on page 76 undefined on input line
- 2.
-
-) [76]
+Implementation/TestComponent.tex) [76]
 (C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\formalia
 /FormaliaDiscussion.tex
 Package mdframed Info: mdframed works in twoside mode on input line 15.
@@ -3888,17 +3865,14 @@ Package rerunfilecheck Info: File `Report.out' has not changed.
 (rerunfilecheck)             Checksum: 79CFF730AB7CF44A97D7071DCCCFCB5A;10450.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 38631 strings out of 493921
- 716835 string characters out of 3147269
- 2543695 words of memory out of 3000000
- 39634 multiletter control sequences out of 15000+200000
+ 38627 strings out of 493921
+ 716751 string characters out of 3147269
+ 2542659 words of memory out of 3000000
+ 39629 multiletter control sequences out of 15000+200000
  34255 words of font info for 91 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
  77i,20n,84p,1619b,1732s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -3926,9 +3900,9 @@ e1/public/cm-super/sftt0900.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 /cm-super/sftt1000.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super
 /sfxc1000.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/bookman/ubkd8a.pfb><
 C:/Program Files/MiKTeX 2.9/fonts/type1/urw/bookman/ubkl8a.pfb>
-Output written on Report.pdf (109 pages, 2006737 bytes).
+Output written on Report.pdf (109 pages, 2007856 bytes).
 PDF statistics:
- 2895 PDF objects out of 2984 (max. 8388607)
- 1249 named destinations out of 1440 (max. 500000)
+ 2901 PDF objects out of 2984 (max. 8388607)
+ 1250 named destinations out of 1440 (max. 500000)
  1197 words of extra memory for PDF output out of 10000 (max. 10000000)
 

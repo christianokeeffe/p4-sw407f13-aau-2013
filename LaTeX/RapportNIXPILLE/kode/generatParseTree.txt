@@ -5,11 +5,13 @@ public final static SPLADParser generatedParseTree(){
   } catch (IOException e) {
     e.printStackTrace();
   }
-   
+  //makes a lexer based on the source program
   SPLADLexer lexer = new SPLADLexer(program);
+  //makes a stream of tokens based on the lexer
   CommonTokenStream tokens = new CommonTokenStream(lexer);
+  //makes the parse based on the stream of tokens
   SPLADParser parser = new SPLADParser(tokens);
-   
+  //builds the parse tree
   parser.setBuildParseTree(true);
   return parser;
 }

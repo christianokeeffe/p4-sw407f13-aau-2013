@@ -201,7 +201,7 @@ cases
 'end' ;
 
 cases : 'case' expr':' 
-stmts 'break'
+stmts 'break' ';'
 endcase ;
 
 endcase : cases 

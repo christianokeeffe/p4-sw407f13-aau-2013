@@ -1,7 +1,3 @@
-%Det som skal rettes er markeret
-%Det som skal rettes er markeret
-%Det som skal rettes er markeret
-%Det som skal rettes er markeret
 \subsection{Design Criteria in this Project}
 \label{sec:DesignCriteria}
 To determine how a programming language should be syntactically described, the trade-offs of designing a programming language must be taken into account. The different characteristics of a programming language, that will be used to evaluate trade-offs can be seen on table \ref{tab:langCharacteristics}.
@@ -100,7 +96,7 @@ When defining the syntax of a programming language, it should balance these char
 \end{table}
 Table \ref{tab:choiceoffocus} shows what paradigms that is in the focus for the project. 
 \begin{itemize}
-%%Ret herfra
+
 \item \textbf{Simplicity:} The language of this project will not have multiple ways of doing the same simple instructions. This is to make writing code simpler for beginners. An example is that it will not be possible to increase a variable by one by writing "A++;". Instead it has to be written as "A<--A+1;".
 
 \item \textbf{Orthogonality:} It will not be possible to make classes or constructs, this is to simplify types for beginners. However it will be possible to combine various other constructs, for example calling a function in an expression. 
@@ -115,7 +111,7 @@ Table \ref{tab:choiceoffocus} shows what paradigms that is in the focus for the 
 
 \item \textbf{Type checking:} Is a major part of the project. The type checking will be done on compile time rather then run time, to help beginners see their errors in their code.
 
-\item \textbf{Exception handling:} Because the Arduino will execute the program-code in the end. The compiler will handle scope, type and code generation exceptions. The handling of Arduino based exceptions such as function provided by the Arduino language is left to the Arduino. This is done because we do not know all the provided function and therefore can not check them.
+\item \textbf{Exception handling:} Because the Arduino will execute the program-code in the end, the compiler will handle scope, type and code generation exceptions. The handling of Arduino based exceptions such as function provided by the Arduino language is left to the Arduino. This is done because we do not know all the provided function and therefore cannot check them.
 
 \item \textbf{Restricted aliasing:} Since it is known that using aliasing is a dangerous feature in a programming language \citep{sebesta}, the language of this project will not have this feature, to help beginners.
 \end{itemize}

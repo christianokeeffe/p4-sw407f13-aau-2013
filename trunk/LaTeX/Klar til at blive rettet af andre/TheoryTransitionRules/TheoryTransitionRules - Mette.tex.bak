@@ -10,9 +10,9 @@ In the following text we use the following names to represent different syntacti
 \item $a \in \mathbf{A_{exp}}$ - Arithmetic expression
 \item $b \in \mathbf{B_{exp}}$ - Boolean expression
 \item $S \in \textbf{Stm}$ - Statements
-\item $p \in \textbf{Pnames}$ - Function names
+\item $p \in \textbf{Pnames}$ - Procedure names
 \item $D_V \in \textbf{ErkV}$ - Variable declarations
-\item $D_P \in \textbf{ErkP}$ - Function declarations
+\item $D_P \in \textbf{ErkP}$ - Procedure declarations
 \item $D_A \in \textbf{ErkA}$ - Array declarations
 \end{itemize}
 
@@ -26,7 +26,7 @@ S::= \; & x := a \; | \; r[a_1] := a_2 \; | \; S_1; \; S_2 \; | \; \text{if} \; 
 a::= \; & n \; | \; x \; | \; a_1 + a_2 \; | \; a_1 - a_2 \; | \; a_1 * a_2 \; | \; a_1 / a_2 \; | \; (a) \; | \; r[a_i]\\
 b::= \; &a_1 = a_2 \; | \; a_1 > a_2 \; | \; a_1 < a_2 \; | \; \neg b \; | \; b_1 \; \wedge \; b_2 \; | \; b_1 \; \vee \; b_2 \; | \; (b)\\
 D_V::= \; & \text{var} \; x := a \\
-D_P::= \; & \text{func} \; p \; \text{is} \; \text{begin} \; S \; \text{end} \; | \; \text{func} \; p(\p \vec{x}) \; \text{is} \; \text{begin} \; S \; \text{end} \\
+D_P::= \; & \text{func} \; p(\vec{x}) \; \text{is} \; \text{begin} \; S \; \text{end} \\
 D_A::= \; & \text{array} \; r[a_1] \\
 \end{align*}
 
@@ -67,23 +67,22 @@ On table \ref{tab:VarAssign} the assignment rule for variables can be seen. The 
 \end{longtable}
 
 \subsection{Arithmetic Expressions}
-The transition rules for the arithmetic expressions are on the form: $env_V, sto \vdash a \rightarrow_a v$. The transition system are defined by: $(\Gamma_{\mathbf{Aexp}}, \rightarrow_a, \Tau_{\mathbf{Aexp})$ and the configurations are defined by $\Gamma_{\mathbf{Aexp} = \textbf{Aexp} \cup \mathbb{Z}$. The end configurations are defined by $\Tau_{\mathbf{Aexp} = \mathbb{Z}$.
+The transition rules for the arithmetic expressions are on the form: $env_V, sto \vdash a \rightarrow_a v$. The transition system are defined by: $(\Gamma_{\mathbf{Aexp}}, \rightarrow_a, \Tau_{\mathbf{Aexp}})$ and the configurations are defined by $\Gamma_{\mathbf{Aexp}} = \textbf{Aexp} \cup \mathbb{Z}$. The end configurations are defined by $\Tau_{\mathbf{Aexp}} = \mathbb{Z}$.
 
 The transition rule for multiplication in SPLAD can be seen on table \ref{tab:MultExp}. The rule states, that if $a_1$ evaluates to $v_1$ and $a_2$ evaluates to $v_2$, using any of the rules from the arithmetic expressions, then $a_1 \cdot a_2$ evaluates to $v$ where $v = v_1 \cdot v_2$.
 
-\begin{table}[!H]
-\begin{tabular}{l l}
+\begin{longtable}{l l}
+\longtablesetting{2}
 [MULT] & $\dfrac{env_V, sto \vdash a_1 \rightarrow_a v_1 \; \; \; env_V, sto \vdash a_2 \rightarrow_a v_2}{env_V, sto \vdash a_1 \cdot a_2 \rightarrow_a v}$ \\
 ~ & ~ \\
 ~ & \indent\indent where $v = v_1 \cdot v_2$ \\
 ~ & ~ \\
-\end{tabular}
 \caption{The transition rule for the arithmetic multiplication expression.}
 \label{tab:MultExp}
-\end{table}
+\end{longtable}
 
 \subsection{Boolean Expression}
-The transition rules for boolean expressions are on the form: $env_V, sto \vdash b \rightarrow_b t$. The transition system are defined by: $(\Gamma_{Bexp}, \rightarrow_b, \Tau_{Bexp})$ and the configurations are defined by $\Gamma_{Bexp} = \textbf{Bexp} \cup \{tt, ff\}$. The end configurations are defined by $\Tau_{Bexp} = \{tt, ff\}$.
+The transition rules for boolean expressions are on the form: $env_V, sto \vdash b \rightarrow_b t$. The transition system are defined by: $(\Gamma_{\mathbf{Bexp}}, \rightarrow_b, \Tau_{\mathbf{Bexp}})$ and the configurations are defined by $\Gamma_{\mathbf{Bexp}} = \textbf{Bexp} \cup \{tt, ff\}$. The end configurations are defined by $\Tau_{\mathbf{Bexp}} = \{tt, ff\}$.
 
 The transition rule for logical-or in SPLAD can be seen on table \ref{tab:OrExp}. The rules have two parts: [OR-TRUE] and [OR-FALSE]. The [OR-TRUE] rule states that either $b_1$ or $b_2$ evaluates to \textit{TRUE}, using any of the rules from the boolean expressions, then the expression $b_1 \; \text{OR} \; b_2$ evaluates to \textit{TRUE}. [OR-FALSE] states that if both $b_1$ and $b_2$ evaluate to \textit{FALSE} then the expression $b_1 \; \text{OR } \; b_2$ evaluates to \textit{FALSE}.
 
@@ -103,7 +102,7 @@ The transition rule for logical-or in SPLAD can be seen on table \ref{tab:OrExp}
 \subsection{Variable Declaration}
 The transition rules for the variable declarations are on the form: $\langle D_V, env_V, sto \rangle \rightarrow_{DV} (env_V', sto')$. The transition system are defined by: $\Gamma_{\mathbf{ErkV}}, \rightarrow_{DV}, \Tau_{\mathbf{ErkV}}$ and the configurations are defined by $\Gamma_{DV} = (\textbf{ErkV} \times \textbf{EnvV} \times \textbf{Sto}) \cup (\textbf{EnvV} \times \textbf{Sto})$ and $\Tau_{DV} = (\textbf{EnvV} \times \textbf{Sto})$. The end configurations are defined by $\Tau_{\mathbf{ErkV}} = \textbf{EnvV} \times \textbf{Sto}$.
 
-On table \ref{tab:VarDecl} the transition rules for variable declaration can be seen. It is done by binding $l$ to the next available location and binding $x$ to this location. The function $new$ is then used to point at the next available location. Then $env_V$ is updated to include the new variable, while the store remains unchanged.
+On table \ref{tab:VarDec} the transition rules for variable declaration can be seen. It is done by binding $l$ to the next available location and binding $x$ to this location. The function $new$ is then used to point at the next available location. Then $env_V$ is updated to include the new variable, while the store remains unchanged.
 
 \begin{longtable}{l l}
 \longtablesetting{2}
@@ -114,26 +113,38 @@ On table \ref{tab:VarDecl} the transition rules for variable declaration can be 
 ~ & \indent\indent and $env_V'' = env_V[x \mapsto l][\text{next} \mapsto \text{new} \; l]$ \\
 ~ & ~ \\
 \caption{Transition rules for the variable declarations.}
-\label{tab:VarDecl}
+\label{tab:VarDec}
 \end{longtable}
 
-\subsection{Function Declaration}
-The transition rules for the function declarations are on the form: $env_V \vdash \langle D_P, env_P \rangle \rightarrow_{DP} env_P'$. The transition system are defined by: $(\Gamma_{Bexp}, \rightarrow_b, \Tau_{Bexp})$ and the configurations are defined by $\Gamma_{Bexp} = \textbf{Bexp} \cup \{tt, ff\}$. The end configurations are defined by $\Tau_{Bexp} = \{tt, ff\}$.
+\subsection{Procedure Declaration}
+The transition rules for the procedure declarations are on the form: $env_V \vdash \langle D_P, env_P \rangle \rightarrow_{DP} env_P'$. The transition system are defined by: $(\Gamma_{\mathbf{ErkP}}, \rightarrow_{DP}, \Tau_{\mathbf{ErkP}})$ and the configurations are defined by $\Gamma_{DP} = (\textbf{ErkP} \times \textbf{EnvP}) \cup \textbf{EnvP}$ and $\Tau_{DP} = \textbf{EnvP}$. The end configurations are defined by $\Tau_{\mathbf{ErkP}} = \textbf{EnvP}$.
+
+On table \ref{tab:ProcDec} the transitions rules for the procedure declaration with none or multiple parameters can be seen. The rule states that the new procedure is stored in the procedure environment along with the statement, formal parameters, and procedure- and variable-bindings from the time of declaration.
 
 \fxfatal{bla bla bla}
 \begin{longtable}{l l}
 \longtablesetting{2}
-[FUNC-DEC] & $\dfrac{env_V \vdash \langle D_P, env_P[p \mapsto (S, env_V, env_P)] \rangle \rightarrow_{DP} env_P'}{env_V \vdash \langle \text{func} \; p \; \text{is} \; S; D_P, env_P \rangle \rightarrow_{DP} env_P'}$ \\
+
+[PROC-PARA-DEC] & $\dfrac{env_V \vdash \langle D_P, env_P[p \mapsto(S, \vec{x}, env_V, env_P)] \rangle \rightarrow_{DP} \; env_P'}{env_V \vdash \langle \text{func} \; p(\text{var} \; \vec{x}) \; \text{is begin} \; S \; \text{end}, \; env_P \rangle \rightarrow_{DP} env_P'}$ \\
 ~ & ~ \\
-\caption{Transition rules for the function declarations.}
-\label{tab:ProcDecl}
+\caption{Transition rules for the procedure declarations.}
+\label{tab:ProcDec}
 \end{longtable}
 
 \subsection{Array Declaration}
-The transition rules for the variable declarations are on the form: $\langle d_A, env_V, sto \rangle \rightarrow_{DA} (env_V', sto')$. The transition system are defined by: $(\Gamma_{Bexp}, \rightarrow_b, \Tau_{Bexp})$ and the configurations are defined by $\Gamma_{Bexp} = \textbf{Bexp} \cup \{tt, ff\}$. The end configurations are defined by $\Tau_{Bexp} = \{tt, ff\}$.
+The transition rules for the variable declarations are on the form: $\langle D_A, env_V, sto \rangle \rightarrow_{DA} (env_V', sto')$. The transition system are defined by: $(\Gamma_{\mathbf{ErkA}}, \rightarrow_{DA}, \Tau_{\mathbf{ErkA}})$ and the configurations are defined by $\Gamma_{DA} = (\textbf{ErkA} \times \textbf{EnvV} \times \textbf{Sto}) \cup (\textbf{EnvV} \times \textbf{Sto})$ and $\Tau_{DA} = \textbf{EnvV} \times \textbf{Sto}$. The end configurations are defined by $\Tau_{\mathbf{ErkA}} = \textbf{EnvV} \times \textbf{Sto}$.
 
+On table \ref{tab:ArrayDec} the transitions rules for the array declaration can be seen. The rule states that a number of location equal to the length of the array plus one is allocated, and the pointer is set to point at the next available location. The length of the array are then stored in the first location of the array. 
 
-
-\fxfatal{bla bla bla}
-
+\begin{longtable}{l l}
+\longtablesetting{2}
+[ARRAY-DEC] & $\dfrac{\langle D_A, env_V[r \mapsto l, \text{next} \mapsto l + v + 1],  sto[l \mapsto v] \rangle \rightarrow_{DA} (env_V', sto')}{\langle \text{array} \; r[a_1], env_V, sto \rangle \rightarrow_{DA} (env_V', sto')}$ \\
+~ & ~ \\
+~ & \indent\indent where $env_V, sto \vdash a_1 \rightarrow_a v$ \\
+~ & \indent\indent and $l = env_V \text{next}$ \\
+~ & \indent\indent and $v > 0$ \\
+~ & ~ \\
+\caption{Transition rules for the array declarations.}
+\label{tab:ArrayDec}
+\end{longtable}
 \end{document}

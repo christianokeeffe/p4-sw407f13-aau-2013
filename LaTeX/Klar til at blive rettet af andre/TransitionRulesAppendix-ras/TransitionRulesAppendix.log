@@ -1,10 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.10.22)  21 MAY 2013 11:57
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.3.1)  21 MAY 2013 12:44
 entering extended mode
-**C:/Users/Christian/Documents/Arbejde/UNI/P4/svn/LaTeX/Klar*til*at*blive*rette
-t*af*andre/TransitionRulesAppendix-chr/TransitionRulesAppendix.tex
+**TransitionRulesAppendix.tex
 
-("C:/Users/Christian/Documents/Arbejde/UNI/P4/svn/LaTeX/Klar til at blive rette
-t af andre/TransitionRulesAppendix-chr/TransitionRulesAppendix.tex"
+("C:\Users\Rasmus\Documents\P4\LaTeX\Klar til at blive rettet af andre\Transiti
+onRulesAppendix-ras\TransitionRulesAppendix.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -16,9 +15,8 @@ german-x-2012-05-30, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
-
-(C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\RapportNIXPILLE\preamble
-.tex ("C:\Program Files\MiKTeX 2.9\tex\latex\memoir\memoir.cls"
+(C:\Users\Rasmus\Documents\P4\LaTeX\RapportNIXPILLE\preamble.tex
+("C:\Program Files\MiKTeX 2.9\tex\latex\memoir\memoir.cls"
 Document Class: memoir 2011/03/06 v3.6j configurable book, report, article docu
 ment class
 \onelineskip=\skip41
@@ -663,7 +661,7 @@ File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 \Gread@gobject=\count144
 )))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\algorithm2e\algorithm2e.sty"
-Package: algorithm2e 2008/00/00 v3.10 algorithms environments
+Package: algorithm2e 2013/01/06 v5.00 algorithms environments
 \c@AlgoLine=\count145
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
@@ -676,11 +674,11 @@ Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
 Package: relsize 2003/07/04 ver 3.1
 )
 ********************************************************
-Package `algorithm2e' Release 4.01 -- december 14 2009 --
+Package `algorithm2e' Release 5.0 -- january 06 2013 --
 - algorithm2e-announce@lirmm.fr mailing list for announcement about releases
 - algorithm2e-discussion@lirmm.fr mailing list for discussion about package
 subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
-- Author: Christophe Fiorio (fiorio@lirmm.fr)
+- Author: Christophe Fiorio (cfiorio@um2.fr)
 ********************************************************
 \skiptotal=\skip195
 \skiplinenumber=\skip196
@@ -692,7 +690,7 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 \skipalgocfslide=\skip202
 \algowidth=\dimen153
 \inoutsize=\dimen154
-\inoutline=\dimen155
+\inoutindent=\dimen155
 \interspacetitleruled=\dimen156
 \interspacealgoruled=\dimen157
 \interspacetitleboxruled=\dimen158
@@ -700,18 +698,21 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 \algocf@inputbox=\box34
 \AlCapSkip=\skip203
 \AlCapHSkip=\skip204
+\algoskipindent=\skip205
 \algocf@nlbox=\box35
 \algocf@hangingbox=\box36
-\algocf@capbox=\box37
-\algoheightruledefault=\skip205
-\algoheightrule=\skip206
-\algotitleheightruledefault=\skip207
-\algotitleheightrule=\skip208
+\algocf@untilbox=\box37
+\algocf@skipuntil=\skip206
+\algocf@capbox=\box38
+\algoheightruledefault=\skip207
+\algoheightrule=\skip208
+\algotitleheightruledefault=\skip209
+\algotitleheightrule=\skip210
 \c@algocfline=\count146
 \c@algocfproc=\count147
 \c@algocf=\count148
-\algocf@algoframe=\box38
-\algocf@algobox=\box39
+\algocf@algoframe=\box39
+\algocf@algobox=\box40
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\base\latexsym.sty"
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 \symlasy=\mathgroup4
@@ -741,20 +742,20 @@ Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ms\everysel.sty"
 Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 )
-\CenteringLeftskip=\skip209
-\RaggedLeftLeftskip=\skip210
-\RaggedRightLeftskip=\skip211
-\CenteringRightskip=\skip212
-\RaggedLeftRightskip=\skip213
-\RaggedRightRightskip=\skip214
-\CenteringParfillskip=\skip215
-\RaggedLeftParfillskip=\skip216
-\RaggedRightParfillskip=\skip217
-\JustifyingParfillskip=\skip218
-\CenteringParindent=\skip219
-\RaggedLeftParindent=\skip220
-\RaggedRightParindent=\skip221
-\JustifyingParindent=\skip222
+\CenteringLeftskip=\skip211
+\RaggedLeftLeftskip=\skip212
+\RaggedRightLeftskip=\skip213
+\CenteringRightskip=\skip214
+\RaggedLeftRightskip=\skip215
+\RaggedRightRightskip=\skip216
+\CenteringParfillskip=\skip217
+\RaggedLeftParfillskip=\skip218
+\RaggedRightParfillskip=\skip219
+\JustifyingParfillskip=\skip220
+\CenteringParindent=\skip221
+\RaggedLeftParindent=\skip222
+\RaggedRightParindent=\skip223
+\JustifyingParindent=\skip224
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\fix-cm.sty"
 Package: fix-cm 2006/09/13 v1.1m fixes to LaTeX
@@ -845,12 +846,12 @@ Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Bcount=\count150
 \calc@Adimen=\dimen159
 \calc@Bdimen=\dimen160
-\calc@Askip=\skip223
-\calc@Bskip=\skip224
+\calc@Askip=\skip225
+\calc@Bskip=\skip226
 LaTeX Info: Redefining \setlength on input line 76.
 LaTeX Info: Redefining \addtolength on input line 77.
 \calc@Ccount=\count151
-\calc@Cskip=\skip225
+\calc@Cskip=\skip227
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\eso-pic\eso-pic.sty"
 Package: eso-pic 2010/10/06 v2.0c eso-pic (RN)
@@ -866,10 +867,10 @@ Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\pdfpages\pppdftex.def"
 File: pppdftex.def 2012/08/31 v0.4t Pdfpages driver for pdfTeX (AM)
 )
-\AM@pagebox=\box40
+\AM@pagebox=\box41
 \AM@toc@title=\toks26
 \c@AM@survey=\count152
-\AM@templatesizebox=\box41
+\AM@templatesizebox=\box42
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\fixltx2e.sty"
 Package: fixltx2e 2006/09/13 v1.1m fixes to LaTeX
@@ -878,7 +879,7 @@ LaTeX Info: Redefining \textsubscript on input line 424.
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty"
 \lst@mode=\count153
-\lst@gtempboxa=\box42
+\lst@gtempboxa=\box43
 \lst@token=\toks27
 \lst@length=\count154
 \lst@currlwidth=\dimen163
@@ -894,7 +895,7 @@ LaTeX Info: Redefining \textsubscript on input line 424.
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 \c@lstnumber=\count159
 \lst@skipnumbers=\count160
-\lst@framebox=\box43
+\lst@framebox=\box44
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg"
 File: listings.cfg 2007/02/22 1.4 listings configuration
@@ -923,109 +924,109 @@ File: p2e-pdftex.def 2011/04/05 v0.1t Driver-dependant file (RN,HjG,JT)
 )
 \c@treecount=\count161
 \c@branchcount=\count162
-\parentbox=\box44
-\treebox=\box45
-\treeboxone=\box46
-\treeboxtwo=\box47
-\treeboxthree=\box48
-\treeboxfour=\box49
-\treeboxfive=\box50
-\treeboxsix=\box51
-\treeboxseven=\box52
-\treeboxeight=\box53
-\treeboxnine=\box54
-\treeboxten=\box55
-\treeboxeleven=\box56
-\treeboxtwelve=\box57
-\treeboxthirteen=\box58
-\treeboxfourteen=\box59
-\treeboxfifteen=\box60
-\treeboxsixteen=\box61
-\treeboxseventeen=\box62
-\treeboxeighteen=\box63
-\treeboxnineteen=\box64
-\treeboxtwenty=\box65
-\treeoffsetone=\skip226
-\treeoffsettwo=\skip227
-\treeoffsetthree=\skip228
+\parentbox=\box45
+\treebox=\box46
+\treeboxone=\box47
+\treeboxtwo=\box48
+\treeboxthree=\box49
+\treeboxfour=\box50
+\treeboxfive=\box51
+\treeboxsix=\box52
+\treeboxseven=\box53
+\treeboxeight=\box54
+\treeboxnine=\box55
+\treeboxten=\box56
+\treeboxeleven=\box57
+\treeboxtwelve=\box58
+\treeboxthirteen=\box59
+\treeboxfourteen=\box60
+\treeboxfifteen=\box61
+\treeboxsixteen=\box62
+\treeboxseventeen=\box63
+\treeboxeighteen=\box64
+\treeboxnineteen=\box65
+\treeboxtwenty=\box66
+\treeoffsetone=\skip228
 Normal \skip register pool exhausted, switching to extended pool.
-\treeoffsetfour=\skip256
-\treeoffsetfive=\skip257
-\treeoffsetsix=\skip258
-\treeoffsetseven=\skip259
-\treeoffseteight=\skip260
-\treeoffsetnine=\skip261
-\treeoffsetten=\skip262
-\treeoffseteleven=\skip263
-\treeoffsettwelve=\skip264
-\treeoffsetthirteen=\skip265
-\treeoffsetfourteen=\skip266
-\treeoffsetfifteen=\skip267
-\treeoffsetsixteen=\skip268
-\treeoffsetseventeen=\skip269
-\treeoffseteighteen=\skip270
-\treeoffsetnineteen=\skip271
-\treeoffsettwenty=\skip272
-\treeshiftone=\skip273
-\treeshifttwo=\skip274
-\treeshiftthree=\skip275
-\treeshiftfour=\skip276
-\treeshiftfive=\skip277
-\treeshiftsix=\skip278
-\treeshiftseven=\skip279
-\treeshifteight=\skip280
-\treeshiftnine=\skip281
-\treeshiftten=\skip282
-\treeshifteleven=\skip283
-\treeshifttwelve=\skip284
-\treeshiftthirteen=\skip285
-\treeshiftfourteen=\skip286
-\treeshiftfifteen=\skip287
-\treeshiftsixteen=\skip288
-\treeshiftseventeen=\skip289
-\treeshifteighteen=\skip290
-\treeshiftnineteen=\skip291
-\treeshifttwenty=\skip292
-\treewidthone=\skip293
-\treewidthtwo=\skip294
-\treewidththree=\skip295
-\treewidthfour=\skip296
-\treewidthfive=\skip297
-\treewidthsix=\skip298
-\treewidthseven=\skip299
-\treewidtheight=\skip300
-\treewidthnine=\skip301
-\treewidthten=\skip302
-\treewidtheleven=\skip303
-\treewidthtwelve=\skip304
-\treewidththirteen=\skip305
-\treewidthfourteen=\skip306
-\treewidthfifteen=\skip307
-\treewidthsixteen=\skip308
-\treewidthseventeen=\skip309
-\treewidtheighteen=\skip310
-\treewidthnineteen=\skip311
-\treewidthtwenty=\skip312
-\daughteroffsetone=\skip313
-\daughteroffsettwo=\skip314
-\daughteroffsetthree=\skip315
-\daughteroffsetfour=\skip316
-\branchwidthone=\skip317
-\branchwidthtwo=\skip318
-\branchwidththree=\skip319
-\branchwidthfour=\skip320
-\parentoffset=\skip321
-\treeoffset=\skip322
-\daughteroffset=\skip323
-\branchwidth=\skip324
-\parentwidth=\skip325
-\treewidth=\skip326
+\treeoffsettwo=\skip256
+\treeoffsetthree=\skip257
+\treeoffsetfour=\skip258
+\treeoffsetfive=\skip259
+\treeoffsetsix=\skip260
+\treeoffsetseven=\skip261
+\treeoffseteight=\skip262
+\treeoffsetnine=\skip263
+\treeoffsetten=\skip264
+\treeoffseteleven=\skip265
+\treeoffsettwelve=\skip266
+\treeoffsetthirteen=\skip267
+\treeoffsetfourteen=\skip268
+\treeoffsetfifteen=\skip269
+\treeoffsetsixteen=\skip270
+\treeoffsetseventeen=\skip271
+\treeoffseteighteen=\skip272
+\treeoffsetnineteen=\skip273
+\treeoffsettwenty=\skip274
+\treeshiftone=\skip275
+\treeshifttwo=\skip276
+\treeshiftthree=\skip277
+\treeshiftfour=\skip278
+\treeshiftfive=\skip279
+\treeshiftsix=\skip280
+\treeshiftseven=\skip281
+\treeshifteight=\skip282
+\treeshiftnine=\skip283
+\treeshiftten=\skip284
+\treeshifteleven=\skip285
+\treeshifttwelve=\skip286
+\treeshiftthirteen=\skip287
+\treeshiftfourteen=\skip288
+\treeshiftfifteen=\skip289
+\treeshiftsixteen=\skip290
+\treeshiftseventeen=\skip291
+\treeshifteighteen=\skip292
+\treeshiftnineteen=\skip293
+\treeshifttwenty=\skip294
+\treewidthone=\skip295
+\treewidthtwo=\skip296
+\treewidththree=\skip297
+\treewidthfour=\skip298
+\treewidthfive=\skip299
+\treewidthsix=\skip300
+\treewidthseven=\skip301
+\treewidtheight=\skip302
+\treewidthnine=\skip303
+\treewidthten=\skip304
+\treewidtheleven=\skip305
+\treewidthtwelve=\skip306
+\treewidththirteen=\skip307
+\treewidthfourteen=\skip308
+\treewidthfifteen=\skip309
+\treewidthsixteen=\skip310
+\treewidthseventeen=\skip311
+\treewidtheighteen=\skip312
+\treewidthnineteen=\skip313
+\treewidthtwenty=\skip314
+\daughteroffsetone=\skip315
+\daughteroffsettwo=\skip316
+\daughteroffsetthree=\skip317
+\daughteroffsetfour=\skip318
+\branchwidthone=\skip319
+\branchwidthtwo=\skip320
+\branchwidththree=\skip321
+\branchwidthfour=\skip322
+\parentoffset=\skip323
+\treeoffset=\skip324
+\daughteroffset=\skip325
+\branchwidth=\skip326
+\parentwidth=\skip327
+\treewidth=\skip328
 \qta=\toks29
 \qtb=\toks30
 \nbranches=\count163
 \qroofx=\count164
 \qroofy=\count165
-\@qrscratchbox=\box66
+\@qrscratchbox=\box67
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2004/09/05 1.3 listings language file
@@ -1045,21 +1046,21 @@ Package: mdframed 2012/09/21\ 1.6d: mdframed
 ("C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\l3bootstrap.sty"
 Package: l3bootstrap 2012/07/16 v3991 L3 Experimental bootstrap code
 )
-Package: l3names 2012/09/24 v4230 L3 Namespace for primitives
+Package: l3names 2012/12/07 v4346 L3 Namespace for primitives
 )
-Package: expl3 2012/09/29 v4249 L3 Experimental code bundle wrapper
+Package: expl3 2012/12/21 v4390 L3 Experimental code bundle wrapper
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\l3basics.sty"
-Package: l3basics 2012/09/09 v4212 L3 Basic definitions
+Package: l3basics 2012/11/24 v4339 L3 Basic definitions
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\l3expan.sty"
 Package: l3expan 2012/08/28 v4149 L3 Argument expansion
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\l3tl.sty"
-Package: l3tl 2012/09/28 v4244 L3 Token lists
+Package: l3tl 2012/11/24 v4339 L3 Token lists
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\l3seq.sty"
-Package: l3seq 2012/09/09 v4212 L3 Sequences and stacks
+Package: l3seq 2012/11/24 v4339 L3 Sequences and stacks
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\l3int.sty"
 Package: l3int 2012/09/26 v4237 L3 Integers
@@ -1071,17 +1072,17 @@ Package: l3int 2012/09/26 v4237 L3 Integers
 \l_tmpc_int=\count171
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\l3quark.sty"
-Package: l3quark 2012/08/08 v4065 L3 Quarks
+Package: l3quark 2012/11/04 v4268 L3 Quarks
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\l3prg.sty"
-Package: l3prg 2012/09/09 v4212 L3 Control structures
+Package: l3prg 2012/11/24 v4339 L3 Control structures
 \g__prg_map_int=\count172
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\l3clist.sty"
-Package: l3clist 2012/09/09 v4212 L3 Comma separated lists
+Package: l3clist 2012/11/24 v4339 L3 Comma separated lists
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\l3token.sty"
-Package: l3token 2012/08/08 v4069 L3 Experimental token manipulation
+Package: l3token 2012/12/20 v4384 L3 Experimental token manipulation
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\l3prop.sty"
 Package: l3prop 2012/09/09 v4212 L3 Property lists
@@ -1090,7 +1091,7 @@ Package: l3prop 2012/09/09 v4212 L3 Property lists
 Package: l3msg 2012/09/09 v4212 L3 Messages
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\l3file.sty"
-Package: l3file 2012/09/09 v4212 L3 File and I/O operations
+Package: l3file 2012/12/20 v4377 L3 File and I/O operations
 \l__ior_stream_int=\count173
 \l_iow_line_count_int=\count174
 \l__iow_target_count_int=\count175
@@ -1099,15 +1100,19 @@ Package: l3file 2012/09/09 v4212 L3 File and I/O operations
 \l__iow_current_indentation_int=\count178
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\l3skip.sty"
-Package: l3skip 2012/09/26 v4235 L3 Dimensions and skips
-\l_tmpa_dim=\dimen170
-\l_tmpb_dim=\dimen171
-\g_tmpa_dim=\dimen172
-\g_tmpb_dim=\dimen173
-\l_tmpa_skip=\skip327
-\l_tmpb_skip=\skip328
-\g_tmpa_skip=\skip329
-\g_tmpb_skip=\skip330
+Package: l3skip 2012/11/04 v4260 L3 Dimensions and skips
+\c_zero_dim=\dimen170
+\c_max_dim=\dimen171
+\l_tmpa_dim=\dimen172
+\l_tmpb_dim=\dimen173
+\g_tmpa_dim=\dimen174
+\g_tmpb_dim=\dimen175
+\c_zero_skip=\skip329
+\c_max_skip=\skip330
+\l_tmpa_skip=\skip331
+\l_tmpb_skip=\skip332
+\g_tmpa_skip=\skip333
+\g_tmpb_skip=\skip334
 \c_zero_muskip=\muskip10
 \c_max_muskip=\muskip11
 \l_tmpa_muskip=\muskip12
@@ -1116,12 +1121,12 @@ Package: l3skip 2012/09/26 v4235 L3 Dimensions and skips
 \g_tmpb_muskip=\muskip15
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\l3keys.sty"
-Package: l3keys 2012/09/29 v4248 L3 Experimental key-value interfaces
+Package: l3keys 2012/11/02 v4256 L3 Experimental key-value interfaces
 \g__keyval_level_int=\count179
 \l_keys_choice_int=\count180
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\l3fp.sty"
-Package: l3fp 2012/09/26 v4234 L3 Floating points
+Package: l3fp 2012/11/10 v4305 L3 Floating points
 \c__fp_leading_shift_int=\count181
 \c__fp_middle_shift_int=\count182
 \c__fp_trailing_shift_int=\count183
@@ -1133,32 +1138,34 @@ Package: l3fp 2012/09/26 v4234 L3 Floating points
 \c__fp_Bigg_trailing_shift_int=\count189
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\l3box.sty"
-Package: l3box 2012/07/16 v3991 L3 Experimental boxes
-\l_tmpb_box=\box67
-\g_tmpa_box=\box68
-\g_tmpb_box=\box69
+Package: l3box 2012/12/08 v4347 L3 Experimental boxes
+\c_empty_box=\box68
+\l_tmpa_box=\box69
+\l_tmpb_box=\box70
+\g_tmpa_box=\box71
+\g_tmpb_box=\box72
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\l3coffins.sty"
 Package: l3coffins 2012/09/09 v4212 L3 Coffin code layer
-\l__coffin_internal_box=\box70
-\l__coffin_internal_dim=\dimen174
-\l__coffin_offset_x_dim=\dimen175
-\l__coffin_offset_y_dim=\dimen176
-\l__coffin_x_dim=\dimen177
-\l__coffin_y_dim=\dimen178
-\l__coffin_x_prime_dim=\dimen179
-\l__coffin_y_prime_dim=\dimen180
-\c_empty_coffin=\box71
-\l__coffin_aligned_coffin=\box72
-\l__coffin_aligned_internal_coffin=\box73
-\l_tmpa_coffin=\box74
-\l_tmpb_coffin=\box75
-\l__coffin_display_coffin=\box76
-\l__coffin_display_coord_coffin=\box77
-\l__coffin_display_pole_coffin=\box78
-\l__coffin_display_offset_dim=\dimen181
-\l__coffin_display_x_dim=\dimen182
-\l__coffin_display_y_dim=\dimen183
+\l__coffin_internal_box=\box73
+\l__coffin_internal_dim=\dimen176
+\l__coffin_offset_x_dim=\dimen177
+\l__coffin_offset_y_dim=\dimen178
+\l__coffin_x_dim=\dimen179
+\l__coffin_y_dim=\dimen180
+\l__coffin_x_prime_dim=\dimen181
+\l__coffin_y_prime_dim=\dimen182
+\c_empty_coffin=\box74
+\l__coffin_aligned_coffin=\box75
+\l__coffin_aligned_internal_coffin=\box76
+\l_tmpa_coffin=\box77
+\l_tmpb_coffin=\box78
+\l__coffin_display_coffin=\box79
+\l__coffin_display_coord_coffin=\box80
+\l__coffin_display_pole_coffin=\box81
+\l__coffin_display_offset_dim=\dimen183
+\l__coffin_display_x_dim=\dimen184
+\l__coffin_display_y_dim=\dimen185
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\l3color.sty"
 Package: l3color 2012/08/29 v4156 L3 Experimental color support
@@ -1169,26 +1176,26 @@ Package: l3luatex 2012/08/03 v4049 L3 Experimental LuaTeX-specific functions
 \g__cctab_stack_int=\count191
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\l3kernel\l3candidates.sty"
-Package: l3candidates 2012/05/12 v3633 L3 Experimental additions to l3kernel
-\l__box_top_dim=\dimen184
-\l__box_bottom_dim=\dimen185
-\l__box_left_dim=\dimen186
-\l__box_right_dim=\dimen187
-\l__box_top_new_dim=\dimen188
-\l__box_bottom_new_dim=\dimen189
-\l__box_left_new_dim=\dimen190
-\l__box_right_new_dim=\dimen191
-\l__box_internal_box=\box79
-\l__coffin_bounding_shift_dim=\dimen192
-\l__coffin_left_corner_dim=\dimen193
-\l__coffin_right_corner_dim=\dimen194
-\l__coffin_bottom_corner_dim=\dimen195
-\l__coffin_top_corner_dim=\dimen196
+Package: l3candidates 2012/12/20 v4383 L3 Experimental additions to l3kernel
+\l__box_top_dim=\dimen186
+\l__box_bottom_dim=\dimen187
+\l__box_left_dim=\dimen188
+\l__box_right_dim=\dimen189
+\l__box_top_new_dim=\dimen190
+\l__box_bottom_new_dim=\dimen191
+\l__box_left_new_dim=\dimen192
+\l__box_right_new_dim=\dimen193
+\l__box_internal_box=\box82
+\l__coffin_bounding_shift_dim=\dimen194
+\l__coffin_left_corner_dim=\dimen195
+\l__coffin_right_corner_dim=\dimen196
 Normal \dimen register pool exhausted, switching to extended pool.
-\l__coffin_scaled_total_height_dim=\dimen256
-\l__coffin_scaled_width_dim=\dimen257
+\l__coffin_bottom_corner_dim=\dimen256
+\l__coffin_top_corner_dim=\dimen257
+\l__coffin_scaled_total_height_dim=\dimen258
+\l__coffin_scaled_width_dim=\dimen259
 ))
-Package: xparse 2012/09/29 v4249 L3 Experimental document command parser
+Package: xparse 2012/12/21 v4390 L3 Experimental document command parser
 \l__xparse_current_arg_int=\count192
 \l__xparse_m_args_int=\count193
 \l__xparse_mandatory_args_int=\count194
@@ -1227,46 +1234,46 @@ Package zref Info: New property: page on input line 761.
 \c@abspage=\count278
 Package zref Info: New property: abspage on input line 62.
 )
-\mdf@templength=\skip331
+\mdf@templength=\skip335
 \c@mdf@globalstyle@cnt=\count279
-\mdf@skipabove@length=\skip332
-\mdf@skipbelow@length=\skip333
-\mdf@leftmargin@length=\skip334
-\mdf@rightmargin@length=\skip335
-\mdf@innerleftmargin@length=\skip336
-\mdf@innerrightmargin@length=\skip337
-\mdf@innertopmargin@length=\skip338
-\mdf@innerbottommargin@length=\skip339
-\mdf@splittopskip@length=\skip340
-\mdf@splitbottomskip@length=\skip341
-\mdf@outermargin@length=\skip342
-\mdf@innermargin@length=\skip343
-\mdf@linewidth@length=\skip344
-\mdf@innerlinewidth@length=\skip345
-\mdf@middlelinewidth@length=\skip346
-\mdf@outerlinewidth@length=\skip347
-\mdf@roundcorner@length=\skip348
-\mdf@footenotedistance@length=\skip349
-\mdf@userdefinedwidth@length=\skip350
-\mdf@frametitleaboveskip@length=\skip351
-\mdf@frametitlebelowskip@length=\skip352
-\mdf@frametitlerulewidth@length=\skip353
-\mdf@frametitleleftmargin@length=\skip354
-\mdf@frametitlerightmargin@length=\skip355
-\mdf@shadowsize@length=\skip356
-\mdf@extratopheight@length=\skip357
-\mdf@subtitleabovelinewidth@length=\skip358
-\mdf@subtitlebelowlinewidth@length=\skip359
-\mdf@subtitleaboveskip@length=\skip360
-\mdf@subtitlebelowskip@length=\skip361
-\mdf@subtitleinneraboveskip@length=\skip362
-\mdf@subtitleinnerbelowskip@length=\skip363
-\mdf@subsubtitleabovelinewidth@length=\skip364
-\mdf@subsubtitlebelowlinewidth@length=\skip365
-\mdf@subsubtitleaboveskip@length=\skip366
-\mdf@subsubtitlebelowskip@length=\skip367
-\mdf@subsubtitleinneraboveskip@length=\skip368
-\mdf@subsubtitleinnerbelowskip@length=\skip369
+\mdf@skipabove@length=\skip336
+\mdf@skipbelow@length=\skip337
+\mdf@leftmargin@length=\skip338
+\mdf@rightmargin@length=\skip339
+\mdf@innerleftmargin@length=\skip340
+\mdf@innerrightmargin@length=\skip341
+\mdf@innertopmargin@length=\skip342
+\mdf@innerbottommargin@length=\skip343
+\mdf@splittopskip@length=\skip344
+\mdf@splitbottomskip@length=\skip345
+\mdf@outermargin@length=\skip346
+\mdf@innermargin@length=\skip347
+\mdf@linewidth@length=\skip348
+\mdf@innerlinewidth@length=\skip349
+\mdf@middlelinewidth@length=\skip350
+\mdf@outerlinewidth@length=\skip351
+\mdf@roundcorner@length=\skip352
+\mdf@footenotedistance@length=\skip353
+\mdf@userdefinedwidth@length=\skip354
+\mdf@frametitleaboveskip@length=\skip355
+\mdf@frametitlebelowskip@length=\skip356
+\mdf@frametitlerulewidth@length=\skip357
+\mdf@frametitleleftmargin@length=\skip358
+\mdf@frametitlerightmargin@length=\skip359
+\mdf@shadowsize@length=\skip360
+\mdf@extratopheight@length=\skip361
+\mdf@subtitleabovelinewidth@length=\skip362
+\mdf@subtitlebelowlinewidth@length=\skip363
+\mdf@subtitleaboveskip@length=\skip364
+\mdf@subtitlebelowskip@length=\skip365
+\mdf@subtitleinneraboveskip@length=\skip366
+\mdf@subtitleinnerbelowskip@length=\skip367
+\mdf@subsubtitleabovelinewidth@length=\skip368
+\mdf@subsubtitlebelowlinewidth@length=\skip369
+\mdf@subsubtitleaboveskip@length=\skip370
+\mdf@subsubtitlebelowskip@length=\skip371
+\mdf@subsubtitleinneraboveskip@length=\skip372
+\mdf@subsubtitleinnerbelowskip@length=\skip373
 
 
 Package mdframed Warning: package option style is depreciated
@@ -1280,7 +1287,7 @@ Package mdframed Warning: package option style is depreciated
 \pgfutil@everybye=\toks31
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-latex.def"
-\pgfutil@abb=\box80
+\pgfutil@abb=\box83
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfrcs.code.tex"
 Package: pgfrcs 2010/10/25 v2.10 (rcs-revision 1.24)
@@ -1300,14 +1307,14 @@ Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
 x"
 \pgfkeys@tmptoks=\toks34
 ))
-\pgf@x=\dimen258
-\pgf@y=\dimen259
-\pgf@xa=\dimen260
-\pgf@ya=\dimen261
-\pgf@xb=\dimen262
-\pgf@yb=\dimen263
-\pgf@xc=\dimen264
-\pgf@yc=\dimen265
+\pgf@x=\dimen260
+\pgf@y=\dimen261
+\pgf@xa=\dimen262
+\pgf@ya=\dimen263
+\pgf@xb=\dimen264
+\pgf@yb=\dimen265
+\pgf@xc=\dimen266
+\pgf@yc=\dimen267
 \w@pgf@writea=\write4
 \r@pgf@reada=\read2
 \c@pgf@counta=\count280
@@ -1341,9 +1348,9 @@ Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathcalc.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathutil.code.tex")
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathparser.code.tex"
-\pgfmath@dimen=\dimen266
+\pgfmath@dimen=\dimen268
 \pgfmath@count=\count286
-\pgfmath@box=\box81
+\pgfmath@box=\box84
 \pgfmath@toks=\toks35
 \pgfmath@stack@operand=\toks36
 \pgfmath@stack@operation=\toks37
@@ -1369,52 +1376,52 @@ ex"))) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfloat.code.tex
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepoints.code.tex
 "
 File: pgfcorepoints.code.tex 2010/04/09  (rcs-revision 1.20)
-\pgf@picminx=\dimen267
-\pgf@picmaxx=\dimen268
-\pgf@picminy=\dimen269
-\pgf@picmaxy=\dimen270
-\pgf@pathminx=\dimen271
-\pgf@pathmaxx=\dimen272
-\pgf@pathminy=\dimen273
-\pgf@pathmaxy=\dimen274
-\pgf@xx=\dimen275
-\pgf@xy=\dimen276
-\pgf@yx=\dimen277
-\pgf@yy=\dimen278
-\pgf@zx=\dimen279
-\pgf@zy=\dimen280
+\pgf@picminx=\dimen269
+\pgf@picmaxx=\dimen270
+\pgf@picminy=\dimen271
+\pgf@picmaxy=\dimen272
+\pgf@pathminx=\dimen273
+\pgf@pathmaxx=\dimen274
+\pgf@pathminy=\dimen275
+\pgf@pathmaxy=\dimen276
+\pgf@xx=\dimen277
+\pgf@xy=\dimen278
+\pgf@yx=\dimen279
+\pgf@yy=\dimen280
+\pgf@zx=\dimen281
+\pgf@zy=\dimen282
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathconstruct.c
 ode.tex"
 File: pgfcorepathconstruct.code.tex 2010/08/03  (rcs-revision 1.24)
-\pgf@path@lastx=\dimen281
-\pgf@path@lasty=\dimen282
+\pgf@path@lastx=\dimen283
+\pgf@path@lasty=\dimen284
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathusage.code.
 tex"
 File: pgfcorepathusage.code.tex 2008/04/22  (rcs-revision 1.12)
-\pgf@shorten@end@additional=\dimen283
-\pgf@shorten@start@additional=\dimen284
+\pgf@shorten@end@additional=\dimen285
+\pgf@shorten@start@additional=\dimen286
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorescopes.code.tex
 "
 File: pgfcorescopes.code.tex 2010/09/08  (rcs-revision 1.34)
-\pgfpic=\box82
-\pgf@hbox=\box83
-\pgf@layerbox@main=\box84
+\pgfpic=\box85
+\pgf@hbox=\box86
+\pgf@layerbox@main=\box87
 \pgf@picture@serial@count=\count288
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoregraphicstate.co
 de.tex"
 File: pgfcoregraphicstate.code.tex 2008/04/22  (rcs-revision 1.9)
-\pgflinewidth=\dimen285
+\pgflinewidth=\dimen287
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretransformations
 .code.tex"
 File: pgfcoretransformations.code.tex 2009/06/10  (rcs-revision 1.11)
-\pgf@pt@x=\dimen286
-\pgf@pt@y=\dimen287
-\pgf@pt@temp=\dimen288
+\pgf@pt@x=\dimen288
+\pgf@pt@y=\dimen289
+\pgf@pt@temp=\dimen290
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorequick.code.tex"
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
@@ -1433,7 +1440,7 @@ File: pgfcorearrows.code.tex 2008/04/23  (rcs-revision 1.11)
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreshade.code.tex"
 File: pgfcoreshade.code.tex 2008/11/23  (rcs-revision 1.13)
-\pgf@max=\dimen289
+\pgf@max=\dimen291
 \pgf@sys@shading@range@num=\count289
 ) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreimage.code.te
 x"
@@ -1442,7 +1449,7 @@ File: pgfcoreimage.code.tex 2010/03/25  (rcs-revision 1.16)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreexternal.code.t
 ex"
 File: pgfcoreexternal.code.tex 2010/09/01  (rcs-revision 1.17)
-\pgfexternal@startupbox=\box85
+\pgfexternal@startupbox=\box88
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorelayers.code.tex
 "
@@ -1458,15 +1465,15 @@ File: pgfcorepatterns.code.tex 2009/07/02  (rcs-revision 1.3)
 )))
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleshapes.code.tex"
 File: pgfmoduleshapes.code.tex 2010/09/09  (rcs-revision 1.13)
-\pgfnodeparttextbox=\box86
+\pgfnodeparttextbox=\box89
 ) ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleplot.code.tex"
 File: pgfmoduleplot.code.tex 2010/10/22  (rcs-revision 1.8)
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version-0-65.
 sty"
 Package: pgfcomp-version-0-65 2007/07/03 v2.10 (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen290
-\pgf@nodesepend=\dimen291
+\pgf@nodesepstart=\dimen292
+\pgf@nodesepend=\dimen293
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version-1-18.
 sty"
@@ -1476,8 +1483,8 @@ Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex"))
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\utilities\pgffor.code.tex"
 Package: pgffor 2010/03/23 v2.10 (rcs-revision 1.18)
-\pgffor@iter=\dimen292
-\pgffor@skip=\dimen293
+\pgffor@iter=\dimen294
+\pgffor@skip=\dimen295
 \pgffor@stack=\toks38
 \pgffor@toks=\toks39
 ))
@@ -1488,16 +1495,16 @@ Package: tikz 2010/10/13 v2.10 (rcs-revision 1.76)
 code.tex"
 File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
 \pgf@plot@mark@count=\count290
-\pgfplotmarksize=\dimen294
+\pgfplotmarksize=\dimen296
 )
-\tikz@lastx=\dimen295
-\tikz@lasty=\dimen296
-\tikz@lastxsaved=\dimen297
-\tikz@lastysaved=\dimen298
-\tikzleveldistance=\dimen299
-\tikzsiblingdistance=\dimen300
-\tikz@figbox=\box87
-\tikz@tempbox=\box88
+\tikz@lastx=\dimen297
+\tikz@lasty=\dimen298
+\tikz@lastxsaved=\dimen299
+\tikz@lastysaved=\dimen300
+\tikzleveldistance=\dimen301
+\tikzsiblingdistance=\dimen302
+\tikz@figbox=\box90
+\tikz@tempbox=\box91
 \tikztreelevel=\count291
 \tikznumberofchildren=\count292
 \tikznumberofcurrentchild=\count293
@@ -1515,35 +1522,35 @@ File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
 librarytopaths.code.tex"
 File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
 )))
-\mdf@frametitlebox=\box89
-\mdf@footnotebox=\box90
-\mdf@splitbox@one=\box91
-\mdf@splitbox@two=\box92
-\mdf@splitbox@save=\box93
-\mdfsplitboxwidth=\skip370
-\mdfsplitboxtotalwidth=\skip371
-\mdfsplitboxheight=\skip372
-\mdfsplitboxdepth=\skip373
-\mdfsplitboxtotalheight=\skip374
-\mdfframetitleboxwidth=\skip375
-\mdfframetitleboxtotalwidth=\skip376
-\mdfframetitleboxheight=\skip377
-\mdfframetitleboxdepth=\skip378
-\mdfframetitleboxtotalheight=\skip379
-\mdffootnoteboxwidth=\skip380
-\mdffootnoteboxtotalwidth=\skip381
-\mdffootnoteboxheight=\skip382
-\mdffootnoteboxdepth=\skip383
-\mdffootnoteboxtotalheight=\skip384
-\mdftotallinewidth=\skip385
-\mdfboundingboxwidth=\skip386
-\mdfboundingboxtotalwidth=\skip387
-\mdfboundingboxheight=\skip388
-\mdfboundingboxdepth=\skip389
-\mdfboundingboxtotalheight=\skip390
-\mdf@freevspace@length=\skip391
-\mdf@horizontalwidthofbox@length=\skip392
-\mdf@verticalmarginwhole@length=\skip393
+\mdf@frametitlebox=\box92
+\mdf@footnotebox=\box93
+\mdf@splitbox@one=\box94
+\mdf@splitbox@two=\box95
+\mdf@splitbox@save=\box96
+\mdfsplitboxwidth=\skip374
+\mdfsplitboxtotalwidth=\skip375
+\mdfsplitboxheight=\skip376
+\mdfsplitboxdepth=\skip377
+\mdfsplitboxtotalheight=\skip378
+\mdfframetitleboxwidth=\skip379
+\mdfframetitleboxtotalwidth=\skip380
+\mdfframetitleboxheight=\skip381
+\mdfframetitleboxdepth=\skip382
+\mdfframetitleboxtotalheight=\skip383
+\mdffootnoteboxwidth=\skip384
+\mdffootnoteboxtotalwidth=\skip385
+\mdffootnoteboxheight=\skip386
+\mdffootnoteboxdepth=\skip387
+\mdffootnoteboxtotalheight=\skip388
+\mdftotallinewidth=\skip389
+\mdfboundingboxwidth=\skip390
+\mdfboundingboxtotalwidth=\skip391
+\mdfboundingboxheight=\skip392
+\mdfboundingboxdepth=\skip393
+\mdfboundingboxtotalheight=\skip394
+\mdf@freevspace@length=\skip395
+\mdf@horizontalwidthofbox@length=\skip396
+\mdf@verticalmarginwhole@length=\skip397
 
 
 ****** mdframed patching \endmdf@trivlist
@@ -1567,7 +1574,7 @@ File: md-frame-1.mdf 2012/09/21\ 1.6d: md-frame-1
 )
 \c@mdf@zref@counter=\count299
 Package zref Info: New property: mdf@pagevalue on input line 830.
-\mdf@horizontalspaceofbox=\skip394
+\mdf@horizontalspaceofbox=\skip398
 )
 
 Class memoir Warning: You are using the caption package with the memoir 
@@ -1576,35 +1583,36 @@ Class memoir Warning: You are using the caption package with the memoir
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
-Package: caption 2012/02/19 v3.2f Customizing captions (AR)
+Package: caption 2013/02/03 v3.3-65 Customizing captions (AR)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
-Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
-\captionmargin=\dimen301
-\captionmargin@=\dimen302
-\captionwidth=\dimen303
-\caption@indent=\dimen304
-\caption@parindent=\dimen305
-\caption@hangindent=\dimen306
+Package: caption3 2013/02/03 v1.5-62 caption3 kernel (AR)
+\captionmargin=\dimen303
+\captionmargin@=\dimen304
+\captionwidth=\dimen305
+\caption@tempdima=\dimen306
+\caption@indent=\dimen307
+\caption@parindent=\dimen308
+\caption@hangindent=\dimen309
 )
 \c@ContinuedFloat=\count300
 Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\caption\ltcaption.sty"
-Package: ltcaption 2011/09/12 v1.3 longtable captions (AR)
+Package: ltcaption 2013/02/03 v1.3-62 longtable captions (AR)
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\rotating\rotating.sty"
 Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
 \c@r@tfl@t=\count301
-\rotFPtop=\skip395
-\rotFPbot=\skip396
-\rot@float@box=\box94
+\rotFPtop=\skip399
+\rotFPbot=\skip400
+\rot@float@box=\box97
 \rot@mess@toks=\toks40
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsmath.sty"
 Package: amsmath 2000/07/18 v2.13 AMS math features
-\@mathmargin=\skip397
+\@mathmargin=\skip401
 
 For additional information on amsmath, use the `?' option.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amstext.sty"
@@ -1613,11 +1621,11 @@ Package: amstext 2000/06/29 v2.01
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks41
-\ex@=\dimen307
+\ex@=\dimen310
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen308
+\pmbraise@=\dimen311
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
@@ -1632,9 +1640,9 @@ LaTeX Info: Redefining \overline on input line 307.
 LaTeX Info: Redefining \ldots on input line 379.
 LaTeX Info: Redefining \dots on input line 382.
 LaTeX Info: Redefining \cdots on input line 467.
-\Mathstrutbox@=\box95
-\strutbox@=\box96
-\big@size=\dimen309
+\Mathstrutbox@=\box98
+\strutbox@=\box99
+\big@size=\dimen312
 LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 \macc@depth=\count307
@@ -1647,15 +1655,15 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 \column@=\count312
 \maxfields@=\count313
 \andhelp@=\toks43
-\eqnshift@=\dimen310
-\alignsep@=\dimen311
-\tagshift@=\dimen312
-\tagwidth@=\dimen313
-\totwidth@=\dimen314
-\lineht@=\dimen315
+\eqnshift@=\dimen313
+\alignsep@=\dimen314
+\tagshift@=\dimen315
+\tagwidth@=\dimen316
+\totwidth@=\dimen317
+\lineht@=\dimen318
 \@envbody=\toks44
-\multlinegap=\skip398
-\multlinetaggap=\skip399
+\multlinegap=\skip402
+\multlinetaggap=\skip403
 \mathdisplay@stack=\toks45
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
@@ -1759,34 +1767,38 @@ Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\mh\mathtools.sty"
-Package: mathtools 2012/04/24 v1.12 mathematical typesetting tools
+Package: mathtools 2013/02/12 v1.13 mathematical typesetting tools
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\mh\mhsetup.sty"
 Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
 )
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \g_MT_multlinerow_int=\count314
-\l_MT_multwidth_dim=\dimen316
-\origjot=\skip400
-\l_MT_shortvdotswithinadjustabove_dim=\dimen317
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen318
-\l_MT_above_intertext_dim=\dimen319
-\l_MT_below_intertext_dim=\dimen320
-\l_MT_above_shortintertext_dim=\dimen321
-\l_MT_below_shortintertext_dim=\dimen322
+\l_MT_multwidth_dim=\dimen319
+\origjot=\skip404
+\l_MT_shortvdotswithinadjustabove_dim=\dimen320
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen321
+\l_MT_above_intertext_sep=\dimen322
+\l_MT_below_intertext_sep=\dimen323
+\l_MT_above_shortintertext_sep=\dimen324
+\l_MT_below_shortintertext_sep=\dimen325
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\siunitx\siunitx.sty"
-Package: siunitx 2012/09/18 v2.5j A comprehensive (SI) units package
+Package: siunitx 2013/02/01 v2.5p A comprehensive (SI) units package
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\l3packages\l3keys2e\l3keys2e.sty"
-Package: l3keys2e 2012/09/29 v4249 LaTeX2e option processing using LaTeX3 keys
+Package: l3keys2e 2012/12/21 v4390 LaTeX2e option processing using LaTeX3 keys
 )
 Variant \tl_if_blank:VTF already defined; not changing it on line 50
-\l__siunitx_tmp_box=\box97
-\l__siunitx_tmp_dim=\dimen323
+\l__siunitx_tmp_box=\box100
+\l__siunitx_tmp_dim=\dimen326
 \l__siunitx_tmp_int=\count315
-Variant \prop_get:NVNT already defined; not changing it on line 361
-Variant \prop_get:NVNF already defined; not changing it on line 362
-Variant \prop_get:NVNTF already defined; not changing it on line 363
+Variant \prop_get:NVNT already defined; not changing it on line 371
+Variant \prop_get:NVNF already defined; not changing it on line 372
+Variant \prop_get:NVNTF already defined; not changing it on line 373
 \l__siunitx_number_mantissa_length_int=\count316
 \l__siunitx_number_uncert_length_int=\count317
 \l__siunitx_round_int=\count318
@@ -1796,10 +1808,10 @@ Variant \prop_get:NVNTF already defined; not changing it on line 363
 \l__siunitx_process_integer_min_int=\count322
 \l__siunitx_process_precision_int=\count323
 \l__siunitx_group_min_int=\count324
-\l__siunitx_angle_marker_box=\box98
-\l__siunitx_angle_unit_box=\box99
-\l__siunitx_angle_marker_dim=\dimen324
-\l__siunitx_angle_unit_dim=\dimen325
+\l__siunitx_angle_marker_box=\box101
+\l__siunitx_angle_unit_box=\box102
+\l__siunitx_angle_marker_dim=\dimen327
+\l__siunitx_angle_unit_dim=\dimen328
 \l__siunitx_unit_int=\count325
 \l__siunitx_unit_denominator_int=\count326
 \l__siunitx_unit_numerator_int=\count327
@@ -1807,153 +1819,153 @@ Variant \prop_get:NVNTF already defined; not changing it on line 363
 \l__siunitx_unit_prefix_base_int=\count329
 \l__siunitx_unit_prefix_gram_int=\count330
 \l__siunitx_number_product_int=\count331
-\c__siunitx_one_fill_skip=\skip401
-\l__siunitx_table_unit_align_skip=\skip402
-\l__siunitx_table_exponent_dim=\dimen326
-\l__siunitx_table_integer_dim=\dimen327
-\l__siunitx_table_mantissa_dim=\dimen328
-\l__siunitx_table_marker_dim=\dimen329
-\l__siunitx_table_result_dim=\dimen330
-\l__siunitx_table_uncert_dim=\dimen331
-\l__siunitx_table_fill_pre_dim=\dimen332
-\l__siunitx_table_fill_post_dim=\dimen333
-\l__siunitx_table_fill_mid_dim=\dimen334
-\l__siunitx_table_pre_box=\box100
-\l__siunitx_table_post_box=\box101
-\l__siunitx_table_mantissa_box=\box102
-\l__siunitx_table_result_box=\box103
-\l__siunitx_table_number_align_skip=\skip403
-\l__siunitx_table_text_align_skip=\skip404
+\c__siunitx_one_fill_skip=\skip405
+\l__siunitx_table_unit_align_skip=\skip406
+\l__siunitx_table_exponent_dim=\dimen329
+\l__siunitx_table_integer_dim=\dimen330
+\l__siunitx_table_mantissa_dim=\dimen331
+\l__siunitx_table_marker_dim=\dimen332
+\l__siunitx_table_result_dim=\dimen333
+\l__siunitx_table_uncert_dim=\dimen334
+\l__siunitx_table_fill_pre_dim=\dimen335
+\l__siunitx_table_fill_post_dim=\dimen336
+\l__siunitx_table_fill_mid_dim=\dimen337
+\l__siunitx_table_pre_box=\box103
+\l__siunitx_table_post_box=\box104
+\l__siunitx_table_mantissa_box=\box105
+\l__siunitx_table_result_box=\box106
+\l__siunitx_table_number_align_skip=\skip407
+\l__siunitx_table_text_align_skip=\skip408
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining document command \DeclareBinaryPrefix with arg. spec. 'mmm' on line
-. 7064.
+. 7089.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining document command \DeclareSIPostPower with arg. spec. 'mm' on line
-. 7067.
+. 7092.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining document command \DeclareSIPrefix with arg. spec. 'mmm' on line
-. 7070.
+. 7095.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining document command \DeclareSIPrePower with arg. spec. 'mm' on line
-. 7073.
+. 7098.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining document command \DeclareSIQualifier with arg. spec. 'mm' on line
-. 7076.
+. 7101.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining document command \DeclareSIUnit with arg. spec. 'O{}mm' on line
-. 7079.
+. 7104.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining document command \DeclareSIUnitWithOptions with arg. spec. 'mmm' on
-. line 7082.
+. line 7107.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining document command \ang with arg. spec. 'o>{\SplitArgument {2}{;}}m'
-. on line 7097.
+. on line 7122.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \num with arg. spec. 'om' on line 7105.
+. Defining document command \num with arg. spec. 'om' on line 7130.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining document command \numlist with arg. spec. 'o>{\SplitList {;}}m' on
-. line 7113.
+. line 7138.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \numrange with arg. spec. 'omm' on line 7121.
+. Defining document command \numrange with arg. spec. 'omm' on line 7146.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining document command \SIlist with arg. spec. 'o>{\SplitList {;}}mm' on
-. line 7132.
+. line 7157.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \SIrange with arg. spec. 'ommm' on line 7143.
+. Defining document command \SIrange with arg. spec. 'ommm' on line 7168.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \SI with arg. spec. 'omom' on line 7154.
+. Defining document command \SI with arg. spec. 'omom' on line 7179.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \sisetup with arg. spec. 'm' on line 7157.
+. Defining document command \sisetup with arg. spec. 'm' on line 7182.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \tablenum with arg. spec. 'om' on line 7169.
+. Defining document command \tablenum with arg. spec. 'om' on line 7194.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \si with arg. spec. 'om' on line 7180.
+. Defining document command \si with arg. spec. 'om' on line 7205.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining document command \__siunitx_bookmark_num:w with arg. spec. 'om' on
-. line 7224.
+. line 7250.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining document command \__siunitx_bookmark_numrange:w with arg. spec.
-. 'omm' on line 7226.
+. 'omm' on line 7252.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining document command \__siunitx_bookmark_SI:w with arg. spec. 'omom' on
-. line 7228.
+. line 7254.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining document command \__siunitx_bookmark_SIlist:w with arg. spec. 'omm'
-. on line 7230.
+. on line 7256.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining document command \__siunitx_bookmark_SIrange:w with arg. spec.
-. 'ommm' on line 7232.
+. 'ommm' on line 7258.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining document command \__siunitx_bookmark_si:w with arg. spec. 'om' on
-. line 7233.
+. line 7259.
 .................................................
 \g__ior_internal_ior=\read3
 
@@ -1971,8 +1983,8 @@ Package: varioref 2011/10/02 v1.4z package for extended references (FMi)
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip405
-\bibsep=\skip406
+\bibhang=\skip409
+\bibsep=\skip410
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count333
 )
@@ -1981,9 +1993,9 @@ Package: xr 1994/05/28 v5.02 eXternal References (DPC)
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\nomencl\nomencl.sty"
 Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
-\nomlabelwidth=\dimen335
-\nom@tempdim=\dimen336
-\nomitemsep=\skip407
+\nomlabelwidth=\dimen338
+\nom@tempdim=\dimen339
+\nomitemsep=\skip411
 )
 \@nomenclaturefile=\write5
 
@@ -1992,21 +2004,21 @@ Writing nomenclature file TransitionRulesAppendix.nlo
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count334
 \float@exts=\toks46
-\float@box=\box104
+\float@box=\box107
 \@float@everytoks=\toks47
-\@floatcapt=\box105
+\@floatcapt=\box108
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fixme\fixme.sty"
-Package: fixme 2009/09/30 v4.1 Insert fixme notes in your documents
+Package: fixme 2013/01/28 v4.2 Collaborative annotations for LaTeX2e
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
-Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
+Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
 \XKV@toks=\toks48
 \XKV@tempa@toks=\toks49
 \XKV@depth=\count335
-File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
+File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
 ))
 \c@fixmecount=\count336
 \c@fxnotecount=\count337
@@ -2035,7 +2047,7 @@ Sidefootvsep and sidefootheight: 13.6pt and 594.32022pt
 ******************************************************
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
-Package: hyperref 2012/09/27 v6.83g Hypertext links for LaTeX
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
 Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
@@ -2070,12 +2082,12 @@ Package hobsub Info: Skipping package `atbegshi' (already loaded).
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-\@linkdim=\dimen337
+\@linkdim=\dimen340
 \Hy@linkcounter=\count341
 \Hy@pagecounter=\count342
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
-File: pd1enc.def 2012/09/27 v6.83g Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
@@ -2084,31 +2096,31 @@ Now handling font encoding PD1 ...
 ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 4164.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 4164
+Package hyperref Info: Option `colorlinks' set `true' on input line 4319.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 4319
 .
-Package hyperref Info: Hyper figures OFF on input line 4288.
-Package hyperref Info: Link nesting OFF on input line 4293.
-Package hyperref Info: Hyper index ON on input line 4296.
-Package hyperref Info: Plain pages OFF on input line 4303.
-Package hyperref Info: Backreferencing OFF on input line 4308.
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4533.
+Package hyperref Info: Bookmarks ON on input line 4688.
 \c@Hy@tempcnt=\count344
-LaTeX Info: Redefining \url on input line 4886.
-\XeTeXLinkMargin=\dimen338
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen341
 \Fld@menulength=\count345
-\Field@Width=\dimen339
-\Fld@charsize=\dimen340
-Package hyperref Info: Hyper figures OFF on input line 6129.
-Package hyperref Info: Link nesting OFF on input line 6134.
-Package hyperref Info: Hyper index ON on input line 6137.
-Package hyperref Info: backreferencing OFF on input line 6144.
-Package hyperref Info: Link coloring ON on input line 6147.
-Package hyperref Info: Link coloring with OCG OFF on input line 6154.
-Package hyperref Info: PDF/A mode OFF on input line 6159.
-LaTeX Info: Redefining \ref on input line 6199.
-LaTeX Info: Redefining \pageref on input line 6203.
+\Field@Width=\dimen342
+\Fld@charsize=\dimen343
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring ON on input line 6313.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
 \Hy@abspage=\count346
 \c@Item=\count347
 \c@Hfootnote=\count348
@@ -2122,7 +2134,7 @@ ass
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
-File: hpdftex.def 2012/09/27 v6.83g Hyperref driver for pdfTeX
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
 \HyAnn@Count=\count350
 \Fld@listcount=\count351
 \c@bookmark@seq@number=\count352
@@ -2132,34 +2144,34 @@ Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip408
+\Hy@SectionHShift=\skip412
 )
 Package hyperref Info: Option `colorlinks' set `false' on input line 164.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty"
-\wrapoverhang=\dimen341
-\WF@size=\dimen342
+\wrapoverhang=\dimen344
+\WF@size=\dimen345
 \c@WF@wrappedlines=\count353
-\WF@box=\box106
+\WF@box=\box109
 \WF@everypar=\toks50
 Package: wrapfig 2003/01/31  v 3.6
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\enumitem\enumitem.sty"
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
-\labelindent=\skip409
-\enit@outerparindent=\dimen343
+\labelindent=\skip413
+\enit@outerparindent=\dimen346
 \enit@toks=\toks51
-\enit@inbox=\box107
+\enit@inbox=\box110
 \enitdp@description=\count354
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\lastpage\lastpage.sty"
-Package: lastpage 2011/09/01 v1.2k Refers to last page's name (HMM; JPG)
+Package: lastpage 2013/01/28 v1.2l Refers to last page's name (HMM; JPG)
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\genmisc\nth.sty"
 Package: nth 2002/02/27
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\caption\newfloat.sty"
-Package: newfloat 2011/11/16 v1.0a Defining new floating environments (AR)
+Package: newfloat 2013/02/03 v1.0-62 Defining new floating environments (AR)
 )
 Package newfloat Info: New float `Grammar' with options ` fileext = logr,listna
 me = {List of Grammars}, name = Grammar, placement = H ' on input line 274.
@@ -2186,7 +2198,7 @@ File: tikzlibraryarrows.code.tex 2008/01/09 v2.10 (rcs-revision 1.1)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryarrows.code.t
 ex"
 File: pgflibraryarrows.code.tex 2008/10/27 v2.10 (rcs-revision 1.9)
-\arrowsize=\dimen344
+\arrowsize=\dimen347
 ))
 \enitdp@Description=\count357
 ) ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
@@ -2204,14 +2216,14 @@ Language: english 2005/03/30 v3.3o English support from the babel system
 ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
 File: babel.def 2008/07/08 v3.8m Babel common definitions
 \babel@savecnt=\count358
-\U@D=\dimen345
+\U@D=\dimen348
 )
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
-("C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\Klar til at blive rette
-t af andre\TransitionRulesAppendix-chr\TransitionRulesAppendix.aux")
+("C:\Users\Rasmus\Documents\P4\LaTeX\Klar til at blive rettet af andre\Transiti
+onRulesAppendix-ras\TransitionRulesAppendix.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 2.
 LaTeX Font Info:    ... okay on input line 2.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 2.
@@ -2233,19 +2245,19 @@ ABD: EveryShipout initializing macros
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count359
-\scratchdimen=\dimen346
-\scratchbox=\box108
+\scratchdimen=\dimen349
+\scratchbox=\box111
 \nofMPsegments=\count360
 \nofMParguments=\count361
 \everyMPshowfont=\toks52
 \MPscratchCnt=\count362
-\MPscratchDim=\dimen347
+\MPscratchDim=\dimen350
 \MPnumerator=\count363
 \makeMPintoPDFobject=\count364
 \everyMPtoPDFconversion=\toks53
 ) ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 2.
-\AtBeginShipoutBox=\box109
+\AtBeginShipoutBox=\box112
 \c@lstlisting=\count365
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
@@ -2260,19 +2272,17 @@ Dictionary: translator-basic-dictionary, Language: English
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\siunitx\config\siunitx-abbreviations.cf
 g"
-File: siunitx-abbreviations.cfg 2012/09/18 v2.5j siunitx: Abbreviated units
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\siunitx\config\siunitx-binary.cfg"
-File: siunitx-binary.cfg 2012/09/18 v2.5j siunitx: Binary units
+File: siunitx-abbreviations.cfg 2013/02/01 v2.5p siunitx: Abbreviated units
 )
 Package hyperref Info: Link coloring OFF on input line 2.
-("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
-Package: nameref 2012/07/31 v2.42 Cross-referencing by name of section
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count366
-LaTeX Info: Redefining \Ref on input line 503.
+LaTeX Info: Redefining \Ref on input line 513.
 )
 Redoing nameref's sectioning
 Redoing nameref's label
@@ -2281,10 +2291,10 @@ LaTeX Info: Redefining \ref on input line 2.
 LaTeX Info: Redefining \pageref on input line 2.
 LaTeX Info: Redefining \nameref on input line 2.
 
-("C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\Klar til at blive rette
-t af andre\TransitionRulesAppendix-chr\TransitionRulesAppendix.out")
-("C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\Klar til at blive rette
-t af andre\TransitionRulesAppendix-chr\TransitionRulesAppendix.out")
+("C:\Users\Rasmus\Documents\P4\LaTeX\Klar til at blive rettet af andre\Transiti
+onRulesAppendix-ras\TransitionRulesAppendix.out")
+("C:\Users\Rasmus\Documents\P4\LaTeX\Klar til at blive rettet af andre\Transiti
+onRulesAppendix-ras\TransitionRulesAppendix.out")
 \@outlinefile=\write6
 LaTeX Info: Redefining \Ref on input line 2.
 Package lastpage Info: Please have a look at the pageslts package at
@@ -2392,8 +2402,8 @@ AED: lastpage setting LastPage
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 547.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 547.
 
-("C:\Users\Christian\Documents\Arbejde\UNI\P4\svn\LaTeX\Klar til at blive rette
-t af andre\TransitionRulesAppendix-chr\TransitionRulesAppendix.aux")
+("C:\Users\Rasmus\Documents\P4\LaTeX\Klar til at blive rettet af andre\Transiti
+onRulesAppendix-ras\TransitionRulesAppendix.aux")
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 547.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 547.
 Package rerunfilecheck Info: File `TransitionRulesAppendix.out' has not changed
@@ -2401,31 +2411,31 @@ Package rerunfilecheck Info: File `TransitionRulesAppendix.out' has not changed
 (rerunfilecheck)             Checksum: EFF4B298273FBFF20268DDCD27E0843B;120.
  ) 
 Here is how much of TeX's memory you used:
- 35524 strings out of 493921
- 647531 string characters out of 3147269
- 760566 words of memory out of 3000000
- 38160 multiletter control sequences out of 15000+200000
+ 35877 strings out of 493921
+ 654829 string characters out of 3147280
+ 772257 words of memory out of 3000000
+ 38516 multiletter control sequences out of 15000+200000
  20729 words of font info for 58 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
- 77i,14n,84p,992b,884s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.enc}{C:/Pro
-gram Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-msy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1000.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1200.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/cm-super/sfrm1000.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/cm-super/sfsx1000.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/cm-super/sfti1000.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/bo
-okman/ubkd8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/bookman/ubkl8a.pf
-b>
-Output written on TransitionRulesAppendix.pdf (7 pages, 178190 bytes).
+ 77i,14n,83p,876b,864s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi657
+\ecbx1000.pk> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
+n\ec\dpi657\ecsx1000.pk> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\jknappen\ec\dpi720\ecbx1200.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips
+/fontname/8r.enc} <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkn
+appen\ec\dpi657\ecti1000.pk> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk
+\ljfour\jknappen\ec\dpi657\ecrm1000.pk><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/urw/bookman/ubkd8a.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/urw/bookman/ubkl8a.pfb>
+Output written on TransitionRulesAppendix.pdf (7 pages, 135631 bytes).
 PDF statistics:
- 132 PDF objects out of 1000 (max. 8388607)
+ 252 PDF objects out of 1000 (max. 8388607)
  16 named destinations out of 1000 (max. 500000)
  125 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -63,6 +63,10 @@ public class Error {
 	            break;
 	         	case 21:  ErrorMessage = "Missing required function \"" + this.ErrorBody + "\"\n";
 	            break;
+	         	case 22:  ErrorMessage = "Error in formal parameters in required function \"" + this.ErrorBody + "\"\n";
+	            break;
+	         	case 23:  ErrorMessage = "Error in formal parameters in function \"" + this.ErrorBody + "\"\n";
+	            break;
 	         	default: ErrorMessage = "Error code: -1";
 	                  break;
 			 }

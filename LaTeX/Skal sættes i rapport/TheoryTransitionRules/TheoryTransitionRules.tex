@@ -40,7 +40,7 @@ We assume a collection of syntactic categories and for each syntactic category w
 \fxfatal{Forklar hvad det er, og at vi bruger big-step.}
 
 \subsection{Environment-Store Model}
-In our project we use the \textit{environment-store model} to represent how a variable is bound to a storage cell (called a \textit{location}), in the computer, and that the value of the variable is the content of the bound location. All the possible locations are denoted by \textbf{Loc} and a single location as $l \in \textbf{Loc}$. We assume all locations are integer, and therefore $\textbf{Loc} = \mathbb{N}$. Since all locations are integers we can define a function to find the next location: $\textbf{Loc} \rightarrow \textbf{Loc}$, where $l = l + 1$. 
+In our project we use the \textit{environment-store model} to represent how a variable is bound to a storage cell (called a \textit{location}), in a computer, and that the value of the variable is the content of the bound location. All the possible locations are denoted by \textbf{Loc} and a single location as $l \in \textbf{Loc}$. We assume all locations are integer, and therefore $\textbf{Loc} = \mathbb{N}$. Since all locations are integers we can define a function to find the next location: $\textbf{Loc} \rightarrow \textbf{Loc}$, where $l = l + 1$. 
 
 We define the set of stores to be the mappings from locations to values $\textbf{Sto } = \textbf{ Loc } \rightharpoonup \mathbb{Z}$, where $sto$ is a single element in $\textbf{Sto}$.
 
@@ -103,7 +103,7 @@ The transition rule for logical-or in SPLAD can be seen on table \ref{tab:OrExp}
 \end{longtable}
 
 \subsection{Variable Declaration}
-The transition rules for the variable declarations are on the form: $\langle D_V, env_V, sto \rangle \rightarrow_{DV} (env_V', sto')$. The transition system is defined by: $\Gamma_{\mathbf{ErkV}}, \rightarrow_{DV}, \Tau_{\mathbf{ErkV}}$ and the configurations are defined by $\Gamma_{DV} = (\textbf{ErkV} \times \textbf{EnvV} \times \textbf{Sto}) \cup (\textbf{EnvV} \times \textbf{Sto})$ and $\Tau_{DV} = (\textbf{EnvV} \times \textbf{Sto})$. The end configurations are defined by $\Tau_{\mathbf{ErkV}} = \textbf{EnvV} \times \textbf{Sto}$.
+The transition rules for the variable declarations are on the form: $\langle D_V, env_V, sto \rangle \rightarrow_{DV} (env_V', sto')$. The transition system is defined by: $\Gamma_{\mathbf{DecV}}, \rightarrow_{DV}, \Tau_{\mathbf{DecV}}$ and the configurations are defined by $\Gamma_{DV} = (\textbf{DecV} \times \textbf{EnvV} \times \textbf{Sto}) \cup (\textbf{EnvV} \times \textbf{Sto})$ and $\Tau_{DV} = (\textbf{EnvV} \times \textbf{Sto})$. The end configurations are defined by $\Tau_{\mathbf{DecV}} = \textbf{EnvV} \times \textbf{Sto}$.
 
 The transition rules for variable declaration can be seen on table \ref{tab:VarDec}. It is done by binding $l$ to the next available location and binding $x$ to this location. The function $new$ is then used to point at the next available location. Then $env_V$ is updated to include the new variable, while the store remains unchanged.
 
@@ -120,7 +120,7 @@ The transition rules for variable declaration can be seen on table \ref{tab:VarD
 \end{longtable}
 
 \subsection{Procedure Declaration}
-The transition rules for the procedure declarations are on the form: $env_V \vdash \langle D_P, env_P \rangle \rightarrow_{DP} env_P'$. The transition system is defined by: $(\Gamma_{\mathbf{ErkP}}, \rightarrow_{DP}, \Tau_{\mathbf{ErkP}})$ and the configurations are defined by $\Gamma_{DP} = (\textbf{ErkP} \times \textbf{EnvP}) \cup \textbf{EnvP}$ and $\Tau_{DP} = \textbf{EnvP}$. The end configurations are defined by $\Tau_{\mathbf{ErkP}} = \textbf{EnvP}$.
+The transition rules for the procedure declarations are on the form: $env_V \vdash \langle D_P, env_P \rangle \rightarrow_{DP} env_P'$. The transition system is defined by: $(\Gamma_{\mathbf{DecP}}, \rightarrow_{DP}, \Tau_{\mathbf{DecP}})$ and the configurations are defined by $\Gamma_{DP} = (\textbf{DecP} \times \textbf{EnvP}) \cup \textbf{EnvP}$ and $\Tau_{DP} = \textbf{EnvP}$. The end configurations are defined by $\Tau_{\mathbf{DecP}} = \textbf{EnvP}$.
 
 The transitions rules for procedure declaration with none to multiple parameters can be seen on table \ref{tab:ProcDec}. The rule states that the new procedure is stored in the procedure environment along with the statement, formal parameters, and procedure- and variable-bindings from the time of declaration.
 
@@ -134,7 +134,7 @@ The transitions rules for procedure declaration with none to multiple parameters
 \end{longtable}
 
 \subsection{Array Declaration}
-The transition rules for the variable declarations are on the form: $\langle D_A, env_V, sto \rangle \rightarrow_{DA} (env_V', sto')$. The transition system is defined by: $(\Gamma_{\mathbf{ErkA}}, \rightarrow_{DA}, \Tau_{\mathbf{ErkA}})$ and the configurations are defined by $\Gamma_{DA} = (\textbf{ErkA} \times \textbf{EnvV} \times \textbf{Sto}) \cup (\textbf{EnvV} \times \textbf{Sto})$ and $\Tau_{DA} = \textbf{EnvV} \times \textbf{Sto}$. The end configurations are defined by $\Tau_{\mathbf{ErkA}} = \textbf{EnvV} \times \textbf{Sto}$.
+The transition rules for the variable declarations are on the form: $\langle D_A, env_V, sto \rangle \rightarrow_{DA} (env_V', sto')$. The transition system is defined by: $(\Gamma_{\mathbf{DecA}}, \rightarrow_{DA}, \Tau_{\mathbf{DecA}})$ and the configurations are defined by $\Gamma_{DA} = (\textbf{DecA} \times \textbf{EnvV} \times \textbf{Sto}) \cup (\textbf{EnvV} \times \textbf{Sto})$ and $\Tau_{DA} = \textbf{EnvV} \times \textbf{Sto}$. The end configurations are defined by $\Tau_{\mathbf{DecA}} = \textbf{EnvV} \times \textbf{Sto}$.
 
 The transitions rules for the array declaration can be seen on table \ref{tab:ArrayDec}. The rule states that a number of locations equal to the length of the array plus one is allocated, and the pointer is set to point at the next available location. The length of the array is then stored in the first location of the array. 
 

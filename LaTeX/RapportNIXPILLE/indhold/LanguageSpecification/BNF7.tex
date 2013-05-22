@@ -1,6 +1,6 @@
-\subsubsection{Grammar - Drinks}
-This section contains the grammar related to types. This can be seen on \ref{gra:Types}
-\begin{grammatik}{Types}{Grammar for types}
+\subsubsection{Grammar - Types}
+This section contains the grammar related to types. This can be seen on grammar \ref{gra:Types}.
+\begin{grammatik}{Types}{Grammar for types.}
 <program> $\ra$ <roots>
 
 <roots> $\ra$ $\eps$
@@ -36,8 +36,8 @@ This section contains the grammar related to types. This can be seen on \ref{gra
 The grammar for the drinks is described in section \ref{gra:drinkgram}.
 
 \subsubsection{Grammar - Assign}
-This section contains the grammar related to assignments. This can be seen on \ref{gra:assign}
-\begin{grammatik}{assign}{Grammar related to assignments}
+This section contains the grammar related to assignments. This can be seen on grammar \ref{gra:assign}.
+\begin{grammatik}{assign}{Grammar related to assignments.}
 <assign> $\ra$ <callid> <assignend>
 
 <assignend> $\ra$ "<""-""-" <expr>
@@ -81,8 +81,8 @@ This section contains the grammar related to assignments. This can be seen on \r
 \end{grammatik}
 
 \subsubsection{Grammar - Expressions}
-This section contains the grammar related to expressions. This can be seen on \ref{gra:expr}
-\begin{grammatik}{expr}{The grammar related to expressions}
+This section contains the grammar related to expressions. This can be seen on grammar \ref{gra:expr}.
+\begin{grammatik}{expr}{The grammar related to expressions.}
 <addsubend> $\ra$ <plusminus> <addsub>
 \alt $\eps$
 
@@ -135,8 +135,8 @@ This section contains the grammar related to expressions. This can be seen on \r
 \end{grammatik}
 
 \subsubsection{Grammar - Functions}
-This section contains the grammar related to functions. This can be seen on \ref{gra:func}
-\begin{grammatik}{func}{The grammar related to functions}
+This section contains the grammar related to functions. This can be seen on grammar \ref{gra:func}.
+\begin{grammatik}{func}{The grammar related to functions.}
 <cast> $\ra$ <type> (<expr>)
 
 <function> $\ra$ function <id> return <functionmid>
@@ -172,8 +172,8 @@ begin
 \end{grammatik}
 
 \subsubsection{Grammar - Loops}
-This section contains the grammar related to loops. This can be seen on \ref{gra:loop}
-\begin{grammatik}{loop}{The grammar related to loops}
+This section contains the grammar related to loops. This can be seen on grammar \ref{gra:loop}.
+\begin{grammatik}{loop}{The grammar related to loops.}
 <nontermif> $\ra$ if(<expr>)
 	<block>
 	<endif>
@@ -214,7 +214,7 @@ This section contains the grammar related to loops. This can be seen on \ref{gra
 \end{grammatik}
 
 \input{indhold/LanguageSpecification/lexiconintro}
-\begin{grammatik}{lexicon}{The grammar for the lexicon}
+\begin{grammatik}{lexicon}{The grammar for the lexicon.}
 <STRINGTOKEN> $\ra$ '' .*? '' 
 
 <LETTER> $\ra$ [a - zA - Z]$~^+$

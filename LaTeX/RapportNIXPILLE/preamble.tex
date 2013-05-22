@@ -214,14 +214,14 @@ morekeywords={int, container, string, bool, double, HIGH, LOW, true, false, noth
 \usepackage{intcalc}
 \usepackage{nth}
 
-\makeevenfoot{custom}{Side \thepage}{}{}	% Definerer lige siders sidefod efter modellen \makeevenfoot{Navn}{Venstre}{Center}{Højre}
-\makeoddfoot{custom}{}{}{Side \thepage}% Definerer ulige siders sidefod efter modellen \makeoddfoot{Navn}{Venstre}{Center}{Højre}		
+\makeevenfoot{custom}{Page \thepage}{}{}	% Definerer lige siders sidefod efter modellen \makeevenfoot{Navn}{Venstre}{Center}{Højre}
+\makeoddfoot{custom}{}{}{Page \thepage}% Definerer ulige siders sidefod efter modellen \makeoddfoot{Navn}{Venstre}{Center}{Højre}		
 \makeheadrule{custom}{\textwidth}{0.5pt}	 % Tilføjer en streg under sidehovedets indhold
 \makefootrule{custom}{\textwidth}{0.5pt}{1mm}	% Tilføjer en streg under sidefodens indhold
 
 \copypagestyle{nychapter}{custom} % Følgende linier sørger for, at sidefoden bibeholdes på kapitlets første side
-\makeoddhead{nychapter}{Group SW407F13, Aalborg Universitet}{P4}{\leftmark}
-\makeevenhead{nychapter}{Group SW407F13, Aalborg Universitet}{P4}{\leftmark}
+\makeoddhead{nychapter}{Group SW407F13}{P4, Aalborg University}{\leftmark}
+\makeevenhead{nychapter}{Group SW407F13}{P4, Aalborg University}{\leftmark}
 \makeheadrule{nychapter}{\textwidth}{0pt}
 \aliaspagestyle{chapter}{nychapter}	% <--
 \aliaspagestyle{cleared}{custom}

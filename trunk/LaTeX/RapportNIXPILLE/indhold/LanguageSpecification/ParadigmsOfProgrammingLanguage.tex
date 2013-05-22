@@ -1,13 +1,13 @@
 \section{Programming Language Paradigms}
 In computer science a paradigm means "A pattern that serves as a \textit{school of thoughts} for programming of computers" \citep{ProgrammingParadigms2}. 
-There are four main paradigms of programming language \citep{ProgrammingParadigms}. In this section these paradigms will be briefly described followed by a subsection, explaining the choice of programming paradigm of the language in this project.
+There are four main paradigms of programming languages \citep{ProgrammingParadigms}. In this section these paradigms will be briefly described followed by a subsection, explaining the choice of programming paradigm of the language in this project.
 
 \subsection{Imperative Programming}
-Imperative programming is a sequential or procedural way to program, in the sense that a step is performed, then another step and so on. These steps are controlled by control-structures for example the if-statement. An example of a imperative programming language is C. Imperative programming language describes programs in terms of statements which alter the state of the program. This makes imperative languages simple, and are also a good starting point for new programmers.
+Imperative programming is a sequential or procedural way to program, in the sense that a step is performed, then another step and so on. These steps are controlled by control-structures for example an if-statement. An example of an imperative programming language is C. Imperative programming languages describe programs in terms of statements which alter the state of a program. This makes imperative languages simple, and a good starting point for new programmers \citep{ProgrammingParadigms}.
 
 \subsection{Functional Programming}
-Functional programming originates from the theory of functions in mathematics. In functional programming all computations are done by calling functions. In functional programming languages calls to a function will always yield the same result, if the function is called with the same parameters as input. This is in contrast to imperative programming where function calls can result in different values depending on the state of the program at the given time. Some examples of functional programming languages are Haskell and OCaml.
-An example \ref{lst:FunctionalEKS} is a piece of pseudo code where there could return a different result, if it is written in a functional programming paradigm or not.
+Functional programming originates from the theory of functions in mathematics. In functional programming all computations are done by calling functions. The function calls of a functional programming language will always yield the same result, if the function is called with the same parameters as input. This is in contrast to imperative programming where function calls can result in different values depending on the state of the program at the given time. Some examples of functional programming languages are Haskell and OCaml.
+Example \ref{lst:FunctionalEKS} is a piece of pseudo code which shows that a function could return a different result, if it is written in a functional programming language or not.
 
 \begin{code}{FunctionalEKS}{A pseudo code in functional programming \citep{funcprog}.}
 	\begin{lstlisting}
@@ -15,12 +15,18 @@ An example \ref{lst:FunctionalEKS} is a piece of pseudo code where there could r
 	\end{lstlisting}
 \end{code}
 
-The code \ref{lst:FunctionalEKS} will always be true in  functional programming paradigm, but in others paradigms such as the imperative programming paradigm, there can be a global variable that is used in the function "foo()" that can change on runtime.
-\subsection{Object-Oriented Programming}
-Object-Oriented programming is based on the idea of data encapsulation, and grouping of logical program aspects. The concept of parsing messages between objects are also a very desirable feature when programs reach a certain size. In object-oriented programming, each class of objects can be given methods, which is a kind of function which can be called on that object. For example the expression "foo.Equals(bar)", would call the Equals-method in the class of 'foo', and evaluate if 'bar' equals 'foo'. It is also relatively simple in object-oriented languages to specify access-levels of classes, and thereby protect certain classes from external exposure. Classes can inherit from other classes. For example one could have a 'Car'-class, which inherits all properties and methods of a 'Vehicle'-class. This allows for a high degree of code-reuse.
+The code on listing \ref{lst:FunctionalEKS} will always be true in functional programming paradigm, but in other paradigms such as the imperative programming paradigm, there can be a global variable which is used in the function "foo()" that can change on runtime and it could thereby return false \citep{ProgrammingParadigms}.
+\subsection{Object-oriented Programming}
+Object-oriented programming is based on the idea of data encapsulation, and grouping of logical program aspects. The concept of parsing messages between objects is also a very desirable feature when programs reach a certain size. In object-oriented programming, each class of objects can be given methods, which is a kind of function that can be called on that object. For example the expression "foo.Equals(bar)", would call the Equals-method in the class of 'foo' with the parameter 'bar'. It is also relatively simple in object-oriented languages to specify access-levels of classes, and thereby protect certain classes from external exposure. Classes can inherit from other classes. For example one could have a 'Car'-class, which inherits all properties and methods of a 'Vehicle'-class. This allows for a high degree of code-reuse \citep{ProgrammingParadigms}.
 
 \subsection{Logic Programming}
-Logic programming is fundamentally different from the imperative-, functional-, and object-oriented programming languages. In logic programming, it cannot be stated how a result should be computed, but rather the form and characteristics of the result. An example of a logic programming language is Prolog.
+Logic programming is fundamentally different from the imperative-, functional-, and object-oriented programming languages. In logic programming, it cannot be stated how a result should be computed, but rather the form and characteristics of the result. An example of a logic programming language is Prolog  \citep{ProgrammingParadigms}. An example of a hello world program written in Prolog can be seen on listing \ref{lst:helloprolog}
 
-\subsection{Choice of Paradigm in This Project}
-For this project, an imperative approach has been chosen. The reason for this, is that the programming language of this project should be simple to both understand and program for beginners. To provide this friendliness towards beginners, the programming language will likely have a relatively simple syntax, meaning that it should have short simple commands that are easy to understand. This makes object-orienting undesirable because these type of languages has a tendency to provide a lot of functions and allows user to call commands upon commands which can result in long sequences of commands.
+\begin{code}{helloprolog}{Hello world program written in Prolog}
+\begin{lstlisting}
+:- write('Hello, world!'),nl.
+\end{lstlisting}
+\end{code}
+
+\subsection{Choice of Paradigm in this Project}
+For this project, an imperative approach has been chosen. The reason for this, is that the programming language of this project should be simple to both understand and program for beginners. To provide this friendliness towards beginners, the programming language will likely have a relatively simple syntax, meaning that it should have short simple commands that are easy to understand. This makes object-orienting undesirable because these type of languages has a tendency to provide a lot of functions and allows users to call commands upon commands which can result in long sequences of commands.

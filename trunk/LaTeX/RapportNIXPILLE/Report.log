@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.3.1)  22 MAY 2013 10:27
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.3.1)  22 MAY 2013 13:49
 entering extended mode
 **Report.tex
 (C:\Users\Rasmus\Documents\P4\LaTeX\RapportNIXPILLE\Report.tex
@@ -2465,13 +2465,28 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 16.
 See the caption package documentation for explanation.
 
-[5])
+[5]
+Package mdframed Info: mdframed works in twoside mode on input line 26.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+)
+Package mdframed Info: mdframed inside minipage 
+ mdframed uses option nobreak mdframed on input line 29.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 29.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 29.
+See the caption package documentation for explanation.
+
+)
 (C:\Users\Rasmus\Documents\P4\LaTeX\RapportNIXPILLE\indhold/LanguageSpecificati
 on/DesignCriteriaIntro.tex)
 (C:\Users\Rasmus\Documents\P4\LaTeX\RapportNIXPILLE\indhold/LanguageSpecificati
-on/ProgrammingAnArduino-basedDrinks-machine.tex)
+on/ProgrammingAnArduino-basedDrinks-machine.tex [6])
 (C:\Users\Rasmus\Documents\P4\LaTeX\RapportNIXPILLE\indhold/LanguageSpecificati
-on/DesignCriteriaInThisProject.tex [6]
+on/DesignCriteriaInThisProject.tex
 
 LaTeX Warning: Command \textbullet invalid in math mode on input line 40.
 
@@ -2643,16 +2658,8 @@ on/GrammarTypes.tex [10])
 on/Grammar.tex [11])
 (C:\Users\Rasmus\Documents\P4\LaTeX\RapportNIXPILLE\indhold/LanguageSpecificati
 on/ChoiceOfGrammar.tex
-Overfull \hbox (2.16177pt too wide) in paragraph at lines 7--9
-\T1/cmr/m/n/10.95 turn $\OML/cmm/m/it/10.95 type$ \T1/cmr/m/n/10.95 us-ing ($\O
-ML/cmm/m/it/10.95 parameter\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 s\OT1/cmr/m/
-n/10.95 )$\T1/cmr/m/n/10.95 ) be-gin $\OML/cmm/m/it/10.95 statements$ \T1/cmr/m
-/n/10.95 re-turn $\OML/cmm/m/it/10.95 expresion$ \T1/cmr/m/n/10.95 end". Where 
-$\OML/cmm/m/it/10.95 function$\T1/cmr/m/n/10.95 -
- []
-
 Package mdframed Info: mdframed works in twoside mode on input line 11.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 Package mdframed Info: mdframed inside minipage 
@@ -2743,7 +2750,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 97.
 See the caption package documentation for explanation.
 
-<billeder/lcd.jpg, id=903, 401.5pt x 268.00125pt>
+<billeder/lcd.jpg, id=922, 401.5pt x 268.00125pt>
 File: billeder/lcd.jpg Graphic file (type jpg)
  <use billeder/lcd.jpg>
 Package pdftex.def Info: billeder/lcd.jpg used on input line 102.
@@ -2957,14 +2964,14 @@ itecture.tex)
 ware.tex [40] [41])
 (C:\Users\Rasmus\Documents\P4\LaTeX\RapportNIXPILLE\indhold/Implementation/Over
 viewCompiler.tex
-<billeder/OverviewCompiler.PNG, id=1278, 420.3705pt x 295.1025pt>
+<billeder/OverviewCompiler.PNG, id=1297, 420.3705pt x 295.1025pt>
 File: billeder/OverviewCompiler.PNG Graphic file (type png)
 
 <use billeder/OverviewCompiler.PNG>
 Package pdftex.def Info: billeder/OverviewCompiler.PNG used on input line 4.
 (pdftex.def)             Requested size: 255.6026pt x 179.43588pt.
  [42]
-<billeder/OverviewCompiler2.PNG, id=1299, 477.58424pt x 255.354pt>
+<billeder/OverviewCompiler2.PNG, id=1318, 477.58424pt x 255.354pt>
 File: billeder/OverviewCompiler2.PNG Graphic file (type png)
 
 <use billeder/OverviewCompiler2.PNG>
@@ -2977,14 +2984,14 @@ ilerchoice.tex [43 <C:/Users/Rasmus/Documents/P4/LaTeX/RapportNIXPILLE/billeder
 /billeder/OverviewCompiler2.PNG>])
 (C:\Users\Rasmus\Documents\P4\LaTeX\RapportNIXPILLE\indhold/Implementation/lang
 uageprocessing.tex
-<billeder/javacompiler.png, id=1326, 359.84438pt x 166.37157pt>
+<billeder/javacompiler.png, id=1345, 359.84438pt x 166.37157pt>
 File: billeder/javacompiler.png Graphic file (type png)
 
 <use billeder/javacompiler.png>
 Package pdftex.def Info: billeder/javacompiler.png used on input line 5.
 (pdftex.def)             Requested size: 213.0pt x 98.48076pt.
  [45]
-<billeder/spladcompilercompilationprocess.png, id=1337, 322.20375pt x 281.55188
+<billeder/spladcompilercompilationprocess.png, id=1356, 322.20375pt x 281.55188
 pt>
 File: billeder/spladcompilercompilationprocess.png Graphic file (type png)
  <use billeder/spladcompilercompilationprocess.png>
@@ -2992,7 +2999,7 @@ Package pdftex.def Info: billeder/spladcompilercompilationprocess.png used on i
 nput line 10.
 (pdftex.def)             Requested size: 213.0pt x 186.13412pt.
 
-<billeder/spladcompiler.png, id=1339, 462.97969pt x 309.40594pt>
+<billeder/spladcompiler.png, id=1358, 462.97969pt x 309.40594pt>
 File: billeder/spladcompiler.png Graphic file (type png)
 
 <use billeder/spladcompiler.png>
@@ -3022,7 +3029,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 [47 <C:/Users/Rasmus/Documents/P4/LaTeX/RapportNIXPILLE/billeder/spladcompiler.
-png>] <billeder/parsetree.png, id=1369, 307.90031pt x 473.51906pt>
+png>] <billeder/parsetree.png, id=1388, 307.90031pt x 473.51906pt>
 File: billeder/parsetree.png Graphic file (type png)
 
 <use billeder/parsetree.png>
@@ -3120,7 +3127,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 28.
 See the caption package documentation for explanation.
 
-[53] <billeder/ParsedCode.png, id=1469, 1009.52156pt x 428.35031pt>
+[53] <billeder/ParsedCode.png, id=1488, 1009.52156pt x 428.35031pt>
 File: billeder/ParsedCode.png Graphic file (type png)
 
 <use billeder/ParsedCode.png>
@@ -3825,18 +3832,18 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 138.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 138.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 138.
 Package rerunfilecheck Info: File `Report.out' has not changed.
-(rerunfilecheck)             Checksum: 79CFF730AB7CF44A97D7071DCCCFCB5A;10450.
+(rerunfilecheck)             Checksum: F33CF5567DD45B68728E72EC9AD21EF8;10474.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 38981 strings out of 493921
- 720742 string characters out of 3147280
- 2553843 words of memory out of 3000000
- 39986 multiletter control sequences out of 15000+200000
- 34255 words of font info for 91 fonts, out of 3000000 for 9000
+ 38998 strings out of 493921
+ 721038 string characters out of 3147280
+ 2552996 words of memory out of 3000000
+ 39995 multiletter control sequences out of 15000+200000
+ 35657 words of font info for 94 fonts, out of 3000000 for 9000
  844 hyphenation exceptions out of 8191
  77i,20n,83p,1549b,1732s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi657
@@ -3845,33 +3852,35 @@ n\ec\dpi657\ecxc1000.pk> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
 our\jknappen\ec\dpi600\ectt0900.pk> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\f
 onts\pk\ljfour\jknappen\ec\dpi657\tcrm1000.pk> <C:\Users\Rasmus\AppData\Local\M
 iKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0900.pk> <C:\Users\Rasmus\AppD
-ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0600.pk> <C:\Users\
-Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk>
+ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx0900.pk> <C:\Users\
+Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0600.pk>
  <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
-crm0800.pk> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
-ec\dpi720\ecbx1200.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.
-enc} <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi6
-57\ecbx1000.pk> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
-pen\ec\dpi657\ecti1000.pk> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\l
-jfour\jknappen\ec\dpi600\ecti0900.pk> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9
-\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\Rasmus\AppData\Local
-\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1000.pk> <C:\Users\Rasmus\Ap
-pData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi657\ecrm1000.pk> <C:\User
-s\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi720\eccc1200.p
-k> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi657
-\ecsl1000.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program 
-Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/bookman/ubkd8a.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/bookman/ubkl8a.pfb>
-Output written on Report.pdf (109 pages, 1923071 bytes).
+cbx1200.pk> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
+ec\dpi720\ecbx1200.pk> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
+r\jknappen\ec\dpi600\ecrm0800.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/f
+ontname/8r.enc} <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
+pen\ec\dpi657\ecbx1000.pk> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\l
+jfour\jknappen\ec\dpi657\ecti1000.pk> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9
+\fonts\pk\ljfour\jknappen\ec\dpi600\ecti0900.pk> <C:\Users\Rasmus\AppData\Local
+\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\Rasmus\Ap
+pData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1000.pk> <C:\User
+s\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi657\ecrm1000.p
+k> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi720
+\eccc1200.pk> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
+n\ec\dpi657\ecsl1000.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmb
+x8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/book
+man/ubkd8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/bookman/ubkl8a.pfb>
+
+Output written on Report.pdf (109 pages, 1930937 bytes).
 PDF statistics:
- 3602 PDF objects out of 4296 (max. 8388607)
- 1250 named destinations out of 1440 (max. 500000)
+ 3636 PDF objects out of 4296 (max. 8388607)
+ 1254 named destinations out of 1440 (max. 500000)
  1197 words of extra memory for PDF output out of 10000 (max. 10000000)
 

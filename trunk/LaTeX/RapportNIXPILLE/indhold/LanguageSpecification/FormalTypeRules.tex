@@ -1,36 +1,44 @@
 \subsection{Formal Type Rules}
-This section will follow up on the informal description of our type rules. Expressions can be seen on table \ref{tab:expressions}, declarations can be seen on table \ref{tab:declarations} and statements can be seen on table \ref{tab:statements}.
+This section will follow up on the informal description of the type rules. Expressions can be seen on table \ref{tab:expressions}, declarations can be seen in table \ref{tab:declarations} and statements can be seen in table \ref{tab:statements}.
 
-\begin{longtable}{l l l l}
-\longtablesetting{4}
-~&~&~&~\\
-$[SUB_{EXP}]$ & $\dfrac{E \vdash e_1 : T \: \; E \vdash e_2 : T}{E \vdash e_1 - e_2:T} $ & $[NUM_{EXP}]$ & $E\vdash n:T$\\
-~ & ~ & ~& ~ \\
-$[ADD_{EXP}]$ & $\dfrac{E \vdash e_1 : T \: \; E \vdash e_2 : T}{E \vdash e_1 + e_2:T} $ & $[VAR_{EXP}]$ & $\dfrac{E(x)=T}{E \vdash x:T}$\\
-~ & ~& ~& ~ \\
-$[MULT_{EXP}]$ & $\dfrac{E \vdash e_1 : T \: \; E \vdash e_2 : T}{E \vdash e_1 * e_2:T} $ & $[PAR_{EXP}]$ & $\dfrac{E \vdash e_1 :T}{E \vdash (e_1):T}$\\
-~ & ~& ~& ~ \\
-$[DIV_{EXP}]$ & $\dfrac{E \vdash e_1 : T \: \; E \vdash e_2 : T}{E \vdash e_1 / e_2:\text{Double}} $ & ~ & ~\\
-~ & ~& ~& ~ \\
+\begin{longtable}{l l}
+\longtablesetting{2}
+~&~\\
+$[NUM_{EXP}]$ & $E\vdash n:T$ \\
+~ & ~ \\
+$[SUB_{EXP}]$ & $\dfrac{E \vdash e_1 : T \: \; E \vdash e_2 : T}{E \vdash e_1 - e_2:T} $\\
+~ & ~ \\
+$[ADD_{EXP}]$ & $\dfrac{E \vdash e_1 : T \: \; E \vdash e_2 : T}{E \vdash e_1 + e_2:T} $\\
+~ & ~ \\
+$[VAR_{EXP}]$ & $\dfrac{E(x)=T}{E \vdash x:T}$ \\
+~ & ~ \\
+$[PAR_{EXP}]$ & $\dfrac{E \vdash e_1 :T}{E \vdash (e_1):T}$ \\
+~ & ~ \\
+$[MULT_{EXP}]$ & $\dfrac{E \vdash e_1 : T \: \; E \vdash e_2 : T}{E \vdash e_1 * e_2:T} $ \\
+~ & ~ \\
+$[DIV_{EXP}]$ & $\dfrac{E \vdash e_1 : T \: \; E \vdash e_2 : T}{E \vdash e_1 / e_2:\text{Double}} $\\
+~ & ~ \\
 $[EQUAL_{EXP}]$ & $\dfrac{E \vdash e_1 : T \: \; E \vdash e_2 : T}{E \vdash e_1 = e_2:\text{Bool}} $ \\
-~ & ~& ~& ~ \\
+~ & ~ \\
 $[GRT_{EXP}]$ & $\dfrac{E \vdash e_1 : T \: \; E \vdash e_2 : T}{E \vdash e_1 > e_2:\text{Bool}} $\\
-~ & ~& ~& ~ \\
+~ & ~ \\
 $[AND_{EXP}]$ & $\dfrac{E \vdash e_1 : \text{Bool} \: \; E \vdash e_2 : \text{Bool}}{E \vdash e_1\: AND\: e_2:\text{Bool}} $ \\
-~ & ~& ~& ~ \\
+~ & ~ \\
  $[NOT_{EXP}]$ & $\dfrac{E \vdash e_1 :\text{Bool}}{E \vdash !e_1:\text{Bool}}$\\
-~ & ~& ~& ~ \\
-$[OR_{EXP}]$ & $\dfrac{E \vdash e_1 : \text{Bool} \: \; E \vdash e_2 : \text{Bool}}{E \vdash e_1 \: OR \: e_2:\text{Bool}} $&~&~\\
-~ & ~& ~& ~ \\
+~ & ~ \\
+$[OR_{EXP}]$ & $\dfrac{E \vdash e_1 : \text{Bool} \: \; E \vdash e_2 : \text{Bool}}{E \vdash e_1 \: OR \: e_2:\text{Bool}} $\\
+~ & ~ \\
 \caption{Type rules for expressions.}
 \label{tab:expressions}
 \end{longtable}
-\begin{longtable}{l l l l}
-\longtablesetting{4}
-~&~&~&~\\
-$[VAR_{DEC}]$ & $\dfrac{E[x \mapsto T]\vdash D_V : \text{ok} \:\:\: E\vdash a:T}{E \vdash \text{var} \; T \; x:=a;D_V:\text{ok}}$ &$[EMPTY_{DEC}]$ & $E \vdash \eps:\text{ok}$\\
-~&~&~&~\\
-$[FUNC_{DEC}]$ & $\dfrac{E[f \mapsto (\vec{x}:\vec{T} \rightarrow \text{ok})]\vdash D_F:\text{ok}}{E \vdash \text{func}\; f(T_1\;x_1,\; T_2\; x_2 \dots T_k \; x_k)\; is\; S,D_F:\text{ok}} $\\
+\begin{longtable}{l l}
+\longtablesetting{2}
+~&~\\
+$[VAR_{DEC}]$ & $\dfrac{E[x \mapsto T]\vdash D_V : \text{ok} \:\:\: E\vdash a:T}{E \vdash \text{var} \; T \; x:=a;D_V:\text{ok}}$\\
+~&~\\
+$[EMPTY_{DEC}]$ & $E \vdash \eps:\text{ok}$
+~&~\\
+$[PROC_{DEC}]$ & $\dfrac{E[f \mapsto (\vec{x}:\vec{T} \rightarrow \text{ok})]\vdash D_F:\text{ok}}{E \vdash \text{function}\; f(T_1\;x_1,\; T_2\; x_2 \dots T_k \; x_k)\; is\; S,D_F:\text{ok}} $\\
 ~& $\text{where }0 \leq k$\\
 \caption{Type rules for declarations.}
 \label{tab:declarations}

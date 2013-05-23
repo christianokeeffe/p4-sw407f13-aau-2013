@@ -17,7 +17,7 @@ In the following text we use the following names to represent different syntacti
 
 \subsubsection{Abstract Syntax}
 \fxfatal{der skal tilføjes noget med astrakt syntax, præcedens og sådan noget, kig i Hans' bog}
-In order to describe the behavior of a program, one must first account for its syntax. We use the notion of abstract syntax, since it will allow us to describe the essential structure of a program. The abstract syntax for SPLAD is defined as follows: 
+In order to describe the behavior of a program, one must first account for its syntax. We use the notion of abstract syntax, since it will allow us to describe the essential structure of a program. In other words, the abstract syntax are not concerned with operator precedence etc. The abstract syntax for SPLAD is defined as follows: 
 \begin{align*}
 R ::= \; & D_P \; D_A \; D_V \; | R_1 \; R_2 \; \\
 S::= \; & x := a \; | \; r[a_1] := a_2 \; | \; S_1; \; S_2 \; | \; \text{if} \; b \; \text{begin} \; S \; \text{end} \; | \; \text{if} \; b \; \text{begin} \; S_1 \; \text{end} \; \text{else begin} \; S_2 \; \text{end} \\

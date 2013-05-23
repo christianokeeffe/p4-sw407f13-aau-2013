@@ -27,95 +27,94 @@
 \contentsline {subsection}{\numberline {2.3.3}Choice of Grammar}{12}{subsection.2.3.3}
 \contentsline {subsection}{\numberline {2.3.4}Specification of the Language Compared to the Purpose}{13}{subsection.2.3.4}
 \contentsline {subsubsection}{\numberline {2.3.4.1}A Drink}{14}{subsubsection.2.3.4.1}
-\contentsline {subsubsection}{\numberline {2.3.4.2}Ingredients}{16}{subsubsection.2.3.4.2}
+\contentsline {subsubsection}{\numberline {2.3.4.2}Ingredient}{16}{subsubsection.2.3.4.2}
 \contentsline {subsubsection}{\numberline {2.3.4.3}An RFID-tag}{16}{subsubsection.2.3.4.3}
 \contentsline {subsubsection}{\numberline {2.3.4.4}An RFID-RW}{16}{subsubsection.2.3.4.4}
-\contentsline {subsubsection}{\numberline {2.3.4.5}An LCD}{17}{subsubsection.2.3.4.5}
-\contentsline {subsubsection}{\numberline {2.3.4.6}Buttons}{17}{subsubsection.2.3.4.6}
-\contentsline {subsubsection}{\numberline {2.3.4.7}Mechanism for pouring ingredients}{18}{subsubsection.2.3.4.7}
-\contentsline {subsection}{\numberline {2.3.5}The BNF of SPLAD}{18}{subsection.2.3.5}
-\contentsline {subsubsection}{\numberline {2.3.5.1}Grammar - Drinks}{18}{subsubsection.2.3.5.1}
-\contentsline {subsubsection}{\numberline {2.3.5.2}Grammar - Drinks}{19}{subsubsection.2.3.5.2}
-\contentsline {subsubsection}{\numberline {2.3.5.3}Grammar - Assign}{19}{subsubsection.2.3.5.3}
-\contentsline {subsubsection}{\numberline {2.3.5.4}Grammar - Expressions}{20}{subsubsection.2.3.5.4}
-\contentsline {subsubsection}{\numberline {2.3.5.5}Grammar - Functions}{22}{subsubsection.2.3.5.5}
-\contentsline {subsubsection}{\numberline {2.3.5.6}Grammar - Loops}{22}{subsubsection.2.3.5.6}
-\contentsline {subsection}{\numberline {2.3.6}Lexicon}{23}{subsection.2.3.6}
-\contentsline {section}{\numberline {2.4}Semantics}{23}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Scope Rules}{23}{subsection.2.4.1}
-\contentsline {subsubsection}{\numberline {2.4.1.1}Static Scope}{24}{subsubsection.2.4.1.1}
-\contentsline {subsubsection}{\numberline {2.4.1.2}Dynamic Scope}{24}{subsubsection.2.4.1.2}
-\contentsline {subsubsection}{\numberline {2.4.1.3}Declaration Order}{24}{subsubsection.2.4.1.3}
-\contentsline {subsubsection}{\numberline {2.4.1.4}Global Scope}{24}{subsubsection.2.4.1.4}
-\contentsline {subsubsection}{\numberline {2.4.1.5}The difference between dynamic and static scope}{25}{subsubsection.2.4.1.5}
-\contentsline {subsection}{\numberline {2.4.2}Scoping In This Project}{25}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}Symbol Tables}{25}{subsection.2.4.3}
-\contentsline {subsubsection}{\numberline {2.4.3.1}Multiple Symbol Tables}{25}{subsubsection.2.4.3.1}
-\contentsline {subsubsection}{\numberline {2.4.3.2}One Symbol Table}{26}{subsubsection.2.4.3.2}
-\contentsline {subsection}{\numberline {2.4.4}Transition Rules}{26}{subsection.2.4.4}
-\contentsline {subsubsection}{\numberline {2.4.4.1}Abstract Syntax}{27}{subsubsection.2.4.4.1}
-\contentsline {subsubsection}{\numberline {2.4.4.2}Transition System}{27}{subsubsection.2.4.4.2}
-\contentsline {subsubsection}{\numberline {2.4.4.3}Big-step vs. Small-step semantics}{27}{subsubsection.2.4.4.3}
-\contentsline {subsubsection}{\numberline {2.4.4.4}Environment-Store Model}{28}{subsubsection.2.4.4.4}
-\contentsline {subsubsection}{\numberline {2.4.4.5}Statements}{28}{subsubsection.2.4.4.5}
-\contentsline {subsubsection}{\numberline {2.4.4.6}Arithmetic Expressions}{29}{subsubsection.2.4.4.6}
-\contentsline {subsubsection}{\numberline {2.4.4.7}Boolean Expression}{29}{subsubsection.2.4.4.7}
-\contentsline {subsubsection}{\numberline {2.4.4.8}Variable Declaration}{29}{subsubsection.2.4.4.8}
-\contentsline {subsubsection}{\numberline {2.4.4.9}Procedure Declaration}{30}{subsubsection.2.4.4.9}
-\contentsline {subsubsection}{\numberline {2.4.4.10}Array Declaration}{30}{subsubsection.2.4.4.10}
-\contentsline {subsection}{\numberline {2.4.5}Informal Type Rules}{31}{subsection.2.4.5}
+\contentsline {subsubsection}{\numberline {2.3.4.5}An LCD}{16}{subsubsection.2.3.4.5}
+\contentsline {subsubsection}{\numberline {2.3.4.6}Button}{17}{subsubsection.2.3.4.6}
+\contentsline {subsubsection}{\numberline {2.3.4.7}Mechanism for Pouring Ingredients}{17}{subsubsection.2.3.4.7}
+\contentsline {subsection}{\numberline {2.3.5}The BNF of SPLAD}{17}{subsection.2.3.5}
+\contentsline {subsubsection}{\numberline {2.3.5.1}Grammar - Types}{18}{subsubsection.2.3.5.1}
+\contentsline {subsubsection}{\numberline {2.3.5.2}Grammar - Drinks}{18}{subsubsection.2.3.5.2}
+\contentsline {subsubsection}{\numberline {2.3.5.3}Grammar - Assign}{18}{subsubsection.2.3.5.3}
+\contentsline {subsubsection}{\numberline {2.3.5.4}Grammar - Expressions}{19}{subsubsection.2.3.5.4}
+\contentsline {subsubsection}{\numberline {2.3.5.5}Grammar - Functions}{21}{subsubsection.2.3.5.5}
+\contentsline {subsubsection}{\numberline {2.3.5.6}Grammar - Loops}{21}{subsubsection.2.3.5.6}
+\contentsline {subsection}{\numberline {2.3.6}Lexicon}{22}{subsection.2.3.6}
+\contentsline {section}{\numberline {2.4}Semantics}{22}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Theory of Scope Rules}{22}{subsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.1.1}Static Scope}{23}{subsubsection.2.4.1.1}
+\contentsline {subsubsection}{\numberline {2.4.1.2}Dynamic Scope}{23}{subsubsection.2.4.1.2}
+\contentsline {subsubsection}{\numberline {2.4.1.3}Declaration Order}{23}{subsubsection.2.4.1.3}
+\contentsline {subsubsection}{\numberline {2.4.1.4}Global Scope}{23}{subsubsection.2.4.1.4}
+\contentsline {subsubsection}{\numberline {2.4.1.5}Dynamic vs. Static Scope}{24}{subsubsection.2.4.1.5}
+\contentsline {subsection}{\numberline {2.4.2}Scoping in this Project}{24}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Symbol Tables}{24}{subsection.2.4.3}
+\contentsline {subsubsection}{\numberline {2.4.3.1}Multiple Symbol Tables}{24}{subsubsection.2.4.3.1}
+\contentsline {subsubsection}{\numberline {2.4.3.2}One Symbol Table}{25}{subsubsection.2.4.3.2}
+\contentsline {subsection}{\numberline {2.4.4}Transition Rules}{25}{subsection.2.4.4}
+\contentsline {subsubsection}{\numberline {2.4.4.1}Abstract Syntax}{26}{subsubsection.2.4.4.1}
+\contentsline {subsubsection}{\numberline {2.4.4.2}Transition System}{26}{subsubsection.2.4.4.2}
+\contentsline {subsubsection}{\numberline {2.4.4.3}Big-step vs. Small-step Semantics}{26}{subsubsection.2.4.4.3}
+\contentsline {subsubsection}{\numberline {2.4.4.4}Environment-store Model}{27}{subsubsection.2.4.4.4}
+\contentsline {subsubsection}{\numberline {2.4.4.5}Statements}{27}{subsubsection.2.4.4.5}
+\contentsline {subsubsection}{\numberline {2.4.4.6}Arithmetic Expressions}{28}{subsubsection.2.4.4.6}
+\contentsline {subsubsection}{\numberline {2.4.4.7}Boolean Expressions}{28}{subsubsection.2.4.4.7}
+\contentsline {subsubsection}{\numberline {2.4.4.8}Variable Declarations}{28}{subsubsection.2.4.4.8}
+\contentsline {subsubsection}{\numberline {2.4.4.9}Procedure Declarations}{29}{subsubsection.2.4.4.9}
+\contentsline {subsubsection}{\numberline {2.4.4.10}Array Declarations}{29}{subsubsection.2.4.4.10}
+\contentsline {subsection}{\numberline {2.4.5}Informal Type Rules}{30}{subsection.2.4.5}
 \contentsline {subsection}{\numberline {2.4.6}Formal Type Rules}{31}{subsection.2.4.6}
 \contentsline {section}{\numberline {2.5}Requirements to the Programmer}{33}{section.2.5}
-\contentsline {section}{\numberline {2.6}Functions provided by SPLAD}{33}{section.2.6}
+\contentsline {section}{\numberline {2.6}Functions Provided by SPLAD}{33}{section.2.6}
 \contentsline {section}{\numberline {2.7}SPLAD Code Examples}{34}{section.2.7}
 \contentsline {chapter}{\chapternumberline {3}Implementation}{39}{chapter.3}
 \contentsline {section}{\numberline {3.1}Evaluation Criteria for the Compiler}{39}{section.3.1}
-\contentsline {section}{\numberline {3.2}Architecture}{40}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Hardware}{40}{subsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.1.1}Hardware platform}{40}{subsubsection.3.2.1.1}
-\contentsline {subsubsection}{\numberline {3.2.1.2}RFID}{41}{subsubsection.3.2.1.2}
-\contentsline {subsubsection}{\numberline {3.2.1.3}Other components}{42}{subsubsection.3.2.1.3}
+\contentsline {section}{\numberline {3.2}Hardware}{40}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Hardware Platform}{40}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}RFID}{41}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Other Components}{42}{subsection.3.2.3}
 \contentsline {section}{\numberline {3.3}Overview of the Compiler}{42}{section.3.3}
-\contentsline {section}{\numberline {3.4}Language Processor}{44}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Compiler}{44}{subsection.3.4.1}
+\contentsline {section}{\numberline {3.4}Language Processor}{43}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Compiler}{43}{subsection.3.4.1}
 \contentsline {subsubsection}{\numberline {3.4.1.1}Pure Machine Code}{44}{subsubsection.3.4.1.1}
 \contentsline {subsubsection}{\numberline {3.4.1.2}Augmented Machine Code}{44}{subsubsection.3.4.1.2}
 \contentsline {subsubsection}{\numberline {3.4.1.3}Virtual Machine Code}{44}{subsubsection.3.4.1.3}
-\contentsline {subsection}{\numberline {3.4.2}Interpreter}{45}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Choice of Language Processor for This Project}{45}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.2}Interpreters}{44}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Choice of Language Processor for this Project}{44}{subsection.3.4.3}
 \contentsline {subsection}{\numberline {3.4.4}Language Processing Strategy}{45}{subsection.3.4.4}
-\contentsline {subsection}{\numberline {3.4.5}Compilation passes}{47}{subsection.3.4.5}
+\contentsline {subsection}{\numberline {3.4.5}Compilation Passes}{46}{subsection.3.4.5}
 \contentsline {subsection}{\numberline {3.4.6}Abstract Syntax Trees}{47}{subsection.3.4.6}
 \contentsline {subsection}{\numberline {3.4.7}Parse Tree}{47}{subsection.3.4.7}
-\contentsline {subsection}{\numberline {3.4.8}Visitor Pattern}{49}{subsection.3.4.8}
-\contentsline {section}{\numberline {3.5}Syntactic Analysis}{50}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Known lexers and parsers}{51}{subsection.3.5.1}
-\contentsline {subsubsection}{\numberline {3.5.1.1}Lexer}{51}{subsubsection.3.5.1.1}
-\contentsline {subsubsection}{\numberline {3.5.1.2}Parser}{51}{subsubsection.3.5.1.2}
-\contentsline {subsubsection}{\numberline {3.5.1.3}Lexer and parser}{52}{subsubsection.3.5.1.3}
-\contentsline {subsubsection}{\numberline {3.5.1.4}Comparison Tables}{52}{subsubsection.3.5.1.4}
-\contentsline {subsection}{\numberline {3.5.2}ANTLR}{53}{subsection.3.5.2}
-\contentsline {subsection}{\numberline {3.5.3}Lexical Analyzer}{55}{subsection.3.5.3}
-\contentsline {subsubsection}{\numberline {3.5.3.1}Tokens}{55}{subsubsection.3.5.3.1}
-\contentsline {subsection}{\numberline {3.5.4}Parser}{56}{subsection.3.5.4}
-\contentsline {subsubsection}{\numberline {3.5.4.1}Top-down Parsers}{57}{subsubsection.3.5.4.1}
-\contentsline {subsubsection}{\numberline {3.5.4.2}Bottom-Up Parsers}{57}{subsubsection.3.5.4.2}
-\contentsline {section}{\numberline {3.6}Contextual Analysis}{57}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}Scope Checking}{58}{subsection.3.6.1}
-\contentsline {subsection}{\numberline {3.6.2}Type Checking}{60}{subsection.3.6.2}
-\contentsline {subsubsection}{\numberline {3.6.2.1}Tree traversal}{60}{subsubsection.3.6.2.1}
-\contentsline {subsubsection}{\numberline {3.6.2.2}Value}{60}{subsubsection.3.6.2.2}
-\contentsline {subsubsection}{\numberline {3.6.2.3}Function}{62}{subsubsection.3.6.2.3}
-\contentsline {subsubsection}{\numberline {3.6.2.4}Variable}{63}{subsubsection.3.6.2.4}
-\contentsline {subsubsection}{\numberline {3.6.2.5}Drink}{64}{subsubsection.3.6.2.5}
-\contentsline {subsubsection}{\numberline {3.6.2.6}Error Handling}{65}{subsubsection.3.6.2.6}
-\contentsline {section}{\numberline {3.7}Code Generation}{66}{section.3.7}
-\contentsline {subsection}{\numberline {3.7.1}Code Generation of SPLAD}{67}{subsection.3.7.1}
-\contentsline {subsection}{\numberline {3.7.2}Unit Testing}{72}{subsection.3.7.2}
-\contentsline {subsubsection}{\numberline {3.7.2.1}Unit Testing in General}{72}{subsubsection.3.7.2.1}
-\contentsline {subsubsection}{\numberline {3.7.2.2}Unit Testing in This Project}{73}{subsubsection.3.7.2.2}
-\contentsline {section}{\numberline {3.8}Component Setup}{75}{section.3.8}
-\contentsline {section}{\numberline {3.9}Test of program written in SPLAD}{76}{section.3.9}
+\contentsline {subsection}{\numberline {3.4.8}Visitor Pattern}{48}{subsection.3.4.8}
+\contentsline {section}{\numberline {3.5}Syntactic Analysis}{49}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Known lexers and parsers}{50}{subsection.3.5.1}
+\contentsline {subsubsection}{\numberline {3.5.1.1}Lexer}{50}{subsubsection.3.5.1.1}
+\contentsline {subsubsection}{\numberline {3.5.1.2}Parser}{50}{subsubsection.3.5.1.2}
+\contentsline {subsubsection}{\numberline {3.5.1.3}Lexer and parser}{51}{subsubsection.3.5.1.3}
+\contentsline {subsubsection}{\numberline {3.5.1.4}Comparison Tables}{51}{subsubsection.3.5.1.4}
+\contentsline {subsection}{\numberline {3.5.2}ANTLR}{52}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}Lexical Analyzer}{54}{subsection.3.5.3}
+\contentsline {subsubsection}{\numberline {3.5.3.1}Tokens}{54}{subsubsection.3.5.3.1}
+\contentsline {subsection}{\numberline {3.5.4}Parser}{55}{subsection.3.5.4}
+\contentsline {subsubsection}{\numberline {3.5.4.1}Top-down Parsers}{56}{subsubsection.3.5.4.1}
+\contentsline {subsubsection}{\numberline {3.5.4.2}Bottom-Up Parsers}{56}{subsubsection.3.5.4.2}
+\contentsline {section}{\numberline {3.6}Contextual Analysis}{56}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Scope Checking}{57}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}Type Checking}{59}{subsection.3.6.2}
+\contentsline {subsubsection}{\numberline {3.6.2.1}Tree traversal}{59}{subsubsection.3.6.2.1}
+\contentsline {subsubsection}{\numberline {3.6.2.2}Value}{59}{subsubsection.3.6.2.2}
+\contentsline {subsubsection}{\numberline {3.6.2.3}Function}{61}{subsubsection.3.6.2.3}
+\contentsline {subsubsection}{\numberline {3.6.2.4}Variable}{62}{subsubsection.3.6.2.4}
+\contentsline {subsubsection}{\numberline {3.6.2.5}Drink}{63}{subsubsection.3.6.2.5}
+\contentsline {subsubsection}{\numberline {3.6.2.6}Error Handling}{64}{subsubsection.3.6.2.6}
+\contentsline {section}{\numberline {3.7}Code Generation}{65}{section.3.7}
+\contentsline {subsection}{\numberline {3.7.1}Code Generation of SPLAD}{66}{subsection.3.7.1}
+\contentsline {subsection}{\numberline {3.7.2}Unit Testing}{71}{subsection.3.7.2}
+\contentsline {subsubsection}{\numberline {3.7.2.1}Unit Testing in General}{71}{subsubsection.3.7.2.1}
+\contentsline {subsubsection}{\numberline {3.7.2.2}Unit Testing in This Project}{72}{subsubsection.3.7.2.2}
+\contentsline {section}{\numberline {3.8}Component Setup}{74}{section.3.8}
+\contentsline {section}{\numberline {3.9}Test of program written in SPLAD}{75}{section.3.9}
 \contentsline {chapter}{\chapternumberline {4}Discussion and perspectivation}{77}{chapter.4}
 \contentsline {section}{\numberline {4.1}Discussion}{77}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Characteristic of SPLAD}{77}{subsection.4.1.1}

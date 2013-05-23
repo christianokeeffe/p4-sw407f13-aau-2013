@@ -1,48 +1,49 @@
-\subsection{Hardware}
 \label{sec:Hardware}
-This section will be about the hardware components used in this project, describing them and the reasons they are used in this project. The description states the basic technical specification that will be relevant for this project.
+This section is about the hardware components used in this project, describing them and the reasons they are used in this project. The description states the basic technical specification that will be relevant for this project.
 
-\subsubsection{Hardware platform}
+\subsection{Hardware Platform}
 \label{sec:hardwarearduino}
-Arduino UNO is a powerful micro controller board that provides the user with ways to communicate with other components such as LCDs, diodes, sensors and other electronic bricks(building blocks) which is a desirable feature in this project. Arduino uses the ATmega328 chip which provides more memory than its predecessors \citep{ArduinoUno}.
+Arduino UNO is a powerful micro controller board that provides the user with ways to communicate with other components such as LCDs, LEDs, sensors and other electronic bricks (building blocks) which is a desirable feature in this project. Arduino uses the ATmega328 chip which provides more memory than its predecessors \citep{ArduinoUno}.
 
-There exists alternatives to Arduino product which could be considered for this project. Teensy is similar to Arduino UNO in many ways, its only difference is in the actual size of the product. Teensy is also cheaper than Arduino but does require soldering for simple set-ups where Arduino UNO comes with a board and pin-ports which means that it requires little pre work before using it \citep{Teensy}.
+There exists alternatives to Arduino products which could be considered for this project. Teensy is similar to Arduino UNO in many ways, its only difference is in the actual size of the product. Teensy is also cheaper than Arduino but does require soldering for simple set-ups where Arduino UNO comes with a board and pin-ports which means that it requires little pre work before using it \citep{Teensy}.
 Seeeduino is a near replica of Arduino, an example could be Seeeduino Stalker which offers features as SD-card slot, flat-coin battery holder and X-bee module-headers. X-bee is a module for radio communication between one or more of these modules. Seeeduino is compatible with the same components as 
 Arduino that makes it suited for acting as a replacement \citep{Seedui}.
-Netduino is a faster version of Arduino but it comes at a higher cost. Netduino also require the .net framework so it will only work together with windows operating systems. Netduino uses a micro-USB instead of the regular USB Arduino uses \citep{Netdui}.
+Netduino is a faster version of Arduino but it comes at a higher cost. Netduino also require the .NET framework so it will only work together with Windows operating systems. Netduino uses a micro-USB instead of the USB-B Arduino uses \citep{Netdui}.
 
-Arduino UNO is more accessible because Aalborg university already has some in stock that could be used where the other alternatives have to be bought first. Arduino UNO, Teensy and Seeeduino are all compatible with the other equipments that will be used in this project. Netduino is limited to the .net framework where Arduino UNO and the other alternatives are more flexible and therefore more ideal because they work with a broader range of platforms.
-So it comes down to that Arduino UNO have all the necessary features and is the most convenient one to acquire. The project group has found this platform suited for this project based on these reflections. 
+Arduino UNO is more accessible because Aalborg University already has some in stock that could be used where the other alternatives have to be bought first. Arduino UNO, Teensy and Seeeduino are all compatible with the other equipments that will be used in this project. Netduino is limited to the .NET framework where Arduino UNO and the other alternatives are more flexible and therefore more ideal because they work with a broader range of platforms.
+So it comes down to that Arduino UNO have all the necessary features and is the most convenient one to acquire. The project group has deemed this platform suited for this project based on these reflections. 
 
-The Arduino UNO board has 14 digital input/output pins where six of them can emulate an analog output through PWM (Pulse-Width modulation) which are available on the Arduino UNO board. The Arduino UNO board also provides the user with six analog inputs which enables the reading of an alternating current and provides the user with the currents voltage. These pins can be used to control or perform readings on other components and in that way provides interaction with the environment around the board.
-The Arduino board is also mounted with a USB-port and jack socket. The board can be hooked up with a USB cable or an AC-to-DC (Alternating Current to Direct Current) adapter through the jack socket to power the unit. Arduino UNO operates at 5v (volts) but the recommend range is 7-12v because lower current than 7v may cause instability if the unit needs to provide a lot of power to the attached electronic brick. The USB is also used to program the unit with the desired program through a computer \citep{ArduinoUno}.
+The Arduino UNO board has 14 digital input/output pins where six of them can emulate an analog output through PWM (Pulse-Width Modulation) which are available on the Arduino UNO board. The Arduino UNO board also provides the user with six analog inputs which enables the reading of an alternating current and provides the user with the currents voltage. These pins can be used to control or perform readings on other components and in that way provides interaction with the environment around the board.
+The Arduino board is also mounted with a USB-B-port and power jack socket. The board can be hooked up with a USB cable or an AC-to-DC adapter through the power jack socket to power the unit. Arduino UNO operates at 5v but the recommend range is 7-12v because lower current than 7v may cause instability if the unit needs to provide a lot of power to the attached electronic bricks. The USB is also used to program the unit with the desired program through a computer \citep{ArduinoUno}.
 
 Programs for Arduino are commonly made in Arduino's own language that are based on C and C++. The producers of the Arduino platform provides a development environment (Arduino IDE) that makes it possible to write and then simply upload the code to the connected Arduino platform. This process also provides a library with functions to communicate with the platform and compatible components \citep{ArduinoLanguage}.
 Arduino is suited for this project because it makes it possible to demonstrate the language and illustrate that the translation works.
 
-\subsubsection{RFID}
+\subsection{RFID}
 \label{sec:RFID}
-To administrate the users collection of purchased drinks the plan is to store the number and the kind of drinks on an RFID tag that the customer then use at the drink machine to get their drinks served.
+To administrate the users collection of purchased drinks the plan is to store the number and the identifier of drinks on an RFID tag that the customer then use at the drinks machine to get their drinks served.
 
 RFID (Radio Frequency IDentification) is used to identify individual objects using radio waves.
-The communication between the reader and the RFID tag can go both ways, and it is possible to both read and write to most tag types. 
-The objects that are able to be read differs a lot. It can be clothes, food, documents, pets, packaging and a lot of other kinds objects. 
-All tags contain a unique ID that can in no way be changed once made. This ID is used to identify an individual tag.
+The communication between the reader and the RFID-tag can go both ways, and it is possible to both read and write to most tag types. 
+The objects that are able to be read differs a lot. It can be clothes, documents, packaging and a lot of other kinds of objects. 
+All tags contain a unique ID which cannot directly be changed. This ID is used to identify an individual tag.
 Tags can be either passive or active. Passive tags do not do anything until a signal from a reader transfers energy to the tag. Once activated it sends a signal back in return. Active tags have a power source and therefore are able to send a signal on their own, making the read-distance greater.
-The tags can also be either \textit{read only tag} or \textit{read/write tag}. A \textit{read only tag} only sends its ID back when it connects with a reader, while a \textit{read/write tag} have a memory for storing additional information it then sends with the ID \citep{RFID}.
+The tags can also be either \textit{read only tag} or \textit{read/write tag}. A \textit{read only tag} only sends its ID back when it connects with a reader, while a \textit{read/write tag} has a memory for storing additional information it then sends with the ID \citep{RFID}.
 
-An alternative to RFID is NFC (Near Field Communication). NFC uses radio communication like the RFID, but unlike RFID the communication between two NFC devices is two-way. An NFC can also read passive NFC tags and could replace the RFID. We have chosen not to use the NFC devices since we have no need for the two-way communication. \citep{NFC}
+An alternative to RFID is NFC (Near Field Communication). NFC uses radio communication like the RFID, but unlike RFID the communication between two NFC devices is two-way. An NFC can also read passive NFC tags and could replace the RFID. We have chosen not to use the NFC devices since we have no need for the two-way communication \citep{NFC}.
 
-The RFID tags used in this project are passive, high frequency, \textit{read/write} tags. The passive high frequency tags have a maximum read-distance of 1 meter \citep{RFID}, and that is far enough for this project. We are using a \textit{read/write} tag to store drink-ids and drink-counts on the tags and make the reader read and respond to the information.
+The RFID-tags used in this project are passive, high frequency, \textit{read/write} tags. The passive high frequency tags have a maximum read-distance of one meter \citep{RFID}, and that is far enough for this project. We are using \textit{read/write} tags to store drink-ids and drink-counts on the tags and make the reader read and respond to the information.
 
-\subsubsection{Other components}
+An RFID-reader/writer can read and write RFID-tags. 
+
+\subsection{Other Components}
 The demonstration of the product will require something to illustrate more advanced parts of a theoretical machine.
-This is because making a whole drink-mixer just to show that the project product works, will take too much time that instead could have been used to make the product better. 
-The plan is to use LEDs (light emitting diode) to illustrate the different function of the machine, when they are active or inactive. The LED is made of a semiconductor which produces a light when a current runs through the unit.
+The reason for making a whole drinks machine just to show that the project product works, will take too much time that instead could have been used to make the product better. 
+We use LEDs (light emitting diode) to illustrate the different functions of the machine, when they are active or inactive. An LED is made of a semiconductor which produces light when a current runs through the unit.
 
 LEDs are normally easy to use by simply running a current the correct way through the LED.
 The reason why LEDs are being using instead of making the machine is that there is neither time nor is it the main focus of this project.
 
 It would also be good to be able to print a form of text to the customer. To do this there will be used an LCD 16-pin (Liquid Crystal Display). Arduino's Liquid Crystal library provides the functions to write to LCD so no low level code is needed to communicate with the LCD \citep{ArduinoLCD}.
 
-Switches/buttons will be used as input this will allow interaction with the program at runtime. The switches will illustrate a more advanced control unit but in the project switches will be sufficient.
+Switches/buttons is used as input devices. This will allow interaction with the program at runtime. The switches will illustrate a more advanced control unit but in the project buttons will be sufficient.

@@ -36,11 +36,6 @@ Warning--empty year in Buildproc
 1 is an integer literal, not a string, for entry Buildproc
 while executing---line 1516 of file bibtex/harvard.bst
 Warning--empty  in Buildproc
-Warning--empty year in arduinobuild
-Warning--empty year in arduinobuild
-1 is an integer literal, not a string, for entry arduinobuild
-while executing---line 1516 of file bibtex/harvard.bst
-Warning--empty  in arduinobuild
 1 is an integer literal, not a string, for entry AVRDUDE
 while executing---line 1516 of file bibtex/harvard.bst
 1 is an integer literal, not a string, for entry OverviewCompiler2
@@ -159,4 +154,4 @@ Warning--empty year in Yacc
 1 is an integer literal, not a string, for entry Yacc
 while executing---line 1516 of file bibtex/harvard.bst
 Warning--empty  in Yacc
-(There were 45 error messages)
+(There were 44 error messages)

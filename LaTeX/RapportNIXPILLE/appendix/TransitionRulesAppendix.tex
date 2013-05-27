@@ -14,20 +14,20 @@ D_P::= \; & \; \text{func} \; p(\vec{x}) \; \text{is} \; \text{begin} \; S \; \t
 D_A::= \; & \text{array} \; r[a_1]  \;|\; \eps\\
 \end{align*}
 
+\section{Transition Rules}
+
 \begin{longtable}{l l}
 \longtablesetting{2}
 [BLOCK] & $\dfrac{\begin{matrix} \langle D_V, env_V, sto \rangle \rightarrow_{DV} (env_V', sto'') \\ \langle D_A, env_V', sto'' \rangle \rightarrow_{DA} (env_V'', sto') \\ env_V'' \vdash \langle D_P, env_P \rangle \rightarrow_{DP} env_P' \end{matrix}}{env_V, env_P \vdash \langle \; D_V \; D_A \; D_P, sto \rangle \rightarrow sto'}$\\
 ~ & ~ \\
 ~[ROOT] & $\dfrac{\begin{matrix} env_V, env_P \vdash \langle R_1, sto \rangle \rightarrow sto'' \\ env_V, env_P \vdash \langle R_2, sto'' \rangle \rightarrow sto' \end{matrix}}{env_V, env_P \vdash  \langle R_1; R_2, sto \rangle \rightarrow sto'}$ \\
 ~ & ~ \\
-\caption{Root statements}
+\caption{Root statements.}
 \end{longtable}
 
 
 \begin{longtable}{l l}
 \longtablesetting{2}
-~ & Transitions are on the form: $env_V, env_P \vdash \langle S, sto \rangle \rightarrow sto'$ \\
-~ & ~ \\
 
 [VAR-ASS] & $env_V, env_P \vdash \langle x <-- a, sto \rangle \rightarrow sto[l \mapsto v]$ \\
 ~ & ~ \\
@@ -110,7 +110,7 @@ D_A::= \; & \text{array} \; r[a_1]  \;|\; \eps\\
 %~ & ~ \\
 
 %[BLOCK] & $\dfrac{\langle Q, env_P, env_V, sto \rangle \rightarrow_{Q} (env_V', env_P', sto'') \rangle \rightarrow sto'}{env_V, env_P \vdash \langle \text{begin} \; Q \; \text{end}, sto \rangle \rightarrow sto' }$ \\
-\caption{Statements}
+\caption{Statements.}
 \end{longtable}
 \begin{landscape}
 \begin{longtable}{l l}
@@ -138,14 +138,12 @@ D_A::= \; & \text{array} \; r[a_1]  \;|\; \eps\\
 ~ & \indent\indent and $v \neq v_1$ \\
 ~ & ~ \\
 
-\caption{Statements}
+\caption{Statements.}
 \end{longtable}
 \end{landscape}
 
 \begin{longtable}{l l}
 \longtablesetting{2}
-~ & Transitions are on the form: $env_V, sto \vdash a \rightarrow_a v$ \\
-~ & ~ \\
 
 [NUM] & $env_V, sto \vdash n \rightarrow_a v$ \\
 ~ & ~ \\
@@ -190,13 +188,11 @@ D_A::= \; & \text{array} \; r[a_1]  \;|\; \eps\\
 ~ & \indent\indent and $0 < v_1 \leq v_3$ \\
 ~ & \indent\indent and $sto(l + v_1) = v_2$ \\
 ~ & ~ \\
-\caption{Arithmetic expressions}
+\caption{Arithmetic expressions.}
 \end{longtable}
 
 \begin{longtable}{l l}
 \longtablesetting{2}
-~ & Transitions are on the form: $env_V, sto \vdash b \rightarrow_b \text{bool}$ \\
-~ & ~ \\
 
 [EQUAL-TRUE] & $\dfrac{env_V, sto \vdash a_1 \rightarrow_a v_1 \; \; \; env_V, sto \vdash a_2 \rightarrow_a v_2}{env_V, sto \vdash a_1 = a_2 \rightarrow_b \text{true}}$ \\
 ~ & ~ \\
@@ -234,33 +230,31 @@ D_A::= \; & \text{array} \; r[a_1]  \;|\; \eps\\
 [NOT-2] & $\dfrac{env_V, sto \vdash b \rightarrow_b \text{false}}{env_V, sto \vdash !b \rightarrow_b \text{true}}$ \\
 ~ & ~ \\
 
-[AND-TRUE] & $\dfrac{env_V, sto \vdash b_1 \rightarrow_b \text{true} \; \; \; env_V, sto \vdash b_2 \rightarrow_b \text{true}}{env_V, sto \vdash b_1 \wedge b_2 \rightarrow_b \text{true}}$ \\
+[AND-TRUE] & $\dfrac{env_V, sto \vdash b_1 \rightarrow_b \text{true} \; \; \; env_V, sto \vdash b_2 \rightarrow_b \text{true}}{env_V, sto \vdash b_1 \; \text{AND} \; b_2 \rightarrow_b \text{true}}$ \\
 ~ & ~ \\
 
-[AND-FALSE] & $\dfrac{env_V, sto \vdash b_i \rightarrow_b \text{false}}{env_V, sto \vdash b_1 \wedge b_2 \rightarrow_b \text{false}}$ \\
+[AND-FALSE] & $\dfrac{env_V, sto \vdash b_i \rightarrow_b \text{false}}{env_V, sto \vdash b_1 \; \text{AND} \; b_2 \rightarrow_b \text{false}}$ \\
 ~ & ~ \\
 ~ & \indent\indent where $i \in {1,2}$ \\
 ~ & ~ \\
 
-[OR-TRUE] & $\dfrac{env_V, sto \vdash b_i \rightarrow_b \text{true}}{env_V, sto \vdash b_1 \vee b_2 \rightarrow_b \text{true}}$ \\
+[OR-TRUE] & $\dfrac{env_V, sto \vdash b_i \rightarrow_b \text{true}}{env_V, sto \vdash b_1 \; \text{OR} \; b_2 \rightarrow_b \text{true}}$ \\
 ~ & ~ \\
 ~ & \indent\indent where $i \in {1,2}$ \\
 ~ & ~ \\
 
-[OR-FALSE] & $\dfrac{env_V, sto \vdash b_1 \rightarrow_b \text{false} \; \; \; env_V, sto \vdash b_2 \rightarrow_b \text{false}}{env_V, sto \vdash b_1 \vee b_2 \rightarrow_b \text{false}}$ \\
+[OR-FALSE] & $\dfrac{env_V, sto \vdash b_1 \rightarrow_b \text{false} \; \; \; env_V, sto \vdash b_2 \rightarrow_b \text{false}}{env_V, sto \vdash b_1 \; \text{OR} \; b_2 \rightarrow_b \text{false}}$ \\
 ~ & ~ \\
 
 [PAR-BOOL] & $\dfrac{env_V, sto \vdash b \rightarrow_b v}{env_V, sto \vdash (b) \rightarrow_b v}$ \\
 ~ & ~ \\
-\caption{Boolean expressions}
+\caption{Boolean expressions.}
 \end{longtable}
 
 \begin{longtable}{l l}
 \longtablesetting{2}
-~ & Transitions are on the form: $\langle D_V, env_V, sto \rangle \rightarrow_{DV} (env_V', sto')$ \\
-~ & ~ \\
 
-[VAR-DEC] & $\dfrac{\langle D_V, env_V'', sto[l \mapsto v] \rangle \rightarrow_{DV} (env_V', sto')}{\text{var} \; x <-- a, env_V, sto \rangle \rightarrow_{DV} (env_V', sto')}$ \\
+[VAR-DEC] & $\dfrac{\langle D_V, env_V'', sto[l \mapsto v] \rangle \rightarrow_{DV} (env_V', sto')}{\langle \text{var} \; x <-- a, env_V, sto \rangle \rightarrow_{DV} (env_V', sto')}$ \\
 ~ & ~ \\
 ~ & \indent\indent where $env_V, sto \vdash a \rightarrow_a v$ \\
 ~ & \indent\indent and $l = env_V \; \text{next}$ \\
@@ -268,9 +262,6 @@ D_A::= \; & \text{array} \; r[a_1]  \;|\; \eps\\
 ~ & ~ \\
 
 [EMPTY-VAR] & $\langle \varepsilon, env_V, sto \rangle \rightarrow_{DV} (env_V, sto)$ \\
-~ & ~ \\
-
-~ & Transitions are on the form: $env_V \vdash \langle D_P, env_P \rangle \rightarrow_{DP} env_P'$ \\
 ~ & ~ \\
 
 %[FUNC-DEC] & $\dfrac{env_V \vdash \langle D_P, env_P[p \mapsto (S, env_V, env_P)] \rangle \rightarrow_{DP} env_P'}{env_V \vdash \langle \text{proc} \; p \; \text{is begin} \; S \; \text{end}, env_P \rangle \rightarrow_{DP} env_P'}$ \\
@@ -282,19 +273,17 @@ D_A::= \; & \text{array} \; r[a_1]  \;|\; \eps\\
 [EMPTY-PROC] & $env_V \vdash \langle \varepsilon, env_P \rangle \rightarrow_{DP} env_P'$ \\
 ~ & ~ \\
 
-~ & Transitions are on the form: $\langle D_A, env_V, sto \rangle \rightarrow_{DA} (env_V', sto')$ \\
-~ & ~ \\
 
 [ARRAY-DEC] & $\dfrac{\langle D_A, env_V[r \mapsto l, \text{next} \mapsto l + v + 1],  sto[l \mapsto v] \rangle \rightarrow_{DA} (env_V', sto')}{\langle \text{array} \; r[a_1], env_V, sto \rangle \rightarrow_{DA} (env_V', sto')}$ \\
 ~ & ~ \\
 ~ & \indent\indent where $env_V, sto \vdash a_1 \rightarrow_a v$ \\
-~ & \indent\indent and $l = env_V \text{next}$ \\
+~ & \indent\indent and $l = env_V \; \text{next}$ \\
 ~ & \indent\indent and $v > 0$ \\
 ~ & ~ \\
 
 [EMPTY-ARRAY] & $\langle \varepsilon, env_V, sto \rangle \rightarrow_{DA} (env_V, sto)$ \\
 ~ & ~ \\
-\caption{Declarations}
+\caption{Declarations.}
 \end{longtable}
 
 %\begin{longtable}{l l}

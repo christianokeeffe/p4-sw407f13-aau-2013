@@ -1,26 +1,27 @@
 \subsection{Parser}
-A parser takes the tokens from the scanner and use them to create an abstract syntax tree. It also checks if the stream of tokens conforms to the syntax specification, usually written formal using context-free grammar (CFG).
+A parser takes the tokens from the scanner and uses them to create an abstract syntax tree. It also checks if the stream of tokens conforms to the syntax specification, usually written formally using context-free grammar (CFG).
 
-The main purpose of the parser is to analyze the tokens and check if the source program is written in the correct syntax. If this is not the case the parser should show a message describing the error. The parser will at the end create an abstract syntax tree. 
+The main purpose of the parser is to analyze the tokens, check if the source program is written in the correct syntax and to make the parser. If this is not the case the parser shows a message describing the error. The parser will create an parse tree in the end. 
 
-Generally there are two different approaches to parsing: top-down and bottom-up. Before describing the different approaches to parsing, it is worth to describe derivation shortly. Derivations is how the parser will create the abstract syntax tree.
-Either it will be built leftmost or it will be built rightmost. Leftmost-derivation is where the parser will take the terminal that is most to the left, and create a derivation for that. A rightmost-derivation is the opposite: The parser chooses the first terminal from the right, and creates a derivation for that.
+Generally there are two different approaches to parsing: Top-down and bottom-up. Before describing the different approaches to parsing, it is worth to briefly describe derivation. Derivations is how the parser will create the abstract syntax tree.
+Either it will be built leftmost or it will be built rightmost. Leftmost-derivation is where the parser will begin with the leftmost terminal, and create a derivation for that. A rightmost-derivation is the opposite: The parser chooses the first terminal from the right, and creates a derivation for that.
 
 \subsubsection{Top-down Parsers}
-Then top-down parser starts at the root and works its way to the leaves in a depth-first manner, doing a pre-order traversal of the parse tree. This is done by reading tokens from left to right using a leftmost derivation. Furthermore top-down parsers can be split into table-driven LL and recursive descent parse algorithms.
+A top-down parser starts at the root and works its way to the leaves in a depth-first manner, doing a pre-order traversal of the parse tree. This is done by reading tokens from left to right using a leftmost derivation. Furthermore, top-down parsers can be split into table-driven LL and recursive descent parse algorithms.
 
-\subsubsubsection*{Table-driven LL Parsers}
-Uses a parse table to determine what to do next. The entries in the parse table is determined by the particular LL(k) grammar. The parser then searches the table to see what to do.
+\begin{inddes}
+	\item[Table-driven LL Parsers:] Use a parse table to determine what to do next. The entries in the parse table is determined by the particular LL(k) grammar. The parser then searches the table to see what to do.
+	\item[Recursive-descent Parsers:] The recursive-descent parsers consist of mutually recursive parsing routines. Each of the non-terminals in the grammar has a parsing procedure that determines if the token stream contains a sequence of tokens derivable from that non-terminal.
+\end{inddes}
 
-\subsubsubsection*{Recursive-descent Parser}
-The recursive-descent parsers consists of mutually recursive parsing routines. Each of the non-terminals in the grammar has a parsing procedure that determines if the token stream contains a sequence of tokens derivable from that non-terminal.
 
 \subsubsection{Bottom-Up Parsers}
 A bottom-up parser has to do a post-order traversal of the parse tree, meaning that it starts from the leaves and works towards the root.
 A bottom-up parser is more powerful and efficient than a top-down parser, but not as simple.
 
-\subsubsubsection*{LR}
-A LR parser reads from left to right and because it is a bottom-up parser it uses a reversed rightmost derivation which means it takes terminals and turn them into non-terminals. It is as the LL parser driven from a parse table. The biggest difference is how it is derived and how the parse table is handled.  
 
-\subsubsubsection*{LALR}
-A LALR(Lookahead Ahead LR) parser is one of the most commonly used algorithms today, because it is a powerful algorithm but do not need a very large parse table. It works like the LR parser.
+\begin{inddes}
+	\item[LR Parser:] An LR parser reads from left to right and because it is a bottom-up parser it uses a reversed rightmost derivation which means it takes terminals and turns them into non-terminals. It is as the LL parser driven from a parse table. The biggest difference is how it is derived and how the parse table is handled.  
+	\item[LALR Parser:] An LALR(Lookahead Ahead LR) parser is one of the most commonly used algorithms today, because it is a powerful algorithm but does not need a very large parse table. It works like the LR parser.
+\end{inddes}
+

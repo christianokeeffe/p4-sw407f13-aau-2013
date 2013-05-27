@@ -3,7 +3,7 @@ ANTLR (ANother Tool for Language Recognition) is a tool for generating a parser 
 The token stream from the lexer is then parsed based on the parser rules that have been defined in the grammar. Parser rules are all written with lower-case in contrast to the lexer rules. ANTLR works with LL(*) grammars, which means that the parser uses left-most derivation to parse the token stream. ANTLR can generate a parse tree for the grammar by incorporating specific operators in the grammar which tells if an element should be a root node of a subtree with its children or if an element should be left out of the tree construction. ANTLR also allows the use of rewritten rules to generate a tree from the given grammar \citep{ANTLRTreeCon}.
 
 The ANTLR library comes with a tool for testing the generated lexer and parser. The tool, (test rig), allows for parsing some code and gets it represented
-in a GUI or tree representation. This has been done for a simple "Hello world" program, see listing \ref{lst:HeeloWoorld}, to show how a program is parsed and represented using the GUI option.
+in a GUI or tree representation. This has been done for a simple "Hello world" program, see listing \ref{lst:helloworldsplad}, to show how a program is parsed and represented using the GUI option.
 
 \figur{1.0}{ParsedCode.png}{On this figure the parse tree for the parsed program "Hello world" can be seen.}{fig:parsecode}
 

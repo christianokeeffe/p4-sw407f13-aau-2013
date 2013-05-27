@@ -2,7 +2,7 @@
 \label{sec:VisitorPattern}
 The visitor pattern is ideal for traversing an abstract syntax tree or a parse tree during the semantic analysis and code generation, to help manage the large number of phase- and node interactions. A phase is started by visiting the first node in the AST, to reach every node there must be a call to \emph{visit} in the preceding node.
 
-Single dispatch is used by most object-oriented languages to determine which \emph{visit} method that must be used. The method is based on the type of the parameter. There are a few problems with single dispatch, such as the fact that it finds a match based on the declared type of its parameters when it is called. This is where the visitor pattern comes in handy with a form of double dispatch, the idea is to make use of the abstract class like the one seen on listing \ref{lst:GenericVisitor} that all nodes implement.
+Single dispatch is used by most object-oriented languages to determine which \emph{visit} method that must be used. The method is based on the type of the parameter. There are a few problems with single dispatch, such as the fact that it finds a match based on the declared type of its parameters when it is called. This is where the visitor pattern comes in handy with a form of double dispatch. The idea is to make use of the abstract class such as the one seen on listing \ref{lst:GenericVisitor} that all nodes implement.
 
 \begin{code}{GenericVisitor}{A generic Visitor.}
 \begin{lstlisting}

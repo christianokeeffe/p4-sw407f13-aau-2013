@@ -4,7 +4,7 @@ This section will describe the language processing strategy in this project. To 
 
 \figur{0.5}{javacompiler.png}{Tombstone diagram for the Java-compiler}{fig:tombjava}
 
-The left part of figure \ref{fig:tombjava}, represent the JVM, which can actually execute the byte-code (BC) on architecture $M$.
+The left part of figure \ref{fig:tombjava}, represents the JVM, which can actually execute the byte-code (BC) on architecture $M$.
 
 Figure \ref{fig:tombspladcompilercompilation} illustrates the compilation of the SPLAD-compiler. The SPLAD-compiler is written in Java and converts the SPLAD source-program to Arduino-code. As the SPLAD-compiler is written in Java, it is therefore compiled into Java byte-code using the Java-compiler. It can be seen in figure \ref{fig:tombspladcompilercompilation}, that everything is bootstrapped together. The SPLAD-compiler is bootstrapped to the Java-compiler which returns a SPLAD-to-Arduino compiler written in Java byte-code. The Java-compiler is also written in byte-code, and runs on the JVM, which is written in machine code for architecture $M$, and runs on architecture $M$.
 \figur{0.5}{spladcompilercompilationprocess.png}{Tombstone diagram for the SPLAD-compilers compilation process}{fig:tombspladcompilercompilation}

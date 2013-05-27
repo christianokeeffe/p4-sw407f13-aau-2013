@@ -108,9 +108,10 @@
 @MISC{LCDtut,
   author = {David A. Mellis, Limor Fried, Tom Igoe},
   title = {LiquidCrystal - "Hello World!"},
+  howpublished = {\url{http://www.arduino.cc/en/Tutorial/LiquidCrystal} [Last seen:
+	2013/05/27]},
   owner = {Rasmus},
-  timestamp = {2013.05.20},
-  url = {http://www.arduino.cc/en/Tutorial/LiquidCrystal}
+  timestamp = {2013.05.20}
 }
 
 @MISC{Flex,

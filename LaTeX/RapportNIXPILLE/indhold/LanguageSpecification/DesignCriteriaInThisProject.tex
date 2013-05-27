@@ -6,12 +6,12 @@ To determine how a programming language should be syntactically described, the t
 		\hline
 		
 		Readability:				& How easy it is to understand and comprehend a computation. 		\\ \hline
-		Writability:				& How easy it is for the programmer to write a computation clearly, correctly, concisely and quickly.\\ \hline
-		Reliability: 			& Assures a program behaves the way it is suppose to do.	\\ \hline
+		Writeability:				& How easy it is for the programmer to write a computation clearly, correctly, concisely and quickly.\\ \hline
+		Reliability: 			& Assures a program behaves the way it is supposed to do.	\\ \hline
 		Simplicity:				& When a program e.g. has a small number of basic constructs, and it is simple in the way that it has only one way to 									accomplish a particular operation.\\ \hline
 		Orthogonality: 			& A relatively small set of primitive constructs can be combined legally in a relatively small number of ways.\\ \hline	
 		Data types:				& The presence of appropriate data types in the language.\\ \hline
-		Syntax design:			& The syntax, or form, of the elements of a language. E.g. special words like "while" and "if".\\ \hline
+		Syntax design:			& The syntax, or form, of the elements of a language. E.g. special words such as "while" and "if".\\ \hline
 		Support for abstraction:	& Abstraction means the ability to define and then use complicated structures or operations in ways that allow many of the 									details	to be ignored.\\ \hline
 		Expressivity:			& A language can refer to several different characteristics. It means that a language has a relatively convenient, rather 									than cumbersome, way of specifying computations.\\ \hline
 		Type Checking:			& Testing for type errors in a given program, either by the compiler or during program execution.\\ \hline
@@ -36,7 +36,7 @@ These criteria are used to evaluate the trade-offs of programming languages. An 
 
 \begin{table}[H]
 	\begin{tabular}{l|c|c|c|}
-\textbf{Criteria}	& \rotatebox{90}{Readability} &\rotatebox{90}{Writability} & \rotatebox{90}{Reliability} \\ \hline
+\textbf{Criteria}	& \rotatebox{90}{Readability} &\rotatebox{90}{Writeability} & \rotatebox{90}{Reliability} \\ \hline
 Simplicity 				& $\bullet{•}$	& $\bullet{•}$	& $\bullet{•}$ \\ \hline
 Orthogonality			& $\bullet{•}$	& $\bullet{•}$	& $\bullet{•}$ \\ \hline
 Data types 				& $\bullet{•}$	& $\bullet{•}$	& $\bullet{•}$ \\ \hline
@@ -53,9 +53,9 @@ Restricted aliasing 	& ~ 			& ~ 			& $\bullet{•}$ \\ \hline
 
 In table \ref{tab:langTradeOffs} $\bullet$ means that the characteristic affects the feature of the programming language where the $\bullet$ is placed. If there is no $\bullet$ in front of a feature, it means that this particular criteria does not directly affect the feature. 
 
-Based on these trade-offs, it is clear that having a simple programming language affect both readability, write-ability and reliability. 
-This is because having a simple-to-understand language, might not make it very write-able, since code that are simple-to-understand could take longer to write. 
-On the other hand, having a simple-to-write programming language, might not make it very readable. An example of this is the if-statement in C, which can be written both with the 'if'-keyword, or more compact. This can be seen by comparing listing \ref{lst:ifstmtnormal} with listing \ref{lst:ifstmtcompact}, which both yield the same result. It is then clear, that the compact if-statement might be faster to write, but slower to read and understand, and opposite with the if-statement.
+Based on these trade-offs, it is clear that having a simple programming language affect both readability, writeability and reliability. 
+This is because having a simple-to-understand language, might not make it very writeable, since code that is simple-to-understand could take longer to write. 
+On the other hand, having a simple-to-write programming language, might not make it very readable. An example of this is the if-statement in C, which can be written both with the 'if'-keyword, or in a more compact way. This can be seen by comparing listing \ref{lst:ifstmtnormal} with listing \ref{lst:ifstmtcompact}, which both yield the same result. It is then clear, that the compact if-statement might be faster to write, but slower to read and understand, and vice versa with the if-statement.
 
 \begin{code}{ifstmtnormal}{Simple example of if-statement in C using the 'if'-keyword.}
 	\begin{lstlisting}
@@ -76,7 +76,7 @@ On the other hand, having a simple-to-write programming language, might not make
 	\end{lstlisting}
 \end{code}
 
-When defining the syntax of a programming language, the criteria should be balance these to achieve the right amount of trade-offs for that particular language. For the language of this project, it is important that the language is simple to read and understand, because the target group is the hobbyist-programmer, who might not have much experience in programming.
+When defining the syntax of a programming language, the criteria should be balance these to achieve the right amount of trade-offs for that particular language. For the language of this project, it is important that the language is simple to read and understand, because the target group is the hobbyist programmer, who might not have much experience in programming.
 
 \begin{table}[H]
 	\begin{tabular}{l|c|}
@@ -94,24 +94,24 @@ When defining the syntax of a programming language, the criteria should be balan
 	\caption{Overview of choice of focus.}
 	\label{tab:choiceoffocus}
 \end{table}
-Table \ref{tab:choiceoffocus} shows what paradigms that is in the focus for the project. 
+Table \ref{tab:choiceoffocus} shows what paradigms this project focuses on. 
 \begin{itemize}
 
 \item \textbf{Simplicity:} The language of this project will not have multiple ways of doing the same simple instructions. This is to make writing code simpler for beginners. An example is that it will not be possible to increase a variable by one by writing "A++;". Instead it has to be written as "$A<-\,-A+1;$".
 
-\item \textbf{Orthogonality:} It will not be possible to make classes or constructs, this is to simplify types for beginners. However it will be possible to combine various other constructs, for example calling a function in an expression. 
+\item \textbf{Orthogonality:} It will not be possible to make classes or constructs, this is to simplify types for beginners. However, it will be possible to combine various other constructs, for example calling a function in an expression. 
 
 \item \textbf{Data types:} The language of this project will have five primitive types, bool, double, int, char and string and two special types, container and drink. The two special types are described in section \ref{sec:specific}.
 
-\item \textbf{Syntax design:} It will not be possible to make classes in the language of this project but there will be both "for" and "while" loops because they are relatively simple to use and understand for beginners. All functions and loops will start with "begin" and end with "end" to make it clear where blocks starts and ends.
+\item \textbf{Syntax design:} It will not be possible to make classes in the language of this project but there will be both "for" and "while" loops because they are relatively simple to use and understand for beginners. All functions and loops will start with "begin" and end with "end" to make it clear where blocks start and end.
 
 \item \textbf{Support for abstraction:} Our language will be an abstraction of the Arduino language. This is done to simplify the programming for the Arduino platform and help the user by making it more simple.
 
 \item \textbf{Expressivity:} Shorthands will not be implemented in SPLAD, this is to increase the readability of the programs, as described in listing \ref{lst:ifstmtnormal}.
 
-\item \textbf{Type checking:} This is a major part of the project. The type checking will be done on compile time rather then run time, to help beginners see their errors in their code.
+\item \textbf{Type checking:} This is a major part of the project. The type checking will be done on compile time rather than on run time, to help beginners see their errors in their code.
 
 \item \textbf{Exception handling:} Because the Arduino will execute the program-code in the end, the compiler will handle scope, type and code generation exceptions.
 
-\item \textbf{Restricted aliasing:} Since it is known that using aliasing is a dangerous feature in a programming language \citep{sebesta}, the language of this project will not have this feature, to help beginners.
+\item \textbf{Restricted aliasing:} Since it is known that using aliasing is a dangerous feature in a programming language \citep{sebesta}, the language of this project will not have this feature, in order to help beginners.
 \end{itemize}

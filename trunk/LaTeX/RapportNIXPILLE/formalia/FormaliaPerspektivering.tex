@@ -1,7 +1,15 @@
-\section{Future Work}
+\section{Future Work} % 1 sted skal der rettets
 This section outlines which areas of the language, compiler and the Arduino component would be natural to develop further.
 
 On the compiler side, it would be natural to develop the compiler, so it does the producing of the Arduino code itself, and thereby skips the step for the user of compiling in the Arduino compiler. The reason why it was decided to compile into Arduino C/C++ is, that it was decided how it would be too time consuming to fully understand the Arduino machine-code, and then compile into machine-code.
+
+% fra her
+on the language side, it would be interesting to allow SPLAD to manage other product then drinks, thereby widen the usefulness of our language and compiler.
+
+To help with security, there could be implemented a automatic encrypted method for the tags. This method could give beginner programmers a easy was to secure there drinking machine.
+
+It would be interesting to make the compiler so it can make a function that handle the processes with writing tags. Fore making less work to the bartenders.
+% til her
 
 When debugging code, it is important to have correct error messages. While this already is the case for the SPLAD compiler, it does not provide somewhat important information such as the line number where the error happened. The reason why this was not in focus in the initial development of the compiler, is that it was simply considered too time consuming, and not as important as getting the compiler working in the first place. The language could be extended with a construction to handle arrays of drinks, which would enable a simpler way to work with multiple drinks. Again the reason why this was not implemented in the first place, is that is would be too time consuming, compared to the deadline of this project.
 

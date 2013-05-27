@@ -1,11 +1,11 @@
 \section{Requirements to the Programmer}
-There are certain requirements to the programmer, when they are writing in SPLAD. The programmer must implement the functions:
+There are certain requirements to the programmers, when they are writing in SPLAD. The programmers must implement the functions:
 \begin{itemize}
 	\item {\color[rgb]{0,0,1}function} pour {\color[rgb]{0,0,1}return} {\color[rgb]{0.545,0.133,0.133}nothing} {\color[rgb]{0,0,1}using}({\color[rgb]{0.545,0.133,0.133}container} cont, {\color[rgb]{0.545,0.133,0.133}int} Amount)
 	\item {\color[rgb]{0,0,1}function} RFIDFound {\color[rgb]{0,0,1}return} {\color[rgb]{0.545,0.133,0.133}nothing} {\color[rgb]{0,0,1}using}({\color[rgb]{0.545,0.133,0.133}int} DrinkID, {\color[rgb]{0.545,0.133,0.133}int} Amount)
 \end{itemize}
-These two functions must be implemented, so that the SPLAD framework can call the functions. The pour function is called when a drink is to be mixed with the pourDrink function. The programmer should then handle how to pour the ingredients from their containers.
-The RFIDFound function is called when an RFID-tag is found, and the programmer should then, with the contents of the RFID-tag as parameters, handle what to do with the tag.
+These two functions must be implemented, so that the SPLAD framework can call the functions. The pour function is called when a drink is to be mixed with the pourDrink function. The programmers should then handle how to pour the ingredients from their containers.
+The RFIDFound function is called when an RFID-tag is found, and the programmers should then, with the contents of the RFID-tag as parameters, handle what to do with the tag.
 
 \section{Functions Provided by SPLAD}
 There are certain functions provided by SPLAD. The functions are:
@@ -15,4 +15,4 @@ There are certain functions provided by SPLAD. The functions are:
 	\item {\color[rgb]{0,0,1}function} RFIDWrite {\color[rgb]{0,0,1}return} {\color[rgb]{0.545,0.133,0.133}bool} {\color[rgb]{0,0,1}using}({\color[rgb]{0.545,0.133,0.133}int} DrinkID, {\color[rgb]{0.545,0.133,0.133}int} Amount)
 	\item {\color[rgb]{0,0,1}function} pourDrink {\color[rgb]{0,0,1}return} {\color[rgb]{0.545,0.133,0.133}nothing} {\color[rgb]{0,0,1}using}({\color[rgb]{0.545,0.133,0.133}drink} DrinkToPour)
 \end{itemize}
-The LCDPrint function is provided to the programmer, so they can print to the LCD. The LCDClear will clear both lines on the LCD. The RFIDWrite function is provided, so the programmer can write a DrinkID and an Amount to the RFIDTag. When a drink should be poured, the programmer can call pourDrink, which will call the pour function provided by the programmer for each ingredient in the drink.
+The LCDPrint function is provided to the programmers, so they can print to the LCD. The LCDClear will clear both lines on the LCD. The RFIDWrite function is provided, so the programmers can write a DrinkID and an Amount to the RFIDTag. When a drink should be poured, the programmers can call pourDrink, which will call the pour function provided by the programmers for each ingredient in the drink.

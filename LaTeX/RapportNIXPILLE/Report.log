@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.3.1)  27 MAY 2013 15:19
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.3.1)  27 MAY 2013 17:16
 entering extended mode
 **Report.tex
 (C:\Users\Rasmus\Documents\P4\LaTeX\RapportNIXPILLE\Report.tex
@@ -2318,14 +2318,14 @@ LaTeX Font Info:    Try loading font information for U+stmry on input line 3.
 \c__siunitx_mathtt_int=\count368
 
 (C:\Users\Rasmus\Documents\P4\LaTeX\RapportNIXPILLE\formalia/FormaliaForside.te
-x <billeder/HardwareSetup.png, id=530, 602.25pt x 451.6875pt>
+x <billeder/HardwareSetup.png, id=534, 602.25pt x 451.6875pt>
 File: billeder/HardwareSetup.png Graphic file (type png)
 
 <use billeder/HardwareSetup.png>
 Package pdftex.def Info: billeder/HardwareSetup.png used on input line 16.
 (pdftex.def)             Requested size: 340.8013pt x 255.61055pt.
 
-<billeder/AAUUKSTUDENTREPORTbluergb.png, id=531, 434.46315pt x 284.5029pt>
+<billeder/AAUUKSTUDENTREPORTbluergb.png, id=535, 434.46315pt x 284.5029pt>
 File: billeder/AAUUKSTUDENTREPORTbluergb.png Graphic file (type png)
 
 <use billeder/AAUUKSTUDENTREPORTbluergb.png>
@@ -2450,8 +2450,12 @@ Structure.tex [2]) [3] [4
 on/LanguageSpecificationIntro.tex)
 (C:\Users\Rasmus\Documents\P4\LaTeX\RapportNIXPILLE\indhold/LanguageSpecificati
 on/ParadigmsOfProgrammingLanguage.tex
-Package mdframed Info: mdframed works in twoside mode on input line 13.
+Overfull \hbox (1.02567pt too wide) in paragraph at lines 1--1
+\T1/cmr/m/n/10.95 In this chap-ter the four paradigms in pro-gram-ming lan-guag
+es are de-scribed. The paradigm,
+ []
 
+Package mdframed Info: mdframed works in twoside mode on input line 13.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
@@ -2750,7 +2754,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 97.
 See the caption package documentation for explanation.
 
-<billeder/lcd.jpg, id=917, 401.5pt x 268.00125pt>
+<billeder/lcd.jpg, id=921, 401.5pt x 268.00125pt>
 File: billeder/lcd.jpg Graphic file (type jpg)
  <use billeder/lcd.jpg>
 Package pdftex.def Info: billeder/lcd.jpg used on input line 102.
@@ -2813,19 +2817,36 @@ See the caption package documentation for explanation.
 (C:\Users\Rasmus\Documents\P4\LaTeX\RapportNIXPILLE\indhold/LanguageSpecificati
 on/Semantics.tex [25])
 (C:\Users\Rasmus\Documents\P4\LaTeX\RapportNIXPILLE\indhold/LanguageSpecificati
-on/TheoryTransitionRules.tex
-Package hyperref Info: bookmark level for unknown fixme defaults to 0 on input 
-line 19.
- [26]
-Overfull \hbox (31.17831pt too wide) in paragraph at lines 31--31
+on/TheoryTransitionRules.tex [26]
+Overfull \hbox (31.17831pt too wide) in paragraph at lines 30--30
 [] 
  []
 
 [27] [28] [29]
-Overfull \hbox (8.6991pt too wide) in paragraph at lines 132--133
+Overfull \hbox (8.6991pt too wide) in paragraph at lines 131--132
 \T1/cmr/m/n/10.95 The tran-si-tion rules for the pro-ce-dure dec-la-ra-tions ar
 e on the form: $\OML/cmm/m/it/10.95 env[] \OMS/cmsy/m/n/10.95 ` h\OML/cmm/m/it/
 10.95 D[]; env[]\OMS/cmsy/m/n/10.95 i ![]$
+ []
+
+
+Overfull \hbox (0.98033pt too wide) in alignment at lines 135--136
+ [] [] 
+ []
+
+
+Overfull \hbox (0.98033pt too wide) in alignment at lines 136--136
+ [] [] 
+ []
+
+
+Overfull \hbox (0.98033pt too wide) in alignment at lines 136--136
+ [] [] 
+ []
+
+
+Overfull \hbox (0.98033pt too wide) in alignment at lines 136--142
+ [] [] 
  []
 
 )
@@ -2945,14 +2966,14 @@ uationCriteria.tex [39
 ware.tex [40] [41])
 (C:\Users\Rasmus\Documents\P4\LaTeX\RapportNIXPILLE\indhold/Implementation/Over
 viewCompiler.tex
-<billeder/OverviewCompiler.PNG, id=1299, 420.3705pt x 295.1025pt>
+<billeder/OverviewCompiler.PNG, id=1302, 420.3705pt x 295.1025pt>
 File: billeder/OverviewCompiler.PNG Graphic file (type png)
 
 <use billeder/OverviewCompiler.PNG>
 Package pdftex.def Info: billeder/OverviewCompiler.PNG used on input line 4.
 (pdftex.def)             Requested size: 255.6026pt x 179.43588pt.
  [42]
-<billeder/OverviewCompiler2.PNG, id=1319, 477.58424pt x 255.354pt>
+<billeder/OverviewCompiler2.PNG, id=1322, 477.58424pt x 255.354pt>
 File: billeder/OverviewCompiler2.PNG Graphic file (type png)
 
 <use billeder/OverviewCompiler2.PNG>
@@ -2965,14 +2986,14 @@ ilerchoice.tex [43 <C:/Users/Rasmus/Documents/P4/LaTeX/RapportNIXPILLE/billeder
 /billeder/OverviewCompiler2.PNG>])
 (C:\Users\Rasmus\Documents\P4\LaTeX\RapportNIXPILLE\indhold/Implementation/lang
 uageprocessing.tex
-<billeder/javacompiler.png, id=1351, 359.84438pt x 166.37157pt>
+<billeder/javacompiler.png, id=1354, 359.84438pt x 166.37157pt>
 File: billeder/javacompiler.png Graphic file (type png)
 
 <use billeder/javacompiler.png>
 Package pdftex.def Info: billeder/javacompiler.png used on input line 5.
 (pdftex.def)             Requested size: 213.0pt x 98.48076pt.
  [45]
-<billeder/spladcompilercompilationprocess.png, id=1362, 322.20375pt x 281.55188
+<billeder/spladcompilercompilationprocess.png, id=1365, 322.20375pt x 281.55188
 pt>
 File: billeder/spladcompilercompilationprocess.png Graphic file (type png)
  <use billeder/spladcompilercompilationprocess.png>
@@ -2980,7 +3001,7 @@ Package pdftex.def Info: billeder/spladcompilercompilationprocess.png used on i
 nput line 10.
 (pdftex.def)             Requested size: 213.0pt x 186.13412pt.
 
-<billeder/spladcompiler.png, id=1364, 462.97969pt x 309.40594pt>
+<billeder/spladcompiler.png, id=1367, 462.97969pt x 309.40594pt>
 File: billeder/spladcompiler.png Graphic file (type png)
 
 <use billeder/spladcompiler.png>
@@ -3010,7 +3031,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 [47 <C:/Users/Rasmus/Documents/P4/LaTeX/RapportNIXPILLE/billeder/spladcompiler.
-png>] <billeder/parsetree.png, id=1392, 307.90031pt x 473.51906pt>
+png>] <billeder/parsetree.png, id=1395, 307.90031pt x 473.51906pt>
 File: billeder/parsetree.png Graphic file (type png)
 
 <use billeder/parsetree.png>
@@ -3095,33 +3116,18 @@ er.tex [52])
 (C:\Users\Rasmus\Documents\P4\LaTeX\RapportNIXPILLE\indhold/Implementation/Know
 nLexersAndParsers.tex [53] [54])
 (C:\Users\Rasmus\Documents\P4\LaTeX\RapportNIXPILLE\indhold/Implementation/ANTL
-R.tex [55]
-Package mdframed Info: mdframed works in twoside mode on input line 6.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
-)
-Package mdframed Info: mdframed inside minipage 
- mdframed uses option nobreak mdframed on input line 27.
-Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 27.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 27.
-See the caption package documentation for explanation.
-
-<billeder/ParsedCode.png, id=1518, 1009.52156pt x 428.35031pt>
+R.tex [55] <billeder/ParsedCode.png, id=1521, 763.35187pt x 447.92343pt>
 File: billeder/ParsedCode.png Graphic file (type png)
 
 <use billeder/ParsedCode.png>
-Package pdftex.def Info: billeder/ParsedCode.png used on input line 32.
-(pdftex.def)             Requested size: 426.0pt x 180.75558pt.
+Package pdftex.def Info: billeder/ParsedCode.png used on input line 8.
+(pdftex.def)             Requested size: 426.0pt x 249.96739pt.
 )
 (C:\Users\Rasmus\Documents\P4\LaTeX\RapportNIXPILLE\indhold/Implementation/Cont
-extualAnalysis.tex [56 <C:/Users/Rasmus/Documents/P4/LaTeX/RapportNIXPILLE/bill
-eder/ParsedCode.png>])
+extualAnalysis.tex)
 (C:\Users\Rasmus\Documents\P4\LaTeX\RapportNIXPILLE\indhold/Implementation/Scop
-ing.tex
+ing.tex [56 <C:/Users/Rasmus/Documents/P4/LaTeX/RapportNIXPILLE/billeder/Parsed
+Code.png>]
 Package mdframed Info: mdframed works in twoside mode on input line 32.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
@@ -3198,7 +3204,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 44--45
 
  []
 
-[58])
+)
 (C:\Users\Rasmus\Documents\P4\LaTeX\RapportNIXPILLE\indhold/Implementation/Type
 checking.tex
 Overfull \hbox (27.18889pt too wide) in paragraph at lines 46--1
@@ -3211,8 +3217,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--1
 
  []
 
+[58]
 Package mdframed Info: mdframed works in twoside mode on input line 12.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (C:\Users\Rasmus\Documents\P4\LaTeX\RapportNIXPILLE\kode/Value.txt)
@@ -3251,7 +3258,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--16
 
  []
 
-[59] [60]
+[59]
 Package mdframed Info: mdframed works in twoside mode on input line 20.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
@@ -3317,7 +3324,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--25
 
  []
 
-[61]
+[60] [61]
 Package mdframed Info: mdframed works in twoside mode on input line 29.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
@@ -3343,9 +3350,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--30
 
  []
 
-[62]
 Package mdframed Info: mdframed works in twoside mode on input line 32.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (C:\Users\Rasmus\Documents\P4\LaTeX\RapportNIXPILLE\kode/OUTPUT.txt)
@@ -3369,8 +3375,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--33
 
  []
 
+[62]
 Package mdframed Info: mdframed works in twoside mode on input line 38.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (C:\Users\Rasmus\Documents\P4\LaTeX\RapportNIXPILLE\kode/DrinkDcl.txt)
@@ -3389,9 +3396,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--40
 
  []
 
-[63]
 Package mdframed Info: mdframed works in twoside mode on input line 43.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (C:\Users\Rasmus\Documents\P4\LaTeX\RapportNIXPILLE\kode/IntError.txt)
@@ -3437,9 +3443,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--1
 
  []
 
-[64] [65])
+[63] [64])
 (C:\Users\Rasmus\Documents\P4\LaTeX\RapportNIXPILLE\indhold/Implementation/Code
-Generation.tex
+Generation.tex [65]
 Package mdframed Info: mdframed works in twoside mode on input line 10.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
@@ -3465,9 +3471,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
  []
 
-[66]
 Package mdframed Info: mdframed works in twoside mode on input line 16.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (C:\Users\Rasmus\Documents\P4\LaTeX\RapportNIXPILLE\kode/nodexp.txt)
@@ -3491,7 +3496,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
  []
 
-[67]
+[66]
 Package mdframed Info: mdframed works in twoside mode on input line 25.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
@@ -3517,7 +3522,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--26
 
  []
 
-[68]
+[67]
 Package mdframed Info: mdframed works in twoside mode on input line 29.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
@@ -3543,8 +3548,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
  []
 
+[68]
 Package mdframed Info: mdframed works in twoside mode on input line 33.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 )
 (C:\Users\Rasmus\Documents\P4\LaTeX\RapportNIXPILLE\kode/drinkdclup.txt)
@@ -3698,18 +3704,14 @@ See the caption package documentation for explanation.
 (C:\Users\Rasmus\Documents\P4\LaTeX\RapportNIXPILLE\formalia/FormaliaPerspektiv
 ering.tex [79]) [80]
 (C:\Users\Rasmus\Documents\P4\LaTeX\RapportNIXPILLE\formalia/FormaliaKonklusion
-.tex
-
-LaTeX Warning: Reference `chap:discussion' on page 81 undefined on input line 8
-.
-
-) (C:\Users\Rasmus\Documents\P4\LaTeX\RapportNIXPILLE\Report.bbl [81
-
-] [82
+.tex) (C:\Users\Rasmus\Documents\P4\LaTeX\RapportNIXPILLE\Report.bbl [81
 
 ]
-[83] [84]) [85] (C:\Users\Rasmus\Documents\P4\LaTeX\RapportNIXPILLE\Report.lox)
-[86]
+[82
+
+] [83] [84]) [85] [86
+
+]
 (C:\Users\Rasmus\Documents\P4\LaTeX\RapportNIXPILLE\appendix/TransitionRulesApp
 endix.tex
 Overfull \hbox (31.17831pt too wide) in paragraph at lines 15--15
@@ -3717,40 +3719,39 @@ Overfull \hbox (31.17831pt too wide) in paragraph at lines 15--15
  []
 
 
-Overfull \hbox (15.64812pt too wide) in alignment at lines 27--28
+Overfull \hbox (15.64812pt too wide) in alignment at lines 29--30
  [] [] 
  []
 
 
-Overfull \hbox (15.64812pt too wide) in alignment at lines 28--28
+Overfull \hbox (15.64812pt too wide) in alignment at lines 30--30
  [] [] 
  []
 
 
-Overfull \hbox (15.64812pt too wide) in alignment at lines 28--28
+Overfull \hbox (15.64812pt too wide) in alignment at lines 30--30
  [] [] 
  []
 
 
-Overfull \hbox (15.64812pt too wide) in alignment at lines 28--53
+Overfull \hbox (15.64812pt too wide) in alignment at lines 30--55
  [] [] 
  []
 
 
-Overfull \hbox (15.64812pt too wide) in alignment at lines 53--78
+Overfull \hbox (15.64812pt too wide) in alignment at lines 55--80
  [] [] 
  []
 
 [87
 
-
 ]
-Overfull \hbox (15.64812pt too wide) in alignment at lines 78--102
+Overfull \hbox (15.64812pt too wide) in alignment at lines 80--104
  [] [] 
  []
 
 
-Overfull \hbox (15.64812pt too wide) in alignment at lines 102--114
+Overfull \hbox (15.64812pt too wide) in alignment at lines 104--114
  [] [] 
  []
 
@@ -3759,27 +3760,27 @@ Overfull \hbox (15.64812pt too wide) in alignment at lines 102--114
 ] [91
 
 ] [92]
-Overfull \hbox (7.4988pt too wide) in alignment at lines 258--259
+Overfull \hbox (7.4988pt too wide) in alignment at lines 254--255
  [] [] 
  []
 
 
-Overfull \hbox (7.4988pt too wide) in alignment at lines 259--259
+Overfull \hbox (7.4988pt too wide) in alignment at lines 255--255
  [] [] 
  []
 
 
-Overfull \hbox (7.4988pt too wide) in alignment at lines 259--259
+Overfull \hbox (7.4988pt too wide) in alignment at lines 255--255
  [] [] 
  []
 
 
-Overfull \hbox (7.4988pt too wide) in alignment at lines 259--290
+Overfull \hbox (7.4988pt too wide) in alignment at lines 255--286
  [] [] 
  []
 
 
-Overfull \hbox (7.4988pt too wide) in alignment at lines 290--298
+Overfull \hbox (7.4988pt too wide) in alignment at lines 286--287
  [] [] 
  []
 
@@ -3803,67 +3804,62 @@ Package mdframed Info: You first box width is to small
 ] 
 AED: lastpage setting LastPage
 \tf@toc=\write7
-\tf@lox=\write8
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 137.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 137.
 (C:\Users\Rasmus\Documents\P4\LaTeX\RapportNIXPILLE\Report.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 137.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 137.
 Package rerunfilecheck Info: File `Report.out' has not changed.
-(rerunfilecheck)             Checksum: C545483818E0F2C27D76DC98187D51C9;10245.
-
-
-LaTeX Warning: There were undefined references.
+(rerunfilecheck)             Checksum: FD73DFD966313A811BB86833B9080F89;10316.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 38996 strings out of 493921
- 720699 string characters out of 3147280
- 2555186 words of memory out of 3000000
- 39995 multiletter control sequences out of 15000+200000
- 37744 words of font info for 98 fonts, out of 3000000 for 9000
+ 38961 strings out of 493921
+ 720019 string characters out of 3147280
+ 2554935 words of memory out of 3000000
+ 39988 multiletter control sequences out of 15000+200000
+ 36975 words of font info for 97 fonts, out of 3000000 for 9000
  845 hyphenation exceptions out of 8191
  77i,20n,83p,1559b,1732s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi657
 \ecbi1000.pk> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
-n\ec\dpi600\ecss0900.pk> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
-our\jknappen\ec\dpi657\ectt1000.pk> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\f
-onts\pk\ljfour\jknappen\ec\dpi657\ecxc1000.pk> <C:\Users\Rasmus\AppData\Local\M
-iKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt0900.pk> <C:\Users\Rasmus\AppD
-ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi657\tcrm1000.pk> <C:\Users\
-Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0900.pk>
+n\ec\dpi657\ectt1000.pk> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\jknappen\ec\dpi657\ecxc1000.pk> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\f
+onts\pk\ljfour\jknappen\ec\dpi600\ectt0900.pk> <C:\Users\Rasmus\AppData\Local\M
+iKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi657\tcrm1000.pk> <C:\Users\Rasmus\AppD
+ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0900.pk> <C:\Users\
+Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx0900.pk>
  <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
-cbx0900.pk> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
-ec\dpi600\ecrm0600.pk> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
-r\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fon
-ts\pk\ljfour\jknappen\ec\dpi720\ecbx1200.pk> <C:\Users\Rasmus\AppData\Local\MiK
-TeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk>{C:/Program Files/MiKTeX
- 2.9/fonts/enc/dvips/fontname/8r.enc} <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9
-\fonts\pk\ljfour\jknappen\ec\dpi657\ecbx1000.pk> <C:\Users\Rasmus\AppData\Local
-\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi657\ecti1000.pk> <C:\Users\Rasmus\Ap
-pData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti0900.pk> <C:\User
-s\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.p
-k> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
-\ecbx1000.pk> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
-n\ec\dpi657\ecrm1000.pk> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
-our\jknappen\ec\dpi720\eccc1200.pk> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\f
-onts\pk\ljfour\jknappen\ec\dpi657\ecsl1000.pk><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmbx8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/urw/bookman/ubkd8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/u
-rw/bookman/ubkl8a.pfb>
-Output written on Report.pdf (109 pages, 1975334 bytes).
+crm0600.pk> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
+ec\dpi600\ecbx1200.pk> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
+r\jknappen\ec\dpi720\ecbx1200.pk> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fon
+ts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk>{C:/Program Files/MiKTeX 2.9/fonts/
+enc/dvips/fontname/8r.enc} <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\l
+jfour\jknappen\ec\dpi657\ecbx1000.pk> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9
+\fonts\pk\ljfour\jknappen\ec\dpi657\ecti1000.pk> <C:\Users\Rasmus\AppData\Local
+\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti0900.pk> <C:\Users\Rasmus\Ap
+pData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\User
+s\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1000.p
+k> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi657
+\ecrm1000.pk> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
+n\ec\dpi720\eccc1200.pk> <C:\Users\Rasmus\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\jknappen\ec\dpi657\ecsl1000.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmbx8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/urw/bookman/ubkd8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/bookman/
+ubkl8a.pfb>
+Output written on Report.pdf (109 pages, 1957066 bytes).
 PDF statistics:
- 3696 PDF objects out of 4296 (max. 8388607)
- 1249 named destinations out of 1440 (max. 500000)
- 1181 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3654 PDF objects out of 4296 (max. 8388607)
+ 1227 named destinations out of 1440 (max. 500000)
+ 1189 words of extra memory for PDF output out of 10000 (max. 10000000)
 

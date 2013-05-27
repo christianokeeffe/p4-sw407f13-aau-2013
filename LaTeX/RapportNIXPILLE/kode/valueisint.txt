@@ -1,7 +1,6 @@
 @Test
 public void testIsInt() {
-  Value test = new Value(10);
-  assertTrue("10 must be an int", test.isInt());
+  assertTrue("10 must be an int", new Value(10).isInt());
   assertFalse("10.0 is not int", new Value(10.0).isInt());
   assertFalse("string is not", new Value("int").isInt());
   assertTrue("OUTPUT is int", new Value("OUTPUT").isInt());

@@ -1,4 +1,4 @@
-private String PrintContentofFile(String path){
+private String LoadContentofResource(String path){
   InputStream in;
   StringBuffer fileintxt = new StringBuffer();
   try{

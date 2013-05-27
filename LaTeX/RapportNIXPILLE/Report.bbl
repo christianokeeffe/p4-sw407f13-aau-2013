@@ -109,9 +109,9 @@
   \url{http://www.cs.princeton.edu/\~appel/modern/java/JLex/current/manual.html}
   [Last seen: 2013/03/15].
 
-\bibitem[let elektronik()]{letlcd}
-\textbf{\textbf{elektronik}}.
-\newblock let elektronik.
+\bibitem[{Let Elektronik}()]{letlcd}
+\textbf{\textbf{{Let Elektronik}}}.
+\newblock {Let Elektronik}.
 \newblock \textit{LCD 16x2 Characters - Green Yellow back light}.
 \newblock
   \url{http://www.let-elektronik.dk/lcd-16x2-characters-green-yellow-back-light.html}
@@ -129,7 +129,7 @@
 \newblock John Martin.
 \newblock \textit{Introducing to Language and the Theory of Computation - Third
   edition}.
-\newblock Elizabeth A. Jones, 2003.
+\newblock McGraw-Hill, 2003.
 
 \bibitem[Norvell()]{Javacc}
 \textbf{\textbf{Norvell}}.
@@ -213,9 +213,9 @@
 \newblock \textit{Introduction to the Theory of Computation}.
 \newblock PWS Publishing, 3 edition, 2013.
 
-\bibitem[Softwere(2013)]{ProgrammingCommunityIndex}
-\textbf{Softwere}, \textbf{April 2013}.
-\newblock TIOBE Softwere, 2013.
+\bibitem[Software(2013)]{ProgrammingCommunityIndex}
+\textbf{Software}, \textbf{April 2013}.
+\newblock TIOBE Software, 2013.
 \newblock \textit{Programming Community Index for April 2013}.
 \newblock
   \url{http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html} [Last

@@ -94,7 +94,7 @@ end
 function GetInputNumber return int using()
 begin
 	int ReturnValue <-- 0;
-	/*While confirm not pressed, test for input and increas the input*/
+	/*While confirm not pressed, test for input and increase the input*/
 	while(call digitalRead(ButtonConfirm) = LOW)
 	begin
 		call delay(100);
@@ -212,7 +212,7 @@ end
 /*The action performed when a RFID is found during customermode*/
 function CustomerAction return nothing using(int DrinkID, int Amount)
 begin
-	/*If there balance on the RFID is high enough, find the drink*/
+	/*If the balance on the RFID is high enough, find the drink*/
 	if(Amount > 0)
 	begin
 		/*Find the right drink, and call DrinkFound*/

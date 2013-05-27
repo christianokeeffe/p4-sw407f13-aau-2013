@@ -1,8 +1,6 @@
 //latex start Value
 public class Value {
 
-    final Object value;
-
     public Value(Object value) {
         this.value = value;
     }

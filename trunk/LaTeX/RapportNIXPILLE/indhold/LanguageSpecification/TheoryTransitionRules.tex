@@ -16,7 +16,6 @@ In the following text we use the following names to represent different syntacti
 \end{itemize}
 
 \subsubsection{Abstract Syntax}
-\fxfatal{der skal tilføjes noget med astrakt syntax, præcedens og sådan noget, kig i Hans' bog}
 In order to describe the behavior of a program, one must first account for its syntax. We use the notion of abstract syntax, since it will allow us to describe the essential structure of a program. In other words, the abstract syntax are not concerned with operator precedence etc. The abstract syntax for SPLAD is defined as follows: 
 \begin{align*}
 R ::= \; & D_P \; D_A \; D_V \; | R_1 \; R_2 \; \\
@@ -94,18 +93,18 @@ The transition rule for multiplication in SPLAD can be seen on table \ref{tab:Mu
 \end{longtable}
 
 \subsubsection{Boolean Expressions}
-The transition rules for boolean expressions are on the form: $env_V, sto \vdash b \rightarrow_b t$. The transition system is defined by: $(\Gamma_{\mathbf{Bexp}}, \rightarrow_b, \Tau_{\mathbf{Bexp}})$ and the configurations are defined by $\Gamma_{\mathbf{Bexp}} = \textbf{Bexp} \cup \{tt, ff\}$. The end configurations are defined by $\Tau_{\mathbf{Bexp}} = \{tt, ff\}$.
+The transition rules for boolean expressions are on the form: $env_V, sto \vdash b \rightarrow_b \text{bool}$. The transition system is defined by: $(\Gamma_{\mathbf{Bexp}}, \rightarrow_b, \Tau_{\mathbf{Bexp}})$ and the configurations are defined by $\Gamma_{\mathbf{Bexp}} = \textbf{Bexp} \cup \{tt, ff\}$. The end configurations are defined by $\Tau_{\mathbf{Bexp}} = \{tt, ff\}$.
 
 The transition rule for logical-or in SPLAD can be seen on table \ref{tab:OrExp}. The rules have two parts: [OR-TRUE] and [OR-FALSE]. The [OR-TRUE] rule states that either $b_1$ or $b_2$ evaluates to \textit{TRUE}, using any of the rules from the boolean expressions, then the expression $b_1 \; \text{OR} \; b_2$ evaluates to \textit{TRUE}. [OR-FALSE] states that if both $b_1$ and $b_2$ evaluate to \textit{FALSE} then the expression $b_1 \; \text{OR } \; b_2$ evaluates to \textit{FALSE}.
 
 \begin{longtable}{l l}
 \longtablesetting{2}
-[OR-TRUE] & $\dfrac{env_V, sto \vdash b_i \rightarrow_b \text{TRUE}}{env_V, sto \vdash b_1 \;\text{OR} \; b_2 \rightarrow_b \text{TRUE}}$ \\
+[OR-TRUE] & $\dfrac{env_V, sto \vdash b_i \rightarrow_b \text{true}}{env_V, sto \vdash b_1 \;\text{OR} \; b_2 \rightarrow_b \text{true}}$ \\
 ~ & ~ \\
 ~ & \indent\indent where $i \in {1,2}$ \\
 ~ & ~ \\
 
-[OR-FALSE] & $\dfrac{env_V, sto \vdash b_1 \rightarrow_b \text{FALSE} \; \; \; env_V, sto \vdash b_2 \rightarrow_b \text{FALSE}}{env_V, sto \vdash b_1 \;\text{OR} \; b_2 \rightarrow_b \text{FALSE}}$ \\
+[OR-FALSE] & $\dfrac{env_V, sto \vdash b_1 \rightarrow_b \text{false} \; \; \; env_V, sto \vdash b_2 \rightarrow_b \text{FALSE}}{env_V, sto \vdash b_1 \;\text{OR} \; b_2 \rightarrow_b \text{false}}$ \\
 ~ & ~ \\
 \caption{Transition rule for the boolean expression logical-or.}
 \label{tab:OrExp}
@@ -118,7 +117,7 @@ The transition rules for variable declarations can be seen on table \ref{tab:Var
 
 \begin{longtable}{l l}
 \longtablesetting{2}
-[VAR-DEC] & $\dfrac{\langle D_V, env_V'', sto[l \mapsto v] \rangle \rightarrow_{DV} (env_V', sto')}{\text{var} \; x <-- a; D_V, env_V, sto \rangle \rightarrow_{DV} (env_V', sto')}$ \\
+[VAR-DEC] & $\dfrac{\langle D_V, env_V'', sto[l \mapsto v] \rangle \rightarrow_{DV} (env_V', sto')}{\langle \text{var} \; x <-- a, D_V, env_V, sto \rangle \rightarrow_{DV} (env_V', sto')}$ \\
 ~ & ~ \\
 ~ & \indent\indent where $env_V, sto \vdash a \rightarrow_a v$ \\
 ~ & \indent\indent and $l = env_V \; \text{next}$ \\
@@ -136,8 +135,8 @@ The transitions rules for procedure declarations with none to multiple parameter
 \begin{longtable}{l l}
 \longtablesetting{2}
 
-[PROC-PARA-DEC] & $\dfrac{env_V \vdash \langle D_P, env_P[p \mapsto(S, \vec{x}, env_V, env_P)] \rangle \rightarrow_{DP} \; env_P'}{env_V \vdash \langle \text{func} \; p(\text{var} \; \vec{x}) \; \text{is begin} \; S \; \text{end}, \; env_P \rangle \rightarrow_{DP} env_P'}$ \\
-~ & ~ \\
+[PROC-PARA-DEC] & $\dfrac{env_V \vdash \langle D_P, env_P[p \mapsto(S, \vec{x}, env_V, env_P)] \rangle \rightarrow_{DP} \; env_P'}{env_V \vdash \langle \text{function} \; p \; \text{using}(\text{var} \; \vec{x}) \; \text{begin} \; S \; \text{end}, \; env_P \rangle \rightarrow_{DP} env_P'}$ \\
+~ & ~ \\ 
 \caption{Transition rules for the procedure declarations.}
 \label{tab:ProcDec}
 \end{longtable}

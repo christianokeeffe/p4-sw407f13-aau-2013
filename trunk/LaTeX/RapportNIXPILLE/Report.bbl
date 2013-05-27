@@ -1,15 +1,13 @@
-\begin{thebibliography}{38}
+\begin{thebibliography}{39}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Antlr()]{ANTLR}
-\textbf{\textbf{Antlr}}.
-\newblock Antlr.
-\newblock \textit{Theory behind Antlr}.
-\newblock \url{http://www.antlr.org/about.html} [Last seen: 2013/03/15].
+\bibitem[jun()]{junit}
+\textit{\textbf{\textbf{David A.~Mellis, Limor~Fried}}}.
+\newblock \url{http://www.junit.org/} [Last seen: 2013/05/27].
 
 \bibitem[ANTLR()]{DownloadANTLR}
 \textbf{\textbf{ANTLR}}.
@@ -47,24 +45,14 @@
 
 \bibitem[AVRDUDE(2010)]{AVRDUDE}
 \textbf{AVRDUDE}, \textbf{2010}.
-\newblock \textit{AVRDUDE}.
-\newblock \url{http://www.nongnu.org/avrdude/} [Last seen: 2013/05/12], 2010.
-
-\bibitem[Bent~Thomsen(2013)]{OverviewCompiler2}
-\textbf{Bent~Thomsen, teacher at Department of Computer~Science},
-  \textbf{2013}.
-\newblock Aalborg~university Bent~Thomsen, teacher at Department of
-  Computer~Science.
-\newblock \textit{Languages and Compilers Lecture 1}, 2013.
-\newblock Slides of a Lecture given 7.2.13 by Bent Thomsen in Department of
-  Computer Science, Aalborg university.
+\newblock AVRDUDE, \textit{2010}.
+\newblock \url{http://www.nongnu.org/avrdude/} [Last seen: 2013/05/12].
 
 \bibitem[Chomsky(1959)]{Chomsky}
 \textbf{Chomsky}, \textbf{1959}.
 \newblock Noam Chomsky.
 \newblock \textit{On certain formal properties of grammars}.
-\newblock Information and Control, 2\penalty0 (2), \penalty0 137 -- 167, 1959.
-\newblock ISSN 0019-9958.
+\newblock Information and Control, s. 137 -- 167, 1959.
 
 \bibitem[Cup()]{CUP}
 \textbf{\textbf{Cup}}.
@@ -77,12 +65,12 @@
 \textbf{\textbf{David A.~Mellis, Limor~Fried}}.
 \newblock Tom~Igoe David A.~Mellis, Limor~Fried.
 \newblock \textit{LiquidCrystal - "Hello World!"}.
-\newblock web.
-\newblock URL \url{http://www.arduino.cc/en/Tutorial/LiquidCrystal}.
+\newblock \url{http://www.arduino.cc/en/Tutorial/LiquidCrystal} [Last seen:
+  2013/05/27].
 
-\bibitem[Fischer et~al.(2009)Fischer, Ron, og Richard]{CraftingACompiler}
+\bibitem[Fischer et~al.(2009)Fischer, Ron, and Richard]{CraftingACompiler}
 \textbf{Fischer et~al.}, \textbf{2009}.
-\newblock Charles~N. Fischer, K.~Cyton Ron og J.~LeBlanc.~Jr. Richard.
+\newblock Charles~N. Fischer, K.~Cyton Ron and J.~LeBlanc.~Jr. Richard.
 \newblock \textit{Crafting a Compiler}.
 \newblock Pearson, 2009.
 
@@ -118,7 +106,7 @@
 \newblock Jlex.
 \newblock \textit{Theory behind Jlex}.
 \newblock
-  \url{http://www.cs.princeton.edu/~appel/modern/java/JLex/current/manual.html}
+  \url{http://www.cs.princeton.edu/\~appel/modern/java/JLex/current/manual.html}
   [Last seen: 2013/03/15].
 
 \bibitem[let elektronik()]{letlcd}
@@ -143,14 +131,6 @@
   edition}.
 \newblock Elizabeth A. Jones, 2003.
 
-\bibitem[msujaws(2011)]{StaticvsDynamic}
-\textbf{msujaws}, \textbf{3 May 2011}.
-\newblock msujaws.
-\newblock \textit{Static vs. Dynamic Scoping}.
-\newblock
-  \url{http://msujaws.wordpress.com/2011/05/03/static-vs-dynamic-scoping/}
-  [Last seen: 2013/05/07], 2011.
-
 \bibitem[Norvell()]{Javacc}
 \textbf{\textbf{Norvell}}.
 \newblock Theodore~S. Norvell.
@@ -161,32 +141,32 @@
 
 \bibitem[Nosowitz(2011)]{NFC}
 \textbf{Nosowitz}, \textbf{01 2011}.
-\newblock Dan Nosowitz.
+\newblock Dan Nosowitz, 2011.
 \newblock \textit{Everything You Need to Know About Near Field Communication}.
-\newblock http://www.popsci.com/, 2011.
+\newblock http://www.popsci.com/.
 
 \bibitem[Nørmark(2010{\natexlab{a}})]{ProgrammingParadigms}
 \textbf{Nørmark}, \textbf{July 7 2010{\natexlab{a}}}.
-\newblock Kurt Nørmark.
+\newblock Kurt Nørmark, 2010.
 \newblock \textit{Overview of the four main programming paradigms}.
 \newblock
   \url{http://people.cs.aau.dk/\~normark/prog3-03/html/notes/paradigms\_themes-paradigm-overview-section.html}
-  [Last seen: 2013/03/19], 2010.
+  [Last seen: 2013/03/19].
 
 \bibitem[Nørmark(2010{\natexlab{b}})]{ProgrammingParadigms2}
 \textbf{Nørmark}, \textbf{July 7 2010{\natexlab{b}}}.
-\newblock Kurt Nørmark.
+\newblock Kurt Nørmark, 2010.
 \newblock \textit{Overview of the Programming paradigms}.
 \newblock
   \url{http://people.cs.aau.dk/~normark/prog3-03/html/notes/paradigms_themes-paradigms.html}
-  [Last seen: 2013/04/10], 2010.
+  [Last seen: 2013/04/10].
 
 \bibitem[Parr(2012)]{ANTLRLexer}
 \textbf{Parr}, \textbf{Nov 2012}.
-\newblock Terence Parr.
+\newblock Terence Parr, 2012.
 \newblock \textit{Lexer Rules}.
 \newblock \url{http://www.antlr.org/wiki/display/ANTLR4/Lexer+Rules} [Last
-  seen: 2013/04/03], 2012.
+  seen: 2013/04/03].
 
 \bibitem[Parr()]{ANTLRTreeCon}
 \textbf{\textbf{Parr}}.
@@ -203,11 +183,11 @@
 
 \bibitem[Popplestone(1999)]{funcprog}
 \textbf{Popplestone}, \textbf{1999}.
-\newblock Robin Popplestone.
+\newblock Robin Popplestone, 1999.
 \newblock \textit{Lecture 1: What are Programming Paradigms?}
 \newblock
   \url{http://www.cs.bham.ac.uk/research/projects/poplog/paradigms\_lectures/lecture1.html}
-  [Last seen: 2013/04/17], 1999.
+  [Last seen: 2013/04/17].
 
 \bibitem[SableCC()]{SableCC}
 \textbf{\textbf{SableCC}}.
@@ -225,21 +205,29 @@
 \textbf{Sebesta}, \textbf{2009}.
 \newblock Robert~W. Sebesta.
 \newblock \textit{Concepts of Programming Languages}.
-\newblock Pearson, 9 udgave, 2009.
+\newblock Pearson, 9 edition, 2009.
 
 \bibitem[Sipser(2013)]{sipser}
 \textbf{Sipser}, \textbf{2013}.
 \newblock Michael Sipser.
 \newblock \textit{Introduction to the Theory of Computation}.
-\newblock PWS Publishing, 3 udgave, 2013.
+\newblock PWS Publishing, 3 edition, 2013.
 
 \bibitem[Softwere(2013)]{ProgrammingCommunityIndex}
 \textbf{Softwere}, \textbf{April 2013}.
-\newblock TIOBE Softwere.
+\newblock TIOBE Softwere, 2013.
 \newblock \textit{Programming Community Index for April 2013}.
 \newblock
   \url{http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html} [Last
-  seen: 2013/05/03], 2013.
+  seen: 2013/05/03].
+
+\bibitem[Sonmez(2010)]{unittestpower}
+\textbf{Sonmez}, \textbf{10 2010}.
+\newblock John Sonmez, 2010.
+\newblock \textit{The Purpose of Unit Testing}.
+\newblock
+  \url{http://www.simpleprogrammer.com/2010/10/15/the-purpose-of-unit-testing/}
+  [Last seen: 2013/05/27].
 
 \bibitem[Specialisten()]{RFID}
 \textbf{\textbf{Specialisten}}.
@@ -256,13 +244,29 @@
   \url{http://www.seeedstudio.com/depot/seeeduino-stalker-v2-p-727.html?cPath=80}
   [Last seen: 2013/03/11].
 
+\bibitem[Thomsen(2013)]{OverviewCompiler2}
+\textbf{Thomsen}, \textbf{2013}.
+\newblock Bent Thomsen, 2013.
+\newblock \textit{Languages and Compilers Lecture 1}.
+\newblock Slides of a Lecture given 7.2.13 in the course "Languages and
+  Compilers" -by Bent Thomsen, teacher at Department of Computer Science,
+  Aalborg university.
+
 \bibitem[Walker(2012)]{Netdui}
 \textbf{Walker}, \textbf{April 2012}.
-\newblock Chris Walker.
+\newblock Chris Walker, 2012.
 \newblock \textit{Introducing Netduino Go}.
 \newblock
   \url{http://forums.netduino.com/index.php?/topic/3867-introducing-netduino-go/}
-  [Last seen: 2013/03/11], 2012.
+  [Last seen: 2013/03/11].
+
+\bibitem[Wein(2011)]{StaticvsDynamic}
+\textbf{Wein}, \textbf{3 May 2011}.
+\newblock Jared Wein, 2011.
+\newblock \textit{Static vs. Dynamic Scoping}.
+\newblock
+  \url{http://msujaws.wordpress.com/2011/05/03/static-vs-dynamic-scoping/}
+  [Last seen: 2013/05/07].
 
 \bibitem[Yacc()]{Yacc}
 \textbf{\textbf{Yacc}}.

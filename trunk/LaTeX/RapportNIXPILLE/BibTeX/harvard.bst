@@ -236,7 +236,7 @@ FUNCTION {format.names}
               if$
               t "others" =
                 { " et~al." * }
-                { " og " * t * }
+                { " and " * t * }
               if$
             }
           if$
@@ -364,7 +364,7 @@ FUNCTION {format.full.names}
               if$
               t "others" =
                 { " et~al." * }
-                { " og " * t * }
+                { " and " * t * }
               if$
             }
           if$
@@ -537,8 +537,8 @@ FUNCTION {format.edition}
 { edition empty$
     { "" }
     { output.state mid.sentence =
-        { edition "l" change.case$ " udgave" * }
-        { edition "t" change.case$ " udgave" * }
+        { edition "l" change.case$ " edition" * }
+        { edition "t" change.case$ " edition" * }
       if$
     }
   if$
@@ -1016,13 +1016,13 @@ FUNCTION {misc}
 	new.block
   format.authors output
   author format.key output
+  format.year output.check
+  format.issn output
+  format.url output
   title howpublished new.block.checkb
   format.title output emphasize
   howpublished new.block.checka
   howpublished output
-  format.year output.check
-  format.issn output
-  format.url output
   new.block
   note output
   fin.entry
@@ -1199,7 +1199,7 @@ FUNCTION {format.lab.names}
         'skip$
         { s #2 "{ff }{vv }{ll}{ jj}" format.name$ "others" =
             { " et~al." * }
-            { " og " * s #2 "{vv~}{ll}" format.name$ * }
+            { " and " * s #2 "{vv~}{ll}" format.name$ * }
           if$
         }
       if$

@@ -1,6 +1,6 @@
 \subsection{Transition Rules}
 In this section some of the transition rules in SPLAD will be explained. The complete list of all the rules can be seen in appendix \ref{app:TransitionRules}.
-In the following text we use the following names to represent different syntactic categories.
+In the following text we use the listed names to represent different syntactic categories.
 \begin{itemize}
 \item $n \in \textbf{Num}$ - Numerals
 \item $x \in \textbf{Var}$ - Variables 
@@ -16,7 +16,7 @@ In the following text we use the following names to represent different syntacti
 \end{itemize}
 
 \subsubsection{Abstract Syntax}
-In order to describe the behavior of a program, one must first account for its syntax. We use the notion of abstract syntax, since it will allow us to describe the essential structure of a program. In other words, the abstract syntax are not concerned with operator precedence etc. The abstract syntax for SPLAD is defined as follows: 
+In order to describe the behavior of a program, we must first account for its syntax. We use the notion of abstract syntax, since it will allow us to describe the essential structure of a program. In other words, the abstract syntax are not concerned with operator precedence etc. The abstract syntax for SPLAD is defined as follows: 
 \begin{align*}
 R ::= \; & D_P \; D_A \; D_V \; | R_1 \; R_2 \; \\
 S::= \; & x := a \; | \; r[a_1] := a_2 \; | \; S_1; \; S_2 \; | \; \text{if} \; b \; \text{begin} \; S \; \text{end} \; | \; \text{if} \; b \; \text{begin} \; S_1 \; \text{end} \; \text{else begin} \; S_2 \; \text{end} \\
@@ -32,27 +32,27 @@ D_A::= \; & \text{array} \; r[a_1]  \;|\; \eps\\
 We assume a collection of syntactic categories and for each syntactic category we give a finite set of formation rules which defines how the inhabitants of the category can be built \citep{HHTree}.
 
 \subsubsection{Transition System}
-A transition system is used to describe how the constructions of a programming language behaves given a state and a cause. The cause is represented as a transition and given a state it will result in a movement in the system.
+A transition system is used to describe how the constructions of a programming language behave given a state and a cause. The cause is represented as a transition and given a state it will result in a movement in the system.
 
 A transition system is defined as a 3-tuple, hence a triple. These three sets are: A set of configurations ($\Gamma$), a set of transition relations $(\rightarrow)$ and a set of terminal configurations $(\Tau)$.
-A configuration is a description of a program and the state of it. Transition relations describes how the program moves from state to state. The terminal configuration describes the states where the program ends, meaning that when one of these are reached the program terminates \citep{HHTree}.
+A configuration is a description of a program and the state of it. Transition relations describe how the program moves from state to state. The terminal configuration describes the states where the program ends, meaning that when one of these are reached the program terminates \citep{HHTree}.
 
-We use the transition system to describe the semantics of our programming language. It gives us a tool to formally describe precisely how the language should behave. This results in a more precise way of implementing the rules we want, compared to if it was described in a informal way. There are two ways of using a transition system, big-step and small-step.
+We use the transition system to describe the semantics of our programming language. It gives us a tool to formally describe precisely how the language should behave. This results in a more precise way of implementing the rules we want, compared to if it was described in an informal way. There are two ways of using a transition system, big-step and small-step.
 
 \subsubsection{Big-step vs. Small-step Semantics}
 \label{sec:BvsS}
-There are two ways to describe the computation of transition systems, big-step and small-step. In Big-step-semantics a transition describes the full computation, meaning there are not multiple steps in the computation - the whole computation is done in one step. To describe a computation step by step, small-step-semantics are used. These allow each step in the computation itself to be described \citep{HHTree}.
+There are two ways of describing the computation of transition systems, big-step and small-step. In Big-step-semantics a transition describes the full computation, meaning there are not multiple steps in the computation - the whole computation is done in one step. To describe a computation step by step, small-step-semantics are used. These allow each step in the computation itself to be described \citep{HHTree}.
 
-The property of big-step-semantics make it easier to formulate the transition rules because they do not have to describe the steps in the computations. The downside of big-step-semantics is that it makes it almost impossible to describe parallelism in a language. The reason for this, is that to describe parallelism in a language, it will be necessary to describe each step of the computations so that the system for example is allowed to switch between two statements. This is also the reason why small-step-semantics is the most reasonable choice when describing parallelism. On the other hand small-step-semantics is not as easy to describe as big-step-semantics \citep{HHTree}.
+The property of big-step-semantics make it easier to formulate the transition rules, because they do not have to describe the steps in the computations. The downside of big-step-semantics is that it makes it almost impossible to describe parallelism in a language. The reason for this, is that to describe parallelism in a language, it will be necessary to describe each step of the computations, so that for example the system is allowed to switch between two statements. This is also the reason why small-step-semantics is the most reasonable choice when describing parallelism. On the other hand small-step-semantics is not as easy to describe as big-step-semantics \citep{HHTree}.
 
-We have decided to use big-step-semantic because we do not wish to describe parallelism in this project. Therefore big-step-semantic is a more appealing choice because it is easier to formulate compared to small-step-semantics.
+We have decided to use big-step-semantic, because we do not wish to describe parallelism in this project. Therefore big-step-semantic is a more appealing choice because it is easier to formulate compared to small-step-semantics.
 
 \subsubsection{Environment-store Model}
-In this project we use the \textit{environment-store model} to represent how a variable is bound to a storage cell (called a \textit{location}), in a computer, and that the value of the variable is the content of the bound location. All of the possible locations are denoted by \textbf{Loc} and a single location as $l \in \textbf{Loc}$. We assume all locations are $\textbf{Loc} = \mathbb{N}$. Since all locations are natural numbers we can define a function to find the next location: $\textbf{Loc} \rightarrow \textbf{Loc}$, where $l = l + 1$ \citep{HHTree}. 
+In this project we use the \textit{environment-store model} to represent how a variable is bound to a storage cell (called a \textit{location}), in a computer, and that the value of the variable is the content of the bound location. All of the possible locations are denoted by \textbf{Loc} and a single location as $l \in \textbf{Loc}$. We assume all locations are $\textbf{Loc} = \mathbb{N}$. Since all locations are natural numbers, we can define a function to find the next location: $\textbf{Loc} \rightarrow \textbf{Loc}$, where $l = l + 1$ \citep{HHTree}. 
 
 We define the set of stores to be the mappings from locations to values $\textbf{Sto } = \textbf{ Loc } \rightharpoonup \mathbb{N}$, where $sto$ is a single element in $\textbf{Sto}$.
 
-A variable-environment is like a symbol table containing each variable and storing the variables address. The store then describes which value that is on each address.
+A variable-environment is like a symbol table which contains each variable and storing the variables address. The store then describes which value that is on each address.
 
 The following names represent the different environments. 
 \begin{itemize}

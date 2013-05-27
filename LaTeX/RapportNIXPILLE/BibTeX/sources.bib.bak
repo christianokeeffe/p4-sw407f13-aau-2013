@@ -108,7 +108,6 @@
 @MISC{LCDtut,
   author = {David A. Mellis, Limor Fried, Tom Igoe},
   title = {LiquidCrystal - "Hello World!"},
-  howpublished = {web},
   owner = {Rasmus},
   timestamp = {2013.05.20},
   url = {http://www.arduino.cc/en/Tutorial/LiquidCrystal}
@@ -183,17 +182,6 @@
   author = {John Martin},
   owner = {Mette},
   timestamp = {2013.04.09}
-}
-
-@MISC{StaticvsDynamic,
-  author = {msujaws},
-  title = {Static vs. Dynamic Scoping},
-  howpublished = {\url{http://msujaws.wordpress.com/2011/05/03/static-vs-dynamic-scoping/}
-	[Last seen: 2013/05/07]},
-  month = {3 May},
-  year = {2011},
-  owner = {Niels},
-  timestamp = {2013.05.07}
 }
 
 @MISC{Javacc,
@@ -322,6 +310,15 @@
   timestamp = {2013.05.03}
 }
 
+@MISC{unittestpower,
+  author = {John Sonmez},
+  title = {The Purpose of Unit Testing},
+  month = {10},
+  year = {2010},
+  timestamp = {2013.05.27},
+  url = {http://www.simpleprogrammer.com/2010/10/15/the-purpose-of-unit-testing/}
+}
+
 @MISC{RFID,
   author = {RFID Specialisten},
   title = {RFID},
@@ -348,6 +345,17 @@
   year = {2012},
   owner = {Aleksander},
   timestamp = {2013.03.11}
+}
+
+@MISC{StaticvsDynamic,
+  author = {Jared Wein},
+  title = {Static vs. Dynamic Scoping},
+  howpublished = {\url{http://msujaws.wordpress.com/2011/05/03/static-vs-dynamic-scoping/}
+	[Last seen: 2013/05/07]},
+  month = {3 May},
+  year = {2011},
+  owner = {Niels},
+  timestamp = {2013.05.07}
 }
 
 @MISC{Yacc,

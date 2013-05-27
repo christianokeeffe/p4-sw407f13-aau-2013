@@ -595,15 +595,15 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 		Scopecontrol.add(GlobalScope);
 		
 		//Add the predefined functions to the string and loopbuffer
-		setupbuffer.append(PrintContentofFile("resources/setup.txt"));
-		loopbuffer.append(PrintContentofFile("resources/loop.txt"));
+		setupbuffer.append(LoadContentofResource("resources/setup.txt"));
+		loopbuffer.append(LoadContentofResource("resources/loop.txt"));
 		
 		//String buffer for the whole content to return.
 		StringBuffer ContentBuffer = new StringBuffer();
 		StringBuffer HeaderBuffer = new StringBuffer();
 		
 		//Add the predefined content and visit roots.
-		HeaderBuffer.append(PrintContentofFile("resources/header.txt"));
+		HeaderBuffer.append(LoadContentofResource("resources/header.txt"));
 		HeaderBuffer.append(visit(ctx.roots()));
 		
 		//Add the arrays containing the names and pins of the containers.
@@ -652,7 +652,7 @@ public class CodeGenrator extends AbstractParseTreeVisitor<String> implements SP
 	
 	//Reed contendt of file, and return it.
 	//latex start pcontent
-	private String PrintContentofFile(String path){
+	private String LoadContentofResource(String path){
 		InputStream in;
 		StringBuffer fileintxt = new StringBuffer();
 		try{

@@ -313,10 +313,11 @@
 @MISC{unittestpower,
   author = {John Sonmez},
   title = {The Purpose of Unit Testing},
+  howpublished = {\url{http://www.simpleprogrammer.com/2010/10/15/the-purpose-of-unit-testing/}
+	[Last seen: 2013/05/27]},
   month = {10},
   year = {2010},
-  timestamp = {2013.05.27},
-  url = {http://www.simpleprogrammer.com/2010/10/15/the-purpose-of-unit-testing/}
+  timestamp = {2013.05.27}
 }
 
 @MISC{RFID,

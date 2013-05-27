@@ -6,11 +6,14 @@ Name 1 in "Charles N. Fischer, and Ron, K. Cyton and Richard, J. LeBlanc. Jr." h
 while executing---line 1434 of file bibtex/harvard.bst
 Name 1 in "Charles N. Fischer, and Ron, K. Cyton and Richard, J. LeBlanc. Jr." has a comma at the end for entry CraftingACompiler
 while executing---line 1434 of file bibtex/harvard.bst
-Warning--empty year in ANTLR
-Warning--empty year in ANTLR
-1 is an integer literal, not a string, for entry ANTLR
+Warning--to sort, need author or key in junit
+`editor' is a missing field, not a string, for entry junit
 while executing---line 1516 of file bibtex/harvard.bst
-Warning--empty  in ANTLR
+Warning--empty year in junit
+Warning--empty year in junit
+1 is an integer literal, not a string, for entry junit
+while executing---line 1516 of file bibtex/harvard.bst
+Warning--empty  in junit
 Warning--empty year in DownloadANTLR
 Warning--empty year in DownloadANTLR
 1 is an integer literal, not a string, for entry DownloadANTLR
@@ -37,8 +40,6 @@ Warning--empty year in Buildproc
 while executing---line 1516 of file bibtex/harvard.bst
 Warning--empty  in Buildproc
 1 is an integer literal, not a string, for entry AVRDUDE
-while executing---line 1516 of file bibtex/harvard.bst
-1 is an integer literal, not a string, for entry OverviewCompiler2
 while executing---line 1516 of file bibtex/harvard.bst
 1 is an integer literal, not a string, for entry Chomsky
 while executing---line 1516 of file bibtex/harvard.bst
@@ -94,8 +95,6 @@ while executing---line 1516 of file bibtex/harvard.bst
 Warning--empty  in Lex
 1 is an integer literal, not a string, for entry ItLatToC
 while executing---line 1516 of file bibtex/harvard.bst
-0 is an integer literal, not a string, for entry StaticvsDynamic
-while executing---line 1516 of file bibtex/harvard.bst
 Warning--empty year in Javacc
 Warning--empty year in Javacc
 1 is an integer literal, not a string, for entry Javacc
@@ -137,6 +136,8 @@ while executing---line 1516 of file bibtex/harvard.bst
 while executing---line 1516 of file bibtex/harvard.bst
 0 is an integer literal, not a string, for entry ProgrammingCommunityIndex
 while executing---line 1516 of file bibtex/harvard.bst
+0 is an integer literal, not a string, for entry unittestpower
+while executing---line 1516 of file bibtex/harvard.bst
 Warning--empty year in RFID
 Warning--empty year in RFID
 1 is an integer literal, not a string, for entry RFID
@@ -147,11 +148,15 @@ Warning--empty year in Seedui
 1 is an integer literal, not a string, for entry Seedui
 while executing---line 1516 of file bibtex/harvard.bst
 Warning--empty  in Seedui
+1 is an integer literal, not a string, for entry OverviewCompiler2
+while executing---line 1516 of file bibtex/harvard.bst
 0 is an integer literal, not a string, for entry Netdui
+while executing---line 1516 of file bibtex/harvard.bst
+0 is an integer literal, not a string, for entry StaticvsDynamic
 while executing---line 1516 of file bibtex/harvard.bst
 Warning--empty year in Yacc
 Warning--empty year in Yacc
 1 is an integer literal, not a string, for entry Yacc
 while executing---line 1516 of file bibtex/harvard.bst
 Warning--empty  in Yacc
-(There were 44 error messages)
+(There were 46 error messages)

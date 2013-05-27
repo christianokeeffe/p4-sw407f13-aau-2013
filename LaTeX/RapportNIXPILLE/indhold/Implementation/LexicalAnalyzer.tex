@@ -1,5 +1,5 @@
 \subsection{Lexical Analyzer}
-A lexical analyzer or "lexer" reads the input file, and returns a series of tokens based on the input \citep{CraftingACompiler}. More specifically it is the scanner in the lexical analyzer which does this. These tokens are matched by rules, usually described by regular expressions. An example of such grammar rules can be seen on table \ref{tab:tokenspecification}. Formally a token consists of two parts: The token type, and the token value \citep{CraftingACompiler}. As an example the IDENT token seen on \ref{tab:tokensexample} has the token type IDENT and the value 'c'. 
+A lexical analyzer or "lexer" reads the input file, and returns a series of tokens based on the input \citep{CraftingACompiler}. More specifically it is the scanner in the lexical analyzer which does this. These tokens are matched by rules, usually described by regular expressions. An example of such grammar rules can be seen on table \ref{tab:tokenspecification}. Formally a token consists of two parts: The token type, and the token value \citep{CraftingACompiler}. As an example the IDEND token seen on table \ref{tab:tokensexample} has the token type IDEND and the value 'c'. 
 
 \begin{table}[H]
 \begin{tabular}{|l|l|}
@@ -9,13 +9,13 @@ A lexical analyzer or "lexer" reads the input file, and returns a series of toke
     	assign    	& "="      				\\ 
     	digit     	& "$[0-9]^+$"   		\\ 
     	endassign 	& ";"      				\\
-    	blank 		& $" "^+$				\\
+    	blank 		& " "$~^+$				\\
     \hline
 \end{tabular}
 \caption{Sample token specification.}
 \label{tab:tokenspecification}
 \end{table}
-This specification of tokens, would be used by the scanner to determine how tokens looks, and thereby which text-elements are tokens. 
+The specification of tokens on \ref{tab:tokenspecification}, would be used by the scanner to determine how tokens look, and thereby which text-elements are tokens. 
 
 \begin{code}{simplecode}{Simple example of code.}
 \begin{lstlisting}
@@ -23,12 +23,12 @@ c = 42;
 \end{lstlisting}
 \end{code}
 
-As an example the lines of code seen on listing \ref{lst:simplecode} might be read as the tokens seen on table \ref{tab:tokensexample}.
+As an example the code seen on listing \ref{lst:simplecode} might be read as the tokens seen on table \ref{tab:tokensexample}.
 \begin{table}[H]
 \begin{tabular}{|l|l|}
 \hline
     \textbf{Token}	&	\textbf{Lexeme} \\ \hline
-    IDENT     		&	c      			\\ 
+    IDEND     		&	c      			\\ 
     ASSIGN    		&	=      			\\ 
     DIGIT     		&	42    			\\ 
     SEMICOLON 		&	;      			\\ \hline
@@ -36,4 +36,4 @@ As an example the lines of code seen on listing \ref{lst:simplecode} might be re
 \caption{Example of tokens.}
 \label{tab:tokensexample}
 \end{table}
-The scanner produces a stream of tokens, which is returned to the parser. The parser checks if the tokens conforms to the language-specification \citep{CraftingACompiler}.
+The scanner produces a stream of tokens, which is returned to the parser. The parser checks if the tokens conform to the language-specification \citep{CraftingACompiler}.

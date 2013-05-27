@@ -1,15 +1,15 @@
 \subsection{Scope Checking}
 \label{sec:scopecheck}
-In our project we have decided to use static scoping. Because the program language made in the project group is a imperative, it makes more sense to use static scoping. The language for Arduino uses static scoping, see section \ref{sec:scoperules}. Static scoping are used by well known program languages like C, C\# and Java \citep{ProgrammingCommunityIndex}. When a variable is used in SPLAD, the variable will need to be declared in the scope or in an outer scope before it can be used.
+In this project we have decided to use static scoping. The language for Arduino uses static scoping, see section \ref{sec:scoperules}. Static scoping is used by well known program languages such as C, C\# and Java \citep{ProgrammingCommunityIndex}. When a variable is used in SPLAD, the variable will need to be declared in the scope or in an outer scope before it can be used.
 
-When scope checking is started, a list called "scopecontrol" is made which can hold other lists. A list called "listOfErrors" is also created which holds the errors that are found. Each list in scopecontrol is a scope. The scope lists are used to store variable names in the given scopes. An example of this can be seen in figure \ref{fig:scopediagram}. To show the errors that are related to the scope checking, the errors will be saved in the list listOfErrors. Scope checking is split into nine different places in the parse tree node visitors: visitProgram, visitBlock, visitCases, visitEndcase, visitFunction, visitDcl, visitSubparams and visitCallid.
+When scope checking is started, a list called "scopecontrol" is made which can hold other lists. A list called "listOfErrors" is also created which holds the errors that are found. Each list in "scopecontrol" is a scope. The scope lists are used to store variable names in the given scopes. An example of this can be seen in figure \ref{fig:scopediagram}. To show the errors that are related to the scope checking, the errors will be saved in the list "listOfErrors". Scope checking is split into nine different places in the parse tree node visitors: "visitProgram", "visitBlock", "visitCases", "visitEndcase", "visitFunction", "visitDcl", "visitSubparams" and "visitCallid".
 
 \begin{figure}[H]
 
 \centering
 \begin{tikzpicture}
 
-\node [style=mynodestyle] (v1) at (0,2.5) {Scopcontrole};
+\node [style=mynodestyle] (v1) at (0,2.5) {Scopecontrol};
 \node [style=mynodestyle] (v2) at (-2,1) {Scope 1};
 \node [style=mynodestyle] (v3) at (2,1) {Scope 2};
 \node [style=mynodestyle] (v4) at (-3.5,-0.5) {Variable a};
@@ -21,26 +21,26 @@ When scope checking is started, a list called "scopecontrol" is made which can h
 \draw [-latex] (v2) edge (v5);
 \draw [-latex] (v3) edge (v6);
 \end{tikzpicture}
-\caption{A visual diagram of the structure of scopecontrol.}
+\caption{A visual diagram of the structure of "scopecontrol".}
 \label{fig:scopediagram}
 \end{figure}
 
-For making sure that global variables are saved in scopecontrol, a global scope is added to scopecontrol in the visitProgram function. The global scope is removed when we are done with visiting the program.
+To ensure that global variables are saved in "scopecontrol", a global scope is added to "scopecontrol" in the "visitProgram" function. The global scope is removed when the visitor is done with visiting the program.
 
-There are three ways of creating a scope in the SPLAD language, not counting the one that makes the global scope. The first way is through visitBlock function, which is visited through if, while and from statements. In visitBlock a new list of strings(a scope) is made and then added to scopecontrol. Thereafter all statements in the block is visited. When all the statements are visited, the scope is removed from scopecontrol. An example of this can be seen in listing \ref{lst:visitBlock}.
+There are three ways of creating a scope in the SPLAD language, not counting the one that makes the global scope. The first way is through "visitBlock" function, which is visited through if, while and from statements. In "visitBlock" a new list of strings(a scope) is made and then added to "scopecontrol". Thereafter, all statements in the block are visited. When all the statements are visited, the scope is removed from "scopecontrol". An example of this can be seen on listing \ref{lst:visitBlock}.
 
 \kode{Visitor for blocks with scope checking implemented.}{visitBlock}{visitBlock.txt}
 
-The second way to create a scope is by making a function, and thereby visit the visitor visitFunction. A functions name is irrelevant for the scope checker, because a function can only be declared in the global scope. The visitBlock cannot be used to make scopes for functions, since they can have a number parameters from where they were called. The scope checker must therefore make a scope and add it to the scopecontrol before the parameter are declared. After the parameters are declared, in the newly made scope, all statements in the function will be visited and it will then remove the scope from the scopecontrol before returning.
+The second way to create a scope is by making a function, and thereby visit the method "visitFunction". The name of a function is irrelevant for the scope checker, because a function can only be declared in the global scope. "visitBlock" cannot be used to make scopes for functions, since they can have a number of parameters from where they were called. The scope checker must therefore make a scope and add it to the "scopecontrol" before the parameters are declared. After the parameters are declared in the newly made scope, all statements in the function will be visited and it will then remove the scope from the "scopecontrol" before returning.
 
-The third way to create a scope is by a making a switch. It will then visit visitCases and visitEndcase. When visiting visitEndcase it can either visit visitCases or construct a default case and return it. The scope checker will have to create a scope for every case in the switch and remove the scope after the case is finished, this includes the default case.
+The third way to create a scope is by a making a switch. It will then visit "visitCases" and "visitEndcase". When visiting "visitEndcase" it can either visit "visitCases" or construct a default case and return it. The scope checker will have to create a scope for every case in the switch and remove the scope after the case is finished, this includes the default case.
 
-VisitDcl and visitSubparams is where variables names are added to the innermost scope, meaning the scope with the last index in scopecontrol. This can seen in listing \ref{lst:visitDCL} for VisitDcl.
+"VisitDcl" and "visitSubparams" is where variable names are added to the innermost scope, meaning the scope with the last index in "scopecontrol". This can seen in listing \ref{lst:visitDCL} for "VisitDcl".
 
-\kode{The visitor, visitDCL, with the scope checking implemented}{visitDCL}{visitDCL.txt}
+\kode{The method "visitDCL", with the scope checking implemented.}{visitDCL}{visitDCL.txt}
 
-The main part of the scope checker is located in visitCallid. Here the scope checker needs to look through all known scopes to see if a variable name exist. This is done by using two for-loops, which can be seen in listing \ref{lst:visitCallid}. The first one goes through scopecontrol and the second one is for each element in the list that are in scopecontrol. In this for-loop there is a if-statement that inspects if the called variable name is in one of the scopes. If the variable name exists in one of the scopes things are fine, but if it does not exists in one of the scopes, the scope checker will add it as an error in the list, listOfErrors.
+The main part of the scope checker is located in "visitCallid". Here the scope checker needs to look through all known scopes to see if a variable name exist. This is done by using two for-loops, which can be seen on listing \ref{lst:visitCallid}. The first one goes through "scopecontrol" and the second one is for each element in the list that are in "scopecontrol". In this for-loop there is an if-statement that inspects if the called variable name is in one of the scopes. If the variable name exists in one of the scopes things are fine, but if it does not exist in one of the scopes, the scope checker will add it as an error to the list, "listOfErrors".
 
-\kode{The scope checker checks a variable by looking through all scopes, the list scopecontrol}{visitCallid}{scopecallid.txt}
+\kode{The scope checker checks a variable by looking through all scopes in the list "scopecontrol".}{visitCallid}{scopecallid.txt}
 
-After the scopecheck is finished, the compiler will print the errors in the list, listOfErrors.
+After the "scopecheck" is finished, the compiler will print the errors in the list, "listOfErrors".

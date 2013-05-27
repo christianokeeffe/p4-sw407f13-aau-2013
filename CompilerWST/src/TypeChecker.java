@@ -1485,7 +1485,7 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 			Error err = new Error(21, "pour");
 			ErrList.add(err);
 		}
-		else if(!FunctionMemory.get("pour").Params.get(0).type.equals("1") || !FunctionMemory.get("pour").Params.get(1).type.equals("3.1"))
+		else if(!(FunctionMemory.get("pour").Params.get(0).type.equals("1") || FunctionMemory.get("pour").Params.get(0).type.equals("container")) || !FunctionMemory.get("pour").Params.get(1).type.equals("3.1"))
 		{
 			Error err = new Error(22, "pour");
 			ErrList.add(err);
@@ -1504,19 +1504,23 @@ public class TypeChecker extends AbstractParseTreeVisitor<Value> implements SPLA
 		
 		if(FunctionMemory.containsKey("setup"))
 		{
-			if(FunctionMemory.get("setup").Params.size() != 0)
-			{
-				Error err = new Error(23, "setup");
-				ErrList.add(err);
+			if(FunctionMemory.get("setup").Params != null){
+				if(FunctionMemory.get("setup").Params.size() != 0)
+				{
+					Error err = new Error(23, "setup");
+					ErrList.add(err);
+				}
 			}
 		}
 		
 		if(FunctionMemory.containsKey("loop"))
 		{
-			if(FunctionMemory.get("loop").Params.size() != 0)
-			{
-				Error err = new Error(23, "loop");
-				ErrList.add(err);
+			if(FunctionMemory.get("loop").Params != null){
+				if(FunctionMemory.get("loop").Params.size() != 0)
+				{
+					Error err = new Error(23, "loop");
+					ErrList.add(err);
+				}
 			}
 		}
 

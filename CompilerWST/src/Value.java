@@ -1,5 +1,7 @@
 //latex start Value
 public class Value {
+	public static Value VOID = new Value(new Object());
+	
 	final Object value;
 
     public Value(Object value) {

@@ -151,7 +151,7 @@ begin
 end
 
 /*Implement the required pour function*/
-function pour return nothing using(container cont, int Amount)
+function pour return nothing using(container cont, double Amount)
 begin
 	call digitalWrite(cont, HIGH);
 	call delay(Amount*1000);

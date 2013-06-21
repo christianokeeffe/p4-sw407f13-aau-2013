@@ -1,0 +1,91 @@
+PP:
+	Større punkter måske?
+
+Aleksander:
+	Vink!
+	Snak ordenligt:)
+	øh...
+	RFID få styr på udtalen
+	eller... hvad med or?
+	Problem statement delt op i to punkter?
+	Har du snakket om at programmeringsmålgruppen?
+	
+Christian:
+	slide 7 større punkter
+	øhm..
+	in a positive way? you sure?
+	Du ved selv hvor du gik i stå ;) få styr på det eller lav noter :)
+	
+Mette
+	Hvad er en blok?
+	Algol 60
+	b was set to 5... hmm... slide 14
+	Fordi arduino bruger det?
+	Er symbol table vigtigt?
+	Gennemgå kort hvad typereglen egentlig siger?
+	Dræb mågerne
+	Parrallelisme
+	Type kom du meget hurtigt over, sammenlignet med at det rent faktisk er det vi bruger
+	
+Rasmus:
+	Aleksander kan vel godt styre til eksamen?
+	specifi eller declare?
+	is actually of type container??
+	pinder?
+	ikke runde hjørner af slide 20
+	skyd måge
+	up in the glass = into the glass
+	Lad være med at sige hvor dårligt det er - slide 22
+	større billede slide 23
+	nævn lige at pour er en af de funktioner der SKAL implementeres
+	forklar lige et tag er en chip
+	
+Kasper:
+	tag i stedet for chip
+	sprit
+	øvelse øvelse øvelse
+	drej mere, vis mere
+	lys = hæld
+	tid = amount
+	Modstandsstørrelse
+	Tør for drinks
+	
+Niels
+	øv
+	slap af
+	hvorfor står der kun top-down på dias?
+	bruger vi ikke LALR?
+	hvad er smart ved at bruge et tool?
+	lidt mere om ANTLR
+	tag vand med så du lige kan trække vejret
+	og klaret halsen
+	"ikke funktioner"t
+	tag noterne i hånden så du ikke kigger dig over skulderen
+	kig ud!
+	kvæl mågerne
+	Giv eksempler på type checking - du snakker meget sammenlignet med hvad man kan se på slided
+	du snakker om en masse klasser, men når man ikke kan se det bliver det forvirrende
+	
+Aleksander
+	eller...
+	so hvis we...
+	eller...
+	næste side...
+	rfed vs rfid
+	øhhhh
+	kode bobler op
+	går i stå
+	
+Kasper:
+	øv mere så du ikk har problemer
+	nogle fflere punker ville være nice
+	"so.. ja"
+	RFED
+	mærkelig kapning af hjørner slide 35
+	mere simpelt, men også lettere at læse!
+	at least i my oppinion
+	flere punkter slide 36
+	få styr på future work
+	"" om problem statement
+	lidt mere styr på konklusion
+	talekort
